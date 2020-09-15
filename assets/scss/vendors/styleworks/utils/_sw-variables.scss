@@ -38,10 +38,12 @@ $font-family-icon: adicons;
 $font-family-base: $font-family-sans-serif !default;
 
 // Font Sizes
+$font-size-xs: 1rem; //10px
 $font-size-sm: 1.2rem;
 $font-size-base: 1.4rem;
 $font-size-lg: 1.6rem;
 
+$line-height-xs: 1.6rem; // 0.625
 $line-height-sm: 1.8rem; // 1.5
 $line-height-base: 2.2rem; // 1.57
 $line-height-lg: 2.4rem; // 1.5
@@ -68,9 +70,8 @@ $h6-line-height: 1.8rem;
 $headings-margin-top: 0;
 $headings-margin-bottom: 1rem;
 
-
-
-$text-muted: $gray-600 !default;
+// secondary보다 약하게 사용할 경우
+$text-muted: $gray-400 !default;
 
 
 // Body
@@ -163,6 +164,11 @@ $input-btn-focus-width:       0.3rem !default;
 $input-btn-focus-color:       rgba($component-active-bg, 0.25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
+$input-btn-padding-y-xs:      0.2rem !default;
+$input-btn-padding-x-xs:      0.4rem !default;
+$input-btn-font-size-xs:      $font-size-xs !default;
+$input-btn-line-height-xs:    $line-height-xs !default;
+
 $input-btn-padding-y-sm:      0.4rem !default;
 $input-btn-padding-x-sm:      0.8rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
@@ -226,9 +232,16 @@ $btn-circle-padding-y: $input-btn-padding-y;
 $btn-circle-padding-x: $input-btn-padding-y;
 $btn-circle-font-size: $input-btn-font-size;
 $btn-circle-line-height: $line-height-base;
-$btn-circle-height: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-y} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
-$btn-circle-width: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-x} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
+$btn-circle-height: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-y} * 2) + (#{$btn-border-width} * 2)); // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
+$btn-circle-width: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-x} * 2) + (#{$btn-border-width} * 2)); // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
 $btn-circle-border-radius: 3.6rem;
+
+$btn-circle-padding-y-xs: $input-btn-padding-y-xs;
+$btn-circle-padding-x-xs: $input-btn-padding-y-xs;
+$btn-circle-font-size-xs: $input-btn-font-size-xs;
+$btn-circle-line-height-xs: $input-btn-line-height-xs;
+$btn-circle-height-xs: calc(#{$btn-circle-line-height-xs} + (#{$btn-circle-padding-y-xs} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
+$btn-circle-width-xs: calc(#{$btn-circle-line-height-xs} + (#{$btn-circle-padding-x-xs} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
 
 $btn-circle-padding-y-sm: $input-btn-padding-y-sm;
 $btn-circle-padding-x-sm: $input-btn-padding-y-sm;

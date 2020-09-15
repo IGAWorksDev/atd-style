@@ -15,15 +15,15 @@ $black:    #000 !default;
 $grays: () !default;
 $grays: map-merge(
 (
-"100": $gray-100,
-"200": $gray-200,
-"300": $gray-300,
-"400": $gray-400,
-"500": $gray-500,
-"600": $gray-600,
-"700": $gray-700,
-"800": $gray-800,
-"900": $gray-900
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
 ),
 $grays
 );
@@ -37,14 +37,11 @@ $teal:    #20c997 !default;
 $colors: () !default;
 $colors: map-merge(
 (
-"blue":       $blue,
-"red":        $red,
-"yellow":     $yellow,
-"green":      $green,
-"teal":       $teal,
-"white":      $white,
-"gray":       $gray-600,
-"gray-dark":  $gray-800
+    "blue": $blue,
+    "red": $red,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
 ),
 $colors
 );
@@ -56,19 +53,21 @@ $info:          $teal !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$gray:          $gray-500 !default;
+$dark:          $gray-900 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
 (
-"primary":    $primary,
-"secondary":  $secondary,
-"success":    $success,
-"info":       $info,
-"warning":    $warning,
-"danger":     $danger,
-"light":      $light,
-"dark":       $dark
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "gray": $gray,
+    "dark": $dark
 ),
 $theme-colors
 );
