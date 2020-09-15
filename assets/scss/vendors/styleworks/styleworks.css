@@ -70,6 +70,82 @@ template { display: none; }
 
 [hidden] { display: none; }
 
+.d-block { display: block; }
+
+.d-inline-block { display: inline-block; }
+
+.d-flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.d-none { display: none; }
+
+.flex-row { -webkit-box-orient: horizontal !important; -webkit-box-direction: normal !important; -ms-flex-direction: row !important; flex-direction: row !important; }
+
+.flex-column { -webkit-box-orient: vertical !important; -webkit-box-direction: normal !important; -ms-flex-direction: column !important; flex-direction: column !important; }
+
+.flex-row-reverse { -webkit-box-orient: horizontal !important; -webkit-box-direction: reverse !important; -ms-flex-direction: row-reverse !important; flex-direction: row-reverse !important; }
+
+.flex-column-reverse { -webkit-box-orient: vertical !important; -webkit-box-direction: reverse !important; -ms-flex-direction: column-reverse !important; flex-direction: column-reverse !important; }
+
+.flex-wrap { -ms-flex-wrap: wrap !important; flex-wrap: wrap !important; }
+
+.flex-nowrap { -ms-flex-wrap: nowrap !important; flex-wrap: nowrap !important; }
+
+.flex-wrap-reverse { -ms-flex-wrap: wrap-reverse !important; flex-wrap: wrap-reverse !important; }
+
+.flex-fill { -webkit-box-flex: 1 !important; -ms-flex: 1 1 auto !important; flex: 1 1 auto !important; }
+
+.flex-grow-0 { -webkit-box-flex: 0 !important; -ms-flex-positive: 0 !important; flex-grow: 0 !important; }
+
+.flex-grow-1 { -webkit-box-flex: 1 !important; -ms-flex-positive: 1 !important; flex-grow: 1 !important; }
+
+.flex-shrink-0 { -ms-flex-negative: 0 !important; flex-shrink: 0 !important; }
+
+.flex-shrink-1 { -ms-flex-negative: 1 !important; flex-shrink: 1 !important; }
+
+.justify-content-start { -webkit-box-pack: start !important; -ms-flex-pack: start !important; justify-content: flex-start !important; }
+
+.justify-content-end { -webkit-box-pack: end !important; -ms-flex-pack: end !important; justify-content: flex-end !important; }
+
+.justify-content-center { -webkit-box-pack: center !important; -ms-flex-pack: center !important; justify-content: center !important; }
+
+.justify-content-between { -webkit-box-pack: justify !important; -ms-flex-pack: justify !important; justify-content: space-between !important; }
+
+.justify-content-around { -ms-flex-pack: distribute !important; justify-content: space-around !important; }
+
+.align-items-start { -webkit-box-align: start !important; -ms-flex-align: start !important; align-items: flex-start !important; }
+
+.align-items-end { -webkit-box-align: end !important; -ms-flex-align: end !important; align-items: flex-end !important; }
+
+.align-items-center { -webkit-box-align: center !important; -ms-flex-align: center !important; align-items: center !important; }
+
+.align-items-baseline { -webkit-box-align: baseline !important; -ms-flex-align: baseline !important; align-items: baseline !important; }
+
+.align-items-stretch { -webkit-box-align: stretch !important; -ms-flex-align: stretch !important; align-items: stretch !important; }
+
+.align-content-start { -ms-flex-line-pack: start !important; align-content: flex-start !important; }
+
+.align-content-end { -ms-flex-line-pack: end !important; align-content: flex-end !important; }
+
+.align-content-center { -ms-flex-line-pack: center !important; align-content: center !important; }
+
+.align-content-between { -ms-flex-line-pack: justify !important; align-content: space-between !important; }
+
+.align-content-around { -ms-flex-line-pack: distribute !important; align-content: space-around !important; }
+
+.align-content-stretch { -ms-flex-line-pack: stretch !important; align-content: stretch !important; }
+
+.align-self-auto { -ms-flex-item-align: auto !important; align-self: auto !important; }
+
+.align-self-start { -ms-flex-item-align: start !important; align-self: flex-start !important; }
+
+.align-self-end { -ms-flex-item-align: end !important; align-self: flex-end !important; }
+
+.align-self-center { -ms-flex-item-align: center !important; align-self: center !important; }
+
+.align-self-baseline { -ms-flex-item-align: baseline !important; align-self: baseline !important; }
+
+.align-self-stretch { -ms-flex-item-align: stretch !important; align-self: stretch !important; }
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { margin-top: 0; margin-bottom: 1rem; font-weight: 500; }
 
 h1, .h1 { font-size: calc(1.405rem + 1.1625vw); }
@@ -89,6 +165,8 @@ h5, .h5 { font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; }
 
 h6, .h6 { font-size: 1.2rem; line-height: 1.8rem; }
 
+small { font-size: 80%; line-height: 1.175; }
+
 .svg-icon { fill: currentColor; width: 1.4rem; height: 1.4rem; display: inline-block; font-size: 1rem; -ms-flex-negative: 0; flex-shrink: 0; -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 .mt-0, .my-0 { margin-top: 0 !important; }
@@ -105,7 +183,7 @@ h6, .h6 { font-size: 1.2rem; line-height: 1.8rem; }
 
 .mb-1, .my-1 { margin-bottom: 0.8rem !important; }
 
-.ml-1, .mx-1 { margin-left: 0.8rem !important; }
+.ml-1, .btn + .btn, .btn-circle + .btn-circle, .mx-1 { margin-left: 0.8rem !important; }
 
 .mt-2, .my-2 { margin-top: 1.6rem !important; }
 
@@ -371,7 +449,6 @@ h6, .h6 { font-size: 1.2rem; line-height: 1.8rem; }
 
 .btn-circle { display: inline-block; color: #333; text-align: center; text-decoration: none; vertical-align: middle; border: 1px solid transparent; background-color: transparent; padding: 0.6rem 0.6rem; width: calc(2.2rem + (0.6rem * 2) + (1px * 2)); height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; border-radius: 3.6rem; width: calc(2.2rem + (0.6rem * 2) + (1px * 2)) !important; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)) !important; white-space: nowrap; overflow: hidden; }
 @media (min-width: 1200px) { .btn-circle { font-size: 1.4rem; } }
-.btn-circle > * { vertical-align: middle; }
 
 .btn-circle-sm { padding: 0.4rem 0.4rem; width: calc(1.8rem + (0.4rem * 2) + (1px * 2)) !important; height: calc(1.8rem + (0.4rem * 2) + (1px * 2)) !important; font-size: 1.2rem; line-height: 1.8rem; border-radius: 3.6rem; }
 

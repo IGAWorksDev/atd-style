@@ -1,5 +1,7 @@
 
 
+// 테이블 셀 스펙 재설정
+// [to do] 추후 삭제
 .table {
   th, td {
     @extend .py-1;
@@ -12,8 +14,14 @@
     > th {
       height: $table-header-height;
       vertical-align: middle;
-      color: $text-muted;
     }
+  }
+}
+
+.table tr {
+  td + td,
+  th + th {
+    border-left: 1px solid rgba($border-color, 0.25);
   }
 }
 
@@ -21,11 +29,15 @@
   > td {
     height: $table-tr-total-height;
   }
+  > td + td {
+    border-left: 0;
+  }
 }
+
+
 
 .table-responsive {
   position: relative;
-  min-height: calc(100vh - 40rem);
 
   // 테이블 데이터 아이템을 전체선택 했을 경우의 메시지바
   // 전체 현황 row의 위에 뜸.
@@ -43,3 +55,5 @@
     justify-content: center;
   }
 }
+
+

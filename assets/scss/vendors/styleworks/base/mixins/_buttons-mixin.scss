@@ -1,4 +1,7 @@
 
+// btn-text-{$theme-colors}
+//
+//
 @mixin button-text-variant($color, $active-color: $color, $active-background: rgba($color, 0.1)){
   color: $color;
 
@@ -6,6 +9,7 @@
     color: $active-color;
     background-color: $active-background;
     border-color: transparent;
+    text-decoration: none;
   }
 
   // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
@@ -35,6 +39,7 @@
   color: $white;
   background-color: $background;
   border-color: $border;
+  text-decoration: none;
 
   &:hover {
     color: $white;
@@ -68,6 +73,7 @@
     color: $color-hover;
     background-color: $active-background;
     border-color: $active-border;
+    text-decoration: none;
   }
 
   // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
@@ -88,6 +94,7 @@
 
 
 // Button sizes
+//
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   padding: $padding-y $padding-x;
   @include font-size($font-size);
@@ -98,8 +105,10 @@
   @include border-radius($border-radius, 0);
 }
 
-// Button sizes
-@mixin button-circle-size($width, $height, $padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+
+// Circle Button sizes
+//
+@mixin button-circle-size($padding-y, $padding-x, $width, $height, $font-size, $line-height, $border-radius) {
   padding: $padding-y $padding-x;
   width: $width;
   height: $height;

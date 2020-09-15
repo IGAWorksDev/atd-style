@@ -19,3 +19,82 @@
   }
 }
 
+
+// 테이블 셀에 제목과 버튼이 같이 들어 올 때
+// 셀 너비 32rem인 경우
+.cell-header {
+  @extend .d-flex;
+  @extend .flex-wrap;
+  @extend .flex-row;
+  @extend .align-items-center;
+
+  // 배너 이미지를 미리 볼 수 있는 영역
+  .cell-header__banner {
+    @extend .d-block;
+    background-color: $gray-200; // 임시로 추가함.
+    width: 8rem;
+    height: 5.6rem;
+  }
+  // 열 제목 상위 정보 - 위첨자 superscript
+  .cell-header__sup {
+
+  }
+  // 열 제목
+  .cell-header__title {
+    max-width: 25.8rem;
+    overflow: hidden;
+  }
+  // 외부링크 버튼
+  .cell-header__external-link {
+    @extend .ml-1;
+    display: none;
+    transition: $transition-base;
+  }
+}
+
+.cell-header:hover {
+  .cell-header__title {
+    max-width: (25.8rem - (0.8rem + 2.4rem)); // 타이틀 너비 - (간격 + 버튼크기)
+  }
+  .cell-header__external-link {
+    display: inline-block;
+    transition: $transition-base;
+  }
+}
+
+// 셀 헤더가 배너인 경우
+.cell-header.cell-header-banner {
+  .cell-header__sup,
+  .cell-header__title {
+    max-width: 17.5rem;
+  }
+}
+.cell-header.cell-header-banner:hover {
+  .cell-header__title {
+    max-width: (17.5rem - (0.8rem + 2.4rem)); // 타이틀 너비 - (간격 + 버튼크기)
+  }
+}
+
+
+
+// --------------------------------------------------
+//
+// 캠페인
+
+#table-compaign-list {}
+
+// --------------------------------------------------
+//
+// 광고그룹
+
+#table-adGroup-list {}
+
+// "고객파일 설정" 모달 내의 테이블
+#table-custom-fileSetting {
+  max-height: 32rem;
+}
+
+
+// --------------------------------------------------
+//
+// 소재
