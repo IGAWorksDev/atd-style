@@ -209,9 +209,138 @@
                 </div>
                 <!-- /search -->
                 <div class="ml-2 d-flex align-items-center">
-                  <a class="btn-circle btn-text-secondary" aria-label="열 설정" href="#">
-                    <i class="ico ic-cog"></i>
-                  </a>
+                  <!-- dropdown -->
+                  <div class="dropdown mr-1">
+                    <a class="btn-circle btn-text-secondary" href="#" aria-label="열설정" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="ico ic-cog"></i>
+                    </a>
+                    <!-- dropdown-menu -->
+                    <div class="dropdown-menu dropdown-menu-right" style="width: 48rem">
+                      <h6 class="dropdown-header font-weight-bold">열설정</h6>
+                      <form>
+                        <div class="py-1 px-2 font-weight-normal">
+                          <ul class="list-unstyled m-0" id="list-columns-setting">
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-000" checked>
+                                <label class="custom-control-label" for="col-000">광고그룹</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-001">
+                                <label class="custom-control-label" for="col-001">On/OFF</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-002">
+                                <label class="custom-control-label" for="col-002">상태</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-003">
+                                <label class="custom-control-label" for="col-003">예산</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-004">
+                                <label class="custom-control-label" for="col-004">비용</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-005">
+                                <label class="custom-control-label" for="col-005">노출수</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-006">
+                                <label class="custom-control-label" for="col-006">클릭수</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-007">
+                                <label class="custom-control-label" for="col-007">클릭률</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-008">
+                                <label class="custom-control-label" for="col-008">도달수</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-009">
+                                <label class="custom-control-label" for="col-009">노출당 비용</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-010">
+                                <label class="custom-control-label" for="col-010">클릭당 비용</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-011">
+                                <label class="custom-control-label" for="col-011">도달당 비용</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-012">
+                                <label class="custom-control-label" for="col-012">발송수</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-013">
+                                <label class="custom-control-label" for="col-013">열람수</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-014">
+                                <label class="custom-control-label" for="col-014">전체 클릭수</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-015">
+                                <label class="custom-control-label" for="col-015">발송당 비용</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-016">
+                                <label class="custom-control-label" for="col-016">열람당 비용</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-017">
+                                <label class="custom-control-label" for="col-017">전체 클릭당 비용</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="col-018">
+                                <label class="custom-control-label" for="col-018">기간</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- /dropdown-menu -->
+                  </div>
+                  <!-- /dropdown -->
                   <a class="btn-circle btn-text-secondary" aria-label="다운로드" href="#">
                     <i class="ico ic-download"></i>
                   </a>
@@ -270,9 +399,59 @@
                     <th scope="col">
                       <div class="d-flex align-items-center justify-content-between">
                         상태
-                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
-                          <i class="ico ic-funnel"></i>
-                        </a>
+                        <!-- dropdown -->
+                        <div class="dropdown">
+                          <a class="btn-circle btn-text-gray btn-circle-xs" href="#" aria-label="필터" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ico ic-funnel"></i>
+                          </a>
+                          <!-- dropdown-menu -->
+                          <div class="dropdown-menu" style="width: 20rem">
+                            <h6 class="dropdown-header font-weight-bold">상태 필터</h6>
+                            <form>
+                              <div class="py-1 px-2">
+                                <button class="btn swBtn btn-contained-primary swBtn-sm">
+                                  <i class="ico ic-arrow-bottom"></i>
+                                  A to Z
+                                </button>
+                                <button class="btn swBtn btn-outlined-secondary swBtn-sm">
+                                  <i class="ico ic-arrow-top"></i>
+                                  Z to A
+                                </button>
+                              </div>
+                              <div class="dropdown-divider"></div>
+                              <div class="py-1 px-2 font-weight-normal">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="status-all">
+                                  <label class="custom-control-label" for="status-all">전체</label>
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2">
+                                  <input type="checkbox" class="custom-control-input" id="status-01">
+                                  <label class="custom-control-label" for="status-01">집행 예정</label>
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2">
+                                  <input type="checkbox" class="custom-control-input" id="status-02">
+                                  <label class="custom-control-label" for="status-02">집행 중</label>
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2">
+                                  <input type="checkbox" class="custom-control-input" id="status-03">
+                                  <label class="custom-control-label" for="status-03">집행 완료</label>
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2">
+                                  <input type="checkbox" class="custom-control-input" id="status-04">
+                                  <label class="custom-control-label" for="status-04">운영 불가(예산 초과)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2">
+                                  <input type="checkbox" class="custom-control-input" id="status-05">
+                                  <label class="custom-control-label" for="status-05">운영 불가</label>
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2">
+                                  <input type="checkbox" class="custom-control-input" id="status-06">
+                                  <label class="custom-control-label" for="status-06">사용자 OFF</label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                          <!-- /dropdown-menu -->
                       </div>
                     </th>
                     <th scope="col">

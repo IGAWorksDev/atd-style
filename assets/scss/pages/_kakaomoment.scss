@@ -1,12 +1,23 @@
 
 
-
 // 광고계정 드랍다운 크기
 #dropdown-adaccount-button {
   max-width: 280px;
 }
 #dropdown-adaccount-button + .dropdown-menu {
   max-width: 280px;
+}
+
+// 열설정 드랍다운
+// dropdown-columns-link
+#list-columns-setting {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  > li {
+    padding-top: ($spacer / 2);
+    padding-bottom: ($spacer / 2);
+  }
 }
 
 // .card-header 안의 .tab을 사용할 경우
@@ -20,6 +31,7 @@
 }
 
 
+// --------------------------------------------------
 // 테이블 셀에 제목과 버튼이 같이 들어 올 때
 // 셀 너비 32rem인 경우
 .cell-header {

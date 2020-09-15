@@ -1010,6 +1010,9 @@ small { font-size: 80%; line-height: 1.175; }
 
 #dropdown-adaccount-button + .dropdown-menu { max-width: 280px; }
 
+#list-columns-setting { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+#list-columns-setting > li { padding-top: 0.4rem; padding-bottom: 0.4rem; }
+
 #card-header-start-tab .tab-item { border-top-color: transparent; }
 #card-header-start-tab .tab-item:first-child { border-left-color: transparent; }
 
