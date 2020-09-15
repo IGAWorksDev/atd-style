@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>TW-kakaomonet</title>
-  <<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
 </head>
@@ -70,6 +70,7 @@
               </a>
             </div>
           </li>
+        </ul>
       </div>
     </nav>
     <!-- /gnb -->
@@ -189,22 +190,26 @@
           <div class="card-body p-0">
             <!-- toolbar -->
             <div class="toolbar d-flex align-items-center justify-content-between h-fixed-8 px-2">
-              <div class="start d-flex align-items-center">
+              <div class="flex-start d-flex align-items-center">
                 <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#banner-batchModify-modal">입찰가 일괄 수정</button>
+                <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#bid-amount-alert-modal">광고그룹 최대 입찰 금액 변경 안내</button>
               </div>
 
-              <div class="end d-flex align-items-center">
-                <input type="search" class="form-control" placeholder="검색">
-
-                <div class="border-left ml-2 pl-2 h-fixed-2 w-fixed-2"></div>
-
-                <a class="btn-circle btn-text-secondary" aria-label="데이터 열 설정" href="#">
-                  <i class="ico ic-table"></i>
-                </a>
-                <span class="mr-1"></span>
-                <a class="btn-circle btn-text-secondary" aria-label="다운로드" href="#">
-                  <i class="ico ic-download"></i>
-                </a>
+              <div class="flex-end d-flex align-items-center justify-content-center">
+                <!-- search -->
+                <div class="search">
+                  <label class="sr-only">검색</label>
+                  <input type="search" class="form-control" placeholder="검색">
+                </div>
+                <!-- /search -->
+                <div class="ml-2 d-flex align-items-center">
+                  <a class="btn-circle btn-text-secondary" aria-label="열 설정" href="#">
+                    <i class="ico ic-cog"></i>
+                  </a>
+                  <a class="btn-circle btn-text-secondary" aria-label="다운로드" href="#">
+                    <i class="ico ic-download"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <!-- toolbar -->
@@ -223,13 +228,15 @@
               <!-- table -->
               <table class="table table-striped table-hover border-bottom">
                 <colgroup>
-                  <col style="width: 2rem;">
-                  <col style="width: 32rem;">
-                  <col style="width: 10rem;">
+                  <col style="width: 5rem;">
+                  <col style="width: 30rem;">
+                  <col style="width: 12rem;">
+                  <col style="width: 12rem;">
+                  <col style="width: 12rem;">
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>
+                    <th scope="col">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox">
                         <label class="form-check-label">
@@ -237,26 +244,61 @@
                         </label>
                       </div>
                     </th>
-                    <th>
-                      소재
+                    <th scope="col">
+                      <div class="d-flex align-items-center justify-content-between">
+                        소재
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-arrow-top"></i>
+                        </a>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="d-flex align-items-center justify-content-between">
+                        On/Off
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-arrow-top"></i>
+                        </a>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="d-flex align-items-center justify-content-between">
+                        상태
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-funnel"></i>
+                        </a>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="d-flex align-items-center justify-content-between">
+                        심사 상태
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-funnel"></i>
+                        </a>
+                      </div>
                     </th>
                     <th>
-                      On/Off
+                      <div class="d-flex align-items-center justify-content-between">
+                        입찰 금액
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-arrow-top"></i>
+                        </a>
+                      </div>
                     </th>
                     <th>
-                      상태
+                      <div class="d-flex align-items-center justify-content-between">
+                        비용
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-arrow-top"></i>
+                        </a>
+                      </div>
                     </th>
-                    <th>
-                      심사 상태
-                    </th>
-                    <th>
-                      입찰 금액
-                    </th>
-                    <th>
-                      비용
-                    </th>
-                    <th >
-                      노출수
+                    <th scope="col">
+                      <div class="d-flex align-items-center justify-content-between">
+                        노출수
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-arrow-top"></i>
+                        </a>
+                      </div>
                     </th>
                   </tr>
                 </thead>
@@ -297,15 +339,30 @@
                       </div>
                     </td>
                     <td class="align-middle">
-                      <div class="banner">
-                        <div class="banner-block">
-
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
                         </div>
-                        <div class="banner-heading ml-1">
-                          <small class="banner-sup text-muted text-truncate">광고그룹 A</small>
-                          <div class="banner-title text-truncate">광고소재 이름광고소재 이름광고소재 이름광고소재 이름</div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
                         </div>
                       </div>
+                      <!-- /cell-header -->
                     </td>
                     <td class="align-middle">
                       <label class="switch">
@@ -323,52 +380,32 @@
                        심사승인
                     </td>
                     <td class="align-middle text-right">
-                      400
-                    </td>
-                    <td class="align-middle text-right">
-                      1,500,900
-                    </td>
-                    <td class="align-middle text-right">
-                      4,200
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox">
-                        <label class="form-check-label">
-                          &nbsp; <span class="sr-only">선택</span>
-                        </label>
-                      </div>
-                    </td>
-                    <td class="align-middle">
-                      <div class="banner">
-                        <div class="banner-block">
-
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="swBtn btn-outlined-secondary">취소</button>
+                              <button class="swBtn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
                         </div>
-                        <div class="banner-heading ml-1">
-                          <small class="banner-sup text-muted text-truncate">광고그룹 A</small>
-                          <div class="banner-title text-truncate">광고소재 이름광고소재 이름광고소재 이름광고소재 이름</div>
-                        </div>
+                        <!-- /dropdown-menu -->
                       </div>
-                    </td>
-                    <td class="align-middle">
-                      <label class="switch">
-                        <input type="checkbox" class="switch-checkbox" checked disabled>
-                        <span class="switch-slider"></span>
-                      </label>
-                    </td>
-                    <td class="align-middle">
-                      <span class="text-success">
-                        <i class="ico ic-circle-fill"></i>
-                      </span>
-                      운영 가능
-                    </td>
-                    <td class="align-middle">
-                      심사승인
-                    </td>
-                    <td class="align-middle text-right">
-                      400
+                      <!-- /btn-group -->
                     </td>
                     <td class="align-middle text-right">
                       1,500,900
@@ -445,16 +482,22 @@
   </div>
   <!-- /twWrapper -->
 
-  <!-- Modal -->
+
+
+  <!-- modal -->
   <div class="modal fade" id="banner-batchModify-modal" tabindex="-1" aria-labelledby="소재 입찰가 일괄 수정" aria-hidden="true">
     <div class="modal-dialog modal-md">
+      <!-- modal-content -->
       <div class="modal-content">
+        <!-- modal-header -->
         <div class="modal-header p-2">
           <h4 class="modal-title font-weight-bold">소재 입찰가 일괄 수정</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <!-- /modal-header -->
+        <!-- modal-body -->
         <div class="modal-body p-2">
           <p>선택한 소재의 입찰가를 일괄 수정합니다.</p>
           <!-- input-group -->
@@ -465,103 +508,55 @@
             </div>
           </div>
           <!-- /input-group -->
-          <p class="text-muted mt-1 p-0">
-            <small>수정 할 소재 입찰가가 기존 광고 그룹 최대 입찰 금액 보다 클 경우, 광고 그룹 최대 입찰 금액이 수정 될 소재 입찰가에 맞게 변경됩니다.</small>
-          </p>
+          <div class="mt-1 p-0">
+            <small class="text-muted">수정 할 소재 입찰가가 기존 광고 그룹 최대 입찰 금액 보다 클 경우, 광고 그룹 최대 입찰 금액이 수정 될 소재 입찰가에 맞게 변경됩니다.</small>
+          </div>
         </div>
+        <!-- /modal-body -->
+        <!-- modal-footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
           <button type="button" class="btn btn-contained-primary">수정</button>
         </div>
+        <!-- /modal-footer -->
       </div>
+      <!-- /modal-content -->
     </div>
   </div>
+  <!-- /modal -->
 
-  <!-- Modal -->
-  <div class="modal fade" id="custom-fileSetting-modal" tabindex="-1" aria-labelledby="고객 파일 설정" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+  <!-- modal -->
+  <div class="modal fade" id="bid-amount-alert-modal" tabindex="-1" aria-labelledby="광고그룹 최대 입찰 금액 변경 안내" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <!-- modal-content -->
       <div class="modal-content">
+        <!-- modal-header -->
         <div class="modal-header p-2">
-          <h4 class="modal-title font-weight-bold">고객 파일 설정</h4>
+          <h4 class="modal-title font-weight-bold">광고그룹 최대 입찰 금액 변경 안내</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body p-0">
-          <div class="p-2">
-            <p>
-              신규 고객 파일 추가는 <a href="#">TW Audience</a> 메뉴에서 가능합니다. <br>
-              <small>* 모수 2,000 이상만 설정 가능하며 한 번에 최대 10까지 선택 가능합니다.</small>
-            </p>
-            <input type="search" class="form-control" placeholder="검색">
-          </div>
-
-          <!-- data-group -->
-          <div class="data-group">
-            <!-- data-group-header -->
-            <div class="data-group-header">
-              <div class="data-group-row">
-                <div class="data-group-cell" style="width: 80px;">
-                  사용여부
-                </div>
-                <div class="data-group-cell">
-                  오디언스 이름
-                </div>
-                <div class="data-group-cell" style="width: 200px;">
-                  모수
-                </div>
-              </div>
-            </div>
-            <!-- /data-group-header -->
-            <!-- data-group-body -->
-            <div class="data-group-body">
-              <div class="data-group-row">
-                <div class="data-group-cell" style="width: 80px;">
-                  on/off
-                </div>
-                <div class="data-group-cell">
-                  오디언스 이름_2020-08
-                </div>
-                <div class="data-group-cell" style="width: 200px;">
-                  1,234
-                </div>
-              </div>
-            </div>
-            <!-- /data-group-body -->
-          </div>
-          <!-- /data-group -->
+        <!-- /modal-header -->
+        <!-- modal-body -->
+        <div class="modal-body p-2">
+          <p>소재 입찰가를 기존 광고 그룹의 최대 입찰 그액보다 높게 설정 할 경우, <u>기존 광고 그룹의 입찰 금액이 변경 할 소재 입찰가와 같은 금액으로 변경됩니다.</u></p>
+          <p>소재 입찰가를 변경 하시겠습니까?</p>
         </div>
+        <!-- /modal-body -->
+        <!-- modal-footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
-          <button type="button" class="btn btn-contained-primary">설정</button>
+          <button type="button" class="btn btn-contained-primary">변경</button>
         </div>
+        <!-- /modal-footer -->
       </div>
+      <!-- /modal-content -->
     </div>
   </div>
+  <!-- /modal -->
 
-  <!-- Modal -->
-  <div class="modal fade" id="target-settingFailed-modal" tabindex="-1" aria-labelledby="맞춤 타겟 설정 불가" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content">
-        <div class="modal-body p-2">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <div class="text-center text-danger px-1 py-2">
-            <h4 class="modal-title font-weight-bold text-danger mb-2">
-              맞춤 타겟 설정 불가
-            </h4>
-            <p class="m-0">
-              한 번에 하나의 광고그룹만 설정 할 수 있습니다.
-            </p>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">확인</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
