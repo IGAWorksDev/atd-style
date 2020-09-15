@@ -1,0 +1,135 @@
+
+
+// btn-contained-{$theme-colors}
+//
+@mixin button-contained-variant($background, $border,
+  $hover-background: darken($background, 5%), $hover-border: darken($border, 10%),
+  $active-background: darken($background,7.5%), $active-border: darken($background,12.5%)) {
+
+  color: $white;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover {
+    color: $white;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($background, 0.3);
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+// btn-outlined-{$theme-colors}
+//
+@mixin button-outlined-variant($color, $color-hover: $color, $active-background: rgba($color, 0.1), $active-border: $color) {
+  color: $color;
+  border-color: $color;
+
+  &:hover {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.3);
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+
+  // Manually declare to provide an override to the browser default
+  // - 브라우저 기본값에 대한 재정의를 제공하도록 수동으로 선언
+  @include border-radius($border-radius, 0);
+}
+
+
+
+
+
+.swBtn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  border: $btn-border-width solid transparent;
+  background-color: transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+
+}
+
+.swBtn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+.swBtn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-circle {
+  display:inline-block;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  border: $btn-border-width solid transparent;
+  background-color: transparent;
+
+  @include button-circle-size($btn-circle-width, $btn-circle-height, $btn-circle-padding-y, $btn-circle-padding-x, $btn-circle-font-size, $btn-circle-line-height, $btn-circle-border-radius);
+  white-space: nowrap;
+  min-width: $btn-circle-width; // 아이콘이 들어갈 경우 너비가 적용되지 않았을 경우를 대처하기 위해 추가함.
+}
+
+.btn-circle-sm {
+  @include button-circle-size($btn-circle-width-sm, $btn-circle-height-sm, $btn-circle-padding-y-sm, $btn-circle-padding-x-sm, $btn-circle-font-size-sm, $btn-circle-line-height-sm, $btn-circle-border-radius);
+}
+
+
+
+@each $color, $value in $theme-colors {
+  .btn-text-#{$color} {
+    @include button-text-variant($value, $value);
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  .btn-contained-#{$color} {
+    @include button-contained-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outlined-#{$color} {
+    @include button-outlined-variant($value);
+  }
+}

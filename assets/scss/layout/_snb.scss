@@ -1,0 +1,77 @@
+//
+// Side Navigation Bar
+//
+.snb {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  position: relative;
+  z-index: 10;
+  width: $snb-width;
+  height: 100%;
+  background-color: $snb-bgcolor;
+  border-right: 1px solid $gray-300;
+  box-shadow: 0 0 8px rgba($black, 0.16);
+  transition: $snb-transition-base;
+}
+
+
+// snb navigation
+//
+.snb-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.snb-nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  width: 100%;
+  color: $body-color;
+
+  .snb-nav-item__icon {
+    display: inline-block;
+    padding: 0.8rem;
+    line-height: 1;
+    border-radius: 50%;
+    background-color: $gray-100;
+  }
+  .snb-nav-item__title {
+    display: none;
+    padding-left: 0.8rem;
+    white-space: nowrap;
+    transition: $snb-transition-base;
+  }
+}
+
+
+// snb navigation active status
+//
+.snb-nav-item.is-active {
+  position: relative;
+  color: $primary;
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: $primary;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// snb hover status
+//
+.snb:hover {
+  width: $snb-width-hover;
+  transition: $snb-transition-base;
+  .snb-nav-item__title {
+    display: block;
+    transition: $snb-transition-base;
+    transition-delay: 30s !important;
+  }
+}

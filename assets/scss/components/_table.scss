@@ -1,0 +1,45 @@
+
+
+.table {
+  th, td {
+    @extend .py-1;
+    @extend .px-2;
+  }
+}
+
+.table thead {
+  > tr {
+    > th {
+      height: $table-header-height;
+      vertical-align: middle;
+      color: $text-muted;
+    }
+  }
+}
+
+.table tr.tr-total {
+  > td {
+    height: $table-tr-total-height;
+  }
+}
+
+.table-responsive {
+  position: relative;
+  min-height: calc(100vh - 40rem);
+
+  // 테이블 데이터 아이템을 전체선택 했을 경우의 메시지바
+  // 전체 현황 row의 위에 뜸.
+  #alert-all-checking {
+    position: absolute;
+    top: $table-header-height;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    height: $table-tr-total-height;
+    margin: 0;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

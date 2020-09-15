@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TW-kakaomonet</title>
+
+  <link rel="stylesheet" type="text/css" href="../../assets/scss/bootstrap-4.5.1/scss/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0%20/style.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/tw-kakaomoment.css">
+</head>
+<body>
+  <!-- twWrapper -->
+  <div class="twWrapper">
+    <!-- gnb -->
+    <nav class="gnb">
+      <a class="gnb-brand" href="#">
+        <img src="../../assets/images/navbar-brand.svg">
+      </a>
+      <div class="gnb-navbar">
+        <ul class="navbar-nav mr-auto font-weight-bold">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">Insight</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">서브메뉴 1</a>
+              <a class="dropdown-item" href="#">서브메뉴 2</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Audience</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Kakaomoment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Asset</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">Manage</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Ad Accounts</a>
+              <a class="dropdown-item" href="#">Companies</a>
+              <a class="dropdown-item" href="#">Users</a>
+              <a class="dropdown-item" href="#">Billing</a>
+              <a class="dropdown-item" href="#">DMP Usage History</a>
+            </div>
+          </li>
+          <li class="nav-item nav-item-user dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">
+              <i class="ico ic-user"></i>
+              <span class="sr-only">account.name@igaworks.com</span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">
+                <i class="ico ic-info"></i>
+                정보수정
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="ico ic-close"></i>
+                로그아웃
+              </a>
+            </div>
+          </li>
+      </div>
+    </nav>
+    <!-- /gnb -->
+
+    <!-- snb -->
+    <nav class="snb">
+      <div class="snb-nav pt-2">
+        <a class="snb-nav-item is-active" href="#">
+          <span class="snb-nav-item__icon"><i class="ico ic-table"></i></span>
+          <span class="snb-nav-item__title">광고 관리</span>
+        </a>
+        <a class="snb-nav-item" href="#">
+          <span class="snb-nav-item__icon"><i class="ico ic-clock-undo"></i></span>
+          <span class="snb-nav-item__title">광고 소재 관리</span>
+        </a>
+      </div>
+    </nav>
+    <!-- /snb -->
+
+    <!-- contentWrapper -->
+    <div class="contentWrapper">
+      <!-- mainContent -->
+      <main class="mainContent px-2 pb-2">
+        <!-- headerbar -->
+        <header class="headerbar d-flex align-items-center justify-content-between h-fixed-9 px-2">
+          <div class="start mr-auto my-auto">
+            <h4 class="headerbar__title font-weight-bold m-0">광고관리</h4>
+          </div>
+          <div class="end ml-auto my-auto">
+            <div class="btn-group">
+              <button class="btn swBtn btn-text-secondary dropdown-toggle text-truncate" type="button"
+                      id="dropdown-adaccount-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="text-success" data-status="on">
+                    <i class="ico ic-circle-fill"></i>
+                  </span>
+                현재 선택한 광고계정 이름 현재 선택한 광고계정 이름 현재 선택한 광고계정 이름
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-adaccount-button">
+                <h6 class="dropdown-header">
+                  광고계정
+                </h6>
+                <div class="dropdown-scroll custom-scroll">
+                  <a class="dropdown-item text-truncate" href="#">
+                    광고계정 이름 AAAAA 광고계정 이름 AAAAA
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    광고계정 이름 BBBBB
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- /headerbar -->
+
+        <!-- card -->
+        <div class="card">
+          <!-- card-header -->
+          <div class="card-header d-flex flex-row align-items-center justify-content-between h-fixed-6 py-0 pr-2 pl-0">
+            <!-- flex-row-start -->
+            <div class="flex-row-start">
+              <!-- tab -->
+              <ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
+                <li class="tab-item px-5 is-active">
+                  <span class="tab-link" role="tab">
+                    캠페인
+                  </span>
+                </li>
+              </ul>
+              <!-- /tab -->
+            </div>
+            <!-- /flex-row-start -->
+            <!-- flex-row-end -->
+            <div class="flex-row-end">
+              <div class="btn-group">
+                <button class="btn swBtn btn-text-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                  <i class="ico ic-calendar"></i>&nbsp; 2020-07-30~2020-07-30
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  달력 플러그인 자리~!!
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <!-- /flex-row-end -->
+          </div>
+          <!-- /card-header -->
+          <!-- card-body -->
+          <div class="card-body p-0">
+            <!-- toolbar -->
+            <div class="toolbar d-flex align-items-center justify-content-between h-fixed-8 px-2">
+              <div class="start">
+                <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#campaign-batchModify-modal">일괄수정</button>
+                <button type="button" class="btn swBtn btn-outlined-primary" data-toggle="modal" data-target="#batchModify-processing-modal">일괄수정-처리중</button>
+                <button type="button" class="btn swBtn btn-outlined-danger" data-toggle="modal" data-target="#batchModify-failed-modal">일괄수정-실패</button>
+              </div>
+              <div class="end d-flex align-items-center">
+                <input type="search" class="form-control" placeholder="검색">
+
+                <div class="border-left ml-2 pl-2 h-fixed-2 w-fixed-2"></div>
+
+                <a class="btn-circle btn-text-secondary" aria-label="데이터 열 설정" href="#">
+                  <i class="ico ic-table"></i>
+                </a>
+                <span class="mr-1"></span>
+                <a class="btn-circle btn-text-secondary" aria-label="다운로드" href="#">
+                  <i class="ico ic-download"></i>
+                </a>
+              </div>
+            </div>
+            <!-- toolbar -->
+
+            <!-- table-responsive -->
+            <div class="table-responsive">
+              <!-- alert -->
+              <div class="alert alert-primary alert-dismissible fade show m-0" id="alert-all-checking">
+                <p class="text-center m-0 p-1">
+                  캠페인 20개가 선택되었습니다. <a href="#">캠페인 전체 300개 선택</a>
+                </p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- /alert -->
+              <!-- table -->
+              <table class="table table-striped table-hover border-bottom">
+                <colgroup>
+                  <col style="width: 2rem;">
+                  <col style="width: 32rem;">
+                  <col style="width: 10rem;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">전체선택</span>
+                        </label>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex align-items-center justify-content-between">
+                        캠페인
+
+                        <a href="#">
+                          <i class="ico ic-arrow-top"></i>
+                        </a>
+                      </div>
+                    </th>
+                    <th>
+                      On/Off
+                    </th>
+                    <th>
+                      상태
+                    </th>
+                    <th>
+                      예산
+                    </th>
+                    <th>
+                      비용
+                    </th>
+                    <th>
+                      노출수
+                    </th>
+                    <th>
+                      클릭수
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="tr-total text-muted font-weight-bold">
+                    <td class="align-middle">
+                      &nbsp;
+                    </td>
+                    <td class="align-middle">
+                      전체 캠페인
+                    </td>
+                    <td class="align-middle">
+                      &nbsp;
+                    </td>
+                    <td class="align-middle">
+                      &nbsp;
+                    </td>
+                    <td class="align-middle text-right">
+                       1,500,000
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="ad-management__ad-group.html">캠페인 이름 표시</a>
+                    </td>
+                    <td>
+                      On/Off
+                    </td>
+                    <td>
+                        <span class="text-primary">
+                          <i class="ico ic-circle-fill"></i>
+                        </span>
+                      운영 가능
+                    </td>
+                    <td class="text-right">
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <div class="dropdown-menu dropdown-menu-right" style="width:240px;">
+                          <h6 class="dropdown-header">캠페인 예산</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-2">
+                                <input type="text" class="form-control" placeholder="예산 입력" aria-label="예산">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">미설정</label>
+                              </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn swBtn btn-outlined-secondary">취소</button>
+                              <button class="btn swBtn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right">
+                      1,500,900
+                    </td>
+                    <td class=text-right">
+                      4,200
+                    </td>
+                    <td class="text-right">
+                      4,200
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /table-responsive -->
+
+            <!-- toolbar -->
+            <div class="toolbar border-top h-fixed-8 d-flex align-items-center justify-content-center">
+              <nav class="d-flex align-items-center justify-content-center">
+                <ul class="swPagination">
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#" aria-label="Previous">
+                      <svg class="svg-icon page-button-icon" viewBox="0 0 24 24">
+                        <polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#">1</a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-outlined-secondary is-active" href="#">2</a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#">3</a>
+                  </li>
+                  <li>
+                    <span class="page-ellipsis">...</span>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#">99</a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#" disabled aria-label="Next">
+                      <svg class="svg-icon page-button-icon" viewBox="0 0 24 24">
+                        <polygon
+                          points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <div class="ml-2"></div>
+                <div class="dropdown">
+                  <button class="btn swBtn btn-text-secondary dropdown-toggle" id="list-rowCount-button"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="ico ic-list"></i>
+                    <span class="sr-only">리스트 개수</span>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="list-rowCount-button">
+                    <h6 class="dropdown-header">리스트 개수</h6>
+                    <a class="dropdown-item" href="#">50</a>
+                    <a class="dropdown-item" href="#">100</a>
+                    <a class="dropdown-item" href="#">150</a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <!-- /toolbar -->
+          </div>
+          <!-- /card-body -->
+        </div>
+        <!-- /card -->
+      </main>
+      <!-- mainContent -->
+    </div>
+    <!-- /contentWrapper -->
+  </div>
+  <!-- /twWrapper -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="campaign-batchModify-modal" tabindex="-1" aria-labelledby="캠페인 일 예산 일괄 수정" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <!-- modal-content -->
+      <div class="modal-content">
+        <div class="modal-header p-2">
+          <h4 class="modal-title font-weight-bold">캠페인 일 예산 일괄 수정</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-2">
+          <p>선택한 캠페인의 예산을 일괄 수정합니다.</p>
+          <!-- input-group -->
+          <div class="input-group mb-2">
+            <input type="text" class="form-control" placeholder="예산 입력" aria-label="예산">
+            <div class="input-group-append">
+              <span class="input-group-text">원</span>
+            </div>
+          </div>
+          <!-- /input-group -->
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">미설정</label>
+          </div>
+
+          <p class="text-muted mt-2 p-0">
+            캠페인 일 예산은 최소 50,000원에서 최대 1,000,000,000원까지 설정 가능하며 10원  단위로 가능합니다.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-contained-primary">수정</button>
+        </div>
+      </div>
+      <!-- /modal-content -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="batchModify-processing-modal" tabindex="-1" aria-labelledby="일괄 수정 처리중" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <!-- modal-content -->
+      <div class="modal-content">
+        <div class="modal-body p-2">
+          <div class="text-center px-1 py-2">
+            <h4 class="modal-title font-weight-bold text-primary mb-2">
+              캠페인 일 예산 일괄 수정
+            </h4>
+            <p class="mb-3">
+              선택한 항목에 따라 시간이 오래 소요 될 수 있습니다.<br>
+              처리 완료 시 팝업이 자동으로 종료됩니다.
+            </p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+            <div class="text-muted mt-1">
+              24 / 100
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /modal-content -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="batchModify-failed-modal" tabindex="-1" aria-labelledby="일괄 수정 실패" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <!-- modal-content -->
+      <div class="modal-content">
+        <div class="modal-body p-2">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="text-center text-danger px-1 py-2">
+            <h4 class="modal-title font-weight-bold text-danger mb-2">
+              일괄 수정 실패
+            </h4>
+            <p class="mb-3">
+              일괄 수정에 실패했습니다.<br>
+              [다운로드] 버튼을 선택하시면 실패한 항목과 사유가 엑셀 파일로 다운로드 됩니다.
+            </p>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">확인</button>
+          <button type="button" class="btn btn-contained-danger">다운로드</button>
+        </div>
+      </div>
+      <!-- /modal-content -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

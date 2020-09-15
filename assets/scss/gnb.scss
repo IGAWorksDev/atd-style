@@ -1,0 +1,21 @@
+
+
+//
+// 2020-09
+// 새로운 GNB 스타일시트
+// 기존 UI 스타일과 rem의 크기가 안 맞을 수 있음.
+
+
+@import
+'vendors/bootstrap-extention',
+'vendors/bootstrap-4.5.1/scss/bootstrap',
+'vendors/styleworks/styleworks'
+;
+
+@import
+'utils/variables'
+;
+
+@import
+'layout/gnb'
+;

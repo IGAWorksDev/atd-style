@@ -1,0 +1,14 @@
+
+//
+// TW Layout Wrapper
+//
+.twWrapper {
+  background-color: $gray-100;
+
+  display: grid;
+  grid-template-columns: $snb-width 1fr;
+  grid-template-rows: $gnb-height 1fr;
+
+  min-width: $layout-min-width;
+  min-height: 100vh;
+}

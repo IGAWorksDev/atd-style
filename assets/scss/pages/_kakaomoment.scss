@@ -1,0 +1,21 @@
+
+
+
+// 광고계정 드랍다운 크기
+#dropdown-adaccount-button {
+  max-width: 280px;
+}
+#dropdown-adaccount-button + .dropdown-menu {
+  max-width: 280px;
+}
+
+// .card-header 안의 .tab을 사용할 경우
+#card-header-start-tab {
+  .tab-item {
+    border-top-color: transparent;
+  }
+  .tab-item:first-child {
+    border-left-color: transparent;
+  }
+}
+
