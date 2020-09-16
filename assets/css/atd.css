@@ -1029,4 +1029,6 @@ small { font-size: 80%; line-height: 1.175; }
 
 #table-custom-fileSetting { max-height: 32rem; }
 
+#card-group-steps-list-selector .card .list-group { height: 32rem; }
+
 body { background-color: #212529; }

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TW-kakaomonet</title>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+</head>
+<body>
+  <!-- twWrapper -->
+  <div class="twWrapper">
+    <!-- gnb -->
+    <nav class="gnb">
+      <a class="gnb-brand" href="#">
+        <img src="../../assets/images/navbar-brand.svg">
+      </a>
+      <div class="gnb-navbar">
+        <ul class="navbar-nav mr-auto font-weight-bold">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">Insight</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">서브메뉴 1</a>
+              <a class="dropdown-item" href="#">서브메뉴 2</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Audience</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Kakaomoment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Asset</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">Manage</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Ad Accounts</a>
+              <a class="dropdown-item" href="#">Companies</a>
+              <a class="dropdown-item" href="#">Users</a>
+              <a class="dropdown-item" href="#">Billing</a>
+              <a class="dropdown-item" href="#">DMP Usage History</a>
+            </div>
+          </li>
+          <li class="nav-item nav-item-user dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">
+              <i class="ico ic-user"></i>
+              <span class="sr-only">account.name@igaworks.com</span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">
+                <i class="ico ic-info"></i>
+                정보수정
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="ico ic-close"></i>
+                로그아웃
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /gnb -->
+
+    <!-- snb -->
+    <nav class="snb">
+      <div class="snb-nav pt-2">
+        <a class="snb-nav-item" href="ad-management__campaign.html">
+          <span class="snb-nav-item__icon"><i class="ico ic-table"></i></span>
+          <span class="snb-nav-item__title">광고 관리</span>
+        </a>
+        <a class="snb-nav-item is-active" href="ad-banner__manage.html">
+          <span class="snb-nav-item__icon"><i class="ico ic-clock-undo"></i></span>
+          <span class="snb-nav-item__title">광고 소재 관리</span>
+        </a>
+      </div>
+    </nav>
+    <!-- /snb -->
+
+    <!-- contentWrapper -->
+    <div class="contentWrapper">
+      <!-- mainContent -->
+      <main class="mainContent px-2 pb-2">
+        <!-- headerbar -->
+        <header class="headerbar d-flex align-items-center justify-content-between h-fixed-9 px-2">
+          <div class="start mr-auto my-auto">
+            <h4 class="headerbar__title font-weight-bold m-0">
+              소재 예약 관리
+            </h4>
+          </div>
+          <div class="end ml-auto my-auto">
+            <div class="btn-group">
+              <button class="btn swBtn btn-text-secondary dropdown-toggle text-truncate" type="button"
+                      id="dropdown-adaccount-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="text-success" data-status="on">
+                    <i class="ico ic-circle-fill"></i>
+                  </span>
+                현재 선택한 광고계정 이름 현재 선택한 광고계정 이름 현재 선택한 광고계정 이름
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-adaccount-button">
+                <h6 class="dropdown-header">
+                  광고계정
+                </h6>
+                <div class="dropdown-scroll custom-scroll">
+                  <a class="dropdown-item text-truncate" href="#">
+                    광고계정 이름 AAAAA 광고계정 이름 AAAAA
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    광고계정 이름 BBBBB
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- /headerbar -->
+
+        <!-- card -->
+        <div class="card">
+          <!-- card-body -->
+          <div class="card-body p-0">
+            <!-- toolbar -->
+            <div class="toolbar d-flex align-items-center justify-content-between h-fixed-8 px-2">
+              <div class="flex-start d-flex align-items-center">
+                <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#change-reservation-modal">
+                  예약 변경
+                </button>
+                <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#delete-reservation-modal">
+                  예약 삭제
+                </button>
+                <div class="pl-3"></div>
+                <button type="button" class="btn swBtn btn-outlined-primary" data-toggle="modal" data-target="#banner-reservation-modal">
+                  On 예약
+                </button>
+                <button type="button" class="btn swBtn btn-outlined-primary" data-toggle="modal" data-target="#banner-reservation-modal">
+                  Off 예약
+                </button>
+              </div>
+              <div class="flex-end">
+                <!-- search -->
+                <div class="search">
+                  <label class="sr-only">검색</label>
+                  <input type="search" class="form-control" placeholder="검색">
+                </div>
+                <!-- /search -->
+              </div>
+            </div>
+            <!-- toolbar -->
+
+            <!-- table-responsive -->
+            <div class="table-responsive" id="table-banner-list">
+              <!-- table -->
+              <table class="table table-striped table-hover border-bottom">
+                <colgroup>
+                  <col style="width: 4.8rem;">
+                  <col style="width: 24rem;">
+                  <col style="width: 24rem;">
+                  <col style="width: 30rem;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="list-item-all-check">
+                        <label class="d-none" for="list-item-all-check">전체선택</label>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="d-flex align-items-center justify-content-between">
+                        캠페인
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#" aria-label="필터">
+                          <i class="ico ic-funnel"></i>
+                        </a>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="d-flex align-items-center justify-content-between">
+                        광고그룹
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#" aria-label="필터">
+                          <i class="ico ic-funnel"></i>
+                        </a>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      소재
+                    </th>
+                    <th>
+                      <div class="d-flex align-items-center justify-content-between">
+                        현재 상태
+                        <a class="btn-circle btn-text-gray btn-circle-xs" href="#">
+                          <i class="ico ic-arrow-top"></i>
+                        </a>
+                      </div>
+                    </th>
+                    <th>
+                      예약(On)
+                    </th>
+                    <th>
+                      예약(Off)
+                    </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="list-item-check-001">
+                        <label class="d-none" for="list-item-check-001">
+                          &nbsp;선택
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <div class="text-truncate" style="max-width: 20rem;">
+                        캠페인 이름 그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <div class="text-truncate" style="max-width: 20rem;">
+                        광고그룹 이름 그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="text-truncate ml-1" style="width: 17.5rem;">
+                          광고 소재 이름
+                          그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      On
+                    </td>
+                    <td class="align-middle">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">2020-08-10 16:00</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu" style="width:240px;">
+                          <h6 class="dropdown-header font-weight-bold">예약(On) 설정</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              날짜 피커 / 타임 피커
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="swBtn btn-outlined-secondary">취소</button>
+                              <button class="swBtn btn-contained-primary">저장</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">2020-08-10 16:00</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width:240px;">
+                          <h6 class="dropdown-header font-weight-bold">예약(Off) 설정</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              날짜 피커 / 타임 피커
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="swBtn btn-outlined-secondary">취소</button>
+                              <button class="swBtn btn-contained-primary">저장</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /table-responsive -->
+
+            <!-- toolbar -->
+            <div class="toolbar border-top h-fixed-8 d-flex align-items-center justify-content-center">
+              <nav class="d-flex align-items-center justify-content-center">
+                <ul class="swPagination">
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#" aria-label="Previous">
+                      <svg class="svg-icon page-button-icon" viewBox="0 0 24 24">
+                        <polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#">1</a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-outlined-secondary is-active" href="#">2</a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#">3</a>
+                  </li>
+                  <li>
+                    <span class="page-ellipsis">...</span>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#">99</a>
+                  </li>
+                  <li>
+                    <a class="btn-circle btn-text-secondary" href="#" disabled aria-label="Next">
+                      <svg class="svg-icon page-button-icon" viewBox="0 0 24 24">
+                        <polygon
+                          points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <div class="ml-2"></div>
+                <div class="dropdown">
+                  <button class="btn swBtn btn-text-secondary dropdown-toggle" id="list-rowCount-button"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="ico ic-list"></i>
+                    <span class="sr-only">리스트 개수</span>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="list-rowCount-button">
+                    <h6 class="dropdown-header">리스트 개수</h6>
+                    <a class="dropdown-item" href="#">50</a>
+                    <a class="dropdown-item" href="#">100</a>
+                    <a class="dropdown-item" href="#">150</a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <!-- /toolbar -->
+          </div>
+          <!-- /card-body -->
+        </div>
+        <!-- /card -->
+      </main>
+      <!-- mainContent -->
+    </div>
+    <!-- /contentWrapper -->
+  </div>
+  <!-- /twWrapper -->
+
+  <!-- modal -->
+  <div class="modal fade" id="banner-reservation-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <!-- modal-content -->
+      <div class="modal-content">
+        <!-- modal-header -->
+        <div class="modal-header p-2">
+          <h4 class="modal-title font-weight-bold">
+            소재 On/Off 예약
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- /modal-header -->
+        <!-- modal-body -->
+        <div class="modal-body p-0">
+          <!-- card-group -->
+          <div class="card-group" id="card-group-steps-list-selector">
+            <!-- card -->
+            <div class="card rounded-0 border-left-0">
+              <!-- card-header -->
+              <div class="card-header px-2 rounded-0">
+                <h5 class="card-title font-weight-bold mb-0">
+                  Step1. 캠페인 선택
+                </h5>
+              </div>
+              <!-- /card-header -->
+              <!-- card-body -->
+              <div class="card-body p-0">
+                <div class="py-1 px-2 border-bottom">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="campagin-all">
+                    <label class="form-check-label pl-1" for="campagin-all">
+                      전체 선택
+                    </label>
+                  </div>
+                </div>
+                <!-- list-group -->
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item px-2 active">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="campagin-id-001" checked>
+                      <label class="form-check-label pl-1" for="campagin-id-001">
+                        <span class="d-inline-block text-truncate" style="max-width: 90%;">Check this custom checkbox Check this custom checkbox</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-group-item px-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="campagin-id-002">
+                      <label class="form-check-label pl-1" for="campagin-id-002">
+                        <span class="d-inline-block text-truncate" style="max-width: 90%;">Check this custom checkbox Check this custom checkbox</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- /list-group -->
+              </div>
+              <!-- /card-body -->
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="card">
+              <!-- card-header -->
+              <div class="card-header px-2">
+                <h5 class="card-title font-weight-bold mb-0">
+                  Step2. 광고그룹 선택
+                </h5>
+              </div>
+              <!-- /card-header -->
+              <!-- card-body -->
+              <div class="card-body p-0">
+                <div class="py-1 px-2 border-bottom">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="adgroup-all">
+                    <label class="form-check-label pl-1" for="adgroup-all">
+                      전체 선택
+                    </label>
+                  </div>
+                </div>
+                <!-- list-group -->
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item px-2 active">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="adgroup-id-001" checked>
+                      <label class="form-check-label pl-1" for="adgroup-id-001">
+                        <span class="d-inline-block text-truncate" style="max-width: 90%;">Check this custom checkbox Check this custom checkbox</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-group-item px-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="adgroup-id-002">
+                      <label class="form-check-label pl-1" for="adgroup-id-002">
+                        <span class="d-inline-block text-truncate" style="max-width: 90%;">Check this custom checkbox Check this custom checkbox</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- /list-group -->
+              </div>
+              <!-- /card-body -->
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="card rounded-0  border-right-0">
+              <!-- card-header -->
+              <div class="card-header px-2 rounded-0">
+                <h5 class="card-title font-weight-bold mb-0">
+                  Step3. 소재 선택
+                </h5>
+              </div>
+              <!-- /card-header -->
+              <!-- card-body -->
+              <div class="card-body p-0">
+                <div class="py-1 px-2 border-bottom">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="banner-all">
+                    <label class="form-check-label pl-1" for="banner-all">
+                      전체 선택
+                    </label>
+                  </div>
+                </div>
+                <!-- list-group -->
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item px-2 active">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="banner-id-001" checked>
+                      <label class="form-check-label pl-1" for="banner-id-001">
+                        <span class="d-inline-block text-truncate" style="max-width: 90%;">Check this custom checkbox Check this custom checkbox</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-group-item px-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="banner-id-002">
+                      <label class="form-check-label pl-1" for="banner-id-002">
+                        <span class="d-inline-block text-truncate" style="max-width: 90%;">Check this custom checkbox Check this custom checkbox</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- /list-group -->
+              </div>
+              <!-- /card-body -->
+            </div>
+            <!-- /card -->
+          </div>
+          <!-- /card-group -->
+
+          <!-- card -->
+          <div class="card rounded-0 border-top-0">
+            <!-- card-header -->
+            <div class="card-header px-2 rounded-0">
+              <h5 class="card-title font-weight-bold mb-0">
+                Step4. On 예약 실시 선택
+              </h5>
+            </div>
+            <!-- /card-header -->
+            <!-- card-body -->
+            <div class="card-body px-2">
+              <div class="form-inline">
+                <div class="form-group">
+                  <label class="sr-only" for="on-reservation-date">예약할 날짜와 시간</label>
+                  <input type="datetime-local" class="form-control" id="on-reservation-date" placeholder="예약할 날짜와 시간">
+                </div>
+              </div>
+            </div>
+            <!-- /card-body -->
+          </div>
+          <!-- /card -->
+        </div>
+        <!-- /modal-body -->
+        <!-- modal-footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-contained-primary">예약</button>
+        </div>
+        <!-- /modal-footer -->
+      </div>
+      <!-- /modal-content -->
+    </div>
+  </div>
+  <!-- /modal -->
+
+
+  <!-- modal -->
+  <div class="modal fade" id="change-reservation-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+      <!-- modal-content -->
+      <div class="modal-content">
+        <!-- modal-header -->
+        <div class="modal-header p-2">
+          <h4 class="modal-title font-weight-bold">
+            예약 변경
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- /modal-header -->
+        <!-- modal-body -->
+        <div class="modal-body p-2">
+          <div class="mb-2">
+            <h5>
+              On 예약
+            </h5>
+            <div class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="on-change-datetime">
+                  예약 날짜와 시간
+                </label>
+                <input type="datetime-local" class="form-control" id="on-change-datetime" placeholder="예약 날짜와 시간">
+              </div>
+              <div class="custom-control custom-checkbox ml-1">
+                <input type="checkbox" class="custom-control-input" id="on-change-none">
+                <label class="custom-control-label" for="on-change-none">
+                  변경 안 함
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <h5>
+              Off 예약
+            </h5>
+            <div class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="off-change-datetime">
+                  예약 날짜와 시간
+                </label>
+                <input type="datetime-local" class="form-control" id="off-change-datetime" placeholder="예약 날짜와 시간">
+              </div>
+              <div class="custom-control custom-checkbox ml-1">
+                <input type="checkbox" class="custom-control-input" id="off-change-none">
+                <label class="custom-control-label" for="off-change-none">
+                  변경 안 함
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <small class="text-muted">
+            * 광고 그룹에서 설정한 요일/시간 범위 내에서만 동작 합니다.
+          </small>
+        </div>
+        <!-- /modal-body -->
+        <!-- modal-footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-contained-primary">저장</button>
+        </div>
+        <!-- /modal-footer -->
+      </div>
+      <!-- /modal-content -->
+    </div>
+  </div>
+  <!-- /modal -->
+
+
+  <!-- modal -->
+  <div class="modal fade" id="delete-reservation-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <!-- modal-content -->
+      <div class="modal-content">
+        <!-- modal-header -->
+        <div class="modal-header p-2">
+          <h4 class="modal-title font-weight-bold">
+            예약 목록 삭제
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- /modal-header -->
+        <!-- modal-body -->
+        <div class="modal-body p-2">
+          <p>선택한 소재의 예약을 삭제 하시겠습니까?<br>
+            삭제시 예약 기능이 더 이상 동작하지 않습니다.
+          </p>
+        </div>
+        <!-- /modal-body -->
+        <!-- modal-footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-contained-danger">삭제</button>
+        </div>
+        <!-- /modal-footer -->
+      </div>
+      <!-- /modal-content -->
+    </div>
+  </div>
+  <!-- /modal -->
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
