@@ -52,7 +52,7 @@
     background-color: transparent;
     transition: $snb-transition-base;
   }
-  .nav-item__icon {
+  .nav-item-icon {
     display: inline-block;
     font-size: $font-size-lg;
     line-height: 1;
@@ -61,11 +61,10 @@
     height: $snb-nav-item-width;
     overflow: hidden;
   }
-  .nav-item__title {
+  .nav-item-title {
     position: absolute;
     left: $snb-nav-item-width;
     display: none;
-    padding-left: $spacer;
     font-size: $font-size-base;
     font-weight: bold;
     white-space: nowrap;
@@ -112,13 +111,12 @@
   width: $snb-width-hover; // 1
   box-shadow: $snb-box-shadow;
   transition: $snb-transition-base;
-
   .nav-item {
     .nav-link { // 2
       width: 100%;
       border-radius:  $snb-nav-item-radius 0 0 $snb-nav-item-radius;
     }
-    .nav-item__title { // 3
+    .nav-item-title { // 3
       display: inline-block;
     }
   }

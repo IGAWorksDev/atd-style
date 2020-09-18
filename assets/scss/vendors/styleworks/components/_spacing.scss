@@ -4,6 +4,10 @@
 //
 @each $property, $abbreviated in (margin: m, padding: p){
   @each $size, $length in $spacers {
+    .#{$abbreviated}-#{$size},
+    .#{$abbreviated}-#{$size}{
+      #{$property}: $length !important;
+    }
     .#{$abbreviated}t-#{$size},
     .#{$abbreviated}y-#{$size}{
       #{$property}-top: $length !important;

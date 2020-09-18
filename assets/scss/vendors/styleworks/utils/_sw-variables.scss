@@ -278,6 +278,16 @@ $switch-bgcolor-checked: $success;
 $switch-padding: ($switch-height - $switch-indicator-size) / 2;
 
 $switch-transition: all 0.2s ease-in-out;
-
 $switch-focus-width: $btn-focus-width;
 $switch-disabled-color: $gray-600;
+
+
+// List group
+$list-group-border-width: $border-width;
+$list-group-border-color: $border-color;
+$list-group-bgcolor: transparent;
+$list-group-item-padding-y : $spacer;
+$list-group-item-padding-x : ($spacer * 2);
+$list-group-active-color: $primary;
+$list-group-active-bgcolor : rgba($primary, 0.15);
+

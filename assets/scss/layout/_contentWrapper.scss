@@ -13,11 +13,9 @@
 // 사이드 패널이 있는 경우
 .contentWrapper.in-side {
   display: grid;
-  grid-template-columns: 28rem 1fr;
-
+  grid-template-columns: $side-content-width $main-content-width;
   .sideContent {
     grid-column-start: 1;
-    @extend .border-right;
   }
   .mainContent {
     grid-column-start: 2;
@@ -25,12 +23,16 @@
 }
 
 
-
-// Main
-.mainContent {}
-
 // Side Panel Content
 .sideContent {
   height: 100%;
-  background-color: $white;
+  @extend .border-right;
+  background-color: $side-content-bgcolor;
 }
+
+
+// Main Panel Content
+.mainContent {
+  height: 100%;
+}
+

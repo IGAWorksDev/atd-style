@@ -1,5 +1,24 @@
 
 
+// sideCampaign
+.sideCampaign {
+  .sidehader {
+    height: $side-content-header-height;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+  }
+  .sidebody {
+    height: calc(100vh - (#{$side-content-header-height} + #{$gnb-height})); // 뷰포트 전체 높이에서 gnb와 헤더 높이 제거
+    overflow: auto;
+  }
+}
+
+.mainContent {
+
+}
+
+
 // 광고계정 드랍다운 크기
 #dropdown-adaccount-button {
   max-width: 280px;

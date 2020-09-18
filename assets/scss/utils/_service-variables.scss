@@ -1,9 +1,8 @@
 
 
-// Layouts
+// Layout
 $layout-min-width: 1440px;
 $layout-min-height: 900px;
-
 
 // Global navigation bar
 $gnb-z-index: 20;
@@ -19,7 +18,7 @@ $snb-z-index: 10;
 $snb-width: 5.6rem;
 $snb-width-hover: 24rem;
 $snb-height: calc(100vh - #{$gnb-height});
-$snb-bgcolor: #FFFFFF;
+$snb-bgcolor: $white;
 $snb-transition-base: all .2s ease-in-out !default;
 $snb-box-shadow: 0 0 4px rgba($black, 0.1);
 
@@ -33,6 +32,13 @@ $snb-nav-item-bgcolor-active: rgba($primary, 0.15);
 $snb-nav-item-bgcolor-hover: rgba($primary, 0.05);
 $snb-nav-item-radius: 5rem;
 
+// Side Content
+$side-content-bgcolor: transparent;
+$side-content-width: 28rem;
+$side-content-header-height: 6.4rem;
+
+// Main Content
+$main-content-width: auto;
 
 // Tables
 $table-header-height: 4rem;
