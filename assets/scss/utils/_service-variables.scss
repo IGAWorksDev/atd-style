@@ -1,0 +1,39 @@
+
+
+// Layouts
+$layout-min-width: 1440px;
+$layout-min-height: 900px;
+
+
+// Global navigation bar
+$gnb-z-index: 20;
+$gnb-width: 100vw;
+$gnb-height: 5.6rem;
+$gnb-bgcolor: $white;
+$gnb-nav-link-color: $gray-800;
+$gnb-nav-link-active-color: $primary;
+
+
+// Side navigation bar
+$snb-z-index: 10;
+$snb-width: 5.6rem;
+$snb-width-hover: 24rem;
+$snb-height: calc(100vh - #{$gnb-height});
+$snb-bgcolor: #FFFFFF;
+$snb-transition-base: all .2s ease-in-out !default;
+$snb-box-shadow: 0 0 4px rgba($black, 0.1);
+
+$snb-nav-item-spacer-y: $spacer / 2;
+$snb-nav-item-spacer-x: $spacer;
+$snb-nav-item-width: 4rem;
+$snb-nav-item-height: 4rem;
+$snb-nav-item-color: $body-color;
+$snb-nav-item-color-active: $primary;
+$snb-nav-item-bgcolor-active: rgba($primary, 0.15);
+$snb-nav-item-bgcolor-hover: rgba($primary, 0.05);
+$snb-nav-item-radius: 5rem;
+
+
+// Tables
+$table-header-height: 4rem;
+$table-tr-total-height: 5.6rem;

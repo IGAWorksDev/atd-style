@@ -589,6 +589,8 @@ small { font-size: 80%; line-height: 1.175; }
 .btn-outlined-dark:focus { -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3); box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3); }
 .btn-outlined-dark.is-disabled, .btn-outlined-dark[disabled], .btn-outlined-dark:disabled { color: #adb5bd; border-color: #adb5bd; background-color: transparent; cursor: default; }
 
+.navbar-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; padding-left: 0; margin: 0; list-style: none; }
+
 .swPagination { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 .swPagination > li + li { margin-left: 0.4rem; }
 
