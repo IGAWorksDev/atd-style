@@ -103,15 +103,15 @@
     <!-- contentWrapper -->
     <div class="contentWrapper">
       <!-- mainContent -->
-      <main class="mainContent px-2 pb-2">
-        <!-- headerbar -->
-        <header class="headerbar d-flex align-items-center justify-content-between h-fixed-9 px-2">
-          <div class="start mr-auto my-auto">
-            <h4 class="headerbar__title font-weight-bold m-0">광고관리</h4>
+      <main class="mainContent mainContent-adManage px-2 pb-2">
+        <!-- mainheader -->
+        <header class="mainheader justify-content-between h-fixed-9 px-2">
+          <div class="flex-start mr-auto my-auto">
+            <h4 class="font-weight-bold m-0">광고관리</h4>
           </div>
-          <div class="end ml-auto my-auto">
+          <div class="flex-end ml-auto my-auto">
             <div class="btn-group">
-              <button class="btn swBtn btn-text-secondary dropdown-toggle text-truncate" type="button"
+              <button class="btn btn-text-secondary dropdown-toggle text-truncate" type="button"
                       id="dropdown-adaccount-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="text-success" data-status="on">
                     <i class="ico ic-circle-fill"></i>
@@ -134,10 +134,10 @@
             </div>
           </div>
         </header>
-        <!-- /headerbar -->
+        <!-- /mainbody -->
 
-        <!-- card -->
-        <div class="card">
+        <!-- mainbody -->
+        <div class="mainbody card">
           <!-- card-header -->
           <div class="card-header d-flex flex-row align-items-center justify-content-between h-fixed-6 py-0 pr-2 pl-0">
             <!-- flex-row-start -->
@@ -156,7 +156,7 @@
             <!-- flex-row-end -->
             <div class="flex-row-end">
               <div class="btn-group">
-                <button class="btn swBtn btn-text-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                <button class="btn btn-text-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                   <i class="ico ic-calendar"></i>&nbsp; 2020-07-30~2020-07-30
                 </button>
@@ -178,9 +178,9 @@
             <!-- toolbar -->
             <div class="toolbar d-flex align-items-center justify-content-between h-fixed-8 px-2">
               <div class="flex-start">
-                <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#campaign-batchModify-modal">일괄수정</button>
-                <button type="button" class="btn swBtn btn-outlined-primary" data-toggle="modal" data-target="#batchModify-processing-modal">일괄수정-처리중</button>
-                <button type="button" class="btn swBtn btn-outlined-danger" data-toggle="modal" data-target="#batchModify-failed-modal">일괄수정-실패</button>
+                <button type="button" class="btn btn-outlined-secondary" data-toggle="modal" data-target="#campaign-batchModify-modal">일괄수정</button>
+                <button type="button" class="btn btn-outlined-primary" data-toggle="modal" data-target="#batchModify-processing-modal">일괄수정-처리중</button>
+                <button type="button" class="btn btn-outlined-danger" data-toggle="modal" data-target="#batchModify-failed-modal">일괄수정-실패</button>
               </div>
               <div class="flex-end d-flex align-items-center justify-content-center">
                 <!-- search -->
@@ -378,11 +378,11 @@
                             <h6 class="dropdown-header font-weight-bold">상태 필터</h6>
                             <form>
                               <div class="py-1 px-2">
-                                <button class="btn swBtn btn-contained-primary swBtn-sm">
+                                <button class="btn btn-contained-primary btn-sm">
                                   <i class="ico ic-arrow-bottom"></i>
                                   A to Z
                                 </button>
-                                <button class="btn swBtn btn-outlined-secondary swBtn-sm">
+                                <button class="btn btn-outlined-secondary btn-sm">
                                   <i class="ico ic-arrow-top"></i>
                                   Z to A
                                 </button>
@@ -533,8 +533,8 @@
                             </div>
                             <div class="dropdown-divider"></div>
                             <div class="py-1 px-2 text-right">
-                              <button class="swBtn btn-outlined-secondary">취소</button>
-                              <button class="swBtn btn-contained-primary">수정</button>
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
                             </div>
                           </form>
                         </div>
@@ -556,9 +556,9 @@
             <!-- /table-responsive -->
 
             <!-- toolbar -->
-            <div class="toolbar border-top h-fixed-8 d-flex align-items-center justify-content-center">
+            <div class="toolbar border-top justify-content-center">
               <nav class="d-flex align-items-center justify-content-center">
-                <ul class="swPagination">
+                <ul class="pagination">
                   <li>
                     <a class="btn-circle btn-text-secondary" href="#" aria-label="Previous">
                       <svg class="svg-icon page-button-icon" viewBox="0 0 24 24">
@@ -592,7 +592,7 @@
                 </ul>
                 <div class="ml-2"></div>
                 <div class="dropdown">
-                  <button class="btn swBtn btn-text-secondary dropdown-toggle" id="list-rowCount-button"
+                  <button class="btn btn-text-secondary dropdown-toggle" id="list-rowCount-button"
                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="ico ic-list"></i>
                     <span class="sr-only">리스트 개수</span>

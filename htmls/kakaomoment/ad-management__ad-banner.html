@@ -104,7 +104,7 @@
     <div class="contentWrapper in-side">
       <!-- sideContent -->
       <div class="sideContent sideCampaign">
-        <header class="sidehader p-2">
+        <header class="sideheader p-2">
           <h5 class="font-weight-bold m-0">
             캠페인 목록
           </h5>
@@ -198,18 +198,18 @@
       <!-- /sideContent -->
 
       <!-- mainContent -->
-      <main class="mainContent px-2 pb-2">
-        <!-- headerbar -->
-        <header class="headerbar d-flex align-items-center justify-content-between h-fixed-9 px-2">
+      <main class="mainContent mainContent-adManage px-2 pb-2">
+        <!-- mainheader -->
+        <header class="mainheader justify-content-between px-2">
           <div class="start mr-auto my-auto">
             <small class="text-muted">캠페인</small>
-            <h4 class="headerbar__title font-weight-bold m-0">
+            <h4 class="font-weight-bold m-0">
               선택한 캠페인 이름
             </h4>
           </div>
           <div class="end ml-auto my-auto">
             <div class="btn-group">
-              <button class="btn swBtn btn-text-secondary dropdown-toggle text-truncate" type="button"
+              <button class="btn btn-text-secondary dropdown-toggle text-truncate" type="button"
                       id="dropdown-adaccount-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="text-success" data-status="on">
                     <i class="ico ic-circle-fill"></i>
@@ -232,12 +232,12 @@
             </div>
           </div>
         </header>
-        <!-- /headerbar -->
+        <!-- /mainheader -->
 
-        <!-- card -->
-        <div class="card">
+        <!-- mainbody -->
+        <div class="mainbody card">
           <!-- card-header -->
-          <div class="card-header d-flex flex-row align-items-center justify-content-between h-fixed-6 py-0 pr-2 pl-0">
+          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
             <!-- flex-row-start -->
             <div class="flex-row-start">
               <!-- tab -->
@@ -259,7 +259,7 @@
             <!-- flex-row-end -->
             <div class="flex-row-end">
               <div class="btn-group">
-                <button class="btn swBtn btn-text-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-text-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="ico ic-calendar"></i>&nbsp; 2020-07-30~2020-07-30
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -273,10 +273,10 @@
           <!-- card-body -->
           <div class="card-body p-0">
             <!-- toolbar -->
-            <div class="toolbar d-flex align-items-center justify-content-between h-fixed-8 px-2">
+            <div class="toolbar justify-content-between px-2 border-bottom">
               <div class="flex-start d-flex align-items-center">
-                <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#banner-batchModify-modal">입찰가 일괄 수정</button>
-                <button type="button" class="btn swBtn btn-outlined-secondary" data-toggle="modal" data-target="#bid-amount-alert-modal">광고그룹 최대 입찰 금액 변경 안내</button>
+                <button type="button" class="btn btn-outlined-secondary" data-toggle="modal" data-target="#banner-batchModify-modal">입찰가 일괄 수정</button>
+                <button type="button" class="btn btn-outlined-secondary" data-toggle="modal" data-target="#bid-amount-alert-modal">광고그룹 최대 입찰 금액 변경 안내</button>
               </div>
 
               <div class="flex-end d-flex align-items-center justify-content-center">
@@ -491,11 +491,11 @@
                             <h6 class="dropdown-header font-weight-bold">상태 필터</h6>
                             <form>
                               <div class="py-1 px-2">
-                                <button class="btn swBtn btn-contained-primary swBtn-sm">
+                                <button class="btn btn-contained-primary btn-sm">
                                   <i class="ico ic-arrow-bottom"></i>
                                   A to Z
                                 </button>
-                                <button class="btn swBtn btn-outlined-secondary swBtn-sm">
+                                <button class="btn btn-outlined-secondary btn-sm">
                                   <i class="ico ic-arrow-top"></i>
                                   Z to A
                                 </button>
@@ -551,11 +551,11 @@
                             <h6 class="dropdown-header font-weight-bold">심사 상태 필터</h6>
                             <form>
                               <div class="py-1 px-2">
-                                <button class="btn swBtn btn-contained-primary swBtn-sm">
+                                <button class="btn btn-contained-primary btn-sm">
                                   <i class="ico ic-arrow-bottom"></i>
                                   A to Z
                                 </button>
-                                <button class="btn swBtn btn-outlined-secondary swBtn-sm">
+                                <button class="btn btn-outlined-secondary btn-sm">
                                   <i class="ico ic-arrow-top"></i>
                                   Z to A
                                 </button>
@@ -704,8 +704,775 @@
                             </div>
                             <div class="dropdown-divider"></div>
                             <div class="py-1 px-2 text-right">
-                              <button class="swBtn btn-outlined-secondary">취소</button>
-                              <button class="swBtn btn-contained-primary">수정</button>
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- /dropdown-menu -->
+                      </div>
+                      <!-- /btn-group -->
+                    </td>
+                    <td class="align-middle text-right">
+                      1,500,900
+                    </td>
+                    <td class="align-middle text-right">
+                      4,200
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          &nbsp; <span class="sr-only">선택</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      <!-- cell-header -->
+                      <div class="cell-header cell-header-banner">
+                        <div class="cell-header__banner">
+                          <img src="../../assets/images/trans.png" alt="배너이미지"/>
+                        </div>
+                        <div class="d-flex flex-column ml-1">
+                          <small class="cell-header__sup text-muted text-truncate">
+                            광고그룹 A
+                            딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                          </small>
+                          <div class="d-flex flex-row align-items-center mt-1">
+                            <a class="cell-header__title d-inline-block text-truncate"
+                               href="ad-management__ad-banner.html">
+                              광고 소재 이름
+                              그리고 하나에 당신은 라이너 그러나 버리었습니다. 딴은 나의 책상을 가을로 하나에 가난한 그리워 거외다.
+                            </a>
+                            <a class="cell-header__external-link btn-circle btn-circle-xs btn-text-primary" href="#"
+                               aria-label="카카오모먼트로 이동">
+                              <i class="ico ic-external-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /cell-header -->
+                    </td>
+                    <td class="align-middle">
+                      <label class="switch">
+                        <input type="checkbox" class="switch-checkbox">
+                        <span class="switch-slider"></span>
+                      </label>
+                    </td>
+                    <td class="align-middle">
+                      <span class="text-success">
+                        <i class="ico ic-circle-fill"></i>
+                      </span>
+                      운영 가능
+                    </td>
+                    <td class="align-middle">
+                      심사승인
+                    </td>
+                    <td class="align-middle text-right">
+                      <!-- btn-group -->
+                      <div class="btn-group">
+                        <a href="#" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">1,500,900</a>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 24rem;">
+                          <h6 class="dropdown-header font-weight-bold">입찰 금액</h6>
+                          <form>
+                            <div class="py-1 px-2">
+                              <div class="input-group mb-1">
+                                <input type="text" class="form-control" placeholder="입찰 금액 입력">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">원</span>
+                                </div>
+                              </div>
+                              <small class="text-muted">광고그룹 최대 입찰 금액: 200원</small>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="py-1 px-2 text-right">
+                              <button class="btn btn-outlined-secondary">취소</button>
+                              <button class="btn btn-contained-primary">수정</button>
                             </div>
                           </form>
                         </div>
@@ -726,9 +1493,9 @@
             </div>
             <!-- /table-responsive -->
             <!-- toolbar -->
-            <div class="toolbar h-fixed-8 d-flex align-items-center justify-content-center">
+            <div class="toolbar justify-content-center border-top">
               <nav class="d-flex align-items-center justify-content-center">
-                <ul class="swPagination">
+                <ul class="pagination">
                   <li>
                     <a class="btn-circle btn-text-secondary" href="#" aria-label="Previous">
                       <svg class="svg-icon page-button-icon" viewBox="0 0 24 24">
@@ -762,7 +1529,7 @@
                 </ul>
                 <div class="ml-2"></div>
                 <div class="dropdown">
-                  <button class="btn swBtn btn-text-secondary dropdown-toggle" id="list-rowCount-button"
+                  <button class="btn btn-text-secondary dropdown-toggle" id="list-rowCount-button"
                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="ico ic-list"></i>
                     <span class="sr-only">리스트 개수</span>
@@ -780,9 +1547,9 @@
           </div>
           <!-- /card-body -->
         </div>
-        <!-- /card -->
+        <!-- /mainbody -->
       </main>
-      <!-- mainContent -->
+      <!-- /mainContent -->
     </div>
     <!-- /contentWrapper -->
   </div>
