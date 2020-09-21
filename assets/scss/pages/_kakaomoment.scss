@@ -1,58 +1,7 @@
 
-
-// sideCampaign
-.sideCampaign {
-  .sidehader {
-    height: $side-content-header-height;
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
-  }
-  .sidebody {
-    height: calc(100vh - (#{$side-content-header-height} + #{$gnb-height})); // 뷰포트 전체 높이에서 gnb와 헤더 높이 제거
-    overflow: auto;
-  }
-}
-
-.mainContent {
-
-}
-
-
-// 광고계정 드랍다운 크기
-#dropdown-adaccount-button {
-  max-width: 280px;
-}
-#dropdown-adaccount-button + .dropdown-menu {
-  max-width: 280px;
-}
-
-// 열설정 드랍다운
-// dropdown-columns-link
-#list-columns-setting {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  > li {
-    padding-top: ($spacer / 2);
-    padding-bottom: ($spacer / 2);
-  }
-}
-
-// .card-header 안의 .tab을 사용할 경우
-#card-header-start-tab {
-  .tab-item {
-    border-top-color: transparent;
-  }
-  .tab-item:first-child {
-    border-left-color: transparent;
-  }
-}
-
-
 // --------------------------------------------------
 // 테이블 셀에 제목과 버튼이 같이 들어 올 때
-// 셀 너비 32rem인 경우
+// 셀 너비 32rem에 맞춰져 있음.
 .cell-header {
   @extend .d-flex;
   @extend .flex-wrap;
@@ -110,13 +59,23 @@
 
 // --------------------------------------------------
 //
-// 캠페인
+// 광고관리
+//
+// 광고관리 -- 캠페인/광고그룹/광고
+.mainContent-adManage {
+  .mainbody {
+    .table-responsive {
+      height: calc(#{$main-body-height} - (#{$card-header-nav-tabs-height} + (#{$toolbar-height} * 2) + (#{$spacer} * 2)));
+      overflow: auto;
+      .table {
+        margin: 0;
+      }
+    }
+  }
+}
+
 
 #table-compaign-list {}
-
-// --------------------------------------------------
-//
-// 광고그룹
 
 #table-adGroup-list {}
 
@@ -128,13 +87,22 @@
 
 // --------------------------------------------------
 //
-// 소재
-
-// --------------------------------------------------
-//
 // 광고 소재 관리
+//
+// 소재 관리
+.mainContent-bannerManage {
+  .mainbody {
+    .table-responsive {
+      height: calc(#{$main-body-height} - ((#{$toolbar-height} * 2) + (#{$spacer} * 2)));
+      overflow: auto;
+      .table {
+        margin: 0;
+      }
+    }
+  }
+}
 
-
+// banner-reservation-madal -- 소재 on/off 예약
 #card-group-steps-list-selector {
   .card {
     .list-group {

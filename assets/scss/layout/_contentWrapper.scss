@@ -13,7 +13,7 @@
 // 사이드 패널이 있는 경우
 .contentWrapper.in-side {
   display: grid;
-  grid-template-columns: $side-content-width $main-content-width;
+  grid-template-columns: $side-width $main-width;
   .sideContent {
     grid-column-start: 1;
   }
@@ -24,15 +24,57 @@
 
 
 // Side Panel Content
+//
+//<div class="sideContent">
+//  <header class="sidehader">...</header>
+//  <div class="sidebody">...</div>
+//</div>
+
 .sideContent {
   height: 100%;
   @extend .border-right;
-  background-color: $side-content-bgcolor;
+  background-color: $side-bgcolor;
+}
+
+.sideheader {
+  height: $side-header-height;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+}
+.sidebody {
+  height: calc(#{$side-height} - #{$side-header-height}); // 뷰포트 전체 높이에서 gnb와 헤더 높이 제거
+  overflow: auto;
 }
 
 
 // Main Panel Content
+//
+//<main class="mainContent">
+//  <header class="headerbar">...</header>
+//  <div class="mainbody">...</div>
+//</main>
+
 .mainContent {
-  height: 100%;
+  height: $main-height;
 }
 
+.mainheader { // 페이지의 헤더
+  height: $main-header-height;
+  @extend .d-flex;
+  @extend .align-items-center;
+}
+
+.mainbody {
+  .card-header-nav-tabs {
+    @extend .d-flex;
+    @extend .align-items-center;
+    height: $card-header-nav-tabs-height;
+  }
+}
+
+.toolbar {
+  height: $toolbar-height;
+  @extend .d-flex;
+  @extend .align-items-center;
+}

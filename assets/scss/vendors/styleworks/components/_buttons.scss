@@ -47,7 +47,7 @@
 
 
 
-.swBtn {
+.btn {
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
@@ -61,11 +61,11 @@
 
 }
 
-.swBtn-sm {
+.btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
 
-.swBtn-lg {
+.btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
 

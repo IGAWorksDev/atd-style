@@ -58,7 +58,8 @@
 "../css/adicons-v1.0/style"
 ;
 
-@import 'utils/service-variables'
+@import
+'utils/service-variables'
 ;
 
 //@import
@@ -69,15 +70,19 @@
   // 'layout/gnb', // 분리되어 있음.
   'layout/snb',
   'layout/contentWrapper',
-  'layout/twWrapper';
+  'layout/twWrapper'
+;
 
 @import
   'components/table',
-  'components/banner';
+  'components/banner'
+;
 
 
 @import
-	'pages/kakaomoment';
+  'pages/common',
+  'pages/kakaomoment'
+;
 
 //@import
 //	'themes/';
