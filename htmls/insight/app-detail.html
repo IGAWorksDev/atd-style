@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<style>
+    .pointer {
+        cursor: pointer;
+    }
+
+    .appbar__appicon-wrapper {
+        position: relative;
+        margin-right: 1rem;
+    }
+
+    .appbar__appicon {
+        width: 6.25rem;
+        height: 6.25rem;
+        -webkit-filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+    }
+
+    img {
+        vertical-align: middle;
+        border-style: none;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>TW-Insight</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+</head>
+<body>
+<!-- twWrapper -->
+<div class="twWrapper">
+    <nav class="gnb">
+        <a class="gnb-brand" href="#">
+            <img src="../../assets/images/navbar-brand.svg"/>
+        </a>
+        <div class="gnb-navbar">
+            <ul class="navbar-nav mr-auto font-weight-bold">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Insight</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">서브메뉴 1</a>
+                        <a class="dropdown-item" href="#">서브메뉴 2</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Audience</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Kakaomoment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Asset</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Manage</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Ad Accounts</a>
+                        <a class="dropdown-item" href="#">Companies</a>
+                        <a class="dropdown-item" href="#">Users</a>
+                        <a class="dropdown-item" href="#">Billing</a>
+                        <a class="dropdown-item" href="#">DMP Usage History</a>
+                    </div>
+                </li>
+                <li class="nav-item nav-item-user dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <i class="ico ic-user"></i>
+                        <span class="sr-only">account.name@igaworks.com</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">
+                            <i class="ico ic-info"></i>
+                            정보수정
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="ico ic-close"></i>
+                            로그아웃
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="snb">
+        <div class="snb-navbar">
+            <ul class="navbar-nav snb-navbar-nav">
+                <li class="nav-item is-active">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">기본 사용량 순위</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">업종 사용량 순위</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">업종 순위 트렌드</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">업종 트렌드 분석</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- contentWrapper -->
+    <div class="contentWrapper">
+        <!-- mainContent -->
+        <main class="main">
+            <main class="mainContent mainContent-adManage px-2 pb-2">
+                <section class="card">
+                    <header class="mainheader justify-content-between h-fixed-9 px-2">
+                        <div class="flex-start mr-auto my-auto">
+                            <h4 class="font-weight-bold m-0">
+                                <img class="appbar__appicon"
+                                     src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s180"
+                                     alt=""/>
+                                기본사용량순위
+                            </h4>
+                        </div>
+                        <div class="flex-end ml-auto my-auto">
+                            <div class="ml-auto mr-3">
+                                <p>
+                                    <i class="ico ic-android mr-1"></i>
+                                    모든 데이터는 안드로이드 기준
+                                </p>
+                            </div>
+                        </div>
+                        <div></div>
+                    </header>
+                    <div class="mainbody card">
+                        <div class="card-header d-flex flex-row align-items-center justify-content-between h-fixed-6 py-0 pr-2 pl-0">
+                            <div class="flex-row-start">
+                                <ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
+                                    <li class="tab-item px-5">
+                                        <a class="tab-link pointer">
+                                            사용자수
+                                        </a>
+                                    </li>
+                                    <li class="tab-item px-5">
+                                        <a class="tab-link pointer">
+                                            사용자 구성
+                                        </a>
+                                    </li>
+                                    <li class="tab-item px-5">
+                                        <a class="tab-link pointer">
+                                            총 설치기기
+                                        </a>
+                                    </li>
+                                    <li class="tab-item px-5">
+                                        <a class="tab-link pointer">
+                                            신규 설치기기
+                                        </a>
+                                    </li>
+                                    <li class="tab-item px-5">
+                                        <a class="tab-link pointer">
+                                            총 사용시간
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__body p-0">
+                        <div class="toolbar d-flex align-items-center justify-content-between h-fixed-8 px-2">
+                            <div class="flex-start">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn btn-outline-secondary active">
+                                        <input type="radio" name="options" autocomplete="off" checked/>
+                                        일간
+                                    </label>
+                                    <label class="btn btn btn-outline-secondary">
+                                        <input type="radio" name="options" autocomplete="off"/>
+                                        주간
+                                    </label>
+                                    <label class="btn btn btn-outline-secondary">
+                                        <input type="radio" name="options" autocomplete="off"/>
+                                        월간
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="flex-end d-flex align-items-center justify-content-center">
+                                <div class="btn-group btn-group-toggle mr-3" data-toggle="buttons">
+                                    <label class="btn btn btn-outline-secondary active">
+                                        <input type="radio" name="options" autocomplete="off" checked/> 절대값
+                                    </label>
+                                    <label class="btn btn btn-outline-secondary">
+                                        <input type="radio" name="options" autocomplete="off"/> 순위
+                                    </label>
+                                </div>
+                                <div class="btn-group btn-group-toggle mr-3" data-toggle="buttons">
+                                    <label class="btn btn btn-outline-secondary active">
+                                        <input type="radio" name="options" autocomplete="off" checked/>
+                                        <i class="ico ic-chart mr-1"></i>차트
+                                    </label>
+                                    <label class="btn btn btn-outline-secondary">
+                                        <input type="radio" name="options" autocomplete="off"/>
+                                        <i class="ico ic-table mr-1"></i>테이블
+                                    </label>
+                                </div>
+                                <button class="btn btn-secondary ml-1">
+                                    <i class="ico ic-file-excel"></i>
+                                    엑셀 다운로드
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div style="width: 100%; text-align: center">
+                            차트
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </main>
+        <!-- mainContent -->
+    </div>
+    <!-- /contentWrapper -->
+</div>
+<!-- /twWrapper -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
