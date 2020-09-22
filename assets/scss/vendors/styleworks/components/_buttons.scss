@@ -44,9 +44,6 @@
 }
 
 
-
-
-
 .btn {
   display: inline-block;
   font-family: $btn-font-family;
@@ -58,7 +55,6 @@
   border: $btn-border-width solid transparent;
   background-color: transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-
 }
 
 .btn-sm {
@@ -120,5 +116,5 @@
 
 .btn + .btn,
 .btn-circle + .btn-circle {
-  @extend .ml-1;
+  margin-left: ($spacer / 2);
 }

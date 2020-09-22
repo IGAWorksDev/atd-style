@@ -5,7 +5,9 @@
 @mixin button-text-variant($color, $active-color: $color, $active-background: rgba($color, 0.1)){
   color: $color;
 
-  &:hover {
+
+  &:hover,
+  &.is-active {
     color: $active-color;
     background-color: $active-background;
     border-color: transparent;
@@ -25,6 +27,7 @@
     background-color: transparent;
     border-color: transparent;
     cursor: default;
+    box-shadow: none;
   }
 }
 
@@ -40,11 +43,12 @@
   background-color: $background;
   border-color: $border;
   text-decoration: none;
-
-  &:hover {
+  &:hover,
+  &.is-active {
     color: $white;
     background-color: $hover-background;
     border-color: $hover-border;
+    text-decoration: none;
   }
 
   // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
@@ -60,6 +64,7 @@
     border-color: $btn-disabled-color;
     background-color: transparent;
     cursor: default;
+    box-shadow: none;
   }
 }
 
@@ -69,7 +74,8 @@
   color: $color;
   border-color: $color;
 
-  &:hover {
+  &:hover,
+  &.is-active {
     color: $color-hover;
     background-color: $active-background;
     border-color: $active-border;
@@ -89,8 +95,10 @@
     border-color: $btn-disabled-color;
     background-color: transparent;
     cursor: default;
+    box-shadow: none;
   }
 }
+
 
 
 // Button sizes

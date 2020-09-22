@@ -2080,7 +2080,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus { b
 
 .mb-1, .my-1 { margin-bottom: 0.8rem !important; }
 
-.ml-1, .btn + .btn, .btn-circle + .btn-circle, .mx-1 { margin-left: 0.8rem !important; }
+.ml-1, .mx-1 { margin-left: 0.8rem !important; }
 
 .m-2 { margin: 1.6rem !important; }
 
@@ -3363,7 +3363,7 @@ small { font-size: 80%; line-height: 1.175; }
 
 .mb-1, .my-1 { margin-bottom: 0.8rem !important; }
 
-.ml-1, .btn + .btn, .btn-circle + .btn-circle, .mx-1 { margin-left: 0.8rem !important; }
+.ml-1, .mx-1 { margin-left: 0.8rem !important; }
 
 .m-2, .m-2 { margin: 1.6rem !important; }
 
@@ -3810,6 +3810,8 @@ small { font-size: 80%; line-height: 1.175; }
 .btn-outlined-dark:hover { color: #343a40; background-color: rgba(52, 58, 64, 0.1); border-color: #343a40; text-decoration: none; }
 .btn-outlined-dark:focus { -webkit-box-shadow: 0 0 0 0.3rem rgba(52, 58, 64, 0.3); box-shadow: 0 0 0 0.3rem rgba(52, 58, 64, 0.3); }
 .btn-outlined-dark.is-disabled, .btn-outlined-dark[disabled], .btn-outlined-dark:disabled { color: #adb5bd; border-color: #adb5bd; background-color: transparent; cursor: default; }
+
+.btn + .btn, .btn-circle + .btn-circle { margin-left: 0.4rem; }
 
 .navbar-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; padding-left: 0; margin: 0; list-style: none; }
 
