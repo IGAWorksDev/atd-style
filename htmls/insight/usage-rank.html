@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TW-Insight</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+</head>
+<body>
+<!-- twWrapper -->
+<div class="twWrapper">
+    <nav class="gnb">
+        <a class="gnb-brand" href="#">
+            <img src="../../assets/images/navbar-brand.svg"/>
+        </a>
+        <div class="gnb-navbar">
+            <ul class="navbar-nav mr-auto font-weight-bold">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Insight</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">서브메뉴 1</a>
+                        <a class="dropdown-item" href="#">서브메뉴 2</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Audience</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Kakaomoment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Asset</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Manage</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Ad Accounts</a>
+                        <a class="dropdown-item" href="#">Companies</a>
+                        <a class="dropdown-item" href="#">Users</a>
+                        <a class="dropdown-item" href="#">Billing</a>
+                        <a class="dropdown-item" href="#">DMP Usage History</a>
+                    </div>
+                </li>
+                <li class="nav-item nav-item-user dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <i class="ico ic-user"></i>
+                        <span class="sr-only">account.name@igaworks.com</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">
+                            <i class="ico ic-info"></i>
+                            정보수정
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="ico ic-close"></i>
+                            로그아웃
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="snb">
+        <div class="snb-navbar">
+            <ul class="navbar-nav snb-navbar-nav">
+                <li class="nav-item is-active">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">기본 사용량 순위</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">업종 사용량 순위</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">업종 순위 트렌드</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+              <span class="nav-item-icon">
+                <i class="ico ic-table"></i>
+              </span>
+                        <span class="nav-item-title">업종 트렌드 분석</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- contentWrapper -->
+    <div class="contentWrapper">
+        <!-- mainContent -->
+        <main class="main">
+            <main class="mainContent mainContent-adManage px-2 pb-2">
+                <section class="card">
+                    <header class="mainheader justify-content-between h-fixed-9 px-2">
+                        <div class="flex-start mr-auto my-auto">
+                            <h4 class="font-weight-bold m-0">기본사용량순위</h4>
+                        </div>
+                        <div class="flex-end ml-auto my-auto">
+                            <div class="ml-auto mr-3">
+                                <p>
+                                    <i class="ico ic-android mr-1"></i>
+                                    모든 데이터는 안드로이드 기준
+                                </p>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="mainbody card">
+                        <div class="card-header d-flex flex-row align-items-center justify-content-between h-fixed-6 py-0 pr-2 pl-0">
+                            <div class="flex-row-start">
+                                <ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
+                                    <li class="tab-item px-5 is-active">
+                  <span class="tab-link pointer" role="tab">
+                    사용자 순위
+                  </span>
+                                    </li>
+                                    <li class="tab-item px-5">
+                  <span class="tab-link pointer" role="tab">
+                    총 설치 순위
+                  </span>
+                                    </li>
+                                    <li class="tab-item px-5">
+                  <span class="tab-link pointer" role="tab">
+                    신규 설치 순위
+                  </span>
+                                    </li>
+                                    <li class="tab-item px-5">
+                  <span class="tab-link pointer" role="tab">
+                    총 사용시간 순위
+                  </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex-row-end">
+                                <div class="btn-group">
+                                    <button class="btn btn-text-secondary dropdown-toggle" data-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false">
+                                        <i class="ico ic-calendar"></i>&nbsp; 2020-07-30~2020-07-30
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        달력 플러그인 자리~!!
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary ml-1">
+                                    <i class="ico ic-file-excel"></i>
+                                    엑셀 다운로드
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card__body p-0" v-if="rankType === 'user'">
+                            <div class="toolbar d-flex align-items-center justify-content-between h-fixed-8 px-2">
+                                <div class="flex-start">
+                                    앱을 클릭하여 해당 앱의 기본 사용량 정보를 확인할수 있습니다.
+                                </div>
+                                <div class="flex-end d-flex align-items-center justify-content-center">
+                                    2020-08 기준
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover border-bottom">
+                                <thead>
+                                <tr id="header">
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            순위
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            앱명
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            마켓 카테고리
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            업종
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            전체 사용자 수
+                                        </div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="text-truncate font-weight-bold">
+                                            1
+                                        </div>
+                                        <i class="ico ic-long-arrow-alt-up" style="color: #00CC00">
+                                        </i>
+                                    </td>
+                                    <td>
+                                        <a class="appinfo pointer" style="text-decoration: none; color: #495057">
+                                            <div>
+                                                <img class="appinfo__appicon"
+                                                     src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s50"
+                                                     alt=""/>
+                                            </div>
+                                            <div class="ml-2">
+                                                <div class="text-truncate font-weight-bold">카카오톡 KakaoTalk</div>
+                                                <div class="text--sub mt-1">Kakao Corporation</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>커뮤니케이션</td>
+                                    <td>메신저/전화/영상통화</td>
+                                    <td>
+                                        <div class="text-truncate font-weight-bold">
+                                            27,459,265
+                                        </div>
+                                        <i class="ico ic-long-arrow-alt-up" style="color: #00CC00">
+                                            -1,003,608
+                                        </i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center" colspan="5">
+                                        <div class="none-content">
+                                            <div class="none-content__inner">
+                                                <i class="ico ic-exclamation-triangle-fill"></i>
+                                                <p class="text-muted">
+                                                    확인 가능한 내역이 없습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" style="text-align: center;">
+                                        <div class="pointer font-weight-bolder">더보기</div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </main>
+        <!-- mainContent -->
+    </div>
+    <!-- /contentWrapper -->
+</div>
+<!-- /twWrapper -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
