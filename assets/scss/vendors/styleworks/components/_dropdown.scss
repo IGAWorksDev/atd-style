@@ -3,5 +3,21 @@
 
 // Dropdown section headers
 .dropdown-header {
+  display: block;
+  padding: ($spacer / 2) ($spacer * 2);
+  margin: 0;
   @include font-size($font-size-sm);
+  white-space: nowrap;
+  color: $gray;
+  font-weight: $font-weight-bold;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: ($spacer / 2) ($spacer * 2);
+  color: $body-color;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
 }

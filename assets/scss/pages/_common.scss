@@ -6,6 +6,10 @@
 }
 #dropdown-adaccount-button + .dropdown-menu {
   max-width: 280px;
+  .dropdown-items {
+    max-height: 27rem;
+    overflow: auto;
+  }
 }
 
 // 열설정 드랍다운
