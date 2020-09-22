@@ -3838,7 +3838,9 @@ small { font-size: 80%; line-height: 1.175; }
 
 .page-button-icon { font-size: 1.4rem; }
 
-.dropdown-header { font-size: 1.2rem; }
+.dropdown-header { display: block; padding: 0.4rem 1.6rem; margin: 0; font-size: 1.2rem; white-space: nowrap; color: #adb5bd; font-weight: 700; }
+
+.dropdown-item { display: block; width: 100%; padding: 0.4rem 1.6rem; color: #333; white-space: nowrap; background-color: transparent; border: 0; }
 
 .tab { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
 
@@ -3854,18 +3856,16 @@ small { font-size: 80%; line-height: 1.175; }
 .tab-nav .tab-item.is-active:after { position: absolute; content: ""; display: block; height: 3px; background-color: #007bff; bottom: 0; left: 1.6rem; right: 1.6rem; }
 .tab-nav .tab-item.is-active .tab-link { color: #007bff; }
 
-.switch { display: inline-block; padding-left: 4.4rem; height: 2.2rem; margin: 0; position: relative; vertical-align: middle; }
+.switch { display: inline-block; padding-left: 3.85rem; height: 2.2rem; margin: 0; position: relative; vertical-align: middle; cursor: pointer; }
 
 .switch-checkbox { opacity: 0; position: absolute; left: 0; z-index: -1; }
 
-.switch-slider:before { cursor: pointer; position: absolute; display: inline-block; content: ""; top: 0; left: 0; vertical-align: middle; width: 4.4rem; height: 2.2rem; border-radius: 3rem; background-color: #333; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.switch-slider:before { cursor: pointer; position: absolute; display: inline-block; content: ""; top: 0; left: 0; vertical-align: middle; width: 3.85rem; height: 2.2rem; border-radius: 5rem; background-color: rgba(51, 51, 51, 0.25); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-.switch-slider:after { position: absolute; display: block; vertical-align: middle; content: ""; top: 0.4rem; left: 0.4rem; width: 1.4rem; height: 1.4rem; overflow: hidden; border-radius: 3rem; -webkit-box-shadow: 0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2); box-shadow: 0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2); background-color: #fff; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.switch-slider:after { position: absolute; display: block; vertical-align: middle; content: ""; top: 0.4rem; left: 0.4rem; width: 1.4rem; height: 1.4rem; overflow: hidden; border-radius: 5rem; background-color: #fff; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-.switch-checkbox:checked + .switch-slider:before { background-color: #28a745; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
-.switch-checkbox:checked + .switch-slider:after { top: 0.4rem; left: 2.6rem; background-color: #fff; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
-
-.switch:focus .switch-slider:before, .switch:focus .switch-checkbox:checked + .switch-slider:before, .switch:active .switch-slider:before, .switch:active .switch-checkbox:checked + .switch-slider:before { -webkit-box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3); box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3); }
+.switch-checkbox:checked + .switch-slider:before { background-color: #007bff; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.switch-checkbox:checked + .switch-slider:after { top: 0.4rem; left: 2.05rem; background-color: #fff; -webkit-box-shadow: 0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3); box-shadow: 0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
 .switch-checkbox:disabled + .switch-slider:before, .switch-checkbox:checked:disabled + .switch-slider:before { cursor: default !important; background-color: rgba(108, 117, 125, 0.5) !important; -webkit-box-shadow: none !important; box-shadow: none !important; }
 .switch-checkbox:disabled + .switch-slider:after, .switch-checkbox:checked:disabled + .switch-slider:after { -webkit-box-shadow: none !important; box-shadow: none !important; }

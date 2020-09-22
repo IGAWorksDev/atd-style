@@ -218,19 +218,14 @@ $btn-disabled-opacity:        .65 !default;
 $btn-disabled-color:          $gray-500;
 
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
-
 $btn-link-disabled-color:     $gray-600 !default;
-
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
-
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-
-
 
 $btn-circle-padding-y: $input-btn-padding-y;
 $btn-circle-padding-x: $input-btn-padding-y;
@@ -273,14 +268,16 @@ $switch-indicator-bgcolor: $white;
 $switch-indicator-bgcolor-checked: $white;
 
 $switch-height: $line-height-base; // 기본값은 ($font-size-base * $line-height-base)로 계산되어야함. 현재는 line-height를 고정값으로 사용하고 있음.
-$switch-width: ($switch-height * 2);
-$switch-bgcolor: $body-color;
-$switch-bgcolor-checked: $success;
+$switch-width: ($switch-indicator-size * 2.75);
+$switch-bgcolor: $gray-600;
+$switch-bgcolor-checked: $primary;
 $switch-padding: ($switch-height - $switch-indicator-size) / 2;
+$switch-radius: 5rem;
 
 $switch-transition: all 0.2s ease-in-out;
 $switch-focus-width: $btn-focus-width;
-$switch-disabled-color: $gray-600;
+$switch-disabled-color: $btn-disabled-color;
+$switch-disabled-opacity: $btn-disabled-opacity;
 
 
 // List group

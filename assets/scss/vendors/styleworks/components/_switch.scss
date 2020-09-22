@@ -27,7 +27,7 @@
   vertical-align: middle;
   width: $switch-width;
   height: $switch-height;
-  border-radius: 3rem;
+  border-radius: $switch-radius;
   background-color: $switch-bgcolor;
   transition: $switch-transition;
 }
@@ -43,8 +43,7 @@
   width: $switch-indicator-size;
   height: $switch-indicator-size;
   overflow: hidden;
-  border-radius: 3rem;
-  box-shadow: 0 0 $switch-focus-width $switch-focus-width rgba($black, 0.2);
+  border-radius: $switch-radius;
   background-color: $switch-indicator-bgcolor;
   transition: $switch-transition;
 }
@@ -60,6 +59,7 @@
     top: $switch-padding;
     left: $switch-width - ($switch-indicator-size + $switch-padding);
     background-color: $switch-indicator-bgcolor-checked;
+    box-shadow: 0 0 $switch-focus-width $switch-focus-width rgba($black, 0.3);
     transition: $switch-transition;
   }
 }
@@ -68,7 +68,7 @@
 .switch:active {
   .switch-slider:before,
   .switch-checkbox:checked + .switch-slider:before {
-    box-shadow: 0 0 0 $switch-focus-width rgba($switch-bgcolor-checked, 0.3);
+    //box-shadow: 0 0 0 $switch-focus-width rgba($switch-bgcolor-checked, 0.3);
   }
 }
 
@@ -76,7 +76,7 @@
 .switch-checkbox:checked:disabled {
   + .switch-slider:before {
     cursor: default !important;
-    background-color: rgba($switch-disabled-color, 0.5) !important;
+    background-color: rgba($switch-disabled-color, $switch-disabled-opacity) !important;
     box-shadow: none !important;
   }
   + .switch-slider:after {
