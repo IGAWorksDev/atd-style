@@ -57,6 +57,7 @@
 
 .mainContent {
   height: $main-height;
+  overflow: auto;
 }
 
 .mainheader { // 페이지의 헤더

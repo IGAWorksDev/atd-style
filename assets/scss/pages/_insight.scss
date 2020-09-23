@@ -1,0 +1,23 @@
+
+
+// 검색되는 드랍다운 -- 앱 검색할 경우
+.dropdown-search {
+  .search {
+    width: 24rem;
+  }
+  .dropdown-menu {
+    width: 36rem;
+    max-height: 40rem;
+    overflow: auto;
+    .dropdown-item {
+      @extend .pt-1;
+      @extend .pb-1;
+      .appicon {
+        width: 4.8rem;
+      }
+      .app-title {
+        max-width: 26rem;
+      }
+    }
+  }
+}
