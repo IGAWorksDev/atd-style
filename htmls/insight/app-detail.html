@@ -11,8 +11,8 @@
     }
 
     .appbar__appicon {
-        width: 4.8rem;
-        height: 4.8rem;
+        width: 7.2rem;
+        height: 7.2rem;
     }
 
     img {
@@ -142,122 +142,276 @@
     <!-- contentWrapper -->
     <main class="contentWrapper">
       <!-- mainContent -->
-      <div class="mainContent mainContent-adManage px-2 pb-2">
+      <div class="mainContent pb-2">
         <!-- mainheader -->
-        <header class="mainheader justify-content-between px-2">
-          <div class="flex-row-start d-flex align-items-center">
-            <img class="appbar__appicon"
-                 src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s180"
-                 alt=""/>
-            <h4 class="font-weight-bold m-0 ml-2">
-              기본사용량순위
-            </h4>
+        <header class="mainheader px-2">
+          <!-- dropdown-search -->
+          <div class="dropdown dropdown-search">
+            <!-- search -->
+            <div class="search">
+              <label class="sr-only" for="search-app">검색</label>
+              <input type="search" id="search-app" class="form-control" placeholder="검색">
+            </div>
+            <!-- /search -->
+            <!-- dropdown-menu -->
+            <div class="dropdown-menu">
+              <div class="dropdown-item d-flex align-items-center">
+                <img class="appicon"
+                     src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s180"
+                     alt=""/>
+                <div class="ml-1">
+                  <div class="app-title text-truncate">카카오톡 Kakao Talk</div>
+                  <small class="app-category text-muted">
+                    Kakao Corporation 커뮤니케이션
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- /dropdown-menu -->
           </div>
-          <div class="flex-row-end">
-            <small class="text-muted">
-              <i class="ico ic-android"></i>
-              모든 데이터는 안드로이드 기준
-            </small>
-          </div>
+          <!-- /dropdown-search -->
         </header>
         <!-- /mainheader -->
 
         <!-- mainbody -->
-        <div class="mainbody card">
-          <!-- card-header -->
-          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
-            <!-- flex-row-start -->
-            <div class="flex-row-start">
-              <!-- tab -->
-              <ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
-                <li class="tab-item px-5 is-active">
-                    <span class="tab-link pointer" role="tab">
-                      사용자 순위
-                    </span>
-                </li>
-                <li class="tab-item px-5">
-                    <span class="tab-link pointer" role="tab">
-                      총 설치 순위
-                    </span>
-                </li>
-                <li class="tab-item px-5">
-                    <span class="tab-link pointer" role="tab">
-                      신규 설치 순위
-                    </span>
-                </li>
-                <li class="tab-item px-5">
-                    <span class="tab-link pointer" role="tab">
-                      총 사용시간 순위
-                    </span>
-                </li>
-              </ul>
-              <!-- /tab -->
-            </div>
-            <!-- /flex-row-start -->
-          </div>
-          <!-- /card-header -->
-          <!-- card-body -->
-          <div class="card-body p-0">
-            <!-- toolbar -->
-            <div class="toolbar justify-content-between px-2">
-              <!-- flex-row-start -->
-              <div class="flex-row-start">
+        <div class="mainbody px-2">
+          <!-- card -->
+          <div class="card">
+            <!-- card-body -->
+            <div class="card-body p-2 border-bottom">
+              <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-2">
+                <div class="flex-row-start d-flex align-items-center">
+                  <img class="appbar__appicon"
+                       src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s180"
+                       alt=""/>
+                  <div class="ml-2">
+                    <small class="text-muted">
+                      사용량 순위 / 전체 사용량 순위 / 앱별 분석
+                    </small>
+                    <h4 class="font-weight-bold mt-1 mb-0">
+                      카카오톡 KakaoTalk
+                    </h4>
+                    <small>
+                      Kakao Corporation - 마켓 카테고리 : 커뮤니티 - 업종 대분류: 소셜네트워크 - 업종 소분류: 메신저/전화/영상통화
+                    </small>
+                  </div>
+                </div>
+                <div class="flex-row-end">
+                  <small class="text-muted">
+                    <i class="ico ic-android"></i>
+                    모든 데이터는 안드로이드 기준
+                  </small>
+                </div>
+              </div>
+
+              <!-- summary -->
+              <div class="summary">
+                <div class="d-flex align-items-center mb-1">
+                  <h5 class="font-weight-bold m-0">Summary</h5>
+                  <span class="text-muted ml-1">
+                  <small>
+                    <i class="ico ic-calendar-check"></i> 2020-09-20
+                  </small>
+                  &nbsp;
+                  <small>
+                    <i class="ico ic-android"></i> 안드로이드 기준
+                  </small>
+                </span>
+                </div>
+                <!-- row -->
+                <div class="row mb-2">
+                  <!-- col -->
+                  <div class="col border-right">
+                    <h6 class="text-muted mb-1">일간 사용자</h6>
+                    <div class="h4 mb-0">
+                      <strong class="text-primary">26,978,565</strong><small>명</small>
+                    </div>
+                    <small class="text-danger">
+                      전일대비
+                      <i class="ico ic-caret-bottom"></i> -1.7%
+                    </small>
+                  </div>
+                  <!-- /col -->
+                  <!-- col -->
+                  <div class="col border-right">
+                    <h6 class="text-muted mb-1">일간 신규 설치</h6>
+                    <div class="h4 mb-0">
+                      <strong class="text-primary">26,978,565</strong><small>대</small>
+                    </div>
+                    <small class="text-success">
+                      전일대비
+                      <i class="ico ic-caret-top"></i> +1.7%
+                    </small>
+                  </div>
+                  <!-- /col -->
+                  <!-- col -->
+                  <div class="col border-right">
+                    <h6 class="text-muted mb-1">일간 총 사용시간</h6>
+                    <div class="h4 mb-0">
+                      <strong class="text-primary">26,978,565</strong><small>시간</small>
+                    </div>
+                    <small class="text-danger">
+                      전일대비
+                      <i class="ico ic-caret-bottom"></i> -1.7%
+                    </small>
+                  </div>
+                  <!-- /col -->
+                  <!-- col -->
+                  <div class="col">
+                    <h6 class="text-muted mb-1">현재 총 설치 기기</h6>
+                    <div class="h4 mb-0">
+                      <strong class="text-primary">26,978,565</strong><small>대</small>
+                    </div>
+                    <small class="text-danger">
+                      전일대비
+                      <i class="ico ic-caret-bottom"></i> -1.7%
+                    </small>
+                  </div>
+                  <!-- /col -->
+                </div>
+                <!-- /row -->
+              </div>
+              <!-- /summary -->
+
+              <div class="border-top pt-2">
                 <!-- btn-group -->
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                   <label class="btn btn btn-outlined-secondary is-active">
-                    <input type="radio" name="options" autocomplete="off" checked/>
-                    일간
+                    <input type="radio" name="options" autocomplete="off" checked/> 전체
                   </label>
                   <label class="btn btn btn-outlined-secondary">
-                    <input type="radio" name="options" autocomplete="off"/>
-                    주간
+                    <input type="radio" name="options" autocomplete="off"/> 남성
                   </label>
                   <label class="btn btn btn-outlined-secondary">
-                    <input type="radio" name="options" autocomplete="off"/>
-                    월간
+                    <input type="radio" name="options" autocomplete="off"/> 여성
                   </label>
                 </div>
                 <!-- /btn-group -->
+                <!-- btn-group -->
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn btn-outlined-secondary is-active">
+                    <input type="radio" name="options" autocomplete="off" checked/> 전체
+                  </label>
+                  <label class="btn btn btn-outlined-secondary">
+                    <input type="radio" name="options" autocomplete="off"/> 20세 미만
+                  </label>
+                  <label class="btn btn btn-outlined-secondary">
+                    <input type="radio" name="options" autocomplete="off"/> 20~29세
+                  </label>
+                  <label class="btn btn btn-outlined-secondary">
+                    <input type="radio" name="options" autocomplete="off"/> 30~39세
+                  </label>
+                  <label class="btn btn btn-outlined-secondary">
+                    <input type="radio" name="options" autocomplete="off"/> 40~49세
+                  </label>
+                  <label class="btn btn btn-outlined-secondary">
+                    <input type="radio" name="options" autocomplete="off"/> 50~59세
+                  </label>
+                  <label class="btn btn btn-outlined-secondary">
+                    <input type="radio" name="options" autocomplete="off"/> 60세 이상
+                  </label>
+                </div>
+                <!-- /btn-group -->
+              </div>
+            </div>
+            <!-- /card-body -->
+
+            <!-- card-header -->
+            <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
+              <!-- flex-row-start -->
+              <div class="flex-row-start">
+                <!-- tab -->
+                <ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
+                  <li class="tab-item px-5 is-active">
+                    <span class="tab-link pointer" role="tab">
+                      사용자 순위
+                    </span>
+                  </li>
+                  <li class="tab-item px-5">
+                    <span class="tab-link pointer" role="tab">
+                      총 설치 순위
+                    </span>
+                  </li>
+                  <li class="tab-item px-5">
+                    <span class="tab-link pointer" role="tab">
+                      신규 설치 순위
+                    </span>
+                  </li>
+                  <li class="tab-item px-5">
+                    <span class="tab-link pointer" role="tab">
+                      총 사용시간 순위
+                    </span>
+                  </li>
+                </ul>
+                <!-- /tab -->
               </div>
               <!-- /flex-row-start -->
-              <!-- flex-row-end -->
-              <div class="flex-row-end d-flex align-items-center justify-content-center">
-                <!-- btn-group -->
-                <div class="btn-group btn-group-toggle mr-1" data-toggle="buttons">
-                  <label class="btn btn btn-outlined-secondary is-active">
-                    <input type="radio" name="options" autocomplete="off" checked/> 절대값
-                  </label>
-                  <label class="btn btn btn-outlined-secondary">
-                    <input type="radio" name="options" autocomplete="off"/> 순위
-                  </label>
+            </div>
+            <!-- /card-header -->
+            <!-- card-body -->
+            <div class="card-body p-0">
+              <!-- toolbar -->
+              <div class="toolbar justify-content-between px-2">
+                <!-- flex-row-start -->
+                <div class="flex-row-start">
+                  <!-- btn-group -->
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn btn-outlined-secondary is-active">
+                      <input type="radio" name="options" autocomplete="off" checked/>
+                      일간
+                    </label>
+                    <label class="btn btn btn-outlined-secondary">
+                      <input type="radio" name="options" autocomplete="off"/>
+                      주간
+                    </label>
+                    <label class="btn btn btn-outlined-secondary">
+                      <input type="radio" name="options" autocomplete="off"/>
+                      월간
+                    </label>
+                  </div>
+                  <!-- /btn-group -->
                 </div>
-                <!-- /btn-group -->
-                <!-- btn-group -->
-                <div class="btn-group btn-group-toggle mr-1" data-toggle="buttons">
-                  <label class="btn btn btn-outlined-secondary is-active">
-                    <input type="radio" name="options" autocomplete="off" checked/>
-                    <i class="ico ic-chart mr-1"></i>차트
-                  </label>
-                  <label class="btn btn btn-outlined-secondary">
-                    <input type="radio" name="options" autocomplete="off"/>
-                    <i class="ico ic-table mr-1"></i>테이블
-                  </label>
+                <!-- /flex-row-start -->
+                <!-- flex-row-end -->
+                <div class="flex-row-end d-flex align-items-center justify-content-center">
+                  <!-- btn-group -->
+                  <div class="btn-group btn-group-toggle mr-1" data-toggle="buttons">
+                    <label class="btn btn btn-outlined-secondary is-active">
+                      <input type="radio" name="options" autocomplete="off" checked/> 절대값
+                    </label>
+                    <label class="btn btn btn-outlined-secondary">
+                      <input type="radio" name="options" autocomplete="off"/> 순위
+                    </label>
+                  </div>
+                  <!-- /btn-group -->
+                  <!-- btn-group -->
+                  <div class="btn-group btn-group-toggle mr-1" data-toggle="buttons">
+                    <label class="btn btn btn-outlined-secondary is-active">
+                      <input type="radio" name="options" autocomplete="off" checked/>
+                      <i class="ico ic-chart mr-1"></i>차트
+                    </label>
+                    <label class="btn btn btn-outlined-secondary">
+                      <input type="radio" name="options" autocomplete="off"/>
+                      <i class="ico ic-table mr-1"></i>테이블
+                    </label>
+                  </div>
+                  <!-- /btn-group -->
+                  <button class="btn-circle btn-text-secondary" aria-label="엑셀 다운로드">
+                    <i class="ico ic-download"></i>
+                    <span class="sr-only">엑셀 다운로드</span>
+                  </button>
                 </div>
-                <!-- /btn-group -->
-                <button class="btn-circle btn-text-secondary" aria-label="엑셀 다운로드">
-                  <i class="ico ic-download"></i>
-                  <span class="sr-only">엑셀 다운로드</span>
-                </button>
+                <!-- /flex-row-end -->
               </div>
-              <!-- /flex-row-end -->
-            </div>
-            <!-- /toolbar -->
+              <!-- /toolbar -->
 
-            <div class="p-2">
-              차트
+              <div class="p-2" style="height:280px;">
+                차트
+              </div>
             </div>
+            <!-- /card-body -->
           </div>
-          <!-- /card-body -->
+          <!-- /card -->
         </div>
         <!-- /mainbody -->
       </main>
