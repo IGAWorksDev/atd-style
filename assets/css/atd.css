@@ -172,7 +172,7 @@ small { font-size: 80%; line-height: 1.175; }
 
 .svg-icon { fill: currentColor; width: 1.4rem; height: 1.4rem; display: inline-block; font-size: 1rem; -ms-flex-negative: 0; flex-shrink: 0; -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
-.m-0, .m-0 { margin: 0 !important; }
+.m-0, .form-group, .m-0, .form-group { margin: 0 !important; }
 
 .mt-0, .my-0 { margin-top: 0 !important; }
 
@@ -294,11 +294,11 @@ small { font-size: 80%; line-height: 1.175; }
 
 .p-1, .p-1 { padding: 0.8rem !important; }
 
-.pt-1, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td { padding-top: 0.8rem !important; }
+.pt-1, .form-group, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td { padding-top: 0.8rem !important; }
 
 .pr-1, .px-1 { padding-right: 0.8rem !important; }
 
-.pb-1, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td { padding-bottom: 0.8rem !important; }
+.pb-1, .form-group, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td { padding-bottom: 0.8rem !important; }
 
 .pl-1, .px-1 { padding-left: 0.8rem !important; }
 
@@ -1090,6 +1090,8 @@ small { font-size: 80%; line-height: 1.175; }
 
 #card-header-start-tab .tab-item { border-top-color: transparent; }
 #card-header-start-tab .tab-item:first-child { border-left-color: transparent; }
+
+.form-group + .form-group { border-top: 1px dashed #dee2e6; }
 
 .dropdown-search .search { width: 24rem; }
 .dropdown-search .dropdown-menu { width: 36rem; max-height: 40rem; overflow: auto; }

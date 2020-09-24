@@ -44,6 +44,10 @@ $spacers: map-merge(
         $spacers
 );
 
+// Grid columns
+$grid-gutter-width:           32px !default;
+
+
 
 $border-radius:               0.2rem !default;
 $border-radius-lg:            0.3rem !default;

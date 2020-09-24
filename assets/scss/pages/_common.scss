@@ -33,3 +33,14 @@
   }
 }
 
+
+// Forms
+.form-group {
+  @extend .pt-1;
+  @extend .pb-1;
+  @extend .m-0;
+
+  & + & {
+    border-top: 1px dashed $border-color;
+  }
+}
