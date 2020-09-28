@@ -7,14 +7,22 @@
 
 
 @import
-'vendors/bootstrap-extention',
-'vendors/bootstrap-4.5.1/scss/bootstrap',
-'vendors/styleworks/styleworks'
-;
+  'vendors/styleworks-extention',
 
-@import 'utils/service-variables'
+  'vendors/bootstrap-extention',
+  'vendors/bootstrap-4.5.1/scss/bootstrap',
+
+  // 스타일 분리에 필요한 파일들..
+  'vendors/styleworks/vendors/rfs-extension',
+  'vendors/styleworks/vendors/rfs',
+  'vendors/styleworks/utils/sw-colors',
+  'vendors/styleworks/base/root'
 ;
 
 @import
-'layout/gnb'
+  'utils/gnb-variables'
+;
+
+@import
+  'layout/gnb'
 ;

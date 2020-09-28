@@ -4,14 +4,17 @@
 //
 
 .gnb {
+  // GNB스타일 분리하여 아래 속성 사용안함.(2020-09-28)
   // twWrapper에서 상속받는 grid property
-  grid-row-start: 1;
-  grid-column-start: 1;
+  //grid-row-start: 1;
+  //grid-column-start: 1;
 
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+
   z-index: $gnb-z-index;
-
-  min-width: $layout-min-width;
+  min-width: $gnb-min-width;
   width: $gnb-width;
   height: $gnb-height;
   background-color: $gnb-bgcolor;
@@ -27,7 +30,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
-  width: $gnb-height; //
+  width: $gnb-height;
 }
 
 .gnb-navbar {
