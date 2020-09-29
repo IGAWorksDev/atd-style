@@ -342,6 +342,14 @@ template { display: none; }
 
 .ml-auto, .mx-auto { margin-left: auto !important; }
 
+.dropdown-menu { font-size: calc(1.265rem + 0.1125vw); }
+@media (min-width: 1200px) { .dropdown-menu { font-size: 1.4rem; } }
+
+.dropdown-header { display: block; padding: 0.4rem 1.6rem; margin: 0; font-size: 1.2rem; white-space: nowrap; color: #adb5bd; font-weight: 700; }
+
+.dropdown-item { display: block; width: 100%; padding: 0.4rem 1.6rem; color: #333; font-size: calc(1.265rem + 0.1125vw); white-space: nowrap; background-color: transparent; border: 0; }
+@media (min-width: 1200px) { .dropdown-item { font-size: 1.4rem; } }
+
 .gnb { position: fixed; top: 0; left: 0; z-index: 20; min-width: 1440px; width: 100vw; height: 5.6rem; background-color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); }
 
 .gnb-brand { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 5.6rem; }

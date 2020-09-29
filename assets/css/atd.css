@@ -168,7 +168,7 @@ h5, .h5 { font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; }
 
 h6, .h6 { font-size: 1.2rem; line-height: 1.8rem; }
 
-small { font-size: 80% !important; line-height: 1.175 !important; }
+small { font-size: 80% !important; line-height: 1.15 !important; }
 
 .svg-icon { fill: currentColor; width: 1.4rem; height: 1.4rem; display: inline-block; font-size: 1rem; -ms-flex-negative: 0; flex-shrink: 0; -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
@@ -690,9 +690,13 @@ small { font-size: 80% !important; line-height: 1.175 !important; }
 
 .page-button-icon { font-size: 1.4rem; }
 
+.dropdown-menu { font-size: calc(1.265rem + 0.1125vw); }
+@media (min-width: 1200px) { .dropdown-menu { font-size: 1.4rem; } }
+
 .dropdown-header { display: block; padding: 0.4rem 1.6rem; margin: 0; font-size: 1.2rem; white-space: nowrap; color: #adb5bd; font-weight: 700; }
 
-.dropdown-item { display: block; width: 100%; padding: 0.4rem 1.6rem; color: #333; white-space: nowrap; background-color: transparent; border: 0; }
+.dropdown-item { display: block; width: 100%; padding: 0.4rem 1.6rem; color: #333; font-size: calc(1.265rem + 0.1125vw); white-space: nowrap; background-color: transparent; border: 0; }
+@media (min-width: 1200px) { .dropdown-item { font-size: 1.4rem; } }
 
 .tab { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
 
