@@ -1,0 +1,18 @@
+
+.page__account { 
+	.main {
+		padding-top: $page-header-height;
+	}
+}
+
+
+
+.page__myaccount {  
+	padding-top: calc((#{$gnb-height} * 1) + 6rem);
+
+
+	/// components/_theme-main-header overrides
+	.main-header {
+		top: $gnb-height !important;
+	}
+}

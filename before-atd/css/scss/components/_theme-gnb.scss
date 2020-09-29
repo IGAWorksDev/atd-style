@@ -1,0 +1,187 @@
+// Global Navigation Layout
+.gnb {   
+	/* gn : gloabl navigation */
+	grid-area: gn;  
+
+	display: flex; 
+	flex-direction: row;
+
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: 100;
+
+	width: 100%;
+	background-color: gray("900");  
+	box-shadow: 0 0 6px rgba($black, 0.2);
+
+	@include media-breakpoint-up(md) {
+		grid-template-columns: auto $gnb-height;   
+		height: $gnb-height; 
+	}
+}
+ 
+
+.gnb__app { 
+	display: flex;   
+	align-items: center; 
+
+	height: $gnb-height;
+	padding:0 1rem; 
+
+	@include media-breakpoint-up(md){ 
+		margin-right: 0;
+	}
+
+	.app__logo { 
+		width: auto; 
+		height: 3rem;
+		align-self: flex-start;
+	}  
+} 
+
+.gnb__navbar-toggler {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: $gnb-height;
+	height: $gnb-height; 
+	padding: 0; 
+	border: 0; 
+	font-size: 1rem;  
+
+	background: transparent;  
+
+	&:focus,
+	&:active {
+		background-color: gray("800");
+		color: color("white");
+	}
+
+	@include media-breakpoint-up(md) { 
+		display: none;
+	}
+} 
+
+
+.gnb__navbar-collapse {
+	position: absolute;
+	top: $gnb-height;
+	left: 0;
+	background-color: rgba(gray("800"), 1);
+	width: 100vw;  
+
+	@include media-breakpoint-up(md) {    
+		display: block !important;
+		position: static;
+		width: 100%;
+		background-color: transparent;
+	}
+
+	.gnb__navbar-inner {
+		@include media-breakpoint-up(md) {   
+			display: flex;
+		}
+	}
+}
+
+.gnb__navbar-nav { 
+	list-style: none; 
+	padding: 0;
+	margin: 0;
+
+	@include media-breakpoint-up(md) { 
+		display: flex;
+		flex-direction: row;  
+	} 
+}
+
+.gnb__nav-item {   
+	display: flex;
+	flex-direction: row;  
+
+	.gnb__nav-link { 
+		display: block;  
+		color: gray("100");
+		width: 100%;
+		height: $gnb-height; 
+		padding: 0.875rem 1rem;
+
+		@include media-breakpoint-up(md) { 
+			text-align: center;
+			width: auto;
+			height: $gnb-height; 
+			padding: 0.875rem 1rem;
+			color: gray("500");
+		} 
+		&:hover {
+			color: gray("100");
+			text-decoration: none;
+			background-color: rgba(gray("900"), 0.75);
+		}
+	}  
+
+	&.is-active {
+		position: relative;
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			background-color: theme-color("primary");
+
+			@include media-breakpoint-up(md) {
+				top: auto;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 5px; 
+			}
+		} 
+		.gnb__nav-link { 
+			color: $white;
+			background-color: gray("900"); 
+			position: relative; 
+		}
+	}
+
+	&.dropdown {
+		.dropdown-toggle {
+
+		}
+	}
+}
+
+.gnb__nav-notify {
+	display: flex;
+
+	.gnb__nav-link {
+		padding: 0.75rem 1rem;
+		font-size: 1.5rem;
+	}
+
+}
+.gnb__nav-account {
+	display: flex;
+
+	.gnb__nav-link {
+		padding: 0.75rem 1rem;
+	}
+	
+	.gnb__account-vcard {
+		display: inline-block;
+		vertical-align: middle;
+		background-size: cover;
+		background-position: center;
+		border-radius: 100%;
+		height: 2rem;
+		width: 2rem;
+	}
+	.gnb__account-mail {
+		display: none;
+	}
+}
+ 

@@ -1,0 +1,40 @@
+
+
+// Chip
+// 오디언스를 선택한 목록을 뿌릴 경우 사용중 
+
+.list-chip {
+	&__item {
+		margin-top: 1rem;
+	}
+}
+
+
+.chip { 
+	padding: $input-btn-padding-y $input-btn-padding-x;
+	background-color: gray("100");
+	border: 1px solid gray("300");
+	border-radius: $border-radius;
+
+	.chip__title {
+		display: block;
+		font-size: $font-size-sm;
+	}
+	 
+	.status__item {
+		display: inline-block;
+		width: 48%;
+		font-size: $font-size-xs;
+		color: gray("500");
+		margin: 0;
+		padding:0;  
+
+		+ .status__item { 
+			margin:0;
+			&:before {
+				display: none;
+			}
+		}  
+	} 
+}
+ 

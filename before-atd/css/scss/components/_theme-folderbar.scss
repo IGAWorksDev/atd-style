@@ -1,0 +1,172 @@
+
+// Folderbar
+// 폴더목록을 사이드바의 컨텐츠로 바 형태로 보여주는 스타일.
+// 메인 컨텐츠의 폴더 목록과는 구분되는 스타일.
+// 사이드바 메인 영역에 들어감. (.page__sidebar-main)
+//
+.folderbar {}
+
+.folderbar__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+} 
+
+.folderbar__item {
+	position: relative;
+	display: flex; 
+	flex-direction: row;
+	align-items: center;  
+	padding-left: ($folderbar-padding-x * 1.5); 
+	margin-top: -1px;
+	transition: $folderbar-transition;
+
+	&:before {
+		position: absolute;
+		left: ($folderbar-padding-x / 1.5); 
+
+		content: "\e923";
+		font-family: 'adicons';
+		font-size: $font-size-lg;
+		color: $gray-500; 
+	}
+
+	// 폴더 이름
+	.folderbar__label {
+		@extend .ellipsis-base;
+		max-width: 100%;
+		margin-right: 0.5rem; 
+	}  
+	// 폴더 관리 드랍다운 메뉴
+	.folderbar__dropdown {
+		visibility: hidden; 
+		opacity:0;
+	} 
+
+	&:hover,
+	&.is-active {   
+		&:before {
+			color: $primary;
+		} 
+	} 
+	&:hover {
+		.folderbar__dropdown {
+			visibility: visible; 
+			opacity:1;
+		} 
+	} 
+	&.is-active {  
+		z-index: 1; 
+		.folderbar__link {
+			font-weight: $font-weight-bold;
+			color: $primary;
+		}
+	}
+	&.is-edit { 
+	}
+}
+
+//폴더이름을 감싸는 링크 스타일
+.folderbar__link {
+	display: flex; 
+	flex-direction: row;
+	align-items: center;
+	padding: $folderbar-padding-y $folderbar-padding-x; 
+	padding-left: 0;
+	border-bottom: $folderbar-border-width solid $folderbar-border-color; 
+	width: 100%;
+	text-decoration: none;
+	color: $body-color;  
+
+	&:hover {
+		color: $primary;
+		text-decoration: none;
+	}
+}
+
+//폴더바 아이템을 관리하는 드랍다운 메뉴
+.folderbar__dropdown {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+
+	display: flex; 
+	flex-direction: column;   
+	transition: $folderbar-transition;
+
+	.btn { 
+		align-self: center; 
+		padding: 0;
+		border: 0; 
+		height: 100%; 
+		width: $folderbar-padding-x;
+		background-color: transparent;
+		color: $gray-500; 
+		text-align: center; 
+		font-size: $font-size-sm; 
+		&:hover {
+			color: $body-color;
+		}
+	}
+}
+
+//폴더바에 폴더를 추가할 경우 폴더 이름을 입력하는 폼
+.folderbar__inputbar { 
+	display: flex;
+
+	transition: $folderbar-transition;  
+
+	padding: $folderbar-padding-y $folderbar-padding-x; 
+	padding-left: 0;
+	border-bottom: $folderbar-border-width solid $folderbar-border-color; 
+	width: 100%;
+
+	.btn-close {
+		visibility: hidden; 
+		opacity: 0;
+	}
+	&:hover {
+		.btn-close {
+			visibility: visible; 
+			opacity: 1;
+		}
+	} 
+	.form-control {
+		width: 100%;
+		padding-right: $folderbar-padding-x;
+	}
+	.inputbar-append {
+		position: relative;
+
+		.btn-add { 
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 0;  
+			width: $folderbar-padding-x; 
+			height: 100%; 
+			background-color: transparent;
+			text-align: center;  
+			color: $secondary; 
+		}
+
+		.btn-close { 
+			position: absolute;
+			top: 0;
+			right: -$folderbar-padding-x;
+			bottom: 0;
+			padding:0;
+			border: 0;
+			width: $folderbar-padding-x;
+			height: 100%;
+			background-color: transparent;
+			font-size: $font-size-sm;
+			color: $gray-500; 
+			transition: $folderbar-transition;
+			&:hover {
+				color: $body-color;
+			}
+		}
+	} 
+}

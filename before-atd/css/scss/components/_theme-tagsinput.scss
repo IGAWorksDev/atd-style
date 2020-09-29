@@ -1,0 +1,95 @@
+
+
+
+//
+//<span class="tag">
+//  Amsterdam 
+//  <span data-role="remove"></span>
+//</span>
+
+.tag { 
+    display: inline-block;
+    margin: 1px;
+    margin-right: 4px;
+    color: $body-color;
+    background-color: $light;
+    @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+    border: $btn-border-width solid rgba($black, 0.05); 
+    transition: $transition-base;
+
+    [data-role="remove"] {  
+        display: inline-block;
+        margin-left: 4px;  
+        height: $font-size-base * $line-height-base;
+        width:  $font-size-base * $line-height-base; 
+        cursor: pointer;
+        text-align: center;
+        transition: $transition-base; 
+        position: relative;
+        opacity: 0.4;
+
+        &:hover {   
+            transition: $transition-base; 
+            opacity: 1; 
+        }
+    }
+    &:hover { 
+        transition: $transition-base;
+        border-color: rgba($black, 0.2);
+    }
+}
+
+
+.bootstrap-tagsinput { 
+    @extend .form-control;  
+    padding-top: 0;
+    padding-bottom: 0; 
+    height: auto !important;
+    max-width: 100%;
+    color: #555;
+    vertical-align: middle; 
+    
+    cursor: text;
+
+    input {
+        @extend .form-control; 
+        display: inline-block;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0; 
+        width: 160px !important;  
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    .tag {  
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding: 3px 3px 3px 6px;   
+    } 
+}
+
+
+// 크리에이티브 > 피드 관리 : 구분문자를 1개만 받기 위해 사용중
+//
+//<div class="form-group__content form-group__content-one col-12 col-md-9 col-lg-9"> 
+//    <p class="text-muted mt-2">
+//        CSV 구분 문자를 입력해 주세요.
+//    </p>
+//    <input type="text" class="form-control" value="|" placeholder="문자만 입력해주세요." data-role="tagsinput"> 
+//    <small class="text-muted"> 예) / 또는 | </small>
+//</div> 
+//
+.form-group__content-single {
+    .bootstrap-tagsinput {
+        .tag + input {
+            display: none;
+        }
+    }
+}

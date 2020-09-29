@@ -1,0 +1,22 @@
+
+
+
+// GNB에서 사용하는 변수
+$gnb-height: 56px;
+$gnb-font-family: 'Open Sans', 'Noto Sans KR', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$gnb-font-size: 14px;
+$gnb-line-height: 22px;
+$gnb-nav-padding-y: 17px;
+$gnb-nav-padding-x: 16px;
+$gnb-bg-color: #212529; //$gray-900;
+
+
+$gnb-vcard-padding-y: 0.75rem;
+$gnb-vcard-padding-x: $gnb-nav-padding-x;
+$gnb-vcard-size: 2.5rem;
+
+
+// 변수값 변경함 (2020-09-29)
+$gnb-bg-color: #FFFFFF;
+$gnb-link-color: $gray-800;

@@ -1,0 +1,206 @@
+// Grid
+
+ 
+// 그리드의 column 클래스
+.grid__col {    
+    dl {
+		&,
+		dt,
+		dd { margin: 0; padding:0;}
+	}
+
+	a.grid__link {
+		color: $body-color;
+		&:hover,
+		&:active {
+			text-decoration: underline;
+		}
+	}
+} 
+
+
+// 그리드 column이 블릿을 사용할 경우.
+.grid__col-bullet { 
+
+	display: flex;
+	align-items: center;
+ 
+	position: static;
+	text-align: center; 
+
+	.btn-collapse__toggler,
+	.btn-collapse__toggle {
+		padding: 0;
+		border: 0;
+		font-size: 1.5rem;
+		color: color("teal") !important;  
+		transition: all 1s ease-in-out;  
+		cursor: pointer;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&[aria-expanded="false"] {
+			.ico { 
+				&:before {
+					content: "\e90f"; 
+				} 
+			}
+		}
+
+		&[aria-expanded="true"] {
+			.ico {
+				&:before {
+					content: "\e911";
+				} 
+			}
+		}
+	}  
+} 
+
+
+
+// column의 헤더 wrapper 클래스
+.grid__col-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.75rem; 
+}
+
+// 그리드의 제목
+.grid__col-title {
+	font-size: $font-size-base;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+
+
+
+// 새로 추가한 그리드(플렉서블)바 스타일
+.gridbar {
+	.gridbar-row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;   
+
+		&:hover {
+			background-color: lighten($gray-100, 0.5%);
+			z-index: 2;
+		} 
+
+		.gcol {
+			padding: $table-cell-padding;
+			width: 100%;
+
+			a {
+				color: $body-color;
+				&:hover {
+					color: $primary;
+				}
+			} 
+
+			&.gcol-check {
+				flex: 0 0 auto;
+				width: 3rem; 
+				text-align: center;
+				.theme-control {
+					display: inline-block;
+				}
+			}  
+			&.gcol-toggle {
+				width: 3rem;
+				text-align: center;
+				flex: 0 0 auto;
+
+				.btn-toggle {
+					display: flex; 
+					align-items: center;
+					justify-content: center;
+					margin-left: auto !important;
+					margin-right: auto !important; 
+					transition: $transition-base;
+					border-color: transparent;
+
+					.ico {
+						transform: rotate(-90deg);
+						transition: $transition-base;
+					}
+
+					&[aria-expanded="true"] {
+						@extend .btn-secondary;
+						.ico { 
+							transform: rotate(0deg);
+							transition: $transition-base;
+						}
+					}
+				}			
+			}  
+		}
+	}
+	.gridbar-header {
+		//border-top: $table-border-width solid $table-border-color;
+		border-bottom: $table-border-width solid $table-border-color;
+		font-weight: $font-weight-bold; 
+
+		//box-shadow: $box-shadow-base;
+	}
+	.gridbar-body {
+		border-top: $table-border-width solid $table-border-color; 
+		position: relative;
+		box-shadow: $box-shadow-base;
+		//z-index:2;
+		.gridbar-row {
+			.gcol { 
+				padding: ($table-cell-padding * 1.5) $table-cell-padding;
+			} 
+		}
+
+		// 합산정보일 경우 사용
+		&.gridbar-body__total {
+			border-bottom: $table-border-width solid $table-border-color;
+			box-shadow: none;
+			.gridbar-row {
+				background-color: rgba($orange, 0.04);
+				font-weight: $font-weight-bold;
+				//font-style: italic;
+				color: $orange;
+
+				.badge {
+					background-color: $orange!important;
+				}
+			}
+		}
+	}
+	.gridbar-footer {
+		padding: 1.5rem;
+		border-top: $table-border-width solid $table-border-color;
+		background-color: $gray-100;
+	} 
+
+
+	&.accordion { 
+		overflow:hidden; 
+		.gridbar-footer {
+			h6 {
+				font-weight: $font-weight-bold;
+			}
+		}
+	} 
+
+	&:last-child {
+		border-bottom: $table-border-width solid $table-border-color !important;
+	}  
+}
+
+
+
+
+
+
+
+
+
+
+ 

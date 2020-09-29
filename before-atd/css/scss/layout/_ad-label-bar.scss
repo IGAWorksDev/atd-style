@@ -1,0 +1,17 @@
+
+// AD Label bar
+// GNB 아래에 위치하는 라벨 선택 바.
+// 광고계정에 따른 채널별 캠페인으로 이동할 수 있음.
+
+.adlabel-bar {
+	z-index: 90;
+	position: fixed;
+	width: 100%;
+	height: $gnb-height;
+	background-color: #FFF;
+	padding: 0.5rem 1rem; 
+
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #e9ecef;
+}

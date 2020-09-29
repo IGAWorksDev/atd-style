@@ -1,0 +1,267 @@
+
+/* -------------------------------------------------------------- */
+/* Tradingworks - Frame Style                                     */
+/* 2018.04                                                        */
+/* -------------------------------------------------------------- */
+
+
+
+ 
+body {
+  //font-family: 'Roboto', 'NanumSquare', $font-family-base;
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+body.iframe-body {
+  background-color: $white;
+}
+
+    
+ 
+
+
+/* 
+
+// validation check layout
+
+<div class="platform">
+	<nav class="gnb" id="gnb">
+	...
+	</nav>
+	<div class="page">
+		<nav class="snb" id="snb">
+		...
+		</nav>
+		<aside class="aside">
+		...
+		</aside>
+		<main class="main">
+			<header class="main-header">
+			...
+			</header>
+			<div class="main-body">
+				<div class="main-body__inner">
+				...
+				</div>
+			</div>
+		</main>
+	</div>
+</div> 
+
+*/
+
+ 
+
+
+// 플랫폼의 주요 내용이 출력되는 부분으로 모든 컨텐츠는 이 영역으로 들어와야 함.  
+ 
+.platform {  
+	height: 100%;
+	min-width: 1280px!important;
+	width: 100%; 
+} 
+ 
+ 
+/*
+// Global Navigation Bar : gnb.scss 파일 참고
+// 독립적으로 쓰이므로 분리되어 있음.
+//
+.gnb {}
+*/
+
+
+/*
+// Side Navigation Bar : _theme-snb.scss 파일 참고
+//
+.snb {}
+*/
+
+
+.page { // 단독으로 사용함 
+	padding-top: calc(#{$gnb-height} * 2);  
+
+	//height: 100%;  
+	//width: 100%; 
+	//transition: $transition-base; 
+	//overflow-x: hidden;
+} 
+
+.page__inner {  
+	//transition: $transition-base; 
+	//width: 100%;
+	//height: 100%;
+
+	// snb, aside가 접혀 들어간 경우 브라우저 가로 스크롤 생기지 않도록 하기 위함
+	//overflow-x: hidden; 
+}
+
+// snb만 포함한 경우
+.page__inner.in-snb {
+	//padding-left: $snb-width;
+
+	.main {
+		padding-left: $snb-width;
+	}
+	// 페이지 바디 헤더의 fixed width
+	.main-header {
+		width: calc(100% - #{$snb-width}); 
+	}
+
+	// snb를 접은 경우
+	&.hidden-snb {
+		padding-left: 0;
+		> .snb {
+			left: 0; 
+		}
+
+		.main {
+			padding-left: 0;
+		}
+
+		// aside가 접힌 상태의 페이지 바디 헤더의 fixed width
+		.main-header { 
+			width: 100%; 
+		}
+	}  
+}
+
+// aside만 포함한 경우
+.page__inner.in-aside {
+	//padding-left: $aside-width;
+
+	.main {
+		padding-left: $aside-width;
+	}
+	// 페이지 바디 헤더의 fixed width
+	.main-header { 
+			width: calc(100% - #{$aside-width}); 
+	}
+
+	// aside를 접은 경우
+	&.hidden-aside {
+		padding-left: 0;
+		> .aside {
+			left: $aside-width; 
+		}
+
+		.main {
+			padding-left: 0;
+		}
+
+		// aside가 접힌 상태의 페이지 바디 헤더의 fixed width
+		.main-header { 
+			width: 100%; 
+		}
+	}  
+}
+
+// snb와 aside를 모두 포함한 경우
+.page__inner.in-snb.in-aside {
+	//padding-left: $snb-width + $aside-width;
+
+	// aside의 위치 지정
+	> .aside {
+		left: $snb-width + $aside-width; 
+	}
+	
+	.main {
+		padding-left: $snb-width + $aside-width;
+	}
+	// 페이지 바디 헤더의 fixed width
+	.main-header { 
+		width: calc(100% - (#{$snb-width} + #{$aside-width})); 
+	}
+}
+
+
+// snb만 접은 경우
+.page__inner.in-snb.in-aside.hidden-snb {
+	//padding-left: $aside-width;
+	> .snb {
+		left: 0; 
+	}
+	> .aside {
+		left: $aside-width; 
+	}
+
+	.main {
+		padding-left: $aside-width;
+	}
+
+	// snb가 접힌 상태의 페이지 바디 헤더의 fixed width
+	.main-header { 
+		width: calc(100% - #{$aside-width}); 
+	}
+} 
+
+// snb만 접은 경우
+.page__inner.in-snb.in-aside.hidden-aside {
+	padding-left: $snb-width;
+
+	> .aside {
+		left: $aside-width - ($aside-width - $snb-width); 
+	} 
+
+	.main {
+		padding-left: $snb-width;
+	}
+
+	// aside가 접힌 상태의 페이지 바디 헤더의 fixed width
+	.main-header { 
+		width: calc(100% - #{$snb-width}); 
+	}
+} 
+
+// snb와 aside를 모두 접은 경우
+.page__inner.in-snb.in-aside.hidden-snb.hidden-aside {
+	padding-left: 0;
+	> .snb {
+		left: 0; 
+	}
+	> .aside {
+		left: 0; 
+	}
+
+	.main {
+		padding-left: 0;
+	}
+
+	// snb와 aside가 모두 접힌 상태의 페이지 바디 헤더의 fixed width
+	.main-header { 
+		width: 100%; 
+	}
+} 
+
+ 
+
+
+// Main
+.main {
+	width: 100%; 
+ 
+ 	.main-header {
+ 		// _theme-main-header.scss 참고
+ 	}
+	.main-body { 
+		padding: ($grid-gutter-width / 2);    
+
+		.main-body__inner {
+			
+		}
+	} 
+
+	&__body-inner {
+		padding-bottom: ($grid-gutter-width / 2);
+	}
+}
+ 
+.content-title {
+	font-weight: $font-weight-bold;
+}
+
+
+
+ 
+
+ 

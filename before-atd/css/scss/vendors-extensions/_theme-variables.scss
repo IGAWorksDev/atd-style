@@ -1,0 +1,94 @@
+
+
+
+html {
+  //font-size: 14px;
+}
+
+
+$body-bg: rgba(#e9ecef, 0.8); // $gray-100;
+$body-color: #495057; // $gray-800;
+
+$border-radius: 2px !default;
+
+$input-placeholder-color: #ced4da; // $gray-400;
+
+$table-hover-bg: rgba(#e9ecef, 0.75); //$gray-200; 
+
+
+// Grid Custom
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 1200px,
+  lg: 1440px,
+  xl: 1680px 
+) !default;
+ 
+$container-max-widths: (
+  sm: 540px,
+  md: 1140px,
+  lg: 1380px,
+  xl: 1620px 
+) !default;
+ 
+
+/* 
+// 그리드 사이드 추가 할 경우 사용 예정
+// Grid Custom
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1680px 
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1380px,
+  xxxl: 1600px;
+) !default;
+*/
+
+
+$transition-base: all .2s ease-in-out;
+$page-body-header-transition: all .01s ease-in-out;
+
+
+$active-color: color("teal");
+$inactive-color: gray("400");
+
+
+
+
+$coral: #FF7F50;
+$gold: #FFD700;
+$olive: #808000;
+$navy: #000080;
+$purple: #800080;
+
+.color-coral {
+  color: $coral;
+}
+.color-gold {
+  color: $gold;
+}
+.color-olive {
+  color: $olive;
+}
+.color-purple {
+  color: $purple;
+}
+.color-navy {
+  color: $navy;
+}
+
+
+
+

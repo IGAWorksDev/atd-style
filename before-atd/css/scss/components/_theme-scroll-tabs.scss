@@ -1,0 +1,133 @@
+
+
+// 탭 영역보다 네비게이션이 길 경우 탭과 탭패널이 함께 
+// https://www.jqueryscript.net/other/Scrolling-jQuery-UI-Tabs-jQuery-ScrollTabs.html
+//
+// 필요한 스크립트
+// <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+// <script src="../../js/jquery.ui.scrolltabs.js"></script>
+
+
+.ui-scroll-tabs-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Scroll tab default css */
+
+.ui-scroll-tabs-view {
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ui-scroll-tabs-view .ui-widget-header {
+  border: none;
+  background: transparent;
+}
+
+.ui-scroll-tabs-header {
+	position: relative;
+	overflow: hidden;
+
+	.stNavMain {
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		height: 100%;
+		opacity: 0;
+		transition: left .5s, right .5s, opacity .8s;
+		transition-timing-function: swing;
+
+		button {  
+			display: inline-block;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			user-select: none;
+			border: 1px solid transparent;
+			height: 100%;
+			padding: 0.25rem 0.5rem;
+			border-radius: 0;
+			border: 1px solid $nav-tabs-border-color; 
+			background-color: $white;
+			color: $body-color;
+			box-shadow: 0 0 4px rgba($black, 0.2);
+		} 
+	}
+
+	.stNavMainLeft { 
+		//left: -250px; 
+		button {
+			border-top: 0;
+			border-left: 0;
+		}
+
+		&.stNavVisible {
+		  	left: 0;
+		  	opacity: 1;
+		}
+	} 
+
+	.stNavMainRight { 
+		//right: -250px; 
+		button {
+			border-top: 0;
+			border-right: 0;
+		} 
+		&.stNavVisible {
+		  	right: 0;
+		  	opacity: 1;
+		}	
+	}
+
+	ul.ui-tabs-nav {
+		li.stHasCloseBtn a { padding-right: 0.5em; } 
+		li span.stCloseBtn {
+		  float: left;
+		  padding: 4px 2px;
+		  border: none;
+		  cursor: pointer;
+		} 
+	} 
+}
+
+ 
+.ui-tabs-nav {
+	list-style: none; 
+	margin: 0;
+	padding: 0;
+	//border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color !important; 
+	position: relative;
+  	white-space: nowrap;
+
+	.ui-tabs-tab {
+		display: inline-block;
+  		float: none;
+		//margin-bottom: -$nav-tabs-border-width;
+
+		&:first-child {
+			//margin-left: 2rem;
+		}
+		&:last-child {
+			//margin-right: 2rem;
+		}
+
+		.ui-tabs-anchor {
+			display: block; 
+			padding: $card-spacer-y $card-spacer-x; 
+			color: $body-color;
+		}
+
+		&.ui-tabs-active {
+			.ui-tabs-anchor {
+				color: $primary;
+				font-weight: bold; 
+			    border-bottom: 2px solid $primary;
+			    padding-bottom: calc(#{$card-spacer-y} - 2px);
+			}
+		}
+	}
+}
+

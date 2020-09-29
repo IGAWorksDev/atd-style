@@ -1,0 +1,95 @@
+
+
+
+// Bounces
+
+.bounce {
+	display: inline-block;  
+	width: 1rem;
+	text-align: center;
+
+	&.is-active { 
+		//color: color("teal"); 
+		animation: bounceball 1.2s infinite ease-in-out both; 
+
+		@keyframes bounceball {
+		    0%, 100% {  
+		      transform: scale(0.6);
+		    } 40% {  
+		      transform: scale(1.0);
+		    }
+		}
+	}
+	&.is-inactive {  
+		//color: gray("500"); 
+	}
+}
+
+
+
+
+
+
+
+// http://tobiasahlin.com/spinkit/
+
+
+// <span class="bounces">
+//	<i class="ico ic-ball"></i>
+//	<i class="ico ic-ball"></i>
+//	<i class="ico ic-ball"></i>
+// </span> 
+
+
+.bounces {
+    height: 1.5rem;
+    width: 3rem;
+    text-align: center;  
+
+    display: flex;
+    align-items: center;
+    justify-content:center; 
+}
+
+.bounces > i { 
+	font-size: 0.875rem !important;  
+
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+
+    &:nth-child(1) {
+    	animation-delay: -0.32s;
+    }
+    &:nth-child(2) {
+    	animation-delay: -0.16s;
+    }
+}
+ 
+ 
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+    	transform: scale(0.6) 
+    }
+    0% { 
+    	transform: scale(1.0) 
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {  
+      transform: scale(0.6);
+    } 40% {  
+      transform: scale(1.0);
+    }
+}
+
+
+.bounce__label {
+    padding-left: 0.25rem;
+    //font-size: $font-size-sm;
+}
+
+
+
+
+

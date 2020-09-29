@@ -1,0 +1,140 @@
+ 
+
+
+.state-info {
+	display: inline-block; 
+	&.is-active { 
+		> * {
+			color: color("teal"); 
+		}
+	}
+	&.is-inactive { 
+		color: gray("500"); 
+		font-weight: $font-weight-normal !important;
+	}
+}
+
+
+
+.id-num { 
+	display: inline-block;
+	color: $gray-400;
+	text-decoration: none;
+	//font-style: italic;
+}
+
+
+.cnt {
+	font-weight: bold;
+}
+
+ 
+.ico-lg {
+	font-size: $font-size-lg;
+}
+.ico-xl {
+	font-size: $font-size-xl;
+}
+
+
+
+// seperate bar
+.sep {
+	color: $gray-500;
+}
+
+.sep-lt {
+	padding-left: 1rem;
+	border-left: 1px solid gray("300"); 
+}
+.sep-rt {
+	padding-right: 1rem;
+	border-right: 1px solid gray("300");
+}
+
+
+
+// Fonts 
+.ellipsis-base {
+	white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+// text ellipsis
+// 데이타 어트리뷰트와 함께 사용하여 출력된 라인 수를 조절 함. 
+// 예) class="text-ellipsis" data-ellipsis="2"
+.text-ellipsis {
+	overflow: hidden;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
+.ellipsis {
+	overflow: hidden;
+}
+
+
+// Grid & Table cell link 
+.col__link {
+	color: $body-color;
+	text-decoration: none;
+	
+	&:hover {
+		color: theme-color("primary");
+		text-decoration: none;
+	}
+}
+
+
+.highlight {  
+	padding: 1rem;
+	border: 1px solid $gray-200;
+	background-color: $gray-100;
+}
+
+.live-on {
+	color: $teal;
+}
+.live-off {
+	color: $gray-500;
+}
+
+
+.color-tf2 {
+	color: $facebook-color;
+}
+.color-tfa {
+	color: $google-gdn-color;
+}
+.color-tw,
+.color-dsp {
+	color: $tw-dsp-color;
+}
+
+.required {
+	color: $red;
+}
+
+
+
+
+.ic-lg {
+	font-size: $font-size-lg;
+} 
+
+
+
+.img-size-sm {
+	width: $font-size-sm;
+}
+
+.img-size-base {
+	width: $font-size-base;
+}
+
+.img-size-lg {
+	width: $font-size-lg;
+}
+
+

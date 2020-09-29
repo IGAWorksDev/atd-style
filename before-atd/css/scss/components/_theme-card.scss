@@ -1,0 +1,298 @@
+
+
+
+
+.card { 
+	position: relative; 
+	border: $card-border-width solid $card-border-color;
+	border-radius: $border-radius;
+	background-color: $card-bg-color; 
+	//min-height: 4rem; 
+	transition: $card-transition; 
+
+	.card__link {   
+		color: $body-color;
+		text-decoration: none;  
+
+		&:hover {
+			color: $primary;
+			text-decoration: none;
+		}
+	}  
+
+	> .card__dropdown {
+		position: absolute;
+		top: ($card-padding-y / 2);
+		right: 0;  
+		opacity: 0; 
+		transition: $card-transition;
+		.btn {
+			color: $gray-500; 
+			&:hover {
+				color: $body-color;
+			}
+		}
+	}  
+
+	.component,
+	.component-list { 
+		list-style: none; 
+		padding: 0;
+		//padding: $card-padding-y 0 0;
+		//border-top: $card-border-width solid rgba($card-border-color, 0.5);
+		width: 100%; 
+		font-size: $component-font-size;
+		color: $gray-600 !important;
+
+		li + li {
+			margin-top: $component-spacer-y;
+		}
+	}  
+
+	&:hover { 
+		box-shadow: 0 4px 4px 0 rgba($black,0.1);   
+		> .card__dropdown { 
+			opacity: 1;
+		} 
+	} 
+}
+
+
+.card__header { 
+	padding: $card-padding-y $card-padding-x;  
+	border-bottom: $card-border-width solid $card-border-color;
+	//min-height: 4rem;  
+	//box-shadow: $box-shadow-base;
+
+	&.card__header-flex-row { 
+		@extend .d-flex; 
+		@extend .flex-row;
+		@extend .align-items-center;
+	} 
+
+	// 카드 헤더에 탭이 들어 올 경우 사용
+	&.card__header-tabs {  
+		@extend .pt-3;
+		@extend .pr-3; 
+		@extend .pb-0; 
+		@extend .pl-3;   
+		min-height: auto;
+		//background-color: $box-bg;
+
+		.nav-tabs {  
+			marginp-bottom: -$input-border-width; 
+			border-bottom: 0;
+			.nav-item {
+				.nav-link {
+					background-color: $box-bg;
+					border-color: $nav-tabs-border-color; 
+					padding: ($nav-link-padding-y * 1.25) ($nav-link-padding-x * 1.25);
+				}
+				.nav-link.active {
+					background-color: $white;
+					border-bottom-color: $white;
+					font-weight: $font-weight-bold;
+				}
+			}
+			.nav-item + .nav-item {
+				margin-left: -1px;
+			}
+		}
+	} 
+} 
+
+.card__body {  
+	position: relative;   
+	padding: ($card-padding-y * 2) $card-padding-x; 
+	border-bottom: $card-border-width solid $card-border-color;  
+
+	&.card__body-flex-row {
+		@extend .d-flex;
+		@extend .flex-row;
+		@extend .align-items-center;
+	} 
+}
+
+.card__footer {
+	border-top: $card-border-width solid $card-border-color;
+	padding: ($card-padding-y * 2) $card-padding-x; 
+} 
+ 
+
+.card__title { 
+	@extend .m-0;
+	@extend .d-flex;
+	@extend .flex-row;
+	@extend .align-items-center;
+
+	font-size: $card-title-font-size;
+	font-weight: $font-weight-bold;  
+
+	.ico { 
+		margin-right: 0.25rem;
+	}
+} 
+
+ 
+ 
+.card-list {
+	.card-list__header {
+		//margin-top: $grid-gutter-width; 
+		> .card-list__title {
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+			color: $gray-500;
+		}
+	} 
+	.card-list__item {
+		.card {
+			margin-bottom: ($grid-gutter-width / 2); 
+
+			.card__body { 
+				box-shadow: $box-shadow-base;
+				.card__title { 
+					padding-top: $card-padding-y;
+				}
+			}
+			.card__footer { 
+				background-color: $box-bg;   
+				.btn-more {   
+					color: gray("500");
+					&:hover {
+						color: gray("600");
+					}
+				}
+			}  
+		} 
+	}
+}
+
+ 
+
+
+// 카드(패널)형태의 리스트 그룹 컨텐츠일 경우 사용.
+.card-list-group {
+	background-color: $gray-100; 
+	.card__header {
+		z-index: 10;
+		position: relative;
+
+		@include media-breakpoint-up(md) {  
+			display: flex;
+			flex-direction: row;
+			align-items: center;  
+		}  
+
+		margin-bottom: -1px; 
+		padding: $list-group-item-padding-y $list-group-item-padding-x;
+		border-bottom: $card-border-width solid $list-group-border-color;
+		background-color: $white;
+
+		.card__title {
+			margin-right: auto;
+			margin-bottom: 0;
+			width: auto;
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+		}
+	}  
+}
+
+// 차트를 갖고 있는 카드
+.card-chart { 
+	.card__title-toggle { 
+		color: $body-color; 
+
+		h3 { 
+			display: inline;
+		}
+	} 
+
+	// 기간 선택 합산 차트 카드
+	&.card-chart-period { 
+		.chart__legend-center {
+			color: $teal !important;
+		}
+	}
+
+	// 7일 추이 차트 카드
+	&.card-chart-trend { 
+		.chart__legend-center {
+			color: $orange !important;
+		}
+	}
+}
+ 
+
+
+// 폴더형 카드
+.card-folder {
+	position: relative;
+	//margin-top: $grid-gutter-width;
+	&:before {
+		z-index: 1;
+		position: absolute;
+		top: -$card-padding-y;
+		left: 1rem;
+		content:" ";  
+		display: block;
+		height: $card-padding-y;
+		width: ($card-padding-x * 4);
+		border: $card-border-width solid $card-border-color;
+		border-bottom: $card-bg-color;
+		border-radius: $border-radius $border-radius 0 0;
+		background: $white; 
+		transition: $transition-base;
+	}  
+
+	// 포함된 구성 요소가 1개인 경우
+	.card__body { 
+		.component-wrap {
+			// 구성 요소의 정보가 1개 일 경우 최소 높이값
+			// calc((컴포넌트 폰트 사이즈 * 라인 헤이트) * 개수)
+			min-height: calc((#{$component-font-size} * #{$line-height-base}) * 1); 
+		}
+	} 
+
+	// 폴더 추가인 경우
+	&.is-edit {
+		.card__body {
+			@extend .d-flex;
+			@extend .flex-row;
+			@extend .align-items-center; 
+
+			.input-group { 
+				padding-right: ($card-padding-x * 2);
+
+				.form-control {
+					padding-right: ($card-padding-x * 2);
+				}
+				.input-group-append { 
+					position: relative;
+					width: 0;
+
+					> .btn {
+						z-index: 10;
+						position: absolute;
+						background-color: transparent; 
+						transition: $transition-base; 
+						
+						&.btn-add {
+							opacity: 0.5;
+							right: 0;
+							padding: $btn-padding-y;
+						}
+						&.btn-close {
+							opacity: 0.5;
+							padding: $btn-padding-y;
+							right: -($card-padding-x * 2.5);
+						}
+						&:hover {
+							opacity: 1;
+						} 
+					}
+				}
+			}
+		}
+	}
+}

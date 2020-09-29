@@ -1,0 +1,18 @@
+
+
+
+.float-form-group {
+	position: relative;
+	padding-top: 1.5rem;
+}
+ 
+.float-form-label {
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	transform: scale(0.75); 
+	padding: 0 !important; 
+	margin: 0 !important;
+	font-weight: $font-weight-normal;
+}
+

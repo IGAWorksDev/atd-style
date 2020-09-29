@@ -1,0 +1,182 @@
+
+
+
+// Buttons 
+.btn-reset {
+	background-color: transparent;
+	border-color: transparent; 
+	padding: 0;
+}
+
+.btn-outline-none {
+	border-width: 0!important;
+}
+
+
+.btn-trans {
+	background-color: transparent;
+	border: 0;
+	
+	&:focus,
+	&.focus {
+		outline: 0;
+		box-shadow: $btn-focus-box-shadow;
+	} 
+}
+
+.btn-circle { 
+	border-radius: 50%; 
+	font-size: $font-size-base;
+	line-height: 1;
+	padding: $btn-padding-y; 
+}
+
+.btn-circle-lg {
+	@extend .btn-circle;
+	font-size: $font-size-lg;
+	padding: $btn-padding-y-lg;  
+}
+ 
+
+.btn-circle-sm {
+	@extend .btn-circle;
+	font-size: $font-size-xs;
+	padding: $btn-padding-y-sm;  
+}
+ 
+
+.btn-text {
+	color: $body-color;
+	padding: 0;
+	border: 0;
+}
+
+
+.btn-tight { 
+	@extend .btn;
+	padding: $btn-padding-y ($btn-padding-x / 2);
+	.ico {
+		font-size: $font-size-xl;
+	}
+}
+
+
+.btn-done { 
+	@extend .btn;  
+	background-color: $gray-100;
+	border-color: $gray-300!important; 
+	color: $secondary;  
+	border-radius: $border-radius;
+	cursor: default !important; 
+	
+	&:active,
+	&:hover,
+	&:focus {
+		cursor: default !important;  
+	}
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+
+
+.btn-icon {
+	border: 0;
+	padding: 0 0.25rem;
+	border-radius: 50%;
+}
+
+
+.btn-icon-collapse {
+	position: relative;
+
+	&[aria-expanded="false"] { 
+		transition: $transition-base; 
+		i {
+			@extend .ic-chevron-circle-down;
+		}
+	}
+
+	&[aria-expanded="true"] {  
+		transform: rotate(-90deg);
+		transition: $transition-base;
+		i {
+			@extend .ic-chevron-circle-fill-down;
+		}
+	}
+}
+
+
+.btn-visibillity {
+	&.is-open {
+		opacity: 1;
+
+	 	.ico {
+	 		color: $primary;
+	 	}
+	}
+	&.is-close {
+	 	.ico {
+	 		color: $body-color;
+	 	}
+	}
+}
+
+// 아웃라인 버튼 스타일인 경우 - 흰색이 기본
+[class*=btn-outline] {
+	background-color: $white;
+}
+
+
+// 광고계정 토글 버튼
+.btn__adaccount-toggle {  
+	font-size: $font-size-lg; 
+}
+
+
+
+.btn-xs {
+	font-size: 0.75rem;
+	//padding: 0.125rem 0.5rem;
+}
+
+
+
+.btn-adtype { 
+	padding-right: $input-btn-padding-x;
+	padding-left: $input-btn-padding-x;
+
+	.is-active {
+
+	}
+}
+
+.btn-adtype__dsp { 
+	border-color: $tw-dsp-color;
+	color: $tw-dsp-color;
+}
+
+.btn-adtype__tfa {  
+	border-color: $google-gdn-color;
+	color: $google-gdn-color;
+}
+	
+.btn-adtype__tf2 { 
+	border-color: $facebook-color;
+	color: $facebook-color;
+} 
+
+
+
+
+
+// Dropdown
+
+.dropdown-menu {
+	box-shadow: $box-shadow-lg;
+}
+
+
+
+
+

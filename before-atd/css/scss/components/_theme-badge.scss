@@ -1,0 +1,96 @@
+/* ------------------------------------------- */
+// TW Labels
+/* ------------------------------------------- */
+
+
+
+
+.badge-adtype {   
+	padding-right: $badge-padding-x; 
+	padding-left: $badge-padding-x; 
+	border-radius: 2rem; 
+	font-size: $font-size-xs;
+	line-height: 1;  
+	
+	&__tf2 { // facebook
+		@extend .badge-adtype; 
+		color: $white; 
+		background-color: $facebook-color;
+	}
+
+	&__tfa { // google ad
+		@extend .badge-adtype; 
+		color: $white; 
+		background-color: $google-gdn-color;
+	}  
+	
+	&__gdn {// google display ad
+		@extend .badge-adtype; 
+		color: $white; 
+		background-color:$google-gdn-color;
+	}
+
+	&__you { // youtube ad
+		@extend .badge-adtype; 
+		color: $white; 
+		background-color: $google-you-color;
+	} 
+
+	&__tw,
+	&__dsp  {
+		@extend .badge-adtype; 
+		color: $white; 
+		background-color: $tw-dsp-color;
+	}
+
+	&__ncpi {  
+		@extend .badge-adtype; 
+		color: $white; 
+		background-color: $tw-ncpi-color;
+	}
+
+	&__uac { // google univertial app
+		@extend .badge-adtype; 
+		color: $white; 
+		background-color: $google-uac-color;
+	}
+}
+
+
+.badge-outline-info {
+	border: 1px solid theme-color("info");
+	color: theme-color("info");
+	background-color: $white;
+}
+
+ 
+
+.badge-on {
+	background-color: $orange;
+	font-weight: $font-weight-normal;
+}
+
+.badge-off {
+	background-color: $gray-500;
+	font-weight: $font-weight-normal;
+}
+
+ 
+
+// D.C.O 
+.badge-dco {
+	&__retarget {
+		@extend .badge-success;
+	}
+	&__set {
+		@extend .badge-info;
+	}
+}
+
+
+
+
+
+
+
+

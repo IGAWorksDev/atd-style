@@ -1,0 +1,13 @@
+
+
+// 출력할 내용이 없을 경우 사용
+
+.none-result { 
+	border-radius: $border-radius;
+	padding: $card-spacer-y $card-spacer-x; 
+	background-color: $white;
+}
+.none-result-outline {
+	border: 1px dashed $table-border-color;
+}
+

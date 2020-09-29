@@ -1,0 +1,284 @@
+
+//
+// adlabel-bar에 들어가는 드랍다운 스타일
+//
+
+.d-flex {
+	display: flex;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.mr-auto {
+	margin-right: auto !important;
+}
+
+.mr-1 {
+	margin-right: 0.25rem !important;
+}
+.mr-2 {
+	margin-right: 0.5rem !important;
+}
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+.ml-2 {
+	margin-left: 0.5rem !important;
+}
+
+.pt-0 {
+	padding-top: 0 !important;
+}
+
+.px-2 {
+	padding-left: 0.5rem !important;
+	padding-right: 0.5rem !important;
+}
+
+.pl-5 {
+	padding-left: 3rem !important;
+}
+
+.w-100 {
+	width: 100% !important;
+}
+
+
+@import "theme-adlabel-icon";
+
+
+// 드랍다운 애드라벨
+.dropdown-adlabels {
+	position: relative;
+
+	// 드랍다운에 들어 있는 채널 이미지의 크기 지정
+	img.img-size-lg {
+		width: (1rem * 1.25);
+	}
+
+	// 드랍다운 토글 버튼
+	.dropdown-toggle {
+		width: 500px;
+		text-align: left; 
+
+		padding: 0.37rem 0.75rem;
+		font-size: 13px;
+		line-height: 1.5;
+		border: 1px solid #6c757d;
+
+		// 선택된 애드라벨과 캠페인
+		&__selected-items {   
+			.selected-label {
+				display: inline-block;
+				max-width: 180px; 
+				overflow: hidden;
+			}
+			.selected-campaign {
+				display: inline-block;
+				max-width: 260px;
+				overflow: hidden; 
+
+				&.w-100 {
+					max-width: 460px;
+				}
+			}
+		}
+
+		&::after {
+		    display: inline-block;
+		    width: 0;
+		    height: 0;
+		    margin-left: 0.255em;
+		    vertical-align: 0.255em;
+		    content: "";
+		    border-top: 0.3em solid;
+		    border-right: 0.3em solid transparent;
+		    border-bottom: 0;
+		    border-left: 0.3em solid transparent;
+		}
+
+		&.disabled {
+			opacity: 0.6;
+			background-color: $gray-200;
+			border-color: rgba($gray-600, 0.5)!important;
+		}
+	}
+	
+	// 드랍다운 메뉴 레이어의 스타일
+	.dropdown-menu {
+		position: absolute;   
+		font-size: 13px; 
+
+		// 검색바 영역
+		.dropdown-menu__search { 
+			border-bottom: 1px solid #e9ecef;
+			position: relative;
+			.search-bar {
+				&:before {
+					position: absolute;
+				    top: 0.5rem;
+				    left: 0.75rem;
+				    z-index: 1;
+				    content: "\e92d";
+				    font-family: "adicons";
+				    font-size: 0.875rem;
+				    color: #adb5bd;
+				    display: block; 
+				}
+
+				.search-bar__form {
+					border-width: 0;
+					border-radius: 0;
+					width: 100%;
+					padding: 0.375rem 0.75rem;
+					padding-left: 2.25rem; 
+				}
+			}
+		}
+
+		// 드랍다운 메뉴 콘텐츠
+		.dropdown-menu__content { 
+			&.theme-scrollbar { 
+				max-height: calc(100vh - (#{$gnb-height} * 3)); 
+				overflow: auto; 
+			}
+		}
+
+		// 드랍다운 메뉴 콘텐츠의 섹션 - 공통스타일
+		.dropdown-menu__section { 
+			padding: .5rem 0; 
+
+			.list-dropdown-items {
+				margin-bottom: 0;
+
+				.list-item {  
+					.dropdown-item {
+						&.dropdown-item__adlabel,
+						&.dropdown-item__channel {
+							font-weight: bold;
+						} 
+						.dropdown-item__adaccount {  
+							.item-title {  
+								.img-size-lg {
+									width: 1.25rem;
+									height: auto;
+								}
+							}
+							.item-id {
+								opacity: 0.7;
+							}
+						}
+						/*
+						color: $dropdown-link-color;
+						&:hover {
+							color: $dropdown-link-hover-color;
+							background-color:$dropdown-link-hover-bg;
+						}
+
+						&:active,
+						&:focus {
+							color: $white !important;
+							background-color: $primary;
+						} 
+						*/
+					}
+					// 라벨 비활성화
+					/*
+					> div[class="dropdown-item__adlabel"] { 
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: transparent !important;
+							color: $body-color !important;
+							text-decoration: none;
+							cursor: default;
+						} 
+					}
+					*/
+				}
+			 
+				color: #495057; //$gray-800
+				&:hover {
+					color: #007bff; //primary
+				}
+			} 
+		}
+
+		// 드랍다운 메뉴 애드라벨 섹센 콘텐츠 스타일
+		.dropdown-menu__section-adlabels { 
+				max-height: 320px; 
+				overflow: auto;  
+		}
+
+		// 드랍다운 메뉴 채널 섹션 콘텐츠 스타일
+		.dropdown-menu__section-channels {
+			border-top: 1px solid #e9ecef;
+		}
+	}
+}
+
+
+//
+// 추가함 (2019-04-25)
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin gradient-bg($color) {
+  @if $enable-gradients {
+    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+  } @else {
+    background-color: $color;
+  }
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%; // For `<button>`s
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  clear: both;
+  font-weight: $font-weight-normal;
+  color: $dropdown-link-color;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background-color: transparent; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  @include hover-focus {
+    color: $dropdown-link-hover-color;
+    text-decoration: none;
+    @include gradient-bg($dropdown-link-hover-bg);
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+    @include gradient-bg($dropdown-link-active-bg);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $dropdown-link-disabled-color;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

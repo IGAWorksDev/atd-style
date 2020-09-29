@@ -1,0 +1,18 @@
+
+
+
+.part {
+	.part__header {   
+		border-bottom: 1px solid $gray-400;
+
+		.part__title { 
+			margin-bottom: 0.5rem;
+			font-size: 1.2rem;
+			font-weight: $font-weight-bold;
+			color: $black;
+		}
+	}
+	+ .part {
+		margin-top: $grid-gutter-width;
+	}
+}

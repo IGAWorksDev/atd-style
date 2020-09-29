@@ -1,0 +1,137 @@
+.folder-list {
+	.folder-list__header {}
+	.folder-list__item {
+		margin-top: ($grid-gutter-width / 2);
+	}
+}
+
+
+.folder { 
+	position: relative;
+	margin-top: ($grid-gutter-width / 2);
+	border: 1px solid $folder-border-color;
+	border-radius: $border-radius;
+	background-color: $folder-bg-color; 
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05); 
+	transition: $folder-transition;
+
+	&:before {
+		position: absolute;
+		top: -$folder-padding-y;
+		left: 1rem;
+		content:" ";  
+		display: block;
+		height: $folder-padding-y;
+		width: ($folder-padding-x * 2);
+		border: 1px solid $folder-border-color;
+		border-bottom: $folder-bg-color;
+		border-radius: $border-radius $border-radius 0 0;
+		background: $white; 
+		transition: $folder-transition;
+	}
+
+	.folder__body {  
+		position: relative;  
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center; 
+		min-height: $folder-min-height; 
+		padding: $folder-padding-y $folder-padding-x;  
+	} 
+
+	.folder__title { 
+		margin: 0; 
+		width: 100%; 
+		font-size: $folder-title-font-size;
+		font-weight: $font-weight-bold;
+	}
+
+	.folder__dropdown {
+		position: absolute;
+		top: ($folder-padding-y / 2);
+		right: ($folder-padding-y / 2);  
+		opacity: 0; 
+		transition: $folder-transition;
+		.btn {
+			color: $gray-500; 
+			&:hover {
+				color: $body-color;
+			}
+		}
+	}
+
+	.folder__link {   
+		color: $body-color;
+		text-decoration: none;  
+
+		&:hover {
+			color: $primary;
+			text-decoration: none;
+		}
+	}  
+
+	&:hover {
+		border-color: rgba($primary, 0.5);
+		box-shadow: 0 4px 4px 0 rgba($black,0.1); 
+
+		&:before {
+			border-color: rgba($primary, 0.5);
+		} 
+
+		.folder__dropdown { 
+			opacity: 1;
+		} 
+	} 
+}
+
+.folder__input-group { 
+	position: relative;
+	width: 100%;
+
+	> .form-control {
+		flex: 1 1 auto;
+		width: 100%;
+		padding-right: ($folder-padding-x * 1.5);
+	}
+	> .input-group-append {
+		margin-left: 0; 
+
+		> .btn {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			padding: 0;
+			height: 100%;
+			width: $folder-padding-x;  
+			background-color: transparent;
+			color: $gray-500;
+			font-size: $font-size-sm; 
+
+			&.btn-add {
+				right: 0; 
+				transition: $folder-transition; 
+			}
+			&.btn-close {
+				right: -$folder-padding-x;  
+				opacity: 0;
+				transition: $folder-transition;
+			}
+		} 
+	}
+
+	&:hover {
+		.input-group-append {
+			.btn-add {
+				color: $body-color;
+			}
+			.btn-close {
+				opacity: 1;
+				&:hover {
+					color: $body-color;
+				}
+			}
+		}
+	}
+} 
+
+

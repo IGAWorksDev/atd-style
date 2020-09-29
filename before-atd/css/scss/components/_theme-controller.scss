@@ -1,0 +1,44 @@
+
+
+// 페이지에 출력되는 전체 컨텐츠를 제어할 경우 사용
+.toolbar {
+	.toolbar__inner {
+		display: flex; 
+	}
+}
+
+
+// 콘텐츠의 일부를 제어할 경우 사용
+.controller {
+	width: 100%;
+	display: flex;
+	
+
+	&.controller__sm {
+		* {
+			font-size: $font-size-sm;
+		}
+	}
+
+	.controller__item { 
+		display: flex;
+		flex-direction: row;
+		align-items: center;  
+	} 
+}
+
+.controller-column {
+	flex-direction: column;
+	margin-bottom: 1rem;
+
+	.controller__item { 
+		display: block;
+		width: 100%;
+	}
+	.controller__item + .controller__item {
+		margin-top: 0.75rem;
+	}
+}
+
+
+

@@ -1,0 +1,106 @@
+
+
+// 페이지 헤더바내 인벤토리 사용현황 스타일
+// 광고계정(첫화면)에 사용중
+
+
+.inventory-use {
+	@include media-breakpoint-down(sm) {
+		padding-top: 0.75rem; // 페이지 타이틀과의 간격
+	}
+	@include media-breakpoint-up(md) {
+		display: flex;  
+		align-items: center;
+		justify-content: center; 
+	}
+
+	.inventory-use__heading { 
+		//font-size: $font-size-sm;
+		font-weight: bold;
+		color: $secondary;
+		margin: 0;
+		margin-right: 0.5rem;
+
+		@include media-breakpoint-up(md) {
+
+			margin-right: 0.5rem;
+		}
+	}
+
+	.inventory-use__items {
+		@include media-breakpoint-down(sm) {
+			width: 100%; 
+			.btn {
+				width: 100%;
+			}
+		}
+
+		.btn {
+			@extend .btn-outline-secondary;
+			background-color: $white; 
+			border-color: $gray-400;
+			box-shadow: none;
+		} 
+
+		.btn-outline-dsp {  
+			&:hover,
+			&:focus {
+				border-color: darken($tw-dsp-color, 8%);
+				background-color: $tw-dsp-color;
+				color: $white; 
+			}
+			&.is-active {
+				color: $tw-dsp-color; 
+				background-color: $gray-100 !important;
+
+				&:hover,
+				&:focus {
+					background-color: $gray-100 !important;
+					border-color: $gray-300 !important;
+					color: $tw-dsp-color !important; 
+					box-shadow: none !important;
+				}
+			}  
+		}
+		.btn-outline-tfa {  
+			&:hover,
+			&:focus {
+				border-color: darken($google-gdn-color, 8%);
+				background-color: $google-gdn-color;
+				color: $white;
+			}
+			&.is-active {
+				color: $google-gdn-color; 
+				background-color: $gray-100 !important;
+
+				&:hover,
+				&:focus {
+					background-color: $gray-100 !important;
+					border-color: $gray-300 !important;
+					color: $google-gdn-color !important; 
+					box-shadow: none !important;
+				}
+			}
+		}
+		.btn-outline-tf2 {  
+			&:hover,
+			&:focus {
+				border-color: darken($facebook-color, 8%);
+				background-color: $facebook-color;
+				color: $white;
+			}
+			&.is-active {
+				color: $facebook-color;
+				background-color: $gray-100 !important;
+
+				&:hover,
+				&:focus {
+					background-color: $gray-100 !important;
+					//border-color: $gray-300 !important;
+					color: $facebook-color !important; 
+					box-shadow: none !important;
+				}
+			}
+		}
+	}
+}

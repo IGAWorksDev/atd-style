@@ -1,0 +1,659 @@
+
+// Forms
+
+
+fieldset {	 
+	//border-top: 1px solid $gray-200;
+	+ fieldset {
+		margin-top: 2rem; 
+	}
+}
+
+legend {
+	font-size: 1.125rem;
+	font-weight: bold;
+	width: auto; 
+	color: $black;
+	//padding-right : ($grid-gutter-width / 2);
+	position: relative; 
+
+	/*
+	&:before {
+		content: "|";
+		padding-right: 0.5rem;
+		color: $gray-300;
+	}
+	&:after {
+		content: "|";
+		padding-left: 0.5rem;
+		color: $gray-300;
+	}
+	*/
+}
+
+
+
+
+// Form group style
+//
+// <div class="form-group">
+//	 <div class="form-group__label">...</div>
+//	 <div class="form-group__content">...</div>
+// </div>
+
+.form-group {
+	margin: 0;
+	.form-group__label {
+		font-weight: bold;
+		letter-spacing: -0.025rem;
+		//padding-top:  calc(#{$input-padding-y} + #{$input-border-width}); 
+		padding-bottom: calc(#{$input-padding-y} + #{$input-border-width});   
+	} 
+
+	.row {   
+		.form-group__label {   
+			@include media-breakpoint-up(md) { 
+				text-align: right;  
+			}
+		} 
+	}
+}  
+
+// 개발요소로 form태그로 쌓여진 부분 아래에 .form-group가 붙을 경우
+form + .form-group,
+.form-group + .form-group {
+	margin-top: $input-padding-y * 2;
+	border-top: 1px dashed $gray-200;
+	padding-top: $input-padding-y * 2;
+}  
+
+
+
+input[type="password"] {
+	color: $body-color;
+}
+
+
+.form-control {
+	&__div {
+		@extend .form-control;
+	}
+}
+
+
+
+// div형태의 form-control
+// Create Campaign : 선택한 광고계정 출력시 사용함.
+.form-control__div-ad-account { 
+	.badge { 
+		margin-left: 0.25rem;
+	}
+}
+
+
+
+.form-inline {
+	.form-group + .form-group { 
+		margin-top: 0;
+		border-top: 0;
+		padding-top: 0;
+	}
+}
+
+// Theme-control Forms
+//
+// <div class="theme-control">
+// 	 <input type="checkbox / radio" class="theme-control__input">
+//	 <label class="theme-control__label">...</label>
+// </div>
+
+.theme-control {
+	position: relative;
+	display: block;
+	min-height: ($font-size-base * $line-height-lg);
+	padding-top: $input-btn-padding-y;
+	padding-bottom: $input-btn-padding-y;
+}
+ 
+
+// Theme-ccontrol inline style 
+//
+// <div class="theme-control theme-control__inline">...</div>
+
+.theme-control__inline {
+	display: inline-block;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	+ .theme-control__inline {
+		margin-left: 1rem;
+	}
+}
+
+
+.theme-control { 
+	.theme-control__input {
+		//position: absolute;
+		opacity: 0;
+		z-index: -1;
+		display: none;
+	}
+
+	.theme-control__label {
+		display: flex;
+		align-items: center;
+		//position: relative;
+		margin: 0; 
+		cursor: pointer;  
+		//padding-left: calc(#{$font-size-base} * (#{$line-height-base} * 1.25)); 
+		vertical-align: middle;
+
+		&::before { 
+			font-size: $font-size-xl;
+			color: $gray-500;
+			line-height: $line-height-base;
+			margin-right:0.5rem;
+		}  
+		.badge {
+			float: right;
+			margin-top: 0.25rem;
+		}
+
+		.label-text {
+			margin-left: 0.5rem;
+			display: block;
+		}
+	}  
+	
+	.theme-control__input:disabled + .theme-control__label {
+		&::before {
+			border-color: $gray-300;
+			background-color: transparent;
+		} 
+		color: $gray-500; 
+		.badge {
+			opacity: 0.5;
+		}
+	} 
+	.theme-control__input:checked + .theme-control__label {
+		&::before {  
+			color: $primary;
+		} 
+	} 
+	.theme-control__input:checked:disabled + .theme-control__label {
+		&::before {  
+			color: $primary;
+			opacity: 0.6;
+		} 
+	} 
+}
+
+
+// 테마 폼 컨트롤 상태 색상
+// 주요한 옵션을 체크한 경우 사용
+.theme-control--primary {
+	.theme-control__input:checked + .theme-control__label {
+		&::before {
+			color: $primary;
+		} 
+		color: $primary;
+	}
+}
+
+
+
+// Radio
+//
+// <div class="theme-control theme-radio">
+// 	 <input type="radio" class="theme-control__input">
+//	 <label class="theme-control__label">...</label>
+// </div>
+
+.theme-radio {
+	.theme-control__label {
+		&::before { 
+			content: "\e91b"; //ic-circle
+			font-family: adicons;
+		} 
+	} 
+	.theme-control__input:checked + .theme-control__label { 
+		&::before {  
+			content: "\e90a"; //ic-check-circle-fill
+			font-family: adicons; 
+		} 
+	} 
+}
+
+
+
+// Checkbox
+//
+// <div class="theme-control theme-checkbox">
+// 	 <input type="checkbox" class="theme-control__input">
+//	 <label class="theme-control__label">...</label>
+// </div>
+
+.theme-checkbox {
+	.theme-control__label {
+		&::before { 
+			content: "\e907"; //content: $ic-square;  
+			font-family: adicons;
+		} 
+	} 
+	.theme-control__input:checked + .theme-control__label {
+		&::before {  
+			content: "\e90c"; //content: $ic-check-square-fill; 
+			font-family: adicons;
+		} 
+	} 
+
+	.theme-control__input[aria-checked="mixed"] + .theme-control__label {
+		&::before {  
+			content: "\e965"; //content: $ic-minus-square-fill; 
+			font-family: adicons;
+			color: $primary;
+		} 
+	}
+}
+
+
+// Controls Button group Style
+
+.theme-control-btn-group {
+	.theme-control-btn + .theme-control-btn {
+		margin-left: -1px; 
+	}
+	.theme-control-btn:first-child {
+		.theme-control-btn__label {
+			border-radius: $border-radius 0 0 $border-radius;
+		}
+	}
+	.theme-control-btn:last-child {
+		.theme-control-btn__label {
+			border-radius: 0 $border-radius $border-radius 0;
+		}
+	} 
+
+
+	&.theme-control__icon-tight {
+		.theme-control-btn {
+			.theme-control-btn__label { 
+				padding: ($input-btn-padding-y / 2) ($input-btn-padding-x / 1.5);
+				font-size: $font-size-xl;
+				.ico {
+					line-height: $line-height-base;
+				}
+			}
+		}
+	} 
+}
+
+.theme-control-btn { 
+	.theme-control-btn__label {
+		display: flex;
+		align-items: center;
+		border-radius:0;
+		border: $btn-border-width solid $input-border-color;
+		padding: $input-btn-padding-y $input-btn-padding-x;
+		border-radius: $border-radius;
+		background-color: $white;
+		margin: 0;
+		color: $input-color;
+		cursor: pointer;
+	} 
+	input[type="checkbox"],
+	input[type="radio"] { 
+		display: none;
+		&:checked {
+			+ .theme-control-btn__label {
+				border-color: $secondary;
+				background-color: $secondary;
+				color: $white;
+				position: relative;
+				z-index: 1;
+			}
+		}
+	} 
+}
+
+
+// Controls Tab  Style 
+.theme-control-tabs {
+	.theme-control {
+		padding: 0;
+		margin-bottom: -$nav-tabs-border-width;
+		.theme-control__input {
+			display: none;
+		} 
+		.theme-control__label {
+			&:before {
+				display: none; 
+			} 
+			padding: ($nav-link-padding-y * 1.5) ($nav-link-padding-x * 1.5);
+
+			border-bottom: 3px solid transparent;
+		    @include border-top-radius($nav-tabs-border-radius);
+
+		    @include hover-focus {
+		      border-color: $gray-400;
+		    }
+		}
+
+		.theme-control__input:checked + .theme-control__label {
+			color: $primary; 
+    		border-color: $primary;
+		} 
+	}
+}
+
+
+
+// 옵션을 체크할 수 있는 체크 버튼 그룹
+// 체크박스, 라디오 모두 사용 가능
+.check-btn-group {
+	display: flex; 
+	.check-btn {
+		.check-btn__label {
+			@extend .btn; 
+			//border-radius: 0;
+			margin: 0;
+		} 
+		input[type="checkbox"],
+		input[type="radio"] { 
+			display: none;
+			&:checked {
+				+ .check-btn__label { 
+					@extend .btn-secondary; 
+				}
+			}
+		} 
+		
+		&:first-child {
+			.check-btn__label {
+				//border-radius: $border-radius 0 0 $border-radius;
+			}
+		}
+		&:last-child {
+			.check-btn__label {
+				//border-radius: 0 $border-radius $border-radius 0;
+			}
+		} 
+	}
+
+	// 패딩이 타이트한(좁은)경우 : 아이콘을 크게 보이고 싶을 때 사용
+	&-tight {
+		.check-btn {
+			.check-btn__label {
+				padding: ($btn-padding-y-sm / 3) $btn-padding-x-sm;
+				font-size: $font-size-xl; 
+				line-height: $line-height-base;
+			}
+		}
+	}
+}
+
+
+// Theme File 
+// <div class="theme-file">
+//    <label>
+//        파일 선택
+//        <input type="file" onchange="javascript:document.getElementById('file_route').value=this.value">
+//    </label>
+//    <input type="text" readonly="readonly" title="File Route" id="file_route">
+//</div> 
+
+
+
+.theme-file {
+	@extend .input-group;
+	label {
+		@extend .input-group-prepend;
+		@extend .btn;
+		@extend .btn-outline-secondary;
+
+		position: relative;
+	    cursor: pointer;
+	    display:inline-block;
+	    vertical-align: middle; 
+	    margin: 0;
+	}
+	label input {
+		position: absolute;
+	    width: 0;
+	    height: 0;
+	    overflow: hidden; 
+	}
+	input[type=text] { 
+	    @extend .form-control; 
+	    border: 0;
+	    background: transparent !important; 
+	    cursor: default;
+
+	    &:focus {
+	    	outline: none;
+	    	border: 0;
+	    	box-shadow: none;
+	    }
+	}
+}
+
+
+// Switch
+// 체크박스를 응용 (체크박스를 숨김)
+//
+// Markup:
+// <label class=“switch”>
+//     <input type=“checkbox”>
+//     <span class=“slider></span>
+// </label>
+// 
+
+.switch {  
+	
+	margin-bottom: 0;
+ 
+	input[type="checkbox"] { 
+		display: none;
+	}
+
+	// The slider
+	.slider {
+		position: relative;
+		display: inline-block;
+
+		vertical-align: middle;
+ 
+		height: 1.5rem;
+		width: 2.5rem;
+
+		background-color: $gray-400;
+		border-radius: 1rem;
+		cursor: pointer; 
+		transition: .4s;
+
+		.disabled & {
+		   background-color: rgba($gray-400, 0.5);
+		}
+	}
+
+	.slider:before {
+		position: absolute;
+		content: " ";
+		height: 1rem;
+		width: 1rem;
+		left: 0.25rem;
+		bottom: 0.25rem;
+		background-color: white;
+		border-radius: 50%;
+
+		transition: 0.2s;
+	}
+
+	input:checked + .slider {
+		background-color: $primary;
+	}
+
+	input:checked + .slider:before {
+		transform: translateX(1rem);
+	} 
+
+
+	.switch__label {
+		margin-left: 0.25rem;
+		//font-size: $font-size-sm;
+	}
+} 
+
+
+
+
+.search-bar { 
+	position: relative; 
+	&:before {
+		position: absolute;
+		top: 0.5rem;
+		left: $input-btn-padding-x;
+		z-index: 1; 
+		content: "\e92d"; //content: $ic-search; 
+		font-family: "adicons";
+		font-size: $font-size-sm; 
+		color: gray("500");
+		display: block; 
+	} 
+	.search-bar__label {
+		display: none;  
+	}
+	.search-bar__form {
+		@extend .form-control;   
+		padding-left: ($input-btn-padding-x * 3);  
+		position: relative;  
+		&:focus,
+		&:hover {
+			background-color: $white;
+		}
+	}
+} 
+
+
+.search-bar-toggle {
+	position: relative; 
+	 
+	.search-bar {
+		position: absolute; 
+		top: 0;
+		display: none;
+
+		&.is-visible {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	// float-right visiable : 오른쪽기준으로 뜬 상태에서 나타남.
+	.fr-visible { 
+		z-index: 100;
+		position: absolute; 
+		right: 0;
+	}
+}
+
+
+
+.search-result__none {
+	text-align: center;
+
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+
+	margin:0;
+
+	@extend .text-muted;
+}
+
+
+
+/// 검색바 아래에  검색 결과를 레이어를 출력할 경우
+/// 검색바 길이에 영향을 받으므로, .search-bar 안에 있어야함.
+.search-result-layer {
+	z-index: 10;
+	position: absolute; 
+	left: 0;
+	width: 100%; 
+	padding-top: 0.25rem;
+	box-shadow: 0 4px 8px rgba($black, 0.2); 
+	.theme-scrollbar {
+		max-height: 200px;
+	}
+}
+
+
+.list-search-items {
+	.list-item {
+		padding: $btn-padding-y $btn-padding-x;
+	}
+}
+
+
+
+
+
+
+//
+// <span class="require-asterisk">*</span>
+//
+/*
+.require-asterisk {
+	color: $red;
+} 
+*/
+
+
+
+
+
+// Color setting
+// Require bootstrap-colorpicker.css
+.color-input-group {
+	.input-group-addon {
+		@extend .input-group-prepend;
+
+		flex: 0 0 3rem;
+		margin-right: 0.25rem;
+
+		i {  
+			width: 100%;
+			height: 100%; 
+			border-radius: $border-radius;
+			box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+		} 
+	}
+	.form-control {
+		border-radius: $border-radius !important;
+		text-transform: uppercase;
+	}
+}
+
+
+
+// Password show/hide toggle
+.password-toggle {
+	position: relative;
+	input {
+		padding-right: 2rem;
+	}
+	.ico {
+		position: absolute;
+		top: calc(#{$input-btn-padding-y} * 1.5);
+		right: $input-btn-padding-x; 
+		&.ic-eye-slash:before {
+			content: "\e946" !important; 
+		}
+	}
+}
+
+
+
+
+
+
+

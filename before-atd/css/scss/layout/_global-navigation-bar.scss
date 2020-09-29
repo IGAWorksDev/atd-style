@@ -1,0 +1,311 @@
+
+
+
+// Global Navigation bar Layout
+
+.gnb { 
+	/* gn : gloabl navigation */
+	grid-area: gn; 
+
+	@include media-breakpoint-up(md) { 
+		display: flex; 
+		flex-direction: row;  
+	}
+
+	font-size: $gnb-font-size;
+	font-family: $gnb-font-family !important;
+	line-height: $gnb-line-height;
+
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: 100; 
+
+	width: 100%;
+	height: $gnb-height; 
+	background-color: $gnb-bg-color;  
+	box-shadow: 0 0 6px rgba($black, 0.2);
+}
+
+// 네비게이션 토글 버튼 스타일
+.gnb__navbar-toggler {
+	display: inline-block;
+	vertical-align: middle;
+
+	width: $gnb-height;
+	height: $gnb-height; 
+	padding: 0; 
+	border: 0; 
+	font-size: $gnb-font-size;  
+	color: $gnb-link-color;
+	background: transparent;
+
+	&:focus,
+	&:active {
+		background-color: transparent;
+		color: $gnb-link-color;
+		box-shadow: none !important;
+		outline: none !important;
+	}
+
+	@include media-breakpoint-up(md) {  
+		display: none;
+	}
+
+	.gnb__navbar-toggler-icon {
+		font-size: 1.75rem !important;
+	}
+} 
+
+// 서비스 앱 아이콘 레이아웃
+.gnb__app { 
+	display: inline-block;
+	vertical-align: middle;
+
+	height: $gnb-height;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+	@include media-breakpoint-up(md){ 
+		padding: 0 1rem; 
+		display: flex;   
+		align-items: center;
+		margin-right: 0;
+	}
+
+	// 앱 아이콘
+	.app__logo { 
+		width: auto; 
+		height: 4rem;
+		align-self: flex-start;
+	}  
+} 
+
+
+
+
+
+// 토근 버튼에 의해 네비게이션바가 펼쳐지는 클래스
+// gnb의 네비게이션 아이템을 모두 포함하는 outer
+
+.gnb__navbar-collapse {
+	position: absolute;
+	//top: $gnb-height;
+	right: 0;
+	left: 0;
+	
+	width: 100%;
+	background-color: rgba($gray-800, 1);
+
+	@include media-breakpoint-up(md) {    
+		display: block !important;
+		position: static;
+		width: 100%;
+		background-color: transparent;
+	} 
+}
+
+// collapse의 inner
+.gnb__navbar-inner {
+	@include media-breakpoint-up(md) {   
+		display: flex;
+	}
+  .gnb__navbar-nav.mr-auto {
+    .gnb__nav-item {
+      .gnb__nav-link {
+        font-weight: bold;
+      }
+    }
+  }
+} 
+
+
+// 네비게이션 아이템을 포함하는 list
+.gnb__navbar-nav { 
+	list-style: none; 
+	padding: 0;
+	margin: 0;
+
+	@include media-breakpoint-up(md) { 
+		display: flex;
+		flex-direction: row;  
+
+		&.mr-auto {
+			margin-right: auto;
+		}
+
+		&.ml-auto {
+			margin-left: auto;
+		}
+	} 
+}
+
+// 네비게이션 아이템 스타일
+.gnb__nav-item {   
+	position: relative; 
+
+	@include media-breakpoint-up(md) {   
+		display: flex;
+		flex-direction: row;   
+	}
+
+	// 네이게이션 아이템의 링크 스타일
+	.gnb__nav-link { 
+		display: block;  
+		color: $gnb-link-color;
+		width: 100%;
+		padding: $gnb-nav-padding-y $gnb-nav-padding-x;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media-breakpoint-up(md) { 
+			text-align: center;
+			width: auto; 
+		} 
+
+		&:hover {
+			text-decoration: none; 
+			opacity: 1;
+		}
+	}  
+
+	// 활성 상태 스타일 
+	// .gnb__nav-item .is-active
+	&.is-active { 
+		font-weight: bold;
+
+		&:after { 
+			// 아이템의 하단바가 되는 가상 클래스
+			content: " ";
+			display: block;
+			position: absolute; 
+			
+
+			@include media-breakpoint-down(sm) { 
+				width: 5px;
+				top: 0;
+				bottom: 0;
+				left: 0;
+			}
+			@include media-breakpoint-up(md) { 
+				height: 5px; 
+				bottom: 0; 
+				right: ($gnb-nav-padding-x / 2);
+				left: ($gnb-nav-padding-x / 2);
+			}
+			background-color: theme-color("primary"); 
+		} 
+		.gnb__nav-link { 
+			color: theme-color("primary");
+			opacity: 1;
+		}
+	} 
+
+	@include media-breakpoint-down(sm) { 
+		+ .gnb__nav-item {
+			border-top: 1px solid $gray-700;
+		}
+	}
+}
+
+
+// 드랍다운 메뉴 스타일
+.gnb__dropdown-menu { 
+	font-size: $gnb-font-size !important;
+	color: $white !important;
+	margin-top: 0 !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	background-color: rgba($gray-800, 0.98)!important;
+
+	> .dropdown-divider {
+		border-top-color: $gray-700 !important;
+	}
+
+
+	@include media-breakpoint-down(sm) { 
+		position: static !important;
+		width: 100%;
+		float: none !important; 
+		transform: none !important;
+		padding: 0 !important;
+
+		&.show {
+			background-color: $gray-700 !important;;
+		}
+	}
+}
+.gnb__dropdown-item {
+	display: block;
+	width: 100%;
+	padding: 8px 16px !important;
+	clear: both;
+	font-weight: normal;
+	text-align: inherit; 
+	white-space: nowrap;
+	border: 0;
+
+	color: $white !important;
+	
+
+	&.is-active {
+		// 완료된 상태, 연결됨
+	} 
+	&.is-inactive {
+		// 미완성 상태, 연결을 요구할 경우
+		color: $gray-500 !important;
+		text-indent: 15px;
+	}
+
+	&:hover {
+		background-color: $gnb-bg-color !important;
+	}
+
+	@include media-breakpoint-down(sm) { 
+		+ .gnb__dropdown-item {
+			border-top: 1px solid $gray-700;
+		}
+	}
+}
+
+
+
+// 알림 
+.gnb__nav-notify {
+	display: flex;
+
+	.gnb__nav-link {
+		padding: 0.75rem 1rem;
+		font-size: 1.5rem;
+	}
+
+}
+
+
+// 계정 정보 
+.gnb__nav-account {
+	display: flex;
+
+	.gnb__nav-link {
+		padding: $gnb-vcard-padding-y $gnb-vcard-padding-x;
+	}
+	
+	.gnb__account-vcard {
+		display: inline-block;
+		vertical-align: middle;
+		background-size: cover;
+		background-position: center;
+		border-radius: 100%;
+		height: $gnb-vcard-size;
+		width: $gnb-vcard-size;
+	}
+	.gnb__account-mail {
+		display: none;
+	}
+}
+ 

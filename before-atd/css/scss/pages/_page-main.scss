@@ -1,0 +1,84 @@
+
+
+
+/* -------------------------------- */
+// .page__ad-account : 광고 계정
+
+
+// 광고계정 카드 리스트
+.card-ad-account-list { 
+	.card-list__header {  
+		 
+		margin: ($grid-gutter-width / 2) $card-spacer-x ($grid-gutter-width / 4);  
+
+		color: $body-color; 
+		font-weight: $font-weight-bold;  
+	} 
+}
+
+
+// 광고계정 그리드
+.grid-ad-account { 
+	display: flex;
+	flex-wrap: nowrap;  
+	 
+ 
+	.grid__col-bullet {   
+		flex: 0 0 $grid-bullet-width;
+		text-align: left; 
+	}
+	
+
+	.grid__col-title {
+		margin-right: 6rem; 
+		flex: 0 0 auto;
+		margin-right: auto;
+		 
+		.card__title {
+			font-size: 1rem;
+		}
+		.id-num {
+			display: block; 
+		} 
+	} 
+
+	.grid__col-inventory {  
+		flex: 0 0 8rem;  
+		margin-top: auto;
+		margin-bottom: auto; 
+	}
+
+	.grid__col-count {    
+		flex: 0 0 8rem;  
+		dl {  
+			> dt {
+				display: block;
+				width: auto;   
+				font-size: $font-size-xs;
+				font-weight: $font-weight-normal;
+				color: gray("500");
+			}
+			> dd {  
+				font-size: $font-size-base;  
+				font-weight: $font-weight-bold;
+			}
+		} 
+	} 
+
+	// 광고게정 캠페인 목록 : pannel__footer에 있음.
+	.grid__col-campaign { 
+		padding-left: $grid-bullet-width;
+		width: 100%;
+
+		.grid__table {  
+			thead {  
+				th {  
+					&.col__count {  
+						min-width: 9rem;
+					} 
+				}
+			}
+		} 
+	}
+}
+

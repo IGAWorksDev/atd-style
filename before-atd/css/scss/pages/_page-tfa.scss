@@ -1,0 +1,389 @@
+
+
+.page__tfa {
+	.aside {
+		top: ($gnb-height * 2);
+
+		&.aside-tfa {
+			width: $tfa-sidebar;
+
+			+ .main {
+				padding-left: $tfa-sidebar;
+
+				.main-header {
+					width: calc(100% - #{$tfa-sidebar});
+				}
+			}
+		}
+	}
+	.main {  
+		padding-top: $page-header-height;
+
+		.main-header {
+			top: calc((#{$gnb-height} * 2));
+		}
+	}
+}
+
+
+// aside > aside__header
+.adaccount-toggle {
+	margin-right: 0.5rem;
+}
+.adaccount-info {
+	.aside__title {
+		max-width:160px;
+	}
+
+	
+	.status {
+		margin-top: 0.5rem;
+		.status__item {
+			a {
+				letter-spacing: -0.1em;
+			}
+		}
+	}
+}
+
+
+.main-nav {
+	padding: 0 $grid-gutter-width; 
+	height: $page-header-height; 
+	border-bottom: $main-header-border-width solid $main-header-border-color;  
+	background-color: $white;
+
+	.main-nav__inner {
+		height: $page-header-height; 
+		display: flex;
+		align-items: center; 
+	}
+}
+
+
+
+
+/* --------------------------------------------------------------- */
+// OLD Stylesheet
+
+// TFA Layout
+
+/*
+.page__tfa { 
+	&.in-aside { 
+		 padding-left: $tfa-sidebar;
+	}
+
+	.aside {  
+		position: fixed;
+		top: $gnb-height;
+		bottom: 0; 
+		 width: $tfa-sidebar;
+		height: calc(100% - #{$gnb-height});
+		overflow: hidden;
+
+		background-color: $white;
+		border-right: 1px solid gray("200");
+		box-shadow: $box-shadow-base;
+
+		.aside__header {   
+			position: fixed;
+			left: 0;
+			z-index: 10;
+			width: $tfa-sidebar;
+			height: $page-header-height;
+		} 
+		.aside__main {  
+			padding-top: $page-header-height;  
+		} 
+	} 
+
+	.page-header {
+		&.is-fixed {
+			width: calc(100% - #{$tfa-sidebar}) !important;
+		}
+	}
+}
+*/
+
+
+
+/*
+.nav-tabs-adgroup { 
+	border-bottom: 0; 
+	.nav-item {
+		.nav-link {
+			margin-bottom: -1px;
+			padding: 1rem 1.5rem;
+			font-weight: $font-weight-bold;
+			border: 0;
+			
+
+			&.active { 
+				border: 0;
+				border-bottom: 4px solid $primary;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+*/
+ 
+
+ 
+// 광고그룹 카드 리스트
+.card-adgroup-list {
+	.card-list__header { 
+		margin: 0 $card-spacer-x ($grid-gutter-width / 4);  
+		font-weight: $font-weight-bold;  
+	}
+} 
+ 
+ 
+
+// 광고그룹 콘텐츠 그리드 
+.grid-adgroup {   
+	display: flex;
+	flex-wrap: nowrap;   
+	align-items: center;
+
+	.grid__col-bullet {   
+		flex: 0 0 $grid-bullet-width;
+		text-align: left; 
+	} 
+
+	.grid__col-switch {  
+		flex: 0 0 6rem;  
+		align-self: center; 
+	}
+	
+	.grid__col-adgroup {
+		font-weight: bold;  
+		flex: 0 0 35%;   
+	}
+	.grid__col-campaign {   
+		flex: 0 0 35%; 
+		dt {
+			display: none;
+			}  
+	} 
+	.grid__col-audience {   
+		flex: 0 0 12rem; 
+		align-self: center; 
+
+		margin-left: auto; 
+		dt {
+			display: none;
+		}
+	 
+
+		.btn { 
+			margin-left: 1rem;
+			@include media-breakpoint-down(md) { 
+				float: right;
+			}
+		}
+	} 
+
+	// panel__footer에 있으며, 펼쳐지는 영역의 정보.
+	.grid__col-target { 
+		padding-left: $grid-bullet-width;
+		width: 100%;
+	}
+
+	// 캠페인을 선택 했을때 광고그룹
+	&__campaign { 
+		@extend .grid-adgroup;
+		grid-template-columns: 2rem 4rem auto 12rem;  
+	}
+}
+
+
+// -------------------------------- //
+// Sidebar Contents -- old
+
+.aside-tfa {  
+	.aside__header { 
+		@extend .d-flex;
+		@extend .align-items-center;
+
+		background-color: $gray-700;
+
+		.adaccount__info {
+			max-width: 15.5rem;
+			overflow: hidden;
+			line-height: 1.3;
+
+			.adaccount-title { 
+				display: inline-block;
+				color: $white;
+				max-width: 14rem;
+			}
+			.status {
+				margin-top: 0;
+				.status__item { 
+					color: $gray-500!important;
+					font-size: $font-size-xs; 
+					+ .status__item {
+						&:before {
+							color: $gray-600 !important;
+						}
+					}
+					.status__link {
+						color: $gray-500 !important;
+					}
+				}
+			}
+		}
+		
+		.badge {
+			@extend .ml-auto;
+		} 
+		.btn__adaccount-toggle {
+			@extend .ml-auto;
+		} 
+	}
+}
+ 
+
+// old 
+.sidebar__list-campaign {
+	border-top: $list-group-border-width solid $list-group-border-color;
+
+	.nav {
+		background-color: $white; 
+	}
+
+	.tab-content {
+		position:fixed;
+		top: 209px;
+		bottom: 0;
+
+		width: calc(#{$tfa-sidebar} - 1px);
+		height: calc(100vh - 209px); 
+	}
+
+	.list-group {  
+		border: 0;
+		border-radius: 0;  
+		.list-group__item {    
+			display: flex; 
+			align-items: center;  
+			padding: 1rem;   
+			background-color: $white; 
+
+			&:first-child { 
+				border-radius: 0;
+			} 
+			&:last-child { 
+				border-radius: 0;
+			}
+
+			&:hover,
+			&:focus {
+				position: relative;
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					content: ""; 
+				}
+			} 
+			&.is-active {
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					content: "";
+					border-left: 5px solid theme-color("primary"); 
+				} 
+				background-color: gray("100");  
+				border-color: $list-group-border-color;
+			}
+
+			.switch {
+				margin-right: 0.5rem;
+			}
+
+			.title-wrapper {
+				margin-right: 0.5rem;  
+				.title {
+					display: inline-block;
+					vertical-align: middle;
+					max-width: 10.5rem;
+				}
+			} 
+			.status {
+				margin-left: auto;
+			}
+
+			.btn { 
+				margin-right: -0.5rem;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
+ 
+
+
+
+
+// 애드워즈 계정 연결 관리 
+.setting-adaccount-url {
+	@include media-breakpoint-up(md) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+}
+
+
+
+
+// 오디언스 - 플렉서블 그리드 바
+.gridbar-audience {
+	.gcol {
+		display: flex;
+		align-items: center;
+		 
+		&.gcol-campagin {
+			font-weight: $font-weight-bold;
+		}
+		&.gcol-adset {
+			font-weight: $font-weight-bold;
+		}
+		&.gcol-audience {
+			flex: 0 0 auto;
+			width: 6rem; 
+		}
+		&.gcol-manager { 
+			flex: 0 0 auto;
+			width: 8rem;
+		}
+	}
+
+	.gridbar-footer {
+		padding-left: (4rem + $table-cell-padding);
+
+		.table {
+			//table-layout: fixed;
+			.col-extract {
+				width: 16rem;
+			}
+			.col-id {
+				width: 12rem;
+			}
+			.col-date {
+				width: 12rem;
+			}
+			.col-manager {
+				width: 4rem;
+			}
+		}
+	}
+}
+
+

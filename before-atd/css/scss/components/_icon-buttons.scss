@@ -1,0 +1,15 @@
+
+
+$iconbutton-line-height: 1;
+$iconbutton-padding-y: 0.5rem;
+$iconbutton-padding-x: 0.5rem;
+$iconbutton-icon-size: 1rem;
+$iconbutton-font-size: 0.75rem;
+
+.iconbutton { 
+	display: inline-block; 
+	border-radius: $rounded-pill;
+	padding: $iconbutton-padding-y $iconbutton-padding-x;  
+	line-height: $iconbutton-line-height;
+}
+ 

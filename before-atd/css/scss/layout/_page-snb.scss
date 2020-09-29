@@ -1,0 +1,147 @@
+
+// Side Navigation Bar : SNB
+//
+// 왼쪽 사이드 네비게이션바 스타일 레이아웃
+.snb { 
+	z-index: 90; 
+	position: fixed; 
+	top: calc(#{$gnb-height} * 2);
+	bottom: 0;
+  	left: $snb-width; 
+  	margin-left: -$snb-width;  
+	height: calc(100vh - (#{$gnb-height} * 2));
+	width: $snb-width;   
+  	transition: $transition-base;
+  	box-shadow: $snb-box-shadow; 
+
+
+  	// 사이드바 펼치고 접는 토글 버튼 
+  	> .snb__toggler {
+		position: absolute; 
+		z-index: 100;
+		top: calc(((100vh - (#{$gnb-height} * 2)) / 2) - (#{$snb-toggle-size} / 2));
+		right: -($snb-toggle-size / 2);
+
+		padding: 0;
+		border: 0;  
+		border-radius: 50%;
+		height: $snb-toggle-size;
+		width: $snb-toggle-size;
+		background-color: $snb-toggle-bg-color;
+		font-size: $snb-toggle-font-size;
+		color: $snb-toggle-color; 
+		box-shadow: $snb-toggle-box-shadow;
+		outline: 0; 
+		cusrsor: point;
+
+		.ico {
+			position: absolute;
+			top: calc((#{$snb-toggle-size} - #{$snb-toggle-font-size}) / 2);
+			left: calc((#{$snb-toggle-size} - #{$snb-toggle-font-size}) / 2);
+			transition: $transition-base;
+		} 
+
+		&.is-active {
+			.ico {
+				right: 0.25rem;
+				left: auto;
+				transform: rotate(180deg);
+				transition: $transition-base;
+			}  
+		}
+	} 
+
+	// 사이드바의 컨텐츠를 감싸는 wrapper.
+	// 해당영역의 높이가 작아지면 스크롤바가 생김. 
+	> .snb__inner {
+		position: fixed;  
+		height: 100%;
+		width: $snb-width;
+		background-color: $snb-bg-color;
+	}
+}
+  
+
+
+// 사이드바의 헤더 스타일 
+.snb__header { 
+	min-height: $snb-header-height; 
+	display: flex;
+	flex-direction: row;
+	align-items: center;   
+
+	.snb__title {
+		padding: $snb-link-padding-y $snb-link-padding-x;
+		font-size: $snb-title-font-size;
+		font-weight: $font-weight-bold;
+		color: $snb-color;
+		margin:0;
+	} 
+}
+
+
+// 네이게이션 아이템 리스트 스타일 
+.snb__nav {
+	list-style: none;
+	padding: 0;  
+
+	.snb__nav-item {
+		padding-top: $snb-link-padding-y;
+		padding-bottom: $snb-link-padding-y; 
+
+		+ .snb__nav-item {
+			border-top: $snb-border-width solid $snb-border-color;  
+		}
+		
+
+		.snb__nav-link {
+			display: block;
+			padding: $snb-link-padding-y $snb-link-padding-x; 
+			color: $snb-color;
+			text-decoration: none; 
+			font-weight: $font-weight-bold;
+			&:hover {
+				color: $snb-hover-color;
+			}
+		} 
+
+		&.is-active { 
+			background-color: $snb-active-bg-color;
+			.snb__nav-link { 
+				color: $snb-active-color;
+			}
+			.snb__menu {
+				display: block;
+			}
+		} 
+	} 
+}
+ 
+
+// 사이드네이게이션바 메뉴 리스트 스타일
+// 네비게이션 아이템 안에 위치함. 
+.snb__menu {
+	display: none;
+	list-style: none;
+	padding:0;  
+
+	.snb__menu-item {
+		padding-top: 0;
+		padding-bottom: 0;
+		border: 0;  
+
+		.snb__menu-link {
+			display: block; 
+			padding: $snb-menu-link-padding-y $snb-menu-link-padding-x;
+			padding-right: $snb-link-padding-x;
+			color: $snb-color; 
+			text-decoration: none;
+		}
+
+		&.is-active {
+			.snb__menu-link {
+				color: $snb-active-color;
+			}
+		} 
+	}
+}

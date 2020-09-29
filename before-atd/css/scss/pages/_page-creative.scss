@@ -1,0 +1,102 @@
+ 
+
+
+
+// 피드 카드 리스트 - 공용 스타일
+.feed-folder-list,
+.feed-card-list { 
+	.card { 
+		.card__body {  
+			.status-xs {   
+				@extend .w-100;  
+				// 상태 정보가 2줄로 노출되는 경우 최소 높이
+				// calc(((상태 정보 폰트 크기 * 라인 헤이트) * 정보 개수) + 상태정보 간격)
+				min-height: calc(((#{$status-xs-font-size} * #{$line-height-base}) * 1) + #{$status-xs-spacer-y});
+
+				.status__item {
+					margin: 0;
+					+ .status__item {
+						margin-top: $status-xs-spacer-y;
+					}
+
+					> strong {
+						font-weight: $font-weight-normal;
+					}
+					> span {}
+				}
+			}
+		}
+	} 
+}  
+
+// 피드 폴더 카드 리스트 스타일
+.feed-folder-list  { 
+	.card-folder {   
+		// 폴더 추가인 경우
+		&.is-edit {
+			.card__body { 
+				// 주의
+				// font-size-base: 12px 일 때 : (고정 높이값) + (패딩값 * 2)
+				min-height: 82px + 30px; 
+			}
+		} 
+	} 
+}  
+
+
+
+// 제품 피드 폴더 > 피드 세트 리스트
+.table-feedset-list {
+	tbody { 
+		// 피드 세트의 속성 피드인 경우 테이블 스타일
+		tr.feed-attribute {
+			box-shadow: 0 3px 6px rgba(0,0,0, 0.2);
+			> th,
+			> td {
+				background-color: $white;
+				color: $black;
+				font-size: $font-size-base;  
+				vertical-align: middle;
+				.id-num {
+					font-weight: $font-weight-normal;
+				}
+			}  
+		}  
+
+		// 피드 세트의 스케쥴 피드인 경우 테이블 스타일
+		tr.feed-schedule { 
+			> th,
+			> td { 
+				color: $gray-600; 
+				vertical-align: middle !important; 
+				background-color: rgba($gray-100, 0.75);
+			} 
+			+ tr.feed-schedule {
+				> th,
+				> td {  
+					border-top-style: dashed; 
+				}
+			}
+		} 
+	}
+}
+
+// 제품 피드 매칭 설정 리스트
+.table-feed-matching-list {
+	th, 
+	td { 
+		vertical-align: middle;
+		
+		select {
+			width: 180px !important;
+		}  
+
+		.form-inline {
+			.form-group + .form-group {
+				@extend .ml-3;
+			}
+		}
+	}
+}
+
+

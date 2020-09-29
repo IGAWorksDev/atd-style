@@ -1,0 +1,57 @@
+
+///
+///
+/// 통합 리포트 -- 19. 11. 27 추가함
+///
+///
+
+
+
+
+
+// 모달 - 유사 리포트 라인 안내
+#modal-report-similar-line {
+	.div-table {
+		.div-table-body {
+			.theme-scrollbar {
+				max-height: 15rem;
+			}
+		}
+	}
+}
+
+
+/// 리포트 라인 - 연결된 매체 정보 설정
+#modal-report-setting-mediainfo { 
+	// 왼쪽 매체별 정보 세팅
+	.reportline-mediainfo-setting {
+		&.theme-scrollbar {
+			max-height: 27rem;
+		}
+	}
+	// 오른쪽 - 세팅된 미디어 정보 목록
+	.reportline-mediainfo-list {
+		&.theme-scrollbar {
+			max-height: 27.15rem;
+		}
+	}
+}
+
+
+// 리포트 라인 - 사용자 권한 설정
+#modal-reportline-setting-user {
+
+	.reportline-user-check-list {
+		&.theme-scrollbar {
+			max-height: 27rem;
+		}
+	}
+}
+
+
+
+// 사이드바 - 리포트 라인 목록 높이 
+// 아이템이 많으면 스크롤바 생겨야함
+.side-reportline-list {
+	height: calc(100vh - 327px);
+}

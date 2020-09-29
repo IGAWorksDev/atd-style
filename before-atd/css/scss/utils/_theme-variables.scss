@@ -1,0 +1,274 @@
+
+
+
+html {
+  font-size: 13px;
+}
+
+
+$body-bg: rgba(#e9ecef, 0.8); // $gray-100;
+$body-color: #495057; // $gray-800;
+
+$border-radius: 2px !default;
+
+$input-placeholder-color: #ced4da; // $gray-400;
+
+$table-hover-bg: rgba(#e9ecef, 0.75); //$gray-200; 
+
+
+// Grid Custom
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 1200px,
+  lg: 1440px,
+  xl: 1680px 
+) !default;
+ 
+$container-max-widths: (
+  sm: 540px,
+  md: 1140px,
+  lg: 1380px,
+  xl: 1620px 
+) !default;
+ 
+
+/* 
+// 그리드 사이드 추가 할 경우 사용 예정
+// Grid Custom
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1680px 
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1380px,
+  xxxl: 1600px;
+) !default;
+*/
+
+
+$transition-base: all .2s ease-in-out;
+$page-body-header-transition: all .01s ease-in-out;
+
+
+$active-color: color("teal");
+$inactive-color: gray("400");
+
+
+
+
+$coral: #FF7F50;
+$gold: #FFD700;
+$olive: #808000;
+$navy: #000080;
+
+.color-coral {
+  color: $coral;
+}
+.color-gold {
+  color: $gold;
+}
+.color-olive {
+  color: $olive;
+}
+.color-purple {
+  color: $purple;
+}
+.color-navy {
+  color: $navy;
+}
+
+
+
+
+
+$box-bg: $gray-100;
+$box-border-color: $gray-200;
+
+$font-size-xs : ($font-size-base * 0.675) !default;
+$font-size-xl : ($font-size-base * 1.5) !default;
+
+$box-shadow-base:  0 2px 4px rgba($black, 0.1); 
+$box-shadow-lg: 0 4px 8px 0 rgba($black, 0.2);
+
+
+$gnb-height: 4rem;   
+
+
+$tfa-sidebar: 25rem;  
+
+
+//
+// page header
+//
+
+$page-header-color: $gray-900;
+$page-header-padding-y: ($grid-gutter-width / 4);
+$page-header-padding-x: ($grid-gutter-width / 2);
+$page-header-height: 5.5rem; 
+
+
+
+// Side Navigation Bar
+//
+$snb-width: 240px;
+$snb-header-height: $page-header-height;
+$snb-title-font-size: 1.175rem;
+$snb-color: rgba($white, 0.8); 
+$snb-bg-color: $gray-700;
+$snb-border-width: 1px;
+$snb-border-color: rgba(#FFFFFF, 0.05);
+$snb-link-padding-y: 0.75rem;
+$snb-link-padding-x: 1.25rem;
+$snb-menu-link-padding-y: 0.75rem;
+$snb-menu-link-padding-x: 2.875rem; 
+$snb-box-shadow: $box-shadow-base;
+
+$snb-hover-color: $white; 
+
+$snb-active-color: $active-color;
+$snb-active-bg-color: $gray-800;
+
+// snb toggler
+$snb-toggle-size : 2.5rem;
+$snb-toggle-font-size: $font-size-lg;
+$snb-toggle-color: $white;
+$snb-toggle-bg-color: $gray-900; 
+$snb-toggle-box-shadow: 0 0 8px rgba(0,0,0,0.8);
+
+//
+//
+// Page Sidebar 
+//
+$sidebar-title-font-size: 1.175rem;
+$sidebar-header-bg-color: $white;
+$sidebar-width: 240px;
+$sidebar-bg-color: $gray-100;  
+$sidebar-padding-y: 1rem;
+$sidebar-padding-x: 1.875rem;
+$sidebar-border-color: $gray-200;
+//
+//
+// Page aside 
+//
+$aside-title-font-size: 1.175rem;
+$aside-header-height: $page-header-height; 
+$aside-width: 240px;
+$aside-bg-color: $gray-100;  
+$aside-padding-y: 0.75rem;
+$aside-padding-x: ($grid-gutter-width / 2);
+$aside-border-width: 1px;
+$aside-border-color: $gray-300;  
+
+$aside-toggle-height: $aside-header-height;
+$aside-toggle-width: ($grid-gutter-width / 1.5);
+$aside-toggle-font-size: $font-size-lg;
+$aside-toggle-color: $body-color;
+
+//
+//
+// Folder Bar
+//
+$folderbar-padding-y: 1rem;
+$folderbar-padding-x: 2.5rem;
+$folderbar-border-width: 1px;
+$folderbar-border-color: $gray-200;
+$folderbar-transition: $transition-base; 
+
+
+// card
+//
+$card-title-icon-size: $font-size-lg;
+$card-title-font-size: $font-size-base;
+$card-min-height: 16rem;
+$card-padding-y: ($grid-gutter-width / 4);
+$card-padding-x: 0.75rem;
+$card-bg-color: #FFFFFF;
+$card-border-color: $gray-300;
+$card-transition: $transition-base;
+
+$panel-border-color : $gray-200;
+
+
+
+// component : 구성 요소 정보 노출 할 경우 사용
+//
+$component-font-size: $font-size-sm;
+$component-spacer-y: 0.25rem;
+
+$badge-font-size: 0.875rem;
+
+
+//
+// page header
+//
+
+$page-header-color: $gray-900;
+$page-header-padding-y: ($grid-gutter-width / 4);
+$page-header-padding-x: ($grid-gutter-width / 2);
+$page-header-height: 5.5rem; 
+
+//
+// main header
+//
+$main-header-color: $gray-900;
+$main-header-border-color : $gray-400;
+$main-header-border-width: 1px;
+$main-header-btn-back-color: $gray-600;
+
+$main-header-tab-padding-y: 1.4rem;
+$main-header-tab-padding-x: 1.75rem; 
+$main-header-tab-font-size: 1.125rem;
+$main-header-tab-color: $gray-600;
+$main-header-tab-active-color: $main-header-color;
+$main-header-tab-hover-color: $main-header-color;
+
+$main-header-tab-active-border-size: 3px;
+$main-header-tab-active-border-color: $primary;
+
+
+// service colors
+$google-gdn-color:  #f3bd4d; 
+$google-you-color:  #FF0000;
+$google-uac-color:  $yellow;
+$facebook-color: #4267B2;
+$tw-dsp-color: $teal;
+$tw-ncpi-color: $blue;
+
+//status : 상태 정보
+//
+$status-color : $gray-500;
+$status-xs-font-size: $font-size-xs;
+$status-xs-spacer-y: 0.25rem;
+
+
+//grid
+$grid-bullet-width: calc(#{$grid-gutter-width} + 0.25rem);
+
+
+// Modals 
+$modal-xl: 900px;
+
+
+// card
+$card-body-search-height: calc(#{$card-padding-y} + #{$input-height} + #{$card-padding-y} + #{$card-border-width});
+$card-body-fix-height: 30rem; 
+
+
+
+$breadcrumb-padding-y: 0.25rem;
+
+
+
+$collapse-div-table-body-height: 240px;
+

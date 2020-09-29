@@ -1,0 +1,51 @@
+
+
+// http://www.daterangepicker.com/
+// ../css/daterangepicker.css를 참고할 것. 
+
+
+.daterangepicker {
+	&::before,
+	&::after {
+		display: none;
+	}  
+	margin-top: $dropdown-spacer;
+	border: 1px solid $dropdown-border-color;
+	border-radius: $border-radius;
+	width: 670px;
+	font-family: 'roboto', sans-serif;
+
+	box-shadow: $box-shadow-lg;
+
+	.ranges {
+		li {
+			font-size: $font-size-base;
+			padding: $list-group-item-padding-y $list-group-item-padding-x;
+		}
+	}
+
+	.calendar-table {
+		th,
+		td {
+			width: 2.5rem;
+			height: 2.5rem;
+			font-size: $font-size-base;
+			line-height: $line-height-lg;
+		} 
+		thead {
+			tr:nth-child(1) {
+				> th {
+					border-bottom: 1px solid $gray-200;
+				}
+			}
+			tr:nth-child(2) {  
+				> th {
+					border-top: 1px solid $gray-200;
+					border-bottom: 1px solid $gray-200;
+					background-color: $gray-100;
+					font-weight: normal;  
+				}
+			} 
+		} 
+	}
+}

@@ -1,0 +1,290 @@
+
+// Page Aside
+// .page 클래스 안에 위치함.
+// 페이지의 높이가 작아 지면 스크롤바 적용됨. (.theme-scrollbar)
+
+.aside {
+	z-index: 80;
+	position: fixed; 
+	top: calc(#{$gnb-height} * 2);
+	bottom: 0;
+  	left: $aside-width;  
+	margin-left: -$aside-width; 
+	border-right: $aside-border-width solid $aside-border-color;  
+	height: calc(100vh - (#{$gnb-height} * 2)); 
+	width: $aside-width;  
+	background-color: $aside-bg-color;  
+	transition: $transition-base;  
+	box-shadow: $box-shadow-base; 
+
+	// 커스텀 스크롤바의 컨테이너 제어
+	// 드랍다운 메뉴가 나타날때 overflow:hidden되지 않도록함.
+	.mCS_y_hidden {
+		height: 100%;
+	}  
+
+	.aside__toggler {
+		display: none;
+	}
+	
+	/* 
+	// 현재는 사용하지 않음 
+	.aside__toggler {
+		position: absolute;
+		//z-index: 100;
+		top: 0;
+		right: -$aside-toggle-width; 
+
+		padding: 0;
+		border: $aside-border-width solid $aside-border-color; 
+		height: $aside-header-height;
+		width: $aside-toggle-width;
+		background-color: $aside-bg-color;
+		font-size: $aside-toggle-font-size;
+		color: $aside-toggle-color;   
+		border-radius: 0;
+		outline: 0;
+		
+		transition: $transition-base; 
+		box-shadow: $box-shadow-base;
+		overflow: hidden;
+		 
+		.ico {
+			position: absolute;
+			top: calc(((#{$aside-toggle-height} - #{$aside-toggle-font-size}) / 2) - #{$aside-border-width});
+			left: calc((#{$aside-toggle-width} - #{$aside-toggle-font-size}) / 2);
+			transition: $transition-base;
+		} 
+
+		&.is-active {
+			.ico { 
+				transform: rotate(180deg);
+				transition: $transition-base;
+			}  
+		}
+	} 
+	*/
+
+
+	// 사이드바의 컨텐츠를 감싸는 wrapper.
+	// 해당영역의 높이가 작아지면 스크롤바가 생김. 
+	.aside__inner {
+		//position: fixed;  
+		height: 100%; //calc(100vh - #{$gnb-height} - #{$page-header-height}); 
+		width: 100%; 
+	} 
+}
+ 
+ 
+.aside__header {
+	min-height: $aside-header-height; 
+	display: flex;
+	flex-direction: row;
+	align-items: center; 
+	padding: $aside-padding-y $aside-padding-x;
+	border-bottom: $aside-border-width solid $aside-border-color; 
+	background-color: $white;
+
+	.aside__title { 
+		font-size: $aside-title-font-size;
+		font-weight: $font-weight-bold;
+		margin: 0;
+	}
+}
+
+
+.aside__main { 
+
+	// OLD 삭제 대상 
+	.list-group-folder {
+		margin-right: 1px;
+	 
+		.list-group__item { 
+			position: relative; 
+			padding: 0;
+
+			.list-group__item-link {
+				display: block;
+				padding: $list-group-item-padding-y $list-group-item-padding-x;
+				text-decoration: none;
+				color: $body-color;
+				transition: $transition-base;
+			}
+			
+			.list-group__item-main {
+				display: flex; 
+				flex-direction: row;
+				align-items: center;
+
+				.text-truncate {
+					display: inline-block; 
+					max-width: 100%;
+					margin-left: 0.5rem;
+				}
+			}
+
+			.list-group__item-dropdown {
+				position: absolute;
+				top: ($list-group-item-padding-y / 1.25);
+				right: ($list-group-item-padding-x / 2);
+				bottom: auto;
+				display: flex;
+				align-items: center;
+
+				> .btn {  
+					opacity: 0;
+					transition: $transition-base;
+					.ico {
+						opacity: 0.3;
+						transition: $transition-base;
+					}
+				}
+			} 
+
+			// 아이템이 '추가/수정' 일 때
+			&.is-edit {  
+				.input-group { 
+					padding: $list-group-item-padding-y $list-group-item-padding-x;
+					padding-right: ($list-group-item-padding-x * 2); 
+
+					.form-control {
+						padding-right: ($list-group-item-padding-x * 2);
+					}
+					.input-group-append { 
+						position: relative;
+						width: 0;
+
+						> .btn {
+							z-index: 10;
+							position: absolute;
+							background-color: transparent; 
+							transition: $transition-base; 
+							
+							&.btn-add {
+								opacity: 0.3;
+								right: 0; 
+							}
+							&.btn-close {
+								opacity: 0.1;
+								right: -($list-group-item-padding-x * 2); 
+							}
+
+							&:hover {
+								opacity: 0.8;
+							}
+
+						}
+					}
+				}
+			}
+ 
+			&:hover {
+				.list-group__item-link { 
+					color: $primary;
+				}
+				.list-group__item-dropdown {
+					> .btn { 
+						opacity: 1;
+						.ico {
+							opacity: 0.5;
+						}
+
+						&:hover {
+							.ico {
+								opacity: 0.8;
+							}
+						}
+					}
+				}
+			}
+
+			// 아이템이 선택된 경우
+			&.is-active {
+				border-color: $list-group-border-color;
+				background-color: $white;
+
+				.list-group__item-link {
+					color: $primary;
+				}
+			} 
+		} 
+
+		// 리포트 아이템인 경우
+		&.list-group__item-report { 
+			.list-group__item-link {
+				padding-left: ($list-group-item-padding-x * 1.5); 
+				color: $body-color !important;
+
+				&:hover {
+					color: $primary!important;
+				}
+			} 
+			&.is-active {
+				.list-group__item-link {
+					color: $primary;
+				}
+			}
+		}
+	} 
+
+
+	// 메인 콘텐츠를 묶을 경우 사용
+	.aside__main-group {
+		//padding-top: 0.75rem;
+		//padding-bottom: 0.75rem;
+
+		+ .aside__main-group {
+			border-top: $aside-border-width solid $aside-border-color; 
+		}
+
+		&.aside__main-type {
+			//background-color: $white;
+			//box-shadow : $box-shadow-base;
+		}
+	}
+
+	// 메인 콘텐츠의 타이틀
+	.aside__main-group-heading {
+		margin: 0;
+		padding: $aside-padding-x;
+		font-size: $font-size-sm;
+		font-weight: $font-weight-bold; 
+		color: $gray-500; 
+	}
+
+	.controller {
+		padding: ($grid-gutter-width / 3) $aside-padding-x;
+	}
+
+	// 컨트롤러와 리스트 그룹이 붙을 경우 
+	.controller + .list-group-aside {
+		border-top: $list-group-border-width solid rgba($list-group-border-color,0.05);
+		overflow-y: auto;
+	} 
+}
+
+
+
+// 메인 계정라벨 사이드바
+.aside-label {
+	height: calc(100vh - ((#{$gnb-height} * 2) + #{$page-header-height} + 2px)); 
+}
+
+.aside-label {
+	.aside__main {
+		.aside__main-group {
+			.list-group-label {
+				min-height: calc(100vh - ((#{$gnb-height} * 2) + (#{$page-header-height} * 2) + 63px + 57px + 43.5px));
+				overflow-y: auto;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

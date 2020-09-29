@@ -1,0 +1,456 @@
+
+
+// Modal
+
+
+// Modal 
+.modal-header { 
+	.modal-title {
+		font-size: $h5-font-size;
+		font-weight: bold;
+	}
+}
+
+
+.modal-dialog__dark {
+
+	.modal-content {
+		background-color: $gray-800;
+		color: $white;
+	}
+
+	.modal-header {
+		border-bottom-color: $gray-700;
+
+		.close {
+
+		}
+	}
+} 
+
+.modal-content {
+	overflow: hidden;
+}
+
+
+.modal-footer {
+	//border:0;
+	//background-color: gray("100");
+	//box-shadow: 0 0 4px rgba($black, 0.2);
+	//z-index:1;
+}
+
+
+// modal-ad-account : 광고계정 선태하기
+
+.list-group-ad-account {
+	min-height: 300px;
+	max-height: 300px;
+	overflow: scroll;
+	background-color: gray("100");
+	border-radius: 0;
+	border: 1px solid $list-group-border-color; 
+	border-top: 0;
+	
+	.list-group__item {
+		position: relative;  
+	}
+	.list-group__grid { 
+		display: grid;
+		grid-template-columns: auto 8rem;
+
+		.grid__col {  
+			&.grid__col-title {
+				align-items: center;  
+				.id-num { 
+					display: block;
+					margin-left: 0.25rem;
+				}
+			}
+			&.grid__col-inventory {
+				display: flex;
+				align-items: center;  
+				justify-content: flex-end;
+			}
+		}
+	} 
+}
+ 
+
+
+
+
+// modal-link-adaccount
+// 광고계정 연동하기  : 화면 없음!!! 
+.link-service {
+	.link-service__item {
+		padding: 3rem 1rem; 
+		border: 1px dashed $gray-700; 
+		+ .link-service__item {
+			border-top: 0;
+		}
+
+		text-align: center;
+
+		.link-service__title {
+			text-align: center;
+			margin-bottom: 1rem;
+
+			strong {
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+// 오디언스 선택하기
+// #modal-audience {}
+// 해당 컨텐츠가 iframe형태로 들어옴
+
+.table-responsive__audience {
+	height: 500px;
+	//overflow: auto;
+}
+
+.table__audience {
+	tbody { 
+		overflow: auto; 
+	}
+}
+
+
+// 채널 연결하기
+#modal-channel {  
+	.modal-body {
+		padding: ($modal-inner-padding * 2);
+		background-color: $gray-100;
+		border-radius: $modal-content-border-radius;
+	}
+
+	.inventory__heading {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.card-group-channel { 
+		.card-channel {
+			.card-body {
+				padding-top: ($card-spacer-y * 5);
+				padding-bottom: ($card-spacer-y * 5); 
+				header {  
+					text-align: center;
+					img {
+						width: 3rem;
+					}
+					.card-title {
+						margin-bottom: 1.5rem;
+						font-size: $font-size-base;
+						font-weight: $font-weight-bold; 
+					}
+				}
+			}
+
+			&.card-channel__dsp {
+				.card-body {
+					position:relative;
+					.guide-text {
+						position: absolute;
+						right: 0;
+						bottom: 1rem;
+						left: 0; 
+						margin: 0;
+						width: 100%; 
+					}
+				} 
+			}
+		}  
+	}
+}
+
+
+// TFA 캠페인 만들기 
+#modal-create-campaign {  
+	.modal-body {
+		padding: ($modal-inner-padding * 2);
+		background-color: $gray-100;
+	}
+}
+.campaign-type {
+
+	@include media-breakpoint-down(md) {
+		[class*="col-"] {
+			+ [class*="col-"] {
+				margin-top: 1rem;
+			}
+		}
+	}
+	
+
+	.campaign-type__item {
+		border: 1px solid $gray-200; 
+		text-align: center;  
+		padding: ($card-spacer-y * 3) $card-spacer-x; 
+		border-radius: $border-radius;
+		background-color: $white;
+
+		&:hover {
+			box-shadow : 0 2px 4px rgba(0,0,0,0.2);
+			z-index: 1;
+		} 
+ 
+		&.campaign-type__gdn {
+			.campaign-type__item-title .ico {
+				color: $google-gdn-color;
+			}
+		}
+
+		&.campaign-type__you {
+			.campaign-type__item-title .ico {
+				color: $google-you-color;
+			}
+		}
+
+		&.campaign-type__uac {
+			.campaign-type__item-title .ico { 
+				color: $google-uac-color;
+			}
+		}
+	} 
+
+	.campaign-type__item-title { 
+		text-align: center;
+		font-weight: $font-weight-bold;
+		.ico {
+			display: block; 
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+		margin-bottom: $card-spacer-x;
+	}
+
+	.campaign-type__item-desc { 
+		p {
+			margin-top: 0.5rem;
+			font-size: $font-size-sm;
+			color: $gray-500;
+
+			@include media-breakpoint-up(lg) {
+				min-height: 2.5714rem; // 2줄을 고려한 높이값 - 아이템 박스의 크기를 맞추기 위함
+			}
+		} 
+	} 
+
+	.campaign-type__item-footer { 
+		border-top: 1px solid $gray-200;
+		padding-top: $card-spacer-x;
+		text-align: center; 
+	} 
+}
+
+
+
+
+// 리포트 캠페인 선택
+// #modal-report-selectCampaign 
+
+#modal-report-selectCampaign  { 
+	.modal-body {
+		//background-color: $gray-100; 
+	}  
+}
+
+
+
+
+// 맞춤 리포트 캠페인 선택 
+#modal-report-share  { 
+	.modal-body {
+		//background-color: $gray-100; 
+	} 
+}
+
+
+
+// 통합 리포트 캠페인 선택  
+#modal-report-integrated-selectCampaign  { 
+ 	.modal-lg { max-width: 1140px; }  
+
+ 	
+}
+
+// 통합 리포트 > 상세정보 > 전체 지표 > 캠페인 선택
+#modal-report-todal-indicator-campaign {
+	.modal-lg { max-width: 1140px; } 
+}
+
+
+// 통합리포트 > 상세정보 > 그래프 카드 추가
+#modal-chart-add { 
+	.chart-type-control { 
+		.theme-control {  
+			padding-bottom: 0;
+			transition: $transition-base;
+
+			&:hover {
+				box-shadow: $box-shadow-base;
+				transition: $transition-base;
+			}
+			
+			.theme-control__label { 
+				border: 1px solid $card-border-color;
+				padding: ($card-padding-y * 3) $card-padding-x ($card-padding-y * 2);
+				background-color: $gray-100; 
+				&:before {
+					top: -1rem;
+					// 체크 아이콘을 자신의 width값을 반으로 나눈값을 빼고 영역의 중간에 아이콘을 위치하기 위한 계산.
+					// calc(50% - (width값 / 2))  
+					left: calc(50% - (2rem / 2));
+					margin: 0 auto;
+					background-color: $white;
+					border-radius: 50%;
+					width: 2rem;
+					height: 2rem;
+				} 
+
+				> strong,
+				> small {
+					display: block;
+				}
+				> small {
+					margin-bottom: 1rem;
+				}
+				> img { 
+					width: 70%;
+					max-width: 200px;
+					margin: 0 auto;
+					border: 2px solid transparent;
+				}
+			} 
+			
+			// 옵션을 선택 했을 경우 
+			.theme-control__input:checked + .theme-control__label {
+				color: $primary;
+				border-color: $primary;
+			}
+		}
+	}
+}
+
+
+// 리스트그룹을 갖고 있는 카드의 그룹 : 모달에서 공통사용
+.modal {
+	.card-group-share-element,
+	.card-group-report-element {
+		// 선택할 수 있는 리스트 그룹을 갖고 있을 경우
+		.card-select-group { 
+
+			.card__body-search {
+				height: $card-body-search-height;
+			} 
+	 		.card__body-h-fix {
+	 			height: $card-body-fix-height;
+	 		}
+	 	}
+	 	// 선택한 리스트 그룹을 갖고 있을 경우
+	 	.card-include-group {
+	 		.card__body-h-fix {
+	 			height: calc(#{$card-body-fix-height} + #{$card-body-search-height}); 
+	 		}
+	 	}
+	}
+}
+
+
+
+// 크리에이티브 > 제품 피드
+#modal-creative-feed-url {  
+	.card {
+		background-color: $box-bg;
+		.card__body {
+			@extend .p-3;
+			.card__title {
+				border-bottom: $card-border-width solid $card-border-color;
+				@extend .pb-2;
+			}
+		}
+	}
+}
+
+// 크리에이티브 > 피드 보기?
+#modal-creative-feed-review {
+	.theme-control-tabs {
+		border-top: $nav-tabs-border-width solid $nav-tabs-border-color;
+		border-bottom: 0;
+
+		.theme-control {
+			padding: 0;
+			margin-top: -$nav-tabs-border-width; 
+		}
+
+	}
+}
+
+
+// 항목 설정 다이얼로그
+#modal-columns-setting {
+	.modal-body {
+		padding: 0;
+		
+		.accordion {
+			.card {
+				border-radius: 0 !important;
+
+				.card-header {
+					border-radius: 0 !important;
+					background-color: $white;
+					.btn {
+						display: flex;
+						align-items: center;
+						font-weight: $font-weight-bold; 
+						text-decoration: none;
+						color: $body-color;
+						.ico { 
+							@extend .mr-2;
+							transition: $transition-base;
+						}
+
+						&[aria-expanded="true"] {
+							.ico {
+								transform: rotate(-90deg);
+								transition: $transition-base;
+							}
+						}
+					}
+				}
+				.card-body {
+					padding-right: $grid-gutter-width;
+					padding-left: $grid-gutter-width;
+					background-color: $gray-100;
+				}
+			}
+		} 
+		 
+		.theme-control { 
+			@extend .col-3;
+		}  
+	} 
+}
+
+
+// 계정 라벨 만들기
+#modal-adlabel-add {
+	.modal-body {
+		.card {
+			.card-body { 
+				background-color: $gray-100;
+			}
+		}
+	}
+}
+
+
+
+
+

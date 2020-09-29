@@ -1,0 +1,194 @@
+
+
+.step {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 1.5rem;
+
+	@extend .d-flex;
+	@extend .align-items-center;
+	@extend .justify-content-center;
+
+	.step__item {
+		@extend .d-flex;
+		@extend .align-items-center;
+		@extend .justify-content-center;
+
+		.step__item-text { 
+			position: relative;
+			font-weight: $font-weight-bold;
+			color: $gray-500;
+
+			&:before {
+				display: block;
+				margin: 0 auto 1rem;
+				height: 40px;
+				width: 40px;
+				background-color: rgba($gray-900, 0.1);
+				border-radius: 50%;
+				content: " "; 
+			}
+
+			&:after {
+				position: absolute;
+				top: 15px;
+				left: 50%;
+				margin-left: -5px;
+				display: block;
+				height: 10px;
+				width: 10px; 
+				border-radius: 50%;
+				content:" ";
+			}
+		} 
+	}
+	// 진행되지 않은 단계일 경우
+	.step__item.is-disabled {
+		.step__item-text {
+			&:after { 
+				background-color: $gray-100; 
+			}
+		}
+	}
+
+	// 진행중인 단계일 경우
+	.step__item.is-active {
+		.step__item-text {
+			color: $primary;
+			&:before {
+				background-color: rgba($primary, 0.2);
+			}
+			&:after { 
+				top: 10px;
+				margin-left: -10px;
+				height: 20px;
+				width: 20px; 
+				background-color: $primary; 
+			}
+		}
+	}
+
+
+	// 진행이 완료된 경우
+	.step__item.is-completed {
+		.step__item-text {
+			color: darken($teal, 8%); 
+
+			&:before {
+				background-color: $teal;  
+				//box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+			} 
+			&:after { 
+				top: 12px;
+				left: 50%;
+				margin-left: -10px;
+				border-bottom: 4px solid $white;
+				border-left: 4px solid $white;
+				height: 10px;
+				width: 20px;
+				border-radius: 0;
+				background-color: transparent;  
+				transform: rotate(-45deg); 
+			}
+		}
+	}
+
+
+	// 스텝과 스텝 사이 스타일
+	.step__item + .step__item {  
+		position: relative;
+		padding-left: 8rem;
+
+		&:before {
+			position: absolute;
+			top: 20px;
+			left: 0;
+
+			content:" ";
+			display: block; 
+			border-top: 1px dashed $gray-400;
+			height: 1px;
+			width: 8rem; 
+		}
+	}
+}
+
+
+
+
+// Old style
+
+.steps {
+	list-style: none;
+	margin: 0;
+	padding: 1.5rem 0;
+	background-color: $gray-100;
+	border-radius: $border-radius;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.steps__item { 
+	position: relative; 
+	padding-right: 4rem;
+	padding-left: 4rem;
+	color: $gray-500;
+
+	&:before {
+		position: absolute; 
+		top: 1rem;
+		left: 0;
+		content: "";
+		display: block;
+		width: 3rem;
+		height: 1rem;
+		border-top: 1px dashed $gray-300;
+	} 
+	&:after {
+		position: absolute; 
+		top: 1rem;
+		right: 0;
+		content: "";
+		display: block;
+		width: 3rem;
+		height: 1rem;
+		border-top: 1px dashed $gray-300;
+	}
+
+	&:first-child {
+		padding-left: 0;
+		&:before {
+			display: none; 
+		}
+	}
+	&:last-child {
+		padding-right: 0;
+		&:after {
+			display: none; 
+		}
+	} 
+}
+
+.steps__num {
+	font-weight: bold;
+	display: inline-block;
+	width: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	background-color: $gray-300;
+	margin-right: 0.5rem;
+	border-radius: 1rem;
+}
+
+.steps__item.is-active {
+	color: $primary !important;
+	font-weight: $font-weight-bold;
+	.steps__num {
+		background-color: $primary !important;
+		color: $white !important;
+	}
+}
+

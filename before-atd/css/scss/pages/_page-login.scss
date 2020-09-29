@@ -1,0 +1,228 @@
+
+
+
+.tw__login {  
+	width: 100vw; 
+	height: 100vh;   
+	display: flex;
+	justify-content: center;
+	align-items: center;  
+	background-color: gray("800");  
+
+	@include media-breakpoint-up(sm) { 
+		font-size: $font-size-base;
+		background: url(../images/port-bg.svg) 80% 16% no-repeat gray("700");
+		background-size: 80% auto;
+	} 
+} 
+
+@keyframes fadein {
+    from {opacity: 0.98;}
+    to {opacity: 1;}
+}
+
+
+@keyframes fadeindown {
+    from {opacity: 0.5; margin-top: -$grid-gutter-width;}
+    to {opacity: 1; margin-top: ($grid-gutter-width / 2);}
+}
+
+
+
+.btn {
+	width: 100%;  
+	padding: $input-btn-padding-y $input-btn-padding-x;
+	border-radius: $border-radius;
+	cursor: pointer;
+} 
+
+.btn-primary {
+	border: 1px solid $white;
+	background-color: $white;
+	color: $body-color;
+
+	&:hover,
+	&:focus {
+		border-color: rgba($white, 0.9);
+		background-color: rgba($white, 0.9);
+		color: $body-color;
+	}
+}
+
+.btn-secondary {
+	border: 1px solid $secondary;
+	background-color: $secondary;
+	color: $white;
+
+	&:hover,
+	&:focus {
+		background-color: darken($secondary, 2%);
+	}
+}
+
+
+
+/* -------------------------------------------------------------- */
+ 
+ // Entry Style
+
+.entry {  
+	background: url(../images/port-bg.svg) center 2.5rem no-repeat $entry-bg;
+	background-size: 80% auto;
+	color: gray("100");  
+	padding: 1.5rem;
+	border-radius: 0.25rem; 
+	margin: ($grid-gutter-width / 2);
+	animation: fadeindown 0.5s ease-in-out; 
+
+	width: 100%;
+
+	@include media-breakpoint-up(sm) {  
+		width: 540px; 
+	}
+} 
+
+
+.entry__footer {
+	text-align: center;
+	img {
+		opacity: 0.4;
+	}
+}
+
+.entry__body {
+	padding: 2rem 0; 
+
+	@include media-breakpoint-up(sm) { 
+		padding: 3.5rem;
+	}
+}
+
+
+
+// Login Style  
+.login__logo {
+	img {  
+		width: 100%;
+	}   
+}
+
+.login__desc {
+	position: relative; 
+	margin-bottom: 2rem;  
+	color: gray("400"); 
+	text-align: center;
+	
+	
+	@include media-breakpoint-up(sm) { 
+		font-size: $font-size-lg;
+	} 
+}
+
+
+
+// 로그인에서 사용하는 폼 스타일
+
+.form-group {
+	margin-bottom: 0.375rem;
+
+	label { 
+		font-size: 12px;
+		opacity: 0.4;
+		margin-bottom: 0.25rem;
+	} 
+	.form-control ,
+	.form-control-plaintext {
+		width: 100%;
+		padding: $input-btn-padding-y $input-btn-padding-x;
+		border: 1px solid transparent;
+		border-radius: $border-radius;
+	}
+
+	.form-control-plaintext {
+		background-color: rgba($white, 0.05);
+		color: $white;
+
+		&readonly {
+			outline: none !important;
+		}
+	}
+
+	+ .btn {
+			margin-top: $input-btn-padding-y;
+		}
+} 
+
+
+// Gmail을 쓰지 안흔 공고주 또는 DF이외의 회사가 로그인 할 수 있도록함
+// added 04.16.2019 
+.login-form {   
+
+	.login-form__greeting { 
+		position: relative;
+		padding-top: 1rem;
+
+		text-align: center; 
+		 
+		&:after {
+			content: " ";
+			position: absolute;
+			display: block;
+			width: 100%;
+			border-bottom: 1px dashed rgba($white, 0.1);
+			top: calc(#{$font-size-lg} / 2);
+		} 
+
+		.ico {
+			position: absolute;
+			left: calc(50% - (#{$font-size-lg} / 2));
+			top: 0;
+			font-size: $font-size-lg;
+		}
+	}
+
+	.login-form__divider {
+		font-size: $font-size-sm;
+		color:rgba($white, 0.3);
+		text-align: center;
+		position: relative;
+
+		&:after {
+			content: " ";
+			position: absolute;
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid rgba($white, 0.1);
+			top: 50%;
+		}
+		
+		small {
+			position: relative;
+			z-index: 10;
+			padding-right: $input-padding-x;
+			padding-left: $input-padding-x;
+			background-color: $entry-bg;
+		}
+
+	}
+
+	// 연동된 서비스로 로그인 하기 (구글로 로그인 하기)
+	.login-form__interlock {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		.btn {
+			position: relative;
+			img {
+				position: absolute;
+				left: $input-padding-x; 
+			} 
+		}
+	}
+
+	// 가입된 계정정보로 로그인 하기 (이메일로 로그인하기)
+	.login-form__account {
+		padding-top: 1rem;
+		padding-botom: 1rem;   
+	} 
+} 

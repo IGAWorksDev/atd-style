@@ -1,0 +1,188 @@
+
+
+
+
+
+
+
+
+// Panel
+//
+// <div class="panel">
+// 	 <div class="panel__header"></div>
+//	 <div class="panel__body"></div>
+//	 <div class="panel__footer"></div>
+// </div>
+
+ 
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	border: 1px solid $card-border-color;
+	border-radius: $border-radius;
+	//box-shadow: $box-shadow-base;   
+
+	&.panel-outline__dashed {
+		background: $gray-200;
+		border-style: dashed; 
+		box-shadow: none;
+	} 
+	+ .panel {
+		margin-top: ($grid-gutter-width / 2);
+	}
+}
+
+.panel__header {
+	padding: ($grid-gutter-width / 2);
+	border-bottom: 1px solid $card-border-color; 
+}
+
+.panel__body {
+	padding: ($grid-gutter-width / 2); 
+	+ .panel__body {
+		border-top: 1px solid $card-border-color;
+	}
+}
+
+.panel__footer {
+	border-top: 1px solid $card-border-color;
+	padding: ($grid-gutter-width / 2); 
+} 
+
+
+// list-group 를 포함하는 패널일 경우 사용
+.panel-list-group {
+	.panel__body {
+		padding: 0;
+	}
+}
+
+
+.panel-sm {
+	.panel__header {
+		padding: $card-spacer-y $card-spacer-x !important;
+	}
+	.panel__body {
+		padding: $card-spacer-y $card-spacer-x !important;
+	}
+	.panel__footer {
+		padding: $card-spacer-y $card-spacer-x !important;
+	}
+}
+
+
+.panel__title {  
+	margin-bottom: 0;
+} 
+
+.panel__subscript {
+	font-size: $font-size-sm;
+	margin-top: 0.5rem;
+}
+
+
+.panel__edit {  
+	.panel__footer {
+		padding-top: $grid-gutter-width;
+		padding-bottom: $grid-gutter-width;
+	}
+}
+
+
+.panel-edit__sub {
+	.panel__body {
+		background-color: $gray-100;
+	}
+	.panel__footer {
+		padding-top: ($grid-gutter-width / 2);
+		padding-bottom: ($grid-gutter-width / 2);
+	}
+} 
+
+
+// List Panel
+//
+// <div class="list-panel">
+// 	 <div class="list-panel__heading"></div>
+//	 <div class="list-panel__item">
+// 		<div class="panel">
+// 	 		<div class="panel__header"></div>
+//	 		<div class="panel__body"></div>
+//	 		<div class="panel__footer"></div>
+// 		</div>
+//	 </div>
+//	 <div class="list-panel__footer"></div>
+// </div>
+
+
+/*
+.card-list {
+	.card-list__header {  
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+		@include media-breakpoint-up(md) { 
+			margin: ($grid-gutter-width / 2) $card-spacer-x ($grid-gutter-width / 4); 
+		}
+
+		color: $body-color; 
+		font-weight: $font-weight-bold;  
+	}
+	.card-list__item {
+		+ .card-list__item {
+			margin-top: ($grid-gutter-width / 2); 
+		}
+
+		.card { 
+			&:hover {
+				border-color: $gray-300;
+				box-shadow: $box-shadow-base;
+			}
+			.card__body {
+				box-shadow: $box-shadow-base; 
+				z-index: 1;
+			} 
+		}
+	}
+	
+	+ nav {
+		.pagination {
+			margin-top: ($grid-gutter-width / 2);
+			margin-bottom: 0;
+		}
+	} 
+}
+
+ 
+
+
+// List card
+
+ul.card-list {
+	list-style: none;
+	padding: 0;
+	li {
+		+ li {
+			margin-top: ($grid-gutter-width / 2);
+		} 
+		ul.card-list { 
+			li {
+				padding-left: 3.5rem; //bullet너비 + 패널 X 패딩 + 그리드 커터 반값
+				.card { 
+				}
+			}
+		}
+	}
+}
+
+
+*/
+
+
+
+
+
+ 
+

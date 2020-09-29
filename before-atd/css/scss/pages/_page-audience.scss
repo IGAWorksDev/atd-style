@@ -1,0 +1,1061 @@
+
+
+.dl-inline {
+	dt {
+		display: inline-block;
+	}
+	dd {}
+}
+
+.toolbar { 
+	display: flex;
+	justify-content: space-between;
+
+	.left {
+		margin-right: auto;
+	}
+	.right {
+		margin-left: auto;
+	}
+}
+
+
+ 
+//------------------------------------
+// 필터 조건 목록
+.filters {
+	padding-top: 0.5rem;
+	> .btn { 
+		margin-top: 0.375rem;
+	}
+
+	.filters-wrapper {
+		margin-left: 0.5rem;
+		flex: 0 1 auto;
+
+		.filter-tag {
+			margin-top: 0.375rem;
+		}
+
+		.filter-tag + .filter-tag {
+			margin-left: 0.375rem;  
+		}
+	}
+}
+
+// 필터태그
+.filter-tag {   
+	flex: 0 1 auto;
+
+	@extend .btn;  
+	display: inline-block; 
+	background-color: $white;
+	border: 1px solid $gray-200;
+	border-radius: 3px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center; 
+
+	&:hover {
+		background-color: $gray-300;
+		border-color: $gray-400;
+	}
+	
+
+	.filter-tag__body {
+		display: flex;
+		align-items: center;
+
+		.filter-tag__title {
+			margin: 0;  
+			color: $gray-600;
+
+			&:after {
+				content:":";
+				padding-right: 0.25rem; 
+			}
+		}
+
+		.filter-tag__item {
+			&.text-truncate {
+				display: inline-block;
+				max-width: 180px;
+			}
+		}
+
+		.filter-tag__item + .filter-tag__item {
+			&:before {
+				content:" , ";
+				margin-right: 0.25rem;
+				margin-left: 0.25rem;
+			}
+		}
+	}
+
+
+	.filter-tag__footer { 
+		margin-left: 0.5rem;
+
+		.filter-tag__delete { 
+			color: $body-color;
+			text-decoration: none;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $primary;
+			} 
+		}
+	}
+
+	// 필터태그 내의 종류별 설정 드랍다운
+	.dropdown-menu {
+		.theme-scrollbar { 
+			max-height: 230px;
+		}
+		.list-group { 
+			.text-truncate {
+				display: block;
+				max-width: 180px;
+			}
+		}
+	}
+} 
+
+
+// 오디언스 종류 - 라디오 버튼 커스텀
+.form-aud-check-btn {
+	padding: 0;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: ponter;
+	}
+
+	label {
+		@extend .btn;
+		@extend .btn-outline-secondary;
+		display: block;
+	}
+
+	// 체크 상태이면 뒤의 라벨 상태 변화
+	input:checked ~ label {
+		@extend .btn-primary;
+	}
+
+	// 비활성 상태이면 뒤의 라벨 상태 변화
+	input:disabled ~ label {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			border-color: rgba($secondary, 0.5) !important;
+			background-color: transparent !important;
+			color: rgba($secondary, 0.5) !important;
+			cursor: default;
+		}
+	} 
+}
+
+.form-aud-check-btn + .form-aud-check-btn {
+	margin-top: 0.75rem;
+}
+
+
+// 오디언스 리스트 테이블
+.div-table-aud {
+	.div-table-body {
+		// 높이값 계산이 필요함.
+		//max-height: 61vh;
+	}
+	.div-table-row { 
+		.div-table-cell-header,
+		.div-table-cell {
+			&__toggle {
+				flex: 0 0 auto;
+				width: 3rem;
+			}
+			&-name {
+				flex: 0 1 auto;
+				width: 12rem; 
+			}
+
+			&-flatform, 
+			&-id,
+			&-scale {
+				flex: 0 0 auto;
+				width: 9rem;
+			}
+			&-date {
+				flex: 0 0 auto;
+				width: 9rem;
+			}
+			&__aud-onboarding {
+				flex: 0 0 auto;
+				width: 10rem; 
+			}  
+
+			&-check {
+				width: 3rem;
+			}
+			&-control {
+				flex: 0 0 auto;
+				width: 4rem;
+			}
+			&-audranger {
+				flex: 0 0 auto;
+				width: 12rem;
+			}
+		} 
+	} 
+	// 하위 오디언스 리스트
+	.collapse {
+		width: 100%;  
+		box-shadow: inset 0 0.2rem 0.4rem rgba($black, 0.1); 
+		background-color: rgba($gray-100, 0.5); 
+	}
+}
+
+
+
+ 
+
+
+// 온보딩 드랍다운 메뉴
+.dopdown-onboarding {
+	display: inline-block;
+	position: relative;  
+
+	.dropdown-body {
+		.breadcrumb {
+			padding: 0;
+		}
+
+		.check-parameter {
+			font-size: $font-size-sm;
+
+			.btn {
+				padding: 0.125rem 0.25rem;
+				font-size: 0.625rem;
+			}
+		}
+	}
+}
+
+
+// 페르소나 정보 드랍다운
+.dropdown-persona {
+	.dropdown-menu {
+		width: 20rem;
+	}
+	.dropdown-body {
+		font-size: $font-size-sm;
+		color: $gray-600;
+
+		dl {
+			margin: 0;
+			dt {}
+			dd { 
+				margin-bottom: 0; 
+				&:before {
+					content: "-";
+					margin-right: 0.25rem;
+				}
+				display: flex;
+				align-items: flex-start;
+			}
+		}
+	}
+}
+
+
+//------------------------------------
+// 키워드 오디언스 만들기  
+
+// 키워드 오디언스 - 검색찾아보기 테이블 리스트
+.div-table-aud--keyword-search {
+	.div-table-body {
+		&.theme-scrollbar {
+			height: 240px;
+		}
+	}
+}
+
+// 키워드 오디언스 - 카테고리 선택
+.category-keywordAud {
+	border-right: 1px solid $div-table-border-color;
+	header {
+		background-color: rgba($black, .03) !important;  
+		border-top: $div-table-border-width solid $div-table-border-color; 
+		border-bottom: $div-table-border-width solid $div-table-border-color; 
+		padding: $div-table-cell-padding-y $div-table-cell-padding-x; 
+	}
+	.list-group {
+		&.theme-scrollbar {
+			height: 240px;
+		}
+
+		li {
+			a.list-group-item {
+				color: $body-color;
+				transition: $transition-base;
+				background-color: transparent;
+				position: relative; 
+				padding-left: ($list-group-item-padding-x * 2); 
+
+				.ico {
+					position: absolute;
+					left: $list-group-item-padding-x;
+					top: $list-group-item-padding-y;
+					line-height: 1.5;
+				}
+
+				&:hover {
+					color: $primary;
+				}
+
+				&.active {
+					border-color: $list-group-border-color;
+					background-color: rgba($gray-200, 0.5);
+					color: $primary;
+				}
+
+				&[data-toggle="collapse"] {
+					&[aria-expanded="true"] { 
+						.ico { 
+							transform: rotate(90deg);
+							transition: $transition-base; 
+						}
+					}
+				}
+			}
+			.collapse {
+				box-shadow: inset 0 0.2rem 0.4rem rgba($black, 0.1); 
+				background-color: rgba($gray-100, 0.5);  
+				a.list-group-item {
+					padding-left: ($list-group-item-padding-x * 2); 
+				} 
+			}
+		}
+	}
+}
+
+
+// 선택한 오디언스 총합계
+.audscale-total {
+	margin: 0;
+	dt {
+		display: inline-block;
+		margin-right: 0.25rem;
+	}
+	dd {
+		display: inline-block;
+		margin:0; 
+	}
+}
+
+
+.nav-tabs {
+	.nav-item {
+		.nav-link {
+			background: transparent;
+			border-width: 0;
+			color: $body-color;
+
+			&.active {
+				border-bottom-width: 2px;
+				border-color: $primary;
+				color: $primary;
+				font-weight: $font-weight-bold;
+			}
+		}
+	}
+}
+
+
+.card-keywordAud-ckeck { 
+	// 키워드 오디언스 - 검색
+	.div-table-keywordAud-search {
+		.div-table-row { 
+			.div-table-cell-header,
+			.div-table-cell { 
+				&-scale {
+					flex: 0 0 auto;
+					width: 10rem;
+				}
+			}
+		} 
+	}
+
+	// 키워드 오디언스 - 카테고리 3rd 아이템 테이블 리스트
+	.div-table-aud--keyword-category {
+		.div-table-body {
+			&.theme-scrollbar {
+				height: 240px;
+				max-height: 240px;
+			}
+		} 
+	}
+}
+
+
+.card-keywordAud-selected {
+	// 키워드 오디언스 - 선택된 오디언스 목록
+	.div-table-aud--keyword-selected {
+		.div-table-body {
+			&.theme-scrollbar {
+				height: 240px;
+			}
+		} 
+	}
+
+	.audscale-total {
+		dd {
+			width: 12rem;
+		}
+	}
+}
+
+
+
+
+
+
+
+//------------------------------------
+// 오디언스 조합하기
+
+.combiningAud-pane {
+	background-color: $light;
+	> .row {
+		> [class*="col"] {
+			&:first-child {
+				border-right: 1px solid $gray-300;
+				position: relative;
+				
+				&:before {
+					position: absolute;
+					top: 50%;
+					right: -0.75rem; 
+					margin-top: 0.1rem;
+					content: " "; 
+					width: 1.5rem;
+					height: 2rem;
+					background-color: $light;
+				} 
+
+				&:after { 
+					position: absolute;
+					top: 50%;
+					right: -0.25rem; 
+					margin-top: 0.75rem;
+					content: " "; 
+					width: 0.75rem;
+					height: 0.75rem;
+					border: solid $gray-500;
+					border-width: 0 2px 2px 0;
+					transform: rotate(-45deg); 
+					background-color: $light;
+				} 
+			} 
+		}
+	}
+}
+
+.card-combindAud-check {
+	min-height: auto !important;
+
+	a.card-title[data-toggle="collapse"] {
+		padding: $card-spacer-y $card-spacer-x;
+		padding-left: ($card-spacer-x * 2); 
+
+		text-decoration: none;
+		position: relative; 
+
+		.ico {
+			position: absolute; 
+			top: $card-spacer-y;
+			left: $card-spacer-x;
+			line-height: 1.5;
+		}
+
+		&[aria-expanded="true"] { 
+			.ico { 
+				transform: rotate(90deg);
+				transition: $transition-base; 
+			}
+		}
+	}
+
+	.collapse {
+		//box-shadow: inset 0 0.1rem 0.4rem rgba($black, 0.15); 
+	}
+
+	.div-table-body {
+		&.theme-scrollbar {
+			height: 240px;
+		}
+	}
+}
+
+
+
+//------------------------------------
+// 오디언스 조합 - GoJS
+
+// 조합하는
+.card-mixAud { 
+	.card-body {
+		.row {
+			> .left { 
+				min-height: 480px;
+				height: calc(100vh - (#{$gnb-height} * 4.5));
+			}
+		}
+	}
+}
+
+.card-mixAud__setting {
+	.list-toggle-segment {
+		margin-right: -$card-spacer-x;
+		margin-bottom: -$card-spacer-x;
+		margin-left: -$card-spacer-x; 
+	}
+}
+
+.list-toggle-group {
+	> .list-toggle-item {
+		position: relative;
+		border-top: $border-width solid $border-color;  
+
+		.collapse {
+			background-color: $light;
+			box-shadow: inset 0 0.2rem 0.4rem rgba($black, 0.1); 
+		}
+	}
+
+	> .list-toggle-item + .list-toggle-item {
+		margin-top: -$border-width;
+	}
+}
+
+
+// 세그먼트 아이템 리스트
+.list-toggle-segment {
+	.segment-item { 
+		padding-left: ($list-group-item-padding-x * 2);
+
+		.segment-header {
+			position: relative; 
+			.ico {
+				position: absolute;
+				left: -$list-group-item-padding-x;
+				transition: $transition-base;
+			}
+
+			&[aria-expanded="true"] {
+				.ico {
+					transform: rotate(90deg);
+					transition: $transition-base;
+				}
+			}
+		}
+	}
+}
+
+
+.segment-item { 
+	display: flex;
+	align-items: center; 
+	padding: $list-group-item-padding-y $list-group-item-padding-x;
+
+	.segment-header {
+		flex: 0 0 auto; 
+		width: 50%;
+		display: flex;
+		align-items: center;
+
+		.segement-title {
+			width: 100%;
+		}
+	}
+
+	.segment-thumb {
+		flex: 0 0 auto; 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		width: 32px;
+		height: 32px;
+		background-color: $info;
+		color: $white;
+		line-height: 1;
+		text-align: center;
+	} 
+}
+
+// 오디언스 아이템 리스트
+.list-aud {
+	> .list-item {
+		border-top: 1px dashed $border-color;
+	}
+}
+
+// 오디언스 리스트에 포함되는 오디언스 아이템UI
+.aud-item {
+	padding: $list-group-item-padding-y $list-group-item-padding-x; 
+	.aud-header {
+		width: 60%;
+	}
+}
+
+ 
+
+#modal-add-segment {
+	.modal-dialog {
+		margin: 0 0 0 auto;
+		height: 100vh; 
+		.modal-content {
+			height: 100%;
+			border: 0;
+			border-radius: 0; 
+			.modal-body {
+				height: calc(100vh - (51px + 57.75px));
+			}
+		}
+	}
+}
+
+
+
+
+// 접힌 카드 : 컨텐츠가 접힌 상태로, 접히고 열리도록 토글되는 카드
+.card-collapse {
+	min-height: auto; 
+
+	> .card-title[data-toggle="collapse"] {
+		padding: $card-spacer-y $card-spacer-x;
+		padding-left: ($card-spacer-x * 2); 
+
+		text-decoration: none;
+		position: relative; 
+
+		.ico {
+			position: absolute; 
+			top: $card-spacer-y;
+			left: $card-spacer-x;
+			line-height: 1.5;
+		}
+
+		&[aria-expanded="true"] { 
+			.ico { 
+				transform: rotate(90deg);
+				transition: $transition-base; 
+			}
+		}
+	}
+}
+
+.card-collapse-aud {
+	.collapse {
+		.ui-tabs-pane {
+			.div-table {
+				.div-table-body {
+					height: $collapse-div-table-body-height;
+				}
+			}
+		}
+
+		.card-selectedAud {
+			background-color: $light;
+
+			.theme-scrollbar {
+				height: 338px;
+			}
+
+			// 선택된 오디언스 리스트
+			.list-group-selectedAud { 
+				.list-group-item { 
+				}
+			} 
+		}
+	}
+}
+
+
+
+
+
+
+
+
+//------------------------------------
+// 애드브릭스 오디언스 스튜디오 
+
+// abx 연결상태
+.status-connect-abx {
+	position: relative;
+
+	img {
+		width: 3rem;
+	} 
+	.status-dot {
+		position: absolute;
+		top: -0.5rem;
+		right: -0.5rem;
+		border-radius: 50%; 
+		padding: 3px;
+		background-color: $white; 
+		line-height: 1; 
+
+		&.text-success { 
+			.ico {
+				animation: blink 1s infinite; 
+			}
+		}
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0.5; 
+	}
+	50% {
+		opacity: 1; 
+	}
+	100% {
+		opacity: 0.5; 
+	}
+} 
+
+
+
+//------------------------------------
+// 오디언스 만들기 
+#modal-add-aud {
+	.modal-dialog {
+		//max-width: 800px !important;
+		//margin: 1.75rem auto;
+	} 
+
+	.card-select-adaccount { 
+		.card-body {
+			max-height: 300px;
+		}
+	}
+
+	/*
+	// 오디언스 추가 - 옵셔 카드 그룹
+	.card-group-add-aud { 
+		// 광고계정 선택
+		
+		.card-select-adaccount {
+			@include media-breakpoint-up(sm) {
+				width: 25%;
+				flex: 1 1 auto;
+			}
+
+			.card-body {
+				max-height: 300px;
+			}
+		}
+		
+		// 오디언스 종류 선택 --- 사용안함
+		.card-select-audtype { 
+			@include media-breakpoint-up(sm) { 
+				width: 75%;
+				flex: 1 1 auto;
+			}
+
+			.card-body {
+				.row {  
+					> [class*="col"] + [class*="col"] {
+						border-left: 1px solid $gray-200;
+					}
+				} 
+			}
+		} 
+	}  
+	*/
+}
+
+
+
+//------------------------------------
+// 필터 추가 -- 모달
+#modal-add-audFilter {
+	// add card-group for audience filter
+	.card-group-add-audFilter { 
+
+		// 필터종류 선택
+		.card-select-filterType {
+			@include media-breakpoint-up(sm) {
+				width: 30%;
+				flex: 1 1 auto;
+			} 
+			.card-body {
+				max-height: 380px; 
+				background-color: $gray-100;
+
+				.list-group {
+					border-bottom: $list-group-border-width solid $list-group-border-color;
+				}
+			}
+		}
+
+		// 필터 아이템 선택
+		.card-select-filterItems { 
+			@include media-breakpoint-up(sm) { 
+				width: 70%;
+				flex: 1 1 auto;
+			} 
+			.card-body { 
+				height: 300px;
+				background-color: $gray-100;
+				
+				.list-group {
+					border-bottom: $list-group-border-width solid $list-group-border-color;
+					.list-group-item {
+						.text-truncate {
+							display: inline-block;
+							max-width: 490px;
+							line-height: $line-height-base;
+						}
+					}
+				}
+
+				.theme-scrollbar {
+					height: 300px; 
+				} 
+				.search-bar-wrapper + .theme-scrollbar {
+					height: (300px - 54px);
+				}
+			}
+		}
+	}  
+}
+
+
+//------------------------------------
+// 오디언스 보내기 -- 모달
+#modal-send-aud { 
+	.modal-body {
+		.list-group {
+			.list-group-item {
+				// 아이템의 최대 길이 지정
+				.text-truncate {
+					width: 340px;
+				}
+			}
+		}
+
+		// 광고계정 선택 최대 높이 지정
+		.list-adaccount-wrapper {
+			height: 260px; 
+		}
+
+		// 선택한 광고계정 - 최대 높이 지정
+		.list-selected-wrapper {
+			max-height: 421px;
+
+			.list-group {
+				.list-group-item {
+					.list-item-main {
+						.text-truncate {
+							width: 320px;
+						}
+					}
+				}
+			}
+		}
+
+		// 광고계정 선택시 라벨셀렉트 바 노출
+		// adlabel-dropdown 스타일을 기본으로 하며 모달내의 스타일만 지정함.
+		.dropdown-adlabels {
+			.dropdown-toggle {
+				width: 100%;
+			}
+			.dropdown-menu {
+				width: 100%;
+				// 드랍다운 메뉴 콘텐츠
+				.dropdown-menu__content {  
+					max-height: 320px !important;   
+
+					.dropdown-menu__section-adlabels {  
+						max-height: 220px !important; 
+					}
+				}
+			}
+		} 
+	}
+}
+
+
+.div-table-aud__biz-listed,
+.div-table-aud__biz-selected,
+.div-table-aud__district-listed,
+.div-table-aud__district-selected { 
+	.div-table-row {
+		min-height: 2.5rem;
+	}
+	
+	.div-table-cell--collapse,
+	.div-table-cell--check {
+		flex: 0 0 auto;
+		width: 2rem;
+	}
+
+	.div-table-cell--title {
+		flex: 1 1 auto;
+		width: 12rem; 
+	}
+
+	.div-table-cell--scale {
+		flex: 0 0 auto;
+		width: 8rem;
+	} 
+ 
+	.div-table-cell--delete {
+		flex: 0 0 auto;
+		text-align: center;
+		width: 3rem; 
+	}  
+
+	.div-table-body  { 
+		.div-table-cell--scale {
+			text-align: right;
+		} 
+	}
+
+	.theme-scrollbar {
+		height: 240px; 
+	} 
+
+	.collapse  {
+		// 서브 목록이 나올경우 펼치고 접는 버튼의 영역 만큼 마진값을 갖고 있음.
+		// 타이틀의 라인의 맞추기 위해서 
+	}
+}
+
+
+
+/// -----------------------------------
+/// 지역 선택 
+
+.card-area-selector { 
+
+		.tag {
+			background-color: $white;
+			padding: $btn-padding-y $btn-padding-x;
+			border-color: $gray-300;
+			&:focus,
+			&:hover,
+			&:active {
+				border-color: $gray-500;
+			}
+		} 
+}
+
+.list-area { 
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.list-area-depth1 {
+	.list-item {
+		flex: 0 1 auto;
+		width: 50%; 
+		input[type="checkbox"] {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+			z-index: -1;
+		}
+		label {
+			padding: $list-group-item-padding-y $list-group-item-padding-x;
+			margin: 0;
+			display: block; 
+			&:hover {
+				background-color: rgba($primary, 0.04);
+			}
+		} 
+		// 체크되었을 경우
+		input[type="checkbox"]:checked + label {
+			background-color: rgba($primary, 0.08);
+			color: $primary; 
+			font-weight: $font-weight-bold; 
+			position: relative;
+			&:after {
+				position: absolute;
+				right: $list-group-item-padding-x;
+				content: $ic-chevron-right;
+				font-family: 'adicons'; 
+			}
+		}
+	}
+}
+
+.list-area-depth2 {
+	padding: $card-spacer-y $card-spacer-x;
+	.list-item {
+		flex: 0 1 auto;
+		width: 33.33%;
+		padding: 0.25rem; 
+		input[type="checkbox"] {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+			z-index: -1;
+		}
+		label {
+			padding: $list-group-item-padding-y $list-group-item-padding-x;
+			margin: 0;
+			display: block;
+			border-radius: 5rem; 
+			&:hover {
+				background-color: rgba($primary, 0.04);
+			}
+		} 
+		// 체크되었을 경우
+		input[type="checkbox"]:checked + label {
+			background-color: rgba($primary, 0.08);
+			color: $primary;
+			font-weight: $font-weight-bold; 
+			position: relative;
+			&:after {
+				position: absolute;
+				right: $list-group-item-padding-x;
+				content: $ic-check;
+				font-family: 'adicons'; 
+			}
+		}
+	}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

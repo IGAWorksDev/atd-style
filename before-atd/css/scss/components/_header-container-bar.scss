@@ -1,0 +1,83 @@
+
+
+$header-container-padding-y: 0.75rem;
+$header-container-padding-x: ($grid-gutter-width / 2); 
+$header-container-border-width: 1px;
+$header-container-inner-height: 4rem;
+
+
+$header-container-height: calc((#{$header-container-padding-y} * 2) + #{$header-container-inner-height} + #($header-container-border-wdith));
+
+
+.header-container-bar {
+	@extend .container-fluid;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	background-color: $white; 
+	border-bottom: $header-container-border-width solid $gray-300;  
+}
+
+.header-container-bar__inner {
+	display: flex;
+	//flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+	height: $header-container-inner-height;
+}
+
+
+/// 헤더의 정보를 쌓고 있는 레이어 
+.header-content {
+	width: 100%;
+	flex: 1 1 auto;
+	margin-right: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+
+	> * + * {
+		margin-top: 0.25rem;
+	}
+}
+
+/// 헤더의 제목
+.header-title { 
+	font-size: $font-size-lg;
+	color: $black;
+}
+
+/// 헤더의 도구 레이어
+.header-tool {
+	flex: 0 0 auto;
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.header-tool + .header-tool {
+	margin-left: 0.875rem;
+	padding-left: 0.875rem;
+	border-left: 1px solid $gray-300;
+}
+
+
+/// 버튼
+.header-buttons {  
+	.btn {  
+		span {
+			display: block;
+			margin-top: 0.25rem;
+			transform: scale(0.75); 
+			opacity: 0.6;
+		} 
+	} 
+}
+
+
+
+
+
+

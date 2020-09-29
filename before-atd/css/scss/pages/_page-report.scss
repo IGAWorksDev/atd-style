@@ -1,0 +1,437 @@
+
+
+ 
+// 리포트 설정 정보
+.report-setup__header {  
+	display: flex;
+	flex-direction: row;  
+
+	.form-group__title {
+		flex: 0 0 60%;
+		margin-bottom: 0;
+		.form-group__edit { 
+			position: relative;
+			&::before {
+				position: absolute;
+				top: calc(#{$input-btn-padding-y-lg} + (#{$font-size-lg} - #{$font-size-base}));
+				left: $input-btn-padding-x;
+
+				content: "\e93b";
+				font-family: "adicons"; 
+				color: $gray-500;
+			}
+			.form-control-plaintext { 
+				padding-left: 2.5rem; 
+			}
+		} 
+
+		.form-control-plaintext {
+			font-weight: $font-weight-bold; 
+		}
+	}
+
+	.report__activity {
+		margin-left: auto; 
+		align-self: flex-end; 
+	}
+}
+
+.report-setup__header + .report-setup__controller {
+	border-top: 1px solid $gray-200;
+	padding-top: ($grid-gutter-width / 2);
+	margin-top: ($grid-gutter-width / 2);
+}
+
+
+
+// 리포트 설정 기능들
+.report-setup__controller {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+	> .form-group {
+		margin: 0;
+		+ .form-group { 
+			margin-left: 1.5rem;
+			border-top: 0;
+			padding-top: 0;
+		}  
+	}    
+
+	.btn-group {
+		> .btn {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			&:after {
+				margin-left: auto;
+			}
+		}
+		
+		&.btn-group__campaign > .btn { //캠페인 선택
+			width: 120px;
+		}
+		&[id="dropdown__campaign-item"]{ //선택된 캠페인 보기
+			width: 160px;
+		}
+
+		&.btn-group__depth > .btn { // 수준 선택
+			width: 100px;
+		}
+
+		&.btn-group__date-range > .btn { //기간 선택
+			width: 270px;
+		}
+
+		&.btn-group__analysis-period-unit > .btn { // 분석 기간 단위
+			min-width: 140px;
+		}
+
+		&.btn-group__analysis-item > .btn { // 분석 항목
+			min-width: 130px;
+		} 
+
+		&.btn-group__view-column > .btn { // 열보기 설정
+			min-width: 105px; 
+		}    
+	} 
+
+
+	.form-group__select-campaign {
+		.form-group__content { 
+			
+		}
+	}
+}
+
+
+// 캠페인 선택 드랍다운
+.btn-group__campaign {
+	.dropdown-menu {
+		max-height: 400px;
+		overflow-y: auto; 
+		.dropdown-item {
+			border-bottom: 1px solid $dropdown-border-color; 
+			padding: $list-group-item-padding-y $list-group-item-padding-x;  
+			.item-cont {
+				span, small {
+					display: block;
+				}
+			}
+		}
+	}
+}
+ 
+
+// 열보기 설정 드랍다운
+.btn-group__view-column {
+	.dropdown-menu { 
+		width: 640px;
+
+		.list-column {
+			padding: 0.25rem 1rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 0.25rem;
+
+			.theme-control {
+				padding:0;
+			}
+		}
+		.list-column-submit {
+			padding: 0.75rem;
+			border-top: 1px solid $gray-200; 
+			text-align: right;
+
+			.btn {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+
+.table-report { 
+	&.table-bordered {
+		border-right: 0;
+		border-left: 0;
+		tr {
+			th:first-child,
+			td:first-child {
+				border-left:0;
+			}
+			th:last-child,
+			td:last-child {
+				border-right:0; 
+			}
+		}
+	} 
+	th,
+	td {
+		vertical-align: middle !important;
+		white-space: nowrap; 
+	    //overflow: hidden;
+	    //text-overflow: ellipsis;
+	}
+	tbody { 
+		tr {
+			&.table__row-total { 
+				//box-shadow: 0 2px 4px rgba($black, 0.1);
+				th, td {
+					background-color: rgba($orange, 0.04);
+					font-weight: $font-weight-bold;
+					font-style: italic;
+					color: $orange;
+				}
+				@include hover {
+			      	background-color: rgba($orange, 0.1);
+			    }
+			}
+			&.table__row-channel {
+				//box-shadow: 0 2px 4px rgba($black, 0.1); 
+				th, td {
+					background-color: rgba($teal, 0.04);
+					font-weight: $font-weight-bold;
+					font-style: italic;
+					color: $teal;
+				}
+				@include hover {
+			      	background-color: rgba($teal, 0.1);
+			      	th, td {
+			      		color: darken($teal, 10%);
+			      	}
+			    }
+
+				.table__cell-header {
+					background-color: $white!important;
+					font-style: normal; 
+					color: $body-color!important;
+				}
+			}
+		}  
+		td {
+			.item-cont {  
+				+ .item-cont {
+					//margin-top: 0.5rem;
+					//padding-top: 0.5rem; 
+					//border-top: 1px dashed $gray-200;
+				} 
+			}
+
+			.status {
+				.dropdown-menu {
+					width: 15.625rem;
+				}
+				.list-group {
+					font-size: $font-size-sm;
+				}
+			}
+
+			.item-datesum { 
+				display: flex;
+				align-items: center;  
+				.datesum-toggle {
+					margin-left: auto; 
+					padding-left: ($grid-gutter-width / 2);
+				}
+			} 
+
+			
+		}
+	}
+} 
+
+
+// Integrated Operation Report
+// 통합 운영리포트
+
+
+// 채널별 캠페인 
+.card-report__channel-element {
+	.card-group {
+		.card {
+			.card__body {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+
+// 리포트 카드 리스트 - 공용 스타일
+.report-folder-list,
+.report-card-list { 
+	.card { 
+		.card__body {  
+			.status-xs {   
+				@extend .w-100;  
+				// 상태 정보가 2줄로 노출되는 경우 최소 높이
+				// calc(((상태 정보 폰트 크기 * 라인 헤이트) * 정보 개수) + 상태정보 간격)
+				min-height: calc(((#{$status-xs-font-size} * #{$line-height-base}) * 2) + #{$status-xs-spacer-y});
+
+				.status__item {
+					margin: 0;
+					+ .status__item {
+						margin-top: $status-xs-spacer-y;
+					}
+
+					> strong {
+						font-weight: $font-weight-normal;
+					}
+					> span {}
+				}
+			}
+		}
+	} 
+}  
+
+// 리포트 폴더 카드 리스트 스타일
+.report-folder-list  { 
+	.card-folder {   
+		// 폴더 추가인 경우
+		&.is-edit {
+			.card__body { 
+				// 주의
+				// font-size-base: 12px 일 때 : (고정 높이값) + (패딩값 * 2)
+				min-height: 96.250px + 30px; 
+			}
+		} 
+	} 
+}
+
+
+
+
+
+ // 리포트 카드 리스트 스타일 
+.report-card-list { 
+	.card-report { 
+		.card__body {  
+			.component-wrap {
+				// 포함된 구성 요소의 정보가 3개 일 경우 최소 높이값
+				// calc(((컴포넌트 폰트 사이즈 * 라인 헤이트) * 개수) + (컴포넌트 간격 * 간격 개수))
+				min-height: calc(((#{$component-font-size} * #{$line-height-base}) * 3) + (#{$component-spacer-y} * 2)); 
+			}
+			.component-list { 
+				@extend .mb-0;
+
+				li {
+					@extend .d-flex;
+					@extend .align-items-center;
+				
+					.ico {
+						@extend .mr-2;
+					}
+					.text-truncate {
+						@extend .d-inline-block;
+						max-width: 72%; 
+					}
+					.ect-count {
+						@extend .d-inline-block;
+						@extend .ml-2;
+						max-width: 24%;
+					}
+				}
+			} 
+		}
+	} 
+}  
+
+
+
+// 리포트에 포함된 캠페인 목록을 포함하고 있는 카드의 그룹 (통합리포트)
+.card-group-report-element {
+	.card { 
+		.card__body-h-fix {
+			height: 30rem;
+		} 
+		.list-group {
+			.theme-control {
+				.theme-control__label {
+					&::before {
+						top: calc(#{$font-size-base} / 2);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// 통합 리포트 상세정보 보기
+
+// 채널별 캠페인
+.card-report__channel-element { 
+	border-bottom: 0; 
+
+	.card-group__channel-element {
+		.card {
+			border-top: 0;
+			&:first-child {
+				border-left: 0;
+			}
+			&:last-child {
+				border-right: 0;
+			} 
+			
+			> .card__body {
+				@extend .p-0;
+			} 
+
+			.list-group { 
+			  	.list-group__item {  
+			    	.list-group__item-main {  
+			    		padding-right: 0;
+				      	padding-left: $list-group-item-padding-x;
+
+				      	.list-group__item-title {
+				      		@extend .mb-1;
+				      	}
+				    } 
+				    .btn {
+				    	left: 0;  
+				    	opacity: 1;
+				    }  
+			  	}
+			} 
+		}
+	}
+}
+
+// 분석 항목별 상귀 캠페인
+.card-report__top-campaign {
+	@extend .mt-3;
+	// (주의)
+	// 캠페인이 5개를 기준으로 고정된 높이값을 갖음.
+	//height: 515px;   
+}
+
+
+// 채널별 효율 분석 그래프
+.card-report__analysis-graph {
+	@extend .mt-3;
+	> .card__body {
+		background-color: $box-bg;
+	}
+
+	// 차트를 갖고 있는 카드
+	.card-chart {
+		margin-bottom: ($grid-gutter-width / 2);  
+
+		.chart {
+			min-height: 400px; 
+		}
+	}
+} 
+
+// 캠페인 상세 리포트  
+.card-report__detail-indicator {
+	@extend .mt-3;
+}
+
+
+
+

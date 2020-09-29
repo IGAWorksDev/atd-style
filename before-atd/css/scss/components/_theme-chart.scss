@@ -1,0 +1,113 @@
+
+
+.chart {  
+	display: flex;
+	flex-flow: column; 
+	height: 100%;
+	
+	.chart__date-range {
+		flex: none; 
+	} 
+	.chart__area { 
+		flex:  1 0 auto;
+		height: auto;
+	}
+	.chart__legend {
+		flex: none; 
+	}  
+	// layout end
+
+	// 차트 기간 설정
+	> .chart__date-range {   
+		.date-type {  } 
+		.date-range {
+			display: block;
+			margin-top: 0.5rem; 
+			font-size: $font-size-sm;
+			font-weight: $font-weight-normal; 
+			color: $gray-500;
+		}
+	}  
+
+	// 차트 범례
+	> .chart__legend {
+		.chart__legend-item {
+			@extend .d-flex;
+			@extend .flex-row;
+			@extend .align-items-center;
+			margin: 0;
+			font-size: $font-size-sm;
+
+			+ .chart__legend-item {
+				margin-top: 0.5rem;
+				padding-top: 0.5rem;
+				border-top: 1px dashed $gray-200 
+			}
+
+			> dt { 
+				@extend .d-flex;
+				@extend .align-items-center; 
+				max-width: 60%;
+
+				.chart__legend-color {
+					@extend .mr-2; 
+				}
+				.ico {
+					font-size: $font-size-lg;
+				}
+			} 
+			> dd { 
+				margin-bottom: 0; 
+			} 
+
+			// 차트 라벨을 중앙 정렬할 경우 : total, average
+			&.chart__legend-center {
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+				justify-content: center;
+				font-size: $font-size-base;
+				color: $active-color;
+			}
+			
+			// 범례를 '체크박스'역할로 인식할 경우
+			&[role="checkbox"]{
+				cursor: pointer;
+			}
+
+			// 범례가 체크된 상태 - 디폴트
+			&[aria-checked="true"]{}
+
+			// 범례가 언체크된 상태 - 옵션
+			&[aria-checked="false"] {
+				color: $gray-500;
+				.chart__legend-color {
+					color: $gray-500 !important;
+				}
+				.ico { 
+					&.ic-facebook {
+						&:before  {
+							color: $gray-500;
+						}
+					}
+					&.ic-adwords {
+						.path1,
+						.path2,
+						.path3 {
+							&:before  {
+								color: $gray-500;
+							}
+						}
+					}
+					&.ic-tradingworks {
+						.path1 {
+							&:before  {
+								color: $gray-500;
+							}
+						}
+					}
+				} 
+			}
+		} 
+	}
+} 
+ 

@@ -1,0 +1,361 @@
+
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$cellwidths: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$cellwidths: map-merge(
+  (
+    1: 1rem,
+    2: 2rem,
+    3: 3rem,
+    4: 4rem,
+    5: 5rem,
+    6: 6rem,
+    7: 7rem,
+    8: 8rem,
+    9: 9rem,
+    10: 10rem,
+    11: 11rem,
+    12: 12rem,
+    13: 13rem,
+    14: 14rem,
+    15: 15rem,
+    16: 16rem,
+    17: 17rem,
+    18: 18rem,
+    19: 19rem,
+    20: 20rem
+  ),
+  $cellwidths
+);
+
+@each $name, $cellwidth in $cellwidths {
+	.cell-w-#{$name} {
+		width: $cellwidth !important;
+		flex: 1 0 auto !important;
+	}
+}     
+
+.cell-w-auto {
+	width: 100%;
+	min-width: 10rem;
+	flex: 1 1 auto;
+}
+
+
+$div-table-border-width: 1px;
+$div-table-border-color: $gray-300;
+$div-table-cell-padding-y: $btn-padding-y;
+$div-table-cell-padding-x: $btn-padding-x;
+
+$div-table-theader-height: calc((#{$div-table-cell-padding-y} * 2) + (#{$font-size-base} * #{$line-height-base}));
+
+ 
+
+$div-table-bg:	transparent !default;
+$div-table-accent-bg:	rgba($gray-900, .05) !default;
+$div-table-hover-bg:	rgba($gray-900, .075) !default;
+$div-table-active-bg:	$div-table-hover-bg !default;
+
+
+ 
+.div-table-header { 
+	border-top: 1px solid $div-table-border-color;
+	border-bottom: 1px solid $div-table-border-color;
+	//font-weight: $font-weight-bold;
+	background-color: $div-table-accent-bg;
+}  
+
+.div-table-body {
+	border-top: 1px solid $div-table-border-color;
+	border-bottom: 1px solid $div-table-border-color;
+}
+
+
+.div-table-row { 
+	display: flex; 
+	flex-direction: row;  
+	justify-content: flex-start;
+	align-items: stretch;  
+}
+.div-table-row + .div-table-row { 
+	border-top: 1px solid $div-table-border-color; 
+}
+
+
+.div-table-cell {
+	flex: 1 1 auto; 
+	width: 100%; 
+	padding: $div-table-cell-padding-y $div-table-cell-padding-x; 
+
+	display: flex;
+	flex-direction: row;
+	align-items: center; 
+
+	> div {
+		width: 100%;
+	}
+}
+
+.div-table-cell + .div-table-cell {
+	border-left: 1px solid $gray-100;
+}
+
+
+.div-table-cell-full {
+	flex: 1 1 auto;
+	width: 100%;
+	padding: $div-table-cell-padding-y $div-table-cell-padding-x; 
+}
+
+ 
+.div-table-body {
+	.div-table-row {
+		&:hover {
+			background-color: $div-table-hover-bg;
+		}
+
+		.div-table-cell {
+			> div { 
+				word-break: break-all; 
+			}
+		}
+	}
+}
+
+.div-table-striped {
+	.div-table-tbody {
+		.div-table-row {
+			&:nth-of-type(#{$table-striped-order}) {
+	    		background-color: $div-table-accent-bg;
+	    	}
+		}
+	}
+}
+
+
+
+.div-table-cell--10 {
+	flex: 0 0 auto;
+	width: 10rem;
+}
+
+
+
+// 오디언스 조합 - 테이블 리스트 공통 스타일
+[class*="div-table-aud--mix"]{ 
+	.div-table-cell {
+		&--name {//오디언스 타이틀  
+			flex: 1 1 auto;
+			width: 10rem;
+		}
+		&--id {
+			flex: 0 0 auto;
+			width: 7rem;
+		}
+		&--scale {
+			flex: 0 0 auto;
+			width: 9rem; 
+		}
+		&--audranger {
+			flex: 0 0 auto;
+			width: 12rem;
+		}
+		&--date {
+			flex: 0 0 auto;
+			width: 8rem; 
+		} 
+		&--control {
+			flex: 0 0 auto;
+			width: 3rem; 
+		} 
+	}  
+}
+
+
+// 오디언스 조합 - 포스트백 추출
+.div-table-aud--mix-postback {}
+
+// 오디언스 조합 - 파일업로드
+.div-table-aud--mix-file {}
+
+// 오디언스 조합 - 애드브릭스 오디언스 스튜디오
+.div-table-aud--mix-abx-studio {}
+
+// 오디언스 조합 - A.I 예측 모수
+.div-table-aud--mix-ai-mosu {}
+
+// 오디언스 조합 - 유사타겟 페이스북
+.div-table-aud--mix-lookalike {}
+  
+// 오디언스 조합 - tw카테고리
+.div-table-aud--mix-tw-category {}
+
+// 페르소나
+.div-table-aud--mix-persona {}
+
+// 오디언스 태그
+.div-table-aud--mix-tag {}
+
+// 키워드
+.div-table-aud--mix-keyword {}
+
+// A.I예측 오디언스
+.div-table-aud--mix-ai-aud {}
+
+// MI DMP 유사타겟
+.div-table-aud--mix-dmp-target {}
+
+// 오디언스 조합
+.div-table-aud--mix-segment { 
+	.div-table-cell {
+		&--segment {
+			flex: 0 0 auto;
+			width: 8rem;
+		}
+		&--id {
+			flex: 0 0 auto;
+			width: 8rem;
+		} 
+		&--name {
+			flex: 1 1 auto;
+			width: 12rem;
+		}
+		&--scale {
+			flex: 0 0 auto;
+			width: 9rem; 
+		}
+		&--control {
+			flex: 0 0 auto;
+			width: 3rem; 
+		} 
+	}  
+}
+
+
+// ------------------------------------------
+
+// 키워드 기반 오디언스 만들기 - 
+[class*="div-table-aud--keyword"]{ 
+	.div-table-cell {
+		&--check {
+			flex: 0 0 auto;
+			width: 3rem; 
+		}
+		&--category {
+			flex: 1 1 auto;
+			width: 10rem;
+		}
+		&--keyword {
+			flex: 1 1 auto;
+			width: 8rem;
+		}
+		&--scale {
+			flex: 0 0 auto;
+			width: 9rem; 
+		}
+		&--control {
+			flex: 0 0 auto;
+			width: 3rem; 
+		}
+	}
+}
+
+// 키워드 오디언스 - 검색
+.div-table-aud--keyword-search {
+	.div-table-cell { 
+		&--keyword {
+			flex: 0 0 auto;
+			width: 8rem;
+		} 
+	}
+}
+
+// 키워드 오디언스 - 카테고리
+.div-table-aud--keyword-category {
+	.div-table-cell { 
+		&--keyword {
+			flex: 1 1 auto;
+			width: 8rem;
+		} 
+	}
+}
+
+// 키워드 오디언스 - 선택된 목록
+.div-table-aud--keyword-selected {
+	.div-table-cell { 
+		&--keyword {
+			flex: 0 0 auto;
+			width: 8rem;
+		} 
+	}
+}
+
+// ------------------------------------------
+
+// 애드브릭스 오디언스 스튜디오 
+.div-table-aud--adx-studio {
+	.div-table-cell {
+		&--check {
+			flex: 0 0 auto;
+			width: 3rem; 
+		}
+		&--name {
+			flex: 1 1 auto;
+			width: 20rem;
+		} 
+		&--status {
+			flex: 0 0 auto;
+			width: 14rem;
+		} 
+		&--id {
+			flex: 0 0 auto;
+			width: 10rem;
+		}
+		&--flatform {
+			flex: 0 0 auto;
+			width: 9rem; 
+		} 
+		&--scale {
+			flex: 0 0 auto;
+			width: 9rem; 
+		} 
+		&--date {
+			flex: 0 0 auto;
+			width: 10rem; 
+		} 
+	}
+}
+
+
+
+// ------------------------------------------
+
+// MI DMP 기반 오디언스 
+[class*="div-table-aud--dmp"] {
+	.div-table-cell {
+		&--name {
+			flex: 1 1 auto;
+			width: 20rem; 
+		}
+		&--flatform {
+			flex: 0 0 auto;
+			width: 9rem; 
+		}
+		&--scale {
+			flex: 0 0 auto;
+			width: 9rem; 
+		}
+		&--onboarding {
+			flex: 0 0 auto;
+			width: 10rem; 
+		}
+	}
+}
+
+
+
+
+
+
+

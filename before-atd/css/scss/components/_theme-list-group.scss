@@ -1,0 +1,312 @@
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 0;
+}
+
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group__item-action {
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: $list-group-action-color;
+  text-align: inherit; // For `<button>`s (anchors inherit)
+
+  // Hover state
+  @include hover-focus {
+    color: $list-group-action-hover-color;
+    text-decoration: none;
+    background-color: $list-group-hover-bg;
+  }
+
+  &:active {
+    color: $list-group-action-active-color;
+    background-color: $list-group-action-active-bg;
+  }
+}
+
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group__item {
+  position: relative;
+  display: block;
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
+  // Place the border on the list items and negative margin up for better styling
+  margin-bottom: -$list-group-border-width;
+  background-color: $list-group-bg;
+  border: $list-group-border-width solid $list-group-border-color;
+
+  &:first-child {
+    @include border-top-radius($list-group-border-radius);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    @include border-bottom-radius($list-group-border-radius);
+  }
+
+  @include hover-focus {
+    z-index: 1; // Place hover/active items above their siblings for proper border styling
+    text-decoration: none;
+  }
+
+  &.is-disabled,
+  &:disabled {
+    color: $list-group-disabled-color;
+    background-color: $list-group-disabled-bg;
+  }
+
+  // Include both here for `<a>`s and `<button>`s
+  &.is-active {
+    //z-index: 2; // Place active items above their siblings for proper border styling
+    color: $list-group-active-color;
+    background-color: $list-group-active-bg;
+    border-color: $list-group-active-border-color;
+  }
+
+  &.is-hidden {
+    background-color: $box-bg;
+  }
+}
+
+
+// Flush list items
+//
+// Remove borders and border-radius to keep list group items edge-to-edge. Most
+// useful within other components (e.g., cards).
+
+.list-group-flush {
+  .list-group__item {
+    border-right: 0;
+    border-left: 0;
+    @include border-radius(0);
+  }
+ 
+    .list-group__item:first-child {
+      border-top: 0;
+    } 
+ 
+    .list-group__item:last-child {
+      //border-bottom: $list-group-border-width solid $list-group-border-color;
+      //margin-bottom: -1px;
+    } 
+}
+
+
+
+
+
+// 리스트의 내용이 버튼을 갖고 있어야할 경우사용 
+// flexbox 스타일이 적용된 클래스
+.list-group-flex-row {
+    position: relative;   
+    .list-group__item { 
+        position: relative;
+        .list-group__item-main { 
+            width: 100%; 
+            padding-right: $list-group-item-padding-x; 
+        } 
+        .btn {
+            position: absolute;
+            top: $list-group-item-padding-y;
+            right: 0;
+            bottom: $list-group-item-padding-y;
+            padding-right: 0;
+            padding-left: 0;
+            width: ($list-group-item-padding-x * 2);
+            opacity: 0.3; 
+            background: transparent;
+        } 
+        &:hover {
+            .btn {
+                opacity: 1;
+            } 
+        } 
+    }
+}
+
+
+
+// Contextual variants
+//
+// Add modifier classes to change text and background color on individual items.
+// Organizationally, this must come after the `:hover` states.
+
+@each $color, $value in $theme-colors {
+  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+}
+
+
+
+
+
+// 리스트 그룹을 이용한 박스 스타일 
+.list-group-box { 
+    border: 1px solid $list-group-border-color;
+    border-radius: $border-radius;
+    background-color: $gray-100;
+}
+
+.list-group-box__header { 
+    padding: $list-group-item-padding-y $list-group-item-padding-x;
+    background-color: $gray-100;
+    border-bottom: 1px solid $list-group-border-color; 
+}
+
+.list-group-box__title {
+    font-weight: bold; 
+    margin: 0; 
+}  
+
+.list-group-box__body {
+    .list-group {}
+} 
+
+ 
+// 펼치고접히는 리스트 그룹인 경우
+.list-group-aside {
+    .list-group__item { 
+        padding: 0;
+        border: 0;
+        background: transparent;
+        margin-bottom: 0;
+
+        + .list-group__item {
+            border-top: $list-group-border-width solid rgba($list-group-border-color,0.05);
+        }
+
+        .list-group__item-main {
+            display: flex; 
+            flex-direction: row;
+            align-items: center; 
+
+            position: relative;  
+            padding: $list-group-item-padding-y $list-group-item-padding-x;
+            color: $body-color;
+            
+            .btn {
+                display: flex; 
+                align-items: center;
+                justify-content: center; 
+                transition: $transition-base; 
+                color: $gray-700;  
+                background-color: transparent;
+                border-color: transparent;
+                 
+                .ico { 
+                    transition: $transition-base;
+                }
+                
+                &.btn-toggle {
+                    &[aria-expanded="true"] { 
+                        color: $black;
+                        .ico { 
+                            transform: rotate(90deg);
+                            transition: $transition-base;
+                        }
+                    } 
+                }
+            }           
+
+            .list-group__item-link { 
+                color: $body-color; 
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: rgba($gray-200, 0.5);
+            }
+        }  
+
+        // 2depth list group
+        .list-group {
+            .list-group__item {
+                + .list-group__item {
+                    border-top: 0;
+                }
+                .list-group__item-main {
+                    padding-left: ($list-group-item-padding-x * 2.5);
+                }
+
+                &.is-active {
+                    background-color: $gray-200;
+                }
+            }
+        }
+
+        // 리스트 그룹 아이템이 활성화된 상태인 경우
+        &.is-active {
+            position: relative;
+            &:before {
+                content: " ";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 3px;
+                background-color: $gray-500;
+                z-index: 2;
+            }
+
+            > .list-group__item-main {  
+                background-color: $gray-200;
+                color: $black;
+
+                .list-group__item-link {
+                    color: $black;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }  
+
+        &.is-edit {  
+            .input-group { 
+                padding-right: $list-group-item-padding-x; 
+
+                .form-control {
+                    padding-right: ($list-group-item-padding-x * 2);
+                }
+                .input-group-append { 
+                    position: relative;
+                    width: 0;
+
+                    > .btn {
+                        z-index: 10;
+                        position: absolute;
+                        background-color: transparent; 
+                        transition: $transition-base; 
+                        
+                        &.btn-add {
+                            opacity: 0.3;
+                            right: 0; 
+                        }
+                        &.btn-close {
+                            opacity: 0.1;
+                            right: -($list-group-item-padding-x * 2); 
+                        }
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+
+                    }
+                }
+            }
+        } 
+
+    }
+}
+

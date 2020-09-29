@@ -1,0 +1,263 @@
+
+
+
+/* -------------------------------- */
+// .page__adlabel : 광고 계정 라벨
+
+.page__adlabel {
+	.page-header {
+		// 계정 라벨바 추가로 인한 높이값 계산
+		top: calc(#{$gnb-height} + #{$gnb-height});
+	} 
+	.aside {
+		// 계정 라벨바 추가로 인한 높이값 계산
+		top: calc(#{$gnb-height} + #{$page-header-height} + #{$gnb-height}); 
+		.aside__header {
+			height: $gnb-height; 
+		}
+
+		.aside__inner-label {
+			// 계정 라벨바 추가로 인한 높이값 계산
+			height: calc(100vh - (#{$gnb-height} + #{$page-header-height} + #{$gnb-height}));
+		}
+	}
+	.main {  
+		// 계정 라벨바 추가로 인한 높이값 계산
+		padding-top: calc(#{$gnb-height} + #{$page-header-height} + (#{$grid-gutter-width} / 2));
+		.main-header {
+			top: calc(#{$gnb-height} + #{$page-header-height} + #{$gnb-height});
+		}
+		.main-body {
+			padding: ($grid-gutter-width / 2) !important;
+		}
+	}
+}
+
+
+
+// 광고계정 라벨 대시보드
+.card-adlabel-dashboard { 
+
+	// 분석 항목별 차트
+	.card-analysis-chart { 
+		flex: 1 0 58%;
+		.card-chart {
+			border-bottom: 0;
+			.card__header {
+				height: 63px;
+			}
+			.card__body {
+				.chart { 
+					height: (545px - 63px - $grid-gutter-width); 
+				}
+			}
+		}
+	}
+
+	// 분석 항목별 캠페인
+	.card-analysis-campaign { 
+		flex: 1 0 42%;
+
+		.table-reponsive {
+			height: 545px;
+			background-color: $gray-100;
+		}
+
+		.table { 
+			background-color: $white;
+			th,
+			td {
+				vertical-align: middle;
+			}
+
+			tbody {
+				tr {
+					td {
+						height: ($table-cell-padding * 2) + (($font-size-base * $line-height-base) * 4) + 0.5rem;  
+					}
+				}
+			} 
+
+			.col-onoff {
+				width: 60px;
+			}
+			.col-campagin {
+				.adaccount {  }
+				.campaign {
+					border-top: 1px solid $gray-200;
+					margin-top: 0.25rem;
+					padding-top: 0.25rem; 
+				}
+			}
+			.col-analysis {
+				width: 110px;
+
+				// 분석항목 토글
+				.dropdown {
+					.item-toggle {
+						color: $body-color;
+					}
+				}
+
+				// 순서정렬
+				.btn-sorting { 
+					background: transparent;
+					border-color: transparent;
+					color: $gray-500;
+
+					&:hover {
+						@extend .btn-light:hover;
+					}
+
+					// 올림차순 일 경우
+					&.ordered-ascend {
+						color: $black;
+					}
+
+					// 내림차순 일 경우
+					&.ordered-descend {
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 광고라벨 캠페인 목록
+.card-adlabel-campagin {
+	.controller {
+		.dropdown {
+			transition: $transition-base;
+
+			&.is-hidden {
+				display: none;
+				transition: $transition-base;
+			} 
+			&.is-visiable {
+				transition: $transition-base;
+			}
+			
+			.dropdown-menu-adlabel { 
+				.list-dropdown-adlabel {
+					max-height: 160px !important;
+					margin: 0;
+				}
+			}
+			
+		}
+	}
+}
+
+// 그리드바 - 광고계정라벨
+.gridbar-adlabel {
+	.gridbar-row {  
+		.gcol-channel {
+			flex: 0 0 auto;
+			width: 5rem;
+			text-align: center;
+
+			.ico {
+				font-size: $font-size-xl;
+			}
+			small {
+				display: block;
+			}
+		}
+		.gcol-adaccount {
+			min-width: 25.5rem;
+		}
+		.gcol-label {
+			flex: 0 0 auto;
+			width: 22rem;
+		}
+		.gcol-count {
+			flex: 0 0 auto;
+			width: 10rem;
+		}
+		.gcol-budget {
+			flex: 0 0 auto;
+			width: 12rem;
+			//padding-right: calc(1.5rem + #{$table-cell-padding}) !important;
+		} 
+	}
+
+	.gridbar-footer {
+		padding: 0;
+		padding-left: 3rem;
+
+		.table-fixed { 
+			thead {
+				tr{
+					th { 
+						&:first-child {
+							border-left: 0;
+						}
+						&:last-child {
+							border-right: 0;
+						}
+					}
+					&:first-child {
+						th {
+							border-top: 0;
+						}
+					}
+				}
+			}
+			tbody {
+				tr {
+					th,
+					td { 
+						vertical-align: middle;
+						&:first-child {
+							border-left: 0;
+						}
+						&:last-child {
+							border-right: 0;
+						}
+					}
+					&:last-child {
+						th,
+						td {
+							border-bottom: 0;
+							&:first-child {
+								border-left: 0;
+							}
+							&:last-child {
+								border-right: 0;
+							}
+						}
+					}
+				}
+			}
+			.col-onoff {
+				font-size: $font-size-sm;
+				width: 5rem;
+			}
+			.col-campaign {}
+			.col-info {
+				width: 32rem;
+			}
+			.col-budget {
+				width: 12rem;
+			}
+		}
+	} 
+}
+ 
+.gridbar-adlabel--all {
+	@extend .gridbar-adlabel;
+
+	.gcol-adaccount {
+		min-width: 32.25rem;
+	}
+
+	.gridbar-footer { 
+		padding-left: 6rem;
+	}
+}
+
+
+
+
+

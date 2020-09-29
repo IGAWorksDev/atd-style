@@ -1,0 +1,86 @@
+
+
+// range selector
+// https://nitinhayaran.github.io/jRange/demo/
+// vendors/jquery.range/jquery.range.css";
+
+
+// range slider Overrides
+
+
+$audrange-bar-height: 0.875rem;
+$audrange-pointer-width: 2rem;
+$audrange-pointer-height: 2rem;
+$audrange-scale-height: 1.5rem;
+
+$audrange-pointer-label-font-size: 1rem;
+$audrange-pointer-label-line-height: 1;
+
+
+.audrange-slider {
+	padding: (($audrange-pointer-height - $audrange-bar-height) / 2) ($audrange-pointer-width / 2); 
+
+	.slider-container {
+		height: $audrange-bar-height; 
+		.back-bar {
+			z-index: 5;
+			height: $audrange-bar-height; 
+			border-radius: 0;
+			background: $gray-300;
+			border: 0;
+
+			.pointer {
+				width: $audrange-pointer-width;
+				height: $audrange-pointer-height;
+				border-radius: 2rem;
+				border: 0; 
+				top: -(($audrange-pointer-height - $audrange-bar-height) / 2); 
+				background: $white;
+				box-shadow:  0 1px 6px rgba($black, 0.6); 
+			} 
+			.pointer-label {
+				top: (($audrange-bar-height - ($audrange-pointer-label-font-size * $audrange-pointer-label-line-height)) / 2) ; 
+				color: $teal;
+				font-size: $audrange-pointer-label-font-size;
+				line-height: $audrange-pointer-label-line-height;
+				display: inline-block;
+				width: $audrange-pointer-width; 
+				text-align: center;
+				background: transparent;
+				z-index: 10;  
+
+				// pointer 안에 라벨값을 표시하며, 이로인해 0과 10일 경우 강제로 위치 조정함.
+				&[style="left: 0px;"] {
+					transition: $transition-base;
+					left: calc(0px - (#{$audrange-pointer-width} / 2)) !important;
+				}
+				&[style="left: 134px;"] {
+					transition: $transition-base;
+					left: calc(134px + (#{$audrange-pointer-width} / 2)) !important;
+				}
+			} 
+			.selected-bar {
+				border-radius: 1rem;
+				background: $teal; 
+			}
+		}  
+		.scale { 
+			top: -(($audrange-bar-height + $audrange-scale-height) / 2);
+			span {
+				border-color: $gray-400;
+				height: $audrange-scale-height;
+				opacity: 0.6;
+				ins {
+					display: none !important;
+					width: $audrange-pointer-width;
+					text-align: center;
+					left: -50%;
+				}
+			}
+		}  
+	}
+}
+
+
+
+

@@ -1,0 +1,107 @@
+
+
+.nav-floating {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 100;
+}
+
+
+/// 플로팅 가이드
+.dropdown-float.float-guide {
+  background-color: $info;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 0.875rem rgba($black, 0.5);
+  color: $white;
+
+  position: relative;
+
+  .btn-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    trainsition: $transition-base;
+
+    // 애니메이션 -- 페이지 로딩시 1번 재생됨
+    animation-duration: 4s;
+    animation-name: floating-in-decrease;
+    animation-delay: 1s;
+
+    .ico {
+      position: relative;
+      z-index: 2;
+      font-size: ($font-size-base * 2);
+      margin-top: -2px;
+      padding: 1rem;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    // 버튼의 라벨을 관리하는
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: attr(data-label);
+      padding-left: 1rem;
+      width: 140px;
+      height: 100%;
+      opacity: 0;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      // 애니메이션 -- 페이지 로딩시 1번 재생됨
+      // floating-in-decrease와 함께 사용되며, delay를 통해 조절됨.
+      animation-duration: 3.5s;
+      animation-name: floating-label-fadeInOut;
+      animation-delay: 1.25s;
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-menu {
+    width: 13rem;
+  }
+}
+
+
+// 플로팅 버튼 -- 늘어났다 줄어드는 애니메이션
+@keyframes floating-in-decrease {
+  0%, 100% {
+    width: 4rem;
+  }
+  20%, 80% {
+    width: 200px;
+  }
+}
+
+@keyframes floating-label-fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  40%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

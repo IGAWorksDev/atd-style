@@ -1,0 +1,275 @@
+
+
+// Table
+
+.table {
+	thead { 
+		box-shadow : 0 1px 4px 0 rgba(0,0,0,0.05);
+	}
+
+	tr {
+		&.is-expand {
+			th,
+			td {
+				background-color: rgba($gray-100, 0.8);
+			}
+		}
+		
+		&.table__row-attribute {
+			box-shadow: 0 3px 6px rgba(0,0,0, 0.2);
+			> th,
+			> td {
+				background-color: $white;
+				color: $black;
+				font-size: $font-size-base;  
+				vertical-align: middle;
+				.id-num {
+					font-weight: $font-weight-normal;
+				}
+			}  
+		}
+		&.table__row-sub {
+			> th,
+			> td { 
+				color: $gray-600; 
+				vertical-align: middle !important; 
+				background-color: rgba($gray-100, 0.75);
+			} 
+			+ tr.table__row-sub {
+				> th,
+				> td {  
+					border-top-style: dashed !important; 
+				}
+			}
+		}  
+	}
+
+	th,
+	td {
+		// 이미지가 있을 경우
+		figure {
+			margin: 0;
+			img {
+		    	max-width: 160px;
+		    	max-height: 50px;
+		    }
+		    figcaption {
+		    	margin-top: 3px;
+		    	font-weight: $font-weight-normal;
+		    	font-size: $font-size-sm;
+		    }
+		} 
+
+		// 아이콘이 있을 경우
+		.ico { 
+			&.ic-user-tag {
+				color: #20C4C8;
+			}
+			&.ic-adbrix {
+				color: #2998DF;
+			}
+			&.ic-ai-chip {
+				color: #20C4C8;
+			}
+			&.ic-postback {
+				color: #386EF3;
+			}
+			&.ic-file-upload-fill {
+				color: #A1B8D0;
+			}
+			&.ic-puzzle {
+				color: #60A712;
+			}
+		}
+	}
+
+	.sup-text,
+	.sub-text {
+		display: block;
+		font-size: 0.625rem;
+		font-weight: normal;
+	}
+} 
+
+
+.table-hover,
+.table__last-border,
+.table-bordered {
+	tbody {
+		tr{
+			&:last-child {
+				th,
+				td { 
+					border-bottom: 1px solid $table-border-color;
+				}
+			}
+		}
+	}
+}
+
+
+.table-fixed {
+	table-layout: fixed; 
+	word-break: break-all;
+	width: 100%;
+}
+
+
+
+
+ // 그리드에 테이틀 태그를 사용할 경우 해당 클래스 추가.
+.grid__table {   
+	font-size: $font-size-sm; 
+	caption {
+		caption-side: top; 
+		padding-top: 0;
+		font-size: $font-size-sm;  
+	}  
+
+	thead {
+		tr {
+			th {
+				border-top-width: 2px;
+				border-bottom-width: 1px; 
+			}
+		}
+	}
+	tbody { 
+		tr {
+			@include hover {
+				background-color: $white;
+			}
+			th,
+			td { 
+				border-top-style: dashed;
+				color: $body-color; 
+				vertical-align: middle;
+			} 
+			&:last-child {
+				th,
+				td {
+					border-bottom: $table-border-width dashed $table-border-color;
+				}
+			} 
+		}  
+	} 
+}
+
+
+// .card에 보더 테이블을 사용할 경우
+.table-card-bordered {
+	border-right: 0;
+	border-left: 0;
+	tr {
+		th:first-child,
+		td:first-child {
+			border-left:0;
+		}
+		th:last-child,
+		td:last-child {
+			border-right:0; 
+		}
+	}
+}
+
+
+
+
+// 테마 스크롤 사용하여 가로스크롤바 추가 할 때
+.theme-table-responsive { 
+	.table {
+		margin-bottom: 0 !important;
+	} 
+} 
+
+
+
+.table-data { 
+	&.table-bordered {
+		border-right: 0;
+		border-left: 0;
+		tr {
+			th:first-child,
+			td:first-child {
+				border-left:0;
+			}
+			th:last-child,
+			td:last-child {
+				border-right:0; 
+			}
+		}
+	} 
+	th,
+	td {
+		vertical-align: middle !important;
+		white-space: nowrap; 
+	    //overflow: hidden;
+	    //text-overflow: ellipsis;  
+	}
+	tbody { 
+		tr {
+			&.table__row-total { 
+				//box-shadow: 0 2px 4px rgba($black, 0.1);
+				th, td {
+					background-color: rgba($orange, 0.04);
+					font-weight: $font-weight-bold;
+					//font-style: italic;
+					color: $orange;
+				}
+				@include hover {
+			      	background-color: rgba($orange, 0.1);
+			    }
+			}
+			&.table__row-channel {
+				//box-shadow: 0 2px 4px rgba($black, 0.1); 
+				th, td {
+					background-color: rgba($teal, 0.04);
+					font-weight: $font-weight-bold;
+					//font-style: italic;
+					color: $teal;
+				}
+				@include hover {
+			      	background-color: rgba($teal, 0.1);
+			      	th, td {
+			      		color: darken($teal, 10%);
+			      	}
+			    }
+
+				.table__cell-header {
+					background-color: $white!important;
+					font-style: normal; 
+					color: $body-color!important;
+				}
+			}
+		}  
+		td {
+			.item-cont {  
+				+ .item-cont {
+					//margin-top: 0.5rem;
+					//padding-top: 0.5rem; 
+					//border-top: 1px dashed $gray-200;
+				} 
+			}
+
+			.status {
+				.dropdown-menu {
+					width: 15.625rem;
+				}
+				.list-group {
+					font-size: $font-size-sm;
+				}
+			}
+
+			.item-datesum { 
+				display: flex;
+				align-items: center;  
+				.datesum-toggle {
+					margin-left: auto; 
+					padding-left: ($grid-gutter-width / 2);
+				}
+			} 
+		}
+	}
+} 
+
+ 

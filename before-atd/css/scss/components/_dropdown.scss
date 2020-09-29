@@ -1,0 +1,29 @@
+
+
+/// 드롭다운 메뉴의 최대 크기 지정함. 
+/// 아이템이 늘어나면 스크롤바가 생겨야함
+.dropdown-menu {
+	.theme-scrollbar {
+		max-height: 20rem;
+	}
+}
+
+
+/// 사용자 권한 설정
+.dropdown-item__authority {
+	padding-left: $dropdown-item-padding-x + 1.25rem;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		color: $text-muted;
+		left:$dropdown-item-padding-x;
+	}
+}
+.dropdown-item__authority.is-active {
+	&:before { 
+		content: $ic-check;
+		font-family: 'adicons';
+		color: $body-color;
+	}
+} 

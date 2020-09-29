@@ -1,0 +1,20 @@
+
+
+
+[data-toggle="collapse"] {
+	&[aria-expanded="false"] {
+		.ico {
+			@extend .ic-chevron-circle-down;
+			font-family: 'adicons';
+			transition: $transition-base;
+		}
+	}
+	&[aria-expanded="true"] {
+		.ico {
+			@extend .ic-chevron-circle-fill-right;
+			font-family: 'adicons';
+			transition: $transition-base;
+		}
+	}
+}
+ 

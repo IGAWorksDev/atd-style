@@ -1,0 +1,103 @@
+
+ 
+// Tabs style
+
+
+.nav-tabs {
+	.nav-item {
+		.nav-link {
+			background: transparent;
+			border-width: 0;
+			color: $body-color;
+
+			&.active {
+				border-bottom-width: 2px;
+				border-color: $primary;
+				color: $primary;
+				font-weight: $font-weight-bold;
+			}
+		}
+	}
+}
+
+
+
+.nav-tabs {
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	.nav-tabs__item {
+		display: inline-block; 
+		font-weight: $font-weight-bold;
+		position: relative;  
+
+		.nav-tabs__link {
+			position: relative;
+			display: block; 
+			padding: 0.875rem 1rem; 
+			color: $body-color;
+			&:hover {
+				color: theme-color("primary");
+			}
+		}  
+
+		&.is-active {
+			.nav-tabs__link { 
+				color: theme-color("primary");
+				font-weight: $font-weight-bold;
+				&:after {
+					content: " "; 
+					position: absolute; 
+					bottom: -1px;
+					left: 0;
+					display: block;
+					width: 100%; 
+					height: 2px;
+					background-color: theme-color("primary");
+				} 
+			}
+		}
+	}
+}
+
+
+
+
+
+.nav-pills {
+	.nav-item {
+		.nav-link {
+			background-color: $gray-200;
+			color: $body-color;
+			font-weight: bold;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+		&.is-active {
+			.nav-link {
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+}
+
+
+// 패딩이 타이트한(좁은)경우 : 아이콘을 크게 보이고 싶을 때 사용
+// .nav곽 연관되는 스타일과 같이 사용할 것
+.nav-tight {
+	.nav-item {
+		.nav-link {
+			display: flex;
+			align-items: center;
+			.ico {
+				font-size: $font-size-xl;
+				@extend .mr-2;
+			}
+		}
+	}
+}
