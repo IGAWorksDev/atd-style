@@ -1,10 +1,37 @@
 
+
+// Button sizes
+//
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+
+  // Manually declare to provide an override to the browser default
+  // - 브라우저 기본값에 대한 재정의를 제공하도록 수동으로 선언
+  @include border-radius($border-radius, 0);
+}
+
+
+// Circle Button sizes
+//
+@mixin button-circle-size($padding-y, $padding-x, $width, $height, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  width: $width;
+  height: $height;
+  @include font-size($font-size);
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+
+
+
 // btn-text-{$theme-colors}
 //
 //
 @mixin button-text-variant($color, $active-color: $color, $active-background: rgba($color, 0.1)){
   color: $color;
-
 
   &:hover,
   &.is-active {
@@ -37,7 +64,7 @@
 //
 @mixin button-contained-variant($background, $border,
   $hover-background: darken($background, 5%), $hover-border: darken($border, 10%),
-  $active-background: darken($background,7.5%), $active-border: darken($background,12.5%)) {
+  $active-background: darken($background, 8%), $active-border: darken($border, 12%)) {
 
   color: $white;
   background-color: $background;
@@ -70,13 +97,19 @@
 
 // btn-outlined-{$theme-colors}
 //
-@mixin button-outlined-variant($color, $color-hover: $color, $active-background: rgba($color, 0.1), $active-border: $color) {
+@mixin button-outlined-variant($color, $border,
+  $hover-color: $color, $hover-background: rgba($color, 0.1), $hover-border: $border,
+  $active-color: darken($color, 12%), $active-background: rgba($color, 0.1), $active-border: darken($border, 12%)) {
   color: $color;
   border-color: $color;
-
-  &:hover,
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-background;
+    border-color: $hover-border;
+    text-decoration: none;
+  }
   &.is-active {
-    color: $color-hover;
+    color: $active-color;
     background-color: $active-background;
     border-color: $active-border;
     text-decoration: none;
@@ -97,32 +130,6 @@
     cursor: default;
     box-shadow: none;
   }
-}
-
-
-
-// Button sizes
-//
-@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
-  padding: $padding-y $padding-x;
-  @include font-size($font-size);
-  line-height: $line-height;
-
-  // Manually declare to provide an override to the browser default
-  // - 브라우저 기본값에 대한 재정의를 제공하도록 수동으로 선언
-  @include border-radius($border-radius, 0);
-}
-
-
-// Circle Button sizes
-//
-@mixin button-circle-size($padding-y, $padding-x, $width, $height, $font-size, $line-height, $border-radius) {
-  padding: $padding-y $padding-x;
-  width: $width;
-  height: $height;
-  @include font-size($font-size);
-  line-height: $line-height;
-  border-radius: $border-radius;
 }
 
 
