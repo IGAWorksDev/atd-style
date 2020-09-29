@@ -1,0 +1,2166 @@
+<html lang="ko">
+<style>
+    .audience-list__footer {
+        margin-bottom: 1rem;
+    }
+
+    .td-height {
+        height: 60px !important;
+    }
+</style>
+<head>
+    <title>Audience | TRADINGWORKS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.css">
+    <link rel="stylesheet" href="../css/tradingworks.css">
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+<!--    <link rel="stylesheet" type="text/css" href="../css/gnb.css">-->
+        <link rel="stylesheet" href="../../assets/css/gnb.css">
+    <link rel="stylesheet" type="text/css" href="../css/adlabel-bar.css">
+    <link rel="stylesheet" type="text/css" href="../css/tw_account.css">
+</head>
+<body>
+<!-- session sync -->
+<!-- platform -->
+<div class="platform">
+    <nav id="common_header" class="gnb"><!-- gnb -->
+        <button class="gnb__navbar-toggler" role_type="button" data-toggle="collapse"
+                data-target="#gnb__navbar-collapse" aria-controls="gnb__navbar-collapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+		<span class="gnb__navbar-toggler-icon">
+			<i class="ico ic-bars"></i>
+		</span>
+        </button>
+
+        <a class="gnb__app" href="https://app.tradingworks.com/"
+           onclick="gtag('event', '홈', {'event_category':'ATD','event_label':'홈'});">
+            <img class="app__logo" src="https://app.tradingworks.com/images/TW__symbol.svg" alt="Tradingworks"
+                 style="width: 100%; height: 65%; margin-top: 5%; margin-left: 0px;">
+        </a>
+
+        <div class="gnb__navbar-collapse collapse" id="gnb__navbar-collapse">
+            <div class="gnb__navbar-inner">
+                <ul class="gnb__navbar-nav mr-auto">
+                    <li class="gnb__nav-item" id="common_nav_item_insight">
+                        <a class="gnb__nav-link dropdown-toggle" id="__tf_header_insight" href="#"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Insight
+                        </a>
+                        <div class="dropdown-menu gnb__dropdown-menu" aria-labelledby="__tf_header_insight">
+                            <a class="dropdown-item gnb__dropdown-item" href="http://atd.tradingworks.com"
+                               onclick="$('.gnb__nav-item').removeClass('is-active'); $('#common_nav_item_insight').addClass('is-active'); gtag('event', 'GNB', {'event_category':'ATD','event_label':'마켓 인사이트'});">Market
+                                Insight</a>
+                        </div>
+                    </li>
+
+                    <li class="gnb__nav-item is-active" id="common_nav_item_audience">
+                        <a class="gnb__nav-link" href="https://audience.tradingworks.com"
+                           onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'오디언스'});">Audience</a>
+                    </li>
+
+                    <li class="gnb__nav-item dropdown" id="common_nav_item_campaign">
+                        <a class="gnb__nav-link dropdown-toggle" id="__tf_header_campaign" href="#"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Campaign
+                        </a>
+                        <div class="dropdown-menu gnb__dropdown-menu" aria-labelledby="__tf_header_campaign">
+                            <a class="dropdown-item gnb__dropdown-item" href="#"
+                               onclick="javascript:location.href='https://google.tradingworks.com';;return false;">Google
+                                Ads</a>
+                            <a class="dropdown-item gnb__dropdown-item" href="#"
+                               onclick="TwHeader.show_ad_account_list('tf2'); return false;">Facebook</a>
+                            <a class="dropdown-item gnb__dropdown-item" href="#"
+                               onclick="TwHeader.show_ad_account_list('dsp');return false;">TW DSP</a>
+
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://app.tradingworks.com/campaigns/kakao">kakaomoment</a>
+                        </div>
+                    </li>
+
+                    <li class="gnb__nav-item dropdown" id="common_nav_item_report">
+                        <a class="gnb__nav-link dropdown-toggle" id="__tf_header_report" href="#" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Report
+                        </a>
+                        <div class="dropdown-menu gnb__dropdown-menu" aria-labelledby="__tf_header_report">
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://r.tradingworks.com/integrated_report/reports"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'통합 리포트'});">Integrated
+                                Report</a>
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://r.tradingworks.com/integrated/folders"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'운영 인사이트'});">Operation
+                                Insight</a>
+
+                            <a class="dropdown-item gnb__dropdown-item" href="https://r.tradingworks.com/ci/folders"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'광고주 리포트'});">Advertiser
+                                Report</a>
+
+                            <a class="dropdown-item gnb__dropdown-item" href="https://r.tradingworks.com/ncpi/reports"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'NCPI 맞춤 리포트'});">NCPI
+                                Report</a>
+                        </div>
+                    </li>
+
+                    <li class="gnb__nav-item dropdown" id="common_nav_item_creative">
+                        <a class="gnb__nav-link dropdown-toggle" id="__tf_header_creative" href="#"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Asset
+                        </a>
+                        <div class="dropdown-menu gnb__dropdown-menu" aria-labelledby="__tf_header_creative">
+                            <a class="dropdown-item gnb__dropdown-item" href="https://creative.tradingworks.com/login"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'제품 피드'});">Feed</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="gnb__navbar-nav ml-auto">
+
+                    <li class="gnb__nav-item" id="common_nav_item_tmp-support">
+                        <a class="gnb__nav-link" href="http://atd.tradingworks.com/#/tmp-support/notice/list"
+                           onclick="javascript:$('.gnb__nav-item').removeClass('is-active'); javascript:document.getElementById('common_nav_item_tmp-support').setAttribute('class', 'gnb__nav-item dropdown is-active'); gtag('event', 'GNB', {'event_category':'ATD','event_label':'TMP-Support'});">Support</a>
+                    </li>
+
+
+                    <li class="gnb__nav-item dropdown">
+                        <a class="gnb__nav-link" href="#" id="common_nav_item_setting" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ico ic-cog"></i>
+                            <span class="sr-only">Setting</span>
+                        </a>
+
+                        <div class="dropdown-menu gnb__dropdown-menu" aria-labelledby="common_nav_item_setting">
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://app.tradingworks.com/admin/ad_accounts/"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'사용자 권한'});">
+                                Ad Accounts
+                            </a>
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://app.tradingworks.com/admin/companies/"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'사용자 권한'});">
+                                Companies
+                            </a>
+                            <a class="dropdown-item gnb__dropdown-item" href="https://app.tradingworks.com/admin/users/"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'사용자 권한'});">
+                                Users
+                            </a>
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://app.tradingworks.com/billing/view/"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'광고 정산'});">
+                                Billing
+                            </a>
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://app.tradingworks.com/dmp/dmp_history/"
+                               onclick="gtag('event', 'GNB', {'event_category':'ATD','event_label':'DMP사용내역'});">
+                                DMP Usage History
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="gnb__nav-account gnb__nav-item dropdown">
+                        <a class="gnb__nav-link" id="common_nav_item_user" href="#" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            <span class="gnb__account-mail" style="display: block">ben.cha@igaworks.com</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right gnb__dropdown-menu"
+                             aria-labelledby="common_nav_item_user">
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://app.tradingworks.com/member/modify">정보 수정</a>
+                            <a class="dropdown-item gnb__dropdown-item"
+                               href="https://app.tradingworks.com/sso/logout?next=https%3A%2F%2Faudience.tradingworks.com%2Fsso%2Flogout">로그아웃</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /gnb -->
+    <nav id="labels_header">
+    </nav>
+
+    <!-- page -->
+    <!-- page -->
+    <style>
+        div.page {
+            padding-top: calc(2rem * 2);
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+        div.scroll_box {
+            overflow: auto;
+            overflow-x: hidden;
+            max-height: 250px;
+        }
+
+        .theme-control {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .label-hover:hover {
+            color: #007bff;
+        }
+
+        .bg-color {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .alert-div {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: #721c24;
+            background-color: #f8d7da;
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 2px;
+        }
+
+    </style>
+    <div class="page">
+        <div class="page__inner">
+            <main class="main">
+                <header class="main__header">
+                    <div class="container-fluid">
+                        <div class="py-3">
+                            <h3 class="main__title">
+                                <strong>모든 오디언스 목록</strong>
+                            </h3>
+                            <p id="sub_menu_text">
+                                사용자 계정에서 만든 모든 오디언스 목록입니다.
+                            </p>
+                            <div class="toolbar">
+                                <div class="left" id="user_mode_setting">
+                                    <div class="btn-group" role="group">
+                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                            새 오디언스
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="/audience/mk_midmp/tw_category"
+                                               data-toggle="tooltip" data-placement="right" title=""
+                                               data-original-title="TRADINGWORKS에서 분류한 카테고리 기준 오디언스">TW 카테고리</a>
+                                            <a class="dropdown-item" href="/audience/mk_midmp/persona"
+                                               data-toggle="tooltip" data-placement="right" title=""
+                                               data-original-title="TRADINGWORKS에서 정리한 페르소나 성격의 오디언스">페르소나</a>
+                                            <a class="dropdown-item" href="/audience/game_profile" data-toggle="tooltip"
+                                               data-placement="right" title=""
+                                               data-original-title="게임 카테고리 특화(충성지수/탐색지수) 오디언스">게임 유저 프로파일링</a>
+                                            <a class="dropdown-item" href="/audience/upload" data-toggle="tooltip"
+                                               data-placement="right" title=""
+                                               data-original-title="csv, txt형태로 보유한 오디언스 파일 업로드">파일 업로드</a>
+                                            <a class="dropdown-item" href="/audience/offline_biz" data-toggle="tooltip"
+                                               data-placement="right" title=""
+                                               data-original-title="마트, 병원 등 특정 업종 주위에서 활동하는 사용자를 대상으로하는 오디언스">오프라인
+                                                업종</a>
+                                            <a class="dropdown-item" href="/audience/postback" data-toggle="tooltip"
+                                               data-placement="right" title=""
+                                               data-original-title="TRADINGWORKS와 연동이 된 광고주 앱 포스트백을 활용한 오디언스">포스트백
+                                                추출</a>
+                                            <a class="dropdown-item"
+                                               href="https://facebook.tradingworks.com//target/lookalike"
+                                               target="_blank" data-toggle="tooltip" data-placement="right" title=""
+                                               data-original-title="Facebook 유사 타겟 (TW for Facebook 새 탭 열림)">
+                                                Facebook 유사타겟
+                                                <i class="ico ic-external-link ml-1" style="font-size: larger"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-primary ml-3" href="/audience/audience_mix_new"
+                                       data-toggle="tooltip" data-placement="right" title=""
+                                       data-original-title="데모그래픽, 카테고리, 키워드 등 다양한 타겟팅을 활용한 오디언스 조합">
+                                        <i class="ico ic-audience"></i> 오디언스 조합
+                                    </a>
+                                    <button class="btn btn-primary ml-3" id="btn_modal_send_aud" data-toggle="modal"
+                                            data-target="#modal-send-aud" disabled=""
+                                            onclick="gtag('event', '오디언스_공통', {'event_category':'ATD','event_label':'오디언스 온보딩'});">
+                                        <i class="ico ic-share"></i>
+                                        오디언스 온보딩
+                                    </button>
+                                    <button class="btn btn-primary ml-3" id="btn_modal_share_aud" data-toggle="modal"
+                                            data-target="#modal-share-aud" disabled=""
+                                            onclick="gtag('event', '오디언스_공통', {'event_category':'ATD','event_label':'오디언스 공유'});">
+                                        <i class="ico ic-share"></i>
+                                        오디언스 공유
+                                    </button>
+                                    <div class="alert-div ml-3" id="alert_delete_user_audience" style="display: none;">
+                                        <i class="ico ic-exclamation-circle-fill"></i> 곧 삭제 예정인 오디언스가 있습니다. 상태를 확인해주세요.
+                                        <div class="ml-3" style="display: inline; cursor: pointer;"
+                                             onclick="hide_alert()">
+                                            x
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="left" id="ad_account_mode_setting" style="display: none">
+                                    <div class="btn-group" role="group" style="width: 400px">
+                                        <a class="btn btn-outline-secondary dropdown-toggle" href="#"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                           style="text-align: left">
+                                            <div style="display: inline-block; width: 95%" id="">
+                                                <input type="hidden" id="ad_account_id">
+                                                <input type="hidden" id="ad_account_no">
+                                                <div>
+                                                    <img id="img_url" src="" class="img-size-lg" alt=""
+                                                         style="display: inline-block">
+                                                    <div id="dropdown_ad_account_mode_text"
+                                                         style="display: inline-block">
+                                                        광고계정을 선택하세요
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-menu"
+                                             style="width: 400px; overflow: auto;overflow-x: hidden;max-height: 350px;">
+                                            <div class="px-2">
+                                                <div class="search-bar">
+                                                    <label class="search-bar__label sr-only" for="search_report_line">검색하기</label>
+                                                    <input type="text" class="search-bar__form" placeholder="검색..."
+                                                           id="search_ad_account_mode">
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="card-header border-top">
+                                                <strong>최근 광고계정</strong>
+                                            </div>
+                                            <div id="latest_match_account_list">
+                                                <div class="dropdown-item select-option" onclick="">
+                                                    test-liam
+                                                    <small class="id-num">ID 1</small>
+                                                </div>
+                                            </div>
+                                            <div class="card-header border-top">
+                                                <strong>모든 광고계정</strong>
+                                            </div>
+                                            <div id="ad_account_mode_list">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-div ml-3" id="alert_delete_ad_account_audience"
+                                         style="display: none;">
+                                        <i class="ico ic-exclamation-circle-fill"></i> 곧 삭제 예정인 오디언스가 있습니다. 상태를 확인해주세요.
+                                        <div class="ml-3" style="display: inline; cursor: pointer;"
+                                             onclick="hide_alert()">
+                                            x
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="float-right">
+                                        <div class="btn-group btn-group__view-column ml-3">
+                                            <button class="btn btn-primary dropdown-toggle" type="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                광고 계정 동기화
+                                            </button>
+                                            <div class="dropdown-menu" id="dropdowns"
+                                                 style="width: 120px !important; min-width: 120px; !important;">
+                                                <div class="theme-control ml-3">
+                                                    <label class="theme-control__label label-hover"
+                                                           style="font-weight: 700;" onclick="sync_ad_account(3)"
+                                                           data-toggle="tooltip" data-placement="right" title=""
+                                                           data-original-title="연결 된 광고 계정 목록을 최신화 합니다.">
+                                                        Google Ads
+                                                    </label>
+                                                </div>
+                                                <div class="theme-control ml-3 mt-1">
+                                                    <label class="theme-control__label label-hover"
+                                                           style="font-weight: 700;" onclick="sync_ad_account(2)"
+                                                           data-toggle="tooltip" data-placement="right" title=""
+                                                           data-original-title="연결 된 광고 계정 목록을 최신화 합니다.">
+                                                        Facebook
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-secondary" id="btn_change_mode"
+                                                onclick="change_audience_mode()">
+                                            <i class="ico ic-sync"></i>
+                                            광고계정 모드로 전환
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /toolbar -->
+                        </div>
+                    </div>
+                </header>
+                <div class="main__body">
+                    <div class="main__body-inner">
+                        <div class="container-fluid">
+                            <input type="hidden" value="" id="is_adv">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- toolbar -->
+                                    <div class="toolbar d-flex justify-content-between">
+                                        <div class="tools-wrapper left d-flex">
+                                            <div class="btn-group btn-group__view-column">
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                    오디언스 종류
+                                                </button>
+                                                <div class="dropdown-menu" id="audience_type_filter_dropdown"
+                                                     style="width: 180px; !important; min-width: 180px; !important;">
+                                                    <div id="filter-aud-tabContent__type">
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-all" value="all"
+                                                                   data-text="전체">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-all">
+                                                                전체
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-upload" value="upload"
+                                                                   data-text="파일 업로드">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-upload">
+                                                                파일 업로드
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-postback" value="postback"
+                                                                   data-text="포스트백 추출">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-postback">
+                                                                포스트백 추출
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-audience_mix"
+                                                                   value="audience_mix" data-text="오디언스 조합">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-audience_mix">
+                                                                오디언스 조합
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-category" value="category"
+                                                                   data-text="카테고리">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-category">
+                                                                카테고리
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-persona" value="persona"
+                                                                   data-text="페르소나">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-persona">
+                                                                페르소나
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-ai_prediction"
+                                                                   value="ai_prediction" data-text="A.I 예측모수">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-ai_prediction">
+                                                                A.I 예측모수
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-offline" value="offline"
+                                                                   data-text="오프라인 업종">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-offline">
+                                                                오프라인 업종
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-dmp_lookalike"
+                                                                   value="dmp_lookalike" data-text="MI DMP 유사타겟">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-dmp_lookalike">
+                                                                MI DMP 유사타켓
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-app_package"
+                                                                   value="app_package" data-text="보라-앱패키지">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-app_package">
+                                                                보라-앱패키지
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-bora_category_persona"
+                                                                   value="bora_category_persona"
+                                                                   data-text="보라-카테고리/페르소나">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-bora_category_persona">
+                                                                보라-카테고리/페르소나
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-bora_mix" value="bora_mix"
+                                                                   data-text="보라-믹스">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-bora_mix">
+                                                                보라-믹스
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-demo" value="demo"
+                                                                   data-text="보라-지역/자산">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-demo">
+                                                                보라-지역/자산
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-detarget" value="detarget"
+                                                                   data-text="제외 적용 오디언스">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-detarget">
+                                                                제외 적용 오디언스
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-facebook_lookalike"
+                                                                   value="facebook_lookalike" data-text="Facebook 유사타겟">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-facebook_lookalike">
+                                                                Facebook 유사타겟
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-game_loyalty"
+                                                                   value="game_loyalty" data-text="게임 충성자">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-game_loyalty">
+                                                                게임 충성지수
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-audtype-tab-game_explorer"
+                                                                   value="game_explorer" data-text="게임 탐색자">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-audtype-tab-game_explorer">
+                                                                게임 탐색지수
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-column-submit" style="text-align: center">
+                                                        <button type="button" class="btn btn-outline-primary"
+                                                                name="btn_add_filter">
+                                                            적용하기
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group btn-group__view-column ml-2">
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                    오디언스 상태
+                                                </button>
+                                                <div class="dropdown-menu" id="audience_status_filter_dropdown"
+                                                     style="width: 115px; !important; min-width: 115px; !important;">
+                                                    <div id="filter-aud-tabContent__status">
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-status-tab-all" value="all"
+                                                                   data-text="전체">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-status-tab-all">
+                                                                전체
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-status-tab-01" value="1" data-text="진행중">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-status-tab-01">
+                                                                진행중
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-status-tab-02" value="2" data-text="완료">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-status-tab-02">
+                                                                완료
+                                                            </label>
+                                                        </div>
+                                                        <div class="theme-control theme-checkbox ml-2">
+                                                            <input type="checkbox" class="theme-control__input"
+                                                                   id="filter-status-tab-03" value="3" data-text="중지">
+                                                            <label class="theme-control__label"
+                                                                   for="filter-status-tab-03">
+                                                                중지
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-column-submit" style="text-align: center">
+                                                        <button type="button" class="btn btn-outline-primary"
+                                                                name="btn_add_filter">
+                                                            적용하기
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="theme-control theme-checkbox ml-3 mt-1"
+                                                 id="search_delete_audience" style="display: none;">
+                                                <input type="checkbox" class="theme-control__input"
+                                                       id="is_check_delete_audience">
+                                                <label class="theme-control__label" for="is_check_delete_audience">
+                                                    삭제예정 오디언스만 보기
+                                                </label>
+                                            </div>
+                                            <div class="filters d-flex flex-wrap pt-0">
+                                                <div class="filters-wrapper d-flex flex-wrap" id="selected_filters">
+                                                    <div class="filter-tag" id="filter_audience_type"
+                                                         style="display:none">
+                                                        <div class="filter-tag__body">
+                                                            <h6 class="filter-tag__title d-inline-block">
+                                                                <strong>오디언스 종류</strong>
+                                                            </h6>
+                                                            <span class="filter-tag__item text-truncate">
+                                                        </span>
+                                                            <span class="filter-tag__others" style="display: none">
+                                                            외 3개
+                                                        </span>
+                                                        </div>
+                                                        <div class="filter-tag__footer">
+                                                            <a href="#" class="filter-tag__delete">
+                                                                <i class="ico ic-close-circle-fill"></i>
+                                                                <span class="sr-only">삭제하기</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="dropdown-menu pb-0">
+                                                            <h6 class="dropdown-header border-bottom">
+                                                                <i class="ico ic-funnel"></i>
+                                                                <strong>오디언스 종류</strong>
+                                                            </h6>
+                                                            <div class="theme-scrollbar mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar"
+                                                                 style="position: relative; overflow: visible;">
+                                                                <div id="mCSB_1"
+                                                                     class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
+                                                                     style="max-height: 0px;" tabindex="0">
+                                                                    <div id="mCSB_1_container"
+                                                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                                                         style="position:relative; top:0; left:0;"
+                                                                         dir="ltr">
+                                                                        <ul class="list-group list-group-flush"
+                                                                            id="dropdown_aud_filter_aud_types">
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-upload"
+                                                                                           value="upload">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-upload">
+                                                                                        파일 업로드
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-postback"
+                                                                                           value="postback">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-postback">
+                                                                                        포스트백 추출
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-audience_mix"
+                                                                                           value="audience_mix">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-audience_mix">
+                                                                                        오디언스 조합
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-category"
+                                                                                           value="category">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-category">
+                                                                                        카테고리
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-persona"
+                                                                                           value="persona">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-persona">
+                                                                                        페르소나
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-ai_prediction"
+                                                                                           value="ai_prediction">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-ai_prediction">
+                                                                                        A.I 예측 모수
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-offline"
+                                                                                           value="offline">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-offline">
+                                                                                        오프라인 업종
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-dmp_lookalike"
+                                                                                           value="dmp_lookalike">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-dmp_lookalike">
+                                                                                        MI DMP 유사타겟
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-app_package"
+                                                                                           value="app_package">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-app_package">
+                                                                                        보라-앱패키지
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-bora_category_persona"
+                                                                                           value="bora_category_persona">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-bora_category_persona">
+                                                                                        보라-카테고리/페르소나
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-bora_mix"
+                                                                                           value="bora_mix">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-bora_mix">
+                                                                                        보라-믹스
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-demo"
+                                                                                           value="demo">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-demo">
+                                                                                        보라-지역/자산
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-detarget"
+                                                                                           value="detarget">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-detarget">
+                                                                                        제외 적용 오디언스
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-facebook_lookalike"
+                                                                                           value="facebook_lookalike">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-facebook_lookalike">
+                                                                                        Facebook 유사타겟
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-game_loyalty"
+                                                                                           value="game_loyalty">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-game_loyalty">
+                                                                                        게임 충성지수
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-group-item ">
+                                                                                <div class="form-check">
+                                                                                    <input type="checkbox"
+                                                                                           class="form-check-input"
+                                                                                           id="filter-audtype-game_explorer"
+                                                                                           value="game_explorer">
+                                                                                    <label class="form-check-label"
+                                                                                           for="filter-audtype-game_explorer">
+                                                                                        게임 탐색지수
+                                                                                    </label>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="mCSB_1_scrollbar_vertical"
+                                                                     class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
+                                                                     style="display: none;">
+                                                                    <div class="mCSB_draggerContainer">
+                                                                        <div id="mCSB_1_dragger_vertical"
+                                                                             class="mCSB_dragger"
+                                                                             style="position: absolute; min-height: 50px; top: 0px;">
+                                                                            <div class="mCSB_dragger_bar"
+                                                                                 style="line-height: 50px;"></div>
+                                                                        </div>
+                                                                        <div class="mCSB_draggerRail"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-tag" id="filter_audience_status"
+                                                         style="display:none">
+                                                        <div class="filter-tag__body">
+                                                            <h6 class="filter-tag__title d-inline-block">
+                                                                <strong>상태</strong>
+                                                            </h6>
+                                                            <span class="filter-tag__item text-truncate">
+                                                        </span>
+                                                        </div>
+                                                        <div class="filter-tag__footer">
+                                                            <a href="#" class="filter-tag__delete">
+                                                                <i class="ico ic-close-circle-fill"></i>
+                                                                <span class="sr-only">삭제하기</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="dropdown-menu pb-0">
+                                                            <h6 class="dropdown-header">
+                                                                <i class="ico ic-funnel"></i>
+                                                                <strong>상태</strong>
+                                                            </h6>
+                                                            <ul class="list-group list-group-flush">
+                                                                <li class="list-group-item">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input"
+                                                                               id="filter-status-01" value="1">
+                                                                        <label class="form-check-label"
+                                                                               for="filter-status-01">
+                                                                            진행중
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input"
+                                                                               id="filter-status-02" value="2">
+                                                                        <label class="form-check-label"
+                                                                               for="filter-status-02">
+                                                                            완료
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input"
+                                                                               id="filter-status-03" value="3">
+                                                                        <label class="form-check-label"
+                                                                               for="filter-status-03">
+                                                                            중지
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tools-wrapper right">
+                                            <div class="search-bar">
+                                                <label class="search-bar__label sr-only">검색하기</label>
+                                                <input type="search" id="search_text" name="search_text"
+                                                       class="search-bar__form" placeholder="오디언스 검색">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive" id="div_audience_list">
+                                    <table class="table table-striped table-hover table-fixed">
+                                        <colgroup>
+                                            <col width="30px">
+                                            <col width="260px">
+                                            <col width="120px">
+                                            <col width="120px">
+                                            <col width="80px">
+                                            <col width="160px">
+
+                                            <col width="200px">
+                                            <col width="70px">
+                                            <col width="140px">
+                                            <col width="140px">
+                                            <col width="100px">
+                                            <col width="100px">
+
+                                            <col width="90px">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                            </th>
+                                            <th>
+                                                오디언스 이름
+                                                <button class="btn btn-light btn-sorting p-0 ml-2 "
+                                                        data-value="audience_name">
+                                                    <i class="ico ic-sort"></i>
+                                                    <span class="sr-only"></span>
+                                                </button>
+                                            </th>
+                                            <th>
+                                                오디언스 종류
+                                                <button class="btn btn-light btn-sorting p-0 ml-2 "
+                                                        data-value="audience_type">
+                                                    <i class="ico ic-sort"></i>
+                                                    <span class="sr-only"></span>
+                                                </button>
+                                            </th>
+                                            <th>
+                                                규모
+                                                <button class="btn btn-light btn-sorting p-0 ml-2 " data-value="count">
+                                                    <i class="ico ic-sort"></i>
+                                                    <span class="sr-only">정렬순서</span>
+                                                </button>
+                                            </th>
+                                            <th>
+                                                플랫폼
+                                            </th>
+                                            <th>
+                                                TW 오디언스 ID
+                                            </th>
+
+                                            <th>
+                                                오디언스 범위
+                                            </th>
+                                            <th>
+                                                상태
+                                                <button class="btn btn-light btn-sorting p-0 ml-2 " data-value="status">
+                                                    <i class="ico ic-sort"></i>
+                                                    <span class="sr-only"></span>
+                                                </button>
+                                            </th>
+                                            <th>
+                                                광고계정
+                                            </th>
+                                            <th>
+                                                공유
+                                            </th>
+                                            <th>
+                                                생성/공유일
+                                                <button class="btn btn-light btn-sorting p-0 ml-2 active ordered-descend"
+                                                        data-value="regist_datetime">
+                                                    <i class="ico ic-sort-down"></i>
+                                                    <span class="sr-only">정렬순서</span>
+                                                </button>
+                                            </th>
+                                            <th>
+                                                업데이트일
+                                                <button class="btn btn-light btn-sorting p-0 ml-2 "
+                                                        data-value="update_datetime">
+                                                    <i class="ico ic-sort"></i>
+                                                    <span class="sr-only">정렬순서</span>
+                                                </button>
+                                            </th>
+                                            <th>
+                                                작업도구
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="audience_list">
+                                        <tr data-audience_no="52196" data-audience_id="48942425"
+                                            data-regist_user_id="420" data-user_id="420" data-ad_account_no=""
+                                            data-audience_type_name="파일 업로드" data-ext_audience_id="" data-service=""
+                                            data-account_id="" data-audience_name="파일 업로드_202007031426"
+                                            data-audience_type="1" data-platform="1" data-country_code="KOR"
+                                            data-count="10" data-delete-datetime-day="">
+                                            <td class="td-height">
+                                                <div class="form-check">
+                                                    <input class="form-check-input position-static audience_check"
+                                                           type="checkbox" data-ad-accounts="Array"
+                                                           data-is_my_audience="1"
+                                                           data-audience_name="파일 업로드_202007031426" data-status="2"
+                                                           data-audience_type="1" value="48942425">
+                                                </div>
+                                            </td>
+                                            <td class="td-height">
+                                                <div class="text-truncate w-100" data-toggle="tooltip"
+                                                     data-placement="bottom" title=""
+                                                     data-original-title="파일 업로드_202007031426">파일 업로드_202007031426
+                                                </div>
+                                            </td>
+                                            <td class="td-height">
+                                                파일 업로드
+                                            </td>
+                                            <td class="td-height" align="right">
+                                                10
+                                            </td>
+                                            <td class="td-height">
+                                                Android
+                                            </td>
+                                            <td class="td-height">
+                                                48942425
+                                            </td>
+                                            <td class="td-height">
+                                                <span>제공안함</span>
+                                            </td>
+                                            <td class="td-height">
+                                                완료
+                                            </td>
+                                            <td class="td-height">
+                                            </td>
+                                            <td class="td-height">
+                                            </td>
+                                            <td class="td-height">
+                                                2020.07.03 14:28
+                                            </td>
+                                            <td class="td-height">
+                                                2020.07.03
+                                            </td>
+                                            <td class="td-height">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle"
+                                                            type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        도구
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item btn_lookalick_midmp" href="#"
+                                                           data-toggle="modal" data-target="#modal-edit-lookalikeAud">
+                                                            MI DMP 유사타겟 만들기
+                                                        </a>
+                                                        <a class="dropdown-item btn_matching_count" href="#"
+                                                           data-toggle="modal" data-target="#modal-of-aud-match">
+                                                            매칭율 확인
+                                                        </a>
+                                                        <a class="dropdown-item btn_audience_send_one" href="#"
+                                                           data-toggle="modal" data-target="#modal-send-aud"
+                                                           onclick="click_send_aud(2)">
+                                                            오디언스 온보딩
+                                                        </a>
+                                                        <a class="dropdown-item btn_audience_share_one" href="#"
+                                                           data-toggle="modal" data-target="#modal-share-aud"
+                                                           onclick="click_share_aud()">
+                                                            오디언스 공유
+                                                        </a>
+                                                        <a class="dropdown-item btn_audience_detarget" href="#"
+                                                           data-toggle="modal" data-target="#modal-edit-detarget-aud">
+                                                            오디언스 제외
+                                                        </a>
+                                                        <a class="dropdown-item btn_audience_delete_one" href="#"
+                                                           data-toggle="modal" data-target="#modal-delete-aud">
+                                                            오디언스 삭제
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <!-- 모달: 오디언스 추가 -->
+                                    <div class="modal modal-of-delete" tabindex="-1" role="dialog"
+                                         id="modal--of-aud-plus" data-backdrop="static" data-keyboard="false">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">
+                                                        테스트 오디언스 등록
+                                                    </h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-modal__form-group">
+                                                        <label class="form-modal__label">오디언스 ID</label>
+                                                        <div class="form-modal__input-wrapper">
+                                                            <input type="hidden" class="form-control "
+                                                                   name="test_audience_id" id="test_audience_id">
+                                                            <input type="hidden" class="form-control "
+                                                                   name="test_country_code" id="test_country_code">
+                                                            <input type="text" class="form-control " name="adid"
+                                                                   id="adid">
+                                                        </div>
+                                                    </div>
+                                                    <small class="form-modal__form-group">
+                                                        ※ 테스트 ID는 추가 7일후에 만료됩니다.
+                                                    </small>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-secondary btn-custom"
+                                                            data-dismiss="modal" onclick="reset_modal()">취소
+                                                    </button>
+                                                    <button type="button"
+                                                            class="btn btn-primary btn-custom btn_test_audience"
+                                                            data-type="add">추가하기
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- model-edit-detarget -->
+                                    <div class="modal fade" id="modal-edit-detarget-aud" tabindex="-1" role="dialog"
+                                         aria-labelledby="modal-edit-detarget-title" aria-hidden="true"
+                                         data-backdrop="static" data-keyboard="false">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modal-edit-detarget-title">
+                                                        <strong>
+                                                            오디언스 제외하기
+                                                        </strong>
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close" onclick="reset_modal()">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <!-- modal-body Contents -->
+                                                    <!-- card -->
+                                                    <div class="card mt-3">
+                                                        <div class="card-header">
+                                                            <h6 class="m-0">
+                                                                <strong>타겟 설정</strong>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <div class="form-group__label">
+                                                                    타겟 이름 입력
+                                                                </div>
+                                                                <input type="text" class="form-control"
+                                                                       id="detarget_audience_name"
+                                                                       placeholder="오디언스 이름을 입력하세요.">
+                                                            </div>
+                                                            <!-- /form-group -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- /card -->
+                                                    <!-- card -->
+                                                    <div class="card mt-3">
+                                                        <div class="card-header">
+                                                            <h6 class="m-0">
+                                                                <strong>원본 오디언스 정보</strong>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <input type="hidden" name="origin_audience_id"
+                                                                   id="origin_audience_id" value="">
+                                                            <input type="hidden" name="origin_audience_type"
+                                                                   id="origin_audience_type" value="">
+                                                            <input type="hidden" name="origin_audience_platform"
+                                                                   id="origin_audience_platform" value="">
+                                                            <input type="hidden" name="origin_country_code"
+                                                                   id="origin_country_code" value="">
+                                                            <input type="hidden" name="detarget_audience_account_id"
+                                                                   id="detarget_audience_account_id" value="">
+                                                            <input type="hidden" name="detarget_audience_service"
+                                                                   id="detarget_audience_service" value="">
+                                                            <dl class="d-flex align-items-center m-0">
+                                                                <dt class="m-0 mr-2">
+                                                                    오디언스 이름 :
+                                                                </dt>
+                                                                <dd class="m-0" id="origin_audience_name">
+                                                                    -
+                                                                </dd>
+                                                            </dl>
+
+                                                            <dl class="d-flex align-items-center m-0">
+                                                                <dt class="m-0 mr-2">
+                                                                    모수 :
+                                                                </dt>
+                                                                <dd class="m-0" id="origin_audience_count">
+                                                                    0
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /card -->
+                                                    <!-- card -->
+                                                    <div class="card mt-3">
+                                                        <div class="card-header">
+                                                            <h6 class="m-0">
+                                                                <strong>제외 오디언스 설정</strong>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="card-body pb-0">
+                                                            <!-- dropdown-detarget-->
+                                                            <dl class="d-flex align-items-center m-0">
+                                                                <dd class="m-0 mr-2">
+                                                                    사용 가능한 오디언스가 없습니다.
+                                                                </dd>
+                                                            </dl>
+
+                                                            <!-- /dropdown-adlabels -->
+                                                        </div>
+                                                        <div class="card-body mt-0 pt-0">
+                                                            <div class="theme-scrollbar mCustomScrollbar _mCS_2 mCS-autoHide mCS_no_scrollbar"
+                                                                 style="height: 150px; overflow: visible; position: relative;">
+                                                                <div id="mCSB_2"
+                                                                     class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
+                                                                     style="max-height: 150px;" tabindex="0">
+                                                                    <div id="mCSB_2_container"
+                                                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                                                         style="position:relative; top:0; left:0;"
+                                                                         dir="ltr">
+                                                                        <ul class="list-group list-group-flush "
+                                                                            id="select_except_audience_list">
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="mCSB_2_scrollbar_vertical"
+                                                                     class="mCSB_scrollTools mCSB_2_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
+                                                                     style="display: none;">
+                                                                    <div class="mCSB_draggerContainer">
+                                                                        <div id="mCSB_2_dragger_vertical"
+                                                                             class="mCSB_dragger"
+                                                                             style="position: absolute; min-height: 50px; top: 0px;">
+                                                                            <div class="mCSB_dragger_bar"
+                                                                                 style="line-height: 50px;"></div>
+                                                                        </div>
+                                                                        <div class="mCSB_draggerRail"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <span class="text-danger">* 오디언스는 최대 5개까지 선택 가능합니다.</span>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- /card -->
+                                                    <!-- card -->
+                                                    <div class="card mt-3">
+                                                        <div class="card-body">
+                                                            <button class="btn btn-sm btn-outline-secondary"
+                                                                    id="btn_except_cnt">
+                                                                모수 확인
+                                                            </button>
+                                                            <span class="parameter-cnt text-muted">
+                            <span id="except_cnt">0</span>
+                        </span>
+
+                                                        </div>
+                                                    </div>
+                                                    <!-- /card -->
+
+                                                    <!-- modal-body Contents -->
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-secondary"
+                                                            id="btn_dismiss_dmp_detarget" data-dismiss="modal"
+                                                            onclick="reset_modal()">취소
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary"
+                                                            id="btn_create_detarget" disabled="">오디언스 만들기
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/ model-edit-detarget -->
+
+                                    <div class="modal fade" id="modal-share-ad-accounts" tabindex="-1" role="dialog"
+                                         aria-labelledby="modal-share-ad-accounts-title" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document"
+                                             style="width: 800px !important;">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modal-share-ad-accounts-title">
+                                                        <strong>
+                                                            온보딩 된 광고계정 관리
+                                                        </strong>
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close" onclick="cancel_get_audiences()">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <!-- card-group -->
+                                                    <div class="card-group">
+                                                        <!-- card -->
+                                                        <div class="card">
+                                                            <div class="p-3">
+                                                                <div id="match_ad_accounts_audience_name"></div>
+                                                                <div id="match_ad_accounts_audience_type"></div>
+                                                                <div id="match_ad_accounts_audience_count"></div>
+                                                                <div id="match_ad_accounts_regist_user_name"></div>
+                                                            </div>
+                                                            <!-- card-body -->
+                                                            <div class="card-body p-0">
+                                                                <div class="table-responsive theme-table-responsive">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr class="table--ordered">
+                                                                            <th scope="col">
+                                                                                상태
+                                                                            </th>
+                                                                            <th scope="col">채널</th>
+                                                                            <th scope="col">광고 계정 이름</th>
+                                                                            <th scope="col">광고 계정 ID</th>
+                                                                            <th scope="col">온보딩 날짜</th>
+                                                                            <th scope="col">관리</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody id="match_ad_account_list">
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /card-body -->
+                                                        </div>
+                                                        <!-- /card -->
+                                                    </div>
+                                                    <!-- card-group -->
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-secondary"
+                                                            data-dismiss="modal" onclick="cancel_get_audiences()">취소
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="modal-disconnect-ad-accounts" tabindex="-1"
+                                         role="dialog" aria-labelledby="modal-disconnect-ad-accounts-title"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="modal-disconnect-ad-accounts-title">광고
+                                                        계정 연결 해제</h3>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <strong>선택한 광고 계정과 오디언스의 연결이 해제 됩니다.</strong>
+                                                    <div class="p-2"></div>
+                                                    <div>
+                                                        연결 해제 시 이 오디언스는 해당 광고 계정에 더이상 업데이트 되지 않습니다.<br>
+                                                        광고 계정에서 이 오디언스를 완전히 삭제 하기 위해서는 해당 채널에서<br>
+                                                        이 오디언스를 제거해야 합니다.<br>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn" data-dismiss="modal">취소</button>
+                                                    <button type="submit" class="btn btn-primary"
+                                                            onclick="click_delete_match_ad_account(this)">확인
+                                                    </button>
+                                                    <input type="hidden" id="delete_match_ad_account_audience_id">
+                                                    <input type="hidden" id="delete_match_ad_account_no">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="modal-share-users" tabindex="-1" role="dialog"
+                                         aria-labelledby="modal-share-users-title" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document"
+                                             style="width: 750px !important;">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modal-share-users-title">
+                                                        <strong>
+                                                            공유 사용자 관리
+                                                        </strong>
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close" onclick="cancel_get_audiences()">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <!-- card-group -->
+                                                    <div class="card-group">
+                                                        <!-- card -->
+                                                        <div class="card">
+                                                            <div class="p-3">
+                                                                <div id="shared_users_audience_name"></div>
+                                                                <div id="shared_users_audience_type"></div>
+                                                                <div id="shared_users_audience_count"></div>
+                                                                <div id="shared_users_regist_user_name"></div>
+                                                            </div>
+                                                            <div class="p-3">
+                                                                ※ 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이
+                                                                오디언스를 사용 할 수 없습니다.
+                                                                해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다
+                                                            </div>
+                                                            <!-- card-body -->
+                                                            <div class="card-body p-0">
+                                                                <div class="table-responsive theme-table-responsive">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr class="table--ordered">
+                                                                            <th scope="col">
+                                                                                상태
+                                                                            </th>
+                                                                            <th scope="col">회사 이름</th>
+                                                                            <th scope="col">사용자 이름</th>
+                                                                            <th scope="col">공유 날짜</th>
+                                                                            <th scope="col">관리</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody id="shared_user_list">
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /card-body -->
+                                                        </div>
+                                                        <!-- /card -->
+                                                    </div>
+                                                    <!-- card-group -->
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-secondary"
+                                                            data-dismiss="modal" onclick="cancel_get_audiences()">취소
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="modal-disconnect-users" tabindex="-1" role="dialog"
+                                         aria-labelledby="modal-disconnect-users-title" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="modal-disconnect-users-title">공유 해제</h3>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <strong>선택한 사용자와 오디언스 공유가 해제 됩니다.</strong>
+                                                    <div class="p-2"></div>
+                                                    <div>
+                                                        선택한 오디언스의 공유가 해제 됩니다.
+                                                        공유 해제 시 이 오디언스는 더 이상 사용 할 수 없습니다.
+                                                        단, 공유 해제 전 광고 계정에 온보딩 한 오디언스는 삭제 되지 않습니다.
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn" data-dismiss="modal">취소</button>
+                                                    <button type="submit" class="btn btn-primary"
+                                                            onclick="click_delete_shared_user(this)">확인
+                                                    </button>
+                                                    <input type="hidden" id="delete_match_shared_user_audience_id">
+                                                    <input type="hidden" id="delete_match_shared_user_id">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <footer class="audience-list__footer">
+                                        <nav aria-label="pagination">
+                                            <ul class="pagination justify-content-center mb-0">
+                                                <li class="page-item active" data-page="1"><a class="page-link"
+                                                                                              href="#">1</a></li>
+                                            </ul>
+                                        </nav>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- /page -->
+    <nav class="nav-floating">
+        <div class="dropdown dropup dropdown-float float-guide">
+            <button class="btn btn-info" data-label="무엇을 도와드릴까요?" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                <span class="ico ic-question-circle-fill"></span>
+                <span class="sr-only">튜토리얼</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" x-placement="top-end"
+                 style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(37px, -2px, 0px);">
+                <a class="dropdown-item"
+                   href="https://drive.google.com/file/d/1IlFKBFkkW3fnxeGiYBdQZ9Iwr4ENTGTX/view?usp=sharing"
+                   target="_blank">오디언스 사용 가이드</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <template id="template_account_list_item">
+        <li class="list-group-item list-group-item-action">
+            <div class="d-flex align-items-center justify-content-between">
+                <input type="hidden" name="send_ad_accounts" class="form-check-input"
+                       id="receive-adaccount-check-[account_id]" value="[value]">
+                <div class="list-item-main">
+                <span class="text-truncate item-title d-block">
+                    <img src="/images/ic-facebook.svg" class="img-size-lg mr-1">
+                    <span class="account_name"></span>
+                </span>
+                    <small class="item-id ml-4">
+                        ID <span class="account_id"></span>
+                    </small>
+                </div>
+                <button class="btn btn-close px-1 py-0" data-value="0">
+                    <i class="ico ic-close-circle"></i>
+                    <span class="sr-only">삭제</span>
+                </button>
+            </div>
+        </li>
+    </template>
+    <template id="template_except_audience_item">
+        <li class="list-group-item list-group-item-action">
+            <div class="d-flex align-items-center justify-content-between">
+                <input type="hidden" name="except_audience" class="form-check-input" value="[audience_id]">
+                <div class="list-item-main text-truncate">
+                    <span class="detarget_audience_type">[[audience_type]]</span>
+                    <span class="text-truncate detarget_audience_name">[audience_name]</span>
+                </div>
+                <button class="btn btn-close px-1 py-0 btn_detarget_delete">
+                    <i class="ico ic-close-circle"></i>
+                    <span class="sr-only">삭제</span>
+                </button>
+            </div>
+        </li>
+    </template>
+
+    <!-- 오디언스 보내기 modal-send-aud -->
+    <div class="modal fade" id="modal-send-aud" tabindex="-1" role="dialog" aria-labelledby="modal-send-aud-title"
+         aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document" style="width: 450px !important;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-send-aud-title">
+                        <strong>
+                            오디언스 온보딩
+                        </strong>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="reset_modal()">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- card-group -->
+                    <div class="card-group">
+                        <!-- card -->
+                        <div class="card" style="overflow:auto; overflow-x:hidden; max-height: 400px;">
+                            <strong class="ml-3 mt-3">선택한 오디언스를 광고 계정에 온보딩 합니다.</strong>
+                            <div class="p-3 row">
+                                <div class="col-4" style="padding-right: 0;">
+                                    <select id="select_channel_type" class="form-control">
+                                        <option value="">선택</option>
+                                        <option value="1">DSP</option>
+                                        <option value="2">Facebook</option>
+                                        <option value="3">Google</option>
+                                        <option value="4">kakaomoment</option>
+                                    </select>
+                                </div>
+                                <div class="col-8" style="padding-left: 5px;">
+                                    <div class="search-bar w-100">
+                                        <label class="search-bar__label sr-only">검색하기</label>
+                                        <input type="text" class="search-bar__form"
+                                               placeholder="광고 계정 이름, 광고 계정 ID 검색.." id="search_user_match_ad_accounts">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-header border-top">
+                                <strong>최근 광고계정</strong>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive theme-table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr class="table--ordered">
+                                            <th scope="col">
+                                                <input type="checkbox" value="" disabled="">
+                                            </th>
+                                            <th scope="col">채널</th>
+                                            <th scope="col">광고 계정</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="user_match_latest_ad_accounts">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-header border-top">
+                                <strong>모든 광고계정</strong>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive theme-table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr class="table--ordered">
+                                            <th scope="col">
+                                                <input type="checkbox" value="" disabled="">
+                                            </th>
+                                            <th scope="col">채널</th>
+                                            <th scope="col">광고 계정</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="user_match_ad_account_list">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal"
+                            onclick="reset_modal()">
+                        취소
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn_send_audience">
+                        오디언스 온보딩
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal-send-aud -->
+    <div class="modal fade" id="modal-share-aud" tabindex="-1" role="dialog" aria-labelledby="modal-share-aud-title"
+         aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document" style="width: 600px !important;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-share-aud-title">
+                        <strong>
+                            오디언스 공유
+                        </strong>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="reset_modal()">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- card-group -->
+                    <div class="card-group">
+                        <!-- card -->
+                        <div class="card">
+                            <strong class="ml-3 mt-3">선택한 오디언스를 사용자에게 공유 합니다.</strong>
+                            <div class="p-3">
+                                <div class="search-bar w-100">
+                                    <label class="search-bar__label sr-only">검색하기</label>
+                                    <input type="search" class="search-bar__form" placeholder="사용자 이름, 사용자 계정 검색"
+                                           id="search_users">
+                                </div>
+                            </div>
+                            <!-- card-body -->
+                            <div class="card-body p-0">
+                                <div class="table-responsive theme-table-responsive scroll_box">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr class="table--ordered">
+                                            <th scope="col">
+                                                <input type="checkbox" value="">
+                                            </th>
+                                            <th scope="col">회사 이름</th>
+                                            <th scope="col">사용자 이름</th>
+                                            <th scope="col">사용자 계정</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="user_list">
+                                        <tr>
+                                            <td style="text-align: center" colspan="4">
+                                                <div class="none-content">
+                                                    <div class="none-content__inner">
+                                                        <i class="ico ic-exclamation-triangle-fill"></i>
+                                                        <p id="p_notice_no_reports" class="text-muted">
+                                                            확인 가능한 내역이 없습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /card-body -->
+                        </div>
+                        <!-- /card -->
+                    </div>
+                    <!-- card-group -->
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal"
+                            onclick="reset_modal()">
+                        취소
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn_share_audience">오디언스 공유하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 오디언스 삭제 모달 modal-delete-aud -->
+    <div class="modal fade" id="modal-delete-aud" tabindex="-1" role="dialog"
+         aria-labelledby="modal-sadeletend-aud-title" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-delete-aud-title">
+                        <strong>
+                            오디언스 삭제하기
+                        </strong>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <p class="bg-light p-3">
+                            <strong>
+                                <input type="hidden" name="delete_audience_no" value="0">
+                                <input type="hidden" name="delete_audience_id" value="0">
+                                <input type="hidden" name="delete_ext_audience_id" value="0">
+                                <input type="hidden" name="delete_audience_type" value="0">
+                                <input type="hidden" name="delete_audience_service" value="dsp">
+                                <input type="hidden" name="delete_audience_account_id" value="0">
+                                <span id="delete_audience_name"><span>
+                        </span></span></strong>
+                        </p>
+                        <p class="text-danger p-0">
+                            오디언스를 삭제하시겠습니까?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn_audience_delete">삭제하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal-delete-aud -->
+
+    <!-- MIDMP 유사타겟 modal-edit-lookalikeAud -->
+    <div class="modal fade" id="modal-edit-lookalikeAud" tabindex="-1" role="dialog"
+         aria-labelledby="modal-edit-lookalikeAud-title" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-edit-lookalikeAud-title">
+                        <strong>
+                            MI DMP 유사타겟 만들기
+                        </strong>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="reset_modal()">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- modal-body Contents -->
+                    <!-- card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="m-0">
+                                <strong>원본 오디언스 정보</strong>
+                            </h6>
+                        </div>
+                        <div class="card-footer border-top-0">
+                            <dl class="d-flex align-items-center m-0">
+                                <dt class="m-0 mr-2">
+                                    오디언스 ID
+                                </dt>
+                                <dd class="m-0" id="lookalike_audience_id">
+                                </dd>
+                            </dl>
+                            <dl class="d-flex align-items-center m-0">
+                                <dt class="m-0 mr-2">
+                                    오디언스 이름
+                                </dt>
+                                <dd class="m-0" id="lookalike_audience_name">
+                                </dd>
+                            </dl>
+                            <input type="hidden" id="lookalike_platform">
+                        </div>
+                    </div>
+                    <!-- /card -->
+
+                    <!-- card -->
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h6 class="m-0">
+                                <strong>타겟 설정</strong>
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <div class="form-group__label">
+                                    타겟 이름 입력
+                                </div>
+                                <input type="text" class="form-control" id="lookalike_name"
+                                       placeholder="유사타겟 이름을 입력하세요.">
+                            </div>
+
+                            <div class="form-group pt-2 mt-0 border-top-0">
+                                <div class="form-group__label">
+                                    타겟 크기 선택
+                                </div>
+                                <div class="form-gorup__control">
+                                    <div class="d-flex align-items-start justify-content-between">
+                                        <!-- audranger -->
+                                        <div class="audranger">
+                                            <small class="audRange-lower">
+                                                상위
+                                            </small>
+                                            <div class="btn-group btn-group-lg" data-toggle="buttons"
+                                                 id="checkboxs_dmp_lookalike">
+                                                <label class="btn lookalike-1" data-value="1">
+                                                    <input type="checkbox" name="checkbox_dmp_lookalike" value="1">
+                                                    <span>
+                                                    <i class="ico ic-check"></i>
+                                                    <span class="sr-only">1</span>
+                                                </span>
+                                                </label>
+                                                <label class="btn lookalike-2" data-value="2">
+                                                    <input type="checkbox" name="checkbox_dmp_lookalike" value="2">
+                                                    <span>
+                                                    <i class="ico ic-check"></i>
+                                                    <span class="sr-only">2</span>
+                                                </span>
+                                                </label>
+                                                <label class="btn lookalike-3" data-value="3">
+                                                    <input type="checkbox" name="checkbox_dmp_lookalike" value="3">
+                                                    <span>
+                                                    <i class="ico ic-check"></i>
+                                                    <span class="sr-only">3</span>
+                                                </span>
+                                                </label>
+                                                <label class="btn lookalike-4" data-value="4">
+                                                    <input type="checkbox" name="checkbox_dmp_lookalike" value="4">
+                                                    <span>
+                                                    <i class="ico ic-check"></i>
+                                                    <span class="sr-only">4</span>
+                                                </span>
+                                                </label>
+                                                <label class="btn lookalike-5" data-value="5">
+                                                    <input type="checkbox" name="checkbox_dmp_lookalike" value="5">
+                                                    <span>
+                                                    <i class="ico ic-check"></i>
+                                                    <span class="sr-only">5</span>
+                                                </span>
+                                                </label>
+                                            </div>
+                                            <small class="audRange-higher">
+                                                하위
+                                            </small>
+                                        </div>
+                                        <div class="audrange-slider">
+                                            <input type="hidden" class="aud-range-slider" value="1,2">
+                                        </div>
+                                        <div class="mt-1 d-flex align-items-center">
+                                            <!-- check-parameter -->
+                                            <div class="check-parameter">
+                                            <span class="parameter-cnt text-muted">
+                                                모수 : <span id="dmp_lookalike_cnt">0</span>
+                                            </span>
+                                                <button class="btn btn-sm btn-outline-secondary"
+                                                        id="btn_check_dmp_lookalike_cnt">
+                                                    모수 확인하기
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-gorup__control mt-2">
+                                    <div class="font-size-0_8">
+                                        유사 타겟은 유사 소스와 가장 비슷한 사람들로 구성되며 상위일수록 유사도가 높습니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" id="btn_dismiss_dmp_lookalike"
+                            data-dismiss="modal" onclick="reset_modal()">취소
+                    </button>
+                    <button type="button" class="btn btn-primary" id="btn_create_dmp_lookalike" disabled="">유사타겟 만들기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal-edit-lookalikeAud -->
+
+    <!-- 모달: 매칭률 확인 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-of-aud-match" data-backdrop="static" data-keyboard="false">
+        <form id="form--of-aud-match">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            매칭률 확인
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                onclick="reset_modal()">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="m-0">
+                                    <strong>원본 오디언스 정보</strong>
+                                </h6>
+                            </div>
+                            <div class="card-footer border-top-0">
+                                <dl class="d-flex align-items-center m-0">
+                                    <input type="hidden" value="" name="audience_id" id="md_audience_id">
+                                    <dt class="m-0 mr-3">
+                                        오디언스 ID
+                                    </dt>
+                                    <dd class="m-0" id="md_audience_id_text">
+                                    </dd>
+                                </dl>
+
+                                <dl class="d-flex align-items-center m-0">
+                                    <dt class="m-0 mr-3">
+                                        오디언스 이름
+                                    </dt>
+                                    <dd class="m-0" id="md_audience_name">
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                <h6 class="m-0">
+                                    <strong>매칭조건 선택</strong>
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <div class="form-group__label">
+                                        조회기간
+                                    </div>
+                                    <div class="form-check-inline mr-4">
+                                        <label class="checkbox-wrapper">
+                                            <input type="radio" name="request_day" value="7" checked="">
+                                            <span class="radio-custom"></span>
+                                            <span class="label-text d-inline-block">최근 7일</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="checkbox-wrapper">
+                                            <input type="radio" name="request_day" value="14">
+                                            <span class="radio-custom"></span>
+                                            <span class="label-text d-inline-block">최근 14일</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="checkbox-wrapper">
+                                            <input type="radio" name="request_day" value="30">
+                                            <span class="radio-custom"></span>
+                                            <span class="label-text d-inline-block">최근 30일</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group__label">
+                                        OS
+                                    </div>
+                                    <div class="form-check-inline mr-4">
+                                        <label class="checkbox-wrapper">
+                                            <input type="radio" name="user_scheme" value="1" checked="">
+                                            <span class="radio-custom"></span>
+                                            <span class="label-text d-inline-block">Android</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="checkbox-wrapper">
+                                            <input type="radio" name="user_scheme" value="2">
+                                            <span class="radio-custom"></span>
+                                            <span class="label-text d-inline-block">iOS</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group__label">
+                                        국가
+                                    </div>
+                                    <div class="form-gorup__control">
+                                        <select class="form-control " name="country">
+                                            <option value="ARE"> 아랍에미레이트</option>
+                                            <option value="AUS"> 호주</option>
+                                            <option value="BEL"> 벨기에</option>
+                                            <option value="BRA"> 브라질</option>
+                                            <option value="CAN"> 캐나다</option>
+                                            <option value="CHL"> 칠레</option>
+                                            <option value="COL"> 콜롬비아</option>
+                                            <option value="CZE"> 체코</option>
+                                            <option value="DEU"> 독일</option>
+                                            <option value="EGY"> 이집트</option>
+                                            <option value="ESP"> 스페인</option>
+                                            <option value="FRA"> 프랑스</option>
+                                            <option value="GBR"> 영국</option>
+                                            <option value="GRC"> 그리스</option>
+                                            <option value="HKG"> 홍콩</option>
+                                            <option value="IDN"> 인도네시아</option>
+                                            <option value="IND"> 인도</option>
+                                            <option value="ITA"> 이탈리아</option>
+                                            <option value="JPN"> 일본</option>
+                                            <option value="KEN"> 케냐</option>
+                                            <option value="KOR" selected=""> 대한민국</option>
+                                            <option value="MEX"> 멕시코</option>
+                                            <option value="MYS"> 말레이시아</option>
+                                            <option value="NGA"> 나이지리아</option>
+                                            <option value="NLD"> 네덜란드</option>
+                                            <option value="NZL"> 뉴질랜드</option>
+                                            <option value="PER"> 페루</option>
+                                            <option value="PHL"> 필리핀</option>
+                                            <option value="POL"> 폴란드</option>
+                                            <option value="PRT"> 포르투칼</option>
+                                            <option value="RUS"> 러시아</option>
+                                            <option value="SAU"> 사우디아라비아</option>
+                                            <option value="SGP"> 싱가포르</option>
+                                            <option value="THA"> 태국</option>
+                                            <option value="TUR"> 터키</option>
+                                            <option value="TWN"> 대만</option>
+                                            <option value="UKR"> 우크라이나</option>
+                                            <option value="USA"> 미국</option>
+                                            <option value="VNM"> 베트남</option>
+                                            <option value="ZAF"> 남아프리카공화국</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group text-right">
+                                    <button type="button" class="btn btn-primary btn-custom" id="md_btn_matching_count">
+                                        조회하기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                <h6 class="m-0">
+                                    <strong>조회결과</strong>
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-dep-1__input-wrapper">
+                                    <div class="progress mt-2">
+                                        <div class="progress-bar" role="progressbar" style="width: 76%"
+                                             id="md_match_progress">76%
+                                        </div>
+                                    </div>
+                                    <ul class="result-ul mt-3">
+                                        <li class="result-li">매칭률 : <span id="md_matching_rate">76%</span></li>
+                                        <li class="result-li">오디언스 카운트 : <span id="md_audience_count">500,000</span>
+                                        </li>
+                                        <li class="result-li">매칭 카운트 : <span id="md_matching_count">383,786</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary btn-custom" data-dismiss="modal"
+                                onclick="reset_modal()">닫기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /page -->
+</div>
+<!-- /platform -->
+
+
+</body>
+</html>
