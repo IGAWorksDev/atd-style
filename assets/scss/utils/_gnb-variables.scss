@@ -1,5 +1,32 @@
 
 
+// Spacing
+//
+// 간격(혹은 여백)을 조절 할 수 있는 변수
+$spacer: 0.8rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+        (
+            0: 0,
+            1: ($spacer * 1), // 8px
+            2: ($spacer * 2), // 16px
+            3: ($spacer * 3), // 24px
+            4: ($spacer * 4), // 32px
+            5: ($spacer * 5), // 40px
+            6: ($spacer * 6), // 48px
+            7: ($spacer * 7), // 56px
+            8: ($spacer * 8), // 64px
+            9: ($spacer * 9), // 72px
+            10: ($spacer * 10) // 80px
+        ),
+        $spacers
+);
+
+
+$border-width:                1px !default;
+$border-color:                $gray-300 !default;
+
+
 // Global navigation bar
 $gnb-z-index: 20;
 $gnb-min-width: 1440px;
