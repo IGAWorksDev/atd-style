@@ -1,0 +1,39 @@
+﻿div.page {
+  padding-top: 8rem;
+}
+
+#div_query_mix .tag{
+     font-size: 4rem;
+     margin-right: 4px;
+     line-height : 1;
+     background-color: #cbe1ff;
+     width: 70px;
+    text-align: center;
+ }
+
+#div_query_mix li.btn.btn-outline-secondary{
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#div_query_mix li.selected{
+    border: 1px solid #bd2130 !important;
+}
+
+#div_math .btn{
+  font-size: 2rem;
+}
+.td-beforeload .icon-problem {
+  font-size: 3rem;
+  color: #CED4DA;
+  color: rgba(134, 142, 150, 0.5);
+}
+/*// 특수한 td, tr*/
+.td-beforeload {
+     padding: 40px 30px;
+     color: #868E96;
+     text-align: center;
+ }
+.font-size-0_8
+{
+    font-size: 0.8rem;
+}
