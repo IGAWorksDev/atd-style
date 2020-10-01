@@ -26,33 +26,66 @@
 
 
 
+
+// btn-text-{$theme-colors}
+//
+//
+@mixin button-text-variant($color, $active-color: $color, $active-background: rgba($color, 0.1)){
+  color: $color;
+
+  &:hover,
+  &.is-active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: transparent;
+    text-decoration: none;
+  }
+
+  // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.3);
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $btn-disabled-color;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+
+
+
 // btn-contained-{$theme-colors}
 //
 @mixin button-contained-variant($background, $border,
-  $hover-background: darken($background, 8%), $hover-border: darken($border, 8%),
-  $active-background: darken($background, 12%), $active-border: darken($border, 12%)) {
+  $hover-background: darken($background, 5%), $hover-border: darken($border, 10%),
+  $active-background: darken($background, 8%), $active-border: darken($border, 12%)) {
+
   color: $white;
   background-color: $background;
   border-color: $border;
   text-decoration: none;
-  &:hover{
+  &:hover,
+  &.is-active {
     color: $white;
     background-color: $hover-background;
     border-color: $hover-border;
     text-decoration: none;
-    box-shadow: $btn-box-shadow;
   }
-  &:active,
-  &.is-active {
-    color: $white;
-    background-color: $active-background;
-    border-color: $active-border;
-    text-decoration: none;
-  }
+
+  // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
   &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($background, $btn-focus-opacity);
+    box-shadow: 0 0 0 $btn-focus-width rgba($background, 0.3);
   }
+
   // 비활성 상태
+  &.is-disabled,
+  &[disabled],
   &:disabled {
     color: $btn-disabled-color;
     border-color: $btn-disabled-color;
@@ -65,30 +98,31 @@
 // btn-outlined-{$theme-colors}
 //
 @mixin button-outlined-variant($color, $border,
-  $hover-color: darken($color, 8%), $hover-background: rgba($color, 0.08), $hover-border: darken($border, 8%),
-  $active-color: darken($color, 12%), $active-background: rgba($color, 0.12), $active-border: darken($border, 12%)) {
+  $hover-color: $color, $hover-background: rgba($color, 0.1), $hover-border: $border,
+  $active-color: darken($color, 12%), $active-background: rgba($color, 0.1), $active-border: darken($border, 12%)) {
   color: $color;
-  background-color: transparent;
   border-color: $color;
   &:hover {
     color: $hover-color;
     background-color: $hover-background;
     border-color: $hover-border;
     text-decoration: none;
-    box-shadow: $btn-box-shadow;
   }
-  &:active,
   &.is-active {
     color: $active-color;
     background-color: $active-background;
     border-color: $active-border;
     text-decoration: none;
   }
+
+  // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
   &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($color, $btn-focus-opacity);
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.3);
   }
+
   // 비활성 상태
   &.is-disabled,
+  &[disabled],
   &:disabled {
     color: $btn-disabled-color;
     border-color: $btn-disabled-color;
@@ -97,44 +131,5 @@
     box-shadow: none;
   }
 }
-
-
-// btn-text-{$theme-colors}
-//
-@mixin button-text-variant($color,
-  $hover-color: darken($color, 8%), $hover-background: rgba($color, 0.1),
-  $active-color: darken($color, 12%), $active-background: rgba($color, 0.1)) {
-  color: $color;
-  background-color: transparent;
-  border-color: transparent;
-  &:hover {
-    color: $hover-color;
-    background-color: $hover-background;
-    border-color: transparent;
-    text-decoration: none;
-    //box-shadow: $btn-box-shadow;
-  }
-  &:active,
-  &.is-active {
-    color: $active-color;
-    background-color: $active-background;
-    border-color: transparent;
-    text-decoration: none;
-  }
-  &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($color, $btn-focus-opacity);
-  }
-
-  // 비활성 상태
-  &.is-disabled,
-  &:disabled {
-    color: $btn-disabled-color;
-    background-color: transparent;
-    border-color: transparent;
-    cursor: default;
-    box-shadow: none;
-  }
-}
-
 
 

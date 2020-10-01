@@ -6,41 +6,21 @@
 // 기존 UI 스타일과 rem의 크기가 안 맞을 수 있음.
 
 
-
-// Root Default
-//
-// root em 설정
-// 0.625rem = 10px = 10pt = 10dp
-// px는 사용자가 글꼴 환경 설정을 변경하면 반영되지 않습니다. 픽셀 대신 %로 지정해야하며 그 크기는 62.5%입니다.
-// (주의) 변경하지 마십시오!!!
-$font-size-root: 62.5% !default;
-
-
-// Font weight
-$font-weight-normal: 500;
-$font-weight-bold: 700;
-
-
-
 @import
   'vendors/styleworks-extention',
+
+  'vendors/bootstrap-extention',
+  'vendors/bootstrap-4.5.1/scss/bootstrap',
 
   // 스타일 분리에 필요한 파일들..
   'vendors/styleworks/vendors/rfs-extension',
   'vendors/styleworks/vendors/rfs',
-
   'vendors/styleworks/utils/sw-colors',
-  'vendors/styleworks/utils/sw-variables',
-
-  'vendors/styleworks/base/root',
-  'vendors/styleworks/base/reboot'
+  'vendors/styleworks/base/root'
 ;
 
 @import
-  'utils/gnb-variables',
-  'vendors/styleworks/components/borders',
-  'vendors/styleworks/components/spacing',
-  'vendors/styleworks/components/dropdown'
+  'utils/gnb-variables'
 ;
 
 @import
