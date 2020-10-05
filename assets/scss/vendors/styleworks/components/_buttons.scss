@@ -1,4 +1,10 @@
 
+// Button Shapes & sizes
+//
+// 가장 기본적인 모양 - 사각형 모양을 갖음
+// 길이에 상관없이 사용 가능
+// class="btn btn-sm"
+//
 .btn {
   display: inline-block;
   font-family: $btn-font-family;
@@ -11,15 +17,18 @@
   background-color: transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
 }
-
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
-
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
 
+
+// 동그란 모양을 갖는 스타일
+// 최대 2자까지 노출될 수 있음 (주의)
+// class="btn-circle btn-circle-sm"
+//
 .btn-circle {
   display:inline-block;
   color: $body-color;
@@ -33,18 +42,12 @@
   height: $btn-circle-height  !important;
   white-space: nowrap;
   overflow: hidden;
-
-  //> * {
-  //  vertical-align: middle;
-  //}
 }
-
-.btn-circle-sm {
-  @include button-circle-size($btn-circle-padding-y-sm, $btn-circle-padding-x-sm, $btn-circle-width-sm, $btn-circle-height-sm, $btn-circle-font-size-sm, $btn-circle-line-height-sm, $btn-circle-border-radius);
-}
-
 .btn-circle-xs {
   @include button-circle-size($btn-circle-padding-y-xs, $btn-circle-padding-x-xs, $btn-circle-width-xs, $btn-circle-height-xs, $btn-circle-font-size-xs, $btn-circle-line-height-xs, $btn-circle-border-radius);
+}
+.btn-circle-sm {
+  @include button-circle-size($btn-circle-padding-y-sm, $btn-circle-padding-x-sm, $btn-circle-width-sm, $btn-circle-height-sm, $btn-circle-font-size-sm, $btn-circle-line-height-sm, $btn-circle-border-radius);
 }
 
 
@@ -54,20 +57,26 @@
 }
 
 
-
+// Button Styles
+//
+// 글자 또는 아이콘만 노출되는 버튼 스타일
+//
 @each $color, $value in $theme-colors {
   .btn-text-#{$color} {
     @include button-text-variant($value, $value);
   }
 }
 
-
+// 테마컬러가 배경이 되는 버튼 스타일로 글자색은 흰색으로 적용됨
+//
 @each $color, $value in $theme-colors {
   .btn-contained-#{$color} {
     @include button-contained-variant($value, $value);
   }
 }
 
+// 테마컬러가 테두리와 글자색으로 적용되는 버튼 스타일
+//
 @each $color, $value in $theme-colors {
   .btn-outlined-#{$color} {
     @include button-outlined-variant($value, $value);
