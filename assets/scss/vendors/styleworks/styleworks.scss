@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 
 // SASS Guidelines
@@ -66,10 +65,10 @@
 'base/display',
 'base/flex',
 'base/typography',
-'base/mixins/clearfix',
-'base/mixins/hover',
-'base/mixins/border-radius',
-'base/mixins/buttons-mixin',
+'base/mixins/mixin-clearfix',
+'base/mixins/mixin-hover',
+'base/mixins/mixin-border-radius',
+'base/mixins/mixin-buttons',
 'base/svg-icon'
 ;
 
