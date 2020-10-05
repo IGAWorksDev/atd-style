@@ -1,10 +1,6 @@
 
 
 
-.dropdown-menu {
-  @include font-size($font-size-base);
-}
-
 // Dropdown section headers
 .dropdown-header {
   display: block;
@@ -21,7 +17,6 @@
   width: 100%;
   padding: ($spacer / 2) ($spacer * 2);
   color: $body-color;
-  @include font-size($font-size-base);
   white-space: nowrap;
   background-color: transparent;
   border: 0;

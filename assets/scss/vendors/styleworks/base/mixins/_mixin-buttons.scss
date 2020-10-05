@@ -67,11 +67,10 @@
   $active-background: darken($background, 8%), $active-border: darken($border, 12%)) {
 
   color: $white;
-  border-color: $border;
-  text-decoration: none;
-
   background-color: $background;
   background-clip: padding-box;
+  border-color: $border;
+  text-decoration: none;
   &:hover,
   &.is-active {
     color: $white;
