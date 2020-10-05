@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../fonts/adicons/style.css);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
@@ -38,16 +39,65 @@ html { font-size: 14px; }
 .gnb__nav-item.is-active .gnb__nav-link { color: #1E90FF; opacity: 1; }
 @media (max-width: 767.98px) { .gnb__nav-item + .gnb__nav-item { border-top: 1px solid #495057; } }
 
-.gnb__dropdown-menu { font-size: 14px !important; color: #fff !important; margin-top: 0 !important; border: 0 !important; border-radius: 0 !important; background-color: rgba(52, 58, 64, 0.98) !important; }
-.gnb__dropdown-menu > .dropdown-divider { border-top-color: #495057 !important; }
-@media (max-width: 767.98px) { .gnb__dropdown-menu { position: static !important; width: 100%; float: none !important; -webkit-transform: none !important; transform: none !important; padding: 0 !important; }
-  .gnb__dropdown-menu.show { background-color: #495057 !important; } }
+/*
+.gnb__dropdown-menu { 
+	font-size: $gnb-font-size !important;
+	color: $white !important;
+	margin-top: 0 !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	background-color: rgba($gray-800, 0.98)!important;
 
-.gnb__dropdown-item { display: block; width: 100%; padding: 8px 16px !important; clear: both; font-weight: normal; text-align: inherit; white-space: nowrap; border: 0; color: #fff !important; }
-.gnb__dropdown-item.is-inactive { color: #adb5bd !important; text-indent: 15px; }
-.gnb__dropdown-item:hover { background-color: #FFFFFF !important; }
-@media (max-width: 767.98px) { .gnb__dropdown-item + .gnb__dropdown-item { border-top: 1px solid #495057; } }
+	> .dropdown-divider {
+		border-top-color: $gray-700 !important;
+	}
 
+
+	@include media-breakpoint-down(sm) { 
+		position: static !important;
+		width: 100%;
+		float: none !important; 
+		transform: none !important;
+		padding: 0 !important;
+
+		&.show {
+			background-color: $gray-700 !important;;
+		}
+	}
+}
+.gnb__dropdown-item {
+	display: block;
+	width: 100%;
+	padding: 8px 16px !important;
+	clear: both;
+	font-weight: normal;
+	text-align: inherit; 
+	white-space: nowrap;
+	border: 0;
+
+	color: $white !important;
+	
+
+	&.is-active {
+		// 완료된 상태, 연결됨
+	} 
+	&.is-inactive {
+		// 미완성 상태, 연결을 요구할 경우
+		color: $gray-500 !important;
+		text-indent: 15px;
+	}
+
+	&:hover {
+		background-color: $gnb-bg-color !important;
+	}
+
+	@include media-breakpoint-down(sm) { 
+		+ .gnb__dropdown-item {
+			border-top: 1px solid $gray-700;
+		}
+	}
+}
+*/
 .gnb__nav-notify { display: -webkit-box; display: -ms-flexbox; display: flex; }
 .gnb__nav-notify .gnb__nav-link { padding: 0.75rem 1rem; font-size: 1.5rem; }
 
