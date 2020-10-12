@@ -57,3 +57,5 @@ $card-header-nav-tabs-height : 4.8rem; // 카드 헤더에 탭이 있는 경우
 // Tables
 $table-header-height: 4rem;
 $table-tr-total-height: 5.6rem;
+
+$table-thead-row-height-base: calc(#{$line-height-base} + (#{$spacer} * 2) + (#{$border-width * 3}));

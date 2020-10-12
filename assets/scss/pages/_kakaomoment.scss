@@ -65,7 +65,7 @@
 .mainContent-adManage {
   .mainbody {
     .table-responsive {
-      height: calc(#{$main-body-height} - (#{$card-header-nav-tabs-height} + (#{$toolbar-height} * 2) + (#{$spacer} * 2)));
+      height: calc(#{$main-body-height} - (#{$card-header-nav-tabs-height} + (#{$toolbar-height} * 2) + (#{$spacer} * 2) + (#{$border-width} * 2)));
       overflow: auto;
       .table {
         margin: 0;
@@ -110,3 +110,6 @@
     }
   }
 }
+
+
+

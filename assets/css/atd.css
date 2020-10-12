@@ -654,6 +654,43 @@ small { font-size: 80%; line-height: 1.175; }
 .tab-nav .tab-item.is-active:after { position: absolute; content: ""; display: block; height: 3px; background-color: #1E90FF; bottom: 0; left: 1.6rem; right: 1.6rem; }
 .tab-nav .tab-item.is-active .tab-link { color: #1E90FF; }
 
+.form-control { display: block; width: 100%; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); padding: 0.6rem 1.2rem; font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; font-weight: 500; color: #343a40; background-color: #fff; background-clip: padding-box; border: 1px solid #adb5bd; border-radius: 0.2rem; }
+@media (min-width: 1200px) { .form-control { font-size: 1.4rem; } }
+.form-control::-webkit-input-placeholder { color: #adb5bd; }
+.form-control:-ms-input-placeholder { color: #adb5bd; }
+.form-control::-ms-input-placeholder { color: #adb5bd; }
+.form-control::placeholder { color: #adb5bd; }
+.form-control:disabled, .form-control[readonly] { background-color: #e9ecef; }
+
+.custom-control { position: relative; z-index: 1; display: block; min-height: 2.2rem; padding-left: 2.2rem; }
+
+.custom-control-input { position: absolute; left: 0; z-index: -1; width: 1.4rem; height: 1.4rem; opacity: 0; }
+
+.custom-control-label { position: relative; margin-bottom: 0; }
+.custom-control-label::before { position: absolute; display: block; content: ""; top: 0.4rem; left: -2.2rem; width: 1.4rem; height: 1.4rem; pointer-events: none; background-color: #fff; border: 1px solid #adb5bd; }
+.custom-control-label::after { position: absolute; display: block; content: ""; top: 0.4rem; left: -2.2rem; width: 1.4rem; height: 1.4rem; background: no-repeat 50% / 50% 50%; }
+
+.custom-checkbox .custom-control-label::before { border-radius: 0.2rem; }
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after { background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>")); }
+
+.input-group { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+
+.input-group-prepend, .input-group-append { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.input-group-prepend .btn, .input-group-append .btn { position: relative; z-index: 2; }
+.input-group-prepend .btn:focus, .input-group-append .btn:focus { z-index: 3; }
+.input-group-prepend .btn + .btn, .input-group-prepend .btn + .input-group-text, .input-group-prepend .input-group-text + .input-group-text, .input-group-prepend .input-group-text + .btn, .input-group-append .btn + .btn, .input-group-append .btn + .input-group-text, .input-group-append .input-group-text + .input-group-text, .input-group-append .input-group-text + .btn { margin-left: -1px; }
+
+.input-group-prepend { margin-right: -1px; }
+
+.input-group-append { margin-left: -1px; }
+
+.input-group-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0.6rem 1.2rem; margin: 0; font-size: calc(1.265rem + 0.1125vw); font-weight: 500; line-height: 2.2rem; color: #343a40; text-align: center; white-space: nowrap; background-color: #f8f9fa; border: 1px solid #adb5bd; border-radius: 0.2rem; }
+@media (min-width: 1200px) { .input-group-text { font-size: 1.4rem; } }
+
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .input-group-text, .input-group > .input-group-append:not(:last-child) > .btn, .input-group > .input-group-append:not(:last-child) > .input-group-text, .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+
 .switch { display: inline-block; padding-left: 3.85rem; height: 2.2rem; margin: 0; position: relative; vertical-align: middle; }
 
 .switch-checkbox { opacity: 0; position: absolute; left: 0; z-index: -1; }
@@ -1051,6 +1088,18 @@ small { font-size: 80%; line-height: 1.175; }
 .table-responsive { position: relative; }
 .table-responsive #alert-all-checking { position: absolute; top: 4rem; left: 0; right: 0; border-radius: 0; height: 5.6rem; margin: 0; border-width: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
+.cell-fix-5 { width: 10%; }
+
+.cell-fix-30 { width: 16%; }
+
+.cell-10 { width: 10%; }
+
+.cell-15 { width: 10%; }
+
+.table-wrap { position: relative; padding-top: 4rem; }
+.table-wrap .table-responsive { position: static; height: 160px; overflow-y: scroll; }
+.table-wrap .table thead.cells-fixed-top { display: inline-table; position: absolute; top: 0; width: calc(100% - 15px); border-right: 1px solid #dee2e6; }
+
 .banner-block { background-color: #e9ecef; width: 8rem; height: 5.6rem; }
 
 #dropdown-adaccount-button { max-width: 280px; }
@@ -1082,7 +1131,7 @@ small { font-size: 80%; line-height: 1.175; }
 
 .cell-header.cell-header-banner:hover .cell-header__title { max-width: 14.3rem; }
 
-.mainContent-adManage .mainbody .table-responsive { height: calc(calc(100vh - 5.6rem - 6.4rem) - (4.8rem + (6.4rem * 2) + (0.8rem * 2))); overflow: auto; }
+.mainContent-adManage .mainbody .table-responsive { height: calc(calc(100vh - 5.6rem - 6.4rem) - (4.8rem + (6.4rem * 2) + (0.8rem * 2) + (1px * 2))); overflow: auto; }
 .mainContent-adManage .mainbody .table-responsive .table { margin: 0; }
 
 #table-custom-fileSetting { max-height: 32rem; }

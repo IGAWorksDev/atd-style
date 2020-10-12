@@ -57,3 +57,44 @@
 }
 
 
+
+
+.cell-fix-5 {
+  width: 10%;
+}
+.cell-fix-30 {
+  width: 16%;
+}
+.cell-10 {
+  width: 10%;
+}
+.cell-15 {
+  width: 10%;
+}
+
+
+
+.table-wrap {
+  position: relative;
+  padding-top: $table-header-height; // 테이블 헤드(thead)의 높이값
+
+  .table-responsive {
+    position: static;
+    height: 160px; //calc(#{$main-body-height} - (#{$card-header-nav-tabs-height} + (#{$toolbar-height} * 2) + (#{$spacer} * 2) + (#{$border-width} * 2)));
+    overflow-y: scroll;
+  }
+
+  .table {
+    thead.cells-fixed-top {
+      display: inline-table;
+      position: absolute;
+      top: 0;
+      width: calc(100% - 15px);
+      border-right: 1px solid $border-color;
+    }
+
+    tbody {
+      //display: inline-table;
+    }
+  }
+}
