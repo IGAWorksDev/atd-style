@@ -107,3 +107,8 @@ html { font-size: 14px; }
 .gnb__nav-account .gnb__account-mail { display: none; }
 
 .gnb { min-width: 1440px; }
+
+.gnb__app { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.gnb__app .app__logo { width: auto; height: 16px !important; -ms-flex-item-align: center; align-self: center; }
+
+.gnb__navbar-collapse { padding-left: 16px; padding-right: 16px; }

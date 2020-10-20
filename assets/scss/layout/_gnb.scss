@@ -28,9 +28,13 @@
 .gnb-brand {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
-  width: $gnb-height;
+  img {
+    width: auto;
+    height: 1.6rem;
+    padding: 0 1.6rem;
+  }
 }
 
 .gnb-navbar {

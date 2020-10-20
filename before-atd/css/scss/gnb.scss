@@ -42,4 +42,17 @@ $teal:    #20c997 !default;
   min-width: 1440px;
 }
 
-
+// 스타일 추가 (2020-10-20)
+.gnb__app {
+  justify-content: center;
+  .app__logo {
+    width: auto;
+    height: 16px !important;
+    //padding: 0 16px;
+    align-self: center;
+  }
+}
+.gnb__navbar-collapse {
+  padding-left: 16px;
+  padding-right: 16px;
+}
