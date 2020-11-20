@@ -1,36 +1,52 @@
 
+$page-padding-y: 0.6rem;
+$page-padding-x: 0.6rem;
+
+
 .pagination {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
-}
-
-.page-item {
-  display: inline-block;
-
-  & + & {
+  > li + li {
     margin-left: $spacer / 2;
   }
 }
 
-.page-link {
+.page-ellipsis {
+  color: $gray-500;
+}
+
+.page-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $page-link-width;
-  height: $page-link-height;
+  width: ($line-height-base + ($page-padding-x * 2));
+  height: ($line-height-base + ($page-padding-y * 2));
+  text-align: center;
+  text-decoration: none;
+  border-radius: $line-height-base;
+
+  color: $body-color;
+  border: 1px solid $gray-200;
+
+  &:hover {
+    color: $primary;
+    border-color: $gray-400;
+    background-color: $gray-100;
+  }
 }
 
-.page-ellipsis {
-  color: $gray-500;
-  margin-right: $spacer / 2;
-  margin-left: $spacer / 2;
+.page-button.is-active {
+  color: $primary;
+  border-color: $primary;
+  &:hover {
+    background-color: rgba($primary, 0.1);
+  }
 }
 
-.page-item-icon {
-  width: $page-icon-size;
-  height: $page-icon-size;
-  margin: $page-icon-spacer; // 글자와의 높이 차이가 발생하여 추가함.
+
+.page-button-icon {
+  font-size: $font-size-base;
 }

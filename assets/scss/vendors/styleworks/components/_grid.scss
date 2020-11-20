@@ -1,47 +1,6 @@
 
 
-@mixin make-container($gutter: $grid-gutter) {
-  width: 100%;
-  padding-right: $gutter / 2;
-  padding-left: $gutter / 2;
-  margin-right: auto;
-  margin-left: auto;
-}
 
+ 
+$grid-spacing: 3%;
 
-@mixin make-row($gutter: $grid-gutter) {
-  display: flex;
-  flex: 1 0 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: -$gutter / 2;
-  margin-left: -$gutter / 2;
-}
-
-
-
-@mixin make-col($gutter: $grid-gutter) {
-  flex: 0 0 auto;
-  width: 100%; // 더 작은 그리드 계층에서 열이 너무 좋아지는 것을 방지합니다. 나중에 초기 너비를 재정의하기 위해 flex값을 사용하기 때문에 작동합니다. (?)
-  padding-right: $gutter / 2;
-  padding-left: $gutter / 2;
-}
-
-
-
-.container {
-  @include make-container();
-}
-
-.row {
-  @include make-row();
-}
-
-.row-reverse {
-  flex-direction: row-reverse;
-}
-
-
-.col {
-  @include make-col();
-}

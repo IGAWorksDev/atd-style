@@ -9,7 +9,7 @@
 
 // 값이 감소하기 시작하는 중단점
 // Breakpoint at where values start decreasing if screen width is smaller
-$rfs-breakpoint: 320px !default;
+$rfs-breakpoint: 1200px !default;
 
 
 // (주의!!) 자동으로 계산되는 기준 크기로, '_root'의 폰크 크기에 맞춰 변수 값 변경하였습니다.

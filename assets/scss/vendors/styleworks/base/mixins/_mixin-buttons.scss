@@ -30,7 +30,7 @@
 // btn-text-{$theme-colors}
 //
 //
-@mixin button-text-variant($color, $active-color: darken($color, 8%), $active-background: rgba($color, 0.3)){
+@mixin button-text-variant($color, $active-color: $color, $active-background: rgba($color, 0.1)){
   color: $color;
 
   &:hover,
@@ -50,7 +50,7 @@
   &.is-disabled,
   &[disabled],
   &:disabled {
-    color: rgba($btn-disabled-color, 0.5);
+    color: $btn-disabled-color;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -88,9 +88,9 @@
   &.is-disabled,
   &[disabled],
   &:disabled {
-    color: rgba($white, 0.5);
+    color: $btn-disabled-color;
     border-color: $btn-disabled-color;
-    background-color: $btn-disabled-color;
+    background-color: transparent;
     cursor: default;
     box-shadow: none;
   }
@@ -99,8 +99,8 @@
 // btn-outlined-{$theme-colors}
 //
 @mixin button-outlined-variant($color, $border,
-  $hover-color: darken($color, 12%), $hover-background: rgba($color, 0.2), $hover-border: $border,
-  $active-color: darken($color, 12%), $active-background: rgba($color, 0.2), $active-border: $border) {
+  $hover-color: darken($color, 12%), $hover-background: rgba($color, 0.1), $hover-border: $border,
+  $active-color: darken($color, 12%), $active-background: rgba($color, 0.1), $active-border: $border) {
   color: $color;
   border-color: $color;
   &:hover {
@@ -125,7 +125,7 @@
   &.is-disabled,
   &[disabled],
   &:disabled {
-    color: rgba($btn-disabled-color, 0.5);
+    color: $btn-disabled-color;
     border-color: $btn-disabled-color;
     background-color: transparent;
     cursor: default;
