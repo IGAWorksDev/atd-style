@@ -49,20 +49,15 @@
 //@import
 //	'vendors-extensions/';
 
-
-// Responsive Font Size
 @import
 'vendors/rfs-extension', // rfs를 변경하려면 해당 파일 사용
 'vendors/rfs'
 ;
 
 @import
-'base/functions',
-'utils/sw-variables',
-'base/mixins/deprecate'
+'utils/sw-colors',
+'utils/sw-variables'
 ;
-
-
 
 @import
 'base/root',
@@ -73,11 +68,7 @@
 'base/mixins/mixin-clearfix',
 'base/mixins/mixin-hover',
 'base/mixins/mixin-border-radius',
-'base/mixins/mixin-gradients',
-'base/mixins/mixin-box-shadow',
-'base/mixins/mixin-transition',
 'base/mixins/mixin-buttons',
-'base/mixins/mixin-forms',
 'base/svg-icon'
 ;
 
@@ -85,12 +76,10 @@
 //	'layout/';
 
 @import
-'components/grid',
 'components/spacing',
 'components/borders',
 'components/sizes',
 'components/buttons',
-'components/button-group',
 'components/navbar',
 'components/list-group',
 'components/pagination',
@@ -99,14 +88,6 @@
 'components/forms',
 'components/custom-forms',
 'components/input-group',
-'components/card',
-'components/alerts',
-'components/badges',
-'components/tooltips',
-'components/modals',
-'components/text-truncate',
-'components/datagrid',
-'components/table',
 'components/switch'
 ;
 

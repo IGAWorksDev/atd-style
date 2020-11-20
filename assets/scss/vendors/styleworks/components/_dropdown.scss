@@ -1,5 +1,48 @@
 
 
+// Dropdown Caret
+//
+
+// 드랍다운 탈자 부호 스타일
+.dropdown-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: $caret-vertical-align;
+
+  // direction:down
+  // Caution : 부호의 방향과 반대되는 방향의 색상은 표시하지 않을 것.
+  border-top: $caret-width solid;
+  border-right: $caret-width solid transparent;
+  border-bottom: 0;
+  border-left: $caret-width solid transparent;
+}
+
+// 버튼 안의 부호를 사용할 경우 스타일
+.btn .dropdown-caret {
+  margin-left: $caret-spacing;
+}
+
+// 스플릿만 사용할 경우의 부호 스타일
+.dropdown-toggle-split .dropdown-caret {
+  margin-left: 0;
+}
+
+
+
+// Dropdown Menu
+//
+
+.dropdown-menu {
+  position: absolute;
+  list-style: none; // 리스트 형태를 썼을 경우, 기본 스타일 없애기
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  display: none; // 기본적으로 none 상태, 메뉴 열기시 block.
+  padding: $dropdown-padding-y 0;
+  border: $dropdown-border-width solid $dropdown-border-color;
+  @include border-radius($dropdown-border-radius);
+}
 
 // Dropdown section headers
 .dropdown-header {
@@ -12,12 +55,52 @@
   font-weight: $font-weight-bold;
 }
 
+// 드랍다운 아이템 - 기본적으로 링크 또는 버튼
 .dropdown-item {
   display: block;
-  width: 100%;
-  padding: ($spacer / 2) ($spacer * 2);
-  color: $body-color;
+  width: 100%; // 버튼을 기준으로 함
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  color: $dropdown-item-color;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  text-align: inherit;
+  text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    color: $dropdown-item-hover-color;
+    background-color: $dropdown-item-hover-bg;
+  }
+
+  &:active,
+  &.is-active {
+    color: $dropdown-item-active-color;
+    background: $dropdown-item-active-bg;
+  }
+
+  &.is-disabled,
+  &:disabled {
+    color: $dropdown-item-disabled-color;
+    pointer-events: none;
+    background-color: transparent;
+  }
 }
+
+// 드랍다운 아이템이 일반 텍스트인 경우 사용
+.dropdown-item-text {
+  display: block;
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+}
+
+
+// 드랍다운 보이기
+.dropdown-menu.is-show {
+  display: block;
+}
+
+
+

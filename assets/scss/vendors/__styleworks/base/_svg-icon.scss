@@ -2,10 +2,10 @@
 
 .svg-icon {
   fill: currentColor;
-  width: $font-size-base;
-  height: $font-size-base;
+  width: $body-font-size;
+  height: $body-font-size;
   display: inline-block;
-  font-size: $font-size-base;
+  font-size: 1rem;
   flex-shrink: 0;
   flex-grow: 0;
   user-select: none;

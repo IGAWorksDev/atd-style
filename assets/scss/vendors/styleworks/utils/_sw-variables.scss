@@ -6,6 +6,76 @@
 // (주의) 변경하지 마십시오!!!
 $font-size-root: 62.5% !default;
 
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+        (
+            "100": $gray-100,
+            "200": $gray-200,
+            "300": $gray-300,
+            "400": $gray-400,
+            "500": $gray-500,
+            "600": $gray-600,
+            "700": $gray-700,
+            "800": $gray-800,
+            "900": $gray-900
+        ),
+        $grays
+);
+
+$blue:    #1E90FF !default;
+$red:     #dc3545 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+
+$colors: () !default;
+$colors: map-merge(
+        (
+            "blue": $blue,
+            "red": $red,
+            "yellow": $yellow,
+            "green": $green,
+            "teal": $teal,
+        ),
+        $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $teal !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$gray:          $gray-500 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+        (
+            "primary": $primary,
+            "secondary": $secondary,
+            "success": $success,
+            "info":   $info,
+            "warning": $warning,
+            "danger": $danger,
+            "gray": $gray
+        ),
+        $theme-colors
+);
+
 
 // Typography
 //
@@ -69,6 +139,8 @@ $h6-line-height: 1.8rem;
 $headings-margin-top: 0;
 $headings-margin-bottom: 1rem;
 
+$small-font-size: 80%;
+
 // secondary보다 약하게 사용할 경우
 $text-muted: $gray-400 !default;
 
@@ -92,6 +164,34 @@ $grid-breakpoints: (
         md: 768px,
         lg: 992px,
         xl: 1200px
+) !default;
+
+
+$grid-columns: 12;
+$grid-gutter: 1.6rem;
+
+
+
+
+
+// 색상 점프를 요청하기 위한 특정 점프 포인트 설정
+$theme-color-interval:      8% !default;
+
+// 색상의 밝기가 "어두움"에서 "밝음"으로 변경되는 시기를 결정하는 yiq 밝기 값입니다.
+// 허용되는 값은 0 에서 255 사이입니다.
+$yiq-contrasted-threshold:  150 !default;
+
+// YIQ 색상 대비 기능에 사용하기 위해 밝고 어두운 텍스트 색상을 사용자 정의하십시오.
+$yiq-text-dark:             $gray-900 !default;
+$yiq-text-light:            $white !default;
+
+//escape-svg 함수에 의해 이스케이프되는 문자
+$escaped-characters: (
+        ("<", "%3c"),
+        (">", "%3e"),
+        ("#", "%23"),
+        ("(", "%28"),
+        (")", "%29"),
 ) !default;
 
 
@@ -141,15 +241,62 @@ $spacers
 $border-width:                1px !default;
 $border-color:                $gray-300 !default;
 
-$border-radius:               0.2rem !default;
-$border-radius-lg:            0.3rem !default;
-$border-radius-sm:            0.2rem !default;
+$border-radius-sm:            0.4rem !default;
+$border-radius:               0.4rem !default;
+$border-radius-lg:            0.4rem !default;
 
-$component-active-color:      $white !default;
-$component-active-bg:         $primary !default;
+
+$component-active-color:      $primary !default;
+$component-active-bg:         rgba($primary, 0.1) !default;
 
 // Transitions
 $transition-base : all 0.15s ease-in-out !default;
+
+
+// Tooltips
+
+$tooltip-font-size:                 $font-size-sm !default;
+$tooltip-max-width:                 200px !default;
+$tooltip-color:                     $white !default;
+$tooltip-bg:                        $black !default;
+$tooltip-border-radius:             $border-radius !default;
+$tooltip-opacity:                   .9 !default;
+$tooltip-padding-y:                 0.4rem !default;
+$tooltip-padding-x:                 0.8rem !default;
+$tooltip-margin:                    0 !default;
+
+$tooltip-arrow-width:               1rem !default;
+$tooltip-arrow-height:              0.5rem !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
+
+
+
+// Form tooltips must come after regular tooltips
+$form-feedback-tooltip-padding-y:     $tooltip-padding-y !default;
+$form-feedback-tooltip-padding-x:     $tooltip-padding-x !default;
+$form-feedback-tooltip-font-size:     $tooltip-font-size !default;
+$form-feedback-tooltip-line-height:   $line-height-base !default;
+$form-feedback-tooltip-opacity:       $tooltip-opacity !default;
+$form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
+
+
+
+
+// Caret
+$caret-width: 0.3em !default;
+$caret-vertical-align: $caret-width * 0.7 !default;
+$caret-spacing: 0 !default;
+
+
+
+
+// Badges
+$badge-font-size: 80% !default;
+$badge-padding-y: 0.3em !default;
+$badge-padding-x: 0.5em !default;
+$badge-border-width: 1px !default;
+$badge-border-radius: 3em !default;
+
 
 
 // Buttons + Forms
@@ -176,13 +323,14 @@ $input-btn-padding-x-sm:      0.8rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg:      1.2rem !default;
+$input-btn-padding-y-lg:      0.8rem !default;
 $input-btn-padding-x-lg:      1.6rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
 
-
 $input-btn-border-width:      $border-width !default;
+
+$input-btn-disabled-color: $gray-500;
 
 
 // Buttons
@@ -196,13 +344,13 @@ $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-padding-sm-y:            $input-btn-padding-y-sm !default;
+$btn-padding-sm-x:            $input-btn-padding-x-sm !default;
 $btn-font-size-sm:            $input-btn-font-size-sm !default;
 $btn-line-height-sm:          $input-btn-line-height-sm !default;
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-padding-lg-y:            $input-btn-padding-y-lg !default;
+$btn-padding-lg-x:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
 $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
@@ -214,10 +362,10 @@ $btn-focus-width:             $input-btn-focus-width !default; // 버튼의 포�
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 
 $btn-disabled-opacity:        .65 !default;
-$btn-disabled-color:          $gray-500;
+$btn-disabled-color:          $input-btn-disabled-color;
 
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $input-btn-disabled-color !default;
 $btn-block-spacing-y:         .5rem !default;
 
 $btn-focus-opacity:           0.4;
@@ -236,24 +384,26 @@ $btn-circle-height: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-y} 
 $btn-circle-width: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-x} * 2) + (#{$btn-border-width} * 2)); // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
 $btn-circle-border-radius: 3.6rem;
 
-$btn-circle-padding-y-xs: $input-btn-padding-y-xs;
-$btn-circle-padding-x-xs: $input-btn-padding-y-xs;
+$btn-circle-padding-xs-y: $input-btn-padding-y-xs;
+$btn-circle-padding-xs-x: $input-btn-padding-y-xs;
 $btn-circle-font-size-xs: $input-btn-font-size-xs;
 $btn-circle-line-height-xs: $input-btn-line-height-xs;
-$btn-circle-height-xs: calc(#{$btn-circle-line-height-xs} + (#{$btn-circle-padding-y-xs} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
-$btn-circle-width-xs: calc(#{$btn-circle-line-height-xs} + (#{$btn-circle-padding-x-xs} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
+$btn-circle-height-xs: calc(#{$btn-circle-line-height-xs} + (#{$btn-circle-padding-xs-y} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
+$btn-circle-width-xs: calc(#{$btn-circle-line-height-xs} + (#{$btn-circle-padding-xs-x} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
 
-$btn-circle-padding-y-sm: $input-btn-padding-y-sm;
-$btn-circle-padding-x-sm: $input-btn-padding-y-sm;
+$btn-circle-padding-sm-y: $input-btn-padding-y-sm;
+$btn-circle-padding-sm-x: $input-btn-padding-y-sm;
 $btn-circle-font-size-sm: $input-btn-font-size-sm;
 $btn-circle-line-height-sm: $input-btn-line-height-sm;
-$btn-circle-height-sm: calc(#{$btn-circle-line-height-sm} + (#{$btn-circle-padding-y-sm} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
-$btn-circle-width-sm: calc(#{$btn-circle-line-height-sm} + (#{$btn-circle-padding-x-sm} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
+$btn-circle-height-sm: calc(#{$btn-circle-line-height-sm} + (#{$btn-circle-padding-sm-y} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
+$btn-circle-width-sm: calc(#{$btn-circle-line-height-sm} + (#{$btn-circle-padding-sm-x} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
 
-$btn-circle-padding-y-lg: $input-btn-padding-y-lg;
-$btn-circle-padding-x-lg: $input-btn-padding-x-lg;
+$btn-circle-padding-lg-y: $input-btn-padding-y-lg;
+$btn-circle-padding-lg-x: $input-btn-padding-y-lg;
 $btn-circle-font-size-lg: $input-btn-font-size-lg;
 $btn-circle-line-height-lg: $input-btn-line-height-lg;
+$btn-circle-height-lg: calc(#{$btn-circle-line-height-lg} + (#{$btn-circle-padding-lg-y} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
+$btn-circle-width-lg: calc(#{$btn-circle-line-height-lg} + (#{$btn-circle-padding-lg-x} * 2) + (#{$btn-border-width} * 2)) !important; // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
 
 
 // Forms
@@ -266,45 +416,189 @@ $input-line-height:     $input-btn-line-height !default;
 
 $input-bg:              $white;
 $input-disabled-bg:     $gray-200;
+$input-disabled-color:  $input-btn-disabled-color;
 
 $input-color:           $gray-800;
 $input-border-color:    $gray;
 $input-border-width:    $input-btn-border-width;
+$input-box-shadow:  inset 0 1px 1px rgba($black, 0.75) !default;
+
 $input-border-radius:   $border-radius;
 
+$input-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
 $input-placeholder-color: $gray-500;
+
+
 
 $input-group-addon-bg:  $gray-100;
 $input-group-addon-color: $gray-800;
 
 $input-height: calc(#{$input-line-height} + (#{$input-padding-y} * 2) + (#{$input-border-width} * 2));
 
+$input-focus-bg:                        $input-bg !default;
+$input-focus-border-color:              lighten($component-active-bg, 25%) !default;
+$input-focus-color:                     $input-color !default;
+$input-focus-width:                     $input-btn-focus-width !default;
+$input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+
+
+$input-height-inner:          calc((#{$input-line-height} * 1) + (#{$input-padding-y} * 2)) !default;
+$input-height-inner-half:     calc((#{$input-line-height} * 0.5) + #{$input-padding-y}) !default;
+$input-height-inner-quarter:  calc((#{$input-line-height} * 0.25) + (#{$input-padding-y} / 2)) !default; // 결과값이 홀수 또는 소수점이 있을 수 있음 (주의!)
+
+
+$input-search-icon-color: $gray-600;
+$input-search-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$input-search-icon-color}' d='M10 0c5.523 0 10 4.477 10 10 0 1.994-.583 3.85-1.59 5.4L23 20c.652 1.333.652 2.333 0 3s-1.652.667-3 0l-4.6-4.59C13.85 19.417 11.994 20 10 20 4.477 20 0 15.523 0 10S4.477 0 10 0zm0 2a8 8 0 1 0 0 16 8 8 0 1 0 0-16z'/></svg>");
+$input-search-bg-size: $font-size-base;
+$input-search-background: escape-svg($input-search-icon) no-repeat left $input-padding-x center / $input-search-bg-size;
+$input-search-padding-x: ($input-padding-x + $input-search-bg-size + ($input-padding-x * 0.5));
+
+
+
+$form-check-input-size: $font-size-base !default;
+$form-check-input-margin-x: 0.4rem !default;
+$form-check-input-gutter : ($form-check-input-size + $form-check-input-margin-x) !default; // input과 라벨의 간격
+$form-check-input-margin-y: (($line-height-base - $form-check-input-size) / 2) !default;
+
+$form-check-inline-margin-x: $font-size-base;
+$form-check-inline-input-margin-x: $form-check-input-margin-x !default;
+
+$form-text-margin-top: $input-padding-y;
+
+$form-group-margin-bottom: ($spacer * 2) !default;
 
 
 // Custom forms
-$custom-control-gutter: 0.8rem !default;
-$custom-control-spacer-x: 1.4rem !default;
+$custom-control-gutter: 0.4rem !default;
+$custom-control-spacer-x: $font-size-base !default; // ?? 간격 조절시 사용되는듯?
 
-$custom-control-indicator-size: 1.4rem !default;
+$custom-control-cursor: null !default;
+
+$custom-control-indicator-size: $font-size-base !default;
 $custom-control-indicator-bg: $input-bg !default;
 
-$custom-control-indicator-bg-size: 50% 50% !default;
+$custom-control-indicator-bg-size: 0.8rem 0.8rem !default; // 중앙에 위치하기 위해선 50% 50% 이나, 홀수가로 계산되어 따로 계산함.
+
 $custom-control-indicator-border-color: $input-border-color;
 $custom-control-indicator-border-width: $input-border-width;
 
+
 $custom-control-label-color: null !default;
 
+$custom-control-indicator-disabled-bg:  $input-disabled-bg !default;
+$custom-control-label-disabled-color: $input-disabled-color !default;
 
-$custom-control-indicator-checked-color:        $component-active-color !default;
+$custom-control-indicator-checked-color: $component-active-color !default;
+$custom-control-indicator-checked-bg: $component-active-bg !default;
+$custom-control-indicator-checked-disabled-bg:  rgba($primary, .5) !default;
+$custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default;
+$custom-control-indicator-checked-box-shadow:   null !default;
+
+$custom-control-indicator-focus-box-shadow: $input-focus-box-shadow !default;
+$custom-control-indicator-focus-border-color:   $input-focus-border-color !default;
+
+$custom-control-indicator-active-color:         $component-active-color !default;
+$custom-control-indicator-active-bg:            lighten($component-active-bg, 35%) !default;
+$custom-control-indicator-active-box-shadow:    null !default;
+$custom-control-indicator-active-border-color:  $custom-control-indicator-active-bg !default;
 
 $custom-checkbox-indicator-border-radius: $input-border-radius !default;
 $custom-checkbox-indicator-icon-checked:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default;
 
+$custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
+$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
+$custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default;
+$custom-checkbox-indicator-indeterminate-box-shadow: null !default;
+
+$custom-control-indicator-checked-disabled-bg: $input-disabled-bg !default;
+$custom-control-indicator-checked-disabled-border-color: $custom-control-indicator-border-color !default;
+
+$custom-radio-indicator-border-radius: 50% !default;
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
 
 
-// Tab
-$tab-nav-padding-y: 0.8rem;
-$tab-nav-padding-x: 1.6rem;
+$custom-select-padding-y:           $input-padding-y !default;
+$custom-select-padding-x:           $input-padding-x !default;
+$custom-select-font-family:         $input-font-family !default;
+$custom-select-font-size:           $input-font-size !default;
+$custom-select-height:              $input-height !default;
+$custom-select-indicator-padding:   1rem !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-font-weight:         $input-font-weight !default;
+$custom-select-line-height:         $input-line-height !default;
+$custom-select-color:               $input-color !default;
+$custom-select-disabled-color:      $gray-600 !default;
+$custom-select-bg:                  $input-bg !default;
+$custom-select-disabled-bg:         $gray-200 !default;
+$custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
+$custom-select-indicator-color:     $gray-800 !default;
+$custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
+$custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+
+$custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
+$custom-select-feedback-icon-position:      center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;
+$custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default;
+
+$custom-select-border-width:        $input-border-width !default;
+$custom-select-border-color:        $input-border-color !default;
+$custom-select-border-radius:       $border-radius !default;
+$custom-select-box-shadow:          inset 0 1px 2px rgba($black, .075) !default;
+
+$custom-select-focus-border-color:  $input-focus-border-color !default;
+$custom-select-focus-width:         $input-focus-width !default;
+$custom-select-focus-box-shadow:    0 0 0 $custom-select-focus-width $input-btn-focus-color !default;
+
+$custom-file-height:                $input-height !default;
+$custom-file-height-inner:          $input-height-inner !default;
+$custom-file-focus-border-color:    $input-focus-border-color !default;
+$custom-file-focus-box-shadow:      $input-focus-box-shadow !default;
+$custom-file-disabled-bg:           $input-disabled-bg !default;
+
+$custom-file-padding-y:             $input-padding-y !default;
+$custom-file-padding-x:             $input-padding-x !default;
+$custom-file-line-height:           $input-line-height !default;
+$custom-file-font-family:           $input-font-family !default;
+$custom-file-font-weight:           $input-font-weight !default;
+$custom-file-color:                 $input-color !default;
+$custom-file-bg:                    $input-bg !default;
+$custom-file-border-width:          $input-border-width !default;
+$custom-file-border-color:          $input-border-color !default;
+$custom-file-border-radius:         $input-border-radius !default;
+$custom-file-box-shadow:            $input-box-shadow !default;
+$custom-file-button-color:          $custom-file-color !default;
+$custom-file-button-bg:             $input-group-addon-bg !default;
+$custom-file-text: (
+    en: "Browse",
+    ko: "파일선택"
+) !default;
+
+
+
+// Form Validation
+$form-feedback-margin-top:          $form-text-margin-top !default;
+$form-feedback-font-size:           $small-font-size !default;
+$form-feedback-valid-color:         $success !default;
+$form-feedback-invalid-color:       $danger !default;
+
+$form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
+$form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
+$form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
+$form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
+
+$form-validation-states: () !default;
+$form-validation-states: map-merge(
+        (
+            "valid": (
+                "color": $form-feedback-valid-color,
+                "icon": $form-feedback-icon-valid
+            ),
+            "invalid": (
+                "color": $form-feedback-invalid-color,
+                "icon": $form-feedback-icon-invalid
+            ),
+        ),
+        $form-validation-states
+);
 
 
 
@@ -326,12 +620,147 @@ $switch-disabled-color: $btn-disabled-color;
 $switch-disabled-opacity: $btn-disabled-opacity;
 
 
+
+
+
+
+// Tab
+$tab-nav-padding-y: 0.6rem;
+$tab-nav-padding-x: 1.6rem;
+
+
+
+
 // List group
 $list-group-border-width: $border-width;
 $list-group-border-color: $border-color;
-$list-group-bgcolor: transparent;
+$list-group-bg: transparent;
 $list-group-item-padding-y : $spacer;
 $list-group-item-padding-x : ($spacer * 2);
-$list-group-active-color: $primary;
-$list-group-active-bgcolor : rgba($primary, 0.15);
+$list-group-active-color: $component-active-color;
+$list-group-active-bg : $component-active-bg;
+
+
+// Dropdown menu
+$dropdown-bg: $white;
+$dropdown-padding-y: $spacer;
+$dropdown-padding-x: $spacer * 2;
+$dropdown-border-width: $border-width;
+$dropdown-border-color: $border-color;
+$dropdown-border-radius: $border-radius;
+
+$dropdown-item-padding-y: $spacer / 2;
+$dropdown-item-padding-x: $spacer * 2;
+
+$dropdown-item-color: $gray-800;
+$dropdown-item-hover-color: darken($gray-800, 5%);
+$dropdown-item-hover-bg: $gray-100;
+
+$dropdown-item-active-color: $component-active-color;
+$dropdown-item-active-bg: $component-active-bg;
+
+$dropdown-item-disabled-color: $gray-500;
+
+
+
+// Pagination
+$page-link-padding-y: 0.6rem;
+$page-link-padding-x: 0.6rem;
+$page-link-border-width: 1px;
+$page-link-width: calc(#{$line-height-base} + (#{$page-link-padding-x} * 2) + (#{$page-link-border-width} * 2));
+$page-link-height: calc(#{$line-height-base} + (#{$page-link-padding-y} * 2) + (#{$page-link-border-width} * 2));
+
+$page-icon-size: $font-size-base;
+$page-icon-spacer: ($line-height-base - $font-size-base) / 2 ;
+
+
+// Card
+$card-border-width: 1px;
+$card-border-color: $border-color;
+$card-padding-y: $spacer;
+$card-padding-x: $spacer * 2;
+$card-bg: $white;
+
+$card-header-bg: $gray-100;
+
+
+// Alerts
+$alert-padding-y: $spacer;
+$alert-padding-x: $spacer * 2;
+$alert-border-width: 1px;
+$alert-icon-size: $line-height-base;
+$alert-inner-spacer: 0.6rem;
+
+
+// Modals
+$modal-dialog-margin: $spacer * 2 !default;
+$modal-dialog-margin-y-sm-up: $spacer * 3 !default;
+
+$modal-container-bg : $white !default;
+$modal-container-padding-y: $spacer * 2 !default;
+$modal-container-padding-x: $spacer * 2 !default;
+$modal-container-border-width: $border-width;
+$modal-container-border-color: $border-color;
+$modal-container-border-radius: $border-radius;
+$modal-container-color: null !default;
+
+$modal-header-padding: $spacer * 2 !default;
+$modal-header-border-width: $border-width;
+$modal-header-border-color: $border-color;
+
+$modal-body-padding: $spacer * 2 !default;
+
+$modal-footer-padding: $spacer * 2 !default;
+$modal-footer-border-width: $border-width;
+$modal-footer-border-color: $border-color;
+
+
+$modal-backdrop-bg: $black !default;
+$modal-backdrop-opacity: 0.5 !default;
+
+$modal-sm: 320px !default;
+$modal-md: 640px !default;
+$modal-lg: 800px !default;
+$modal-xl: 1140px !default;
+
+
+// Tables
+
+$table-cell-padding-y: $spacer;
+$table-cell-padding-x: $spacer * 2;
+
+
+
+// Datagrid
+//
+$data-grid-border-width: $border-width;
+$data-grid-border-color: $border-color;
+$data-grid-border-radius: $border-radius;
+
+$data-grid-cell-border-width: $border-width;
+$data-grid-cell-border-color: $border-color;
+$data-grid-cell-padding-y: $spacer;
+$data-grid-cell-padding-x: $spacer * 2;
+
+$data-grid-cell-color: $gray-800 !default;
+$data-grid-cell-bg: $white;
+$data-grid-cell-alt-bg: $gray-100; // alernative
+$data-grid-cell-active-color: $primary !default;
+$data-grid-cell-active-bg: lighten($primary, 40%) !default;
+$data-grid-cell-hover-bg: lighten($primary, 36%) !default;
+
+
+
+// z-index
+$data-grid-rowgroup-sticky-z-index: 501;
+$data-grid-row-sticky-z-index: 500;
+
+
+
+
+
+
+
+
+
 

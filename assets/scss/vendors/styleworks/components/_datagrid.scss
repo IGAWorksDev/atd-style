@@ -1,0 +1,196 @@
+
+//
+// Datagrid
+//
+// 대화형 테이블 형식 데이터 스타일
+
+
+// Grid Mixins
+//
+// ----------------------------------------
+
+@mixin data-grid-flex-column() {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+@mixin data-grid-flex-row(){
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
+  position: relative;
+  border-collapse: collapse;
+}
+
+@mixin data-grid-flex-cell() {
+  flex: 1 1 auto;
+  align-items: stretch; // 행(row) 안의 셀 높이를 동일하게 맞춤
+  border: solid $data-grid-cell-border-color;
+  border-width: 0 0 $data-grid-cell-border-width 0;
+  padding: $data-grid-cell-padding-y $data-grid-cell-padding-x;
+  background-color: $data-grid-cell-bg;
+  min-width: 8rem;
+}
+
+@mixin data-grid-sticky() {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+
+// Datagrid Styles
+//
+// ----------------------------------------
+
+// Grid & Rowgroup
+// 표 형식 정보 표시를 위한 그리드
+// 행(row)을 포함하는 그룹으로 <thead>, <tbody> 및 <tfoot>의 기능을 모방
+[role="grid"],
+.datagrid,
+[role="rowgroup"],
+.datagrid-rowgroup,
+.datagrid-hader,
+.datagrid-body {
+  @include data-grid-flex-column();
+}
+
+[role="rowgroup"],
+.datagrid-rowgroup,
+.datagrid-hader,
+.datagrid-body {
+  flex: 1 1 auto;
+}
+
+// Row
+// 표 형식 구조 내의 셀들의 행
+//
+[rold="row"],
+.datagrid-row {
+  @include data-grid-flex-row();
+}
+
+
+// Gridcell
+// <td>요소의 기능을 모방하는 셀
+//
+[role="gridcell"],
+.datagrid-cell,
+.datagrid-cell-select {
+  @include data-grid-flex-cell();
+  color: $data-grid-cell-color;
+
+  // gridcell이 <th> 기능을 모방할 때
+  &[role="columnheader"],
+  &[role="rowheader"] {
+    font-weight: bolder;
+  }
+}
+
+// Selection Gridcell
+.datagrid-cell-select {
+  min-width: 3rem;
+  flex: 0 0 3rem;
+}
+
+// Header 안의 Gridcell
+.datagrid-header .datagrid-cell {
+  border-top: $data-grid-cell-border-width solid $data-grid-cell-border-color;
+  border-bottom: ($data-grid-cell-border-width * 2) solid $data-grid-cell-border-color;
+  background-color: $data-grid-cell-alt-bg;
+}
+
+// Tabindex가 있을 때 포커스 된 상태 추가
+[role="columnheader"],
+[role="rowheader"],
+[role="gridcell"] {
+  &[tabindex] {
+    position: relative;
+    &:focus {
+      outline: 2px dotted $primary;
+      z-index: 10;
+    }
+  }
+}
+
+
+
+// Sticky
+//
+
+// rowgroup을 움직이지 않게 할 경우
+// rowgroup과 함께 사용.
+.datagrid-rowgroup-sticky {
+  @include data-grid-sticky();
+  z-index: $data-grid-rowgroup-sticky-z-index;
+}
+
+// row의 gridcell을 움직이지 않게 할 경우
+// row 안에 사용하며, 1개 이상의 gridcell을 포함하고 있어야 함
+.datagrid-row-sticky {
+  @include data-grid-flex-row();
+  @include data-grid-sticky();
+  z-index: $data-grid-row-sticky-z-index;
+
+  // sticky effect style
+  &:after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba($black, 0.1) 0%, rgba($white, 0) 100%);
+  }
+}
+
+
+// Variables Styles
+//
+// ----------------------------------------
+
+// Responsive -- 그리드 시스템과 연결
+//
+.datagrid-responsive {
+  overflow: auto;
+}
+
+// Bordered
+//
+.datagrid-bordered .datagrid-rowgroup .datagrid-row {
+  .datagrid-cell {
+    border-left-width: $data-grid-border-width;
+    &:last-child {
+      border-right-width: $data-grid-border-width;
+    }
+  }
+}
+
+// Stripe
+//
+.datagrid-striped .datagrid-body .datagrid-row {
+  &:nth-child(even) {
+    .datagrid-cell {
+      background-color: $data-grid-cell-alt-bg;
+    }
+  }
+}
+
+// Row Selected
+//
+.datagrid-striped .datagrid-body .datagrid-row[aria-selected="true"] {
+  .datagrid-cell {
+    background-color: $data-grid-cell-active-bg;
+    color: $data-grid-cell-active-color;
+  }
+}
+
+// Hover
+//
+.datagrid-hover .datagrid-body .datagrid-row:hover {
+  .datagrid-cell {
+    background-color: $data-grid-cell-hover-bg;
+  }
+}

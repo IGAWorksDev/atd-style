@@ -1,0 +1,66 @@
+
+
+.custom-control {
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-height: $line-height-base; // 고정된 line-height 사용함!!(주의)
+  padding-left: $custom-control-gutter + $custom-control-indicator-size; // 라벨 텍스트와의 거리와 컨트롤 인디케이터의 크기를 더한 값.
+}
+
+
+.custom-control-input {
+  position: absolute;
+  left: 0;
+  z-index: -1; // 레이블 뒤에 입력을 넣어 텍스트가 오버레이되지 않도록 합니다.
+  width: $custom-control-indicator-size;
+  height: $custom-control-indicator-size;
+  opacity: 0;
+}
+
+.custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  color: $custom-control-label-color;
+
+  // 컨트롤 배경 모양
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: ($line-height-base - $custom-control-indicator-size) / 2; // 고정된 line-height 사용함!!(주의)
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    pointer-events: none;
+    background-color: $custom-control-indicator-bg;
+    border: $custom-control-indicator-border-width solid $custom-control-indicator-border-color;
+  }
+  // 컨트롤 아이콘
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: ($line-height-base - $custom-control-indicator-size) / 2; // 고정된 line-height 사용함!!(주의)
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    background: no-repeat 50% / #{$custom-control-indicator-bg-size};
+  }
+}
+
+// Checkbox
+//
+.custom-checkbox {
+  .custom-control-label::before {
+    @include border-radius($custom-checkbox-indicator-border-radius);
+  }
+
+  // 체크된 상태
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-image: escape-svg($custom-checkbox-indicator-icon-checked); // Note: 현재 반영안되고 있음.
+    }
+  }
+}
+
