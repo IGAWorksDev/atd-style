@@ -6,6 +6,11 @@
   <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 <body>
   <!-- gnb -->
@@ -99,119 +104,203 @@
           <!-- mainbody -->
           <div class="mainbody pt-3 border-top">
 
-            <section class="row align-content-stretch">
-                <!-- col -->
-                <div class="col-5">
-                  <h4 class="font-size-lg font-weight-bold">
-                    프로젝트
-                  </h4>
-                  <div class="card">
-                    <div class="card-body">
-                      <dl class="row mb-0">
-                        <dt class="col-4">광고주</dt>
-                        <dd class="col-8">Kakao Corporation</dd>
-                        <dt class="col-4">서비스명</dt>
-                        <dd class="col-8">카카오톡 Kakao Talk</dd>
-                        <dt class="col-4">카테고리</dt>
-                        <dd class="col-8">커뮤니케이션</dd>
-                        <dt class="col-4">OS</dt>
-                        <dd class="col-8 mb-0">Android</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-7">
-                  <h4 class="font-size-lg font-weight-bold">
-                    서비스 분석
-                  </h4>
-                  <div class="card">
-                    <div class="card-body d-flex flex-wrap flex-row pt-2">
-                      <!-- row -->
-                      <div class="row align-items-start mb-2 border-bottom pb-2">
-                        <!-- col -->
-                        <div class="col-4 mb-0">
-                          <h5 class="font-weight-bold">
-                            일간 사용자
-                          </h5>
-                          <div class="mt-1 mb-0">
-                            <div class="h2 mb-0"><strong>60,544,875</strong>명</div>
-                            <small>전일 대비 0%</small>
-                          </div>
-                        </div>
-                        <!-- /col -->
-                        <!-- col -->
-                        <div class="col-4 mb-0">
-                          <h5 class="font-weight-bold">
-                            일간 사용자
-                          </h5>
-                          <div class="mt-1 mb-0">
-                            <div class="h2 mb-0"><strong>60,544,875</strong>명</div>
-                            <small>전일 대비 0%</small>
-                          </div>
-                        </div>
-                        <!-- /col -->
-                        <!-- col -->
-                        <div class="col-4 mb-0">
-                          <h5 class="font-weight-bold">
-                            일간 사용자
-                          </h5>
-                          <div class="mt-1 mb-0">
-                            <div class="h2 mb-0"><strong>60,544,875</strong>명</div>
-                            <small>전일 대비 0%</small>
-                          </div>
-                        </div>
-                        <!-- col -->
-                      </div>
-                      <!-- /row -->
-                      <!-- row -->
-                      <div class="row align-items-start">
-                        <div class="col-6">
-                          <h5 class="font-weight-bold">사용자 성별 비중</h5>
-                          <div>
-                            하이차트
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <h5 class="font-weight-bold">사용자 연령 비중</h5>
-                          <div>
-                            하이차트
-                          </div>
+            <section class="mb-5">
+              <h4 class="font-size-lg font-weight-bold">
+                서비스 분석
+              </h4>
+              <div class="card">
+                <div class="card-body pt-3">
+                  <div class="px-1">
+                    <!-- row -->
+                    <div class="row align-items-start">
+                      <!-- col -->
+                      <div class="col-4 mb-0">
+                        <h5 class="font-size-lg">
+                          일간 사용자
+                        </h5>
+                        <div class="mt-1 mb-0">
+                          <span class="h2 mb-0">
+                            <strong>60,544,874</strong>명
+                          </span>
+                          <small class="ml-2 text-muted">
+                            전일대비
+                            <span class="text-primary">
+                              <i class="ico ic-caret-bottom"></i> 5.33%
+                            </span>
+                          </small>
                         </div>
                       </div>
-                      <!-- /row -->
-                      <!-- footer -->
-                      <footer class="text-right w-100 mt-auto">
-                        <small>기준일자 : 2020-11-24</small>
-                      </footer>
-                      <!-- /footer -->
+                      <!-- /col -->
+                      <!-- col -->
+                      <div class="col-4 mb-0">
+                        <h5 class="font-size-lg">
+                          현재 총 설치 기기
+                        </h5>
+                        <div class="mt-1 mb-0">
+                          <span class="h2 mb-0">
+                            <strong>23,544,874</strong>대
+                          </span>
+                          <small class="ml-2 text-muted">
+                            전일대비
+                            <span class="text-danger">
+                              <i class="ico ic-caret-bottom"></i> 5.33%
+                            </span>
+                          </small>
+                        </div>
+                      </div>
+                      <!-- /col -->
+                      <!-- col -->
+                      <div class="col-4 mb-0">
+                        <h5 class="font-size-lg">
+                          일간 총 사용시간
+                        </h5>
+                        <div class="d-flex align-items-end mt-1 mb-0">
+                          <span class="h2 mb-0">
+                            <strong>7,541,874</strong> 시간
+                          </span>
+                          <small class="ml-2 text-muted">
+                            전일대비
+                            <span class="text-primary">
+                              <i class="ico ic-caret-top"></i> 5.33%
+                            </span>
+                          </small>
+                        </div>
+                      </div>
+                      <!-- col -->
                     </div>
+                    <!-- /row -->
                   </div>
+
+                  <div class="mt-3 pt-3 px-1 border-top">
+                    <!-- row -->
+                    <div class="row align-items-stretch">
+                      <div class="col-5">
+                        <h5 class="font-size-lg">사용자 성별 비중</h5>
+                        <figure class="highcharts-figure">
+                          <div id="user-gender"></div>
+                        </figure>
+                        <script>
+                            // Build the chart
+                            Highcharts.chart('user-gender', {
+                                chart: {
+                                    plotBackgroundColor: null,
+                                    plotBorderWidth: null,
+                                    plotShadow: false,
+                                    type: 'pie'
+                                },
+                                title: {
+                                    text: ' '
+                                },
+                                tooltip: {
+                                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                },
+                                accessibility: {
+                                    point: {
+                                        valueSuffix: '%'
+                                    }
+                                },
+                                plotOptions: {
+                                    pie: {
+                                        allowPointSelect: true,
+                                        cursor: 'pointer',
+                                        dataLabels: {
+                                            enabled: false
+                                        },
+                                        showInLegend: true,
+                                        size: '100%',
+                                        innerSize: '80%'
+                                    }
+                                },
+                                series: [{
+                                    name: '성별',
+                                    colorByPoint: true,
+                                    data: [{
+                                        name: '남성',
+                                        y: 75
+                                    }, {
+                                        name: '여성',
+                                        y: 20
+                                    }, {
+                                        name: '알 수 없음',
+                                        y: 5
+                                    }]
+                                }]
+                            });
+                        </script>
+                      </div>
+                      <div class="col-7 border-left">
+                        <h5 class="font-size-lg">사용자 연령 비중</h5>
+                        <figure class="highcharts-figure">
+                          <div id="user-age"></div>
+                        </figure>
+                        <script>
+                            Highcharts.chart('user-age', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: ' '
+                                },
+                                xAxis: {
+                                    categories: ['10대', '20대', '30대', '40대', '50대', '60대']
+                                },
+                                yAxis: {
+                                    min: 0
+                                },
+                                legend: {
+                                    enabled: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                        '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                                    footerFormat: '</table>',
+                                    shared: true,
+                                    useHTML: true
+                                },
+                                plotOptions: {
+                                    column: {
+                                        pointPadding: 0.2,
+                                        borderWidth: 0
+                                    }
+                                },
+                                series: [{
+                                    name: '연령',
+                                    data: [49.9, 83.6, 48.9, 42.4, 14, 6]
+                                }]
+                            });
+                        </script>
+                      </div>
+                    </div>
+                    <!-- /row -->
+                  </div>
+
+                  <!-- footer -->
+                  <footer class="text-right w-100 mt-auto">
+                    <small>기준일자 : 2020-11-24</small>
+                  </footer>
+                  <!-- /footer -->
                 </div>
-                <!-- /col -->
+              </div>
             </section>
 
             <section class="my-5">
               <header class="d-flex align-items-center justify-content-between mb-1">
-                <h4 class="font-size-lg font-weight-bold mb-0">
-                  업종 광고 성과 지표
-                </h4>
-                <a class="btn btn-text-secondary" href="#">
-                  AD Insight 이동
-                  <i class="ico ic-chevron-right"></i>
-                </a>
+                <div class="flex-left d-flex align-items-center">
+                  <h4 class="font-size-lg font-weight-bold mb-0">
+                    업종 광고 성과 지표
+                  </h4>
+                  <small class="ml-1">비교업종 : 커뮤니케이션</small>
+                </div>
+                <div class="flex-right">
+                  <a class="btn btn-text-secondary btn-sm" href="#">
+                    AD Insight 이동
+                    <i class="ico ic-chevron-right"></i>
+                  </a>
+                </div>
               </header>
               <!-- card -->
               <div class="card">
-                <!-- card-header -->
-                <div class="card-header">
-                  비교업종
-                  <button class="btn btn-outlined-secondary btn-sm dropdown-toggle">
-                    커뮤니케이션
-                  </button>
-                </div>
-                <!-- /card-header -->
                 <!-- datagrid -->
                 <div class="datagrid-responsive">
                   <div class="datagrid datagrid-bordered datagrid-hover" role="grid">
@@ -256,7 +345,7 @@
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
                           1,874원
-                          <small class="d-block">(-2,000원)</small>
+                          <small class="d-block text-success">(-2,000원)</small>
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
                           3,468,977원
@@ -282,7 +371,7 @@
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
                           1,874원
-                          <small class="d-block">(-2,000원)</small>
+                          <small class="d-block text-success">(-2,000원)</small>
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
                           3,468,977원
@@ -308,7 +397,7 @@
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
                           1,874원
-                          <small class="d-block">(-2,000원)</small>
+                          <small class="d-block text-success">(-2,000원)</small>
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
                           3,468,977원
@@ -334,7 +423,7 @@
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
                           1,874원
-                          <small class="d-block">(-2,000원)</small>
+                          <small class="d-block text-success">(-2,000원)</small>
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
                           3,468,977원
@@ -360,7 +449,7 @@
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
                           1,874원
-                          <small class="d-block">(-2,000원)</small>
+                          <small class="d-block text-success">(-2,000원)</small>
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
                           3,468,977원
@@ -423,10 +512,9 @@
                   <h4 class="font-size-lg font-weight-bold mb-0">
                     추천 오디언스
                   </h4>
-                  <small class="ml-1">(2020. 9. 30 ~ 2020.11.30)</small>
                 </div>
                 <div class="flex-end">
-                  <a class="btn btn-text-secondary" href="#">
+                  <a class="btn btn-text-secondary btn-sm" href="#">
                     Audience 이동
                     <i class="ico ic-chevron-right"></i>
                   </a>
@@ -743,11 +831,52 @@
               </header>
               <!-- card -->
               <div class="card">
-                <div class="card-body">
-                  사용자수 / 총 설치기기 / 신규 설치기기 / 총 사용시간
-                  <div>
-                    하이 차트
+                <div class="card-body p-2">
+                  <!-- nav -->
+                  <nav>
+                    <div class="btn-group" id="nav-trends" role="tablist">
+                      <a class="btn btn-contained-secondary active" id="nav-trends-user-tab" data-toggle="tab" href="#nav-trends-user" role="tab" aria-controls="nav-trends-user" aria-selected="true">
+                        사용자수
+                      </a>
+                      <a class="btn btn-outlined-secondary" id="nav-trends-totalInstall-tab" data-toggle="tab" href="#nav-trends-totalInstall" role="tab" aria-controls="nav-trends-totalInstall" aria-selected="false">
+                        총 설치기기
+                      </a>
+                      <a class="btn btn-outlined-secondary" id="nav-trends-newInstall-tab" data-toggle="tab" href="#nav-trends-user" role="tab" aria-controls="nav-trends-newInstall" aria-selected="false">
+                        신규 설치기기
+                      </a>
+                      <a class="btn btn-outlined-secondary" id="nav-trends-usageTime-tab" data-toggle="tab" href="#nav-trends-user" role="tab" aria-controls="nav-trends-usageTime" aria-selected="false">
+                        총 사용기간
+                      </a>
+                    </div>
+                  </nav>
+                  <!-- /nav -->
+                  <!-- tab-content -->
+                  <div class="tab-content mt-2" id="nav-trends-content">
+                    <!-- tab-pane -->
+                    <div class="tab-pane fade show active" id="nav-trends-user" role="tabpanel" aria-labelledby="nav-trends-user-tab">
+                      사용자수 - 하이차트
+                    </div>
+                    <!-- /tab-pane -->
+
+                    <!-- tab-pane -->
+                    <div class="tab-pane fade" id="nav-trends-totalInstall" role="tabpanel" aria-labelledby="nav-trends-totalInstall-tab">
+                      총 설치기기 - 하이차트
+                    </div>
+                    <!-- /tab-pane -->
+
+                    <!-- tab-pane -->
+                    <div class="tab-pane fade" id="nav-trends-newInstall" role="tabpanel" aria-labelledby="nav-trends-newInstall-tab">
+                      신규 설치기기 - 하이차트
+                    </div>
+                    <!-- /tab-pane -->
+
+                    <!-- tab-pane -->
+                    <div class="tab-pane fade" id="nav-trends-usageTime" role="tabpanel" aria-labelledby="nav-trends-usageTime-tab">
+                      총 사용시간 - 하이차트
+                    </div>
+                    <!-- /tab-pane -->
                   </div>
+                  <!-- /tab-content -->
                 </div>
               </div>
               <!-- /card -->
@@ -1619,13 +1748,6 @@
               </div>
             </div>
 
-
-
-
-
-
-
-
           </div>
           <!-- mainbody -->
         </div>
@@ -1640,6 +1762,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 
   <script>
       $(function () {
