@@ -13,17 +13,27 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  user-select: none; // 사용자가 텍스트를 선택 할 수 있는지 지정함.
   border: $btn-border-width solid transparent;
   background-color: transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+
+  &:focus {
+    outline: 0;
+  }
 }
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
-}
-.btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  @include button-size($btn-padding-sm-y, $btn-padding-sm-x, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
 
+.btn-lg {
+  @include button-size($btn-padding-lg-y, $btn-padding-lg-x, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+
+.btn + .btn {
+  margin-left: 4px;
+}
 
 // 동그란 모양을 갖는 스타일
 // 최대 2자까지 노출될 수 있음 (주의)
@@ -42,20 +52,25 @@
   height: $btn-circle-height  !important;
   white-space: nowrap;
   overflow: hidden;
+
+  outline: none;
 }
 .btn-circle-xs {
-  @include button-circle-size($btn-circle-padding-y-xs, $btn-circle-padding-x-xs, $btn-circle-width-xs, $btn-circle-height-xs, $btn-circle-font-size-xs, $btn-circle-line-height-xs, $btn-circle-border-radius);
+  @include button-circle-size($btn-circle-padding-xs-y, $btn-circle-padding-xs-x, $btn-circle-width-xs, $btn-circle-height-xs, $btn-circle-font-size-xs, $btn-circle-line-height-xs, $btn-circle-border-radius);
 }
 .btn-circle-sm {
-  @include button-circle-size($btn-circle-padding-y-sm, $btn-circle-padding-x-sm, $btn-circle-width-sm, $btn-circle-height-sm, $btn-circle-font-size-sm, $btn-circle-line-height-sm, $btn-circle-border-radius);
+  @include button-circle-size($btn-circle-padding-sm-y, $btn-circle-padding-sm-x, $btn-circle-width-sm, $btn-circle-height-sm, $btn-circle-font-size-sm, $btn-circle-line-height-sm, $btn-circle-border-radius);
+}
+.btn-circle-lg {
+  @include button-circle-size($btn-circle-padding-lg-y, $btn-circle-padding-lg-x, $btn-circle-width-lg, $btn-circle-height-lg, $btn-circle-font-size-lg, $btn-circle-line-height-lg, $btn-circle-border-radius);
 }
 
-
+/*
 .btn + .btn,
 .btn-circle + .btn-circle {
   margin-left: ($spacer / 2);
 }
-
+*/
 
 // Button Styles
 //

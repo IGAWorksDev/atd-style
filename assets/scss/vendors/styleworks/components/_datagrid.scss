@@ -9,14 +9,14 @@
 //
 // ----------------------------------------
 
-@mixin data-grid-flex-column() {
+@mixin datagrid-flex-column() {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   position: relative;
 }
 
-@mixin data-grid-flex-row(){
+@mixin datagrid-flex-row(){
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -25,17 +25,15 @@
   border-collapse: collapse;
 }
 
-@mixin data-grid-flex-cell() {
+@mixin datagrid-flex-cell() {
   flex: 1 1 auto;
   align-items: stretch; // 행(row) 안의 셀 높이를 동일하게 맞춤
-  border: solid $data-grid-cell-border-color;
-  border-width: 0 0 $data-grid-cell-border-width 0;
-  padding: $data-grid-cell-padding-y $data-grid-cell-padding-x;
-  background-color: $data-grid-cell-bg;
+  padding: $datagrid-padding-y $datagrid-padding-x;
+  background-color: $datagrid-bg;
   min-width: 8rem;
 }
 
-@mixin data-grid-sticky() {
+@mixin datagrid-sticky() {
   position: sticky;
   top: 0;
   left: 0;
@@ -49,44 +47,50 @@
 // Grid & Rowgroup
 // 표 형식 정보 표시를 위한 그리드
 // 행(row)을 포함하는 그룹으로 <thead>, <tbody> 및 <tfoot>의 기능을 모방
-[role="grid"],
 .datagrid,
-[role="rowgroup"],
 .datagrid-rowgroup,
-.datagrid-hader,
+.datagrid-header,
 .datagrid-body {
-  @include data-grid-flex-column();
+  @include datagrid-flex-column();
 }
 
-[role="rowgroup"],
 .datagrid-rowgroup,
-.datagrid-hader,
+.datagrid-header,
 .datagrid-body {
   flex: 1 1 auto;
 }
 
+
 // Row
 // 표 형식 구조 내의 셀들의 행
 //
-[rold="row"],
 .datagrid-row {
-  @include data-grid-flex-row();
+  @include datagrid-flex-row();
+
+  & + & {
+    .datagrid-cell {
+      border-top: $datagrid-border-width solid $datagrid-border-color;
+    }
+  }
 }
 
 
 // Gridcell
 // <td>요소의 기능을 모방하는 셀
 //
-[role="gridcell"],
 .datagrid-cell,
 .datagrid-cell-select {
-  @include data-grid-flex-cell();
-  color: $data-grid-cell-color;
+  @include datagrid-flex-cell();
+  color: $datagrid-color;
 
   // gridcell이 <th> 기능을 모방할 때
   &[role="columnheader"],
   &[role="rowheader"] {
     font-weight: bolder;
+  }
+
+  & + & {
+    border-left: $datagrid-border-width solid $datagrid-border-color;
   }
 }
 
@@ -96,12 +100,20 @@
   flex: 0 0 3rem;
 }
 
+
+
 // Header 안의 Gridcell
-.datagrid-header .datagrid-cell {
-  border-top: $data-grid-cell-border-width solid $data-grid-cell-border-color;
-  border-bottom: ($data-grid-cell-border-width * 2) solid $data-grid-cell-border-color;
-  background-color: $data-grid-cell-alt-bg;
+.datagrid-header .datagrid-row .datagrid-cell {
+  background-color: $datagrid-alt-bg;
 }
+.datagrid-header .datagrid-row:last-child .datagrid-cell {
+  border-top: $datagrid-border-width solid $datagrid-border-color;
+  border-bottom: ($datagrid-border-width * 2) solid $datagrid-border-color;
+}
+
+
+
+
 
 // Tabindex가 있을 때 포커스 된 상태 추가
 [role="columnheader"],
@@ -124,16 +136,16 @@
 // rowgroup을 움직이지 않게 할 경우
 // rowgroup과 함께 사용.
 .datagrid-rowgroup-sticky {
-  @include data-grid-sticky();
-  z-index: $data-grid-rowgroup-sticky-z-index;
+  @include datagrid-sticky();
+  z-index: $datagrid-rowgroup-sticky-z-index;
 }
 
 // row의 gridcell을 움직이지 않게 할 경우
 // row 안에 사용하며, 1개 이상의 gridcell을 포함하고 있어야 함
 .datagrid-row-sticky {
-  @include data-grid-flex-row();
-  @include data-grid-sticky();
-  z-index: $data-grid-row-sticky-z-index;
+  @include datagrid-flex-row();
+  @include datagrid-sticky();
+  z-index: $datagrid-row-sticky-z-index;
 
   // sticky effect style
   &:after {
@@ -161,9 +173,9 @@
 //
 .datagrid-bordered .datagrid-rowgroup .datagrid-row {
   .datagrid-cell {
-    border-left-width: $data-grid-border-width;
+    border-left-width: $datagrid-border-width;
     &:last-child {
-      border-right-width: $data-grid-border-width;
+      border-right-width: $datagrid-border-width;
     }
   }
 }
@@ -173,7 +185,7 @@
 .datagrid-striped .datagrid-body .datagrid-row {
   &:nth-child(even) {
     .datagrid-cell {
-      background-color: $data-grid-cell-alt-bg;
+      background-color: $datagrid-alt-bg;
     }
   }
 }
@@ -182,8 +194,8 @@
 //
 .datagrid-striped .datagrid-body .datagrid-row[aria-selected="true"] {
   .datagrid-cell {
-    background-color: $data-grid-cell-active-bg;
-    color: $data-grid-cell-active-color;
+    background-color: $datagrid-active-bg;
+    color: $datagrid-active-color;
   }
 }
 
@@ -191,6 +203,6 @@
 //
 .datagrid-hover .datagrid-body .datagrid-row:hover {
   .datagrid-cell {
-    background-color: $data-grid-cell-hover-bg;
+    background-color: $datagrid-hover-bg;
   }
 }

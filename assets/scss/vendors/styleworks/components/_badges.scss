@@ -1,0 +1,52 @@
+
+
+//
+// Badges
+//
+
+
+// Mixins
+@mixin badge-outline-variant($color, $border-color:$color){
+  color: $color;
+  background-color: transparent;
+  border-color: $border-color;
+}
+
+@mixin badge-contain-variant($background-color){
+  color: $white;
+  background-color: $background-color;
+  border-color: transparent;
+  border-width: 0;
+
+  background-clip: padding-box;
+}
+
+
+
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  background-color: transparent;
+  border: $badge-border-width solid transparent;
+  border-radius: $badge-border-radius;
+
+  @include font-size($badge-font-size);
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+// Outline Colors variation
+@each $color, $value in $theme-colors {
+  .badge-outline-#{$color} {
+    @include badge-outline-variant($value);
+  }
+}
+
+// Contain Colors variation
+@each $color, $value in $theme-colors {
+  .badge-contain-#{$color} {
+    @include badge-contain-variant($value);
+  }
+}

@@ -12,4 +12,30 @@
   min-width: $layout-min-width;
   height: $layout-height;
   overflow: hidden;
+
+  >.contentWrapper {
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.twWrapper-full {
+  background-color: $gray-100;
+  display: grid;
+  grid-template-rows: $gnb-height 1fr;
+
+  min-width: $layout-min-width;
+  height: $layout-height;
+  overflow: hidden;
+
+  > .contentWrapper {
+    grid-row-start: 2;
+
+    width: 100%;
+    height: 100%;
+  }
 }

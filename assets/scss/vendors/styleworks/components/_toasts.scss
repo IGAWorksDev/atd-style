@@ -1,0 +1,81 @@
+
+//
+// Toast Notifications
+//
+
+// Mixin
+//
+@mixin toast-variant($color, $border-color: $color){
+  border-left: $toast-border-width solid $border-color;
+  .toast-icon {
+    color: $color;
+  }
+}
+
+.toast {
+  visibility: hidden;
+  width: $toast-width;
+
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  margin: $toast-padding-y 0;
+  padding: $toast-padding-y $toast-padding-x;
+  background-color: $toast-bg;
+  background-clip: padding-box;
+  color: $body-color;
+  border-radius: $toast-border-radius;
+  box-shadow: $toast-box-shadow;
+
+  .toast-icon {
+    flex: 0 0 auto;
+    font-size: $toast-icon-size;
+    @extend .my-auto;
+    @extend .mr-2;
+  }
+
+  .toast-message {
+    flex: 1 1 auto;
+    font-size: $toast-font-size;
+    line-height: $toast-line-height;
+    @extend .mr-auto;
+    @extend .my-auto;
+    footer {
+      font-style: italic;
+    }
+  }
+
+  .btn-close {
+    flex: 0 0 auto; // 타이틀 또는 내용의 길이에 상관없이 모양을 유지함.
+    margin-left: auto;
+    @extend .btn-circle;
+    @extend .btn-text-secondary;
+    @extend .btn-circle-xs;
+    @extend .ml-1;
+  }
+}
+
+// variation
+//
+@each $color, $value in $theme-colors {
+  .toast-#{$color} {
+    @include toast-variant($value);
+  }
+}
+
+
+.toast.is-show {
+  visibility: visible;
+}
+
+
+.toast-container {
+  position: fixed;
+  //top: 0;
+  right: 0;
+  bottom: 0;
+  padding: $spacer * 2;
+}

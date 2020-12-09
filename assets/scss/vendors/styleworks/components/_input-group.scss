@@ -2,9 +2,28 @@
 
 
 .input-group {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  width: 100%;
+
+  > .form-control,
+  > .form-control-plaintext,
+  > .custom-select,
+  > .custom-file {
+    position: relative; // 포커스 상태를 위한 z-index
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    margin-bottom: 0;
+
+    + .form-control,
+    + .custom-select,
+    + .custom-file {
+      margin-left: -$input-border-width;
+    }
+  }
 }
 
 
