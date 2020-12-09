@@ -41,3 +41,11 @@ small {
   font-size: $small-font-size;
   line-height: 1.175;
 }
+
+.font-weight-bold {
+  font-weight: $font-weight-bold !important;
+}
+
+.font-size-lg {
+  font-size: $font-size-lg !important;
+}
