@@ -77,13 +77,13 @@ template { display: none; }
 
 .d-inline-block { display: inline-block; }
 
-.d-flex, .snb-navbar, .snb-navbar-nav .nav-item .nav-link, .sideheader, .mainheader, .mainbody .card-header-nav-tabs, .toolbar, .item-easy-manageer, .cell-header { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.d-flex, .snb-navbar, .snb-navbar-nav .nav-item .nav-link, .sideheader, .mainheader, .mainbody .card-header-nav-tabs, .toolbar, .item-easy-manageer, .cell-header, .dropdown-menu__project, .dropdown-menu__project .col-right { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .d-none { display: none; }
 
 .flex-row, .snb-navbar-nav .nav-item .nav-link, .cell-header { -webkit-box-orient: horizontal !important; -webkit-box-direction: normal !important; -ms-flex-direction: row !important; flex-direction: row !important; }
 
-.flex-column, .snb-navbar, .snb-navbar-nav { -webkit-box-orient: vertical !important; -webkit-box-direction: normal !important; -ms-flex-direction: column !important; flex-direction: column !important; }
+.flex-column, .snb-navbar, .snb-navbar-nav, .dropdown-menu__project .col-right { -webkit-box-orient: vertical !important; -webkit-box-direction: normal !important; -ms-flex-direction: column !important; flex-direction: column !important; }
 
 .flex-row-reverse { -webkit-box-orient: horizontal !important; -webkit-box-direction: reverse !important; -ms-flex-direction: row-reverse !important; flex-direction: row-reverse !important; }
 
@@ -123,9 +123,9 @@ template { display: none; }
 
 .align-items-baseline { -webkit-box-align: baseline !important; -ms-flex-align: baseline !important; align-items: baseline !important; }
 
-.align-items-stretch { -webkit-box-align: stretch !important; -ms-flex-align: stretch !important; align-items: stretch !important; }
+.align-items-stretch, .dropdown-menu__project { -webkit-box-align: stretch !important; -ms-flex-align: stretch !important; align-items: stretch !important; }
 
-.align-content-start { -ms-flex-line-pack: start !important; align-content: flex-start !important; }
+.align-content-start, .dropdown-menu__project .col-right { -ms-flex-line-pack: start !important; align-content: flex-start !important; }
 
 .align-content-end { -ms-flex-line-pack: end !important; align-content: flex-end !important; }
 
@@ -170,7 +170,7 @@ h6, .h6 { font-size: 1.2rem; line-height: 1.8rem; }
 
 small { font-size: 80%; line-height: 1.175; }
 
-.font-weight-bold { font-weight: 700 !important; }
+.font-weight-bold, .dropdown-project-list .dropdown-item.is-active { font-weight: 700 !important; }
 
 .font-size-sm { font-size: 1.2rem !important; }
 
@@ -308,11 +308,11 @@ small { font-size: 80%; line-height: 1.175; }
 
 .p-1, .p-1 { padding: 0.8rem !important; }
 
-.pt-1, .form-group, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td { padding-top: 0.8rem !important; }
+.pt-1, .form-group, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td, .dropdown-project-list .dropdown-item { padding-top: 0.8rem !important; }
 
 .pr-1, .px-1 { padding-right: 0.8rem !important; }
 
-.pb-1, .form-group, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td { padding-bottom: 0.8rem !important; }
+.pb-1, .form-group, .dropdown-search .dropdown-menu .dropdown-item, .py-1, .table th, .table td, .dropdown-project-list .dropdown-item { padding-bottom: 0.8rem !important; }
 
 .pl-1, .px-1 { padding-left: 0.8rem !important; }
 
@@ -424,7 +424,7 @@ small { font-size: 80%; line-height: 1.175; }
 
 .border-bottom { border-bottom: 1px solid #dee2e6 !important; }
 
-.border-left { border-left: 1px solid #dee2e6 !important; }
+.border-left, .dropdown-menu__project .col-right { border-left: 1px solid #dee2e6 !important; }
 
 .border-0 { border: 0 !important; }
 
@@ -1587,5 +1587,20 @@ caption { caption-side: bottom; padding: 0.8rem 1.6rem; text-align: inherit; fon
 .mainContent-bannerManage .mainbody .table-responsive .table { margin: 0; }
 
 #card-group-steps-list-selector .card .list-group { height: 32rem; }
+
+.dropdown-menu__project .col-left { width: 220px; }
+.dropdown-menu__project .col-right { width: 300px; }
+
+.dropdown-project-list { max-height: 240px; overflow-y: auto; }
+.dropdown-project-list .dropdown-item.is-active { background-color: #fff; color: #6c757d; }
+
+.dropdown-menu__eventDateDetail { width: 38rem; }
+.dropdown-menu__eventDateDetail #datagrid-eventDate-campaign .datagrid-body { max-height: 160px; overflow-y: auto; }
+.dropdown-menu__eventDateDetail #datagrid-eventDate-desc .datagrid-body { max-height: 80px; overflow-y: auto; }
+
+.slideout { padding: 0; margin: 0; }
+.slideout .modal-dialog { margin-top: 0; margin-right: 0; margin-bottom: 0; }
+.slideout .modal-dialog.modal-dialog-scrollable { max-height: 100vh; }
+.slideout .modal-dialog .modal-container { border-radius: 0; height: 100vh; }
 
 body { background-color: #212529; }

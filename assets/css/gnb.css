@@ -3193,4 +3193,3 @@ a.text-dark:hover, a.text-dark:focus { color: #121416 !important; }
 .gnb-navbar .navbar-nav .nav-item.active { position: relative; }
 .gnb-navbar .navbar-nav .nav-item.active:after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; display: block; border-bottom: 4px solid #007bff; }
 .gnb-navbar .navbar-nav .nav-item.active .nav-link { color: #007bff; }
-.gnb-navbar .navbar-nav .nav-item.nav-item-user .dropdown-menu { left: auto; right: 0; }

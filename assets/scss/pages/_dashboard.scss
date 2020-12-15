@@ -1,0 +1,82 @@
+
+
+
+// 드랍다운__프로젝트
+.dropdown-menu__project {
+  @extend .d-flex;
+  @extend .align-items-stretch;
+
+  .col-left {
+    width: 220px;
+  }
+  .col-right {
+    width: 300px;
+    @extend .border-left;
+
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-content-start;
+  }
+}
+
+.dropdown-project-list {
+  max-height: 240px;
+  overflow-y: auto;
+  .dropdown-item {
+    @extend .py-1;
+
+    &.is-active {
+      background-color: $white;
+      @extend .font-weight-bold;
+      color: $secondary;
+    }
+  }
+}
+
+// 드랍다운__이벤트날짜 상세 정보
+.dropdown-menu__eventDateDetail {
+  width: 38rem;
+  #datagrid-eventDate-campaign {
+    .datagrid-body {
+      max-height: 160px;
+      overflow-y: auto;
+    }
+  }
+  #datagrid-eventDate-desc {
+    .datagrid-body {
+      max-height: 80px;
+      overflow-y: auto;
+    }
+  }
+}
+
+
+
+
+
+
+// Modal
+//
+
+.slideout {
+  padding: 0;
+  margin: 0;
+  .modal-dialog {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    &.modal-dialog-scrollable {
+      max-height: 100vh;
+    }
+
+    .modal-container {
+      border-radius: 0;
+      height: 100vh;
+    }
+  }
+}
+
+
+
+// modal-project-editor
+.modal-project-editor {}
