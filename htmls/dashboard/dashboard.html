@@ -59,18 +59,40 @@
           </div>
         </li>
         <li class="nav-item nav-item-user dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
              aria-expanded="false">
             <i class="ico ic-user"></i>
             <span class="sr-only">account.name@igaworks.com</span>
           </a>
-          <div class="dropdown-menu">
+          <div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+            <div class="dropdown-item">
+              장우영 <br>
+              <a href="#">
+                liam.jang@igaworks.com
+              </a>
+            </div>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">
+              채널 연결현황
+            </h6>
+            <div class="dropdown-item">
+              <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 2.2rem;" />
+              <a class="ml-1" href="#">higher@gmail.com</a>
+            </div>
+            <div class="dropdown-item">
+              <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 2.2rem;" />
+              <a class="ml-1" href="#">higher@gmail.com</a>
+            </div>
+            <div class="dropdown-item">
+              <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 2.2rem;" />
+              <a class="ml-1" href="#">채널 연결하기</a>
+            </div>
+            <div class="dropdown-item">
+              <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 2.2rem;" />
+              <a class="ml-1" href="#">higher@gmail.com</a>
+            </div>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
-              <i class="ico ic-info"></i>
-              정보수정
-            </a>
-            <a class="dropdown-item" href="#">
-              <i class="ico ic-close"></i>
               로그아웃
             </a>
           </div>
@@ -90,19 +112,41 @@
 
           <!-- mainheader -->
           <header class="mainheader justify-content-between">
-            <div class="flex-start mr-auto my-auto">
-              <h2 class="font-weight-bold m-0">대시보드</h2>
-            </div>
-            <div class="flex-end ml-auto">
-              <button class="btn btn-outlined-secondary dropdown-toggle">
-                카카오톡
-              </button>
+            <div class="d-flex align-items-center mr-auto my-auto">
+              <h2 class="font-weight-bold m-0 border-right pr-2 mr-1">
+                대시보드
+              </h2>
+              <div class="dropdown">
+                <button class="btn btn-text-secondary dropdown-toggle btn-lg py-1 px-1" type="button" id="dropdown-project" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="../../assets/images/channel-ico-facebook.svg" alt="프로젝트 이름" class="mr-1" style="width: 2.4rem; vertical-align: middle;">
+                  카카오톡
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdown-project">
+                  <a class="dropdown-item" href="#">
+                    <i class="ico ic-analysis mr-1"></i>
+                    카카오톡
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="ico ic-analysis mr-1"></i>
+                    페이스북
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="ico ic-analysis mr-1"></i>
+                    라인웍스
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="ico ic-plus-circle mr-1"></i>
+                    프로젝트 생성
+                  </a>
+                </div>
+              </div>
             </div>
           </header>
           <!-- /mainbody -->
 
           <!-- mainbody -->
-          <div class="mainbody pt-3 border-top">
+          <div class="mainbody pt-5 border-top">
 
             <section class="mb-5">
               <h4 class="font-size-lg font-weight-bold">
@@ -290,10 +334,10 @@
                   <h4 class="font-size-lg font-weight-bold mb-0">
                     업종 광고 성과 지표
                   </h4>
-                  <small class="ml-1">비교업종 : 커뮤니케이션</small>
+                  <small class="ml-1">(비교업종 : 커뮤니케이션)</small>
                 </div>
                 <div class="flex-right">
-                  <a class="btn btn-text-secondary btn-sm" href="#">
+                  <a class="btn btn-text-secondary" href="#">
                     AD Insight 이동
                     <i class="ico ic-chevron-right"></i>
                   </a>
@@ -514,7 +558,7 @@
                   </h4>
                 </div>
                 <div class="flex-end">
-                  <a class="btn btn-text-secondary btn-sm" href="#">
+                  <a class="btn btn-text-secondary" href="#">
                     Audience 이동
                     <i class="ico ic-chevron-right"></i>
                   </a>
@@ -893,7 +937,8 @@
               <div class="card-group">
                 <!-- card -->
                 <div class="card">
-                  <div class="card-header py-2">
+                  <div class="card-header py-2 bg-white d-flex align-items-center">
+                    <img class="mr-1" src="../../assets/images/channel-ico-googleads.svg" alt="Google ads" />
                     <h5 class="card-title font-size-lg font-weight-bold mb-0">
                       Google ads
                     </h5>
@@ -937,7 +982,8 @@
                 <!-- /card -->
                 <!-- card -->
                 <div class="card">
-                  <div class="card-header py-2">
+                  <div class="card-header py-2 bg-white d-flex align-items-center">
+                    <img class="mr-1" src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" />
                     <h5 class="card-title font-size-lg font-weight-bold mb-0">
                       Facebook
                     </h5>
@@ -981,7 +1027,8 @@
                 <!-- /card -->
                 <!-- card -->
                 <div class="card">
-                  <div class="card-header py-2">
+                  <div class="card-header py-2 bg-white d-flex align-items-center">
+                    <img class="mr-1" src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" />
                     <h5 class="card-title font-size-lg font-weight-bold mb-0">
                       TRADINGWORKS
                     </h5>
@@ -1025,7 +1072,7 @@
                 <!-- /card -->
                 <!-- card -->
                 <div class="card">
-                  <div class="card-header py-2">
+                  <div class="card-header py-2 bg-white">
                     <h5 class="card-title font-size-lg font-weight-bold mb-0">
                       Kakaomoment
                     </h5>
@@ -1336,7 +1383,7 @@
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         이벤트 관리
                       </h4>
-                      <button class="btn btn-text-primary btn-sm">
+                      <button class="btn btn-text-primary btn-sm" data-toggle="modal" data-target="#modal-event-editor">
                         <i class="ico ic-plus"></i>
                         이벤트 등록
                       </button>
@@ -1375,14 +1422,11 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
-                                <a class="item-title d-block text-truncate" href="#">
+                                <a class="item-title d-block text-truncate" href="#" data-toggle="modal" data-target="#modal-event-viewer">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1402,14 +1446,11 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
-                                <a class="item-title d-block text-truncate" href="#">
+                                <a class="item-title d-block text-truncate" href="#" data-toggle="modal" data-target="#modal-event-viewer">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1429,14 +1470,11 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
-                                <a class="item-title d-block text-truncate" href="#">
+                                <a class="item-title d-block text-truncate" href="#" data-toggle="modal" data-target="#modal-event-viewer">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1456,14 +1494,11 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
-                                <a class="item-title d-block text-truncate" href="#">
+                                <a class="item-title d-block text-truncate" href="#" data-toggle="modal" data-target="#modal-event-viewer">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1483,14 +1518,11 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
-                                <a class="item-title d-block text-truncate" href="#">
+                                <a class="item-title d-block text-truncate" href="#" data-toggle="modal" data-target="#modal-event-viewer">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1553,7 +1585,7 @@
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         자료 관리
                       </h4>
-                      <button class="btn btn-text-primary btn-sm">
+                      <button class="btn btn-text-primary btn-sm" data-toggle="modal" data-target="#modal-file-upload">
                         <i class="ico ic-plus"></i>
                         파일 등록
                       </button>
@@ -1569,6 +1601,9 @@
                             <div class="datagrid-cell" role="columnheader" aria-colindex="1" style="min-width: 5.6rem; width: 5.6rem;">
                               No
                             </div>
+                            <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="min-width: 12rem; width: 12rem;">
+                              등록 일자
+                            </div>
                             <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 38rem;">
                               파일명
                             </div>
@@ -1583,17 +1618,17 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="min-width: 5.6rem; width: 5.6rem;">
                               5
                             </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 12rem; width: 12rem;">
+                              2020-11-30
+                            </div>
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
                                 <a class="item-title d-block text-truncate" href="#">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1607,17 +1642,17 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="min-width: 5.6rem; width: 5.6rem;">
                               4
                             </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 12rem; width: 12rem;">
+                              2020-11-30
+                            </div>
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
                                 <a class="item-title d-block text-truncate" href="#">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1631,17 +1666,17 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="min-width: 5.6rem; width: 5.6rem;">
                               3
                             </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 12rem; width: 12rem;">
+                              2020-11-30
+                            </div>
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
                                 <a class="item-title d-block text-truncate" href="#">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1655,17 +1690,17 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="min-width: 5.6rem; width: 5.6rem;">
                               2
                             </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 12rem; width: 12rem;">
+                              2020-11-30
+                            </div>
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
                                 <a class="item-title d-block text-truncate" href="#">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1679,17 +1714,17 @@
                             <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="min-width: 5.6rem; width: 5.6rem;">
                               1
                             </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 12rem; width: 12rem;">
+                              2020-11-30
+                            </div>
                             <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                               <!-- item-easy-manageer -->
                               <div class="item-easy-manageer">
                                 <a class="item-title d-block text-truncate" href="#">
                                   뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                 </a>
-                                <div class="item-tool text-right" style="width: 10rem;">
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="편집">
-                                    <i class="ico ic-edit"></i>
-                                  </button>
-                                  <button class="btn-circle btn-text-secondary btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
+                                <div class="item-tool text-right" style="width: 5rem;">
+                                  <button class="btn-circle btn-text-danger btn-circle-xs" data-toggle="tooltip" data-placement="top" title="삭제">
                                     <i class="ico ic-delete"></i>
                                   </button>
                                 </div>
@@ -1759,17 +1794,130 @@
   <!-- /twWrapper -->
 
 
+  <!-- modal-event-editor -->
+  <div class="modal" id="modal-event-editor">
+    <div class="modal-dialog modal-dialog-centered" role="dialog" aria-hidden="true" tabindex="-1">
+      <!-- modal-container -->
+      <div class="modal-container">
+        <div class="modal-header">
+          <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="ico ic-close"></i>
+          </button>
+          <h3 class="modal-title">
+            이벤트 등록
+          </h3>
+        </div>
+        <div class="modal-body">
+          <form >
+            <div class="form-group pt-0">
+              <label class="form-control-label" for="event-form-date">이벤트 날짜</label>
+              <input type="date" class="form-control" id="event-form-date" style="width: 15rem;">
+            </div>
+            <div class="form-group pb-0">
+              <label class="form-control-label" for="event-form-textarea">이벤트 내용</label>
+              <textarea class="form-control" id="event-form-textarea" rows="5" cols="24">Textarea</textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer text-right">
+          <button type="button" class="btn btn-outlined-secondary">
+            취소
+          </button>
+          <button type="submit" class="btn btn-contained-primary">
+            등록
+          </button>
+        </div>
+      </div>
+      <!-- /modal-container -->
+    </div>
+  </div>
+  <!-- /modal-event-editor -->
+  <!-- modal-event-viewer -->
+  <div class="modal" id="modal-event-viewer">
+    <div class="modal-dialog modal-dialog-centered" role="dialog" aria-hidden="true" tabindex="-1">
+      <!-- modal-container -->
+      <div class="modal-container">
+        <div class="modal-header">
+          <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="ico ic-close"></i>
+          </button>
+          <h3 class="modal-title">
+            이벤트 상세
+          </h3>
+        </div>
+        <div class="modal-body">
+          <form >
+            <div class="form-group pt-0">
+              <label class="form-control-label" for="event-view-form-date">이벤트 날짜</label>
+              <input type="date" class="form-control" id="event-view-form-date" style="width: 15rem;">
+            </div>
+            <div class="form-group pb-0">
+              <label class="form-control-label" for="event-view-form-textarea">이벤트 내용</label>
+              <textarea class="form-control" id="event-view-form-textarea" rows="5" cols="24">Textarea</textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer text-right">
+          <button type="button" class="btn btn-text-danger">
+            삭제
+          </button>
+          <span class="mr-auto"></span>
+          <button type="button" class="btn btn-outlined-secondary">
+            취소
+          </button>
+          <button type="submit" class="btn btn-contained-primary">
+            수정
+          </button>
+        </div>
+      </div>
+      <!-- /modal-container -->
+    </div>
+  </div>
+  <!-- /modal-event-viewer -->
+
+  <!-- modal-file-upload -->
+  <div class="modal" id="modal-file-upload">
+    <div class="modal-dialog modal-dialog-centered" role="dialog" aria-hidden="true" tabindex="-1">
+      <!-- modal-container -->
+      <div class="modal-container">
+        <div class="modal-header">
+          <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="ico ic-close"></i>
+          </button>
+          <h3 class="modal-title">
+            파일 등록
+          </h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="custom-file">파일 선택</label>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="custom-file" placeholder="파일선택" lang="ko" multiple="" required="">
+                <label class="custom-file-label" for="custom-file">파일선택</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer text-right">
+          <button type="button" class="btn btn-outlined-secondary">
+            취소
+          </button>
+          <button type="submit" class="btn btn-contained-primary">
+            등록
+          </button>
+        </div>
+      </div>
+      <!-- /modal-container -->
+    </div>
+  </div>
+  <!-- /modal-file-upload -->
+
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-  <script>
-      $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-      })
-  </script>
+  <script src="../../assets/js/tw-atd-normal.js"></script>
 
 </body>
 </html>
