@@ -206,12 +206,23 @@
           <!-- /mainbody -->
 
           <!-- mainbody -->
-          <div class="mainbody pt-3 border-top">
-
+          <div class="mainbody pt-4 border-top">
             <section class="mb-5">
-              <h4 class="font-size-lg font-weight-bold">
-                서비스 분석
-              </h4>
+              <header class="d-flex align-items-center justify-content-between mb-1">
+                <div class="flex-left d-flex align-items-center">
+                  <h4 class="font-size-lg font-weight-bold mb-0">
+                    서비스 분석
+                  </h4>
+                  <small class="ml-1">(비교업종 : 커뮤니케이션)</small>
+                </div>
+                <div class="flex-right">
+                  <a class="btn btn-text-secondary btn-sm font-weight-bold" href="#">
+                    Market Insight 이동
+                    <i class="ico ic-chevron-right"></i>
+                  </a>
+                </div>
+              </header>
+
               <div class="card">
                 <div class="card-body pt-3">
                   <div class="px-1">
@@ -279,18 +290,28 @@
                     <!-- row -->
                     <div class="row align-items-stretch">
                       <div class="col-5">
-                        <h5 class="font-size-lg">사용자 성별 비중</h5>
+                        <h5 class="font-size-lg mb-2">사용자 성별 비중</h5>
                         <figure class="highcharts-figure">
                           <div id="user-gender"></div>
                         </figure>
                         <script>
-                            // Build the chart
+                            Highcharts.setOptions({
+                                colors: ['#4169ff', '#20c997', '#cce6ff']
+                            });
                             Highcharts.chart('user-gender', {
                                 chart: {
+                                    height: 200,
                                     plotBackgroundColor: null,
                                     plotBorderWidth: null,
                                     plotShadow: false,
                                     type: 'pie'
+                                },
+                                legend: {
+                                    align: 'right',
+                                    verticalAlign: 'middle',
+                                    layout: 'vertical',
+                                    itemMarginTop: 8,
+                                    itemMarginBottom: 8
                                 },
                                 title: {
                                     text: ' '
@@ -312,7 +333,7 @@
                                         },
                                         showInLegend: true,
                                         size: '100%',
-                                        innerSize: '80%'
+                                        innerSize: '70%'
                                     }
                                 },
                                 series: [{
@@ -333,13 +354,17 @@
                         </script>
                       </div>
                       <div class="col-7 border-left">
-                        <h5 class="font-size-lg">사용자 연령 비중</h5>
+                        <h5 class="font-size-lg mb-2">사용자 연령 비중</h5>
                         <figure class="highcharts-figure">
                           <div id="user-age"></div>
                         </figure>
                         <script>
+                            Highcharts.setOptions({
+                                colors: ['#4169ff']
+                            });
                             Highcharts.chart('user-age', {
                                 chart: {
+                                    height: 200,
                                     type: 'column'
                                 },
                                 title: {
@@ -357,7 +382,7 @@
                                 tooltip: {
                                     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
                                     pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                                        '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                                        '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
                                     footerFormat: '</table>',
                                     shared: true,
                                     useHTML: true
@@ -366,6 +391,11 @@
                                     column: {
                                         pointPadding: 0.2,
                                         borderWidth: 0
+                                    }
+                                },
+                                accessibility: {
+                                    point: {
+                                        valueSuffix: '%'
                                     }
                                 },
                                 series: [{
@@ -397,216 +427,194 @@
                   <small class="ml-1">(비교업종 : 커뮤니케이션)</small>
                 </div>
                 <div class="flex-right">
-                  <a class="btn btn-text-secondary" href="#">
+                  <a class="btn btn-text-secondary btn-sm font-weight-bold" href="#">
                     AD Insight 이동
                     <i class="ico ic-chevron-right"></i>
                   </a>
                 </div>
               </header>
-              <!-- card -->
-              <div class="card">
-                <!-- datagrid -->
-                <div class="datagrid-responsive">
-                  <div class="datagrid datagrid-bordered datagrid-hover" role="grid">
-                    <!-- datagrid-header -->
-                    <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="1" style="width:10rem;">
-                          채널
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width:10rem;">
-                          업종 평균 CPM
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width:10rem;">
-                          프로젝트 CPM
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="4" style="width:10rem;">
-                          업종 평균 CPC
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="5" style="width:10rem;">
-                          프로젝트 CPC
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="6" style="width:10rem;">
-                          업종 평균 CTR
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="7" style="width:10rem;">
-                          프로젝트 CTR
-                        </div>
+
+              <!-- datagrid -->
+              <div class="datagrid-responsive">
+                <div class="datagrid datagrid-bordered datagrid-hover" role="grid">
+                  <!-- datagrid-header -->
+                  <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                    <!-- datagrid-row -->
+                    <div class="datagrid-row" role="row">
+                      <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                           style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
+                        채널
                       </div>
-                      <!-- /datagrid-row -->
+                      <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width:10rem;">
+                        업종 평균 CPM
+                      </div>
+                      <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width:10rem;">
+                        프로젝트 CPM
+                      </div>
+                      <div class="datagrid-cell" role="columnheader" aria-colindex="4" style="width:10rem;">
+                        업종 평균 CPC
+                      </div>
+                      <div class="datagrid-cell" role="columnheader" aria-colindex="5" style="width:10rem;">
+                        프로젝트 CPC
+                      </div>
+                      <div class="datagrid-cell" role="columnheader" aria-colindex="6" style="width:10rem;">
+                        업종 평균 CTR
+                      </div>
+                      <div class="datagrid-cell" role="columnheader" aria-colindex="7" style="width:10rem;">
+                        프로젝트 CTR
+                      </div>
                     </div>
-                    <!-- /datagrid-header -->
-                    <!-- datagrid-body -->
-                    <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="width:10rem;">
-                          Total
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
-                          3,874원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
-                          1,874원
-                          <small class="d-block text-info">(-2,000원)</small>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
-                          10.00%
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="width:10rem;">
-                          Google Ads
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
-                          3,874원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
-                          1,874원
-                          <small class="d-block text-info">(-2,000원)</small>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
-                          10.00%
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="width:10rem;">
-                          Facebook
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
-                          3,874원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
-                          1,874원
-                          <small class="d-block text-info">(-2,000원)</small>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
-                          10.00%
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="width:10rem;">
-                          TW DSP
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
-                          3,874원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
-                          1,874원
-                          <small class="d-block text-info">(-2,000원)</small>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
-                          10.00%
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="width:10rem;">
-                          Kakaomoment
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
-                          3,874원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
-                          1,874원
-                          <small class="d-block text-info">(-2,000원)</small>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
-                          10.00%
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="width:10rem;">
-                          Kakaomoment
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
-                          3,874원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
-                          <a href="#">
-                            광고계정 연결
-                          </a>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
-                          <a href="#">
-                            광고계정 연결
-                          </a>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
-                          <a href="#">
-                            광고계정 연결
-                          </a>
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                    </div>
-                    <!-- /datagrid-body -->
+                    <!-- /datagrid-row -->
                   </div>
+                  <!-- /datagrid-header -->
+                  <!-- datagrid-body -->
+                  <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                    <!-- datagrid-row -->
+                    <div class="datagrid-row" role="row">
+                      <div class="datagrid-cell" role="rowheader" aria-colindex="1"
+                           style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
+                        Total
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
+                        3,874원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
+                        1,874원
+                        <small class="d-block text-info">(-2,000원)</small>
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
+                        10.00%
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
+                        10.00%
+                      </div>
+                    </div>
+                    <!-- /datagrid-row -->
+                    <!-- datagrid-row -->
+                    <div class="datagrid-row" role="row">
+                      <div class="datagrid-cell" role="rowheader" aria-colindex="1"
+                           style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
+                        <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
+                        3,874원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
+                        1,874원
+                        <small class="d-block text-info">(-2,000원)</small>
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
+                        10.00%
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
+                        10.00%
+                      </div>
+                    </div>
+                    <!-- /datagrid-row -->
+                    <!-- datagrid-row -->
+                    <div class="datagrid-row" role="row">
+                      <div class="datagrid-cell" role="rowheader" aria-colindex="1"
+                           style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
+                        <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg">
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
+                        3,874원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
+                        1,874원
+                        <small class="d-block text-info">(-2,000원)</small>
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
+                        10.00%
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
+                        10.00%
+                      </div>
+                    </div>
+                    <!-- /datagrid-row -->
+                    <!-- datagrid-row -->
+                    <div class="datagrid-row" role="row">
+                      <div class="datagrid-cell" role="rowheader" aria-colindex="1"
+                           style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
+                        <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks DSP"
+                             class="svg-icon-lg">
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
+                        3,874원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
+                        1,874원
+                        <small class="d-block text-info">(-2,000원)</small>
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
+                        10.00%
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
+                        10.00%
+                      </div>
+                    </div>
+                    <!-- /datagrid-row -->
+                    <!-- datagrid-row -->
+                    <div class="datagrid-row" role="row">
+                      <div class="datagrid-cell" role="rowheader" aria-colindex="1"
+                           style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
+                        <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" class="svg-icon-lg">
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
+                        3,874원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width:10rem;">
+                        <a href="#">
+                          광고계정 연결
+                        </a>
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="width:10rem;">
+                        3,468,977원
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="width:10rem;">
+                        <a href="#">
+                          광고계정 연결
+                        </a>
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="width:10rem;">
+                        10.00%
+                      </div>
+                      <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="width:10rem;">
+                        <a href="#">
+                          광고계정 연결
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /datagrid-row -->
+                  </div>
+                  <!-- /datagrid-body -->
                 </div>
-                <!-- /datagrid -->
               </div>
-              <!-- /card -->
+              <!-- /datagrid -->
             </section>
 
 
@@ -614,79 +622,45 @@
               <header class="d-flex align-items-center justify-content-between mb-1">
                 <div class="flex-start d-flex align-items-center">
                   <h4 class="font-size-lg font-weight-bold mb-0">
-                    추천 오디언스
+                    채널 별 추천 오디언스
                   </h4>
+                  <small class="ml-1">(2020.9.30 ~  2020.11.30)</small>
                 </div>
                 <div class="flex-end">
-                  <a class="btn btn-text-secondary" href="#">
+                  <a class="btn btn-text-secondary btn-sm font-weight-bold" href="#">
                     Audience 이동
                     <i class="ico ic-chevron-right"></i>
                   </a>
                 </div>
               </header>
               <!-- card -->
-              <div class="card">
+              <div class="">
                 <!-- datagrid -->
                 <div class="datagrid-responsive">
-                  <div class="datagrid datagrid-bordered datagrid-hover" role="grid">
+                  <div class="datagrid datagrid-bordered" role="grid">
                     <!-- datagrid-header -->
                     <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
-                        <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="columnheader" aria-colindex="1" style="width: 60rem;">
-                            오디언스 정보
-                          </div>
+                        <div class="datagrid-cell text-center" role="columnheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem; max-width: 7.2rem">
+                          채널
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="min-width: 36rem; width: 36rem;">
-                          Google Ads
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 28rem;">
+                          오디언스 이름
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="min-width: 36rem; width: 36rem;">
-                          Facebook
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width: 16rem;">
+                          오디언스 종류
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="min-width: 36rem; width: 36rem;">
-                          Kakao Moments
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="columnheader" aria-colindex="1" style="width: 32rem;">
-                            오디언스 이름
-                          </div>
-                          <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 16rem;">
-                            오디언스 종류
-                          </div>
-                          <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width: 12rem;">
-                            규모
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
-                          평균 CPM
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="4" style="width: 12rem;">
+                          규모
                         </div>
                         <div class="datagrid-cell" role="columnheader" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
-                          평균 CPC
+                          평균 CPM
                         </div>
                         <div class="datagrid-cell" role="columnheader" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
-                          평균 CTR
+                          평균 CPC
                         </div>
                         <div class="datagrid-cell" role="columnheader" aria-colindex="7" style="min-width: 12rem; width: 12rem;">
-                          평균 CPM
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="8" style="min-width: 12rem; width: 12rem;">
-                          평균 CPC
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="9" style="min-width: 12rem; width: 12rem;">
-                          평균 CTR
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="10" style="min-width: 12rem; width: 12rem;">
-                          평균 CPM
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="11" style="min-width: 12rem; width: 12rem;">
-                          평균 CPC
-                        </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="12" style="min-width: 12rem; width: 12rem;">
                           평균 CTR
                         </div>
                       </div>
@@ -697,212 +671,395 @@
                     <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
-                        <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 32rem;">
-                            도서/참고자료_만화/웹소설_단계0~20
+                        <div class="datagrid-cell text-center" role="gridcell" aria-colindex="1"  style="min-width: 7.2rem; width: 7.2rem; max-width: 7.2rem">
+                          <img src="../../assets/images/channel-ico-googleads.svg" alt="Google ads" class="svg-icon-lg">
+                        </div>
+                        <!-- datagrid-rowspan -->
+                        <div class="datagrid-rowspan datagrid-hover" aria-colindex="2">
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
-                            TW 페르소나
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
-                            300,000
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
+                          </div>
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
+                          </div>
+                          <!-- /datagrid-row -->
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="10" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="11" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="12" style="min-width: 12rem; width: 12rem;">
-                          20
-                        </div>
+                        <!-- /datagrid-rowspan -->
                       </div>
                       <!-- /datagrid-row -->
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
-                        <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 32rem;">
-                            도서/참고자료_만화/웹소설_단계0~20
+                        <div class="datagrid-cell text-center" role="gridcell" aria-colindex="1"  style="min-width: 7.2rem; width: 7.2rem; max-width: 7.2rem">
+                          <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg">
+                        </div>
+                        <!-- datagrid-rowspan -->
+                        <div class="datagrid-rowspan datagrid-hover" aria-colindex="2">
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
-                            TW 페르소나
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
-                            300,000
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
+                          </div>
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
+                          </div>
+                          <!-- /datagrid-row -->
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="10" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="11" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="12" style="min-width: 12rem; width: 12rem;">
-                          20
-                        </div>
+                        <!-- /datagrid-rowspan -->
                       </div>
                       <!-- /datagrid-row -->
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
-                        <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 32rem;">
-                            도서/참고자료_만화/웹소설_단계0~20
+                        <div class="datagrid-cell text-center" role="gridcell" aria-colindex="1"  style="min-width: 7.2rem; width: 7.2rem; max-width: 7.2rem">
+                          <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" class="svg-icon-lg">
+                        </div>
+                        <!-- datagrid-rowspan -->
+                        <div class="datagrid-rowspan datagrid-hover" aria-colindex="2">
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
-                            TW 페르소나
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
-                            300,000
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="10" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="11" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="12" style="min-width: 12rem; width: 12rem;">
-                          20
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 32rem;">
-                            도서/참고자료_만화/웹소설_단계0~20
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
-                            TW 페르소나
+                          <!-- /datagrid-row -->
+                          <!-- datagrid-row -->
+                          <div class="datagrid-row">
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 28rem;">
+                              <div class="text-truncate">
+                                도서/참고자료_만화/웹소설_단계0~20
+                              </div>
+                            </div>
+                            <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
+                              TW 페르소나
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
+                              300,000
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
+                              3,468,977원
+                            </div>
+                            <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
+                              10.00%
+                            </div>
                           </div>
-                          <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
-                            300,000
-                          </div>
+                          <!-- /datagrid-row -->
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="10" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="11" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="12" style="min-width: 12rem; width: 12rem;">
-                          20
-                        </div>
-                      </div>
-                      <!-- /datagrid-row -->
-                      <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
-                        <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="1" style="width: 32rem;">
-                            도서/참고자료_만화/웹소설_단계0~20
-                          </div>
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 16rem;">
-                            TW 페르소나
-                          </div>
-                          <div class="datagrid-cell text-right" role="gridcell" aria-colindex="3" style="width: 12rem;">
-                            300,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 12rem; width: 12rem;">
-                          3,468,977원
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="10" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="11" style="min-width: 12rem; width: 12rem;">
-                          10.00%
-                        </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="12" style="min-width: 12rem; width: 12rem;">
-                          20
-                        </div>
+                        <!-- /datagrid-rowspan -->
                       </div>
                       <!-- /datagrid-row -->
                     </div>
@@ -958,7 +1115,43 @@
                   <div class="tab-content mt-2" id="nav-trends-content">
                     <!-- tab-pane -->
                     <div class="tab-pane fade show active" id="nav-trends-user" role="tabpanel" aria-labelledby="nav-trends-user-tab">
-                      사용자수 - 하이차트
+                      <figure class="highcharts-figure">
+                        <div id="trends-users"></div>
+                      </figure>
+                      <script>
+                          Highcharts.setOptions({
+                              colors: ['#20c997', '#4169ff']
+                          });
+                          Highcharts.chart('trends-users', {
+                              chart: {
+                                  type: 'line'
+                              },
+                              title: {
+                                  text: ' '
+                              },
+                              xAxis: {
+                                  categories: ['2020-11-14', '2020-11-15', '2020-11-16', '2020-11-17', '2020-11-18', '2020-11-19', '2020-11-20']
+                              },
+                              yAxis: [{
+                                  title: {
+                                      text: '사용자수'
+                                    }
+                                  }, {
+                                  opposite: true,
+                                  title: {
+                                      text: '사용자 기준'
+                                  }
+                              }],
+                              series: [{
+                                  name: '사용자수',
+                                  data: [30, 26, 34, 50, 28, 32, 28]
+                              }, {
+                                  name: '사용자 기준',
+                                  data: [36, 36, 36, 36, 36, 36, 36],
+                                  yAxis: 1
+                              }]
+                          });
+                      </script>
                     </div>
                     <!-- /tab-pane -->
 
@@ -1136,55 +1329,89 @@
                         9,450,561
                       </div>
                     </div>
-
-                    <div class="mt-3 border-top pt-2">
-                      차트
+                    <div class="border-top pt-1 mt-3">
+                      <figure class="highcharts-figure">
+                        <div id="channel-summary-googleads"></div>
+                      </figure>
+                      <script>
+                          Highcharts.chart('channel-summary-googleads', {
+                              chart: {
+                                  height: 148,
+                                  width: 240,
+                                  type: 'line'
+                              },
+                              title: {
+                                  text: ' '
+                              },
+                              xAxis: {
+                                  title: {
+                                    enabled: false
+                                  },
+                                  labels: {
+                                      enabled: false
+                                  }
+                              },
+                              yAxis: {
+                                  title: {
+                                      enabled: false
+                                  },
+                                  labels: {
+                                      enabled: false
+                                  }
+                              },
+                              legend: {
+                                  enabled: false
+                              },
+                              series: [{
+                                  name: 'Impressions',
+                                  color: '#20c997',
+                                  data: [30, 26, 34, 50, 28]
+                              }, {
+                                  name: 'Clicks',
+                                  color: '#4169ff',
+                                  data: [36, 36, 36, 36, 36]
+                              }, {
+                                  name: 'CTR',
+                                  color: '#dc143c',
+                                  data: [14, 16, 24, 20, 12]
+                              }, {
+                                  name: 'Cost',
+                                  color: '#ffc107',
+                                  data: [30, 32, 28, 36, 24]
+                              }, {
+                                  name: 'Reach',
+                                  color: '#adb5bd',
+                                  data: [8, 16, 24, 32, 40]
+                              }]
+                          });
+                      </script>
                     </div>
                   </div>
                 </div>
                 <!-- /card -->
                 <!-- card -->
-                <div class="card">
-                  <div class="card-header py-2 bg-white d-flex align-items-center">
+                <div class="card is-blank">
+                  <div class="card-header py-2 d-flex align-items-center">
                     <img class="mr-1" src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" />
                     <h5 class="card-title font-size-lg font-weight-bold mb-0">
                       Facebook
                     </h5>
                   </div>
                   <div class="card-body">
-                    <div class="mt-1">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #4169ff"></i>
-                        Impressions
-                      </a>
-                      <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
-                        3,556,950
-                      </div>
+                    <!-- blankslate -->
+                    <div class="blankslate">
+                      <h5 class="mb-1">
+                        Facebook 채널 연결 후 리포트 <br>
+                        정보를 확인하세요!<br>
+                      </h5>
+                      <small class="text-muted">
+                        [연동] 선택 시 채널별 로그인 페이지로 연결됩니다.
+                      </small>
+                      <button class="btn btn-contained-primary mt-3">
+                        연동하기
+                      </button>
                     </div>
-
-                    <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #20c997"></i>
-                        Clicks
-                      </a>
-                      <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
-                        85,887
-                      </div>
-                    </div>
-
-                    <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #ffc107"></i>
-                        Cost
-                      </a>
-                      <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
-                        9,450,561
-                      </div>
-                    </div>
-
-                    <div class="mt-3 border-top pt-2">
-                      차트
-                    </div>
+                    <!-- /blankslate -->
                   </div>
                 </div>
                 <!-- /card -->
@@ -1227,53 +1454,78 @@
                       </div>
                     </div>
 
-                    <div class="mt-3 border-top pt-2">
-                      차트
+                    <div class="border-top pt-1 mt-3">
+                      <figure class="highcharts-figure">
+                        <div id="channel-summary-tradingworks"></div>
+                      </figure>
+                      <script>
+                          Highcharts.chart('channel-summary-tradingworks', {
+                              chart: {
+                                  height: 148,
+                                  width: 240,
+                                  type: 'line'
+                              },
+                              title: {
+                                  text: ' '
+                              },
+                              xAxis: {
+                                  title: {
+                                      enabled: false
+                                  },
+                                  labels: {
+                                      enabled: false
+                                  }
+                              },
+                              yAxis: {
+                                  title: {
+                                      enabled: false
+                                  },
+                                  labels: {
+                                      enabled: false
+                                  }
+                              },
+                              legend: {
+                                  enabled: false
+                              },
+                              series: [{
+                                  name: 'Impressions',
+                                  color: '#20c997',
+                                  data: [30, 26, 34, 50, 28]
+                              }, {
+                                  name: 'Cost',
+                                  color: '#ffc107',
+                                  data: [30, 32, 28, 36, 24]
+                              }, {
+                                  name: 'Reach',
+                                  color: '#adb5bd',
+                                  data: [8, 16, 24, 32, 40]
+                              }]
+                          });
+                      </script>
                     </div>
                   </div>
                 </div>
                 <!-- /card -->
                 <!-- card -->
-                <div class="card">
-                  <div class="card-header py-2 bg-white">
+                <div class="card is-blank">
+                  <div class="card-header py-2 d-flex align-items-center">
+                    <img class="mr-1" src="../../assets/images/channel-ico-kakaomoment.svg" alt="Tradingworks" />
                     <h5 class="card-title font-size-lg font-weight-bold mb-0">
                       Kakaomoment
                     </h5>
                   </div>
                   <div class="card-body">
-                    <div class="mt-1">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #4169ff"></i>
-                        Impressions
-                      </a>
-                      <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
-                        3,556,950
-                      </div>
+                    <!-- blankslate -->
+                    <div class="blankslate">
+                      <p class="mb-3">
+                        Kakaomoment 채널에 등록된 <br>
+                        광고계정이 없습니다.
+                      </p>
+                      <button class="btn btn-contained-primary">
+                        광고계정 관리 이동
+                      </button>
                     </div>
-
-                    <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #20c997"></i>
-                        Clicks
-                      </a>
-                      <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
-                        85,887
-                      </div>
-                    </div>
-
-                    <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #ffc107"></i>
-                        Cost
-                      </a>
-                      <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
-                        9,450,561
-                      </div>
-                    </div>
-
-                    <div class="mt-3 border-top pt-2">
-                      차트
-                    </div>
+                    <!-- /blankslate -->
                   </div>
                 </div>
                 <!-- /card -->
@@ -1287,7 +1539,7 @@
                 </h4>
               </header>
               <!-- card -->
-              <div class="card">
+              <div class="">
                 <!-- datagrid -->
                 <div class="datagrid-responsive">
                   <div class="datagrid datagrid-bordered datagrid-hover" role="grid">
@@ -1296,7 +1548,7 @@
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
                         <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="columnheader" aria-colindex="1" style="min-width: 16rem;">
+                          <div class="datagrid-cell" role="columnheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
                             채널
                           </div>
                           <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="min-width: 20rem;">
@@ -1306,23 +1558,41 @@
                             캠페인명
                           </div>
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="4" style="min-width: 16rem;">
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="4" style="min-width: 14rem;">
                           소진예산
+                          <a class="btn-circle btn-text-gray btn-circle-xs ml-1" href="#">
+                            <i class="ico ic-arrow-top"></i>
+                          </a>
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="5" style="min-width: 16rem;">
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="5" style="min-width: 14rem;">
                           노출
+                          <a class="btn-circle btn-text-gray btn-circle-xs ml-1" href="#">
+                            <i class="ico ic-arrow-top"></i>
+                          </a>
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="6" style="min-width: 16rem;">
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="6" style="min-width: 14rem;">
                           클릭
+                          <a class="btn-circle btn-text-gray btn-circle-xs ml-1" href="#">
+                            <i class="ico ic-arrow-top"></i>
+                          </a>
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="7" style="min-width: 16rem;">
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="7" style="min-width: 14rem;">
                           평균 CPM
+                          <a class="btn-circle btn-text-gray btn-circle-xs ml-1" href="#">
+                            <i class="ico ic-arrow-top"></i>
+                          </a>
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="8" style="min-width: 16rem;">
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="8" style="min-width: 14rem;">
                           평균 CPC
+                          <a class="btn-circle btn-text-gray btn-circle-xs ml-1" href="#">
+                            <i class="ico ic-arrow-top"></i>
+                          </a>
                         </div>
-                        <div class="datagrid-cell" role="columnheader" aria-colindex="9" style="min-width: 16rem;">
+                        <div class="datagrid-cell" role="columnheader" aria-colindex="9" style="min-width: 14rem;">
                           평균 CTR
+                          <a class="btn-circle btn-text-gray btn-circle-xs ml-1" href="#">
+                            <i class="ico ic-arrow-top"></i>
+                          </a>
                         </div>
                       </div>
                       <!-- /datagrid-row -->
@@ -1333,26 +1603,26 @@
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
                         <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 56rem;">
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 47.2rem;">
                             Total
                           </div>
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
                           3,874원
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
                           60,695
                         </div>
                       </div>
@@ -1360,32 +1630,36 @@
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
                         <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 16rem;">
-                            Google Ads
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-googleads.svg" alt="Google ads" class="svg-icon-lg" />
                           </div>
                           <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
-                            Df_123
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
                           </div>
                           <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
-                            <a href="#">카카오 선물하기</a>
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
                           </div>
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
                           3,874원
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
                           60,695
                         </div>
                       </div>
@@ -1393,32 +1667,36 @@
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
                         <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 16rem;">
-                            Facebook
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg" />
                           </div>
                           <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
-                            Df_123
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
                           </div>
                           <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
-                            <a href="#">카카오 선물하기</a>
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
                           </div>
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
                           3,874원
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
                           60,695
                         </div>
                       </div>
@@ -1426,32 +1704,36 @@
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
                         <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 16rem;">
-                            TRADINGWORKS
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" class="svg-icon-lg" />
                           </div>
                           <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
-                            Df_123
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
                           </div>
                           <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
-                            <a href="#">카카오 선물하기</a>
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
                           </div>
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
                           3,874원
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
                           60,695
                         </div>
                       </div>
@@ -1459,32 +1741,258 @@
                       <!-- datagrid-row -->
                       <div class="datagrid-row" role="row">
                         <div class="datagrid-row-sticky">
-                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 16rem;">
-                            Kakaomoment
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" class="svg-icon-lg" />
                           </div>
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
-                            Df_123
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 20rem;">
+                            <div class="text-truncate">
+                              Df_123f_123f_123f_123f_123f_123f_123
+                            </div>
                           </div>
-                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
-                            <a href="#">카카오 선물하기</a>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 20rem;">
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기 카카오 선물하기카카오 선물하기
+                            </a>
                           </div>
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
                           3,874원
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6"style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
                           60,695
                         </div>
-                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 16rem;">
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                      </div>
+                      <!-- /datagrid-row -->
+                      <!-- datagrid-row -->
+                      <div class="datagrid-row" role="row">
+                        <div class="datagrid-row-sticky">
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-googleads.svg" alt="Google ads" class="svg-icon-lg" />
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
+                          </div>
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
+                          3,874원
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                      </div>
+                      <!-- /datagrid-row -->
+                      <!-- datagrid-row -->
+                      <div class="datagrid-row" role="row">
+                        <div class="datagrid-row-sticky">
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg" />
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
+                          </div>
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
+                          3,874원
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                      </div>
+                      <!-- /datagrid-row -->
+                      <!-- datagrid-row -->
+                      <div class="datagrid-row" role="row">
+                        <div class="datagrid-row-sticky">
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" class="svg-icon-lg" />
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
+                          </div>
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
+                          3,874원
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                      </div>
+                      <!-- /datagrid-row -->
+                      <!-- datagrid-row -->
+                      <div class="datagrid-row" role="row">
+                        <div class="datagrid-row-sticky">
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" class="svg-icon-lg" />
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 20rem;">
+                            <div class="text-truncate">
+                              Df_123f_123f_123f_123f_123f_123f_123
+                            </div>
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 20rem;">
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기 카카오 선물하기카카오 선물하기
+                            </a>
+                          </div>
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
+                          3,874원
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6"style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                      </div>
+                      <!-- /datagrid-row -->
+                      <!-- datagrid-row -->
+                      <div class="datagrid-row" role="row">
+                        <div class="datagrid-row-sticky">
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-googleads.svg" alt="Google ads" class="svg-icon-lg" />
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
+                          </div>
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
+                          3,874원
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                      </div>
+                      <!-- /datagrid-row -->
+                      <!-- datagrid-row -->
+                      <div class="datagrid-row" role="row">
+                        <div class="datagrid-row-sticky">
+                          <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width: 7.2rem;">
+                            <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg" />
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="min-width: 20rem;">
+                            <div class="text-truncate">
+                              Df_123
+                            </div>
+                          </div>
+                          <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="min-width: 20rem;">
+                            <a href="#" class="d-block text-truncate">
+                              카카오 선물하기
+                            </a>
+                          </div>
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="4" style="min-width: 14rem;">
+                          3,874원
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="5" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="6" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="7" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="8" style="min-width: 14rem;">
+                          60,695
+                        </div>
+                        <div class="datagrid-cell text-right" role="gridcell" aria-colindex="9" style="min-width: 14rem;">
                           60,695
                         </div>
                       </div>

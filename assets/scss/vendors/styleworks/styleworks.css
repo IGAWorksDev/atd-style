@@ -222,7 +222,7 @@ template { display: none; }
 .align-self-stretch { -ms-flex-item-align: stretch !important; align-self: stretch !important; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_typography\.scss}line{font-family:\0000314}}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { margin-top: 0; margin-bottom: 1rem; font-weight: 500; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { margin-top: 0; margin-bottom: 1rem; font-weight: 400; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_typography\.scss}line{font-family:\0000319}}
 h1, .h1 { font-size: calc(1.405rem + 1.1625vw); }
@@ -255,20 +255,38 @@ h6, .h6 { font-size: 1.2rem; line-height: 1.8rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_typography\.scss}line{font-family:\0000340}}
 small { font-size: 80%; line-height: 1.175; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_typography\.scss}line{font-family:\0000345}}
+.font-weight-bold { font-weight: 700 !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_typography\.scss}line{font-family:\0000349}}
+.font-size-sm { font-size: 1.2rem !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_typography\.scss}line{font-family:\0000353}}
+.font-size-lg { font-size: 1.6rem !important; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_svg-icon\.scss}line{font-family:\000033}}
 .svg-icon { fill: currentColor; width: 1.4rem; height: 1.4rem; display: inline-block; font-size: 1.4rem; -ms-flex-negative: 0; flex-shrink: 0; -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_svg-icon\.scss}line{font-family:\0000315}}
+.svg-icon-sm { width: 1.2rem; height: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_svg-icon\.scss}line{font-family:\0000319}}
+.svg-icon-md { width: 1.4rem; height: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/base\/_svg-icon\.scss}line{font-family:\0000324}}
+.svg-icon-lg { width: 1.6rem; height: auto; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_grid\.scss}line{font-family:\0000332}}
-.container { width: 100%; padding-right: 0.8rem; padding-left: 0.8rem; margin-right: auto; margin-left: auto; }
+.container { width: 100%; padding-right: 1.6rem; padding-left: 1.6rem; margin-right: auto; margin-left: auto; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_grid\.scss}line{font-family:\0000336}}
-.row { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1 0 100%; flex: 1 0 100%; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-right: -0.8rem; margin-left: -0.8rem; }
+.row { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1 0 100%; flex: 1 0 100%; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-right: -1.6rem; margin-left: -1.6rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_grid\.scss}line{font-family:\0000340}}
 .row-reverse { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_grid\.scss}line{font-family:\0000345}}
-.col { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 100%; padding-right: 0.8rem; padding-left: 0.8rem; }
+.col { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 100%; padding-right: 1.6rem; padding-left: 1.6rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_spacing\.scss}line{font-family:\000037}}
 .m-0, .m-0 { margin: 0 !important; }
@@ -616,63 +634,63 @@ small { font-size: 80%; line-height: 1.175; }
 .ml-auto, .mx-auto { margin-left: auto !important; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\000037}}
-.border { border: 1px solid #dee2e6 !important; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\000038}}
-.border-top { border-top: 1px solid #dee2e6 !important; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\000039}}
-.border-right { border-right: 1px solid #dee2e6 !important; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000310}}
-.border-bottom { border-bottom: 1px solid #dee2e6 !important; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000311}}
-.border-left { border-left: 1px solid #dee2e6 !important; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000313}}
 .border-0 { border: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\000038}}
 .border-top-0 { border-top: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\000039}}
 .border-right-0 { border-right: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000310}}
 .border-bottom-0 { border-bottom: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000311}}
 .border-left-0 { border-left: 0 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000313}}
+.border { border: 1px solid #e9ecef !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000314}}
+.border-top { border-top: 1px solid #e9ecef !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000315}}
+.border-right { border-right: 1px solid #e9ecef !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000316}}
+.border-bottom { border-bottom: 1px solid #e9ecef !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000317}}
+.border-left { border-left: 1px solid #e9ecef !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-primary { border-color: #1E90FF !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-secondary { border-color: #6c757d !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-success { border-color: #28a745 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-info { border-color: #20c997 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-warning { border-color: #ffc107 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-danger { border-color: #dc3545 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-light { border-color: #fff !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-gray { border-color: #adb5bd !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000321}}
 .border-dark { border-color: #212529 !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_borders\.scss}line{font-family:\0000326}}
 .border-white { border-color: #fff !important; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_sizes\.scss}line{font-family:\000037}}
@@ -742,7 +760,7 @@ small { font-size: 80%; line-height: 1.175; }
 .h-fixed-10 { height: 8rem !important; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_buttons\.scss}line{font-family:\000038}}
-.btn { display: inline-block; font-weight: 500; color: #343a40; text-align: center; text-decoration: none; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; background-color: transparent; padding: 0.6rem 1.2rem; font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; border-radius: 0.4rem; }
+.btn { display: inline-block; font-weight: 400; color: #343a40; text-align: center; text-decoration: none; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; background-color: transparent; padding: 0.6rem 1.2rem; font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; border-radius: 0.4rem !important; }
 @media (min-width: 1200px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_buttons\.scss}line{font-family:\000038}}
   .btn { font-size: 1.4rem; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_buttons\.scss}line{font-family:\0000321}}
@@ -1063,7 +1081,7 @@ small { font-size: 80%; line-height: 1.175; }
 .list-group { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-left: 0; margin-bottom: 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_list-group\.scss}line{font-family:\0000310}}
-.list-group-item { display: block; padding: 0.8rem 1.6rem; border: 1px solid #dee2e6; color: #343a40; background-color: transparent; }
+.list-group-item { display: block; padding: 0.8rem 1.6rem; border: 1px solid #e9ecef; color: #343a40; background-color: transparent; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_list-group\.scss}line{font-family:\0000317}}
 .list-group-item:hover { color: #1E90FF; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_list-group\.scss}line{font-family:\0000321}}
@@ -1103,7 +1121,7 @@ small { font-size: 80%; line-height: 1.175; }
 .dropdown-toggle-split .dropdown-caret { margin-left: 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_dropdown\.scss}line{font-family:\0000336}}
-.dropdown-menu { position: absolute; list-style: none; background-color: #fff; background-clip: padding-box; display: none; padding: 0.8rem 0; border: 1px solid #dee2e6; border-radius: 0.4rem; }
+.dropdown-menu { position: absolute; list-style: none; background-color: #fff; background-clip: padding-box; display: none; padding: 0.8rem 0; border: 1px solid #e9ecef; border-radius: 0.4rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_dropdown\.scss}line{font-family:\0000348}}
 .dropdown-header { display: block; padding: 0.4rem 1.6rem; margin: 0; font-size: 1.2rem; white-space: nowrap; color: #adb5bd; font-weight: 700; }
@@ -1130,9 +1148,9 @@ small { font-size: 80%; line-height: 1.175; }
 .tab-item { display: inline-block; padding: 0.6rem 1.6rem; border: 1px solid transparent; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tab\.scss}line{font-family:\0000316}}
-.tab-nav { list-style: none; padding: 0; border-bottom: 1px solid #dee2e6; }
+.tab-nav { list-style: none; padding: 0; border-bottom: 1px solid #e9ecef; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tab\.scss}line{font-family:\0000320}}
-.tab-nav .tab-item { border-color: #dee2e6; margin-bottom: -1px; color: #343a40; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+.tab-nav .tab-item { border-color: #e9ecef; margin-bottom: -1px; color: #343a40; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tab\.scss}line{font-family:\0000326}}
 .tab-nav .tab-item .tab-link { -ms-flex-item-align: center; align-self: center; color: #343a40; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tab\.scss}line{font-family:\0000332}}
@@ -1149,7 +1167,7 @@ small { font-size: 80%; line-height: 1.175; }
 .tab-nav .tab-item.is-active .tab-link { color: #1E90FF; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_forms\.scss}line{font-family:\000036}}
-.form-control { display: block; width: 100%; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); padding: 0.6rem 1.2rem; font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; font-weight: 500; color: #343a40; background-color: #fff; background-clip: padding-box; border: 1px solid #adb5bd; border-radius: 0.4rem; -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+.form-control { display: block; width: 100%; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); padding: 0.6rem 1.2rem; font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; font-weight: 400; color: #343a40; background-color: #fff; background-clip: padding-box; border: 1px solid #adb5bd; border-radius: 0.4rem; -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
 @media (min-width: 1200px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_forms\.scss}line{font-family:\000036}}
   .form-control { font-size: 1.4rem; } }
 @media (prefers-reduced-motion: reduce) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_forms\.scss}line{font-family:\000036}}
@@ -1327,7 +1345,7 @@ textarea.form-control { height: auto; }
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%231E90FF'/%3e%3c/svg%3e"); }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_custom-forms\.scss}line{font-family:\00003148}}
-.custom-select { display: inline-block; width: 100%; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); padding: 0.6rem 2.2rem 0.6rem 1.2rem; font-size: calc(1.265rem + 0.1125vw); font-weight: 500; line-height: 2.2rem; color: #343a40; vertical-align: middle; background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.2rem center/8px 10px; border: 1px solid #adb5bd; border-radius: 0.4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.custom-select { display: inline-block; width: 100%; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); padding: 0.6rem 2.2rem 0.6rem 1.2rem; font-size: calc(1.265rem + 0.1125vw); font-weight: 400; line-height: 2.2rem; color: #343a40; vertical-align: middle; background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.2rem center/8px 10px; border: 1px solid #adb5bd; border-radius: 0.4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 @media (min-width: 1200px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_custom-forms\.scss}line{font-family:\00003148}}
   .custom-select { font-size: 1.4rem; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_custom-forms\.scss}line{font-family:\00003165}}
@@ -1360,7 +1378,7 @@ textarea.form-control { height: auto; }
 .custom-file-input ~ .custom-file-label[data-browse]::after { content: attr(data-browse); }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_custom-forms\.scss}line{font-family:\00003249}}
-.custom-file-label { position: absolute; top: 0; right: 0; left: 0; z-index: 1; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); padding: 0.6rem 1.2rem; font-weight: 500; line-height: 2.2rem; color: #343a40; background-color: #fff; border: 1px solid #adb5bd; border-radius: 0.4rem; }
+.custom-file-label { position: absolute; top: 0; right: 0; left: 0; z-index: 1; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); padding: 0.6rem 1.2rem; font-weight: 400; line-height: 2.2rem; color: #343a40; background-color: #fff; border: 1px solid #adb5bd; border-radius: 0.4rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_custom-forms\.scss}line{font-family:\00003266}}
 .custom-file-label::after { position: absolute; top: 0; right: 0; bottom: 0; z-index: 3; display: block; height: calc((2.2rem * 1) + (0.6rem * 2)); padding: 0.6rem 1.2rem; line-height: 2.2rem; color: #343a40; content: "Browse"; background-color: #f8f9fa; border-left: inherit; border-radius: 0 0.4rem 0.4rem 0; }
 
@@ -1387,7 +1405,7 @@ textarea.form-control { height: auto; }
 .input-group-append { margin-left: -1px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_input-group\.scss}line{font-family:\0000367}}
-.input-group-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0.6rem 1.2rem; margin: 0; font-size: calc(1.265rem + 0.1125vw); font-weight: 500; line-height: 2.2rem; color: #343a40; text-align: center; white-space: nowrap; background-color: #f8f9fa; border: 1px solid #adb5bd; border-radius: 0.4rem; }
+.input-group-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0.6rem 1.2rem; margin: 0; font-size: calc(1.265rem + 0.1125vw); font-weight: 400; line-height: 2.2rem; color: #343a40; text-align: center; white-space: nowrap; background-color: #f8f9fa; border: 1px solid #adb5bd; border-radius: 0.4rem; }
 @media (min-width: 1200px) { @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_input-group\.scss}line{font-family:\0000367}}
   .input-group-text { font-size: 1.4rem; } }
 
@@ -1398,18 +1416,18 @@ textarea.form-control { height: auto; }
 .input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) { border-top-left-radius: 0; border-bottom-left-radius: 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_card\.scss}line{font-family:\000033}}
-.card { border: 1px solid #dee2e6; border-radius: 0.4rem; background-color: #fff; background-clip: border-box; word-wrap: break-word; }
+.card { border: 1px solid #e9ecef; border-radius: 0.4rem; background-color: #fff; background-clip: border-box; word-wrap: break-word; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_card\.scss}line{font-family:\0000311}}
-.card-header { padding: 0.8rem 1.6rem; background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; border-radius: 0.4rem 0.4rem 0 0; margin: 0; }
+.card-header { padding: 0.8rem 1.6rem; background-color: #f8f9fa; border-bottom: 1px solid #e9ecef; border-radius: 0.4rem 0.4rem 0 0; margin: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_card\.scss}line{font-family:\0000317}}
-.card-header :first-child { border-radius: 0.4rem 0.4rem 0 0; }
+.card-header:first-child { border-radius: 0.4rem 0.4rem 0 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_card\.scss}line{font-family:\0000322}}
 .card-body { padding: 0.8rem 1.6rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_card\.scss}line{font-family:\0000326}}
-.card-footer { padding: 0.8rem 1.6rem; background-color: #f8f9fa; border-top: 1px solid #dee2e6; }
+.card-footer { padding: 0.8rem 1.6rem; background-color: #f8f9fa; border-top: 1px solid #e9ecef; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_card\.scss}line{font-family:\0000331}}
 .card-footer:last-child { border-radius: 0 0 0.4rem 0.4rem; }
 
@@ -1624,7 +1642,7 @@ textarea.form-control { height: auto; }
 .modal-dialog { position: relative; margin: 1.6rem; width: auto; pointer-events: none; outline: 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_modals\.scss}line{font-family:\0000329}}
-.modal-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; pointer-events: auto; background-color: #fff; background-clip: padding-box; border: 1px solid #dee2e6; border-radius: 0.4rem; overflow: hidden; }
+.modal-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; pointer-events: auto; background-color: #fff; background-clip: padding-box; border: 1px solid #e9ecef; border-radius: 0.4rem; overflow: hidden; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_modals\.scss}line{font-family:\0000340}}
 .modal-container .btn-close { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; margin-left: auto; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_modals\.scss}line{font-family:\0000346}}
@@ -1637,7 +1655,7 @@ textarea.form-control { height: auto; }
 .modal-body { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; padding: 1.6rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_modals\.scss}line{font-family:\0000367}}
-.modal-footer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; padding: 1.6rem; border-top: 1px solid #dee2e6; border-radius: 0 0 0.4rem 0.4rem; }
+.modal-footer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; padding: 1.6rem; border-top: 1px solid #e9ecef; border-radius: 0 0 0.4rem 0.4rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_modals\.scss}line{font-family:\0000378}}
 .modal-backdrop { position: fixed; left: 0; top: 0; z-index: 10; width: 100vw; height: 100vh; background-color: #000; opacity: 0.5; }
@@ -1683,7 +1701,7 @@ textarea.form-control { height: auto; }
 .datagrid-row { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; position: relative; border-collapse: collapse; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_datagrid\.scss}line{font-family:\0000376}}
-.datagrid-cell, .datagrid-cell-select { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; border: solid #dee2e6; border-width: 0 0 1px 0; padding: 0.8rem 1.6rem; background-color: #fff; min-width: 8rem; color: #343a40; }
+.datagrid-cell, .datagrid-cell-select { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; border: solid #e9ecef; border-width: 0 0 1px 0; padding: 0.8rem 1.6rem; background-color: #fff; min-width: 8rem; color: #343a40; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_datagrid\.scss}line{font-family:\0000382}}
 .datagrid-cell[role="columnheader"], .datagrid-cell[role="rowheader"], .datagrid-cell-select[role="columnheader"], .datagrid-cell-select[role="rowheader"] { font-weight: bolder; }
 
@@ -1691,7 +1709,7 @@ textarea.form-control { height: auto; }
 .datagrid-cell-select { min-width: 3rem; -webkit-box-flex: 0; -ms-flex: 0 0 3rem; flex: 0 0 3rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_datagrid\.scss}line{font-family:\0000395}}
-.datagrid-header .datagrid-cell { border-top: 1px solid #dee2e6; border-bottom: 2px solid #dee2e6; background-color: #f8f9fa; }
+.datagrid-header .datagrid-cell { border-top: 1px solid #e9ecef; border-bottom: 2px solid #e9ecef; background-color: #f8f9fa; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_datagrid\.scss}line{font-family:\00003105}}
 [role="columnheader"][tabindex], [role="rowheader"][tabindex], [role="gridcell"][tabindex] { position: relative; }
@@ -1726,17 +1744,17 @@ textarea.form-control { height: auto; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tables\.scss}line{font-family:\000032}}
 .table { width: 100%; border-collapse: collapse; color: #343a40; background-color: #fff; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tables\.scss}line{font-family:\000038}}
-.table th, .table td { padding: 0.8rem 1.6rem; border-bottom: 1px solid #dee2e6; text-align: inherit; vertical-align: top; }
+.table th, .table td { padding: 0.8rem 1.6rem; border-bottom: 1px solid #e9ecef; text-align: inherit; vertical-align: top; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tables\.scss}line{font-family:\0000315}}
-.table thead th, .table thead td { border-top: 1px solid #dee2e6; border-bottom: 2px solid #dee2e6; background-color: #f8f9fa; }
+.table thead th, .table thead td { border-top: 1px solid #e9ecef; border-bottom: 2px solid #e9ecef; background-color: #f8f9fa; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tables\.scss}line{font-family:\0000323}}
 caption { caption-side: bottom; padding: 0.8rem 1.6rem; text-align: inherit; font-style: italic; font-size: 1.2rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tables\.scss}line{font-family:\0000334}}
-.table-bordered { border: 1px solid #dee2e6; }
+.table-bordered { border: 1px solid #e9ecef; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tables\.scss}line{font-family:\0000337}}
-.table-bordered th, .table-bordered td { border: 1px solid #dee2e6; }
+.table-bordered th, .table-bordered td { border: 1px solid #e9ecef; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/dannaeyang\/Documents\/GitHub\/atd-style\/assets\/scss\/vendors\/styleworks\/components\/_tables\.scss}line{font-family:\0000345}}
 .table-striped tbody tr:nth-child(even) { background-color: #f8f9fa; }

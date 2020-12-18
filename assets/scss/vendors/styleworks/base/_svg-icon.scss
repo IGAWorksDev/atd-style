@@ -10,3 +10,18 @@
   flex-grow: 0;
   user-select: none;
 }
+
+
+.svg-icon-sm {
+  width: $font-size-sm;
+  height: auto;
+}
+.svg-icon-md {
+  width: $font-size-base;
+  height: auto;
+}
+
+.svg-icon-lg {
+  width: $font-size-lg;
+  height: auto;
+}

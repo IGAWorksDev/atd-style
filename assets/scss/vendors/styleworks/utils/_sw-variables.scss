@@ -253,6 +253,8 @@ $border-radius-lg:            0.4rem !default;
 $component-active-color:      $primary !default;
 $component-active-bg:         rgba($primary, 0.1) !default;
 
+$component-blank-bg: $gray-100;
+
 // Transitions
 $transition-base : all 0.15s ease-in-out !default;
 
