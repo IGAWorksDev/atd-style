@@ -28,10 +28,14 @@
 
   // 둥근 모서리 재설정
   > .btn:not(:first-child) {
-    @include border-left-radius(0);
+    //@include border-left-radius(0);
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
   }
   > .btn:not(:last-child) {
-    @include border-right-radius(0);
+    //@include border-right-radius(0);
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
   }
 }
 

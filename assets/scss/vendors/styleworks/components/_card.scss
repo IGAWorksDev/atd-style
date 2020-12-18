@@ -2,7 +2,7 @@
 
 .card {
   border: $card-border-width solid $card-border-color;
-  border-radius: $border-radius;
+  border-radius: $card-border-radius;
   background-color: $card-bg;
   background-clip: border-box;
   word-wrap: break-word;

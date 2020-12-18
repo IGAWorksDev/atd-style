@@ -16,7 +16,7 @@
   position: relative;
 }
 
-@mixin datagrid-flex-row(){
+@mixin datagrid-flex-row() {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -28,8 +28,7 @@
 @mixin datagrid-flex-cell() {
   flex: 1 1 auto;
   align-items: stretch; // 행(row) 안의 셀 높이를 동일하게 맞춤
-  border: solid $datagrid-border-color;
-  border-width: 0 0 $datagrid-border-width 0;
+  border: 0 solid $datagrid-border-color;
   padding: $datagrid-padding-y $datagrid-padding-x;
   background-color: $datagrid-bg;
   min-width: 8rem;
@@ -92,10 +91,18 @@
 }
 
 // Header 안의 Gridcell
-.datagrid-header .datagrid-cell {
-  border-top: $datagrid-border-width solid $datagrid-border-color;
-  border-bottom: ($datagrid-border-width * 2) solid $datagrid-border-color;
-  background-color: $datagrid-alt-bg;
+.datagrid-header{
+  .datagrid-cell {
+    border-bottom-width: $datagrid-border-width;
+    background-color: $datagrid-alt-bg;
+  }
+}
+
+// Header 안의 Gridcell
+.datagrid-body{
+  .datagrid-cell {
+    border-top-width: $datagrid-border-width;
+  }
 }
 
 // Tabindex가 있을 때 포커스 된 상태 추가 (*테스트)
@@ -167,14 +174,18 @@
 
 // Bordered
 //
-.datagrid-bordered .datagrid-rowgroup .datagrid-row {
-  .datagrid-cell {
+.datagrid-bordered {
+  .datagrid-cell + .datagrid-cell {
     border-left-width: $datagrid-border-width;
-    &:last-child {
-      border-right-width: $datagrid-border-width;
+  }
+  // rowspan이 된 경우로 행(row)의 첫번째 셀에 보더값을 주어야, 셀 너비값을 맞출 수 있음.
+  .datagrid-cell + .datagrid-rowspan {
+    .datagrid-row .datagrid-cell:first-child {
+      border-left-width: $datagrid-border-width;
     }
   }
 }
+
 
 // Stripe
 //

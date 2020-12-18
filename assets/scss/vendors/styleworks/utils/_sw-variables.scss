@@ -61,7 +61,7 @@ $info:          $teal !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $white !default;
-$gray:          $gray-500 !default;
+$gray:          $gray-500 !default; // 삭제
 $dark:          $gray-900 !default;
 
 $theme-colors: () !default;
@@ -146,7 +146,7 @@ $headings-margin-bottom: 1rem;
 $small-font-size: 80%;
 
 // secondary보다 약하게 사용할 경우
-$text-muted: $gray-400 !default;
+$text-muted: $gray-600 !default;
 
 
 // Body
@@ -336,7 +336,7 @@ $input-btn-line-height-lg:    $line-height-lg !default;
 
 $input-btn-border-width:      $border-width !default;
 
-$input-btn-disabled-color: $gray-500;
+$input-btn-disabled-color:    $gray-400;
 
 
 // Buttons
@@ -388,7 +388,7 @@ $btn-circle-font-size: $input-btn-font-size;
 $btn-circle-line-height: $line-height-base;
 $btn-circle-height: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-y} * 2) + (#{$btn-border-width} * 2)); // line-height가 고정된 값을 갖고 있으므로, 높이값에 사용함.
 $btn-circle-width: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-x} * 2) + (#{$btn-border-width} * 2)); // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
-$btn-circle-border-radius: 3.6rem;
+$btn-circle-border-radius: 3.6rem !important;
 
 $btn-circle-padding-xs-y: $input-btn-padding-y-xs;
 $btn-circle-padding-xs-x: $input-btn-padding-y-xs;
@@ -683,10 +683,10 @@ $page-icon-spacer: ($line-height-base - $font-size-base) / 2 ;
 // Card
 $card-border-width: 1px;
 $card-border-color: $border-color;
+$card-border-radius: $border-radius !default;
 $card-padding-y: $spacer;
 $card-padding-x: $spacer * 2;
 $card-bg: $white;
-
 $card-header-bg: $gray-100;
 
 
@@ -763,7 +763,7 @@ $datagrid-padding-y: $spacer;
 $datagrid-padding-x: $spacer * 2;
 
 $datagrid-rowgroup-sticky-z-index: 501;
-$datagrid-row-sticky-z-index: 500;
+$datagrid-row-sticky-z-index: 10;
 
 
 // Toast
@@ -785,7 +785,13 @@ $toast-line-height: $line-height-sm;
 $toast-icon-size: $line-height-base; // $font-size-base의 줄높이
 
 
-
+// Blankslate
+//
+$blankslate-padding-y: $spacer;
+$blankslate-padding-x: $spacer * 2;
+$blankslate-border-width: $border-width;
+$blankslate-border-color: $border-color;
+$blankslate-bg: $gray-100;
 
 
 
