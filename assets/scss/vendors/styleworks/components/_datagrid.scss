@@ -23,12 +23,14 @@
   flex: 1 1 auto;
   position: relative;
   border-collapse: collapse;
+  align-items: stretch;
 }
 
 @mixin datagrid-flex-cell() {
   flex: 1 1 auto;
-  align-items: stretch; // 행(row) 안의 셀 높이를 동일하게 맞춤
-  border: 0 solid $datagrid-border-color;
+  border-width: 0;
+  border-style: solid;
+  border-color: $datagrid-border-color;
   padding: $datagrid-padding-y $datagrid-padding-x;
   background-color: $datagrid-bg;
   min-width: 8rem;
@@ -49,15 +51,8 @@
 // 표 형식 정보 표시를 위한 그리드
 // 행(row)을 포함하는 그룹으로 <thead>, <tbody> 및 <tfoot>의 기능을 모방
 .datagrid,
-.datagrid-rowgroup,
-.datagrid-hader,
-.datagrid-body {
+.datagrid-rowgroup {
   @include datagrid-flex-column();
-}
-
-.datagrid-rowgroup,
-.datagrid-hader,
-.datagrid-body {
   flex: 1 1 auto;
 }
 
@@ -72,8 +67,7 @@
 // Gridcell
 // <td>요소의 기능을 모방하는 셀
 //
-.datagrid-cell,
-.datagrid-cell-select {
+.datagrid-cell {
   @include datagrid-flex-cell();
   color: $datagrid-color;
 
@@ -177,11 +171,13 @@
 .datagrid-bordered {
   .datagrid-cell + .datagrid-cell {
     border-left-width: $datagrid-border-width;
+    border-left-color: $datagrid-border-color;
   }
   // rowspan이 된 경우로 행(row)의 첫번째 셀에 보더값을 주어야, 셀 너비값을 맞출 수 있음.
   .datagrid-cell + .datagrid-rowspan {
     .datagrid-row .datagrid-cell:first-child {
       border-left-width: $datagrid-border-width;
+      border-left-color: $datagrid-border-color;
     }
   }
 }
@@ -199,12 +195,13 @@
 
 // Row Selected
 //
-.datagrid-striped .datagrid-body .datagrid-row[aria-selected="true"] {
+.datagrid-body .datagrid-row[aria-selected="true"] {
   .datagrid-cell {
     background-color: $datagrid-active-bg;
     color: $datagrid-active-color;
   }
 }
+
 
 // Hover
 //
@@ -212,5 +209,13 @@
 .datagrid-hover > .datagrid-row:hover {
   .datagrid-cell {
     background-color: $datagrid-hover-bg;
+  }
+}
+
+.datagrid-body .datagrid-row.is-muted {
+  .datagrid-cell {
+    background-color: $datagrid-muted-bg;
+    color: $datagrid-muted-color;
+    font-weight: $font-weight-bold;
   }
 }

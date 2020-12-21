@@ -112,7 +112,7 @@
         <div class="blankslate blankslate-dark h-fixed-8 blankslate-floating-bar">
           <div class="blankslate-message">
             <i class="ico ic-info-circle"></i> 본 데이터는 샘플입니다.
-            <button class="btn btn-contained-primary ml-2">
+            <button class="btn btn-contained-primary ml-2" data-toggle="modal" data-target="#modal-project-editor">
               <i class="ico ic-plus"></i>
               프로젝트 생성
             </button>
@@ -493,7 +493,7 @@
                     <!-- datagrid-body -->
                     <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
                       <!-- datagrid-row -->
-                      <div class="datagrid-row" role="row">
+                      <div class="datagrid-row is-muted" role="row" aria-selected="true">
                         <div class="datagrid-cell text-center" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
                           Total
                         </div>
@@ -598,8 +598,8 @@
                       </div>
                       <!-- /datagrid-row -->
                       <!-- datagrid-row -->
-                      <div class="datagrid-row text-center" role="row">
-                        <div class="datagrid-cell" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
+                      <div class="datagrid-row" role="row">
+                        <div class="datagrid-cell text-center" role="rowheader" aria-colindex="1" style="min-width: 7.2rem; width:7.2rem; max-width: 7.2rem;">
                           <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" class="svg-icon-lg">
                         </div>
                         <div class="datagrid-cell text-right" role="gridcell" aria-colindex="2" style="width:10rem;">
@@ -1042,7 +1042,7 @@
               <div class="form-inline">
                 <div class="form-group" >
                   <label for="form-period-setting" class="d-none">기간 선택</label>
-                  <input type="text" class="form-control" id="form-period-setting" placeholder="기간 선택" value="2020.12.18 ~ 2020.12.25" style="width: 20rem;">
+                  <input type="date" class="form-control" id="form-period-setting" placeholder="기간 선택" value="2020.12.18 ~ 2020.12.25" style="width: 24rem;">
                 </div>
               </div>
             </div>
@@ -1287,28 +1287,100 @@
                   </div>
                   <div class="card-body">
                     <div class="mt-1">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #4169ff"></i>
-                        Impressions
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-1"></i>
+                          Impressions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         3,556,950
                       </div>
                     </div>
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #20c997"></i>
-                        Clicks
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-2"></i>
+                          Clicks
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         85,887
                       </div>
                     </div>
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #ffc107"></i>
-                        Cost
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-4"></i>
+                          Cost
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         9,450,561
                       </div>
@@ -1407,30 +1479,100 @@
                   </div>
                   <div class="card-body">
                     <div class="mt-1">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #4169ff"></i>
-                        Impressions
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-1"></i>
+                          Impressions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         3,556,950
                       </div>
                     </div>
-
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #20c997"></i>
-                        Clicks
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-2"></i>
+                          Clicks
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         85,887
                       </div>
                     </div>
-
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #ffc107"></i>
-                        Cost
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-4"></i>
+                          Cost
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         9,450,561
                       </div>
@@ -2051,7 +2193,7 @@
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         이벤트 관리
                       </h4>
-                      <button class="btn btn-text-primary btn-sm" data-toggle="modal" data-target="#modal-event-editor">
+                      <button class="btn btn-text-primary btn-sm font-weight-bold" data-toggle="modal" data-target="#modal-event-editor">
                         <i class="ico ic-plus"></i>
                         이벤트 등록
                       </button>
@@ -2095,7 +2237,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2123,7 +2265,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2151,7 +2293,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2179,7 +2321,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2207,7 +2349,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2280,7 +2422,7 @@
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         자료 관리
                       </h4>
-                      <button class="btn btn-text-primary btn-sm" data-toggle="modal" data-target="#modal-file-upload">
+                      <button class="btn btn-text-primary btn-sm font-weight-bold" data-toggle="modal" data-target="#modal-file-upload">
                         <i class="ico ic-plus"></i>
                         파일 등록
                       </button>
@@ -2321,7 +2463,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2345,7 +2487,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate  text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2369,7 +2511,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate text-dark" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2393,7 +2535,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2417,7 +2559,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2573,7 +2715,7 @@
             </div>
 
             <!-- datagrid -->
-            <div class="datagrid-responsive">
+            <div class="datagrid-responsive border-top border-bottom">
               <div class="datagrid datagrid-hover" role="grid">
                 <!-- datagrid-header -->
                 <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
@@ -2687,7 +2829,7 @@
               </form>
             </div>
             <!-- datagrid -->
-            <div class="datagrid-responsive">
+            <div class="datagrid-responsive border-top border-bottom">
               <div class="datagrid datagrid-hover" role="grid">
                 <!-- datagrid-header -->
                 <div class="datagrid-rowgroup datagrid-header" role="rowgroup">

@@ -36,8 +36,8 @@ $grays: map-merge(
         $grays
 );
 
-$blue:    #1E90FF !default;
-$red:     #dc3545 !default;
+$blue:    #1e90ff !default;
+$red:     #dc143c !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
@@ -61,8 +61,12 @@ $info:          $teal !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $white !default;
-$gray:          $gray-500 !default; // 삭제
+$gray:          $gray-500 !default;
 $dark:          $gray-900 !default;
+
+$base:        $gray-800;
+$disabled:    $gray-400;
+
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -70,7 +74,7 @@ $theme-colors: map-merge(
             "primary": $primary,
             "secondary": $secondary,
             "success": $success,
-            "info":   $info,
+            "info": $info,
             "warning": $warning,
             "danger": $danger,
             "light": $light,
@@ -78,6 +82,24 @@ $theme-colors: map-merge(
             "dark": $dark
         ),
         $theme-colors
+);
+
+$legend-1: $blue !default;
+$legend-2: $teal !default;
+$legend-3: $red !default;
+$legend-4: $yellow !default;
+$legend-5: $gray !default;
+
+$theme-charts: ()!default;
+$theme-charts: map-merge(
+    (
+        "legend-1": $legend-1,
+        "legend-2": $legend-2,
+        "legend-3": $legend-3,
+        "legend-4": $legend-4,
+        "legend-5": $legend-5
+    ),
+    $theme-charts
 );
 
 
@@ -148,6 +170,7 @@ $small-font-size: 80%;
 // secondary보다 약하게 사용할 경우
 $text-muted: $gray-600 !default;
 
+$text-disabled: $disabled !default;
 
 // Body
 //
@@ -448,18 +471,23 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-
 $input-height-inner:          calc((#{$input-line-height} * 1) + (#{$input-padding-y} * 2)) !default;
 $input-height-inner-half:     calc((#{$input-line-height} * 0.5) + #{$input-padding-y}) !default;
 $input-height-inner-quarter:  calc((#{$input-line-height} * 0.25) + (#{$input-padding-y} / 2)) !default; // 결과값이 홀수 또는 소수점이 있을 수 있음 (주의!)
 
 
-$input-search-icon-color: $gray-600;
+$input-search-icon-color: $gray-400;
 $input-search-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$input-search-icon-color}' d='M10 0c5.523 0 10 4.477 10 10 0 1.994-.583 3.85-1.59 5.4L23 20c.652 1.333.652 2.333 0 3s-1.652.667-3 0l-4.6-4.59C13.85 19.417 11.994 20 10 20 4.477 20 0 15.523 0 10S4.477 0 10 0zm0 2a8 8 0 1 0 0 16 8 8 0 1 0 0-16z'/></svg>");
-$input-search-bg-size: $font-size-base;
-$input-search-background: escape-svg($input-search-icon) no-repeat left $input-padding-x center / $input-search-bg-size;
-$input-search-padding-x: ($input-padding-x + $input-search-bg-size + ($input-padding-x * 0.5));
+$input-search-icon-size: $font-size-base;
+$input-search-background: escape-svg($input-search-icon) no-repeat left $input-padding-x center / $input-search-icon-size;
+$input-search-padding-x: ($input-padding-x + $input-search-icon-size + ($input-padding-x * 0.5));
 
+
+$input-date-icon-color: $gray-400;
+$input-data-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$input-date-icon-color}' d='M2,3 L4,3 L4,0 L8,0 L8,3 L15.9976807,3 L15.9976807,0 L20,0 L20,3 L22,3 C23.1045695,3 24,3.8954305 24,5 L24,22 C24,23.1045695 23.1045695,24 22,24 L2,24 C0.8954305,24 1.3527075e-16,23.1045695 0,22 L4.4408921e-16,5 C-1.81708937e-16,3.8954305 0.8954305,3 2,3 Z M2,7 L2,22 L22,22 L22,7 L2,7 Z M7.69790447,12.3354289 L5.7,14.3333334 L10.3666667,19 L18.3666667,11 L16.3666667,9 L10.3645711,15.0020956 L7.69790447,12.3354289 Z'/></svg>");
+$input-date-icon-size: $font-size-base;
+$input-date-background: escape-svg($input-data-icon) no-repeat left $input-padding-x center / $input-date-icon-size;
+$input-date-padding-x: ($input-padding-x + $input-date-icon-size + ($input-padding-x * 0.5));
 
 
 $form-check-input-size: $font-size-base !default;
@@ -665,7 +693,7 @@ $dropdown-item-hover-bg: $gray-100;
 $dropdown-item-active-color: $component-active-color;
 $dropdown-item-active-bg: $component-active-bg;
 
-$dropdown-item-disabled-color: $gray-500;
+$dropdown-item-disabled-color: $gray-400;
 
 
 
@@ -752,10 +780,13 @@ $table-cell-padding-x: $spacer * 2;
 $datagrid-color: $body-color;
 $datagrid-bg: $white;
 $datagrid-alt-bg: $gray-100; // alernative
-$datagrid-hover-bg: lighten($primary, 36%) !default;
+$datagrid-hover-bg: lighten($primary, 42%) !default;
 
 $datagrid-active-color: $primary !default;
 $datagrid-active-bg: lighten($primary, 40%) !default;
+
+$datagrid-muted-color: $text-muted; // total 합산 정보를 노출 시 사용.
+$datagrid-muted-bg: $gray-100;
 
 $datagrid-border-width: $border-width;
 $datagrid-border-color: $border-color;
@@ -763,7 +794,8 @@ $datagrid-padding-y: $spacer;
 $datagrid-padding-x: $spacer * 2;
 
 $datagrid-rowgroup-sticky-z-index: 501;
-$datagrid-row-sticky-z-index: 10;
+$datagrid-row-sticky-z-index: 1;
+
 
 
 // Toast

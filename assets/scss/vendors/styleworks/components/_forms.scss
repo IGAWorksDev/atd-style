@@ -41,12 +41,23 @@
   }
 }
 
-/*
+
 .form-control[type="search"] {
   background: $input-search-background;
+  background-color: $input-bg;
   padding-left: $input-search-padding-x;
 }
-*/
+
+
+.form-control[type="date"],
+.form-control[type="datetime-local"],
+.form-control[type="month"] {
+  background: $input-date-background;
+  background-color: $input-bg;
+  padding-left: $input-date-padding-x;
+}
+
+
 
 
 // 파일 입력을 새 줄로 강제하여 텍스트 입력과 더 잘 일치하도록 만듭니다.
