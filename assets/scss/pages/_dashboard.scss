@@ -3,7 +3,9 @@
 // 대시보드 컨텐츠가 더미 데이터 일 경우
 #dashboard {
   &.is-blank {
-    padding-bottom: $spacer * 8;
+    .container {
+      padding-bottom: $spacer * 8;
+    }
   }
 }
 

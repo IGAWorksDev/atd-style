@@ -1625,7 +1625,7 @@ caption { caption-side: bottom; padding: 0.8rem 1.6rem; text-align: inherit; fon
 
 #card-group-steps-list-selector .card .list-group { height: 32rem; }
 
-#dashboard.is-blank { padding-bottom: 6.4rem; }
+#dashboard.is-blank .container { padding-bottom: 6.4rem; }
 
 .blankslate-floating-bar { z-index: 10; position: fixed; right: 0; bottom: 0; left: 0; border: 0; }
 
