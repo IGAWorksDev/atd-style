@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>TW-Dashboard</title>
+  <title>TW-Dashboard WEB</title>
   <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
@@ -130,9 +130,9 @@
               </h2>
               <!-- dropdown -->
               <div class="dropdown">
-                <button class="btn btn-text-secondary dropdown-toggle btn-lg py-1 px-1" type="button" id="dropdown-project" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-text-secondary btn-lg dropdown-toggle p-1" type="button" id="dropdown-project" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img src="../../assets/images/channel-ico-facebook.svg" alt="프로젝트 이름" class="mr-1" style="width: 2.4rem; vertical-align: middle;">
-                  카카오톡
+                  <span style="vertical-align: middle;">카카오톡 KakaoTalk</span>
                 </button>
                 <!-- dropdown-menu -->
                 <div class="dropdown-menu dropdown-menu-project p-0" aria-labelledby="dropdown-project">
@@ -148,10 +148,10 @@
                             카카오톡 KakaoTalk 카카오톡 KakaoTalk
                           </h5>
                           <div class="btn-group btn-group-sm">
-                            <button class="btn btn-outlined-secondary">
+                            <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#modal-project-editor">
                               프로젝트 수정
                             </button>
-                            <button class="btn btn-outlined-secondary">
+                            <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#modal-project-layout-web">
                               레이아웃 설정
                             </button>
                           </div>
@@ -862,28 +862,100 @@
                   </div>
                   <div class="card-body">
                     <div class="mt-1">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #4169ff"></i>
-                        Impressions
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-1"></i>
+                          Impressions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         3,556,950
                       </div>
                     </div>
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #20c997"></i>
-                        Clicks
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-2"></i>
+                          Clicks
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         85,887
                       </div>
                     </div>
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #ffc107"></i>
-                        Cost
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-4"></i>
+                          Cost
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         9,450,561
                       </div>
@@ -982,30 +1054,100 @@
                   </div>
                   <div class="card-body">
                     <div class="mt-1">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #4169ff"></i>
-                        Impressions
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-1"></i>
+                          Impressions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         3,556,950
                       </div>
                     </div>
-
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #20c997"></i>
-                        Clicks
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-2"></i>
+                          Clicks
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         85,887
                       </div>
                     </div>
-
                     <div class="mt-2">
-                      <a class="dropdown-toggle text-dark" href="#">
-                        <i class="ico ic-ball" style="color: #ffc107"></i>
-                        Cost
-                      </a>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle text-body" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-ball text-legend-4"></i>
+                          Cost
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-1"></i>
+                            Impressions
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-2"></i>
+                            Clicks
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-3"></i>
+                            CTR
+                          </a>
+                          <a class="dropdown-item is-disabled" href="#">
+                            <i class="ico ic-ball text-legend-4"></i>
+                            Cost
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            <i class="ico ic-ball text-legend-5"></i>
+                            Reach
+                          </a>
+                        </div>
+                      </div>
                       <div class="data-value font-size-lg font-weight-bold mt-1 mb-0 ml-2">
                         9,450,561
                       </div>
@@ -2070,7 +2212,7 @@
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         이벤트 관리
                       </h4>
-                      <button class="btn btn-text-primary btn-sm" data-toggle="modal" data-target="#modal-event-editor">
+                      <button class="btn btn-text-primary btn-sm font-weight-bold" data-toggle="modal" data-target="#modal-event-editor">
                         <i class="ico ic-plus"></i>
                         이벤트 등록
                       </button>
@@ -2114,7 +2256,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2142,7 +2284,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2170,7 +2312,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2198,7 +2340,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2226,7 +2368,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 46rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#" data-toggle="modal"
+                                  <a class="item-title d-block text-truncate text-body" href="#" data-toggle="modal"
                                      data-target="#modal-event-viewer">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
@@ -2299,7 +2441,7 @@
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         자료 관리
                       </h4>
-                      <button class="btn btn-text-primary btn-sm" data-toggle="modal" data-target="#modal-file-upload">
+                      <button class="btn btn-text-primary btn-sm font-weight-bold" data-toggle="modal" data-target="#modal-file-upload">
                         <i class="ico ic-plus"></i>
                         파일 등록
                       </button>
@@ -2340,7 +2482,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2364,7 +2506,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2388,7 +2530,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate text-dark" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2412,7 +2554,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2436,7 +2578,7 @@
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 38rem;">
                                 <!-- item-easy-manageer -->
                                 <div class="item-easy-manageer">
-                                  <a class="item-title d-block text-truncate" href="#">
+                                  <a class="item-title d-block text-truncate text-body" href="#">
                                     뜨거운지라, 하여도 별과 때문이다. 긴지라 사는가 주며, 품으며, 아름답고 있는 있는 것이다.
                                   </a>
                                   <div class="item-tool text-right" style="width: 5rem;">
@@ -2706,7 +2848,7 @@
               </form>
             </div>
             <!-- datagrid -->
-            <div class="datagrid-responsive">
+            <div class="datagrid-responsive border-top border-bottom">
               <div class="datagrid datagrid-hover" role="grid">
                 <!-- datagrid-header -->
                 <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
@@ -2977,6 +3119,60 @@
     </div>
   </div>
   <!-- /modal-file-delete -->
+
+  <!-- modal-project-layout-web -->
+  <div class="modal fade" id="modal-project-layout-web" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <!-- modal-container -->
+      <div class="modal-container">
+        <div class="modal-header">
+          <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="ico ic-close"></i>
+          </button>
+          <h3 class="modal-title">
+            레이아웃 설정
+          </h3>
+        </div>
+        <div class="modal-body p-2 py-3">
+          <!-- d-flex -->
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="text-center px-2">
+              <div class="custom-control custom-radio mb-2">
+                <input type="radio" class="custom-control-input" name="layout-app-type" id="layout-app-type-a">
+                <label class="custom-control-label" for="layout-app-type-a">Type A</label>
+              </div>
+              <img src="../../assets/images/project-layout-web-typeA.png"
+                   srcset="../../assets/images/project-layout-web-typeA@2x.png 2x,
+                              ../../assets/images/project-layout-web-typeA@3x.png 3x"
+                   alt="TypeA" style="width: 178px;">
+            </div>
+            <div class="text-center px-2">
+              <div class="custom-control custom-radio mb-2">
+                <input type="radio" class="custom-control-input" name="layout-app-type" id="layout-app-type-b">
+                <label class="custom-control-label" for="layout-app-type-b">Type B</label>
+              </div>
+              <img src="../../assets/images/project-layout-web-typeB.png"
+                   srcset="../../assets/images/project-layout-web-typeB@2x.png 2x,
+                              ../../assets/images/project-layout-web-typeB@3x.png 3x"
+                   alt="TypeB" style="width: 178px;">
+            </div>
+          </div>
+          <!-- /d-flex -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">
+            취소
+          </button>
+          <button type="submit" class="btn btn-contained-primary">
+            저장하기
+          </button>
+        </div>
+      </div>
+      <!-- /modal-container -->
+    </div>
+  </div>
+  <!-- /modal-project-layout-web -->
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
