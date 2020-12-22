@@ -1,0 +1,225 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+          name="viewport">
+    <title>TRADINGWORKS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/tradingworks.css">
+    <link rel="stylesheet" href="../css/gnb.css">
+</head>
+<body>
+<div class="platform">
+    <div class="page">
+        <div class="page__inner page__account">
+            <main class="main">
+                <header class="main-header">
+                    <div class="main-header__inner">
+                        <div class="main-header__body">
+                            <h1 class="main-header__title">Companies</h1>
+                        </div>
+                    </div>
+                </header>
+                <div class="main-body__inner mt-3">
+                    <section class="card">
+                        <header class="card__header sr-only">
+                            <h2 class="card__title">회사 목록</h2>
+                        </header>
+                        <div class="card__body">
+                            <div id="div_controller" class="controller">
+                                <div class="controller__item" id="div_batch_edit">
+                                    <label for="select_status"></label>
+                                    <select name="status" id="select_status" class="form-control">
+                                        <option value="">구분 전체</option>
+                                        <option value="1">광고주</option>
+                                        <option value="2">대행사</option>
+                                        <option value="3">렙사</option>
+                                        <option value="5">DMP 데이터 제공사</option>
+                                        <option value="6">SaaS 파트너</option>
+                                    </select>
+                                    <div class="btn-group btn-group__view-column ml-3">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            플랫폼 선택
+                                        </button>
+                                        <div class="dropdown-menu" id="dropdowns"
+                                             style="width: 106px !important; min-width: 106px !important;">
+                                            <div id="platform_choice_list">
+                                                <div class="theme-control theme-checkbox ml-2">
+                                                    <input type="checkbox" id="android" class="theme-control__input"
+                                                           name="chk_cols" value="1">
+                                                    <label class="theme-control__label" for="android">
+                                                        Android
+                                                    </label>
+                                                </div>
+                                                <div class="theme-control theme-checkbox ml-2">
+                                                    <input type="checkbox" id="ios" class="theme-control__input"
+                                                           name="chk_cols" value="2">
+                                                    <label class="theme-control__label" for="ios">
+                                                        iOS
+                                                    </label>
+                                                </div>
+                                                <div class="theme-control theme-checkbox ml-2">
+                                                    <input type="checkbox" id="web" class="theme-control__input"
+                                                           name="chk_cols" value="4">
+                                                    <label class="theme-control__label" for="web">
+                                                        Web
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="list-column-submit" style="text-align: center">
+                                                <button type="button" class="btn btn-outline-primary"
+                                                        onclick="search_platform()">
+                                                    적용하기
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="controller__item ml-3">
+                                    <div class="search-bar">
+                                        <label class="search-bar__label sr-only" for="keyword">검색하기</label>
+                                        <input type="search" class="search-bar__form" id="keyword"
+                                               placeholder="회사명/사업자등록번호 검색(엔터키 실행)" style="width: 300px;">
+                                    </div>
+                                </div>
+                                <div class="controller__item ml-3">
+                                <span id="" class="sep-lt" style="display: block;">
+                                    <button class="btn btn-outline-secondary" onclick="add_account()"
+                                            id="open_ad_account_link_modal">
+                                        광고 계정 연결
+                                    </button>
+                                </span>
+                                </div>
+                                <div class="controller__item ml-3">
+                                <span class="sep-lt" style="display: block;">
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="ico ic-plus"></i>
+                                        회사 등록
+                                    </button>
+                                </span>
+                                </div>
+                                <div class="controller__item ml-3">
+                                    <div class="font-weight-bold" id="count_display">Showing 1 to 50 of 2315 entries
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive theme-table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr class="table--ordered">
+                                    <th scope="col">회사명</th>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">사업자 등록번호</th>
+                                    <th scope="col">업종</th>
+                                    <th scope="col">카테고리</th>
+                                    <th scope="col">상세 카테고리</th>
+                                    <th scope="col">플랫폼 구분</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">수정일</th>
+                                </tr>
+                                </thead>
+                                <tbody id="company_contents_list">
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <input type="hidden" value="883">
+                                            잼팟(주)
+                                        </a>
+                                    </td>
+                                    <td>광고주</td>
+                                    <td>1138692644</td>
+                                    <td>게임</td>
+                                    <td>게임</td>
+                                    <td>게임정보</td>
+                                    <td>Android</td>
+                                    <td>2020-01-07</td>
+                                    <td>2020-12-21</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <input type="hidden" value="2550">
+                                            평택시청
+                                        </a>
+                                    </td>
+                                    <td>광고주</td>
+                                    <td>g000000012</td>
+                                    <td>정부 단체</td>
+                                    <td>복지/행정/단체</td>
+                                    <td>공공기관/협회</td>
+                                    <td>Web</td>
+                                    <td>2020-12-21</td>
+                                    <td>2020-12-21</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <input type="hidden" value="2549">
+                                            여성가족부
+                                        </a>
+                                    </td>
+                                    <td>광고주</td>
+                                    <td>g000000011</td>
+                                    <td>정부 단체</td>
+                                    <td>복지/행정/단체</td>
+                                    <td>공공기관/협회</td>
+                                    <td>Web</td>
+                                    <td>2020-12-21</td>
+                                    <td>2020-12-21</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#" onclick="modify_company(this)">
+                                            <input type="hidden" value="2548">
+                                            지란지교시큐리티
+                                        </a>
+                                    </td>
+                                    <td>광고주</td>
+                                    <td>1078831670</td>
+                                    <td>소프트웨어 개발 및 공급업</td>
+                                    <td>정보/통신</td>
+                                    <td>소프트웨어</td>
+                                    <td>Web</td>
+                                    <td>2020-12-21</td>
+                                    <td>2020-12-21</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+                <div class="card-body">
+                    <nav class="d-flex justify-content-center">
+                        <ul class="pagination mb-0" id="pagination">
+                            <li class="page-item" id="previous">
+                                <a class="page-link" href="#">Previous</a>
+                            </li>
+                            <li class="page-item" id="page_9">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+
+                            <li class="page-item" id="page_10">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+
+                            <li class="page-item" id="next">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
