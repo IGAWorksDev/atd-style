@@ -26,6 +26,7 @@
 }
 
 // 모달 컨텐츠 컨테이너
+.modal-content,
 .modal-container {
   display: flex;
   flex-direction: column;
@@ -38,6 +39,7 @@
   overflow: hidden;
 
   .btn-close {
+    float: right;
     flex: 0 0 auto; // 타이틀 또는 내용의 길이에 상관없이 모양을 유지함.
     margin-left: auto;
     @extend .btn-circle;

@@ -88,7 +88,7 @@
 .datagrid-header{
   .datagrid-cell {
     border-bottom-width: $datagrid-border-width;
-    background-color: $datagrid-alt-bg;
+    background-color: $datagrid-bg-alt;
   }
 }
 
@@ -188,7 +188,7 @@
 .datagrid-striped .datagrid-body .datagrid-row {
   &:nth-child(even) {
     .datagrid-cell {
-      background-color: $datagrid-alt-bg;
+      background-color: $datagrid-bg-alt;
     }
   }
 }
