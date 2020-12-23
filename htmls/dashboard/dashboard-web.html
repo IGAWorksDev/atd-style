@@ -122,10 +122,10 @@
 
         <!-- container -->
         <div class="container">
-          <!-- mainheader -->
-          <header class="mainheader justify-content-between">
-            <div class="d-flex align-items-center mr-auto my-auto">
-              <h2 class="font-weight-bold m-0 border-right pr-2 mr-1">
+					<!-- mainheader -->
+					<header class="mainheader justify-content-between border-bottom">
+						<div class="d-flex align-items-center mr-auto my-auto">
+							<h2 class="font-weight-bold m-0 border-right pr-2 mr-1">
                 대시보드
               </h2>
               <!-- dropdown -->
@@ -215,15 +215,15 @@
               <!-- /dropdown -->
             </div>
           </header>
-          <!-- /mainbody -->
+          <!-- /mainheader -->
 
           <!-- mainbody -->
-          <div class="mainbody pt-4 border-top">
+          <div class="mainbody">
 
             <!-- section-channel-recom-audience -->
-            <section class="section-channel-recom-audience mb-5">
-              <!-- header -->
-              <header class="d-flex align-items-center justify-content-between mb-1">
+            <section class="section-channel-recom-audience pt-2">
+							<!-- header -->
+							<header class="d-flex align-items-center justify-content-between h-fixed-7">
                 <div class="flex-start d-flex align-items-center">
                   <h4 class="font-size-lg font-weight-bold mb-0">
                     채널 별 추천 오디언스
@@ -620,9 +620,9 @@
             <!-- /section-channel-recom-audience -->
 
             <!-- section-channel-performance -->
-            <section class="section-channel-performance my-5">
-              <!-- header -->
-              <header class="d-flex align-items-center justify-content-between mb-1">
+            <section class="section-channel-performance pt-2">
+							<!-- header -->
+							<header class="d-flex align-items-center justify-content-between h-fixed-7">
                 <div class="flex-left d-flex align-items-center">
                   <h4 class="font-size-lg font-weight-bold mb-0">
                     업종 광고 성과 지표
@@ -821,19 +821,24 @@
             </section>
             <!-- /section-channel-performance -->
 
-            <div class="border-top my-3 pt-2">
-              <div class="form-inline">
-                <div class="form-group" >
-                  <label for="form-period-setting" class="d-none">기간 선택</label>
-                  <input type="text" class="form-control" id="form-period-setting" placeholder="기간 선택" value="2020.12.18 ~ 2020.12.25" style="width: 20rem;">
-                </div>
-              </div>
-            </div>
+						<div class="border-bottom mt-6 py-1">
+							<div class="form-inline">
+								<div class="form-group py-0">
+									<label for="form-period-setting" class="h3 font-weight-bold mr-2">
+										기간 선택
+										<span class="text-muted ml-1" data-toggle="tooltip" data-placement="bottom" title="기간 선택 시 아래 모든 영역이 영향을 받습니다.">
+											<i class="ico ic-info-circle"></i>
+										</span>
+									</label>
+									<input type="date" class="form-control" id="form-period-setting" placeholder="기간 선택" value="2020.12.18 ~ 2020.12.25" style="width: 24rem;" >
+								</div>
+							</div>
+						</div>
 
             <!-- section-channel-report -->
-            <section class="section-channel-report my-3">
-              <!-- header -->
-              <header class="d-flex align-items-center justify-content-between mb-2">
+            <section class="section-channel-report pt-2">
+							<!-- header -->
+							<header class="d-flex align-items-center justify-content-between h-fixed-7">
                 <h4 class="font-weight-bold font-size-lg mb-0">
                   채널 별 요약정보 및 리포트
                 </h4>
@@ -1232,9 +1237,9 @@
             <!-- /section-channel-report -->
 
             <!-- section-campaign-report -->
-            <section class="section-campaign-report my-5">
-              <!-- header -->
-              <header class="d-flex align-items-center justify-content-between mb-2">
+            <section class="section-campaign-report pt-2">
+							<!-- header -->
+							<header class="d-flex align-items-center justify-content-between h-fixed-7">
                 <h4 class="font-size-lg font-weight-bold mb-0">
                   캠페인 리포트
                 </h4>
@@ -1758,9 +1763,9 @@
             <!-- /section-campaign-report -->
 
             <!-- section-service-analytics -->
-            <section class="section-service-analytics mb-5 border-top pt-5">
+            <section class="section-service-analytics pt-2 border-top mt-3">
               <!-- header -->
-              <header class="d-flex align-items-center justify-content-between mb-1">
+              <header class="d-flex align-items-center justify-content-between h-fixed-7">
                 <div class="flex-left d-flex align-items-center">
                   <h4 class="font-size-lg font-weight-bold mb-0">
                     서비스 분석
@@ -1987,9 +1992,9 @@
             <!-- /section-service-analytics -->
 
             <!-- section-service-trend -->
-            <section class="section-service-trend my-3">
-              <!-- header -->
-              <header class="d-flex align-items-center justify-content-between mb-1">
+            <section class="section-service-trend pt-2">
+							<!-- header -->
+							<header class="d-flex align-items-center justify-content-between h-fixed-7">
                 <div class="flex-start">
                   <h4 class="font-size-lg font-weight-bold mb-0">
                     서비스 추세 분석
@@ -2202,13 +2207,13 @@
             </section>
             <!-- /section-service-trend -->
 
-            <div class="my-5">
-              <div class="row">
+						<div class="border-top mt-3">
+							<div class="row">
                 <!-- col -->
                 <div class="col-7">
                   <!-- section-manage-event -->
-                  <section class="section-manage-event" id="manage-event">
-                    <header class="d-flex align-items-center justify-content-between mb-2">
+                  <section class="section-manage-event pt-2">
+                    <header class="d-flex align-items-center justify-content-between h-fixed-7">
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         이벤트 관리
                       </h4>
@@ -2435,9 +2440,9 @@
                 <!-- col -->
                 <div class="col-5">
                   <!-- section-manage-file -->
-                  <section class="section-manage-file" id="manage-file">
+                  <section class="section-manage-file pt-2">
                     <!-- header -->
-                    <header class="d-flex align-items-center justify-content-between mb-2">
+                    <header class="d-flex align-items-center justify-content-between h-fixed-7">
                       <h4 class="font-size-lg font-weight-bold mb-0">
                         자료 관리
                       </h4>
