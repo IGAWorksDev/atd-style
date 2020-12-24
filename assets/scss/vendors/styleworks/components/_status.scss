@@ -1,0 +1,49 @@
+
+
+// Hover
+//
+@mixin is-component-hover($hover-bg){
+  background-color: $hover-bg;
+}
+
+
+
+// Active
+//
+
+@mixin is-component-active($active-color, $active-bg){
+  color: $active-color;
+  background-color: $active-bg !important;
+}
+
+// with icon
+@mixin is-component-icon-active($active-color, $active-padding-x, $active-bg){
+  color: $active-color;
+  padding-right: $active-padding-x;
+  background: $active-bg;
+  text-decoration: none;
+  cursor: default;
+}
+
+
+// Selected
+//
+
+// with icon
+@mixin is-component-icon-selected($selected-color, $selected-padding-x, $selected-bg){
+  color: $selected-color;
+  font-weight: $font-weight-bold;
+  padding-right: $selected-padding-x;
+  background: $selected-bg;
+  text-decoration: none;
+  cursor: default;
+}
+
+
+// Muted
+//
+// secondary와 같으며, 차분한 상태
+@mixin is-component-muted($muted-color, $muted-bg){
+  color: $muted-color;
+  background-color: $muted-bg;
+}

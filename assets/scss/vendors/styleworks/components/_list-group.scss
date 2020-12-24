@@ -15,13 +15,19 @@
   background-color: $list-group-bg;
 
   &:hover {
-    color: $list-group-active-color;
+    @include is-component-hover($list-group-hover-bg);
+    color: $list-group-hover-color;
+  }
+
+  &.is-selected {
+    @include is-component-icon-selected($list-group-selected-color, $list-group-selected-padding-x, $list-group-selected-bg);
   }
 
   &.is-active {
-    color: $list-group-active-color;
-    background-color: $list-group-active-bg;
+    @include is-component-icon-active($list-group-active-color, $list-group-active-padding-x, $list-group-active-bg);
   }
+
+
 
   & + & {
     border-top-width: 0;

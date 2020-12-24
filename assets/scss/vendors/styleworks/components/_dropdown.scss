@@ -82,6 +82,10 @@
     background: $dropdown-item-active-bg;
   }
 
+  &.is-selected {
+    @include is-component-icon-selected($dropdown-item-selected-color, $dropdown-item-selected-padding-x, $dropdown-item-selected-bg);
+  }
+
   &.is-disabled,
   &:disabled {
     color: $dropdown-item-disabled-color;

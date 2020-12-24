@@ -88,7 +88,7 @@
 .datagrid-header{
   .datagrid-cell {
     border-bottom-width: $datagrid-border-width;
-    background-color: $datagrid-bg-alt;
+    background-color: $datagrid-bg;
   }
 }
 
@@ -186,36 +186,33 @@
 // Stripe
 //
 .datagrid-striped .datagrid-body .datagrid-row {
-  &:nth-child(even) {
+  &:nth-child(odd) {
     .datagrid-cell {
       background-color: $datagrid-bg-alt;
     }
   }
 }
 
-// Row Selected
+// Active
 //
 .datagrid-body .datagrid-row[aria-selected="true"] {
   .datagrid-cell {
-    background-color: $datagrid-active-bg;
-    color: $datagrid-active-color;
+    @include is-component-active($datagrid-active-color, $datagrid-active-bg);
   }
 }
-
 
 // Hover
 //
 .datagrid-hover > .datagrid-body .datagrid-row:hover,
 .datagrid-hover > .datagrid-row:hover {
   .datagrid-cell {
-    background-color: $datagrid-hover-bg;
+    @include is-component-hover($datagrid-hover-bg);
   }
 }
 
+// Muted
 .datagrid-body .datagrid-row.is-muted {
   .datagrid-cell {
-    background-color: $datagrid-muted-bg;
-    color: $datagrid-muted-color;
-    font-weight: $font-weight-bold;
+    @include is-component-muted($datagrid-muted-color !important, $datagrid-muted-bg !important);
   }
 }

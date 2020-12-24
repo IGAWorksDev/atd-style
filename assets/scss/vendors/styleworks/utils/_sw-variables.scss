@@ -64,9 +64,6 @@ $light:         $white !default;
 $gray:          $gray-500 !default;
 $dark:          $gray-900 !default;
 
-$base:        $gray-800;
-$disabled:    $gray-400;
-
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -167,10 +164,7 @@ $headings-margin-bottom: 1rem;
 
 $small-font-size: 80%;
 
-// secondary보다 약하게 사용할 경우
-$text-muted: $gray-600 !default;
 
-$text-disabled: $disabled !default;
 
 // Body
 //
@@ -273,16 +267,53 @@ $border-radius:               0.4rem !default;
 $border-radius-lg:            0.4rem !default;
 
 
-$component-active-color:      $primary !default;
-$component-active-bg:         lighten($primary, 40%) !default;
 
-$component-hover-color:       darken($gray-800, 5%) !default;
-$component-hover-bg:          lighten($primary, 42%) !default;
+$text-muted: $gray-600 !default;
 
-$component-blank-bg: $gray-100;
 
+// Components Status color
+//
+
+$base:        $gray-800;
+$disabled:    $gray-400;
+
+$component-padding-y: $spacer;
+$component-padding-x: $spacer * 2;
 $component-bg: $white;
 $component-bg-alt: $gray-100;
+
+// selected
+$component-selected-color:      $gray-800 !default;
+$component-selected-bg:         $component-bg-alt !default;
+$component-selected-icon-color: $gray-800;
+$component-selected-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-selected-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>");
+$component-selected-icon-size:  $font-size-base;
+$component-selected-icon-bg:    $component-selected-bg escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size;
+$component-selected-padding-x:  ($component-padding-x + $component-selected-icon-size + ($component-padding-x * 0.5));
+
+// Active
+$component-active-color:      $primary !default;
+$component-active-bg:         lighten($primary, 40%) !default;
+$component-active-icon-color: $primary;
+$component-active-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-active-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>");
+$component-active-icon-size:  $font-size-base;
+$component-active-icon-bg:    escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size;
+$component-active-padding-x:  ($component-padding-x + $component-active-icon-size + ($component-padding-x * 0.5));
+
+
+// Hover
+$component-hover-color:       $primary !default;
+$component-hover-bg:          lighten($primary, 40%)  !default;
+
+// Disable
+$component-disabled: $gray-400 !default;
+
+// Blank
+$component-blank-bg: $component-bg-alt;
+
+
+
+
 
 
 // Transitions
@@ -661,15 +692,9 @@ $switch-disabled-color: $btn-disabled-color;
 $switch-disabled-opacity: $btn-disabled-opacity;
 
 
-
-
-
-
 // Tab
 $tab-nav-padding-y: 0.6rem;
 $tab-nav-padding-x: 1.6rem;
-
-
 
 
 // List group
@@ -678,8 +703,17 @@ $list-group-border-color: $border-color;
 $list-group-bg: transparent;
 $list-group-item-padding-y : $spacer;
 $list-group-item-padding-x : ($spacer * 2);
+
+$list-group-hover-color: $component-hover-color;
+$list-group-hover-bg: $component-hover-bg;
+
+$list-group-selected-color: $component-selected-color;
+$list-group-selected-bg : $component-selected-icon-bg;
+$list-group-selected-padding-x: $component-selected-padding-x;
+
 $list-group-active-color: $component-active-color;
-$list-group-active-bg : $component-active-bg;
+$list-group-active-bg : $component-active-bg $component-active-icon-bg;
+$list-group-active-padding-x: $component-active-padding-x;
 
 
 // Dropdown menu
@@ -700,7 +734,11 @@ $dropdown-item-hover-bg: $component-hover-bg;
 $dropdown-item-active-color: $component-active-color;
 $dropdown-item-active-bg: $component-active-bg;
 
-$dropdown-item-disabled-color: $gray-400;
+$dropdown-item-selected-color:      $component-selected-color;
+$dropdown-item-selected-padding-x:  $component-selected-padding-x;
+$dropdown-item-selected-bg:         $component-selected-icon-bg;
+
+$dropdown-item-disabled-color:      $gray-400;
 
 
 
@@ -787,6 +825,7 @@ $table-cell-padding-x: $spacer * 2;
 $datagrid-color: $body-color;
 $datagrid-bg: $component-bg;
 $datagrid-bg-alt: $component-bg-alt; // alernative
+
 $datagrid-hover-bg: $component-hover-bg !default;
 
 $datagrid-active-color: $component-active-color !default;

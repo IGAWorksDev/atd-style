@@ -1635,10 +1635,15 @@ small {
   color: #343a40;
   background-color: transparent; }
   .list-group-item:hover {
-    color: #1e90ff; }
-  .list-group-item.is-active {
     color: #1e90ff;
     background-color: #eaf5ff; }
+  .list-group-item.is-active {
+    color: #1e90ff;
+    font-weight: 700;
+    padding-right: 3.8rem;
+    background: #eaf5ff url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%231e90ff' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem;
+    text-decoration: none;
+    cursor: default; }
   .list-group-item + .list-group-item {
     border-top-width: 0; }
 
@@ -1725,8 +1730,8 @@ small {
   border: 0;
   outline: 0; }
   .dropdown-item:hover, .dropdown-item:focus {
-    color: #292d32;
-    background-color: #f4faff; }
+    color: #1e90ff;
+    background-color: #eaf5ff; }
   .dropdown-item:active, .dropdown-item.is-active {
     color: #1e90ff;
     background: #eaf5ff; }
@@ -2927,7 +2932,7 @@ textarea.form-control {
 
 .datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell,
 .datagrid-hover > .datagrid-row:hover .datagrid-cell {
-  background-color: #f4faff; }
+  background-color: #eaf5ff; }
 
 .datagrid-body .datagrid-row.is-muted .datagrid-cell {
   background-color: #f8f9fa;
@@ -2969,7 +2974,7 @@ caption {
   background-color: #eaf5ff; }
 
 .table-hover tbody tr:hover {
-  background-color: #f4faff; }
+  background-color: #eaf5ff; }
 
 .toast {
   visibility: hidden;

@@ -45,24 +45,3 @@
   }
 }
 
-
-// 아아템 간편 관리기
-// 아이템 타이틀에 호버했을 경우 편집 버튼 노출
-.item-easy-manageer {
-  @extend .d-flex;
-  @extend .justify-content-between;
-  @extend .align-items-center;
-
-  .item-title {
-
-  }
-  .item-tool {
-    display: none;
-  }
-
-  &:hover {
-    .item-tool {
-      display: block;
-    }
-  }
-}
