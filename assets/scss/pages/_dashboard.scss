@@ -27,7 +27,7 @@
 
 // Project - Dropdown
 //
-.dropdown-menu__project {
+.dropdown-project-content {
   @extend .d-flex;
   @extend .align-items-stretch;
 
@@ -43,11 +43,23 @@
     @extend .align-content-start;
   }
 }
-.dropdown-project-list {
-  max-height: 240px;
+
+// 선택된 프로젝트 정보
+.project-info {
+  .project-info__header {}
+  .project-info__detail {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+  }
+}
+
+// 등록한 프로젝트 리스트
+.project-list {
+  max-height: 254px;
   overflow-y: auto;
   .dropdown-item {
     @extend .py-1;
+    @extend .text-truncate;
     &.is-active {
       @extend .font-weight-bold;
     }

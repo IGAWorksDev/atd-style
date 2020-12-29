@@ -135,17 +135,18 @@
                   <span style="vertical-align: middle;">카카오톡 KakaoTalk</span>
                 </button>
                 <!-- dropdown-menu -->
-                <div class="dropdown-menu dropdown-menu-project p-0" aria-labelledby="dropdown-project">
-                  <div class="dropdown-menu__project">
+                <div class="dropdown-menu dropdown-project-content p-0" aria-labelledby="dropdown-project">
+                  <div class="d-flex align-items-stretch">
                     <!-- col-left -->
                     <div class="col-left bg-light">
-                      <div class="project py-3 px-2">
-                        <header class="project__header text-center mb-3">
+											<!-- project-info -->
+                      <div class="project-info py-3 px-2">
+                        <header class="project-info__header text-center mb-3">
                           <img
                             src="https://is2-ssl.mzstatic.com/image/thumb/Purple124/v4/5d/71/33/5d713328-a3d9-5901-fea3-97ccf226b806/AppIcon-85-220-4-2x.png/230x0w.png"
                             alt="카카오톡 KakaoTalk" style="width: 80px;"/>
                           <h5 class="font-size-lg font-weight-bold my-2 text-truncate">
-                            카카오톡 KakaoTalk 카카오톡 KakaoTalk
+                            카카오톡 KakaoTalk
                           </h5>
                           <div class="btn-group btn-group-sm">
                             <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#modal-project-editor">
@@ -156,7 +157,7 @@
                             </button>
                           </div>
                         </header>
-                        <div class="project__detail row no-gutters px-2 font-size-sm">
+                        <div class="project-info__detail row no-gutters px-2">
                           <div class="col-5">
                             광고주
                           </div>
@@ -183,6 +184,7 @@
                           </div>
                         </div>
                       </div>
+											<!-- /project-info -->
                     </div>
                     <!-- /col-left -->
                     <!-- col-right -->
@@ -191,18 +193,20 @@
                         <label for="searchbar-project" class="d-none">Searchbar</label>
                         <input type="search" class="form-control border-0" id="searchbar-project" placeholder="프로젝트명">
                       </div>
-                      <div class="list-group list-group-noedge">
-                        <a class="list-group-item is-selected" href="#">
+											<!-- project-list -->
+                      <div class="project-list">
+                        <a class="dropdown-item is-selected" href="#">
                           카카오톡
                         </a>
-                        <a class="list-group-item" href="#">
+                        <a class="dropdown-item" href="#">
                           페이스북
                         </a>
-                        <a class="list-group-item text-truncate" href="#">
+                        <a class="dropdown-item" href="#">
                           라인웍스라인웍스라인웍스라인웍스라인웍스라인웍스라인웍스라
                         </a>
                       </div>
-                      <a class="dropdown-item text-primary border-top font-weight-bold py-2 mt-auto" href="#" data-toggle="modal" data-target="#modal-project-editor">
+											<!-- /project-list -->
+                      <a class="dropdown-item text-primary border-top font-weight-bold mt-auto" href="#" data-toggle="modal" data-target="#modal-project-editor">
                         <i class="ico ic-plus mr-1"></i>
                         프로젝트 생성
                       </a>
