@@ -70,17 +70,17 @@
   border: 0;
   outline: 0;
 
+  &:active,
+  &.is-active {
+    @include is-component-icon-active($dropdown-item-active-color, $dropdown-item-active-padding-x, $dropdown-item-active-bg);
+  }
+
   &:hover,
   &:focus {
     color: $dropdown-item-hover-color;
     background-color: $dropdown-item-hover-bg;
   }
 
-  &:active,
-  &.is-active {
-    color: $dropdown-item-active-color;
-    background: $dropdown-item-active-bg;
-  }
 
   &.is-selected {
     @include is-component-icon-selected($dropdown-item-selected-color, $dropdown-item-selected-padding-x, $dropdown-item-selected-bg);

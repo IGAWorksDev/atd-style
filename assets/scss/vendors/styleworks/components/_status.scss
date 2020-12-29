@@ -1,40 +1,45 @@
 
 
-// Hover
+// 요소(element)의 상태에 따른 스타일 믹스인
+
+
+// Active (현재형)
 //
-@mixin is-component-hover($hover-bg){
-  background-color: $hover-bg;
-}
-
-
-
-// Active
-//
-
+// 현재 action에 의해 활성된 컴포넌트 아이템인 경우 사용
 @mixin is-component-active($active-color, $active-bg){
   color: $active-color;
-  background-color: $active-bg !important;
+  background-color: $active-bg;
 }
 
-// with icon
+// with Check icon
 @mixin is-component-icon-active($active-color, $active-padding-x, $active-bg){
   color: $active-color;
   padding-right: $active-padding-x;
   background: $active-bg;
   text-decoration: none;
-  cursor: default;
 }
 
 
-// Selected
+// Hover
 //
+// 컴포넌트 아이템에 mouse hover 효과를 사용할 경우
+// is-active보다 우위에 있으며, 배경색을 변화시킴
+@mixin is-component-hover($hover-color, $hover-bg){
+  color: $hover-color;
+  background-color: $hover-bg;
+}
 
-// with icon
+
+
+// Selected (과거형)
+//
+// 선택되어진 요소인 경우
+
+// with Check icon
 @mixin is-component-icon-selected($selected-color, $selected-padding-x, $selected-bg){
-  color: $selected-color !important;
-  font-weight: $font-weight-bold;
+  color: $selected-color;
   padding-right: $selected-padding-x;
-  background: $selected-bg !important;
+  background: $selected-bg;
   text-decoration: none;
   cursor: default;
 }
@@ -42,12 +47,16 @@
 
 // Muted
 //
-// secondary와 같으며, 차분한 상태
+// secondary와 같으며, 차분하게 보조 정보 요소일 때 사용.
 @mixin is-component-muted($muted-color, $muted-bg){
-  color: $muted-color;
-  background-color: $muted-bg;
+  color: $muted-color !important;
+  background-color: $muted-bg !important;
 }
 
+// Disabled
+//
+// 가장 우위에 있음.
+// 비활성 요소 효과로, 선택/클릭/입력 등등을 하거나 포커스를 받을 수 없는 요소일 때 사용.
 @mixin is-component-disabled(){
   color: $component-disabled !important;
   background-color: transparent !important;

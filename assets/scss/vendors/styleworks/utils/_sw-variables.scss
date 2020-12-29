@@ -100,6 +100,10 @@ $theme-charts: map-merge(
 );
 
 
+$base:        $gray-700;
+$disabled:    $gray-400;
+
+
 // Typography
 //
 
@@ -274,41 +278,38 @@ $text-muted: $gray-600 !default;
 // Components Status color
 //
 
-$base:        $gray-800;
-$disabled:    $gray-400;
-
 $component-padding-y: $spacer;
 $component-padding-x: $spacer * 2;
-$component-bg: $white;
-$component-bg-alt: $gray-100;
-
-// Hover
-$component-hover-color:       $primary !default;
-$component-hover-bg:          lighten($primary, 40%)  !default;
+$component-bg: $white !default;
+$component-bg-alt: $gray-100 !default;
 
 // Active
-$component-active-color:      $primary !default;
+$component-active-color:      $base !default;
 $component-active-bg:         lighten($primary, 40%) !default;
-$component-active-icon-color: $primary;
-$component-active-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-active-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>");
-$component-active-icon-size:  $font-size-base;
-$component-active-icon-bg:    escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size;
-$component-active-padding-x:  ($component-padding-x + $component-active-icon-size + ($component-padding-x * 0.5));
+$component-active-icon-color: $primary !default;
+$component-active-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-active-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>") !default;
+$component-active-icon-size:  $font-size-base !default;
+$component-active-icon-bg:    escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size !default;
+$component-active-padding-x:  ($component-padding-x + $component-active-icon-size + ($component-padding-x * 0.5)) !default;
+
+// Hover
+$component-hover-color:       $dark !default;
+$component-hover-bg:          lighten($primary, 38%)  !default;
 
 // selected
-$component-selected-color:      $gray-800 !default;
+$component-selected-color:      $base !default;
 $component-selected-bg:         $component-bg-alt !default;
-$component-selected-icon-color: $gray-800;
-$component-selected-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-selected-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>");
-$component-selected-icon-size:  $font-size-base;
-$component-selected-icon-bg:    $component-selected-bg escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size;
-$component-selected-padding-x:  ($component-padding-x + $component-selected-icon-size + ($component-padding-x * 0.5));
+$component-selected-icon-color: $gray-800 !default;
+$component-selected-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-selected-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>") !default;
+$component-selected-icon-size:  $font-size-base !default;
+$component-selected-icon-bg:    escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size !default;
+$component-selected-padding-x:  ($component-padding-x + $component-selected-icon-size + ($component-padding-x * 0.5)) !default;
 
 // Disable
 $component-disabled: $gray-400 !default;
 
 // Blank
-$component-blank-bg: $component-bg-alt;
+$component-blank-bg: $component-bg-alt default;
 
 
 
@@ -724,15 +725,16 @@ $dropdown-border-width: $border-width;
 $dropdown-border-color: $border-color;
 $dropdown-border-radius: $border-radius;
 
-$dropdown-item-padding-y: $spacer / 2;
+$dropdown-item-padding-y: $spacer;
 $dropdown-item-padding-x: $spacer * 2;
+$dropdown-item-color: $base;
 
-$dropdown-item-color: $gray-800;
 $dropdown-item-hover-color: $component-hover-color;
 $dropdown-item-hover-bg: $component-hover-bg;
 
-$dropdown-item-active-color: $component-active-color;
-$dropdown-item-active-bg: $component-active-bg;
+$dropdown-item-active-color:        $component-active-color;
+$dropdown-item-active-padding-x:    $component-active-padding-x;
+$dropdown-item-active-bg:           $component-active-bg $component-active-icon-bg;
 
 $dropdown-item-selected-color:      $component-selected-color;
 $dropdown-item-selected-padding-x:  $component-selected-padding-x;
@@ -754,7 +756,7 @@ $page-icon-spacer: ($line-height-base - $font-size-base) / 2 ;
 
 
 // Card
-$card-border-width: 1px;
+$card-border-width: $border-width;
 $card-border-color: $border-color;
 $card-border-radius: $border-radius !default;
 $card-padding-y: $spacer;
@@ -766,7 +768,7 @@ $card-header-bg: $component-bg-alt;
 // Alerts
 $alert-padding-y: $spacer;
 $alert-padding-x: $spacer * 2;
-$alert-border-width: 1px;
+$alert-border-width: $border-width;
 $alert-icon-size: $line-height-base;
 $alert-inner-spacer: 0.6rem;
 
@@ -822,25 +824,26 @@ $table-cell-padding-x: $spacer * 2;
 
 // Datagrid
 //
-$datagrid-color: $body-color;
-$datagrid-bg: $component-bg;
-$datagrid-bg-alt: $component-bg-alt; // alernative
-
-$datagrid-hover-bg: $component-hover-bg !default;
+$datagrid-color: $body-color !default;
+$datagrid-bg: $component-bg !default;
+$datagrid-bg-alt: $component-bg-alt !default;
 
 $datagrid-active-color: $component-active-color !default;
 $datagrid-active-bg: $component-active-bg !default;
 
-$datagrid-muted-color: $text-muted; // total 합산 정보를 노출 시 사용.
-$datagrid-muted-bg: $component-bg-alt;
+$datagrid-hover-color: $base !default;
+$datagrid-hover-bg: $component-hover-bg !default;
 
-$datagrid-border-width: $border-width;
-$datagrid-border-color: $border-color;
-$datagrid-padding-y: $spacer;
-$datagrid-padding-x: $spacer * 2;
+$datagrid-muted-color: $text-muted !default; // total 합산 정보를 노출 시 사용.
+$datagrid-muted-bg: $component-bg-alt !default;
 
-$datagrid-rowgroup-sticky-z-index: 501;
-$datagrid-row-sticky-z-index: 1;
+$datagrid-border-width: $border-width !default;
+$datagrid-border-color: $border-color !default;
+$datagrid-padding-y: $spacer !default;
+$datagrid-padding-x: $spacer * 2 !default;
+
+$datagrid-rowgroup-sticky-z-index: 501 !default;
+$datagrid-row-sticky-z-index: 1 !default;
 
 
 

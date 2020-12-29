@@ -6,23 +6,23 @@
   @each $size, $length in $spacers {
     .#{$abbreviated}t-#{$size},
     .#{$abbreviated}y-#{$size}{
-      #{$property}-top: $length !important;
+      #{$property}-top: $length;
     }
     .#{$abbreviated}r-#{$size},
     .#{$abbreviated}x-#{$size}{
-      #{$property}-right: $length !important;
+      #{$property}-right: $length;
     }
     .#{$abbreviated}b-#{$size},
     .#{$abbreviated}y-#{$size}{
-      #{$property}-bottom: $length !important;
+      #{$property}-bottom: $length;
     }
     .#{$abbreviated}l-#{$size},
     .#{$abbreviated}x-#{$size}{
-      #{$property}-left: $length !important;
+      #{$property}-left: $length;
     }
     .#{$abbreviated}-#{$size},
     .#{$abbreviated}-#{$size}{
-      #{$property}: $length !important;
+      #{$property}: $length;
     }
   }
 }
@@ -31,22 +31,22 @@
 // margin 유틸리티
 //
 .m-auto {
-  margin: auto !important;
+  margin: auto;
 }
 .mt-auto,
 .my-auto {
-  margin-top: auto !important;
+  margin-top: auto;
 }
 .mr-auto,
 .mx-auto {
-  margin-right: auto !important;
+  margin-right: auto;
 }
 .mb-auto,
 .my-auto {
-  margin-bottom: auto !important;
+  margin-bottom: auto;
 }
 .ml-auto,
 .mx-auto {
-  margin-left: auto !important;
+  margin-left: auto;
 }
 
