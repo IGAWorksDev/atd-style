@@ -2,10 +2,16 @@
 
 // 요소(element)의 상태에 따른 스타일 믹스인
 
+// 컨텐츠가 없는 요소인 경우 사용
+@mixin is-component-blank($blank-bg){
+  background-color: $blank-bg;
+}
+
+
 
 // Active (현재형)
 //
-// 현재 action에 의해 활성된 컴포넌트 아이템인 경우 사용
+// 현재 action에 의해 활성된 요소인 경우 사용
 @mixin is-component-active($active-color, $active-bg){
   color: $active-color;
   background-color: $active-bg;
@@ -58,7 +64,7 @@
 // 가장 우위에 있음.
 // 비활성 요소 효과로, 선택/클릭/입력 등등을 하거나 포커스를 받을 수 없는 요소일 때 사용.
 @mixin is-component-disabled(){
-  color: $component-disabled !important;
+  color: $component-disabled-color !important;
   background-color: transparent !important;
   cursor: default !important;
   pointer-events: none !important; // 요소가 마우스 이벤트의 대상이 될 수 있는지 여부 또는 시기를 정의할 수 있는 표시 속성

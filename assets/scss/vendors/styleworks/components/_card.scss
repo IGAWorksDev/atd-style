@@ -38,8 +38,12 @@
 // 비활성 상태가 아니라 내용이 없는 상태인 경우에만 사용함.
 // blankslate와 함께 사용하였음.
 .card.is-blank {
+  .card-header {
+    @include is-component-blank($card-blank-bg);
+  }
   .card-body {
-    background-color: $component-blank-bg;
+    @include is-component-blank($card-blank-bg);
+
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-center;
