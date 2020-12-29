@@ -1634,18 +1634,40 @@ small {
   border: 1px solid #dee2e6;
   color: #343a40;
   background-color: transparent; }
-  .list-group-item:hover {
-    color: #1e90ff;
-    background-color: #eaf5ff; }
-  .list-group-item.is-active {
-    color: #1e90ff;
-    font-weight: 700;
-    padding-right: 3.8rem;
-    background: #eaf5ff url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%231e90ff' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem;
-    text-decoration: none;
-    cursor: default; }
   .list-group-item + .list-group-item {
     border-top-width: 0; }
+
+a.list-group-item,
+button.list-group-item {
+  text-align: inherit;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer; }
+  a.list-group-item:hover,
+  button.list-group-item:hover {
+    background-color: #eaf5ff;
+    color: #1e90ff; }
+
+.list-group-item.is-active {
+  color: #1e90ff;
+  padding-right: 3.8rem;
+  background: #eaf5ff url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%231e90ff' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem;
+  text-decoration: none;
+  cursor: default; }
+
+.list-group-item.is-selected {
+  color: #343a40 !important;
+  font-weight: 700;
+  padding-right: 3.8rem;
+  background: #f8f9fa url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%23343a40' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem !important;
+  text-decoration: none;
+  cursor: default; }
+
+.list-group-item.is-disabled {
+  color: #ced4da !important;
+  background-color: transparent !important;
+  cursor: default !important;
+  pointer-events: none !important; }
 
 .list-group-noedge > .list-group-item {
   border-width: 0 0 1px; }
@@ -1735,11 +1757,18 @@ small {
   .dropdown-item:active, .dropdown-item.is-active {
     color: #1e90ff;
     background: #eaf5ff; }
+  .dropdown-item.is-selected {
+    color: #343a40 !important;
+    font-weight: 700;
+    padding-right: 3.8rem;
+    background: #f8f9fa url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%23343a40' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem !important;
+    text-decoration: none;
+    cursor: default; }
   .dropdown-item.is-disabled, .dropdown-item:disabled {
-    color: #ced4da;
-    pointer-events: none !important;
-    background-color: transparent;
-    opacity: 0.75; }
+    color: #ced4da !important;
+    background-color: transparent !important;
+    cursor: default !important;
+    pointer-events: none !important; }
 
 .dropdown-item-text {
   display: block;
@@ -2866,7 +2895,7 @@ textarea.form-control {
 
 .datagrid-header .datagrid-cell {
   border-bottom-width: 1px;
-  background-color: #f8f9fa; }
+  background-color: #fff; }
 
 .datagrid-body .datagrid-cell {
   border-top-width: 1px; }
@@ -2923,21 +2952,20 @@ textarea.form-control {
   border-left-width: 1px;
   border-left-color: #dee2e6; }
 
-.datagrid-striped .datagrid-body .datagrid-row:nth-child(even) .datagrid-cell {
+.datagrid-striped .datagrid-body .datagrid-row:nth-child(odd) .datagrid-cell {
   background-color: #f8f9fa; }
 
 .datagrid-body .datagrid-row[aria-selected="true"] .datagrid-cell {
-  background-color: #eaf5ff;
-  color: #1e90ff; }
+  color: #1e90ff;
+  background-color: #eaf5ff !important; }
 
 .datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell,
 .datagrid-hover > .datagrid-row:hover .datagrid-cell {
   background-color: #eaf5ff; }
 
 .datagrid-body .datagrid-row.is-muted .datagrid-cell {
-  background-color: #f8f9fa;
-  color: #6c757d;
-  font-weight: 700; }
+  color: #6c757d !important;
+  background-color: #f8f9fa !important; }
 
 .table {
   width: 100%;
@@ -3123,7 +3151,7 @@ caption {
   text-align: center;
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
-  padding: 0.8rem 1.6rem;
+  padding: 1.6rem 1.6rem;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;

@@ -88,10 +88,7 @@
 
   &.is-disabled,
   &:disabled {
-    color: $dropdown-item-disabled-color;
-    pointer-events: none !important;
-    background-color: transparent;
-    opacity: 0.75;
+    @include is-component-disabled();
   }
 }
 

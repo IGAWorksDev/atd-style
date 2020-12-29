@@ -282,14 +282,9 @@ $component-padding-x: $spacer * 2;
 $component-bg: $white;
 $component-bg-alt: $gray-100;
 
-// selected
-$component-selected-color:      $gray-800 !default;
-$component-selected-bg:         $component-bg-alt !default;
-$component-selected-icon-color: $gray-800;
-$component-selected-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-selected-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>");
-$component-selected-icon-size:  $font-size-base;
-$component-selected-icon-bg:    $component-selected-bg escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size;
-$component-selected-padding-x:  ($component-padding-x + $component-selected-icon-size + ($component-padding-x * 0.5));
+// Hover
+$component-hover-color:       $primary !default;
+$component-hover-bg:          lighten($primary, 40%)  !default;
 
 // Active
 $component-active-color:      $primary !default;
@@ -300,10 +295,14 @@ $component-active-icon-size:  $font-size-base;
 $component-active-icon-bg:    escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size;
 $component-active-padding-x:  ($component-padding-x + $component-active-icon-size + ($component-padding-x * 0.5));
 
-
-// Hover
-$component-hover-color:       $primary !default;
-$component-hover-bg:          lighten($primary, 40%)  !default;
+// selected
+$component-selected-color:      $gray-800 !default;
+$component-selected-bg:         $component-bg-alt !default;
+$component-selected-icon-color: $gray-800;
+$component-selected-icon:       url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-selected-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>");
+$component-selected-icon-size:  $font-size-base;
+$component-selected-icon-bg:    $component-selected-bg escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size;
+$component-selected-padding-x:  ($component-padding-x + $component-selected-icon-size + ($component-padding-x * 0.5));
 
 // Disable
 $component-disabled: $gray-400 !default;
@@ -707,13 +706,14 @@ $list-group-item-padding-x : ($spacer * 2);
 $list-group-hover-color: $component-hover-color;
 $list-group-hover-bg: $component-hover-bg;
 
+$list-group-active-color: $component-active-color;
+$list-group-active-bg : $component-active-bg $component-active-icon-bg;
+$list-group-active-padding-x: $component-active-padding-x;
+
 $list-group-selected-color: $component-selected-color;
 $list-group-selected-bg : $component-selected-icon-bg;
 $list-group-selected-padding-x: $component-selected-padding-x;
 
-$list-group-active-color: $component-active-color;
-$list-group-active-bg : $component-active-bg $component-active-icon-bg;
-$list-group-active-padding-x: $component-active-padding-x;
 
 
 // Dropdown menu
@@ -865,7 +865,7 @@ $toast-icon-size: $line-height-base; // $font-size-base의 줄높이
 
 // Blankslate
 //
-$blankslate-padding-y: $spacer;
+$blankslate-padding-y: $spacer * 2;
 $blankslate-padding-x: $spacer * 2;
 $blankslate-border-width: $border-width;
 $blankslate-border-color: $border-color;

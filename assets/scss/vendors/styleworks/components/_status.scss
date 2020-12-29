@@ -31,10 +31,10 @@
 
 // with icon
 @mixin is-component-icon-selected($selected-color, $selected-padding-x, $selected-bg){
-  color: $selected-color;
+  color: $selected-color !important;
   font-weight: $font-weight-bold;
   padding-right: $selected-padding-x;
-  background: $selected-bg;
+  background: $selected-bg !important;
   text-decoration: none;
   cursor: default;
 }
@@ -46,4 +46,11 @@
 @mixin is-component-muted($muted-color, $muted-bg){
   color: $muted-color;
   background-color: $muted-bg;
+}
+
+@mixin is-component-disabled(){
+  color: $component-disabled !important;
+  background-color: transparent !important;
+  cursor: default !important;
+  pointer-events: none !important; // 요소가 마우스 이벤트의 대상이 될 수 있는지 여부 또는 시기를 정의할 수 있는 표시 속성
 }
