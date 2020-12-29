@@ -1,5 +1,7 @@
 
 
+
+/* --------------------------------------------------- */
 // 대시보드 컨텐츠가 더미 데이터 일 경우
 #dashboard {
   &.is-blank {
@@ -9,6 +11,7 @@
   }
 }
 
+/* --------------------------------------------------- */
 // Blankslate floating bar
 // 전체 데이터가 더미일 때 블랭크슬레이트 바
 //
@@ -24,7 +27,7 @@
 }
 
 
-
+/* --------------------------------------------------- */
 // Project - Dropdown
 //
 .dropdown-project-content {
@@ -47,8 +50,12 @@
 
 // 선택된 프로젝트 정보
 .project-info {
+  @extend .py-3;
+  @extend .px-2;
+
   .project-info__header {}
-  .project-info__detail {
+  .project-info__detail { 
+    @extend .px-2;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
   }
@@ -67,7 +74,7 @@
   }
 }
 
-
+/* --------------------------------------------------- */
 // Trend Event Detail - dropdown
 //
 .dropdown-menu__eventDateDetail {
@@ -86,12 +93,13 @@
   }
 }
 
-
+/* --------------------------------------------------- */
 // Project Editor -- modal slideout
 //
 #modal-project-editor {}
 
 
+/* --------------------------------------------------- */
 // Project Layout
 #modal-project-layout-app,
 #modal-project-layout-web {

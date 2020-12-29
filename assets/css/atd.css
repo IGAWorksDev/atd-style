@@ -743,6 +743,8 @@ small {
 .px-2,
 .table th,
 .table td,
+.project-info,
+.project-info .project-info__detail,
 #modal-project-layout-app .modal-body,
 #modal-project-layout-web .modal-body,
 #modal-project-layout-app .modal-body .project-layout__type,
@@ -757,6 +759,8 @@ small {
 .px-2,
 .table th,
 .table td,
+.project-info,
+.project-info .project-info__detail,
 #modal-project-layout-app .modal-body,
 #modal-project-layout-web .modal-body,
 #modal-project-layout-app .modal-body .project-layout__type,
@@ -769,6 +773,7 @@ small {
 
 .pt-3,
 .py-3,
+.project-info,
 #modal-project-layout-app .modal-body,
 #modal-project-layout-web .modal-body {
   padding-top: 2.4rem; }
@@ -779,6 +784,7 @@ small {
 
 .pb-3,
 .py-3,
+.project-info,
 #modal-project-layout-app .modal-body,
 #modal-project-layout-web .modal-body {
   padding-bottom: 2.4rem; }
@@ -4387,9 +4393,11 @@ caption {
 #card-group-steps-list-selector .card .list-group {
   height: 32rem; }
 
+/* --------------------------------------------------- */
 #dashboard.is-blank .container {
   padding-bottom: 9.6rem; }
 
+/* --------------------------------------------------- */
 .blankslate-floating-bar {
   z-index: 10;
   position: fixed;
@@ -4398,6 +4406,7 @@ caption {
   left: 0;
   border: 0; }
 
+/* --------------------------------------------------- */
 .dropdown-project-content .col-left {
   width: 220px; }
 .dropdown-project-content .col-right {
@@ -4411,6 +4420,7 @@ caption {
   max-height: 254px;
   overflow-y: auto; }
 
+/* --------------------------------------------------- */
 .dropdown-menu__eventDateDetail {
   width: 38rem; }
   .dropdown-menu__eventDateDetail #datagrid-eventDate-campaign .datagrid-body {
@@ -4420,6 +4430,8 @@ caption {
     max-height: 80px;
     overflow-y: auto; }
 
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
 body {
   background-color: #212529; }
 
