@@ -179,7 +179,9 @@ template {
 .d-inline-block {
   display: inline-block; }
 
-.d-flex, .card.is-blank .card-body, .snb-navbar, .snb-navbar-nav .nav-item .nav-link, .sideheader, .mainheader, .mainbody .card-header-nav-tabs, .toolbar, .item-easy-manageer, .cell-header, .dropdown-project-content, .dropdown-project-content .col-right {
+.d-flex, .card.is-blank .card-body, .snb-navbar, .snb-navbar-nav .nav-item .nav-link, .sideheader, .mainheader, .mainbody .card-header-nav-tabs, .toolbar, .item-easy-manageer, .cell-header, .dropdown-project-content, .dropdown-project-content .col-right, #modal-project-layout-app .modal-body .project-layout,
+#modal-project-layout-web .modal-body .project-layout, #modal-project-layout-app .modal-body .project-layout__type,
+#modal-project-layout-web .modal-body .project-layout__type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -193,7 +195,8 @@ template {
       -ms-flex-direction: row !important;
           flex-direction: row !important; }
 
-.flex-column, .snb-navbar, .snb-navbar-nav, .dropdown-project-content .col-right {
+.flex-column, .snb-navbar, .snb-navbar-nav, .dropdown-project-content .col-right, #modal-project-layout-app .modal-body .project-layout__type,
+#modal-project-layout-web .modal-body .project-layout__type {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: column !important;
@@ -256,7 +259,9 @@ template {
       -ms-flex-pack: end !important;
           justify-content: flex-end !important; }
 
-.justify-content-center, .card.is-blank .card-body {
+.justify-content-center, .card.is-blank .card-body, #modal-project-layout-app .modal-body .project-layout,
+#modal-project-layout-web .modal-body .project-layout, #modal-project-layout-app .modal-body .project-layout__type,
+#modal-project-layout-web .modal-body .project-layout__type {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important; }
@@ -737,7 +742,11 @@ small {
 .pr-2,
 .px-2,
 .table th,
-.table td {
+.table td,
+#modal-project-layout-app .modal-body,
+#modal-project-layout-web .modal-body,
+#modal-project-layout-app .modal-body .project-layout__type,
+#modal-project-layout-web .modal-body .project-layout__type {
   padding-right: 1.6rem; }
 
 .pb-2,
@@ -747,7 +756,11 @@ small {
 .pl-2,
 .px-2,
 .table th,
-.table td {
+.table td,
+#modal-project-layout-app .modal-body,
+#modal-project-layout-web .modal-body,
+#modal-project-layout-app .modal-body .project-layout__type,
+#modal-project-layout-web .modal-body .project-layout__type {
   padding-left: 1.6rem; }
 
 .p-2,
@@ -755,7 +768,9 @@ small {
   padding: 1.6rem; }
 
 .pt-3,
-.py-3 {
+.py-3,
+#modal-project-layout-app .modal-body,
+#modal-project-layout-web .modal-body {
   padding-top: 2.4rem; }
 
 .pr-3,
@@ -763,7 +778,9 @@ small {
   padding-right: 2.4rem; }
 
 .pb-3,
-.py-3 {
+.py-3,
+#modal-project-layout-app .modal-body,
+#modal-project-layout-web .modal-body {
   padding-bottom: 2.4rem; }
 
 .pl-3,
@@ -924,7 +941,9 @@ small {
   margin-top: auto; }
 
 .mr-auto, .toast .toast-message,
-.mx-auto {
+.mx-auto,
+#modal-project-layout-app .modal-body .project-layout__type .custom-control,
+#modal-project-layout-web .modal-body .project-layout__type .custom-control {
   margin-right: auto; }
 
 .mb-auto,
@@ -934,7 +953,9 @@ small {
   margin-bottom: auto; }
 
 .ml-auto,
-.mx-auto {
+.mx-auto,
+#modal-project-layout-app .modal-body .project-layout__type .custom-control,
+#modal-project-layout-web .modal-body .project-layout__type .custom-control {
   margin-left: auto; }
 
 .border-0 {
@@ -2280,8 +2301,7 @@ textarea.form-control {
   position: relative;
   z-index: 1;
   display: block;
-  min-height: 2.2rem;
-  padding-left: 1.8rem; }
+  min-height: 2.2rem; }
 
 .custom-control-input {
   position: absolute;
@@ -2313,7 +2333,8 @@ textarea.form-control {
   position: relative;
   display: inline-block;
   margin-bottom: 0;
-  line-height: 2.2rem; }
+  line-height: 2.2rem;
+  cursor: pointer; }
   .custom-control-label::before {
     position: absolute;
     display: block;

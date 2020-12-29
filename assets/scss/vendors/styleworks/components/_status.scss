@@ -3,6 +3,8 @@
 // 요소(element)의 상태에 따른 스타일 믹스인
 
 // 컨텐츠가 없는 요소인 경우 사용
+// .is-blank
+//
 @mixin is-component-blank($blank-bg){
   background-color: $blank-bg;
 }
@@ -10,6 +12,7 @@
 
 
 // Active (현재형)
+// .is-active
 //
 // 현재 action에 의해 활성된 요소인 경우 사용
 @mixin is-component-active($active-color, $active-bg){
@@ -38,6 +41,7 @@
 
 
 // Selected (과거형)
+// .is-selected
 //
 // 선택되어진 요소인 경우
 
@@ -52,14 +56,17 @@
 
 
 // Muted
+// .is-muted
 //
-// secondary와 같으며, 차분하게 보조 정보 요소일 때 사용.
+// 보조 정보 요소인 경우
 @mixin is-component-muted($muted-color, $muted-bg){
   color: $muted-color !important;
   background-color: $muted-bg !important;
 }
 
+
 // Disabled
+// .is-disabeld
 //
 // 가장 우위에 있음.
 // 비활성 요소 효과로, 선택/클릭/입력 등등을 하거나 포커스를 받을 수 없는 요소일 때 사용.

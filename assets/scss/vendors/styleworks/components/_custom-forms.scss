@@ -7,7 +7,7 @@
   z-index: 1;
   display: block;
   min-height: $line-height-base; // 고정된 line-height 사용함!!(주의)
-  padding-left: $custom-control-gutter + $custom-control-indicator-size; // 라벨 텍스트와의 거리와 컨트롤 인디케이터의 크기를 더한 값.
+  //padding-left: $custom-control-gutter + $custom-control-indicator-size; // 라벨 텍스트와의 거리와 컨트롤 인디케이터의 크기를 더한 값.
 }
 
 .custom-control-input {

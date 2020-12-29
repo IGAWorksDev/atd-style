@@ -542,7 +542,7 @@ $form-group-margin-bottom: ($spacer * 2) !default;
 $custom-control-gutter: 0.4rem !default;
 $custom-control-spacer-x: $font-size-base !default; // ?? 간격 조절시 사용되는듯?
 
-$custom-control-cursor: null !default;
+$custom-control-cursor: pointer !default;
 
 $custom-control-indicator-size: $font-size-base !default;
 $custom-control-indicator-bg: $input-bg !default;

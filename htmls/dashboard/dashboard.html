@@ -3118,31 +3118,39 @@
             레이아웃 설정
           </h3>
         </div>
-        <div class="modal-body p-2 py-3">
-          <!-- d-flex -->
-          <div class="d-flex align-items-center justify-content-center">
-            <div class="text-center px-2">
-              <div class="custom-control custom-radio mb-2">
+        <div class="modal-body">
+          <!-- project-layout -->
+          <div class="project-layout">
+            <div class="project-layout__type">
+              <div class="custom-control custom-radio">
                 <input type="radio" class="custom-control-input" name="layout-app-type" id="layout-app-type-a">
-                <label class="custom-control-label" for="layout-app-type-a">Type A</label>
-              </div>
-              <img src="../../assets/images/project-layout-app-typeA.png"
-                   srcset="../../assets/images/project-layout-app-typeA@2x.png 2x,
+                <label class="custom-control-label" for="layout-app-type-a">
+									서비스 정보 우선 모드
+								</label>
+							</div>
+							<label class="d-block mt-2" for="layout-app-type-a">
+								<img src="../../assets/images/project-layout-app-typeA.png"
+										 srcset="../../assets/images/project-layout-app-typeA@2x.png 2x,
                               ../../assets/images/project-layout-app-typeA@3x.png 3x"
-                   alt="TypeA" style="width: 178px;">
+										 alt="서비스 정보 우선 모드" style="width: 178px;">
+							</label>
             </div>
-            <div class="text-center px-2">
-              <div class="custom-control custom-radio mb-2">
+            <div class="project-layout__type">
+              <div class="custom-control custom-radio">
                 <input type="radio" class="custom-control-input" name="layout-app-type" id="layout-app-type-b">
-                <label class="custom-control-label" for="layout-app-type-b">Type B</label>
-              </div>
-              <img src="../../assets/images/project-layout-app-typeB.png"
-                   srcset="../../assets/images/project-layout-app-typeB@2x.png 2x,
+                <label class="custom-control-label" for="layout-app-type-b">
+									광고 성과 정보 우선 모드
+								</label>
+							</div>
+							<label class="d-block mt-2" for="layout-app-type-b">
+								<img src="../../assets/images/project-layout-app-typeB.png"
+										 srcset="../../assets/images/project-layout-app-typeB@2x.png 2x,
                               ../../assets/images/project-layout-app-typeB@3x.png 3x"
-                   alt="TypeB" style="width: 178px;">
+										 alt="광고 성과 정보 우선 모드" style="width: 178px;">
+							</label>
             </div>
           </div>
-          <!-- /d-flex -->
+          <!-- /project-layout -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">
