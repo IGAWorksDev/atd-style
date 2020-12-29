@@ -699,8 +699,9 @@ small {
 .px-0 {
   padding-left: 0; }
 
+.p-0, .dropdown-project-content,
 .p-0,
-.p-0 {
+.dropdown-project-content {
   padding: 0; }
 
 .pt-1, .form-group, .dropdown-search .dropdown-menu .dropdown-item,
@@ -1949,6 +1950,7 @@ button.list-group-item {
   display: block;
   padding: 0.8rem 1.6rem; }
 
+.dropdown-menu.show,
 .dropdown-menu.is-show {
   display: block; }
 
