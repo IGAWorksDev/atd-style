@@ -1200,7 +1200,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(30, 144, 255, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(30, 144, 255, 0.3); }
   .btn-text-primary.is-disabled, .btn-text-primary[disabled], .btn-text-primary:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1225,7 +1225,7 @@ small {
   .modal-container .is-disabled.btn-close, .toast .is-disabled.btn-close, .btn-text-secondary[disabled], .modal-content [disabled].btn-close,
   .modal-container [disabled].btn-close, .toast [disabled].btn-close, .btn-text-secondary:disabled, .modal-content .btn-close:disabled,
   .modal-container .btn-close:disabled, .toast .btn-close:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1243,7 +1243,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3); }
   .btn-text-success.is-disabled, .btn-text-success[disabled], .btn-text-success:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1261,7 +1261,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(32, 201, 151, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(32, 201, 151, 0.3); }
   .btn-text-info.is-disabled, .btn-text-info[disabled], .btn-text-info:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1279,7 +1279,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(255, 193, 7, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(255, 193, 7, 0.3); }
   .btn-text-warning.is-disabled, .btn-text-warning[disabled], .btn-text-warning:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1297,7 +1297,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(220, 20, 60, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(220, 20, 60, 0.3); }
   .btn-text-danger.is-disabled, .btn-text-danger[disabled], .btn-text-danger:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1315,7 +1315,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.3); }
   .btn-text-light.is-disabled, .btn-text-light[disabled], .btn-text-light:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1333,7 +1333,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(173, 181, 189, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(173, 181, 189, 0.3); }
   .btn-text-gray.is-disabled, .btn-text-gray[disabled], .btn-text-gray:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1351,7 +1351,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3); }
   .btn-text-dark.is-disabled, .btn-text-dark[disabled], .btn-text-dark:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -1373,7 +1373,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(30, 144, 255, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(30, 144, 255, 0.3); }
   .btn-contained-primary.is-disabled, .btn-contained-primary[disabled], .btn-contained-primary:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1395,7 +1395,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(108, 117, 125, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(108, 117, 125, 0.3); }
   .btn-contained-secondary.is-disabled, .btn-contained-secondary[disabled], .btn-contained-secondary:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1417,7 +1417,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3); }
   .btn-contained-success.is-disabled, .btn-contained-success[disabled], .btn-contained-success:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1439,7 +1439,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(32, 201, 151, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(32, 201, 151, 0.3); }
   .btn-contained-info.is-disabled, .btn-contained-info[disabled], .btn-contained-info:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1461,7 +1461,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(255, 193, 7, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(255, 193, 7, 0.3); }
   .btn-contained-warning.is-disabled, .btn-contained-warning[disabled], .btn-contained-warning:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1483,7 +1483,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(220, 20, 60, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(220, 20, 60, 0.3); }
   .btn-contained-danger.is-disabled, .btn-contained-danger[disabled], .btn-contained-danger:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1505,7 +1505,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.3); }
   .btn-contained-light.is-disabled, .btn-contained-light[disabled], .btn-contained-light:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1527,7 +1527,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(173, 181, 189, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(173, 181, 189, 0.3); }
   .btn-contained-gray.is-disabled, .btn-contained-gray[disabled], .btn-contained-gray:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1549,7 +1549,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3); }
   .btn-contained-dark.is-disabled, .btn-contained-dark[disabled], .btn-contained-dark:disabled {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     border-color: #ced4da;
     background-color: #ced4da;
     cursor: default;
@@ -1573,7 +1573,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(30, 144, 255, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(30, 144, 255, 0.3); }
   .btn-outlined-primary.is-disabled, .btn-outlined-primary[disabled], .btn-outlined-primary:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1597,7 +1597,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(108, 117, 125, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(108, 117, 125, 0.3); }
   .btn-outlined-secondary.is-disabled, .btn-outlined-secondary[disabled], .btn-outlined-secondary:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1621,7 +1621,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.3); }
   .btn-outlined-success.is-disabled, .btn-outlined-success[disabled], .btn-outlined-success:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1645,7 +1645,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(32, 201, 151, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(32, 201, 151, 0.3); }
   .btn-outlined-info.is-disabled, .btn-outlined-info[disabled], .btn-outlined-info:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1669,7 +1669,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(255, 193, 7, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(255, 193, 7, 0.3); }
   .btn-outlined-warning.is-disabled, .btn-outlined-warning[disabled], .btn-outlined-warning:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1693,7 +1693,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(220, 20, 60, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(220, 20, 60, 0.3); }
   .btn-outlined-danger.is-disabled, .btn-outlined-danger[disabled], .btn-outlined-danger:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1717,7 +1717,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.3); }
   .btn-outlined-light.is-disabled, .btn-outlined-light[disabled], .btn-outlined-light:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1741,7 +1741,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(173, 181, 189, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(173, 181, 189, 0.3); }
   .btn-outlined-gray.is-disabled, .btn-outlined-gray[disabled], .btn-outlined-gray:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -1765,7 +1765,7 @@ small {
     -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3);
             box-shadow: 0 0 0 0.3rem rgba(33, 37, 41, 0.3); }
   .btn-outlined-dark.is-disabled, .btn-outlined-dark[disabled], .btn-outlined-dark:disabled {
-    color: rgba(206, 212, 218, 0.5);
+    color: #ced4da;
     border-color: #ced4da;
     background-color: transparent;
     cursor: default;
@@ -2764,7 +2764,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(0, 124, 244, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(0, 124, 244, 0.3); }
     .alert-primary .alert-close.is-disabled, .alert-primary .alert-close[disabled], .alert-primary .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2787,7 +2787,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(89, 97, 103, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(89, 97, 103, 0.3); }
     .alert-secondary .alert-close.is-disabled, .alert-secondary .alert-close[disabled], .alert-secondary .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2810,7 +2810,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(32, 134, 55, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(32, 134, 55, 0.3); }
     .alert-success .alert-close.is-disabled, .alert-success .alert-close[disabled], .alert-success .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2833,7 +2833,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(26, 166, 125, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(26, 166, 125, 0.3); }
     .alert-info .alert-close.is-disabled, .alert-info .alert-close[disabled], .alert-info .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2856,7 +2856,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(221, 166, 0, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(221, 166, 0, 0.3); }
     .alert-warning .alert-close.is-disabled, .alert-warning .alert-close[disabled], .alert-warning .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2879,7 +2879,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(183, 17, 50, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(183, 17, 50, 0.3); }
     .alert-danger .alert-close.is-disabled, .alert-danger .alert-close[disabled], .alert-danger .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2902,7 +2902,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(235, 235, 235, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(235, 235, 235, 0.3); }
     .alert-light .alert-close.is-disabled, .alert-light .alert-close[disabled], .alert-light .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2925,7 +2925,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(150, 161, 171, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(150, 161, 171, 0.3); }
     .alert-gray .alert-close.is-disabled, .alert-gray .alert-close[disabled], .alert-gray .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;
@@ -2948,7 +2948,7 @@ textarea.form-control {
       -webkit-box-shadow: 0 0 0 0.3rem rgba(15, 17, 18, 0.3);
               box-shadow: 0 0 0 0.3rem rgba(15, 17, 18, 0.3); }
     .alert-dark .alert-close.is-disabled, .alert-dark .alert-close[disabled], .alert-dark .alert-close:disabled {
-      color: rgba(206, 212, 218, 0.5);
+      color: #ced4da;
       background-color: transparent;
       border-color: transparent;
       cursor: default;

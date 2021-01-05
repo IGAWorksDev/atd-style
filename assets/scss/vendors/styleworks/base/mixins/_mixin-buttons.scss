@@ -50,7 +50,7 @@
   &.is-disabled,
   &[disabled],
   &:disabled {
-    color: rgba($btn-disabled-color, 0.5);
+    color: $btn-disabled-color;
     background-color: transparent;
     border-color: transparent;
     cursor: default;
@@ -88,7 +88,7 @@
   &.is-disabled,
   &[disabled],
   &:disabled {
-    color: rgba($white, 0.5);
+    color: $white;
     border-color: $btn-disabled-color;
     background-color: $btn-disabled-color;
     cursor: default;
@@ -125,7 +125,7 @@
   &.is-disabled,
   &[disabled],
   &:disabled {
-    color: rgba($btn-disabled-color, 0.5);
+    color: $btn-disabled-color;
     border-color: $btn-disabled-color;
     background-color: transparent;
     cursor: default;
