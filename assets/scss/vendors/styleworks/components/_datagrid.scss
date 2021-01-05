@@ -91,7 +91,7 @@
     background-color: $datagrid-bg;
   }
   > .datagrid-row:last-child .datagrid-cell {
-    border-bottom-color: darken($datagrid-border-color, 16%); // header와 body의 셀 구분을 위해 마지막 행의 셀은 진한 컬러를 갖고 있음.
+    border-bottom-color: darken($datagrid-border-color, 8%); // header와 body의 셀 구분을 위해 마지막 행의 셀은 진한 컬러를 갖고 있음.
   }
 }
 

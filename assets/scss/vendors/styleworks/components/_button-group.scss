@@ -46,3 +46,17 @@
 .btn-group-lg > .btn {
   @extend .btn-lg;
 }
+
+
+// Split 버튼 (Dropdown)
+.dropdown-toggle-split {
+  &::after,
+  .dropup &::after,
+  .dropright &::after {
+    margin-left: 0;
+  }
+
+  .dropleft &::before {
+    margin-right: 0;
+  }
+}

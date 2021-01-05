@@ -123,7 +123,7 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  padding: $dropdown-padding-y $dropdown-padding-x;
   clear: both;
   font-weight: $font-weight-normal;
   color: $dropdown-link-color;
@@ -187,6 +187,6 @@
 // Dropdown text
 .dropdown-item-text {
   display: block;
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  padding: $dropdown-padding-y $dropdown-padding-x;
   color: $dropdown-link-color;
 }

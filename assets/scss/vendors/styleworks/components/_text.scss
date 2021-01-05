@@ -3,7 +3,7 @@
 .text-body { color: $body-color;}
 .text-disabled { color: $disabled;}
 .text-muted { color: $text-muted; }
-
+.text-tertiary {color: $disabled !important;}
 
 
 // Mixin : 범례용 텍스트 컬러

@@ -11,13 +11,13 @@
 
 /// 사용자 권한 설정
 .dropdown-item__authority {
-	padding-left: $dropdown-item-padding-x + 1.25rem;
+	padding-left: $dropdown-padding-x + 1.25rem;
 	position: relative;
 	&:before {
 		content: "";
 		position: absolute;
 		color: $text-muted;
-		left:$dropdown-item-padding-x;
+		left: $dropdown-padding-x;
 	}
 }
 .dropdown-item__authority.is-active {

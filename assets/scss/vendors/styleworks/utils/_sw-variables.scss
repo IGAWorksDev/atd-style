@@ -101,6 +101,7 @@ $theme-charts: map-merge(
 
 
 $base:        $gray-700;
+$muted:       $gray-600;
 $disabled:    $gray-400;
 
 
@@ -270,8 +271,6 @@ $border-radius-sm:            0.4rem !default;
 $border-radius:               0.4rem !default;
 $border-radius-lg:            0.4rem !default;
 
-
-
 $text-muted: $gray-600 !default;
 
 
@@ -305,6 +304,9 @@ $component-selected-icon-size:  $font-size-base !default;
 $component-selected-icon-bg:    escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size !default;
 $component-selected-padding-x:  ($component-padding-x + $component-selected-icon-size + ($component-padding-x * 0.5)) !default;
 
+// Muted
+$component-muted-color: $muted !default;
+
 // Disable
 $component-disabled-color: $gray-400 !default;
 
@@ -312,9 +314,13 @@ $component-disabled-color: $gray-400 !default;
 $component-blank-bg: $component-bg-alt !default;
 
 
-
 // Transitions
 $transition-base : all 0.15s ease-in-out !default;
+
+
+// Z-index
+$zindex-dropdown: 1000 !default;
+
 
 
 // Tooltips
@@ -348,8 +354,8 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 
 // Caret
 $caret-width: 0.3em !default;
-$caret-vertical-align: $caret-width * 0.7 !default;
-$caret-spacing: 0 !default;
+$caret-vertical-align: $caret-width * 0.8 !default;
+$caret-spacing: 0.4em !default;
 
 
 
@@ -715,30 +721,33 @@ $list-group-selected-padding-x: $component-selected-padding-x;
 
 
 // Dropdown menu
-$dropdown-bg: $component-bg;
-$dropdown-padding-y: $spacer;
-$dropdown-padding-x: $spacer * 2;
-$dropdown-border-width: $border-width;
-$dropdown-border-color: $border-color;
-$dropdown-border-radius: $border-radius;
+$dropdown-min-width:            16rem !default;
+$dropdown-spacer:               ($spacer / 2) !default;
+$dropdown-padding-y:            $spacer !default;
+$dropdown-padding-x:            ($spacer * 2) !default;
+$dropdown-bg:                   $component-bg !default;
+$dropdown-border-width:         $border-width !default;
+$dropdown-border-color:         $border-color !default;
+$dropdown-border-radius:        $border-radius !default;
+$dropdown-box-shadow:           0 .5rem 1rem rgba($black, .175) !default;
 
-$dropdown-item-padding-y: $spacer;
-$dropdown-item-padding-x: $spacer * 2;
-$dropdown-item-color: $base;
+$dropdown-font-size:            $font-size-base !default;
+$dropdown-color:                $base !default;
 
-$dropdown-item-hover-color: $component-hover-color;
-$dropdown-item-hover-bg: $component-hover-bg;
+$dropdown-hover-color:          $component-hover-color !default;
+$dropdown-hover-bg:             $component-hover-bg !default;
 
-$dropdown-item-active-color:        $component-active-color;
-$dropdown-item-active-padding-x:    $component-active-padding-x;
-$dropdown-item-active-bg:           $component-active-bg $component-active-icon-bg;
+$dropdown-active-color:         $component-active-color !default;
+$dropdown-active-padding-x:     $component-active-padding-x !default;
+$dropdown-active-bg:            $component-active-bg $component-active-icon-bg !default;
 
-$dropdown-item-selected-color:      $component-selected-color;
-$dropdown-item-selected-padding-x:  $component-selected-padding-x;
-$dropdown-item-selected-bg:         $component-selected-icon-bg;
+$dropdown-selected-color:       $component-selected-color !default;
+$dropdown-selected-padding-x:   $component-selected-padding-x !default;
+$dropdown-selected-bg:          $component-selected-icon-bg !default;
 
-$dropdown-item-disabled-color:      $gray-400;
+$dropdown-disabled-color:       $component-disabled-color !default;
 
+$dropdown-header-color:         $component-muted-color !default;
 
 
 // Pagination

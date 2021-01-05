@@ -54,7 +54,7 @@
   @extend .px-2;
 
   .project-info__header {}
-  .project-info__detail { 
+  .project-info__detail {
     @extend .px-2;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
