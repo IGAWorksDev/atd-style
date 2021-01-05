@@ -3308,9 +3308,6 @@ textarea.form-control {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
   position: relative;
   border-collapse: collapse;
   -webkit-box-align: stretch;
@@ -3373,9 +3370,6 @@ textarea.form-control {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
   position: relative;
   border-collapse: collapse;
   -webkit-box-align: stretch;
@@ -4541,6 +4535,12 @@ caption {
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* 프로젝트의 이벤트와 자료 관리 */
+.section-manage-event .datagrid .datagrid-body,
+.section-manage-file .datagrid .datagrid-body {
+  height: 195px; }
+
 body {
   background-color: #212529; }
 

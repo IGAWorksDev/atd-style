@@ -124,3 +124,14 @@
 }
 
 
+/* --------------------------------------------------- */
+/* 프로젝트의 이벤트와 자료 관리 */
+
+.section-manage-event,
+.section-manage-file {
+  .datagrid {
+    .datagrid-body {
+      height: 195px;
+    }
+  }
+}
