@@ -1,6 +1,6 @@
 
 
-// Button sizes
+// Button Sizes
 //
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   padding: $padding-y $padding-x;
@@ -26,24 +26,29 @@
 
 
 
+// Button Styles
+//
 
 // btn-text-{$theme-colors}
 //
 //
-@mixin button-text-variant($color, $active-color: darken($color, 8%), $active-background: rgba($color, 0.3)){
+@mixin button-text-variant($color,
+  $active-color: darken($color, 10%), $active-background: rgba($color, 0.1), $active-border: rgba($color, 0.1)){
+
   color: $color;
 
   &:hover,
+  &:active,
   &.is-active {
     color: $active-color;
     background-color: $active-background;
-    border-color: transparent;
+    border-color: $active-border;
     text-decoration: none;
   }
 
   // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
   &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.3);
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.2);
   }
 
   // 비활성 상태
@@ -63,8 +68,7 @@
 // btn-contained-{$theme-colors}
 //
 @mixin button-contained-variant($background, $border,
-  $hover-background: darken($background, 5%), $hover-border: darken($border, 10%),
-  $active-background: darken($background, 8%), $active-border: darken($border, 12%)) {
+  $active-background: darken($background, 4%), $active-border: darken($border, 10%)) {
 
   color: $white;
   background-color: $background;
@@ -72,16 +76,17 @@
   border-color: $border;
   text-decoration: none;
   &:hover,
+  &:active,
   &.is-active {
     color: $white;
-    background-color: $hover-background;
-    border-color: $hover-border;
+    background-color: $active-background;
+    border-color: $active-border;
     text-decoration: none;
   }
 
   // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
   &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($background, 0.3);
+    box-shadow: 0 0 0 $btn-focus-width rgba($background, 0.2);
   }
 
   // 비활성 상태
@@ -99,16 +104,13 @@
 // btn-outlined-{$theme-colors}
 //
 @mixin button-outlined-variant($color, $border,
-  $hover-color: darken($color, 12%), $hover-background: rgba($color, 0.2), $hover-border: $border,
-  $active-color: darken($color, 12%), $active-background: rgba($color, 0.2), $active-border: $border) {
+  $active-color: darken($color, 4%), $active-background: rgba($color, 0.1), $active-border: $border) {
+
   color: $color;
   border-color: $color;
-  &:hover {
-    color: $hover-color;
-    background-color: $hover-background;
-    border-color: $hover-border;
-    text-decoration: none;
-  }
+
+  &:hover,
+  &:active,
   &.is-active {
     color: $active-color;
     background-color: $active-background;
@@ -118,7 +120,7 @@
 
   // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
   &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.3);
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.2);
   }
 
   // 비활성 상태
@@ -132,5 +134,4 @@
     box-shadow: none;
   }
 }
-
 

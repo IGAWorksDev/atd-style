@@ -7,7 +7,7 @@
 // 0.625rem = 10px = 10pt = 10dp = 62.5%
 
 :root {
-  @include font-size($font-size-root);
+  @include font-size($root-size);
 }
 
 

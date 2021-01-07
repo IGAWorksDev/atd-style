@@ -14,37 +14,43 @@ $black:    #000 !default;
 
 $grays: () !default;
 $grays: map-merge(
-(
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-),
-$grays
+                (
+                        "100": $gray-100,
+                        "200": $gray-200,
+                        "300": $gray-300,
+                        "400": $gray-400,
+                        "500": $gray-500,
+                        "600": $gray-600,
+                        "700": $gray-700,
+                        "800": $gray-800,
+                        "900": $gray-900
+                ),
+                $grays
 );
 
 $blue:    #1E90FF !default;
-$red:     #dc3545 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
+$green:   #4CBB17 !default;
+$teal:    #0dbab1 !default;
+$yellow:  #FFA000 !default;
+$red:     #E53935 !default;
+
 
 $colors: () !default;
 $colors: map-merge(
-(
-    "blue": $blue,
-    "red": $red,
-    "yellow": $yellow,
-    "green": $green,
-    "teal": $teal,
-),
-$colors
+                (
+                        "blue": $blue,
+                        "green": $green,
+                        "teal": $teal,
+                        "yellow": $yellow,
+                        "red": $red,
+                ),
+                $colors
 );
+
+
+$base:       $gray-800 !default;
+$mute:       $gray-600 !default;
+$disable:    $gray-400 !default;
 
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
@@ -52,18 +58,41 @@ $success:       $green !default;
 $info:          $teal !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$gray:          $gray-500 !default;
+
+$light:         $white !default;
+$tertiary:      $disable !default;
+$dark:          $gray-800 !default;
+
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
-(
-    "primary": $primary,
-    "secondary": $secondary,
-    "success": $success,
-    "info":   $info,
-    "warning": $warning,
-    "danger": $danger,
-    "gray": $gray
-),
-$theme-colors
+                (
+                        "primary": $primary,
+                        "secondary": $secondary,
+                        "success": $success,
+                        "info": $info,
+                        "warning": $warning,
+                        "danger": $danger,
+                        "light": $light,
+                        "dark": $dark
+                ),
+                $theme-colors
+);
+
+$legend-1: $blue !default;
+$legend-2: $teal !default;
+$legend-3: $red !default;
+$legend-4: $yellow !default;
+$legend-5: $tertiary !default;
+
+$theme-charts: ()!default;
+$theme-charts: map-merge(
+                (
+                        "legend-1": $legend-1,
+                        "legend-2": $legend-2,
+                        "legend-3": $legend-3,
+                        "legend-4": $legend-4,
+                        "legend-5": $legend-5
+                ),
+                $theme-charts
 );

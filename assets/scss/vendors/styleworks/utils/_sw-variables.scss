@@ -4,7 +4,7 @@
 // 0.625rem = 10px = 10pt = 10dp
 // px는 사용자가 글꼴 환경 설정을 변경하면 반영되지 않습니다. 픽셀 대신 %로 지정해야하며 그 크기는 62.5%입니다.
 // (주의) 변경하지 마십시오!!!
-$font-size-root: 62.5% !default;
+$root-size: 62.5% !default;
 
 // Color system
 
@@ -36,23 +36,29 @@ $grays: map-merge(
         $grays
 );
 
-$blue:    #1e90ff !default;
-$red:     #dc143c !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
+$blue:    #1E90FF !default;
+$green:   #4CBB17 !default;
+$teal:    #0dbab1 !default;
+$yellow:  #FFA000 !default;
+$red:     #E53935 !default;
+
 
 $colors: () !default;
 $colors: map-merge(
-        (
-            "blue": $blue,
-            "red": $red,
-            "yellow": $yellow,
-            "green": $green,
-            "teal": $teal,
-        ),
-        $colors
+                (
+                        "blue": $blue,
+                        "green": $green,
+                        "teal": $teal,
+                        "yellow": $yellow,
+                        "red": $red,
+                ),
+                $colors
 );
+
+
+$base:       $gray-800 !default;
+$mute:       $gray-600 !default;
+$disable:    $gray-400 !default;
 
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
@@ -60,9 +66,10 @@ $success:       $green !default;
 $info:          $teal !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
+
 $light:         $white !default;
-$gray:          $gray-500 !default;
-$dark:          $gray-900 !default;
+$tertiary:      $disable !default;
+$dark:          $gray-800 !default;
 
 
 $theme-colors: () !default;
@@ -75,7 +82,6 @@ $theme-colors: map-merge(
             "warning": $warning,
             "danger": $danger,
             "light": $light,
-            "gray": $gray,
             "dark": $dark
         ),
         $theme-colors
@@ -85,7 +91,7 @@ $legend-1: $blue !default;
 $legend-2: $teal !default;
 $legend-3: $red !default;
 $legend-4: $yellow !default;
-$legend-5: $gray !default;
+$legend-5: $tertiary !default;
 
 $theme-charts: ()!default;
 $theme-charts: map-merge(
@@ -100,9 +106,6 @@ $theme-charts: map-merge(
 );
 
 
-$base:        $gray-700;
-$muted:       $gray-600;
-$disabled:    $gray-400;
 
 
 // Typography
@@ -305,10 +308,10 @@ $component-selected-icon-bg:    escape-svg($component-selected-icon) no-repeat r
 $component-selected-padding-x:  ($component-padding-x + $component-selected-icon-size + ($component-padding-x * 0.5)) !default;
 
 // Muted
-$component-muted-color: $muted !default;
+$component-muted-color: $mute !default;
 
 // Disable
-$component-disabled-color: $gray-400 !default;
+$component-disabled-color: $disable !default;
 
 // Blank
 $component-blank-bg: $component-bg-alt !default;
@@ -400,7 +403,7 @@ $input-btn-line-height-lg:    $line-height-lg !default;
 
 $input-btn-border-width:      $border-width !default;
 
-$input-btn-disabled-color:    $gray-400;
+$input-btn-disabled-color:    $component-disabled-color;
 
 
 // Buttons
@@ -489,7 +492,7 @@ $input-disabled-bg:     $gray-200 !default;
 $input-disabled-color:  $input-btn-disabled-color !default;
 
 $input-color:           $gray-800 !default;
-$input-border-color:    $gray !default;
+$input-border-color: $tertiary !default;
 $input-border-width:    $input-btn-border-width !default;
 $input-box-shadow:      inset 0 1px 1px rgba($black, 0.75) !default;
 

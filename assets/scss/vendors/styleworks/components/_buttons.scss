@@ -17,11 +17,13 @@
   border: $btn-border-width solid transparent;
   background-color: transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  cursor: pointer;
 
   &:focus {
     outline: 0;
   }
 }
+
 .btn-sm {
   @include button-size($btn-padding-sm-y, $btn-padding-sm-x, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
@@ -77,7 +79,7 @@
 //
 @each $color, $value in $theme-colors {
   .btn-text-#{$color} {
-    @include button-text-variant($value, $value);
+    @include button-text-variant($value);
   }
 }
 
