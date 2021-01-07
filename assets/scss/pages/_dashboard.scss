@@ -139,7 +139,7 @@
       > .datagrid-row:last-child {
         .datagrid-cell {
           border-bottom: $border-width solid $border-color;
-          margin-bottom: -$border-width;
+          margin-bottom: -$border-width; // row의 개수가 높이값을 다 채웠을때 마지막 라인이 2줄로 되는 경우를 피하기 위해 추가함.
         }
       }
     }
