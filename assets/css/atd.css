@@ -4537,9 +4537,16 @@ caption {
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
 /* 프로젝트의 이벤트와 자료 관리 */
+.section-manage-event .card,
+.section-manage-file .card {
+  background-color: #f8f9fa; }
 .section-manage-event .datagrid .datagrid-body,
 .section-manage-file .datagrid .datagrid-body {
   height: 195px; }
+  .section-manage-event .datagrid .datagrid-body > .datagrid-row:last-child .datagrid-cell,
+  .section-manage-file .datagrid .datagrid-body > .datagrid-row:last-child .datagrid-cell {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: -1px; }
 
 body {
   background-color: #212529; }

@@ -129,9 +129,19 @@
 
 .section-manage-event,
 .section-manage-file {
+  .card {
+    background-color: $component-bg-alt;
+  }
   .datagrid {
     .datagrid-body {
-      height: 195px;
+      height: 195px; // 고정된 높이값으로 영역 지정되어 있음. 이벤트와 자료의 영역을 동일하게 만들기 위함.
+
+      > .datagrid-row:last-child {
+        .datagrid-cell {
+          border-bottom: $border-width solid $border-color;
+          margin-bottom: -$border-width;
+        }
+      }
     }
   }
 }
