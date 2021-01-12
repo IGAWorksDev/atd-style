@@ -126,7 +126,6 @@
 //
 #modal-project-editor {}
 
-
 #modal-project-channel-editor {
      .datagrid-responsive {
        // 고정 높이값 : 100vh - (모달 헤더 높이값(85px) + 모달 바디 탑 패딩(8px) + 광고계정 필터 옵션 높이(89px) + 계산용 임의 값(10px ??))
@@ -164,17 +163,19 @@
 /* 프로젝트의 이벤트와 자료 관리 */
 .section-manage-event,
 .section-manage-file {
+  .blankslate {
+    height: 234px;
+  }
   .card {
     background-color: $component-bg-alt;
-  }
-  .datagrid {
-    .datagrid-body {
-      height: 195px; // 고정된 높이값으로 영역 지정되어 있음. 이벤트와 자료의 영역을 동일하게 만들기 위함.
-
-      > .datagrid-row:last-child {
-        .datagrid-cell {
-          border-bottom: $border-width solid $border-color;
-          margin-bottom: -$border-width; // row의 개수가 높이값을 다 채웠을때 마지막 라인이 2줄로 되는 경우를 피하기 위해 추가함.
+    .datagrid {
+      height: 234px; // 고정된 높이값으로 영역 지정되어 있음. 이벤트와 자료의 영역을 동일하게 만들기 위함.
+      .datagrid-body {
+        > .datagrid-row:last-child {
+          .datagrid-cell {
+            border-bottom: $border-width solid $border-color;
+            margin-bottom: -$border-width; // row의 개수가 높이값을 다 채웠을때 마지막 라인이 2줄로 되는 경우를 피하기 위해 추가함.
+          }
         }
       }
     }

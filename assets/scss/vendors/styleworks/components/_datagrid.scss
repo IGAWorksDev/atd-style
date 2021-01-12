@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  justify-content: flex-start;
   position: relative;
 }
 
@@ -20,10 +21,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  flex: 1 1 auto;
   position: relative;
   border-collapse: collapse;
   align-items: stretch;
+  justify-content: flex-start;
 }
 
 @mixin datagrid-flex-cell() {
@@ -53,7 +54,6 @@
 .datagrid,
 .datagrid-rowgroup {
   @include datagrid-flex-column();
-  flex: 1 1 auto;
 }
 
 // Row
