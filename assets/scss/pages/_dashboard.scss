@@ -129,9 +129,9 @@
 
 #modal-project-channel-editor {
      .datagrid-responsive {
-       // 고정 높이값 : 100vh - (모달 헤더 높이값(85px) + 모달 바디 탑 패딩(8px) + 광고계정 필터 옵션 높이(89px))
+       // 고정 높이값 : 100vh - (모달 헤더 높이값(85px) + 모달 바디 탑 패딩(8px) + 광고계정 필터 옵션 높이(89px) + 계산용 임의 값(10px ??))
        // 주의! -- 측정된 높이값이 적용되어 있음.
-      height: calc(100vh - (182px));
+      height: calc(100vh - 192px);
     }
 }
 

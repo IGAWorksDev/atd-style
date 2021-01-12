@@ -5380,7 +5380,7 @@ caption {
 
 /* --------------------------------------------------- */
 #modal-project-channel-editor .datagrid-responsive {
-  height: calc(100vh - (182px));
+  height: calc(100vh - 192px);
 }
 
 /* --------------------------------------------------- */
