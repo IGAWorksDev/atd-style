@@ -46,16 +46,17 @@
     @extend .btn-text-secondary;
   }
   .modal-title {
-    margin-top: $spacer;
+    //margin-top: $spacer;
     margin-right: auto;
     margin-bottom: 0;
+    font-weight: $font-weight-bold;
   }
 }
 
 .modal-header {
   display: flex;
   flex-direction: row-reverse;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding: $modal-header-padding;
   border-radius: $modal-container-border-radius $modal-container-border-radius 0 0;

@@ -21,7 +21,6 @@
       width: 100%;
     }
   }
-
   // 짝수번째 .mainbody 컨텐츠는 흰색 배경을 갖음.
   > .mainbody{
     @extend .pb-6;
@@ -49,7 +48,6 @@
   border: 0;
   @extend .h-fixed-8;
 }
-
 #dashboard.is-blank {
   > .mainbody:last-child {
     padding-bottom: $spacer * 12;
@@ -129,6 +127,14 @@
 #modal-project-editor {}
 
 
+#modal-project-channel-editor {
+     .datagrid-responsive {
+       // 고정 높이값 : 100vh - (모달 헤더 높이값(85px) + 모달 바디 탑 패딩(8px) + 광고계정 필터 옵션 높이(89px))
+       // 주의! -- 측정된 높이값이 적용되어 있음.
+      height: calc(100vh - (182px));
+    }
+}
+
 /* --------------------------------------------------- */
 // Project Layout
 #modal-project-layout-app,
@@ -156,7 +162,6 @@
 
 /* --------------------------------------------------- */
 /* 프로젝트의 이벤트와 자료 관리 */
-
 .section-manage-event,
 .section-manage-file {
   .card {
