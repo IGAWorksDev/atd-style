@@ -2,19 +2,42 @@
 
 
 /* --------------------------------------------------- */
-// 대시보드 컨텐츠가 더미 데이터 일 경우
+// 대시보드 레이아웃
 #dashboard {
-  &.is-blank {
+  // mainheader는 스크롤 했을 경우 플로팅됨
+  > .mainheader {
+    @extend .d-flex;
+    @extend .align-items-stretch;
     .container {
-      padding-bottom: $spacer * 12;
+      @extend .d-flex;
+      @extend .align-items-stretch;
+      margin-bottom: 0 !important;
+    }
+    .mainheader__inner {
+      @extend .d-flex;
+      @extend .align-items-center;
+      margin-bottom: 0 !important;
+      @extend .border-bottom;
+      width: 100%;
+    }
+  }
+
+  // 짝수번째 .mainbody 컨텐츠는 흰색 배경을 갖음.
+  > .mainbody{
+    @extend .pb-6;
+
+    &:nth-child(even) {
+      @extend .border-top;
+      @extend .border-bottom;
+      background-color: $component-bg;
     }
   }
 }
 
 /* --------------------------------------------------- */
-// Blankslate floating bar
-// 전체 데이터가 더미일 때 블랭크슬레이트 바
+// 대시보드 컨텐츠가 더미 데이터 일 경우
 //
+// Blankslate floating bar -- 전체 데이터가 더미일 때 블랭크슬레이트 바
 // 메인 컨텐츠 보다 위에 떠있으며 부모 div .is-blank에 상태 클래스와 함께 사용하여,
 // 맨 하단의 내용을 가리지 않고 볼 수 있도록 할 것.
 .blankslate-floating-bar {
@@ -24,6 +47,13 @@
   bottom: 0;
   left: 0;
   border: 0;
+  @extend .h-fixed-8;
+}
+
+#dashboard.is-blank {
+  > .mainbody:last-child {
+    padding-bottom: $spacer * 12;
+  }
 }
 
 
