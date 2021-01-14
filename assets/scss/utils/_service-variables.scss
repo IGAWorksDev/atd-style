@@ -47,6 +47,9 @@ $main-width: auto;
 $main-height: calc(#{$layout-height} - #{$gnb-height});
 
 $main-header-height: 6.4rem; // $side-content-header-height 와 동일함
+
+$main-header-transition: all ease-in-out 0.04s;
+
 $main-body-height: calc(#{$layout-height} - #{$gnb-height} - #{$main-header-height});
 
 $toolbar-height: 6.4rem;

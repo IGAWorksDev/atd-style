@@ -17,7 +17,6 @@
       @extend .d-flex;
       @extend .align-items-center;
       margin-bottom: 0 !important;
-      @extend .border-bottom;
       width: 100%;
     }
   }
@@ -25,11 +24,14 @@
   > .mainbody{
     @extend .pb-6;
 
+    /*
+    // 개발 소스에서 처리함.
     &:nth-child(even) {
       @extend .border-top;
       @extend .border-bottom;
       background-color: $component-bg;
     }
+    */
   }
 }
 
@@ -53,7 +55,6 @@
     padding-bottom: $spacer * 12;
   }
 }
-
 
 /* --------------------------------------------------- */
 // Project - Dropdown

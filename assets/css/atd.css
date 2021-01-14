@@ -1194,7 +1194,7 @@ small {
   border-right: 0 !important;
 }
 
-.border-bottom-0 {
+.border-bottom-0, .mainheader-sticky.is-fixed .mainheader__inner {
   border-bottom: 0 !important;
 }
 
@@ -1206,7 +1206,7 @@ small {
   border: 1px solid #dee2e6 !important;
 }
 
-.border-top, #dashboard > .mainbody:nth-child(even) {
+.border-top {
   border-top: 1px solid #dee2e6 !important;
 }
 
@@ -1214,7 +1214,7 @@ small {
   border-right: 1px solid #dee2e6 !important;
 }
 
-.border-bottom, #dashboard > .mainheader .mainheader__inner, #dashboard > .mainbody:nth-child(even) {
+.border-bottom, .mainheader .mainheader__inner, .mainheader-sticky.is-fixed {
   border-bottom: 1px solid #dee2e6 !important;
 }
 
@@ -5085,7 +5085,7 @@ caption {
 }
 
 .mainContent {
-  height: calc(100vh - 5.6rem);
+  min-height: calc(100vh - 5.6rem);
   overflow: auto;
 }
 
@@ -5107,7 +5107,7 @@ caption {
   grid-template-rows: 5.6rem 1fr;
   grid-template-columns: 5.6rem 1fr;
   min-width: 1440px;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 .twWrapper > .contentWrapper {
@@ -5122,13 +5122,29 @@ caption {
   display: grid;
   grid-template-rows: 5.6rem 1fr;
   min-width: 1440px;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 .twWrapper-full > .contentWrapper {
   grid-row-start: 2;
   width: 100%;
   height: 100%;
+}
+
+.mainheader {
+  -webkit-transition: all ease-in-out 0.04s;
+  transition: all ease-in-out 0.04s;
+}
+
+.mainheader-sticky.is-fixed {
+  position: fixed;
+  z-index: 1001;
+  top: 5.6rem;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-transition: all ease-in-out 0.04s;
+  transition: all ease-in-out 0.04s;
 }
 
 .table thead > tr > th {
@@ -5329,8 +5345,15 @@ caption {
   margin-bottom: 0 !important;
   width: 100%;
 }
-#dashboard > .mainbody:nth-child(even) {
-  background-color: #fff;
+#dashboard > .mainbody {
+  /*
+  // 개발 소스에서 처리함.
+  &:nth-child(even) {
+    @extend .border-top;
+    @extend .border-bottom;
+    background-color: $component-bg;
+  }
+  */
 }
 
 /* --------------------------------------------------- */

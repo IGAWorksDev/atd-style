@@ -10,7 +10,7 @@
   grid-template-columns: $snb-width 1fr;
 
   min-width: $layout-min-width;
-  height: $layout-height;
+  min-height: $layout-height; //display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
   overflow: hidden;
 
   >.contentWrapper {
@@ -29,7 +29,7 @@
   grid-template-rows: $gnb-height 1fr;
 
   min-width: $layout-min-width;
-  height: $layout-height;
+  min-height: $layout-height; //display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
   overflow: hidden;
 
   > .contentWrapper {
