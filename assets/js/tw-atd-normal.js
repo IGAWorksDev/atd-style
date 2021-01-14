@@ -2,7 +2,7 @@ $(function () {
 
     // Header bar function
     $.scrollWindow = function () {
-        if ($(window).scrollTop() > 56) {
+        if ($(window).scrollTop() > 0) {
             $('.mainheader-sticky').addClass('is-fixed');
         } else {
             $('.mainheader-sticky').removeClass('is-fixed');
