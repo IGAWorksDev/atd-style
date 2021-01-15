@@ -22,4 +22,7 @@ $(function () {
 
     // Dropdown
     $('.dropdown-toggle').dropdown();
+
+    // Toast
+    $('.toast').toast();
 })
