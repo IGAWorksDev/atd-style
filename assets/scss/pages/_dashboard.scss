@@ -42,8 +42,8 @@
 // 메인 컨텐츠 보다 위에 떠있으며 부모 div .is-blank에 상태 클래스와 함께 사용하여,
 // 맨 하단의 내용을 가리지 않고 볼 수 있도록 할 것.
 .blankslate-floating-bar {
-  z-index: 10;
   position: fixed;
+  z-index: $zindex-fixed;
   right: 0;
   bottom: 0;
   left: 0;

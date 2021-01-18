@@ -4,7 +4,6 @@
   .mainheader__inner {
     @extend .border-bottom;
   }
-
   transition: $main-header-transition;
 }
 
@@ -12,12 +11,13 @@
 // scrollWindow 스크립트와 함께 사용됨 (../js/tw-atd-normal.js)
 .mainheader-sticky.is-fixed {
   position: fixed;
-  z-index: 1001;
+  z-index: $main-header-z-index;
   top: $gnb-height;
   left: 0;
   width: 100%;
   background-color: rgba($component-bg, 0.92);
   @extend .border-bottom;
+
   .mainheader__inner {
     @extend .border-bottom-0;
   }

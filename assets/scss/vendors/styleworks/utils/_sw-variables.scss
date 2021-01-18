@@ -321,8 +321,16 @@ $component-blank-bg: $component-bg-alt !default;
 $transition-base : all 0.15s ease-in-out !default;
 
 
+
 // Z-index
-$zindex-dropdown: 1000 !default;
+//
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-modal:                      1050 !default;
+$zindex-popover:                    1060 !default;
+$zindex-tooltip:                    1070 !default;
 
 
 
@@ -784,6 +792,7 @@ $alert-inner-spacer: 0.6rem;
 
 
 // Modals
+$modal-dialog-z-index: $zindex-modal !default;
 $modal-dialog-margin: $spacer * 2 !default;
 $modal-dialog-margin-y-sm-up: $spacer * 3 !default;
 
@@ -859,7 +868,6 @@ $datagrid-row-sticky-z-index: 1 !default;
 
 // Toast
 //
-$toast-z-index: 100;
 $toast-position-y: $spacer * 2;
 $toast-position-x: $spacer * 2;
 
