@@ -10440,7 +10440,7 @@ a.text-dark:hover, a.text-dark:focus {
           position: relative; }
           .gnb-navbar .navbar-nav .nav-item .nav-link[data-release]::before {
             position: absolute;
-            left: 0.8rem;
+            left: 1.6rem;
             top: 0;
             content: attr(data-release);
             color: #E53935;
