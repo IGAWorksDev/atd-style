@@ -75,12 +75,15 @@
           position: relative;
           &::before {
             position: absolute;
-            left: $spacer * 2;
-            top: 0;
+            right: $spacer;
+            top: $spacer + 0.2rem;
             content: attr(data-release);
-            color: $danger;
-            font-size: 1rem;
-            text-transform: uppercase;
+            display: block;
+            width: 27px;
+            height: 12px;
+            background: url(../images/gnb-item-new.svg) no-repeat;
+            text-indent: -1000px;
+            overflow: hidden;
           }
         }
       }

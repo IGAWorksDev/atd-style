@@ -10440,12 +10440,15 @@ a.text-dark:hover, a.text-dark:focus {
           position: relative; }
           .gnb-navbar .navbar-nav .nav-item .nav-link[data-release]::before {
             position: absolute;
-            left: 1.6rem;
-            top: 0;
+            right: 0.8rem;
+            top: 1rem;
             content: attr(data-release);
-            color: #E53935;
-            font-size: 1rem;
-            text-transform: uppercase; }
+            display: block;
+            width: 27px;
+            height: 12px;
+            background: url(../images/gnb-item-new.svg) no-repeat;
+            text-indent: -1000px;
+            overflow: hidden; }
     .gnb-navbar .navbar-nav .nav-item.dropdown.show .nav-link {
       background-color: rgba(52, 58, 64, 0.05); }
     .gnb-navbar .navbar-nav .nav-item.active {
