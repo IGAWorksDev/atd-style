@@ -172,6 +172,22 @@
 			text-decoration: none; 
 			opacity: 1;
 		}
+
+		&[data-release] {
+			position: relative;
+			&::before {
+				position: absolute;
+				right: $spacer;
+				top: $spacer + 0.2rem;
+				content: attr(data-release);
+				display: block;
+				width: 27px;
+				height: 12px;
+				background: url(../images/gnb-item-new.svg) no-repeat;
+				text-indent: -1000px;
+				overflow: hidden;
+			}
+		}
 	}  
 
 	// 활성 상태 스타일 

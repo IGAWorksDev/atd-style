@@ -116,6 +116,19 @@ html {
     .gnb__nav-item .gnb__nav-link:hover {
       text-decoration: none;
       opacity: 1; }
+    .gnb__nav-item .gnb__nav-link[data-release] {
+      position: relative; }
+      .gnb__nav-item .gnb__nav-link[data-release]::before {
+        position: absolute;
+        right: 1rem;
+        top: 1.2rem;
+        content: attr(data-release);
+        display: block;
+        width: 27px;
+        height: 12px;
+        background: url(../images/gnb-item-new.svg) no-repeat;
+        text-indent: -1000px;
+        overflow: hidden; }
   .gnb__nav-item.is-active {
     font-weight: bold; }
     .gnb__nav-item.is-active:after {
