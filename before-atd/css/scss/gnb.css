@@ -18,11 +18,17 @@ html {
   width: 100%;
   height: 56px;
   background-color: #FFFFFF;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
   @media (min-width: 768px) {
     .gnb {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row; } }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 .gnb__navbar-toggler {
   display: inline-block;
@@ -37,7 +43,8 @@ html {
   .gnb__navbar-toggler:focus, .gnb__navbar-toggler:active {
     background-color: transparent;
     color: #343a40;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     outline: none !important; }
   @media (min-width: 768px) {
     .gnb__navbar-toggler {
@@ -49,19 +56,30 @@ html {
   display: inline-block;
   vertical-align: middle;
   height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   @media (min-width: 768px) {
     .gnb__app {
       padding: 0 1rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       margin-right: 0; } }
   .gnb__app .app__logo {
     width: auto;
     height: 4rem;
-    align-self: flex-start; }
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
 
 .gnb__navbar-collapse {
   position: absolute;
@@ -78,6 +96,8 @@ html {
 
 @media (min-width: 768px) {
   .gnb__navbar-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; } }
 .gnb__navbar-inner .gnb__navbar-nav.mr-auto .gnb__nav-item .gnb__nav-link {
   font-weight: bold; }
@@ -88,8 +108,13 @@ html {
   margin: 0; }
   @media (min-width: 768px) {
     .gnb__navbar-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row; }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
       .gnb__navbar-nav.mr-auto {
         margin-right: auto; }
       .gnb__navbar-nav.ml-auto {
@@ -99,16 +124,27 @@ html {
   position: relative; }
   @media (min-width: 768px) {
     .gnb__nav-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row; } }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
   .gnb__nav-item .gnb__nav-link {
     display: block;
     color: #343a40;
     width: 100%;
     padding: 17px 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     @media (min-width: 768px) {
       .gnb__nav-item .gnb__nav-link {
         text-align: center;
@@ -120,8 +156,8 @@ html {
       position: relative; }
       .gnb__nav-item .gnb__nav-link[data-release]::before {
         position: absolute;
-        right: 1rem;
-        top: 1.2rem;
+        right: 0.6rem;
+        top: 0.8rem;
         content: attr(data-release);
         display: block;
         width: 27px;
@@ -215,12 +251,16 @@ html {
 }
 */
 .gnb__nav-notify {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .gnb__nav-notify .gnb__nav-link {
     padding: 0.75rem 1rem;
     font-size: 1.5rem; }
 
 .gnb__nav-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .gnb__nav-account .gnb__nav-link {
     padding: 0.75rem 16px; }
@@ -239,14 +279,15 @@ html {
   min-width: 1440px; }
 
 .gnb__app {
-  justify-content: center; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .gnb__app .app__logo {
     width: auto;
     height: 16px !important;
-    align-self: center; }
+    -ms-flex-item-align: center;
+        align-self: center; }
 
 .gnb__navbar-collapse {
   padding-left: 16px;
   padding-right: 16px; }
-
-/*# sourceMappingURL=gnb.css.map */

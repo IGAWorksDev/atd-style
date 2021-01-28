@@ -177,8 +177,8 @@
 			position: relative;
 			&::before {
 				position: absolute;
-				right: $spacer;
-				top: $spacer + 0.2rem;
+				right: 0.6rem;
+				top: 0.8rem;
 				content: attr(data-release);
 				display: block;
 				width: 27px;
