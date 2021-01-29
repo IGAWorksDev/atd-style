@@ -50,3 +50,26 @@
   }
 }
 
+
+.card-group {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+}
+
+.card-group-responsive {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: $component-bg;
+  border: $border-width solid $border-color;
+  overflow: auto;
+  .card-group {
+    flex-wrap: nowrap;
+    .card {
+      border: 0;
+      + .card {
+        @extend .border-left;
+      }
+    }
+  }
+}

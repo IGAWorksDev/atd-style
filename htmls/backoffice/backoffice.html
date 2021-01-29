@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>TW__Back Office</title>
+		<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	</head>
+	<body>
+		<!-- gnb -->
+		<nav class="gnb">
+			<a class="gnb-brand" href="#">
+				<img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
+			</a>
+			<div class="gnb-navbar">
+				<ul class="navbar-nav mr-auto font-weight-bold">
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-release="New">Dashboard</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+							 aria-expanded="false">Insight</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">서브메뉴 1</a>
+							<a class="dropdown-item" href="#">서브메뉴 2</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Audience</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Kakaomoment</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Report</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Asset</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Support</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="ico ic-cog"></i>
+							<span class="sr-only">Manage</span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Ad Accounts</a>
+							<a class="dropdown-item" href="#">Companies</a>
+							<a class="dropdown-item" href="#">Users</a>
+							<a class="dropdown-item" href="#">Billing</a>
+							<a class="dropdown-item" href="#">DMP Usage History</a>
+						</div>
+					</li>
+					<li class="nav-item nav-item-user dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+							 aria-expanded="false">
+							<i class="ico ic-user"></i>
+							<span class="sr-only">account.name@igaworks.com</span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+							<div class="dropdown-item">
+								장우영 <br>
+								<a href="#">
+									liam.jang@igaworks.com
+								</a>
+							</div>
+							<div class="dropdown-divider"></div>
+							<h6 class="dropdown-header">
+								채널 연결현황
+							</h6>
+							<div class="dropdown-item">
+								<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+								<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+							</div>
+							<div class="dropdown-item">
+								<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+								<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+							</div>
+							<div class="dropdown-item">
+								<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+								<a class="ml-1 " href="#">채널 연결하기</a>
+							</div>
+							<div class="dropdown-item">
+								<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+								<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+							</div>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">
+								로그아웃
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- /gnb -->
+
+		<!-- twWrapper -->
+		<div class="twWrapper-full">
+			<!-- contentWrapper -->
+			<div class="contentWrapper">
+				<!-- mainContent -->
+				<main id="backoffice" class="mainContent">
+					<!-- mainheader -->
+					<header class="mainheader">
+						<div class="container">
+							<div class="mainheader__inner d-flex align-items-center">
+								<div class="col-left">
+									<h2 class="font-weight-bold m-0">
+										Back Office
+									</h2>
+								</div>
+								<div class="col-right ml-auto">
+									기준 월 [드랍다운]
+									사용자
+									TW 전체 120
+									오디언스 60
+									통합 리포트 30
+								</div>
+							</div>
+						</div>
+					</header>
+					<!-- /mainheader -->
+					<!-- mainbody -->
+					<div class="mainbody pb-6">
+						<!-- container -->
+						<div class="container">
+							<!-- mainbody__header -->
+							<header class="mainbody__header pt-2">
+								<div class="d-flex align-items-center justify-content-between h-fixed-8 border-bottom">
+									<h3 class="h3 font-weight-bold mb-0">
+										플랫폼 이용자 수 및 사용률
+									</h3>
+								</div>
+							</header>
+							<!-- /mainbody__header -->
+
+							<!-- section -->
+							<section>
+								<!-- header -->
+								<header class="d-flex align-items-center justify-content-between h-fixed-7">
+									<div class="flex-left d-flex align-items-center">
+										<h4 class="font-size-lg font-weight-bold mb-0">
+											플랫폼 및 주요 메뉴 이용자 수
+										</h4>
+									</div>
+								</header>
+								<!-- /header -->
+								<!-- card -->
+								<div class="card">
+									<div class="card-header border-bottom-0">
+										<div class="form-inline">
+											<div class="form-group m-0 p-0">
+												<label for="company-select">
+													파트너사
+												</label>
+												<div class="form-group ml-1">
+													<select class="custom-select" id="company-select">
+														<option>파트너사 1</option>
+														<option>파트너사 2</option>
+														<option>파트너사 3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- card-body -->
+									<div class="card-body">
+										<figure class="highcharts-figure">
+											<div id="trends-users"></div>
+										</figure>
+										<script>
+											Highcharts.setOptions({
+												colors: ['#20c997', '#4169ff']
+											});
+											Highcharts.chart('trends-users', {
+												chart: {
+													type: 'line',
+													height: 320
+												},
+												title: {
+													text: ' '
+												},
+												xAxis: {
+													categories: ['1월 1주', '1월 2주', '1월 3주', '1월 4주', '2월 1주']
+												},
+												yAxis: [{
+													title: {
+														text: ' '
+													}
+												}, {
+													opposite: true,
+													title: {
+														text: ' '
+													}
+												}],
+												series: [{
+													name: '전체',
+													data: [200, 180, 187, 179, 199]
+												}, {
+													name: '오디언스',
+													data: [60, 80, 90, 75, 80]
+												}, {
+													name: '통합 리포트',
+													data: [70, 85, 50, 75, 70]
+												}]
+											});
+										</script>
+									</div>
+									<!-- /card-body -->
+									<!-- datagrid -->
+									<div class="datagrid-responsive border-top">
+										<div class="datagrid datagrid-hover datagrid-bordered datagrid-align-center" role="grid" aria-describedby="table-title">
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="columnheader" style="min-width: 5rem; width: 5rem;">
+														<div class="datagrid-cell-inner">
+														구분
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner">
+														TW 전체
+														<span data-toggle="tooltip" data-placement="top" title="활성 상태인 전체 이용자 중 해당 주에 TW에 1회 이상 로그인한 이용자의 비중입니다.">
+															<i class="ico ic-info-circle"></i>
+														</span>
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner">
+														오디언스
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner">
+														통합 리포트
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row is-muted" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 5rem; width: 5rem;">
+														<div class="datagrid-cell-inner">
+															주간평균
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															120 (60.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+														60 (50.3%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+														30 (25.4%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 5rem; width: 5rem;">
+														<div class="datagrid-cell-inner">
+															1월 4주
+															<span class="text-muted"><small>(2020. 1. 27 ~ 2. 2)</small></span>
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+														120 (60.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+														60 (50.3%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+														30 (25.4%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 5rem; width: 5rem;">
+														<div class="datagrid-cell-inner">
+															1월 3주
+															<span class="text-muted"><small>(2020. 1. 20 ~ 1. 26)</small></span>
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															120 (60.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															60 (50.3%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															30 (25.4%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 5rem; width: 5rem;">
+														<div class="datagrid-cell-inner">
+															1월 2주
+															<span class="text-muted"><small>(2020. 1. 13 ~ 1. 19)</small></span>
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															120 (60.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															60 (50.3%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															30 (25.4%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 5rem; width: 5rem;">
+														<div class="datagrid-cell-inner">
+															1월 1주
+															<span class="text-muted"><small>(2020. 1. 06 ~ 1. 12)</small></span>
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															120 (60.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															60 (50.3%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; width: 15rem;">
+														<div class="datagrid-cell-inner text-right">
+															30 (25.4%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+										</div>
+									</div>
+									<!-- /datagrid -->
+								</div>
+								<!-- /card -->
+							</section>
+							<!-- /section -->
+
+							<!-- section -->
+							<section class="pt-2">
+								<!-- header -->
+								<header class="d-flex align-items-center justify-content-between h-fixed-7">
+									<div class="flex-left d-flex align-items-center">
+										<h4 class="font-size-lg font-weight-bold mb-0">
+											이용자 및 광고주 수
+										</h4>
+									</div>
+								</header>
+								<!-- /header -->
+								<div class="card-group">
+									<!-- card -->
+									<div class="card">
+										<div class="card-body py-2">
+											<div class="warp">
+												<h5>
+													누적 계정 발급 수
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>280</strong></span>
+												</div>
+											</div>
+											<div class="wrap mt-3">
+												<h5>
+													신규 계정 발급 수
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>30</strong></span>
+													<span class="ml-2">
+														<span class="text-danger"><i class="ico ic-caret-bottom"></i> 13</span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /card -->
+									<!-- card -->
+									<div class="card">
+										<div class="card-body py-2">
+											<div class="warp">
+												<h5>
+													전체 이용자 수
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>250</strong></span>
+													<span class="ml-2">
+														<span class="text-danger"><i class="ico ic-caret-bottom"></i> 12</span>
+													</span>
+												</div>
+											</div>
+											<div class="warp mt-3">
+												<h5>
+													신규 이용자 수
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>13</strong></span>
+													<span class="ml-2">
+														<span class="text-danger"><i class="ico ic-caret-bottom"></i> 17</span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /card -->
+									<!-- card -->
+									<div class="card">
+										<div class="card-body py-2">
+											<div class="wrap">
+												<h5>
+													누적 광고주 수
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>250</strong></span>
+													<span class="ml-2">
+														<span class="text-danger"><i class="ico ic-caret-bottom"></i> 12</span>
+													</span>
+												</div>
+											</div>
+											<div class="wrap mt-3">
+												<h5>
+													신규 광고주 수
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>30</strong></span>
+													<span class="ml-2">
+														<span class="text-danger"><i class="ico ic-caret-bottom"></i> 13</span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /card -->
+								</div>
+								<!-- /card-group -->
+							</section>
+							<!-- /section -->
+							<!-- section -->
+							<section class="pt-2">
+								<!-- header -->
+								<header class="d-flex align-items-center justify-content-between h-fixed-7">
+									<div class="flex-left d-flex align-items-center">
+										<h4 class="font-size-lg font-weight-bold mb-0">
+											채널 별 연결 된 광고 계정 수
+										</h4>
+									</div>
+								</header>
+								<!-- /header -->
+								<div class="card-group">
+									<div class="card">
+										<div class="card-body py-2">
+												<h5>
+													전체
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>3,500</strong></span>
+												</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body py-2">
+											<h5>
+												Google Ads
+											</h5>
+											<div class="mt-1 mb-0">
+												<span class="h2 mb-0"><strong>2,000</strong></span>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body py-2">
+												<h5>
+													Facebook
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>1,000</strong></span>
+												</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body py-2">
+												<h5>
+													TW DSP
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>500</strong></span>
+												</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body py-2">
+												<h5>
+													Kakaomoment
+												</h5>
+												<div class="mt-1 mb-0">
+													<span class="h2 mb-0"><strong>500</strong></span>
+												</div>
+										</div>
+									</div>
+								</div>
+								<!-- /card-group -->
+							</section>
+							<!-- /section -->
+						</div>
+						<!-- /container -->
+					</div>
+					<!-- /mainbody -->
+
+					<!-- mainbody -->
+					<div class="mainbody pb-6 bg-white border-top">
+						<!-- container -->
+						<div class="container">
+							<!-- mainbody__header -->
+							<header class="mainbody__header pt-2">
+								<div class="d-flex align-items-center justify-content-between h-fixed-8 border-bottom">
+									<h3 class="h3 font-weight-bold mb-0">
+										오디언스 사용 지표
+									</h3>
+								</div>
+							</header>
+							<!-- /mainbody__header -->
+							<!-- section -->
+							<section class="pt-2">
+								<!-- header -->
+								<header class="d-flex align-items-center justify-content-between h-fixed-7">
+									<div class="flex-left d-flex align-items-center">
+										<h4 class="font-size-lg font-weight-bold mb-0">
+											오디언스 생성 수 및 사용률
+										</h4>
+									</div>
+								</header>
+								<!-- /header -->
+								<!-- card -->
+								<div class="card">
+									<div class="card-body">
+										하이차트
+									</div>
+								</div>
+								<!-- /card -->
+							</section>
+							<!-- /section -->
+							<!-- section -->
+							<section class="pt-2">
+								<!-- header -->
+								<header class="d-flex align-items-center justify-content-between h-fixed-7">
+									<div class="flex-left d-flex align-items-center">
+										<h4 class="font-size-lg font-weight-bold mb-0">
+											오디언스 종류 별 오디언스 생성 수 및 비중
+										</h4>
+									</div>
+									<div class="flex-right d-flex align-items-center mr-2">
+										신규/누적
+
+										<div class="form-inline ml-auto">
+											<div class="form-group m-0 p-0">
+												<label for="audience-usage-month" class="m-0 mr-1 d-none">
+													월 선택
+												</label>
+												<div class="form-group m-0 p-0">
+													<select class="custom-select" id="audience-usage-month">
+														<option>1월 전체</option>
+														<option>2월 전체</option>
+														<option>3월 전체</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</header>
+								<!-- /header -->
+								<!-- card -->
+								<div class="card">
+									<!-- datagrid -->
+									<div class="datagrid-responsive border-top">
+										<div class="datagrid datagrid-hover datagrid-bordered datagrid-align-center" role="grid" aria-describedby="table-title">
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															구분
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															오디언스 생성 수
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															비중
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															오디언스 사용 수
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															사용률
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row is-muted" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															전체
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															100%
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															10.0%
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															TW 카테고리
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															100%
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															10.0%
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															페르소나
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															100%
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															10.0%
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															파일 업로드
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															100%
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															10.0%
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															오프라인 업종
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															100%
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															10.0%
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															포스트백 추출
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															100%
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,542
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															10.0%
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+										</div>
+									</div>
+									<!-- /datagrid -->
+								</div>
+								<!-- /card -->
+							</section>
+							<!-- /section -->
+							<!-- section -->
+							<section class="pt-2">
+								<!-- header -->
+								<header class="d-flex align-items-center justify-content-between h-fixed-7">
+									<div class="flex-left d-flex align-items-center">
+										<h4 class="font-size-lg font-weight-bold mb-0">
+											오디언스 사용 지표
+										</h4>
+									</div>
+								</header>
+								<!-- /header -->
+								<!-- card -->
+								<div class="card">
+									<div class="card-header d-flex align-items-center">
+										<h5 class="mb-0">
+											오디언스 종류 별 사용율(신규)
+										</h5>
+										<div class="form-inline ml-auto">
+											<div class="form-group m-0 p-0">
+												<label for="audience-usage-month" class="m-0 mr-1 d-none">
+													월 선택
+												</label>
+												<div class="form-group m-0 p-0">
+													<select class="custom-select" id="audience-usage-month">
+														<option>1월 전체</option>
+														<option>2월 전체</option>
+														<option>3월 전체</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- card-body -->
+									<div class="card-body">
+										<!-- row -->
+										<div class="row">
+											<!-- col -->
+											<div class="col-6 py-2">
+												<figure class="highcharts-figure m-0">
+													<div id="audience__usage"></div>
+												</figure>
+												<script>
+													Highcharts.setOptions({
+														colors: ['#4169ff', '#20c997', '#cce6ff']
+													});
+													Highcharts.chart('audience__usage', {
+														chart: {
+															height: 280,
+															plotBackgroundColor: null,
+															plotBorderWidth: null,
+															plotShadow: false,
+															type: 'pie'
+														},
+														title: {
+															text: ''
+														},
+														tooltip: {
+															pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+														},
+														accessibility: {
+															point: {
+																valueSuffix: '%'
+															}
+														},
+														plotOptions: {
+															pie: {
+																allowPointSelect: true,
+																cursor: 'pointer',
+																dataLabels: {
+																	enabled: false
+																},
+																showInLegend: true,
+																size: '100%',
+																innerSize: '70%'
+															}
+														},
+														series: [{
+															name: 'Usage',
+															colorByPoint: true,
+															data: [{
+																name: 'Bora',
+																y: 61.41
+															}, {
+																name: 'TRADINGWORKS',
+																y: 11.84
+															}]
+														}]
+													});
+												</script>
+											</div>
+											<!-- /col -->
+											<!-- col -->
+											<div class="col-6 py-2">
+												<figure class="highcharts-figure m-0">
+													<div id="audience__kind"></div>
+												</figure>
+												<script>
+													Highcharts.setOptions({
+														colors: ['#4169ff', '#20c997', '#cce6ff']
+													});
+													Highcharts.chart('audience__kind', {
+														chart: {
+															height: 280,
+															plotBackgroundColor: null,
+															plotBorderWidth: null,
+															plotShadow: false,
+															type: 'pie'
+														},
+														title: {
+															text: ''
+														},
+														tooltip: {
+															pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+														},
+														accessibility: {
+															point: {
+																valueSuffix: '%'
+															}
+														},
+														plotOptions: {
+															pie: {
+																allowPointSelect: true,
+																cursor: 'pointer',
+																dataLabels: {
+																	enabled: false
+																},
+																showInLegend: true,
+																size: '100%',
+																innerSize: '70%'
+															}
+														},
+														series: [{
+															name: 'Kind',
+															colorByPoint: true,
+															data: [{
+																name: 'TW 카테고리',
+																y: 61.41
+															}, {
+																name: '페르소나',
+																y: 11.84
+															}, {
+																name: '파일 업로드',
+																y: 11.84
+															}, {
+																name: '오프라인 업종',
+																y: 11.84
+															}]
+														}]
+													});
+												</script>
+											</div>
+											<!-- /col -->
+										</div>
+										<!-- /row -->
+									</div>
+									<!-- /card-body -->
+									<!-- datagrid -->
+									<div class="datagrid-responsive border-top">
+										<div class="datagrid datagrid-hover datagrid-bordered datagrid-align-center" role="grid" aria-describedby="table-title">
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															구분
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															전체 생성 수
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Google Ads 사용
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Facebook 사용
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															TW DSP 사용
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Kakaomoment 사용
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row is-muted" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															전체
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															1,000
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															400(40.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															TW 카테고리
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															1,000
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															400(40.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															페르소나
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															1,000
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															400(40.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															파일 업로드
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															1,000
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															400(40.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															오프라인 업종
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															1,000
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															400(40.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															포스트백 추출
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															1,000
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															400(40.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															300(30.1%)
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+										</div>
+									</div>
+									<!-- /datagrid -->
+								</div>
+								<!-- /card -->
+							</section>
+							<!-- /section -->
+						</div>
+						<!-- /container -->
+					</div>
+					<!-- /mainbody -->
+
+					<!-- mainbody -->
+					<div class="mainbody pb-6 border-top">
+						<!-- container -->
+						<div class="container">
+							<!-- mainbody__header -->
+							<header class="mainbody__header pt-2">
+								<div class="d-flex align-items-center justify-content-between h-fixed-8 border-bottom">
+									<h3 class="h3 font-weight-bold mb-0">
+										메뉴 별 사용 지표
+									</h3>
+								</div>
+							</header>
+							<!-- /mainbody__header -->
+							<!-- section -->
+							<section class="pt-2">
+								<!-- header -->
+								<header class="d-flex align-items-center justify-content-between h-fixed-7">
+									<div class="flex-left d-flex align-items-center">
+										<h4 class="font-size-lg font-weight-bold mb-0">
+											메뉴 별 UV/PV
+										</h4>
+									</div>
+								</header>
+								<!-- /header -->
+
+								<!-- card-group-responsive -->
+								<div class="card-group-responsive">
+									<!-- card-group -->
+									<div class="card-group">
+										<!-- card -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="card-title mb-0">
+													Market Insight
+												</h5>
+											</div>
+											<div class="card-body py-2">
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-1"></i>
+														Unique view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-2"></i>
+														Page view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<figure class="highcharts-figure m-0">
+													<div id="menu-usage__market-insight"></div>
+												</figure>
+												<script>
+													Highcharts.chart('menu-usage__market-insight', {
+														chart: {
+															height: 160,
+															width: 320,
+															type: 'line'
+														},
+														title: {
+															text: ' '
+														},
+														xAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														yAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														legend: {
+															enabled: false
+														},
+														series: [{
+															name: 'Unique view',
+															color: '#20c997',
+															data: [30, 26, 34, 50, 28]
+														}, {
+															name: 'Page view',
+															color: '#4169ff',
+															data: [36, 36, 36, 36, 36]
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<!-- /card -->
+										<!-- card -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="card-title mb-0">
+													Audience
+												</h5>
+											</div>
+											<div class="card-body py-2">
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-1"></i>
+														Unique view
+													</dt>
+													<dd class="font-size-lg font-weight-bold ml-2 mb-0">
+														3,556,950
+													</dd>
+												</dl>
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-2"></i>
+														Page view
+													</dt>
+													<dd class="font-size-lg font-weight-bold ml-2 mb-0">
+														3,556,950
+													</dd>
+												</dl>
+												<figure class="highcharts-figure m-0">
+													<div id="menu-usage__audience"></div>
+												</figure>
+												<script>
+													Highcharts.chart('menu-usage__audience', {
+														chart: {
+															height: 148,
+															width: 320,
+															type: 'line'
+														},
+														title: {
+															text: ' '
+														},
+														xAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														yAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														legend: {
+															enabled: false
+														},
+														series: [{
+															name: 'Unique view',
+															color: '#20c997',
+															data: [30, 26, 34, 50, 28]
+														}, {
+															name: 'Page view',
+															color: '#4169ff',
+															data: [36, 36, 36, 36, 36]
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<!-- /card -->
+										<!-- card -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="card-title mb-0">
+													Intergrated Report
+												</h5>
+											</div>
+											<div class="card-body py-2">
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-1"></i>
+														Unique view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-2"></i>
+														Page view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<figure class="highcharts-figure m-0">
+													<div id="menu-usage__intergrated-report"></div>
+												</figure>
+												<script>
+													Highcharts.chart('menu-usage__intergrated-report', {
+														chart: {
+															height: 148,
+															width: 320,
+															type: 'line'
+														},
+														title: {
+															text: ' '
+														},
+														xAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														yAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														legend: {
+															enabled: false
+														},
+														series: [{
+															name: 'Unique view',
+															color: '#20c997',
+															data: [30, 26, 34, 50, 28]
+														}, {
+															name: 'Page view',
+															color: '#4169ff',
+															data: [36, 36, 36, 36, 36]
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<!-- /card -->
+										<!-- card -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="card-title mb-0">
+													Ch.Google Ads
+												</h5>
+											</div>
+											<div class="card-body py-2">
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-1"></i>
+														Unique view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-2"></i>
+														Page view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<figure class="highcharts-figure m-0">
+													<div id="menu-usage__google-ads"></div>
+												</figure>
+												<script>
+													Highcharts.chart('menu-usage__google-ads', {
+														chart: {
+															height: 148,
+															width: 320,
+															type: 'line'
+														},
+														title: {
+															text: ' '
+														},
+														xAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														yAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														legend: {
+															enabled: false
+														},
+														series: [{
+															name: 'Unique view',
+															color: '#20c997',
+															data: [30, 26, 34, 50, 28]
+														}, {
+															name: 'Page view',
+															color: '#4169ff',
+															data: [36, 36, 36, 36, 36]
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<!-- /card -->
+										<!-- card -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="card-title mb-0">
+													Ch.Facebook
+												</h5>
+											</div>
+											<div class="card-body py-2">
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-1"></i>
+														Unique view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-2"></i>
+														Page view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<figure class="highcharts-figure m-0">
+													<div id="menu-usage__facebook"></div>
+												</figure>
+												<script>
+													Highcharts.chart('menu-usage__facebook', {
+														chart: {
+															height: 148,
+															width: 320,
+															type: 'line'
+														},
+														title: {
+															text: ' '
+														},
+														xAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														yAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														legend: {
+															enabled: false
+														},
+														series: [{
+															name: 'Unique view',
+															color: '#20c997',
+															data: [30, 26, 34, 50, 28]
+														}, {
+															name: 'Page view',
+															color: '#4169ff',
+															data: [36, 36, 36, 36, 36]
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<!-- /card -->
+										<!-- card -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="card-title mb-0">
+													Ch.TW DSP
+												</h5>
+											</div>
+											<div class="card-body py-2">
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-1"></i>
+														Unique view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<dl>
+													<dt class="font-weight-normal mb-1">
+														<i class="ico ic-ball text-legend-2"></i>
+														Page view
+													</dt>
+													<dd class="font-size-lg font-weight-bold mb-0 ml-2">
+														3,556,950
+													</dd>
+												</dl>
+												<figure class="highcharts-figure m-0">
+													<div id="menu-usage__tw-dsp"></div>
+												</figure>
+												<script>
+													Highcharts.chart('menu-usage__tw-dsp', {
+														chart: {
+															height: 148,
+															width: 320,
+															type: 'line'
+														},
+														title: {
+															text: ' '
+														},
+														xAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														yAxis: {
+															title: {
+																enabled: false
+															},
+															labels: {
+																enabled: false
+															}
+														},
+														legend: {
+															enabled: false
+														},
+														series: [{
+															name: 'Unique view',
+															color: '#20c997',
+															data: [30, 26, 34, 50, 28]
+														}, {
+															name: 'Page view',
+															color: '#4169ff',
+															data: [36, 36, 36, 36, 36]
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<!-- /card -->
+									</div>
+									<!-- /card-group -->
+								</div>
+								<!-- /card-group-responsive -->
+
+								<!-- card -->
+								<div class="card mt-2">
+									<!-- datagrid -->
+									<div class="datagrid-responsive">
+										<div class="datagrid datagrid-hover datagrid-bordered datagrid-align-center" role="grid" aria-describedby="table-title">
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															메뉴
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Unique view
+														</div>
+													</div>
+													<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Page view
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+											<!-- datagrid-rowgroup -->
+											<div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Market Insight
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															451
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,541
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Audience
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															451
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,541
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Integrated Report
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															451
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,541
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Ch. Google Ads
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															451
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,541
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Ch. Facebook
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															451
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,541
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+												<!-- datagrid-row -->
+												<div class="datagrid-row" role="row">
+													<div class="datagrid-cell" role="rowheader" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner">
+															Ch. TW DSP
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															451
+														</div>
+													</div>
+													<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; width: 10rem;">
+														<div class="datagrid-cell-inner text-right">
+															3,541
+														</div>
+													</div>
+												</div>
+												<!-- /datagrid-row -->
+											</div>
+											<!-- /datagrid-rowgroup -->
+										</div>
+									</div>
+									<!-- /datagrid -->
+								</div>
+								<!-- /card -->
+							</section>
+							<!-- section -->
+						</div>
+						<!-- /container -->
+					</div>
+					<!-- /mainbody -->
+				</main>
+				<!-- mainContent -->
+			</div>
+			<!-- /contentWrapper -->
+		</div>
+		<!-- /twWrapper -->
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/tw-atd-normal.js"></script>
+	</body>
+</html>

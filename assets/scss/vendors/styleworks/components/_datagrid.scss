@@ -186,7 +186,6 @@
 }
 
 // Stripe
-//
 // 홀수 행에 배경색 추가
 .datagrid-striped > .datagrid-body .datagrid-row {
   &:nth-child(odd) {
@@ -216,5 +215,16 @@
 .datagrid-body > .datagrid-row.is-muted {
   .datagrid-cell {
     @include is-component-muted($datagrid-muted-color, $datagrid-muted-bg);
+  }
+}
+
+// Align centered
+.datagrid-align-center{
+  .datagrid-cell {
+    @extend .d-flex;
+    @extend .align-items-center;
+    .datagrid-cell-inner {
+      width: 100%;
+    }
   }
 }
