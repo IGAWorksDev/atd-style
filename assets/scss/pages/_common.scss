@@ -1,11 +1,11 @@
-
-
 // 광고계정 드랍다운
 #dropdown-adaccount-button {
   max-width: 280px;
 }
+
 #dropdown-adaccount-button + .dropdown-menu {
   max-width: 280px;
+
   .dropdown-items {
     max-height: 27rem;
     overflow: auto;
@@ -17,6 +17,7 @@
 #list-columns-setting {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
   > li {
     padding-top: ($spacer / 2);
     padding-bottom: ($spacer / 2);
@@ -28,6 +29,7 @@
   .tab-item {
     border-top-color: transparent;
   }
+
   .tab-item:first-child {
     border-left-color: transparent;
   }
@@ -44,4 +46,7 @@
     border-top: 1px dashed $border-color;
   }
 }
+
+
+
 

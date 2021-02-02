@@ -104,11 +104,13 @@
 // btn-outlined-{$theme-colors}
 //
 @mixin button-outlined-variant($color, $border,
-  $active-color: darken($color, 4%), $active-background: rgba($color, 0.1), $active-border: $border) {
+  $active-color: darken($color, 8%), $active-background: rgba($color, 0.2), $active-border: $border) {
 
   color: $color;
   border-color: $color;
 
+  .btn-check:checked + &,
+  .btn-check:active + &,
   &:hover,
   &:active,
   &.is-active {

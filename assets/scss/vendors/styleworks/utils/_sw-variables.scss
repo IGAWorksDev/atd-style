@@ -156,14 +156,14 @@ $font-weight-bold: 700;
 $h1-font-size: 2.8rem;
 $h2-font-size: 2.4rem;
 $h3-font-size: 2rem;
-$h4-font-size: 1.8rem;
+$h4-font-size: 1.6rem;
 $h5-font-size: 1.4rem;
 $h6-font-size: 1.2rem;
 
 $h1-line-height: 4.2rem;
 $h2-line-height: 3.6rem;
 $h3-line-height: 3rem;
-$h4-line-height: 2.6rem;
+$h4-line-height: 2.4rem;
 $h5-line-height: 2.2rem;
 $h6-line-height: 1.8rem;
 
@@ -510,8 +510,6 @@ $input-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !d
 
 $input-placeholder-color: $gray-500 !default;
 
-
-
 $input-group-addon-bg:  $gray-100 !default;
 $input-group-addon-color: $gray-800 !default;
 
@@ -553,6 +551,9 @@ $form-check-inline-input-margin-x: $form-check-input-margin-x !default;
 $form-text-margin-top: $input-padding-y;
 
 $form-group-margin-bottom: ($spacer * 2) !default;
+
+
+$form-check-btn-check-disabled-opacity: 0;
 
 
 // Custom forms
@@ -685,6 +686,7 @@ $form-validation-states: map-merge(
         ),
         $form-validation-states
 );
+
 
 
 

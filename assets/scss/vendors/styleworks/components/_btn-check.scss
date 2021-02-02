@@ -1,0 +1,33 @@
+
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+
+  &[disabled],
+  &:disabled {
+    + .btn {
+      pointer-events: none;
+      filter: none;
+      opacity: $form-check-btn-check-disabled-opacity;
+    }
+  }
+}
+
+
+.btn {
+  .btn-check:focus + & {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + & {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
