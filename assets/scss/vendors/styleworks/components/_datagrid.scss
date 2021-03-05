@@ -25,16 +25,18 @@
   border-collapse: collapse;
   align-items: stretch;
   justify-content: flex-start;
+  flex: 1 1 auto;
 }
 
 @mixin datagrid-flex-cell() {
-  flex: 1 1 auto;
   border-width: 0;
   border-style: solid;
   border-color: $datagrid-border-color;
   padding: $datagrid-padding-y $datagrid-padding-x;
   background-color: $datagrid-bg;
   min-width: 8rem;
+  flex-basis: auto;
+  flex-grow: 1;
 }
 
 @mixin data-grid-sticky() {
@@ -67,6 +69,7 @@
 // Gridcell
 // <td>요소의 기능을 모방하는 셀
 //
+
 .datagrid-cell {
   @include datagrid-flex-cell();
   color: $datagrid-color;
@@ -77,6 +80,35 @@
     font-weight: bolder;
   }
 }
+
+
+// rowspan
+// 2개 이상의 행을 갖는 grid cell 스타일
+// datagrid-row를 포함하므로 특정한 스펙은 갖고 있지 않음.
+
+.datagrid-rowspan {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+
+// colspan 셀을 2개 이상의 열에 걸칠 경우
+.datagrid-colspan {
+  padding: 0;
+  overflow: hidden;
+  align-items: stretch;
+  > .datagrid-row:last-child {
+    > .datagrid-cell {
+      border-bottom: 0;
+    }
+  }
+}
+
+
+
+
 
 // Selection Gridcell
 .datagrid-cell-select {
@@ -95,10 +127,16 @@
   }
 }
 
-// Header 안의 Gridcell
-.datagrid-body{
+// Body 안의 Gridcell
+.datagrid-body {
   > .datagrid-row .datagrid-cell {
     border-top-width: $datagrid-border-width;
+
+    &.datagrid-colspan {
+      .datagrid-row .datagrid-cell {
+        border-top-width: 0;
+      }
+    }
   }
 }
 
@@ -145,17 +183,6 @@
   }
 }
 
-
-// rowspan
-// 2개 이상의 행을 갖는 grid cell 스타일
-// datagrid-row를 포함하므로 특정한 스펙은 갖고 있지 않음.
-
-.datagrid-rowspan {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
 
 
 
