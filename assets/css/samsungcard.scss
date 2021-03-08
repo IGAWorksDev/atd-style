@@ -4,9 +4,9 @@
 }
 
 
-.mainContent#samsungcard-report {
-  .card-report .datagrid {
-    min-width: 1024px - (16px * 2);
-    max-width: calc(100vw - (16px * 2));
+.mainContent#samsungCard-report {
+  .card {
+   max-width: calc(100vw - (16px * 2));
+   margin: 16px auto;
   }
 }

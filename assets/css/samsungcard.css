@@ -1,3 +1,3 @@
 .twWrapper-full { min-width: 100vw; }
 
-.mainContent#samsungcard-report .card-report .datagrid { min-width: 992px; max-width: calc(100vw - (16px * 2)); }
+.mainContent#samsungCard-report .card { max-width: calc(100vw - (16px * 2)); margin: 16px auto; }
