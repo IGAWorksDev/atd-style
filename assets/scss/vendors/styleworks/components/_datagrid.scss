@@ -85,7 +85,6 @@
 // rowspan
 // 2개 이상의 행을 갖는 grid cell 스타일
 // datagrid-row를 포함하므로 특정한 스펙은 갖고 있지 않음.
-
 .datagrid-rowspan {
   flex: 1 1 auto;
   display: flex;
@@ -94,7 +93,10 @@
 }
 
 
-// colspan 셀을 2개 이상의 열에 걸칠 경우
+// colspan
+// 셀을 2개 이상의 열에 걸 칠 경우
+// row를 포함.
+// 포함하는 셀의 너비를 함한 크기를 갖고 있어야 하며, sticky되는 셀이 있을 경우 대응할 수 있음.
 .datagrid-colspan {
   padding: 0;
   overflow: hidden;
