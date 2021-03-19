@@ -3,6 +3,8 @@ $viewport-width: 1440px;
 
 .mainContent#samsungCard-report {
   .card {
+    min-width: 100%;
+    width: 100%;
     max-width: calc(#{$viewport-width} - (16px * 2));
     max-height: calc(100vh - (16px * 2) - 5.6rem);
     margin: 16px auto;

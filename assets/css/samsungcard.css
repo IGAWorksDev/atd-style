@@ -1,1 +1,1 @@
-.mainContent#samsungCard-report .card { max-width: calc(1440px - (16px * 2)); max-height: calc(100vh - (16px * 2) - 5.6rem); margin: 16px auto; }
+.mainContent#samsungCard-report .card { min-width: 100%; width: 100%; max-width: calc(1440px - (16px * 2)); max-height: calc(100vh - (16px * 2) - 5.6rem); margin: 16px auto; }
