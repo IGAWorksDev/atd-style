@@ -1,14 +1,9 @@
 
-.twWrapper-full {
-  min-width: 100vw !important;
-  min-height: 100vh !important;
-}
-
 
 .mainContent#samsungCard-report {
   .card {
-   max-width: calc(100vw - (16px * 2));
+    max-width: calc(100vw - (16px * 2));
     max-height: calc(100vh - (16px * 2) - 5.6rem);
-   margin: 16px auto;
+    margin: 16px auto;
   }
 }
