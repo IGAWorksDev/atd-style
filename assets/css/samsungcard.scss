@@ -1,9 +1,14 @@
 
+$viewport-width: 1440px;
 
 .mainContent#samsungCard-report {
   .card {
-    max-width: calc(100vw - (16px * 2));
+    max-width: calc(#{$viewport-width} - (16px * 2));
     max-height: calc(100vh - (16px * 2) - 5.6rem);
     margin: 16px auto;
+
+    @media screen and (min-width: 1440px) {
+      max-width: calc(100vw - (16px * 2));
+    }
   }
 }
