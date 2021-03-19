@@ -39,10 +39,11 @@
   flex-grow: 1;
 }
 
-@mixin data-grid-sticky() {
+@mixin datagrid-sticky() {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: $datagrid-row-sticky-z-index;
 }
 
 
@@ -101,11 +102,6 @@
   padding: 0;
   overflow: hidden;
   align-items: stretch;
-  > .datagrid-row:last-child {
-    > .datagrid-cell {
-      border-bottom: 0;
-    }
-  }
 }
 
 
@@ -127,18 +123,26 @@
   > .datagrid-row:last-child .datagrid-cell {
     border-bottom-color: darken($datagrid-border-color, 8%); // header와 body의 셀 구분을 위해 마지막 행의 셀은 진한 컬러를 갖고 있음.
   }
+
+  > .datagrid-row:last-child .datagrid-colspan {
+    .datagrid-row:last-child .datagrid-cell {
+      border-bottom-width: $datagrid-border-width !important;
+      border-bottom-color: darken($datagrid-border-color, 8%);
+    }
+  }
 }
 
 // Body 안의 Gridcell
 .datagrid-body {
   > .datagrid-row .datagrid-cell {
     border-top-width: $datagrid-border-width;
-
+    /*
     &.datagrid-colspan {
       .datagrid-row .datagrid-cell {
         border-top-width: 0;
       }
     }
+  */
   }
 }
 
@@ -163,7 +167,7 @@
 // rowgroup을 움직이지 않게 할 경우
 // rowgroup과 함께 사용.
 .datagrid-rowgroup-sticky {
-  @include data-grid-sticky();
+  @include datagrid-sticky();
   z-index: $datagrid-rowgroup-sticky-z-index;
 }
 
@@ -171,10 +175,23 @@
 // row 안에 사용하며, 1개 이상의 gridcell을 포함하고 있어야 함
 .datagrid-row-sticky {
   @include datagrid-flex-row();
-  @include data-grid-sticky();
-  z-index: $datagrid-row-sticky-z-index;
+  @include datagrid-sticky();
 
   // sticky effect style
+  &:after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba($black, 0.1) 0%, rgba($white, 0) 100%);
+  }
+}
+//.datagrid-row-absolute 추가--2020.03.19
+// 스크롤 영역이 넓어 고정된 열이 스크롤 되는 현상을 없애기 위해 추가됨.
+.datagrid-row-absolute {
+  @include datagrid-sticky();
+  position: absolute;
   &:after {
     content: "";
     position: absolute;
@@ -187,7 +204,6 @@
 
 
 
-
 // Variables Styles
 //
 // ----------------------------------------
@@ -196,6 +212,7 @@
 //
 .datagrid-responsive {
   overflow: auto;
+
 }
 
 // Bordered
@@ -211,6 +228,18 @@
       border-left-width: $datagrid-border-width;
       border-left-color: $datagrid-border-color;
     }
+  }
+  .datagrid-cell + .datagrid-colspan {
+    .datagrid-row .datagrid-cell:first-child {
+      border-left-width: $datagrid-border-width;
+      border-left-color: $datagrid-border-color;
+    }
+  }
+
+  .datagrid-colspan + .datagrid-cell,
+  .datagrid-rowspan + .datagrid-cell {
+    border-left-width: $datagrid-border-width;
+    border-left-color: $datagrid-border-color;
   }
 }
 

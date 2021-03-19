@@ -1093,8 +1093,8 @@ textarea.form-control { height: auto; }
 
 .datagrid-rowgroup-sticky { position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 501; }
 
-.datagrid-row-sticky { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; position: relative; border-collapse: collapse; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; }
-.datagrid-row-sticky:after { content: ""; position: absolute; right: -4px; width: 4px; height: 100%; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0))); background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
+.datagrid-row-sticky, .datagrid-row.sticky { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; position: relative; border-collapse: collapse; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; }
+.datagrid-row-sticky:after, .datagrid-row.sticky:after { content: ""; position: absolute; right: -4px; width: 4px; height: 100%; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0))); background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
 
 .datagrid-responsive { overflow: auto; }
 
