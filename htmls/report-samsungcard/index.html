@@ -32,6 +32,42 @@
     <main id="samsungCard-report" class="mainContent">
       <!-- container -->
       <div class="container-fluid">
+        <!-- toolbar -->
+        <div class="toolbar d-flex align-items-center h-fixed-8">
+          <form class="form-inline">
+
+              <select class="custom-select">
+                <option>2021년</option>
+                <option>2020년</option>
+                <option>2019년</option>
+              </select>
+              <select class="custom-select ml-1">
+                <option>03월</option>
+                <option>02월</option>
+                <option>01월</option>
+              </select>
+
+            <div class="ml-3 d-flex">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="addColumn-inline-1" name="addColumn">
+                <label class="form-check-label" for="addColumn-inline-1">유입계획</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="addColumn-inline-2" name="addColumn">
+                <label class="form-check-label" for="addColumn-inline-2">계획비</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="addColumn-inline-3" name="addColumn">
+                <label class="form-check-label" for="addColumn-inline-3">전월비</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="addColumn-inline-4" name="addColumn">
+                <label class="form-check-label" for="addColumn-inline-4">일평균</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- /toolbar -->
 
         <!-- card -->
         <div class="card">
