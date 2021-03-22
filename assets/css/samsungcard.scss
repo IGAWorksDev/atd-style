@@ -1,8 +1,8 @@
 
-$viewport-width: 1200px;
+$viewport-width: 1408px;
 
 .twWrapper-full {
-  min-width: 1200px;
+  min-width: 1440px;
 }
 .mainContent#samsungCard-report {
   .container {
@@ -19,7 +19,7 @@ $viewport-width: 1200px;
     @media screen and (min-width: 1200px) {
       min-width: $viewport-width;
     }
-    @media screen and (min-width: 1201px) {
+    @media screen and (min-width: 1440px) {
       max-width: calc(100vw - (16px * 2));
     }
   }
