@@ -1,2 +1,8 @@
-@media screen and (max-width: 1139px) { .mainContent#samsungCard-report .card { max-width: calc(1440px - (16px * 2)); margin: 16px auto; } }
-@media screen and (min-width: 1140px) { .mainContent#samsungCard-report .card { max-width: calc(100vw - (16px * 2)); } }
+.twWrapper-full { min-width: 100vw; }
+
+.mainContent#samsungCard-report .container { min-width: 1200px; }
+@media screen and (min-width: 576px) { .mainContent#samsungCard-report .container { min-width: 1200px; } }
+@media screen and (min-width: 768px) { .mainContent#samsungCard-report .container { min-width: 1200px; } }
+@media screen and (min-width: 992px) { .mainContent#samsungCard-report .container { min-width: 1200px; } }
+@media screen and (min-width: 1200px) { .mainContent#samsungCard-report .container { min-width: 1200px; } }
+@media screen and (min-width: 1201px) { .mainContent#samsungCard-report .container { max-width: calc(100vw - (16px * 2)); } }

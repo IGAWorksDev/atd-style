@@ -1,14 +1,25 @@
 
-$viewport-width: 1440px;
+$viewport-width: 1200px;
 
+.twWrapper-full {
+  min-width: 100vw;
+}
 .mainContent#samsungCard-report {
-  .card {
-    @media screen and (max-width: 1139px) {
-      max-width: calc(#{$viewport-width} - (16px * 2));
-      margin: 16px auto;
+  .container {
+    min-width: $viewport-width;
+    @media screen and (min-width: 576px) {
+      min-width: $viewport-width;
     }
-
-    @media screen and (min-width: 1140px) {
+    @media screen and (min-width: 768px) {
+      min-width: $viewport-width;
+    }
+    @media screen and (min-width: 992px) {
+      min-width: $viewport-width;
+    }
+    @media screen and (min-width: 1200px) {
+      min-width: $viewport-width;
+    }
+    @media screen and (min-width: 1201px) {
       max-width: calc(100vw - (16px * 2));
     }
   }
