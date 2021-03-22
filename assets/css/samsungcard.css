@@ -1,4 +1,4 @@
-.twWrapper-full { min-width: 100vw; }
+.twWrapper-full { min-width: 1200px; }
 
 .mainContent#samsungCard-report .container { min-width: 1200px; }
 @media screen and (min-width: 576px) { .mainContent#samsungCard-report .container { min-width: 1200px; } }
