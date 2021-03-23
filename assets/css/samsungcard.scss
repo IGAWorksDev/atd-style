@@ -1,25 +1,25 @@
 
 $gnb-height: 5.6rem;
 $h-fixed-8: 6.4rem;
-$viewport-width: 1440px;
+$container-width: 1440px;
 
 .twWrapper-full {
-  min-width: 1200px;
+  min-width: 1440px;
 }
-.mainContent#samsungCard-report {
+main#samsungCard-report {
   .container {
-    min-width: calc($viewport-width - (16px * 2));
+    min-width: calc(#{$container-width} - (16px * 2));
     @media screen and (min-width: 576px) {
-      min-width: calc($viewport-width - (16px * 2));
+      min-width: calc(#{$container-width} - (16px * 2));
     }
     @media screen and (min-width: 768px) {
-      min-width: calc($viewport-width - (16px * 2));
+      min-width: calc(#{$container-width} - (16px * 2));
     }
     @media screen and (min-width: 992px) {
-      min-width: calc($viewport-width - (16px * 2));
+      min-width: calc(#{$container-width} - (16px * 2));
     }
     @media screen and (min-width: 1200px) {
-      min-width: calc($viewport-width - (16px * 2));
+      min-width: calc(#{$container-width} - (16px * 2));
     }
     @media screen and (min-width: 1440px) {
       max-width: calc(100vw - (16px * 2));
@@ -27,7 +27,7 @@ $viewport-width: 1440px;
   }
 
   .card {
-    height: calc(100vh - (#{$gnb-height} + #{$h-fixed-8} + 1.6rem));
+    max-height: calc(100vh - (#{$gnb-height} + #{$h-fixed-8} + 1.6rem));
   }
 }
 
