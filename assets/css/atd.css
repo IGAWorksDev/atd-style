@@ -1112,11 +1112,17 @@ textarea.form-control { height: auto; }
 
 .datagrid > .datagrid-body .datagrid-row[aria-selected="true"] .datagrid-cell { color: #343a40; background-color: #eaf5ff; }
 
+.datagrid-row.is-active .datagrid-cell { color: #343a40; background-color: #eaf5ff; }
+
 .datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell { color: #343a40; background-color: #e0f0ff; }
+
+.datagrid-cell.is-hover:hover { color: #343a40; background-color: #e0f0ff; }
 
 .datagrid-body > .datagrid-row.is-muted .datagrid-cell { color: #6c757d !important; background-color: #f8f9fa !important; }
 
 .datagrid-align-center .datagrid-cell .datagrid-cell-inner { width: 100%; }
+
+.datagrid-cell.is-hover { cursor: cell; color: #1E90FF; }
 
 .table { width: 100%; border-collapse: collapse; color: #343a40; background-color: #fff; }
 .table th, .table td { padding: 0.8rem 1.6rem; border-bottom: 1px solid #dee2e6; text-align: inherit; vertical-align: top; }

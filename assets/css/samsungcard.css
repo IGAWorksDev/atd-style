@@ -6,3 +6,4 @@
 @media screen and (min-width: 992px) { .mainContent#samsungCard-report .container { min-width: 1200px; } }
 @media screen and (min-width: 1200px) { .mainContent#samsungCard-report .container { min-width: 1200px; } }
 @media screen and (min-width: 1201px) { .mainContent#samsungCard-report .container { max-width: calc(100vw - (16px * 2)); } }
+.mainContent#samsungCard-report .card { height: calc(100vh - (5.6rem + 6.4rem + 1.6rem)); }

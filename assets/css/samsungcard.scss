@@ -1,4 +1,6 @@
 
+$gnb-height: 5.6rem;
+$h-fixed-8: 6.4rem;
 $viewport-width: 1200px;
 
 .twWrapper-full {
@@ -23,4 +25,9 @@ $viewport-width: 1200px;
       max-width: calc(100vw - (16px * 2));
     }
   }
+
+  .card {
+    height: calc(100vh - (#{$gnb-height} + #{$h-fixed-8} + 1.6rem));
+  }
 }
+

@@ -1078,34 +1078,43 @@ textarea.form-control { height: auto; }
 .datagrid-rowspan { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
 
 .datagrid-colspan { padding: 0; overflow: hidden; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
-.datagrid-colspan > .datagrid-row:last-child > .datagrid-cell { border-bottom: 0; }
 
 .datagrid-cell-select { min-width: 3rem; -webkit-box-flex: 0; -ms-flex: 0 0 3rem; flex: 0 0 3rem; }
 
 .datagrid-header > .datagrid-row .datagrid-cell { border-bottom-width: 1px; background-color: #fff; }
 .datagrid-header > .datagrid-row:last-child .datagrid-cell { border-bottom-color: #c7ced4; }
+.datagrid-header > .datagrid-row:last-child .datagrid-colspan .datagrid-row:last-child .datagrid-cell { border-bottom-width: 1px !important; border-bottom-color: #c7ced4; }
 
-.datagrid-body > .datagrid-row .datagrid-cell { border-top-width: 1px; }
-.datagrid-body > .datagrid-row .datagrid-cell.datagrid-colspan .datagrid-row .datagrid-cell { border-top-width: 0; }
+.datagrid-body > .datagrid-row .datagrid-cell { border-top-width: 1px;   /* &.datagrid-colspan { .datagrid-row .datagrid-cell { border-top-width: 0; } }
+*/ }
 
 [role="columnheader"][tabindex], [role="rowheader"][tabindex], [role="gridcell"][tabindex] { position: relative; }
 [role="columnheader"][tabindex]:focus, [role="rowheader"][tabindex]:focus, [role="gridcell"][tabindex]:focus { outline: 2px dotted #1E90FF; z-index: 10; }
 
-.datagrid-rowgroup-sticky { position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 501; }
+.datagrid-rowgroup-sticky { position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; z-index: 501; }
 
-.datagrid-row-sticky, .datagrid-row.sticky { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; position: relative; border-collapse: collapse; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; }
-.datagrid-row-sticky:after, .datagrid-row.sticky:after { content: ""; position: absolute; right: -4px; width: 4px; height: 100%; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0))); background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
+.datagrid-row-sticky { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; position: relative; border-collapse: collapse; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; }
+.datagrid-row-sticky:after { content: ""; position: absolute; right: -4px; width: 4px; height: 100%; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0))); background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
+
+.datagrid-row-absolute { position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; position: absolute; }
+.datagrid-row-absolute:after { content: ""; position: absolute; right: -4px; width: 4px; height: 100%; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0))); background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
 
 .datagrid-responsive { overflow: auto; }
 
 .datagrid-bordered .datagrid-cell + .datagrid-cell { border-left-width: 1px; border-left-color: #dee2e6; }
 .datagrid-bordered .datagrid-cell + .datagrid-rowspan .datagrid-row .datagrid-cell:first-child { border-left-width: 1px; border-left-color: #dee2e6; }
+.datagrid-bordered .datagrid-cell + .datagrid-colspan .datagrid-row .datagrid-cell:first-child { border-left-width: 1px; border-left-color: #dee2e6; }
+.datagrid-bordered .datagrid-colspan + .datagrid-cell, .datagrid-bordered .datagrid-rowspan + .datagrid-cell { border-left-width: 1px; border-left-color: #dee2e6; }
 
 .datagrid-striped > .datagrid-body .datagrid-row:nth-child(odd) .datagrid-cell { background-color: #f8f9fa; }
 
 .datagrid > .datagrid-body .datagrid-row[aria-selected="true"] .datagrid-cell { color: #343a40; background-color: #eaf5ff; }
 
+.datagrid-row.is-active .datagrid-cell { color: #343a40; background-color: #eaf5ff; }
+
 .datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell { color: #343a40; background-color: #e0f0ff; }
+
+.datagrid-cell.is-hover:hover { color: #343a40; background-color: #e0f0ff; }
 
 .datagrid-body > .datagrid-row.is-muted .datagrid-cell { color: #6c757d !important; background-color: #f8f9fa !important; }
 
@@ -1211,3 +1220,5 @@ caption { caption-side: bottom; padding: 0.8rem 1.6rem; text-align: inherit; fon
 .text-legend-4 { color: #FFA000; }
 
 .text-legend-5 { color: #ced4da; }
+
+.cursor-cell { cursor: cell; }
