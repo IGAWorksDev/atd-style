@@ -1,9 +1,9 @@
-.twWrapper-full { min-width: 1440px; }
+.twWrapper-full { min-width: 1280px; }
 
-main#samsungCard-report .container { min-width: calc(1440px - (16px * 2)); }
-@media screen and (min-width: 576px) { main#samsungCard-report .container { min-width: calc(1440px - (16px * 2)); } }
-@media screen and (min-width: 768px) { main#samsungCard-report .container { min-width: calc(1440px - (16px * 2)); } }
-@media screen and (min-width: 992px) { main#samsungCard-report .container { min-width: calc(1440px - (16px * 2)); } }
-@media screen and (min-width: 1200px) { main#samsungCard-report .container { min-width: calc(1440px - (16px * 2)); } }
-@media screen and (min-width: 1440px) { main#samsungCard-report .container { max-width: calc(100vw - (16px * 2)); } }
+main#samsungCard-report .container { max-width: 1280px; margin: 0; }
+@media screen and (min-width: 576px) { main#samsungCard-report .container { max-width: 1280px; } }
+@media screen and (min-width: 768px) { main#samsungCard-report .container { max-width: 1280px; } }
+@media screen and (min-width: 992px) { main#samsungCard-report .container { max-width: 1280px; } }
+@media screen and (min-width: 1200px) { main#samsungCard-report .container { max-width: 1280px; } }
+@media screen and (min-width: 1280px) { main#samsungCard-report .container { max-width: 100vw; } }
 main#samsungCard-report .card { max-height: calc(100vh - (5.6rem + 6.4rem + 1.6rem)); }
