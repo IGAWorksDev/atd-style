@@ -1,11 +1,32 @@
-.gnb { z-index: 100; }
+.gnb {
+  z-index: 100; }
 
-.twWrapper-full { min-width: 1440px; }
+.gnb-brand img {
+  width: auto;
+  height: 2.4rem; }
 
-main#samsungCard-report .container { max-width: 1440px; margin: 0; }
-@media screen and (min-width: 576px) { main#samsungCard-report .container { max-width: 1440px; } }
-@media screen and (min-width: 768px) { main#samsungCard-report .container { max-width: 1440px; } }
-@media screen and (min-width: 992px) { main#samsungCard-report .container { max-width: 1440px; } }
-@media screen and (min-width: 1200px) { main#samsungCard-report .container { max-width: 1440px; } }
-@media screen and (min-width: 1440px) { main#samsungCard-report .container { max-width: 100vw; } }
-main#samsungCard-report .card { max-height: calc(100vh - (5.6rem + 6.4rem + 3.2rem)); }
+.twWrapper-full {
+  min-width: 1440px; }
+
+main#samsungCard-report .container {
+  max-width: 1440px;
+  margin: 0; }
+  @media screen and (min-width: 576px) {
+    main#samsungCard-report .container {
+      max-width: 1440px; } }
+  @media screen and (min-width: 768px) {
+    main#samsungCard-report .container {
+      max-width: 1440px; } }
+  @media screen and (min-width: 992px) {
+    main#samsungCard-report .container {
+      max-width: 1440px; } }
+  @media screen and (min-width: 1200px) {
+    main#samsungCard-report .container {
+      max-width: 1440px; } }
+  @media screen and (min-width: 1440px) {
+    main#samsungCard-report .container {
+      max-width: 100vw; } }
+main#samsungCard-report .card {
+  max-height: calc(100vh - (5.6rem + 6.4rem + 3.2rem)); }
+
+/*# sourceMappingURL=samsungcard.css.map */

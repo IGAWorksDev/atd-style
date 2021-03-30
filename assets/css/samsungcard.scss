@@ -6,6 +6,10 @@ $container-width: 1440px;
 .gnb {
   z-index: 100;
 }
+.gnb-brand img {
+  width: auto;
+  height: 2.4rem;
+}
 
 .twWrapper-full {
   min-width: $container-width;
