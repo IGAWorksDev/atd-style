@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TW__Ad Insight</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+<!-- gnb -->
+<nav class="gnb">
+	<a class="gnb-brand" href="#">
+		<img src="../../assets/images/brand-wordmark.svg">
+	</a>
+	<div class="gnb-navbar">
+		<ul class="navbar-nav mr-auto font-weight-bold">
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-release="New">Dashboard</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">Insight</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">서브메뉴 1</a>
+					<a class="dropdown-item" href="#">서브메뉴 2</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Audience</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Kakaomoment</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Report</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Asset</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Support</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="ico ic-cog"></i>
+					<span class="sr-only">Manage</span>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Ad Accounts</a>
+					<a class="dropdown-item" href="#">Companies</a>
+					<a class="dropdown-item" href="#">Users</a>
+					<a class="dropdown-item" href="#">Billing</a>
+					<a class="dropdown-item" href="#">DMP Usage History</a>
+				</div>
+			</li>
+			<li class="nav-item nav-item-user dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">
+					<i class="ico ic-user"></i>
+					<span class="sr-only">account.name@igaworks.com</span>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+					<div class="dropdown-item">
+						장우영 <br>
+						<a href="#">
+							liam.jang@igaworks.com
+						</a>
+					</div>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">
+						채널 연결현황
+					</h6>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+						<a class="ml-1 " href="#">채널 연결하기</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+					</div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">
+						로그아웃
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- /gnb -->
+
+<!-- twWrapper -->
+<div class="twWrapper-full">
+	<!-- contentWrapper -->
+	<div class="contentWrapper">
+
+		<!-- mainContent -->
+		<main id="dashboard" class="mainContent is-blank">
+			<!-- mainheader -->
+			<header class="mainheader mainheader-sticky">
+				<div class="container">
+					<div class="mainheader__inner">
+						<h2 class="font-weight-bold m-0">
+							Ad Insight
+						</h2>
+					</div>
+				</div>
+			</header>
+			<!-- /mainheader -->
+
+			<!-- mainbody -->
+			<div class="mainbody pb-6">
+				<!-- container -->
+				<div class="container">
+					<!-- section-->
+					<section class="section section-analysis-filter pt-2">
+						<!-- header -->
+						<header class="d-flex align-items-center justify-content-between h-fixed-7">
+							<div class="flex-left d-flex align-items-center">
+								<h4 class="font-size-lg font-weight-bold mb-0">
+									신규 분석
+								</h4>
+							</div>
+							<div class="flex-right">
+								<a class="btn btn-text-secondary btn-sm font-weight-bold" href="#">
+									분석 내역
+									<i class="ico ic-chevron-right"></i>
+								</a>
+							</div>
+						</header>
+						<!-- /header -->
+
+						<!-- card -->
+						<div class="card">
+							<div class="card-body p-2">
+								<!-- type-option -->
+								<div class="type-option">
+									<div class="d-flex align-items-center">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" id="radio-1" name="radio" checked>
+											<label class="form-check-label" for="radio-1">
+												기본 분석
+											</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" id="radio-1" name="radio">
+											<label class="form-check-label" for="radio-1">
+												프로젝트 비교 분석
+											</label>
+										</div>
+										<div class="form-group p-0 m-0">
+											<label class="d-none" for="filter-option__category-main">프로젝트 선택</label>
+											<select class="custom-select" id="filter-option__category-main" disabled>
+												<option>카카오톡</option>
+												<option>Select 2</option>
+												<option>Select 3</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<!-- /type-option -->
+							</div>
+							<div class="card-body border-top p-2">
+								<!-- filter-option -->
+								<div class="filter-option">
+									<!-- row -->
+									<div class="row">
+										<!-- col -->
+										<div class="col-6">
+											<!-- filter-option__item -->
+											<div class="filter-option__item d-flex align-items-center">
+												<!-- filter-option__item-label -->
+												<div class="filter-option__item-label">
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" id="filter-option__category"
+																	 name="filter-option"
+																	 checked="checked" required disabled>
+														<label class="form-check-label text-dark" for="filter-option__category">
+															<strong>카테고리</strong>
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-label -->
+												<!-- filter-option__item-setting -->
+												<div class="filter-option__item-setting form-inline">
+													<div class="form-group py-0 my-0">
+														<label class="d-none" for="filter-option__category-main">카테고리</label>
+														<select class="custom-select" id="filter-option__category-main">
+															<option>카테고리</option>
+															<option>Select 2</option>
+															<option>Select 3</option>
+														</select>
+													</div>
+													<div class="font-size-lg">
+														<i class="ico ic-chevron-right"></i>
+													</div>
+													<div class="form-group py-0 my-0 border-0">
+														<label class="d-none" for="filter-option__category-sub">상세 카테고리</label>
+														<select class="custom-select" id="filter-option__category-sub">
+															<option>상세 카테고리</option>
+															<option>Select 2</option>
+															<option>Select 3</option>
+														</select>
+													</div>
+												</div>
+												<!-- /filter-option__item-setting -->
+											</div>
+											<!-- /filter-option__item -->
+										</div>
+										<!-- /col -->
+										<!-- col -->
+										<div class="col-6">
+											<!-- filter-option -->
+											<div class="filter-option d-flex align-items-center">
+												<!-- filter-option__item-label -->
+												<div class="filter-option__item-label">
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" id="form-filter-check__period"
+																	 name="filter-option"
+																	 checked="checked" required disabled>
+														<label class="form-check-label text-dark" for="form-filter-check__period">
+															<strong>기간</strong>
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-label -->
+												<!-- filter-option__item-setting -->
+												<div class="filter-option__item-setting form-inline">
+													일/주/월
+													<div class="form-group">
+														<label for="form-filter-option__datepicker">날짜 선택</label>
+														<input type="date" class="form-control" id="form-filter-option__datepicker"
+																	 required="required">
+													</div>
+												</div>
+												<!-- /filter-option__item-setting -->
+											</div>
+											<!-- /filter-option -->
+										</div>
+										<!-- /col -->
+										<!-- col -->
+										<div class="col-6">
+											<!-- filter-option -->
+											<div class="filter-option d-flex align-items-center">
+												<!-- filter-option__item-label -->
+												<div class="filter-option__item-label">
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" id="filter-option__category"
+																	 name="filter-option"
+																	 checked="checked">
+														<label class="form-check-label text-dark" for="filter-option__category">
+															<strong>소진금액</strong>
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-label -->
+												<!-- filter-option__item-setting -->
+												<div class="filter-option__item-setting form-inline">
+													<div class="form-group py-0 my-0">
+														<label class="d-none" for="filter-option__category-main">최소 금액</label>
+														<input type="text" class="form-control" id="" placeholder="최소 금액">
+													</div>
+													<div class="font-size-lg px-1">
+														~
+													</div>
+													<div class="form-group py-0 my-0">
+														<label class="d-none" for="filter-option__category-main">최대 금액</label>
+														<input type="text" class="form-control" id="" placeholder="최대 금액">
+													</div>
+												</div>
+												<!-- /filter-option__item-setting -->
+											</div>
+											<!-- /filter-option -->
+										</div>
+										<!-- /col -->
+										<!-- col -->
+										<div class="col-6">
+											<!-- filter-option -->
+											<div class="filter-option d-flex align-items-center">
+												<!-- filter-option__item-label -->
+												<div class="filter-option__item-label">
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" id="filter-option__category"
+																	 name="filter-option"
+																	 checked="checked">
+														<label class="form-check-label text-dark" for="filter-option__category">
+															<strong>OS</strong>
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-label -->
+												<!-- filter-option__item-setting -->
+												<div class="filter-option__item-setting pl-3 border-left">
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															전체
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															<i class="ico ic-apple"></i>
+															<span class="d-none">iOS</span>
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															<i class="ico ic-android"></i>
+															<span class="d-none">Android</span>
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															<i class="ico ic-web"></i>
+															<span class="d-none">Web</span>
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-setting -->
+											</div>
+											<!-- /filter-option -->
+										</div>
+										<!-- /col -->
+										<!-- col -->
+										<div class="col-6">
+											<!-- filter-option -->
+											<div class="filter-option d-flex align-items-center">
+												<!-- filter-option__item-label -->
+												<div class="filter-option__item-label">
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" id="filter-option__category"
+																	 name="filter-option"
+																	 checked="checked">
+														<label class="form-check-label text-dark" for="filter-option__category">
+															<strong>캠페인 목적</strong>
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-label -->
+												<!-- filter-option__item-setting -->
+												<div class="filter-option__item-setting pl-3 border-left">
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															전체
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															브랜딩
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															관심유도
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															전환
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-setting -->
+											</div>
+											<!-- /filter-option -->
+										</div>
+										<!-- /col -->
+										<!-- col -->
+										<div class="col-6">
+											<!-- filter-option -->
+											<div class="filter-option d-flex align-items-center">
+												<!-- filter-option__item-label -->
+												<div class="filter-option__item-label">
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" id="filter-option__category"
+																	 name="filter-option"
+																	 checked="checked">
+														<label class="form-check-label text-dark" for="filter-option__category">
+															<strong>채널</strong>
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-label -->
+												<!-- filter-option__item-setting -->
+												<div class="filter-option__item-setting pl-3 border-left">
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															전체
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															<img src="../../assets/images/channel-ico-googleads.svg" alt="Google ads">
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook">
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment">
+														</label>
+													</div>
+													<div class="form-check form-check-inline">
+														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
+																	 checked="">
+														<label class="form-check-label" for="checkbox-inline-1">
+															<img src="../../assets/images/channel-ico-twdsp.svg" alt="Tradingworks DSP">
+														</label>
+													</div>
+												</div>
+												<!-- /filter-option__item-setting -->
+											</div>
+											<!-- /filter-option -->
+										</div>
+										<!-- /col -->
+									</div>
+									<!-- /row -->
+								</div>
+								<!-- /filter-option -->
+							</div>
+							<!-- /card-body -->
+						</div>
+						<!-- /card -->
+
+						<!-- footer -->
+						<footer class="text-center mt-2">
+							<button class="btn btn-contained-primary btn-lg px-5">
+								분석
+							</button>
+							<button class="btn btn-outlined-secondary btn-lg">
+								분석 조건 저장
+							</button>
+						</footer>
+						<!-- footer -->
+					</section>
+					<!-- /section -->
+
+
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /mainbody -->
+		</main>
+		<!-- /mainContent -->
+	</div>
+	<!-- /contentWrapper -->
+</div>
+<!-- /twWrapper -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../../assets/js/tw-atd-normal.js"></script>
+
+<script src="https://dev-app.tradingworks.com/js/bootstrap-4.3.1/util.js"></script>
+
+</body>
+</html>
