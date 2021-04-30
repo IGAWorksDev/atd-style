@@ -1102,7 +1102,7 @@ textarea.form-control { height: auto; }
 [role="columnheader"][tabindex], [role="rowheader"][tabindex], [role="gridcell"][tabindex] { position: relative; }
 [role="columnheader"][tabindex]:focus, [role="rowheader"][tabindex]:focus, [role="gridcell"][tabindex]:focus { outline: 2px dotted #1E90FF; z-index: 10; }
 
-.datagrid-rowgroup-sticky { position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; z-index: 501; }
+.datagrid-rowgroup-sticky { position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; z-index: 2; }
 
 .datagrid-row-sticky { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; position: relative; border-collapse: collapse; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 1; }
 .datagrid-row-sticky:after { content: ""; position: absolute; right: -4px; width: 4px; height: 100%; background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0))); background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
@@ -1127,9 +1127,9 @@ textarea.form-control { height: auto; }
 
 .datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell { color: #343a40; background-color: #e0f0ff !important; }
 
-.datagrid-cell.is-hover:hover { color: #343a40; background-color: #e0f0ff !important; }
+.datagrid-cell.is-hover:hover { color: #343a40; background-color: #e0f0ff; }
 
-.datagrid-body > .datagrid-row.is-muted .datagrid-cell { color: #6c757d !important; background-color: #f8f9fa !important !important; }
+.datagrid-body > .datagrid-row.is-muted .datagrid-cell { color: #6c757d !important; background-color: #f8f9fa !important; }
 
 .datagrid-align-center .datagrid-cell .datagrid-cell-inner { width: 100%; }
 
@@ -1693,7 +1693,7 @@ caption { caption-side: bottom; padding: 0.8rem 1.6rem; text-align: inherit; fon
 */ }
 
 /* --------------------------------------------------- */
-.blankslate-floating-bar { position: fixed; z-index: 1030; right: 0; bottom: 0; left: 0; border: 0; }
+.blankslate-floating-bar { position: fixed; z-index: 10; right: 0; bottom: 0; left: 0; border: 0; }
 
 #dashboard.is-blank > .mainbody:last-child { padding-bottom: 9.6rem; }
 

@@ -47,9 +47,9 @@
 
 // with Check icon
 @mixin is-component-icon-selected($selected-color, $selected-padding-x, $selected-bg){
-  color: $selected-color;
+  color: $selected-color !important;
   padding-right: $selected-padding-x;
-  background: $selected-bg;
+  background: $selected-bg !important;
   text-decoration: none;
   cursor: default;
 }
