@@ -333,6 +333,9 @@ small {
 .font-size-lg {
   font-size: 1.6rem !important; }
 
+.font-size-xl {
+  font-size: 2rem !important; }
+
 .svg-icon {
   fill: currentColor;
   width: 1.4rem;
@@ -353,6 +356,10 @@ small {
 
 .svg-icon-lg {
   width: 1.6rem;
+  height: auto; }
+
+.svg-icon-xl {
+  width: 2rem;
   height: auto; }
 
 .container {
@@ -903,37 +910,37 @@ small {
   border-color: #fff !important; }
 
 .w-fixed-0 {
-  with: 0 !important; }
+  width: 0 !important; }
 
 .w-fixed-1 {
-  with: 0.8rem !important; }
+  width: 0.8rem !important; }
 
 .w-fixed-2 {
-  with: 1.6rem !important; }
+  width: 1.6rem !important; }
 
 .w-fixed-3 {
-  with: 2.4rem !important; }
+  width: 2.4rem !important; }
 
 .w-fixed-4 {
-  with: 3.2rem !important; }
+  width: 3.2rem !important; }
 
 .w-fixed-5 {
-  with: 4rem !important; }
+  width: 4rem !important; }
 
 .w-fixed-6 {
-  with: 4.8rem !important; }
+  width: 4.8rem !important; }
 
 .w-fixed-7 {
-  with: 5.6rem !important; }
+  width: 5.6rem !important; }
 
 .w-fixed-8 {
-  with: 6.4rem !important; }
+  width: 6.4rem !important; }
 
 .w-fixed-9 {
-  with: 7.2rem !important; }
+  width: 7.2rem !important; }
 
 .w-fixed-10 {
-  with: 8rem !important; }
+  width: 8rem !important; }
 
 .h-fixed-0 {
   height: 0 !important; }
@@ -2989,6 +2996,9 @@ textarea.form-control {
     width: 4px;
     height: 100%;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
+
+.datagrid-row-static {
+  position: static; }
 
 .datagrid-responsive {
   overflow: auto; }

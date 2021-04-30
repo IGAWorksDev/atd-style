@@ -2,6 +2,9 @@
 //
 // TW Layout Wrapper
 //
+
+// side navigation bar를 갖고 있는 레이아웃 인 경우.
+//
 .twWrapper {
   background-color: $gray-100;
 
@@ -22,7 +25,8 @@
   }
 }
 
-
+// full-width
+//
 .twWrapper-full {
   background-color: $gray-100;
   display: grid;
@@ -33,6 +37,8 @@
   overflow: hidden;
 
   > .contentWrapper {
+    grid-row-start: 2;
+
     width: 100%;
     height: 100%;
   }

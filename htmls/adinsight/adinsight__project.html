@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>TW__Ad Insight</title>
+	<title>TW__Ad Insight 프로젝트비교분석</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
@@ -145,27 +145,29 @@
 							</div>
 						</header>
 						<!-- /header -->
+
 						<!-- card -->
 						<div class="card">
+							<!-- card-body -->
 							<div class="card-body p-2">
 								<!-- type-option -->
 								<div class="type-option">
 									<div class="d-flex align-items-center">
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" id="radio-1" name="radio" checked>
-											<label class="form-check-label" for="radio-1">
+											<input class="form-check-input" type="radio" id="check-insight-basic" name="check-insight" checked>
+											<label class="form-check-label" for="check-insight-basic">
 												기본 분석
 											</label>
 										</div>
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" id="radio-1" name="radio">
-											<label class="form-check-label" for="radio-1">
+											<input class="form-check-input" type="radio" id="check-insight-compare" name="check-insight">
+											<label class="form-check-label" for="check-insight-compare">
 												프로젝트 비교 분석
 											</label>
 										</div>
 										<div class="form-group p-0 m-0">
-											<label class="d-none" for="filter-option__category-main">프로젝트 선택</label>
-											<select class="custom-select" id="filter-option__category-main" disabled>
+											<label class="d-none" for="select-project">프로젝트 선택</label>
+											<select class="custom-select" id="select-project" disabled>
 												<option>카카오톡</option>
 												<option>Select 2</option>
 												<option>Select 3</option>
@@ -175,21 +177,22 @@
 								</div>
 								<!-- /type-option -->
 							</div>
+							<!-- /card-body -->
+							<!-- card-body -->
 							<div class="card-body border-top py-1 px-2">
 								<!-- filter-option -->
 								<div class="filter-option">
 									<!-- row -->
 									<div class="row">
 										<!-- col -->
-                    <div class="col-6 d-flex align-items-stretch align-content-center my-1">
+										<div class="col-6 d-flex align-items-stretch align-content-center my-1">
 											<!-- filter-option__item -->
 											<div class="filter-option__item d-flex align-items-center">
 												<!-- filter-option__item-label -->
 												<div class="filter-option__item-label">
 													<div class="form-check">
 														<input class="form-check-input" type="checkbox" id="filter-option__category"
-																	 name="filter-option"
-																	 checked="checked" required disabled>
+																	 name="filter-option" checked required disabled>
 														<label class="form-check-label text-dark" for="filter-option__category">
 															<strong>카테고리</strong>
 														</label>
@@ -199,19 +202,19 @@
 												<!-- filter-option__item-setting -->
 												<div class="filter-option__item-setting form-inline">
 													<div class="form-group py-0 my-0">
-														<label class="d-none" for="filter-option__category-main">카테고리</label>
-														<select class="custom-select" id="filter-option__category-main">
+														<label class="d-none" for="select-category">카테고리</label>
+														<select class="custom-select" id="select-category">
 															<option>카테고리</option>
 															<option>Select 2</option>
 															<option>Select 3</option>
 														</select>
 													</div>
-                          <div class="font-size-lg w-fixed-3 text-center">
+													<div class="font-size-lg w-fixed-3 text-center text-muted">
 														<i class="ico ic-chevron-right"></i>
 													</div>
 													<div class="form-group py-0 my-0 border-0">
-														<label class="d-none" for="filter-option__category-sub">상세 카테고리</label>
-														<select class="custom-select" id="filter-option__category-sub">
+														<label class="d-none" for="select-category-sub">상세 카테고리</label>
+														<select class="custom-select" id="select-category-sub">
 															<option>상세 카테고리</option>
 															<option>Select 2</option>
 															<option>Select 3</option>
@@ -224,7 +227,7 @@
 										</div>
 										<!-- /col -->
 										<!-- col -->
-                    <div class="col-6 d-flex align-items-stretch align-content-center my-1">
+										<div class="col-6 d-flex align-items-stretch align-content-center my-1">
 											<!-- filter-option -->
 											<div class="filter-option__item d-flex align-items-center">
 												<!-- filter-option__item-label -->
@@ -241,11 +244,28 @@
 												<!-- /filter-option__item-label -->
 												<!-- filter-option__item-setting -->
 												<div class="filter-option__item-setting form-inline">
-													일/주/월
+													<div class="btn-group btn-check-group">
+														<input type="radio" class="btn-check" name="check-date" id="check-date-day"
+																	 autocomplete="off" checked>
+														<label class="btn btn-outlined-secondary px-2" for="check-date-day">
+															일
+														</label>
+														<input type="radio" class="btn-check" name="check-date" id="check-date-week"
+																	 autocomplete="off">
+														<label class="btn btn-outlined-secondary px-2" for="check-date-week">
+															주
+														</label>
+														<input type="radio" class="btn-check" name="check-date" id="check-date-month"
+																	 autocomplete="off">
+														<label class="btn btn-outlined-secondary px-2" for="check-date-month">
+															월
+														</label>
+													</div>
+													<div class="px-1"></div>
 													<div class="form-group py-0 my-0">
-														<label class="d-none" for="form-filter-option__datepicker">날짜 선택</label>
-														<input type="date" class="form-control" id="form-filter-option__datepicker"
-																	 required="required">
+														<label class="d-none" for="input-datepicker">날짜 선택</label>
+														<input type="date" class="form-control" id="input-datepicker"
+																	 required>
 													</div>
 												</div>
 												<!-- /filter-option__item-setting -->
@@ -254,16 +274,16 @@
 										</div>
 										<!-- /col -->
 										<!-- col -->
-                    <div class="col-6 d-flex align-items-stretch align-content-center my-1">
+										<div class="col-6 d-flex align-items-stretch align-content-center my-1">
 											<!-- filter-option -->
 											<div class="filter-option__item d-flex align-items-center">
 												<!-- filter-option__item-label -->
 												<div class="filter-option__item-label">
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" id="filter-option__category"
+														<input class="form-check-input" type="checkbox" id="filter-option__amount"
 																	 name="filter-option"
 																	 checked="checked">
-														<label class="form-check-label text-dark" for="filter-option__category">
+														<label class="form-check-label text-dark" for="filter-option__amount">
 															<strong>소진금액</strong>
 														</label>
 													</div>
@@ -272,15 +292,15 @@
 												<!-- filter-option__item-setting -->
 												<div class="filter-option__item-setting form-inline">
 													<div class="form-group py-0 my-0">
-														<label class="d-none" for="filter-option__category-main">최소 금액</label>
-														<input type="text" class="form-control" id="" placeholder="최소 금액">
+														<label class="d-none" for="input-amount-min">최소 금액</label>
+														<input type="text" class="form-control" id="input-amount-min" placeholder="최소 금액">
 													</div>
-													<div class="font-size-lg w-fixed-3 text-center">
+													<div class="font-size-lg w-fixed-3 text-center text-muted">
 														~
 													</div>
 													<div class="form-group py-0 my-0">
-														<label class="d-none" for="filter-option__category-main">최대 금액</label>
-														<input type="text" class="form-control" id="" placeholder="최대 금액">
+														<label class="d-none" for="input-amount-max">최대 금액</label>
+														<input type="text" class="form-control" id="input-amount-max" placeholder="최대 금액">
 													</div>
 												</div>
 												<!-- /filter-option__item-setting -->
@@ -289,16 +309,16 @@
 										</div>
 										<!-- /col -->
 										<!-- col -->
-                    <div class="col-6 d-flex align-items-stretch align-content-center my-1">
+										<div class="col-6 d-flex align-items-stretch align-content-center my-1">
 											<!-- filter-option -->
 											<div class="filter-option__item d-flex align-items-center">
 												<!-- filter-option__item-label -->
 												<div class="filter-option__item-label">
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" id="filter-option__category"
+														<input class="form-check-input" type="checkbox" id="filter-option__os"
 																	 name="filter-option"
 																	 checked="checked">
-														<label class="form-check-label text-dark" for="filter-option__category">
+														<label class="form-check-label text-dark" for="filter-option__os">
 															<strong>OS</strong>
 														</label>
 													</div>
@@ -307,32 +327,29 @@
 												<!-- filter-option__item-setting -->
 												<div class="filter-option__item-setting pl-3 border-left">
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-os-all" name="check-os"
+																	 checked>
+														<label class="form-check-label" for="check-os-all">
 															전체
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label font-size-xl" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-os-ios" name="check-os">
+														<label class="form-check-label font-size-xl" for="check-os-ios">
 															<i class="ico ic-apple"></i>
 															<span class="d-none">iOS</span>
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label font-size-xl" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-os-andrioid" name="check-os">
+														<label class="form-check-label font-size-xl" for="check-os-andrioid">
 															<i class="ico ic-android"></i>
 															<span class="d-none">Android</span>
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label font-size-xl" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-os-web" name="check-os">
+														<label class="form-check-label font-size-xl" for="check-os-web">
 															<i class="ico ic-web"></i>
 															<span class="d-none">Web</span>
 														</label>
@@ -344,16 +361,16 @@
 										</div>
 										<!-- /col -->
 										<!-- col -->
-                    <div class="col-6 d-flex align-items-stretch align-content-center my-1">
+										<div class="col-6 d-flex align-items-stretch align-content-center my-1">
 											<!-- filter-option -->
 											<div class="filter-option__item d-flex align-items-center">
 												<!-- filter-option__item-label -->
 												<div class="filter-option__item-label">
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" id="filter-option__category"
+														<input class="form-check-input" type="checkbox" id="filter-option__purpose"
 																	 name="filter-option"
 																	 checked="checked">
-														<label class="form-check-label text-dark" for="filter-option__category">
+														<label class="form-check-label text-dark" for="filter-option__purpose">
 															<strong>캠페인 목적</strong>
 														</label>
 													</div>
@@ -362,30 +379,27 @@
 												<!-- filter-option__item-setting -->
 												<div class="filter-option__item-setting pl-3 border-left">
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-purpose-all" name="check-purpose"
+																	 checked>
+														<label class="form-check-label" for="check-purpose-all">
 															전체
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-purpose-brading" name="check-purpose">
+														<label class="form-check-label" for="check-purpose-brading">
 															브랜딩
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-purpose-interest" name="check-purpose">
+														<label class="form-check-label" for="check-purpose-interest">
 															관심유도
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-purpose-conversion" name="check-purpose">
+														<label class="form-check-label" for="check-purpose-conversion">
 															전환
 														</label>
 													</div>
@@ -396,16 +410,16 @@
 										</div>
 										<!-- /col -->
 										<!-- col -->
-                    <div class="col-6 d-flex align-items-stretch align-content-center my-1">
+										<div class="col-6 d-flex align-items-stretch align-content-center my-1">
 											<!-- filter-option -->
 											<div class="filter-option__item d-flex align-items-center">
 												<!-- filter-option__item-label -->
 												<div class="filter-option__item-label">
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" id="filter-option__category"
+														<input class="form-check-input" type="checkbox" id="filter-option__channel"
 																	 name="filter-option"
 																	 checked="checked">
-														<label class="form-check-label text-dark" for="filter-option__category">
+														<label class="form-check-label text-dark" for="filter-option__channel">
 															<strong>채널</strong>
 														</label>
 													</div>
@@ -414,37 +428,33 @@
 												<!-- filter-option__item-setting -->
 												<div class="filter-option__item-setting pl-3 border-left">
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-channel-all" name="scales"
+																	 checked>
+														<label class="form-check-label" for="check-channel-all">
 															전체
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-channel-googleads" name="check-channel">
+														<label class="form-check-label" for="check-channel-googleads">
 															<img class="svg-icon-xl" src="../../assets/images/channel-ico-googleads.svg" alt="Google ads">
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-channel-facebook" name="check-channel">
+														<label class="form-check-label" for="check-channel-facebook">
 															<img class="svg-icon-xl" src="../../assets/images/channel-ico-facebook.svg" alt="Facebook">
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-channel-kakaomoment" name="check-channel">
+														<label class="form-check-label" for="check-channel-kakaomoment">
 															<img class="svg-icon-xl" src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment">
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="checkbox" id="checkbox-inline-1" name="scales"
-																	 checked="">
-														<label class="form-check-label" for="checkbox-inline-1">
+														<input class="form-check-input" type="checkbox" id="check-channel-twdsp" name="check-channel">
+														<label class="form-check-label" for="check-channel-twdsp">
 															<img class="svg-icon svg-icon-xl" src="../../assets/images/channel-ico-twdsp.svg" alt="Tradingworks DSP">
 														</label>
 													</div>
@@ -465,10 +475,10 @@
 
 						<!-- footer -->
 						<footer class="text-center mt-2">
-							<button class="btn btn-contained-primary px-5">
+							<button class="btn btn-contained-primary btn-lg px-5">
 								분석
 							</button>
-							<button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#modal-save-filterOptions">
+							<button class="btn btn-outlined-secondary btn-lg" data-toggle="modal" data-target="#modal-save-filterOptions">
 								분석 조건 저장
 							</button>
 						</footer>
@@ -501,7 +511,7 @@
               <!-- datagrid-respansive -->
               <div class="datagrid-responsive" id="data-grid">
                 <!-- datagrid -->
-                <div class="datagrid datagrid-bordered" role="grid">
+                <div class="datagrid datagrid-bordered datagrid-hover" role="grid">
                   <!-- datagrid-header -->
                   <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
                     <!-- datagrid-row -->
@@ -531,7 +541,7 @@
                              style="min-width: 14rem; width: 14rem; max-width: 14rem;">
                           카테고리 소진비용
                         </div>
-                        <div class="datagrid-cell" role="columnheader"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="columnheader"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           비교 프로젝트 소진비용
                         </div>
@@ -539,7 +549,7 @@
                              style="min-width: 15rem; width: 15rem; max-width: 15rem;">
                           카테고리 노출 수
                         </div>
-                        <div class="datagrid-cell" role="columnheader"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="columnheader"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           비교 프로젝트 노출수
                         </div>
@@ -547,7 +557,7 @@
                              style="min-width: 15rem; width: 15rem; max-width: 15rem;">
                           카테고리 클릭수
                         </div>
-                        <div class="datagrid-cell" role="columnheader"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="columnheader"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           비교 프로젝트 클릭
                         </div>
@@ -594,7 +604,7 @@
                             5,000,000
                           </div>
                         </div>
-                        <div class="datagrid-cell" role="gridcell"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           <div class="text-right">
                             10,000,000
@@ -606,7 +616,7 @@
                             5,000,000
                           </div>
                         </div>
-                        <div class="datagrid-cell" role="gridcell"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           <div class="text-right">
                             10,000,000
@@ -618,7 +628,7 @@
                             5,000,000
                           </div>
                         </div>
-                        <div class="datagrid-cell" role="gridcell"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           <div class="text-right">
                             10,000,000
@@ -662,7 +672,7 @@
                             5,000,000
                           </div>
                         </div>
-                        <div class="datagrid-cell" role="gridcell"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           <div class="text-right">
                             10,000,000
@@ -674,7 +684,7 @@
                             5,000,000
                           </div>
                         </div>
-                        <div class="datagrid-cell" role="gridcell"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           <div class="text-right">
                             10,000,000
@@ -686,7 +696,7 @@
                             5,000,000
                           </div>
                         </div>
-                        <div class="datagrid-cell" role="gridcell"
+                        <div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
                              style="min-width: 17rem; width: 17rem; max-width: 17rem;">
                           <div class="text-right">
                             10,000,000
@@ -724,42 +734,42 @@
                       <!-- /datagrid-row-absolute -->
                       <!-- datagrid-row-static -->
                       <div class="datagrid-row datagrid-row-static" style="margin-left: 39rem;">
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 14rem; width: 14rem; max-width: 14rem;">
-                          <div class="text-right">
-                            5,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 17rem; width: 17rem; max-width: 17rem;">
-                          <div class="text-right">
-                            10,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 15rem; width: 15rem; max-width: 15rem;">
-                          <div class="text-right">
-                            5,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 17rem; width: 17rem; max-width: 17rem;">
-                          <div class="text-right">
-                            10,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 15rem; width: 15rem; max-width: 15rem;">
-                          <div class="text-right">
-                            5,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 17rem; width: 17rem; max-width: 17rem;">
-                          <div class="text-right">
-                            10,000,000
-                          </div>
-                        </div>
+												<div class="datagrid-cell" role="gridcell"
+														 style="min-width: 14rem; width: 14rem; max-width: 14rem;">
+													<div class="text-right">
+														5,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
+														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
+													<div class="text-right">
+														10,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell" role="gridcell"
+														 style="min-width: 15rem; width: 15rem; max-width: 15rem;">
+													<div class="text-right">
+														5,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
+														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
+													<div class="text-right">
+														10,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell" role="gridcell"
+														 style="min-width: 15rem; width: 15rem; max-width: 15rem;">
+													<div class="text-right">
+														5,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
+														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
+													<div class="text-right">
+														10,000,000
+													</div>
+												</div>
                       </div>
                       <!-- /datagrid-row-static -->
                     </div>
@@ -792,42 +802,42 @@
                       <!-- /datagrid-row-absolute -->
                       <!-- datagrid-row-static -->
                       <div class="datagrid-row datagrid-row-static" style="margin-left: 39rem;">
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 14rem; width: 14rem; max-width: 14rem;">
-                          <div class="text-right">
-                            5,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 17rem; width: 17rem; max-width: 17rem;">
-                          <div class="text-right">
-                            10,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 15rem; width: 15rem; max-width: 15rem;">
-                          <div class="text-right">
-                            5,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 17rem; width: 17rem; max-width: 17rem;">
-                          <div class="text-right">
-                            10,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 15rem; width: 15rem; max-width: 15rem;">
-                          <div class="text-right">
-                            5,000,000
-                          </div>
-                        </div>
-                        <div class="datagrid-cell" role="gridcell"
-                             style="min-width: 17rem; width: 17rem; max-width: 17rem;">
-                          <div class="text-right">
-                            10,000,000
-                          </div>
-                        </div>
+												<div class="datagrid-cell" role="gridcell"
+														 style="min-width: 14rem; width: 14rem; max-width: 14rem;">
+													<div class="text-right">
+														5,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
+														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
+													<div class="text-right">
+														10,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell" role="gridcell"
+														 style="min-width: 15rem; width: 15rem; max-width: 15rem;">
+													<div class="text-right">
+														5,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
+														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
+													<div class="text-right">
+														10,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell" role="gridcell"
+														 style="min-width: 15rem; width: 15rem; max-width: 15rem;">
+													<div class="text-right">
+														5,000,000
+													</div>
+												</div>
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
+														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
+													<div class="text-right">
+														10,000,000
+													</div>
+												</div>
                       </div>
                       <!-- /datagrid-row-static -->
                     </div>
@@ -867,7 +877,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -879,7 +889,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -891,7 +901,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -935,7 +945,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -947,7 +957,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -959,7 +969,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -1003,7 +1013,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -1015,7 +1025,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -1027,7 +1037,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -1071,7 +1081,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -1083,7 +1093,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
@@ -1095,7 +1105,7 @@
 														5,000,000
 													</div>
 												</div>
-												<div class="datagrid-cell" role="gridcell"
+												<div class="datagrid-cell datagrid-cell-bg-alt" role="gridcell"
 														 style="min-width: 17rem; width: 17rem; max-width: 17rem;">
 													<div class="text-right">
 														10,000,000
