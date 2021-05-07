@@ -1,0 +1,68 @@
+
+
+// Layout
+$layout-min-width: 1440px;
+$layout-min-height: 900px;
+$layout-height: 100vh;
+
+
+// Global navigation bar
+$gnb-z-index: 20;
+$gnb-min-width: 1440px;
+$gnb-width: 100vw;
+$gnb-height: 5.6rem;
+$gnb-bgcolor: $white;
+$gnb-nav-link-color: $gray-800;
+$gnb-nav-link-active-color: $primary;
+
+
+// Side navigation bar
+$snb-z-index: 10;
+$snb-width: 5.6rem;
+$snb-width-hover: 24rem;
+$snb-height: calc(100vh - #{$gnb-height});
+$snb-bgcolor: $white;
+$snb-transition-base: all .2s ease-in-out !default;
+$snb-box-shadow: 0 0 4px rgba($black, 0.1);
+
+$snb-nav-item-spacer-y: $spacer / 2;
+$snb-nav-item-spacer-x: $spacer;
+$snb-nav-item-width: 4rem;
+$snb-nav-item-height: 4rem;
+$snb-nav-item-color: $body-color;
+$snb-nav-item-color-active: $primary;
+$snb-nav-item-bgcolor-active: rgba($primary, 0.15);
+$snb-nav-item-bgcolor-hover: rgba($primary, 0.05);
+$snb-nav-item-radius: 5rem;
+
+// Side Content
+$side-bgcolor: transparent;
+$side-width: 28rem;
+$side-height: calc(#{$layout-height} - #{$gnb-height});
+
+$side-header-height: 6.4rem;
+
+
+// Main Content
+$main-width: auto;
+$main-height: calc(#{$layout-height} - #{$gnb-height});
+
+$main-header-z-index: 10;
+$main-header-height: 6.4rem; // $side-content-header-height 와 동일함
+$main-header-transition: all ease-in-out 0.04s;
+
+$main-body-height: calc(#{$layout-height} - #{$gnb-height} - #{$main-header-height});
+
+$toolbar-height: 6.4rem;
+
+$card-header-nav-tabs-height : 4.8rem; // 카드 헤더에 탭이 있는 경우
+
+
+// Tables
+$table-header-height: 4rem;
+$table-tr-total-height: 5.6rem;
+
+$table-thead-row-height-base: calc(#{$line-height-base} + (#{$spacer} * 2) + (#{$border-width * 3}));
+
+
+

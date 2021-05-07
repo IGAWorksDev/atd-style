@@ -1,0 +1,100 @@
+
+
+// 테이블 셀 스펙 재설정
+// [to do] 추후 삭제
+.table {
+  th, td {
+    @extend .py-1;
+    @extend .px-2;
+  }
+}
+
+.table thead {
+  > tr {
+    > th {
+      height: $table-header-height;
+      vertical-align: middle;
+    }
+  }
+}
+
+.table tr {
+  td + td,
+  th + th {
+    border-left: 1px solid rgba($border-color, 0.5);
+  }
+}
+
+.table tr.tr-total {
+  > td {
+    height: $table-tr-total-height;
+  }
+  > td + td {
+    border-left: 0;
+  }
+}
+
+
+
+.table-responsive {
+  position: relative;
+
+  // 테이블 데이터 아이템을 전체선택 했을 경우의 메시지바
+  // 전체 현황 row의 위에 뜸.
+  #alert-all-checking {
+    position: absolute;
+    top: $table-header-height;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    height: $table-tr-total-height;
+    margin: 0;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+.cell-fix-5 {
+  width: 10%;
+}
+.cell-fix-30 {
+  width: 16%;
+}
+.cell-10 {
+  width: 10%;
+}
+.cell-15 {
+  width: 10%;
+}
+
+
+
+.table-wrap {
+  position: relative;
+  padding-top: $table-header-height; // 테이블 헤드(thead)의 높이값
+
+  .table-responsive {
+    position: static;
+    height: 160px; //calc(#{$main-body-height} - (#{$card-header-nav-tabs-height} + (#{$toolbar-height} * 2) + (#{$spacer} * 2) + (#{$border-width} * 2)));
+    overflow-y: scroll;
+  }
+
+  .table {
+    thead.cells-fixed-top {
+      display: inline-table;
+      position: absolute;
+      top: 0;
+      width: calc(100% - 15px);
+      border-right: 1px solid $border-color;
+    }
+
+    tbody {
+      //display: inline-table;
+    }
+  }
+}

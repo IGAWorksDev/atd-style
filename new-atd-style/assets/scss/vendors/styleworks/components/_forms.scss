@@ -1,0 +1,172 @@
+
+
+// Textual Form Controls
+// 텍스트가 있는 폼 컨트롤 - 기본 스타일
+//
+.form-control {
+  display: block;
+  width: 100%;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-family: $input-font-family;
+  @include font-size($input-font-size);
+  line-height: $input-line-height;
+  font-weight: $font-weight-normal;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+
+  // Note : CSS에서`<select>`의 제한된 스타일 지정으로 인해 일부 브라우저에서는 <select>에 영향을 미치지 않습니다.
+  @include border-radius($input-border-radius, 0);
+
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+
+  // Placeholder 자리표시자
+  &::placeholder {
+    color: $input-placeholder-color;
+    // Firefox의 비정상적인 기본 불투명도를 무시합니다; see https://github.com/twbs/bootstrap/pull/11526
+    //opacity: 1;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus($ignore-warning: true);
+
+  &:disabled,
+  &[readonly]{
+    background-color: $input-disabled-bg;
+    // 읽을 수없는 비활성화 된 콘텐츠에 대한 iOS 수정 ; see https://github.com/twbs/bootstrap/issues/11655.
+    //opacity: 1;
+  }
+}
+
+
+.form-control[type="search"] {
+  background: $input-search-background;
+  background-color: $input-bg;
+  padding-left: $input-search-padding-x;
+}
+
+
+.form-control[type="date"],
+.form-control[type="datetime-local"],
+.form-control[type="month"] {
+  background: $input-date-background;
+  background-color: $input-bg;
+  padding-left: $input-date-padding-x;
+}
+
+
+
+
+// 파일 입력을 새 줄로 강제하여 텍스트 입력과 더 잘 일치하도록 만듭니다.
+.form-control-file,
+.form-control-range {
+  display: block;
+  width: 100%;
+}
+
+// Labels
+//
+label {
+  display: block;
+  margin-bottom: $input-padding-y; // input-control 기본 패딩값과 같음.
+}
+
+
+// textual control 재설정
+select.form-control {
+  &[size],
+  &[multiple] {
+    height: auto;
+  }
+}
+textarea.form-control {
+  height: auto;
+}
+
+
+
+// ------------------------------------------------------------------
+// Form group
+// input과 label의 묶음.
+//
+// 수직 양식의 구성 및 간격을 지원하도록 설계되었습니다. 수평 양식의 경우 사전 정의 된 그리드 클래스를 사용하십시오.
+
+.form-group {
+  margin-bottom: $form-group-margin-bottom;
+}
+
+
+
+// ------------------------------------------------------------------
+// Checkboxes & Radios
+//
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: $form-check-input-gutter;
+}
+.form-check-input {
+  position: absolute;
+  margin-top: $form-check-input-margin-y; // 라벨과 정렬을 맞추기 위해 계산됨.
+  margin-left: -$form-check-input-gutter; // input의 크기와 라벨과의 간격이 계산됨.
+  width: $form-check-input-size; // 라벨과 정렬을 맞추기 위해 크기를 지정함.
+  height: $form-check-input-size;
+
+  &[disabled] ~ .form-check-label,
+  &:disabled ~ .form-check-label {
+    color: $input-disabled-color;
+  }
+}
+.form-check-label {
+  margin-bottom: 0;
+}
+.form-check-inline {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+  margin-right: $form-check-inline-margin-x; // .form-check-inline과의 거리.
+  .form-check-input {
+    position: static;
+    margin-top: 0;
+    margin-right: $form-check-inline-input-margin-x;
+    margin-left: 0;
+  }
+}
+
+
+
+
+// ------------------------------------------------------------------
+// Form Validation
+//
+// 양식 필드 값이 유효하거나 유효하지 않은 경우 사용자에게 피드백을 제공합니다.
+// 주로 번위가 지정된 ':invalid' 및 ':valid' 의사 클래스(pseudo-classes)를 통한 클라이언트 측 유효성 검사를 위해 작동하지만
+// 서버 측 유효성 검사를 위한 '.is-invalid' 및 '.is-valid' 클래스도 포함합니다.
+
+@each $state, $data in $form-validation-states {
+  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

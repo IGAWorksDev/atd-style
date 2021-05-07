@@ -1,0 +1,299 @@
+
+//
+// Datagrid
+//
+// 대화형 테이블 형식 데이터 스타일
+
+
+// Grid Mixins
+//
+// ----------------------------------------
+
+@mixin datagrid-flex-column() {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  position: relative;
+}
+
+@mixin datagrid-flex-row() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  border-collapse: collapse;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
+@mixin datagrid-flex-cell() {
+  border-width: 0;
+  border-style: solid;
+  border-color: $datagrid-border-color;
+  padding: $datagrid-padding-y $datagrid-padding-x;
+  background-color: $datagrid-bg;
+  min-width: 8rem;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+@mixin datagrid-sticky() {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: $datagrid-row-sticky-z-index;
+}
+
+
+// Datagrid Styles
+//
+// ----------------------------------------
+
+// Grid & Rowgroup
+// 표 형식 정보 표시를 위한 그리드
+// 행(row)을 포함하는 그룹으로 <thead>, <tbody> 및 <tfoot>의 기능을 모방
+.datagrid,
+.datagrid-rowgroup {
+  @include datagrid-flex-column();
+}
+
+// Row
+// 표 형식 구조 내의 셀들의 행
+//
+.datagrid-row {
+  @include datagrid-flex-row();
+}
+
+
+// Gridcell
+// <td>요소의 기능을 모방하는 셀
+//
+
+.datagrid-cell {
+  @include datagrid-flex-cell();
+  color: $datagrid-color;
+
+  // gridcell이 <th> 기능을 모방할 때
+  &[role="columnheader"],
+  &[role="rowheader"] {
+    font-weight: bolder;
+  }
+}
+
+
+// rowspan
+// 2개 이상의 행을 갖는 grid cell 스타일
+// datagrid-row를 포함하므로 특정한 스펙은 갖고 있지 않음.
+.datagrid-rowspan {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+
+// colspan
+// 셀을 2개 이상의 열에 걸 칠 경우
+// row를 포함.
+// 포함하는 셀의 너비를 함한 크기를 갖고 있어야 하며, sticky되는 셀이 있을 경우 대응할 수 있음.
+.datagrid-colspan {
+  padding: 0;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+
+
+
+
+// Selection Gridcell
+.datagrid-cell-select {
+  min-width: 3rem;
+  flex: 0 0 3rem;
+}
+
+// Header 안의 Gridcell
+.datagrid-header{
+  > .datagrid-row .datagrid-cell {
+    border-bottom-width: $datagrid-border-width;
+    background-color: $datagrid-bg;
+  }
+  > .datagrid-row:last-child .datagrid-cell {
+    border-bottom-color: darken($datagrid-border-color, 8%); // header와 body의 셀 구분을 위해 마지막 행의 셀은 진한 컬러를 갖고 있음.
+  }
+
+  > .datagrid-row:last-child .datagrid-colspan {
+    .datagrid-row:last-child .datagrid-cell {
+      border-bottom-width: $datagrid-border-width !important;
+      border-bottom-color: darken($datagrid-border-color, 8%);
+    }
+  }
+}
+
+// Body 안의 Gridcell
+.datagrid-body {
+  > .datagrid-row .datagrid-cell {
+    border-top-width: $datagrid-border-width;
+    /*
+    &.datagrid-colspan {
+      .datagrid-row .datagrid-cell {
+        border-top-width: 0;
+      }
+    }
+  */
+  }
+}
+
+// Tabindex가 있을 때 포커스 된 상태 추가 (*테스트)
+[role="columnheader"],
+[role="rowheader"],
+[role="gridcell"] {
+  &[tabindex] {
+    position: relative;
+    &:focus {
+      outline: 2px dotted $primary;
+      z-index: 10;
+    }
+  }
+}
+
+
+
+// Sticky
+//
+
+// rowgroup을 움직이지 않게 할 경우
+// rowgroup과 함께 사용.
+.datagrid-rowgroup-sticky {
+  @include datagrid-sticky();
+  z-index: $datagrid-rowgroup-sticky-z-index;
+}
+
+// row의 gridcell을 움직이지 않게 할 경우
+// row 안에 사용하며, 1개 이상의 gridcell을 포함하고 있어야 함
+.datagrid-row-sticky {
+  @include datagrid-flex-row();
+  @include datagrid-sticky();
+
+  // sticky effect style
+  &:after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba($black, 0.1) 0%, rgba($white, 0) 100%);
+  }
+}
+//.datagrid-row-absolute 추가--2020.03.19
+// 스크롤 영역이 넓어 고정된 열이 스크롤 되는 현상을 없애기 위해 추가됨.
+.datagrid-row-absolute {
+  @include datagrid-sticky();
+  position: absolute;
+  &:after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba($black, 0.1) 0%, rgba($white, 0) 100%);
+  }
+}
+
+
+
+// Variables Styles
+//
+// ----------------------------------------
+
+// Responsive -- 그리드 시스템과 연결
+//
+.datagrid-responsive {
+  overflow: auto;
+
+}
+
+// Bordered
+//
+.datagrid-bordered {
+  .datagrid-cell + .datagrid-cell {
+    border-left-width: $datagrid-border-width;
+    border-left-color: $datagrid-border-color;
+  }
+  // rowspan이 된 경우로 행(row)의 첫번째 셀에 보더값을 주어야, 셀 너비값을 맞출 수 있음.
+  .datagrid-cell + .datagrid-rowspan {
+    .datagrid-row .datagrid-cell:first-child {
+      border-left-width: $datagrid-border-width;
+      border-left-color: $datagrid-border-color;
+    }
+  }
+  .datagrid-cell + .datagrid-colspan {
+    .datagrid-row .datagrid-cell:first-child {
+      border-left-width: $datagrid-border-width;
+      border-left-color: $datagrid-border-color;
+    }
+  }
+
+  .datagrid-colspan + .datagrid-cell,
+  .datagrid-rowspan + .datagrid-cell {
+    border-left-width: $datagrid-border-width;
+    border-left-color: $datagrid-border-color;
+  }
+}
+
+// Stripe
+// 홀수 행에 배경색 추가
+.datagrid-striped > .datagrid-body .datagrid-row {
+  &:nth-child(odd) {
+    .datagrid-cell {
+      background-color: $datagrid-bg-alt;
+    }
+  }
+}
+
+// Active
+//
+.datagrid > .datagrid-body .datagrid-row[aria-selected="true"] {
+  .datagrid-cell {
+    @include is-component-active($datagrid-active-color, $datagrid-active-bg);
+  }
+}
+// rowspan이나 colspan의 안에 있는 row에 active 상태를 줄 경우
+.datagrid-row.is-active {
+  .datagrid-cell {
+    @include is-component-active($datagrid-active-color, $datagrid-active-bg);
+  }
+}
+
+
+// Hover
+//
+.datagrid-hover > .datagrid-body .datagrid-row:hover{
+  .datagrid-cell {
+    @include is-component-hover($datagrid-hover-color, $datagrid-hover-bg);
+  }
+}
+// 특정 셀에 호버 효과를 사용할 경우
+.datagrid-cell.is-hover:hover {
+  @include is-component-hover($datagrid-hover-color, $datagrid-hover-bg);
+}
+
+// Muted
+.datagrid-body > .datagrid-row.is-muted {
+  .datagrid-cell {
+    @include is-component-muted($datagrid-muted-color, $datagrid-muted-bg);
+  }
+}
+
+// Align centered
+.datagrid-align-center{
+  .datagrid-cell {
+    @extend .d-flex;
+    @extend .align-items-center;
+    .datagrid-cell-inner {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+//
+// Layout of Side Navigation Bar
+//
+//
+
+.snb {
+  // twWrapper에서 상속받는 grid property
+  grid-row-start: 2;
+  grid-column-start: 1;
+
+  position: relative;
+  z-index: $snb-z-index;
+
+  width: $snb-width;
+  height: 100%;
+  overflow: hidden;
+  background-color: $snb-bgcolor;
+  @extend .border-right;
+  box-shadow: $snb-box-shadow;
+  transition: $snb-transition-base;
+}
+
+
+// snb navigation
+//
+.snb-navbar {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .flex-wrap;
+  @extend .pt-2; // gnb와 맞닿지 않도록 떨어지게 함.
+}
+.snb-navbar-nav {
+  @extend .flex-column;
+}
+
+
+
+// SNB Items Style
+.snb-navbar-nav .nav-item {
+  .nav-link {
+    @extend .d-flex;
+    @extend .flex-row;
+    @extend .align-items-center;
+    position: relative;
+    margin: 0 $snb-nav-item-spacer-x;
+    padding: 0;
+    width: $snb-nav-item-width;
+    height: $snb-nav-item-width;
+    border-radius: $snb-nav-item-radius;
+    overflow: hidden;
+    color: $snb-nav-item-color;
+    background-color: transparent;
+    transition: $snb-transition-base;
+  }
+  .nav-item-icon {
+    display: inline-block;
+    font-size: $font-size-lg;
+    line-height: 1;
+    padding: $spacer * 1.5;
+    width: $snb-nav-item-width;
+    height: $snb-nav-item-width;
+    overflow: hidden;
+  }
+  .nav-item-title {
+    position: absolute;
+    left: $snb-nav-item-width;
+    display: none;
+    font-size: $font-size-base;
+    white-space: nowrap;
+  }
+}
+
+// SNB Item Hover
+//
+.snb-navbar-nav .nav-item:hover {
+  .nav-link {
+    color: $snb-nav-item-color-active;
+    text-decoration: none;
+    background-color: $snb-nav-item-bgcolor-hover;
+  }
+}
+
+
+// SNB Item Active
+//
+.snb-navbar-nav .nav-item.is-active {
+  position: relative;
+  .nav-link {
+    color: $snb-nav-item-color-active;
+    font-weight: bold;
+    background-color: $snb-nav-item-bgcolor-active;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: $snb-nav-item-color-active;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// SNB Hover
+// 1. 마우스오버하면 너비가 넓어짐
+// 2. 아이콘을 감싸던 배경이 아이템의 전체의 배경으로 변경됨.
+// 3. 마우스오버하면 너비가 넓어지며 아이템의 텍스트가 보여짐.
+.snb:hover {
+  width: $snb-width-hover; // 1
+  box-shadow: $snb-box-shadow;
+  transition: $snb-transition-base;
+  .nav-item {
+    .nav-link { // 2
+      width: 100%;
+      border-radius:  $snb-nav-item-radius 0 0 $snb-nav-item-radius;
+    }
+    .nav-item-title { // 3
+      display: inline-block;
+    }
+  }
+}

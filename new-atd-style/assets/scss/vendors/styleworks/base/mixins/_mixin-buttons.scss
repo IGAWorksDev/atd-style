@@ -1,0 +1,139 @@
+
+
+// Button Sizes
+//
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+
+  // Manually declare to provide an override to the browser default
+  // - 브라우저 기본값에 대한 재정의를 제공하도록 수동으로 선언
+  @include border-radius($border-radius, 0);
+}
+
+
+// Circle Button sizes
+//
+@mixin button-circle-size($padding-y, $padding-x, $width, $height, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  width: $width;
+  height: $height;
+  @include font-size($font-size);
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+
+
+// Button Styles
+//
+
+// btn-text-{$theme-colors}
+//
+//
+@mixin button-text-variant($color,
+  $active-color: darken($color, 10%), $active-background: rgba($color, 0.1), $active-border: rgba($color, 0.1)){
+
+  color: $color;
+
+  &:hover,
+  &:active,
+  &.is-active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+    text-decoration: none;
+  }
+
+  // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.2);
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $btn-disabled-color;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+
+
+
+// btn-contained-{$theme-colors}
+//
+@mixin button-contained-variant($background, $border,
+  $active-background: darken($background, 4%), $active-border: darken($border, 10%)) {
+
+  color: $white;
+  background-color: $background;
+  background-clip: padding-box;
+  border-color: $border;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &.is-active {
+    color: $white;
+    background-color: $active-background;
+    border-color: $active-border;
+    text-decoration: none;
+  }
+
+  // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($background, 0.2);
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $white;
+    border-color: $btn-disabled-color;
+    background-color: $btn-disabled-color;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+
+// btn-outlined-{$theme-colors}
+//
+@mixin button-outlined-variant($color, $border,
+  $active-color: darken($color, 8%), $active-background: rgba($color, 0.2), $active-border: $border) {
+
+  color: $color;
+  border-color: $color;
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:hover,
+  &:active,
+  &.is-active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+    text-decoration: none;
+  }
+
+  // 포커스 상태 -- 그림자 확산으로 포커스 상태를 나타냄
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.2);
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
+    background-color: transparent;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+

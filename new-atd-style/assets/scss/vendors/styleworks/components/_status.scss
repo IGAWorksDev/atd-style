@@ -1,0 +1,78 @@
+
+
+// 요소(element)의 상태에 따른 스타일 믹스인
+
+// 컨텐츠가 없는 요소인 경우 사용
+// .is-blank
+//
+@mixin is-component-blank($blank-bg){
+  background-color: $blank-bg;
+}
+
+
+
+// Active (현재형)
+// .is-active
+//
+// 현재 action에 의해 활성된 요소인 경우 사용
+@mixin is-component-active($active-color, $active-bg){
+  color: $active-color;
+  background-color: $active-bg;
+}
+
+// with Check icon
+@mixin is-component-icon-active($active-color, $active-padding-x, $active-bg){
+  color: $active-color;
+  padding-right: $active-padding-x;
+  background: $active-bg;
+  text-decoration: none;
+}
+
+
+// Hover
+//
+// 컴포넌트 아이템에 mouse hover 효과를 사용할 경우
+// is-active보다 우위에 있으며, 배경색을 변화시킴
+@mixin is-component-hover($hover-color, $hover-bg){
+  color: $hover-color;
+  background-color: $hover-bg;
+}
+
+
+
+// Selected (과거형)
+// .is-selected
+//
+// 선택되어진 요소인 경우
+
+// with Check icon
+@mixin is-component-icon-selected($selected-color, $selected-padding-x, $selected-bg){
+  color: $selected-color;
+  padding-right: $selected-padding-x;
+  background: $selected-bg;
+  text-decoration: none;
+  cursor: default;
+}
+
+
+// Muted
+// .is-muted
+//
+// 보조 정보 요소인 경우
+@mixin is-component-muted($muted-color, $muted-bg){
+  color: $muted-color !important;
+  background-color: $muted-bg !important;
+}
+
+
+// Disabled
+// .is-disabeld
+//
+// 가장 우위에 있음.
+// 비활성 요소 효과로, 선택/클릭/입력 등등을 하거나 포커스를 받을 수 없는 요소일 때 사용.
+@mixin is-component-disabled(){
+  color: $component-disabled-color !important;
+  background-color: transparent !important;
+  cursor: default !important;
+  pointer-events: none !important; // 요소가 마우스 이벤트의 대상이 될 수 있는지 여부 또는 시기를 정의할 수 있는 표시 속성
+}

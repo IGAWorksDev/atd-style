@@ -1,0 +1,284 @@
+
+// Checkboxes & Radios
+//
+//
+.custom-control {
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-height: $line-height-base; // 고정된 line-height 사용함!!(주의)
+  //padding-left: $custom-control-gutter + $custom-control-indicator-size; // 라벨 텍스트와의 거리와 컨트롤 인디케이터의 크기를 더한 값.
+}
+
+.custom-control-input {
+  position: absolute;
+  top: (($line-height-base - $custom-control-indicator-size) / 2); // 고정된 line-height 사용함!!(주의)
+  left: 0;
+  z-index: -1; // 레이블 뒤에 입력을 넣어 텍스트가 오버레이되지 않도록 합니다.
+  width: $custom-control-indicator-size;
+  height: $custom-control-indicator-size;
+  opacity: 0;
+
+  // 체크된 상태
+  &:checked ~ .custom-control-label::before {
+    color: $custom-control-indicator-checked-color;
+    border-color: $custom-control-indicator-checked-border-color;
+    @include gradient-bg($custom-control-indicator-checked-bg);
+    @include box-shadow($custom-control-indicator-checked-box-shadow);
+  }
+  // 포커스 -- 클릭 또는 탭하였을 경우 box-shadow 나타남.
+  &:focus ~ .custom-control-label::before {
+    // 여기서 믹스인은 피드백이 있는지 확인하는 데 사용되지 않습니다.
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $custom-control-indicator-focus-box-shadow;
+    }
+  }
+  // 체크 상태가 아닌 경우의 포커스
+  &:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: $custom-control-indicator-focus-border-color;
+  }
+
+  &:not(:disabled):active ~ .custom-control-label::before {
+    color: $custom-control-indicator-active-color;
+    background-color: $custom-control-indicator-active-bg;
+    border-color: $custom-control-indicator-active-border-color;
+    @include box-shadow($custom-control-indicator-active-box-shadow);
+  }
+
+  // 비활성 요소
+  &[disabled],
+  &:disabled {
+    ~ .custom-control-label {
+      color: $custom-control-label-disabled-color;
+      &::before {
+        background-color: $custom-control-indicator-disabled-bg;
+      }
+    }
+  }
+}
+
+// 가상(pseudo)요소에서 사용자 지정 컨트롤을 만듭니다.
+.custom-control-label {
+  position: relative;
+  display: inline-block; // 컨트롤과 수직 정렬을 맞추기 위해 추가함.
+  margin-bottom: 0;
+  color: $custom-control-label-color;
+  line-height: $line-height-base; // 고정돤 line-height 사용함!!(주의)
+  cursor: $custom-control-cursor;
+
+  // 컨트롤 지시자(indicator) 배경 컬러와 (when enabled)그라디언트
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: ($line-height-base - $custom-control-indicator-size) / 2; // 고정된 line-height 사용함!!(주의)
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    pointer-events: none;
+    background-color: $custom-control-indicator-bg;
+    border: $custom-control-indicator-border-width solid $custom-control-indicator-border-color;
+  }
+  // 컨트롤 아이콘
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: ($line-height-base - $custom-control-indicator-size) / 2; // 고정된 line-height 사용함!!(주의)
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    background: no-repeat center center / #{$custom-control-indicator-bg-size};
+  }
+}
+
+// Checkboxes
+//
+
+.custom-checkbox {
+  .custom-control-label::before {
+    @include border-radius($custom-checkbox-indicator-border-radius);
+  }
+  // 체크된 상태
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      border-color: $custom-checkbox-indicator-indeterminate-border-color;
+      @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
+      @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
+    }
+    &::after {
+      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
+    }
+  }
+
+  // 체크된 상태의 비활성
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      border-color: $custom-control-indicator-checked-disabled-border-color;
+      @include gradient-bg($custom-control-indicator-checked-disabled-bg);
+    }
+    &:indeterminate ~ .custom-control-label::before { // 상태가 불확실할 경우
+      @include gradient-bg($custom-control-indicator-checked-disabled-bg);
+    }
+  }
+}
+
+// Radios
+//
+
+.custom-radio {
+  .custom-control-label::before { // 동그란 모양 만들기
+    border-radius: $custom-radio-indicator-border-radius;
+  }
+  // 체크된 상태
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-image: escape-svg($custom-radio-indicator-icon-checked);
+    }
+  }
+}
+
+
+// Custom Select
+//
+// 브라우저 기본 선택을 사용자 지정 항목으로 대체합니다.
+
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: $custom-select-height;
+  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  font-family: $custom-select-font-family;
+  @include font-size($custom-select-font-size);
+  font-weight: $custom-select-font-weight;
+  line-height: $custom-select-line-height;
+  color: $custom-select-color;
+  vertical-align: middle;
+  background: $custom-select-bg $custom-select-background;
+  border: $custom-select-border-width solid $custom-select-border-color;
+  @include border-radius($custom-select-border-radius, 0);
+  @include box-shadow($custom-select-box-shadow);
+  appearance: none;
+
+  &:focus {
+    border-color: $custom-select-focus-border-color;
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($custom-select-box-shadow, $custom-select-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $custom-select-focus-box-shadow;
+    }
+
+    &::-ms-value {
+      // For visual consistency with other platforms/browsers,
+      // suppress the default white text on blue background highlight given to
+      // the selected option text when the (still closed) <select> receives focus
+      // in IE and (under certain conditions) Edge.
+      // See https://github.com/twbs/bootstrap/issues/19398.
+      color: $input-color;
+      background-color: $input-bg;
+    }
+  }
+
+  &[multiple],
+  &[size]:not([size="1"]) {
+    height: auto;
+    padding-right: $custom-select-padding-x;
+    background-image: none;
+  }
+
+  &:disabled {
+    color: $custom-select-disabled-color;
+    background-color: $custom-select-disabled-bg;
+  }
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    display: none;
+  }
+
+  // Remove outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $custom-select-color;
+  }
+}
+
+
+// Custom File
+//
+
+.custom-file {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: $custom-file-height;
+  margin-bottom: 0;
+}
+
+.custom-file-input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: $custom-file-height;
+  margin-bottom: 0;
+  opacity: 0;
+
+  &:focus ~ .custom-file-label { // 포커스 상태일 때 연결된 라벨 스타일
+    border-color: $custom-file-focus-border-color;
+    box-shadow: $custom-file-focus-box-shadow;
+  }
+  &[disabeld] ~ .custom-file-label,
+  &:disabled ~ .custom-file-label { // 비횔성 상태일 때 연결된 라벨 스타일
+    background-color: $custom-file-disabled-bg;
+  }
+  @each $lang, $value in $custom-file-text { // 파일 선택 텍스트
+    &:lang(#{$lang}) ~ .custom-file-label::after {
+      content: $value;
+    }
+  }
+
+  ~ .custom-file-label[data-browse]::after {
+    content: attr(data-browse);
+  }
+}
+
+.custom-file-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: $custom-file-height;
+  padding: $custom-file-padding-y $custom-file-padding-x;
+  font-family: $custom-file-font-family;
+  font-weight: $custom-file-font-weight;
+  line-height: $custom-file-line-height;
+  color: $custom-file-color;
+  background-color: $custom-file-bg;
+  border: $custom-file-border-width solid $custom-file-border-color;
+  @include border-radius($custom-file-border-radius);
+  @include box-shadow($custom-file-box-shadow);
+
+  &::after { // 파일 선택 버튼 모양
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: $custom-file-height-inner;
+    padding: $custom-file-padding-y $custom-file-padding-x;
+    line-height: $custom-file-line-height;
+    color: $custom-file-button-color;
+    content: "Browse";
+    @include gradient-bg($custom-file-button-bg);
+    border-left: inherit;
+    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+  }
+}
+
+

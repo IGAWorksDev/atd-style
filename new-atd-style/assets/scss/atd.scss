@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+// SASS Guidelines
+// https://sass-guidelin.es/ko/#section-51 참고
+// 아래픠 폴더를 생성하며 scss파일을 분리하며, 아래 순서대로 불러들이기 해야함.
+//
+// vendors-extensions/
+// - 벤더의 한 부분을 덮어써야 한다면, 덮어쓰는 벤더의 이름을 그대로 딴 파일들을 담는 폴더입니다.
+// - 벤더 파일 자체를 편집하는 것을 피하기 위함입니다. (벤더파일을 수정하는 것을 좋은 생각이 아니니까요.)
+//
+// vendors /
+// - 외부라이브러리와 프레임워크의 css 파일들을 담습니다.
+// - Normalize, Bootstrap, jqueryUI, .... 등등
+// - #bootstrap, #jqueryUI, ... 등등
+//
+// utils/
+// - 프로젝트에 사용되는 모든 sass도구와 헬퍼를 모읍니다.
+// - 모든 전역 변수, 함수, 믹스인, 플레이스홀더
+// - 컴파일되었을 때 한 줄의 css도 산출하지 않아야 합니다. 이 폴더는 그저 Sass헬퍼일 뿐입니다.
+// - #sass변수, #sass함수, #sass믹스인, #클래스, #플레이스홀더, #헬퍼, ... 등등
+//
+// base/
+// - 프로젝트의 보일러플레이트 코드라고 부를 만한 것을 담습니다.
+// - 리펫파일, 타이포그래피 규칙, HTML요소에 대한 표준 스타일을 정의하는 스타일 시트
+// - #reset, #normalize, #타이포그래피 규칙, ... 등등
+//
+// layout/
+// - 사이트나 어플리케이션의 레이아웃에 기여하는 모든 것들이 들어갑니다.
+// - 사이트의 주요부분(header, footer, navigation, sidebar, ...), 그리드 시스템 혹은 모든 폼의 스타일을 위한 스타일 시트를 가질 수 있습니다.
+// - #네비게이션, #그리드시스템, #헤더, #푸터, #사이드바, #폼, ... 등등
+//
+// components/
+// - 더 작은 컴퍼넌트들이 들어갑니다.
+// - layout이 전반적인 뼈대를 정의하는 거시적인 폴더임에 반해, 컴퍼넌트는 위젯에 초점을 둡니다.
+// - 슬라이더, 로더, 위젯, 그리고 기본적으로 이들과 비슷한 것을 비롯해 온갖 구체적인 모듈들을 담슴습니다.
+// - 전체 사이트/어플리케이션이 주로 작은 모듈들로 구성되어야 하므로 이 폴더에는 대개 많은 파일들이 있습니다.
+// - #버튼, #캐러셀, #커버, #드롭다운, ... 등등
+//
+// pages/
+// - 페이지에 한정된 스타일이 있다면, 이 폴더 속, 페이지 이름을 딴 파일에 넣는 것이 좋습니다.
+// - 예를 들면, _home, _contact, ... 등등
+//
+// themes/
+// - 큰 사이트와 어플리케이션에서 여러 다른 테마들을 갖는 것은 흔히 있는 일입니다.
+// - 테마를 다루는 다른 방법들도 있지만, 이 폴더에 전부 모아두는 것을 좋아 합니다.
+// - _theme.scss, _admin.scss, ... 등등
+// - #디폴트테마, #관리자테마, ... 등등
+
+//@import
+//	'vendors-extensions/';
+
+//
+// 2020-09
+// 새로운 GNB 스타일시트
+// 기존 UI 스타일과 rem의 크기가 안 맞을 수 있음.
+
+@import
+'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css',
+'vendors/styleworks/utils/_sw-colors.scss',
+'vendors/styleworks/utils/_sw-variables.scss',
+'vendors/_bootstrap-extention.scss',
+  // 스타일 분리에 필요한 파일들..
+'vendors/styleworks/vendors/_rfs-extension.scss',
+'vendors/styleworks/vendors/_rfs.scss';
+
+@import 'utils/_gnb-variables.scss';
+
+@import 'layout/_gnb.scss';
+
+@import 'vendors/_styleworks-extention.scss',
+'vendors/styleworks/styleworks.scss',
+"../css/adicons-v1.0/style.scss";
+
+@import 'utils/_service-variables.scss';
+
+//@import
+//  'base/';
+
+@import // 'layout/gnb', // 분리되어 있음.
+'layout/_snb.scss',
+'layout/_contentWrapper.scss',
+'layout/_twWrapper.scss',
+'layout/_main.scss';
+
+@import 'components/_table.scss',
+'components/_banner.scss',
+'components/_easy-manager.scss';
+
+@import 'pages/_common.scss',
+'pages/_insight.scss',
+'pages/_kakaomoment.scss',
+'pages/_dashboard.scss';
+;
+
+//@import
+//	'themes/';
+
+
+
+body {
+  background-color: $gray-900;
+}
+
+
+// 참고글 모음
+// https://inspirationalpixels.com/sass-projects-for-beginners-1/

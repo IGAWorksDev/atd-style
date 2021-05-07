@@ -1,0 +1,179 @@
+// Form control focus state
+//
+// 기본적으로 '$input-focus-border-color' 변수를 사용하는 지정된 색상으로 모든 입력에 대해 사용자 정의 된 초점 상태를 생성합니다.
+//
+// 기본값을 사용자 지정하지 않는 것이 좋습니다. 대신 이 값을 사용하여 필요에 따라 색상을 조정하십시오.
+// 이 미적 변화는 Webkit의 기본 스타일을 기본으로 하지만 더 광범위한 브라우저에 적용할 수 있습니다.
+// 변경시 유용성과 접근성을 고려해야합니다.
+//
+// 사용 예시:
+// 어두운 회색 배경에 대비하여 대비를 높이기 위해 기본 파란색 테두리와 그림자를 흰색으로 변경합니다.
+
+@mixin form-control-focus($ignore-warning: false) {
+  &:focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+  //@include deprecate("The `form-control-focus()` mixin", "v4.4.0", "v5", $ignore-warning);
+}
+
+
+// 이 믹스 인은 Dart Sass와 호환되도록 'if()' 기법을 사용합니다.
+// See https://github.com/sass/sass/issues/1873#issuecomment-152293725 for more details
+@mixin form-validation-state-selector($state) {
+  @if ($state == "valid" or $state == "invalid") {
+    .was-validated #{if(&, "&", "")}:#{$state},
+    #{if(&, "&", "")}.is-#{$state} {
+      @content;
+    }
+  } @else {
+    #{if(&, "&", "")}.is-#{$state} {
+      @content;
+    }
+  }
+}
+
+// 유효성 상태, 색상, 아이콘
+@mixin form-validation-state($state, $color, $icon) {
+  .#{$state}-feedback {
+    display: none;
+    width: 100%;
+    margin-top: $form-feedback-margin-top;
+    @include font-size($form-feedback-font-size);
+    color: $color;
+  }
+
+  .#{$state}-tooltip { // 유효성 상태를 툴팁으로 표현할 경우
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    display: none;
+    max-width: 100%; // 가능한 경우 부모에게 포함
+    padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
+    margin-top: .1rem;
+    @include font-size($form-feedback-tooltip-font-size);
+    line-height: $form-feedback-tooltip-line-height;
+    color: color-yiq($color);
+    background-color: rgba($color, $form-feedback-tooltip-opacity);
+    @include border-radius($form-feedback-tooltip-border-radius);
+  }
+
+  @include form-validation-state-selector($state) { // 상태에 따른 피드백/툴팁의 보이기
+    ~ .#{$state}-feedback,
+    ~ .#{$state}-tooltip {
+      display: block;
+    }
+  }
+
+  .form-control {
+    @include form-validation-state-selector($state) {
+      border-color: $color;
+
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-image: escape-svg($icon);
+        background-repeat: no-repeat;
+        background-position: right $input-height-inner-quarter center; // 오른쪽에서 9px 들어 오고, 중앙에 위치함
+        background-size: $input-height-inner-half $input-height-inner-half;
+      }
+
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+      }
+    }
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  textarea.form-control {
+    @include form-validation-state-selector($state) {
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+      }
+    }
+  }
+
+  .custom-select {
+    @include form-validation-state-selector($state) {
+      border-color: $color;
+
+      @if $enable-validation-icons {
+        padding-right: $custom-select-feedback-icon-padding-right;
+        background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+      }
+
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+      }
+    }
+  }
+
+  .form-check-input {
+    @include form-validation-state-selector($state) {
+      ~ .form-check-label {
+        color: $color;
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  .custom-control-input {
+    @include form-validation-state-selector($state) {
+      ~ .custom-control-label {
+        color: $color;
+
+        &::before {
+          border-color: $color;
+        }
+      }
+
+      &:checked {
+        ~ .custom-control-label::before {
+          border-color: lighten($color, 10%);
+          @include gradient-bg(lighten($color, 10%));
+        }
+      }
+
+      &:focus {
+        ~ .custom-control-label::before {
+          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+
+        &:not(:checked) ~ .custom-control-label::before {
+          border-color: $color;
+        }
+      }
+    }
+  }
+
+  // custom file
+  .custom-file-input {
+    @include form-validation-state-selector($state) {
+      ~ .custom-file-label {
+        border-color: $color;
+      }
+
+      &:focus {
+        ~ .custom-file-label {
+          border-color: $color;
+          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+      }
+    }
+  }
+}

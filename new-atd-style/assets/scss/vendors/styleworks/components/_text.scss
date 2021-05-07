@@ -1,0 +1,18 @@
+
+
+.text-body { color: $body-color;}
+.text-disabled { color: $disable;}
+.text-muted { color: $text-muted; }
+.text-tertiary {color: $disable !important;}
+
+
+// Mixin : 범례용 텍스트 컬러
+@mixin chart-legend-variant($color){
+  color: $color;
+}
+// '.text-legend-숫자'로 클래스 추가됨.
+@each $color, $value in $theme-charts{
+  .text-#{$color} {
+    @include chart-legend-variant($value);
+  }
+}
