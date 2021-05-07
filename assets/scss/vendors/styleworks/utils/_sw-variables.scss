@@ -142,6 +142,7 @@ $font-size-xs: 1rem; //10px
 $font-size-sm: 1.2rem;
 $font-size-base: 1.4rem;
 $font-size-lg: 1.6rem;
+$font-size-xl: 2rem;
 
 $line-height-xs: 1.6rem; // 0.625
 $line-height-sm: 1.8rem; // 1.5
@@ -863,7 +864,7 @@ $datagrid-border-color: $border-color !default;
 $datagrid-padding-y: $spacer !default;
 $datagrid-padding-x: $spacer * 2 !default;
 
-$datagrid-rowgroup-sticky-z-index: 501 !default;
+$datagrid-rowgroup-sticky-z-index: 2 !default;
 $datagrid-row-sticky-z-index: 1 !default;
 
 

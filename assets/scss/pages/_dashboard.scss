@@ -43,7 +43,7 @@
 // 맨 하단의 내용을 가리지 않고 볼 수 있도록 할 것.
 .blankslate-floating-bar {
   position: fixed;
-  z-index: $zindex-fixed;
+  z-index: 10;
   right: 0;
   bottom: 0;
   left: 0;
