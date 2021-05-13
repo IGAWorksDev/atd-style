@@ -1,0 +1,108 @@
+
+
+// Textual Form Controls
+// 텍스트가 있는 폼 컨트롤 - 기본 스타일
+//
+.form-control {
+  display: block;
+  width: 100%;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-family: $input-font-family;
+  @include font-size($input-font-size);
+  line-height: $input-line-height;
+  font-weight: $font-weight-normal;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+
+  // Note : CSS에서`<select>`의 제한된 스타일 지정으로 인해 일부 브라우저에서는 <select>에 영향을 미치지 않습니다.
+  @include border-radius($input-border-radius, 0);
+
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+
+  // Placeholder 자리표시자
+  &::placeholder {
+    color: $input-placeholder-color;
+    // Firefox의 비정상적인 기본 불투명도를 무시합니다; see https://github.com/twbs/bootstrap/pull/11526
+    //opacity: 1;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus($ignore-warning: true);
+
+  &:disabled,
+  &[readonly]{
+    background-color: $input-disabled-bg;
+    // 읽을 수없는 비활성화 된 콘텐츠에 대한 iOS 수정 ; see https://github.com/twbs/bootstrap/issues/11655.
+    //opacity: 1;
+  }
+}
+
+
+.form-control[type="search"] {
+  background: $input-search-background;
+  background-color: $input-bg;
+  padding-left: $input-search-padding-x;
+}
+
+
+.form-control[type="date"],
+.form-control[type="datetime-local"],
+.form-control[type="month"] {
+  background: $input-date-background;
+  background-color: $input-bg;
+  padding-left: $input-date-padding-x;
+}
+
+
+
+
+// 파일 입력을 새 줄로 강제하여 텍스트 입력과 더 잘 일치하도록 만듭니다.
+.form-control-file,
+.form-control-range {
+  display: block;
+  width: 100%;
+}
+
+// Labels
+//
+label {
+  display: block;
+  margin-bottom: $input-padding-y; // input-control 기본 패딩값과 같음.
+}
+
+
+// textual control 재설정
+select.form-control {
+  &[size],
+  &[multiple] {
+    height: auto;
+  }
+}
+textarea.form-control {
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

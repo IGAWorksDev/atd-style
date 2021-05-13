@@ -1,0 +1,67 @@
+
+// SASS theme manager
+
+// - theme names 테마 이름
+// - colors contained in each of themes 각 테마에 포함된 색상.
+
+$light-theme: "light-theme";
+$dark-theme: "dark-theme";
+
+
+$base-color: "base-color";
+$primary-color: "primary-color";
+$secondary-color: "secondary-color";
+$border-color: "border-color";
+
+// 두 테마 이름 변수를 포함하고, 상기 콘텐츠가 다시 색 이름과의 관계와 색 HEX값 맵
+$themes:(
+  $light-theme: (
+          $base-color: $gray-800,
+          $primary-color: $primary,
+          $border-color: $gray-300
+  ),
+  $dark-theme: (
+          $base-color: $gray-200,
+          $primary-color: $primary,
+          $border-color: $gray-600
+  )
+);
+
+
+// Themes Mixin
+//
+// $property
+// -- 현재 사용자에 대해 선택한 테마를 기반으로 변경하려는 속성
+// $color
+// -- 선택할 색상 이름. 위에 표시된 변수 중 하나 여야 함!! (중요)
+// $additionalPropertiesPositionIsFront
+// -- 색상 값과 연결할 추가 속성을 색상 값 앞 또는 뒤에 배치해야하는지 이해하는데 사용되는 부울 (선택사항, 기본값 false)
+// $addtionalProperties
+// -- 속성 목록이 있는 문자열이 색상 값과 연결됨. (선택사항, 기본값은 빈 문자열)
+//
+
+// <property> : <value>의 css 규칙을 만듬.
+//
+@mixin themeProperty($theme, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote($additionalProperties + ' ' + map-get($theme, $color));
+  } @else {
+    #{$property}: unquote(map-get($theme, $color) + ' ' + $additionalProperties);
+  }
+}
+
+// 테마별 <property> : <value> css 규칙을 만듬.
+//
+@mixin theme($property, $color, $additionalPropertiesPositionIsFront: false, $additionalProperties: '') {
+  $light: map-get($themes, $light-theme);
+  $dark: map-get($themes, $dark-theme);
+
+  // themeProperty
+  // 두 번 호출 되는데, 하나는 light 인 기본값이고 다른 하나는 @media(prefers-color-scheme:dark) 쿼리 내부에서 처리됨.
+  // prefers-color-scheme : 사용자의 시스템이 light theme이나 dark theme를 사용하는지 탐지하는 데 사용함.
+  //
+  @include themeProperty($light, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  }
+}

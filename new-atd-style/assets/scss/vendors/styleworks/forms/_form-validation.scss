@@ -1,0 +1,14 @@
+
+// ------------------------------------------------------------------
+// Form Validation
+//
+// 양식 필드 값이 유효하거나 유효하지 않은 경우 사용자에게 피드백을 제공합니다.
+// 주로 번위가 지정된 ':invalid' 및 ':valid' 의사 클래스(pseudo-classes)를 통한 클라이언트 측 유효성 검사를 위해 작동하지만
+// 서버 측 유효성 검사를 위한 '.is-invalid' 및 '.is-valid' 클래스도 포함합니다.
+
+@each $state, $data in $form-validation-states {
+  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+}
+
+
+

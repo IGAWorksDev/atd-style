@@ -60,8 +60,8 @@
 .card-group-responsive {
   display: flex;
   flex-flow: row wrap;
-  background-color: $component-bg;
-  border: $border-width solid $border-color;
+  background-color: $card-bg;
+  border: $border-width solid $card-border-color;
   overflow: auto;
   .card-group {
     flex-wrap: nowrap;

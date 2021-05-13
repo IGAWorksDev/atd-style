@@ -1,0 +1,37 @@
+
+
+// 보조 기술에 액세스 할 수 있도록 유지하면서 시각적으로 컨텐츠 숨기기
+// bootstrap v.5 참고
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// 포커스를 받았거나 하위 요소 중 하나에 포커스가 있을 때만 콘텐츠를 표시하는데 사용.
+// (즉, 클래스가 적용된 요소 / 컨테이너 내에 포커스가 있을 때)
+//
+// Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+
+@mixin visually-hidden-focusable() {
+  &:not(:focus):not(:focus-within) {
+    @include visually-hidden();
+  }
+}
+
+
+
+//
+// Visually hidden
+//
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  @include visually-hidden();
+}

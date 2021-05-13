@@ -1,0 +1,26 @@
+
+
+// Vendors
+@import
+'vendors/styleworks-extention',
+'vendors/styleworks/styleworks',
+"../css/adicons-v1.0/style"
+;
+
+// Service Common styles
+@import
+'utils/service-variables'
+;
+
+@import
+'base/typography'
+;
+
+// Layout
+@import
+'layout/gnb',
+'layout/snb',
+'layout/contentWrapper',
+'layout/twWrapper',
+'layout/main'
+;

@@ -1,133 +1,89 @@
 @charset "UTF-8";
 
-// SASS Guidelines
-// https://sass-guidelin.es/ko/#section-51 참고
-// 아래픠 폴더를 생성하며 scss파일을 분리하며, 아래 순서대로 불러들이기 해야함.
-//
-// vendors-extensions/
-// - 벤더의 한 부분을 덮어써야 한다면, 덮어쓰는 벤더의 이름을 그대로 딴 파일들을 담는 폴더입니다.
-// - 벤더 파일 자체를 편집하는 것을 피하기 위함입니다. (벤더파일을 수정하는 것을 좋은 생각이 아니니까요.)
-//
-// vendors /
-// - 외부라이브러리와 프레임워크의 css 파일들을 담습니다.
-// - Normalize, Bootstrap, jqueryUI, .... 등등
-// - #bootstrap, #jqueryUI, ... 등등
-//
-// utils/
-// - 프로젝트에 사용되는 모든 sass도구와 헬퍼를 모읍니다.
-// - 모든 전역 변수, 함수, 믹스인, 플레이스홀더
-// - 컴파일되었을 때 한 줄의 css도 산출하지 않아야 합니다. 이 폴더는 그저 Sass헬퍼일 뿐입니다.
-// - #sass변수, #sass함수, #sass믹스인, #클래스, #플레이스홀더, #헬퍼, ... 등등
-//
-// base/
-// - 프로젝트의 보일러플레이트 코드라고 부를 만한 것을 담습니다.
-// - 리펫파일, 타이포그래피 규칙, HTML요소에 대한 표준 스타일을 정의하는 스타일 시트
-// - #reset, #normalize, #타이포그래피 규칙, ... 등등
-//
-// layout/
-// - 사이트나 어플리케이션의 레이아웃에 기여하는 모든 것들이 들어갑니다.
-// - 사이트의 주요부분(header, footer, navigation, sidebar, ...), 그리드 시스템 혹은 모든 폼의 스타일을 위한 스타일 시트를 가질 수 있습니다.
-// - #네비게이션, #그리드시스템, #헤더, #푸터, #사이드바, #폼, ... 등등
-//
-// components/
-// - 더 작은 컴퍼넌트들이 들어갑니다.
-// - layout이 전반적인 뼈대를 정의하는 거시적인 폴더임에 반해, 컴퍼넌트는 위젯에 초점을 둡니다.
-// - 슬라이더, 로더, 위젯, 그리고 기본적으로 이들과 비슷한 것을 비롯해 온갖 구체적인 모듈들을 담슴습니다.
-// - 전체 사이트/어플리케이션이 주로 작은 모듈들로 구성되어야 하므로 이 폴더에는 대개 많은 파일들이 있습니다.
-// - #버튼, #캐러셀, #커버, #드롭다운, ... 등등
-//
-// pages/
-// - 페이지에 한정된 스타일이 있다면, 이 폴더 속, 페이지 이름을 딴 파일에 넣는 것이 좋습니다.
-// - 예를 들면, _home, _contact, ... 등등
-//
-// themes/
-// - 큰 사이트와 어플리케이션에서 여러 다른 테마들을 갖는 것은 흔히 있는 일입니다.
-// - 테마를 다루는 다른 방법들도 있지만, 이 폴더에 전부 모아두는 것을 좋아 합니다.
-// - _theme.scss, _admin.scss, ... 등등
-// - #디폴트테마, #관리자테마, ... 등등
-
-//@import
-//	'vendors-extensions/';
-
-
-// Responsive Font Size
+// Vendors
 @import
-'./vendors/_rfs-extension.scss', // rfs를 변경하려면 해당 파일 사용
-'./vendors/_rfs.scss'
+  'vendors/rfs-extension', // rfs를 변경하려면 해당 파일 사용
+  'vendors/rfs' // Responsive Font Sizes
 ;
 
+// Utils
 @import
-'./base/_functions.scss',
-'./utils/_sw-variables.scss',
-'./base/mixins/_deprecate.scss'
+  'utils/functions',
+  'utils/sw-variables'
 ;
 
-
-
+// Mixins
 @import
-'./base/_root.scss',
-'./base/_reboot.scss',
-'./base/_display.scss',
-'./base/_flex.scss',
-'./base/_typography.scss',
-'./base/mixins/_mixin-clearfix.scss',
-'./base/mixins/_mixin-hover.scss',
-'./base/mixins/_mixin-border-radius.scss',
-'./base/mixins/_mixin-gradients.scss',
-'./base/mixins/_mixin-box-shadow.scss',
-'./base/mixins/_mixin-transition.scss',
-'./base/mixins/_caret.scss',
-'./base/mixins/_mixin-buttons.scss',
-'./base/mixins/_mixin-forms.scss',
-'./base/_svg-icon.scss'
+  'mixins/mixin-deprecate',
+  'mixins/mixin-clearfix',
+  'mixins/mixin-hover',
+  'mixins/mixin-border-radius',
+  'mixins/mixin-gradients',
+  'mixins/mixin-box-shadow',
+  'mixins/mixin-transition',
+  'mixins/mixin-caret',
+  'mixins/mixin-buttons',
+  'mixins/mixin-forms'
 ;
 
-//@import
-//	'layout/';
-
+// Layout
 @import
-'./components/_grid.scss',
-'./components/_spacing.scss',
-'./components/_borders.scss',
-'./components/_sizes.scss',
-'./components/_status.scss',
-'./components/_buttons.scss',
-'./components/_dropdown.scss',
-'./components/_btn-group.scss',
-'./components/_btn-check.scss',
-'./components/_navbar.scss',
-'./components/_list-group.scss',
-'./components/_pagination.scss',
-'./components/_tab.scss',
-'./components/_forms.scss',
-'./components/_custom-forms.scss',
-'./components/_input-group.scss',
-'./components/_card.scss',
-'./components/_alerts.scss',
-'./components/_badges.scss',
-'./components/_tooltips.scss',
-'./components/_modals.scss',
-'./components/_text-truncate.scss',
-'./components/_datagrid.scss',
-'./components/_tables.scss',
-'./components/_toasts.scss',
-'./components/_switch.scss',
-'./components/_blankslate.scss',
-'./components/_slideout.scss',
-'./components/_text.scss',
-'./components/_cursor.scss'
+  'layout/grid'
 ;
 
-//@import
-//	'pages/';
+// Content
+@import
+  'content/root',
+  'content/reboot',
+  'content/typography',
+  'content/tables'
+;
 
-//@import
-//	'themes/';
+// Forms
+@import
+  'forms/form-control',
+  'forms/form-check',
+  'forms/form-group',
+  'forms/custom-check',
+  'forms/custom-select',
+  'forms/custom-file',
+  'forms/form-validation',
+  'forms/input-group'
+;
 
+// Components
+@import
+  'components/display',
+  'components/flex',
+  'components/svg-icon',
+  'components/spacing',
+  'components/borders',
+  'components/sizes',
+  'components/status',
+  'components/buttons',
+  'components/dropdown',
+  'components/btn-group',
+  'components/btn-check',
+  'components/navbar',
+  'components/list-group',
+  'components/pagination',
+  'components/tab',
+  'components/card',
+  'components/alerts',
+  'components/badges',
+  'components/tooltips',
+  'components/modals',
+  'components/text-truncate',
+  'components/datagrid',
+  'components/toasts',
+  'components/switch',
+  'components/blankslate',
+  'components/slideout',
+  'components/text',
+  'components/cursor'
+;
 
-
-
-
-
-// 참고글 모음
-// https://inspirationalpixels.com/sass-projects-for-beginners-1/
+// Helpers
+@import
+  'helpers/visually-hidden'
+;

@@ -4,8 +4,8 @@
 
 .data-group-header {
   font-weight: $font-weight-bold;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color--light;
+  border-bottom: 1px solid $border-color--light;
 }
 .data-group-row {
   display: flex;
@@ -32,7 +32,7 @@
     }
   }
   .data-group-row + .data-group-row {
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $border-color--light;
   }
 }
 

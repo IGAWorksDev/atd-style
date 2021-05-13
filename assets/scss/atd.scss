@@ -3,7 +3,7 @@
 // SASS Guidelines
 // https://sass-guidelin.es/ko/#section-51 참고
 // 아래픠 폴더를 생성하며 scss파일을 분리하며, 아래 순서대로 불러들이기 해야함.
-// 
+//
 // vendors-extensions/
 // - 벤더의 한 부분을 덮어써야 한다면, 덮어쓰는 벤더의 이름을 그대로 딴 파일들을 담는 폴더입니다.
 // - 벤더 파일 자체를 편집하는 것을 피하기 위함입니다. (벤더파일을 수정하는 것을 좋은 생각이 아니니까요.)
@@ -28,7 +28,7 @@
 // - 사이트나 어플리케이션의 레이아웃에 기여하는 모든 것들이 들어갑니다.
 // - 사이트의 주요부분(header, footer, navigation, sidebar, ...), 그리드 시스템 혹은 모든 폼의 스타일을 위한 스타일 시트를 가질 수 있습니다.
 // - #네비게이션, #그리드시스템, #헤더, #푸터, #사이드바, #폼, ... 등등
-// 
+//
 // components/
 // - 더 작은 컴퍼넌트들이 들어갑니다.
 // - layout이 전반적인 뼈대를 정의하는 거시적인 폴더임에 반해, 컴퍼넌트는 위젯에 초점을 둡니다.
@@ -48,56 +48,43 @@
 
 
 
-//@import
-//	'vendors-extensions/';
 
+// Basic Style
 @import
-'vendors/styleworks-extention',
-'vendors/styleworks/styleworks',
-"../css/adicons-v1.0/style"
+'atd-base'
 ;
 
 @import
-'utils/service-variables'
+  'components/table.scss',
+  'components/banner.scss',
+  'components/easy-manager.scss'
 ;
 
-//@import
-//  'base/';
-
-
+// 메뉴별 구분함
+//
+// Dashboard
 @import
-  // 'layout/gnb', // 분리되어 있음.
-  'layout/snb',
-  'layout/contentWrapper',
-  'layout/twWrapper',
-  'layout/main'
+  'components/easy-manager',
+  'pages/dashboard'
 ;
 
+// Insight
 @import
-  'components/table',
-  'components/banner',
-  'components/easy-manager'
+  'pages/insight'
 ;
 
-
+// Kakaomoment
 @import
-  'pages/common',
-  'pages/insight',
-  'pages/kakaomoment',
-  'pages/dashboard',
+  'components/column-setting', // 열설정
+  'pages/kakaomoment'
+;
+
+// AD insight
+@import
   'pages/adinsight'
 ;
-
-//@import
-//	'themes/';
-
 
 
 body {
   background-color: $gray-900;
 }
-
-
-
-// 참고글 모음
-// https://inspirationalpixels.com/sass-projects-for-beginners-1/

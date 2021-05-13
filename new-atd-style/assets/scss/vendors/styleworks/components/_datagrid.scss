@@ -82,6 +82,11 @@
   }
 }
 
+// bg color alternative
+.datagrid-cell-bg-alt {
+  background-color: $gray-100 !important;
+}
+
 
 // rowspan
 // 2개 이상의 행을 갖는 grid cell 스타일
@@ -202,6 +207,10 @@
   }
 }
 
+.datagrid-row-static {
+  position: static;
+}
+
 
 
 // Variables Styles
@@ -257,13 +266,13 @@
 //
 .datagrid > .datagrid-body .datagrid-row[aria-selected="true"] {
   .datagrid-cell {
-    @include is-component-active($datagrid-active-color, $datagrid-active-bg);
+    @include is-component-active($datagrid-active-color, $datagrid-active-bg); // _status
   }
 }
 // rowspan이나 colspan의 안에 있는 row에 active 상태를 줄 경우
 .datagrid-row.is-active {
   .datagrid-cell {
-    @include is-component-active($datagrid-active-color, $datagrid-active-bg);
+    @include is-component-active($datagrid-active-color, $datagrid-active-bg); // _status
   }
 }
 
@@ -272,18 +281,18 @@
 //
 .datagrid-hover > .datagrid-body .datagrid-row:hover{
   .datagrid-cell {
-    @include is-component-hover($datagrid-hover-color, $datagrid-hover-bg);
+    @include is-component-hover($datagrid-hover-color, $datagrid-hover-bg); // _status
   }
 }
 // 특정 셀에 호버 효과를 사용할 경우
 .datagrid-cell.is-hover:hover {
-  @include is-component-hover($datagrid-hover-color, $datagrid-hover-bg);
+  @include is-component-hover($datagrid-hover-color, $datagrid-hover-bg); // _status
 }
 
 // Muted
 .datagrid-body > .datagrid-row.is-muted {
   .datagrid-cell {
-    @include is-component-muted($datagrid-muted-color, $datagrid-muted-bg);
+    @include is-component-muted($datagrid-muted-color, $datagrid-muted-bg); // _status
   }
 }
 
