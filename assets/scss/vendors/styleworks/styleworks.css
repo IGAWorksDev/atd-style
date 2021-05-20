@@ -151,9 +151,9 @@ select.form-control[size], select.form-control[multiple] { height: auto; }
 
 textarea.form-control { height: auto; }
 
-.form-check { display: block; }
+.form-check { display: block; padding-left: 0 !important; }
 
-.form-check-input { width: 1.4rem; height: 1.4rem; margin: 0.4rem 0; vertical-align: top; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: contain; border: 1px solid #adb5bd; -webkit-appearance: none; -moz-appearance: none; appearance: none; color-adjust: exact; }
+.form-check-input { width: 1.4rem; height: 1.4rem; margin-top: 0.4rem; margin-bottom: 0.4rem; vertical-align: top; position: static; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: contain; border: 1px solid #adb5bd; -webkit-appearance: none; -moz-appearance: none; appearance: none; color-adjust: exact; }
 .form-check-input[type="checkbox"] { border-radius: 2px; }
 .form-check-input[type="radio"] { border-radius: 50%; }
 .form-check-input:focus { border-color: #919ca6; outline: 0; -webkit-box-shadow: 0 0 0 0.4rem rgba(30, 144, 255, 0.2); box-shadow: 0 0 0 0.4rem rgba(30, 144, 255, 0.2); }
@@ -166,10 +166,11 @@ textarea.form-control { height: auto; }
 
 .form-check-label { display: inline-block; margin-left: 4px; margin-bottom: 0; }
 
-.form-check-inline { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; margin-right: 1.4rem; }
+.form-check-inline { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 1.4rem; }
+.form-check-inline > .form-check-input { margin-top: 0.4rem !important; margin-bottom: 0.4rem !important; }
 
 .btn-check { position: absolute; clip: rect(0, 0, 0, 0); pointer-events: none; }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn { pointer-events: none; -webkit-filter: none; filter: none; opacity: 0; }
+.btn-check[disabled] + .btn, .btn-check:disabled + .btn { pointer-events: none; -webkit-filter: none; filter: none; opacity: 0; margin-bottom: 0 !important; }
 
 .form-group { margin-bottom: 1.6rem; }
 
@@ -1120,7 +1121,7 @@ a.list-group-item:hover, button.list-group-item:hover { color: #343a40; backgrou
 .datagrid-cell { border-width: 0; border-style: solid; border-color: #dee2e6; padding: 0.8rem 1.6rem; background-color: #fff; min-width: 8rem; -ms-flex-preferred-size: auto; flex-basis: auto; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; color: #343a40; }
 .datagrid-cell[role="columnheader"], .datagrid-cell[role="rowheader"] { font-weight: bolder; }
 
-.datagrid-cell-bg-alt { background-color: #f8f9fa !important; }
+.datagrid-cell-bg-alt { background-color: #f8f9fa; }
 
 .datagrid-rowspan { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
 
@@ -1161,7 +1162,7 @@ a.list-group-item:hover, button.list-group-item:hover { color: #343a40; backgrou
 
 .datagrid-row.is-active .datagrid-cell { color: #343a40; background-color: #eaf5ff; }
 
-.datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell { color: #343a40; background-color: #e0f0ff; }
+.datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell, .datagrid-hover > .datagrid-body .datagrid-row:hover .datagrid-cell-bg-alt { color: #343a40; background-color: #e0f0ff !important; }
 
 .datagrid-cell.is-hover:hover { color: #343a40; background-color: #e0f0ff; }
 

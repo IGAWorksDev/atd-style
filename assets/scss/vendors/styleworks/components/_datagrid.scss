@@ -84,7 +84,7 @@
 
 // bg color alternative
 .datagrid-cell-bg-alt {
-  background-color: $gray-100 !important;
+  background-color: $gray-100;
 }
 
 
@@ -280,7 +280,8 @@
 // Hover
 //
 .datagrid-hover > .datagrid-body .datagrid-row:hover{
-  .datagrid-cell {
+  .datagrid-cell,
+  .datagrid-cell-bg-alt {
     @include is-component-hover($datagrid-hover-color, $datagrid-hover-bg); // _status
   }
 }

@@ -17,6 +17,7 @@
   width: $form-check-input-size;
   height: $form-check-input-size;
   margin: $form-check-input-margin-y 0; // 라벨과의 높이를 맞추기 위한 axis-y 여백
+
   vertical-align: top; // 라벨과의 정렬 맞추기
   position: static; // gnb.css와 충돌하여 추가함
 
@@ -80,9 +81,19 @@
   margin-bottom: 0;
 }
 
+
+// Inline
+//
 .form-check-inline {
   display: inline-flex;
+  align-items: center;
   margin-right: $form-check-inline-margin-x; // .form-check-inline과의 거리.
+
+  > .form-check-input {
+    margin-top: $form-check-input-margin-y; // 라벨과의 높이를 맞추기 위한 axis-y 여백
+    margin-bottom: $form-check-input-margin-y;
+    vertical-align: middle;
+  }
 }
 
 
@@ -92,6 +103,7 @@
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
+  margin-bottom: 0 !important;
 
   &[disabled],
   &:disabled {
@@ -99,6 +111,7 @@
       pointer-events: none;
       filter: none;
       opacity: $form-check-btn-check-disabled-opacity;
+
     }
   }
 }
