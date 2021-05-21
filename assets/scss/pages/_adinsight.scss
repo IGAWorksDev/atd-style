@@ -18,9 +18,8 @@
       }
       .filter-option__item-setting {
         .custom-select,
-        .form-control[type="text"],
-        .form-control[type="date"]{
-          width: 174px;
+        .form-control {
+          width: 184px;
         }
 
         // check option group (주의!)
