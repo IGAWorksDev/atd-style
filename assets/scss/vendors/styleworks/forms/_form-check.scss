@@ -77,7 +77,7 @@
 
 .form-check-label {
   display: inline-block;
-  margin-left: 4px;
+  margin-left: $form-check-input-margin-x;
   margin-bottom: 0;
 }
 
@@ -91,6 +91,7 @@
 
   > .form-check-input {
     margin-top: $form-check-input-margin-y; // 라벨과의 높이를 맞추기 위한 axis-y 여백
+    margin-right:  0;
     margin-bottom: $form-check-input-margin-y;
     vertical-align: middle;
   }

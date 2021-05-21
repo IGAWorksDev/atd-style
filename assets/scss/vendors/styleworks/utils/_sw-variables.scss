@@ -528,7 +528,7 @@ $input-date-padding-x: ($input-padding-x + $input-date-icon-size + ($input-paddi
 
 // form-check
 $form-check-input-size: $font-size-base !default;
-$form-check-input-margin-x: 0.4rem !default;
+$form-check-input-margin-x: $spacer !default;
 $form-check-input-gutter: ($form-check-input-size + $form-check-input-margin-x) !default; // input과 라벨의 간격
 $form-check-input-margin-y: (($line-height-base - $form-check-input-size) / 2) !default;
 $form-check-input-border-color: $input-border-color;
@@ -543,7 +543,7 @@ $form-check-input-indeterminate-bg-img: url("data:image/svg+xml, <svg xmlns='htt
 
 
 
-$form-check-inline-margin-x: $font-size-base;
+$form-check-inline-margin-x: ($spacer * 2) !default;
 $form-check-inline-input-margin-x: $form-check-input-margin-x !default;
 
 

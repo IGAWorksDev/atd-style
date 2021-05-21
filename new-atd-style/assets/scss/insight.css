@@ -153,9 +153,9 @@ select.form-control[size], select.form-control[multiple] { height: auto; }
 
 textarea.form-control { height: auto; }
 
-.form-check { display: block; }
+.form-check { display: block; padding-left: 0 !important; }
 
-.form-check-input { width: 1.4rem; height: 1.4rem; margin: 0.4rem 0; vertical-align: top; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: contain; border: 1px solid #adb5bd; -webkit-appearance: none; -moz-appearance: none; appearance: none; color-adjust: exact; }
+.form-check-input { width: 1.4rem; height: 1.4rem; margin: 0.4rem 0; vertical-align: top; position: static; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: contain; border: 1px solid #adb5bd; -webkit-appearance: none; -moz-appearance: none; appearance: none; color-adjust: exact; }
 .form-check-input[type="checkbox"] { border-radius: 2px; }
 .form-check-input[type="radio"] { border-radius: 50%; }
 .form-check-input:focus { border-color: #919ca6; outline: 0; -webkit-box-shadow: 0 0 0 0.4rem rgba(30, 144, 255, 0.2); box-shadow: 0 0 0 0.4rem rgba(30, 144, 255, 0.2); }

@@ -166,10 +166,10 @@ textarea.form-control { height: auto; }
 .form-check-input:disabled { pointer-events: none; -webkit-filter: none; filter: none; opacity: 0.5; }
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label { opacity: 0.5; }
 
-.form-check-label { display: inline-block; margin-left: 4px; margin-bottom: 0; }
+.form-check-label { display: inline-block; margin-left: 0.8rem; margin-bottom: 0; }
 
-.form-check-inline { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 1.4rem; }
-.form-check-inline > .form-check-input { margin-top: 0.4rem; margin-bottom: 0.4rem; vertical-align: middle; }
+.form-check-inline { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 1.6rem; }
+.form-check-inline > .form-check-input { margin-top: 0.4rem; margin-right: 0; margin-bottom: 0.4rem; vertical-align: middle; }
 
 .btn-check { position: absolute; clip: rect(0, 0, 0, 0); pointer-events: none; margin-bottom: 0 !important; }
 .btn-check[disabled] + .btn, .btn-check:disabled + .btn { pointer-events: none; -webkit-filter: none; filter: none; opacity: 0; }
