@@ -1770,4 +1770,8 @@ a:hover { text-decoration: underline; }
 .section-adinsight-filter .filter-option .filter-option__item .filter-option__item-setting .btn-check-group .btn-check:first-child + .btn { border-top-left-radius: 0.4rem !important; border-bottom-left-radius: 0.4rem !important; }
 .section-adinsight-filter .filter-option .filter-option__item .filter-option__item-setting .btn-check-group .btn-outlined-secondary { border-color: #adb5bd !important; }
 
+.calendars.row { margin-right: 0 !important; margin-left: 0 !important; }
+
+.yearselect.col { -webkit-box-flex: 1 !important; -ms-flex-positive: 1 !important; flex-grow: 1 !important; -ms-flex-preferred-size: 0 !important; flex-basis: 0 !important; }
+
 body { background-color: #212529; }

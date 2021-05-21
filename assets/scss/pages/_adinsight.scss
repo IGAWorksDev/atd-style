@@ -37,3 +37,17 @@
     }
   }
 }
+
+
+// -- 주의! --
+// 데이트피커와의 충돌방지 스타일
+//
+.calendars.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.yearselect.col {
+  flex-grow: 1 !important;
+  flex-basis: 0 !important;
+}
