@@ -55,15 +55,13 @@ $disable:    $gray-400 !default;
 
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
+$tertiary:      $gray-400 !default;
 $success:       $green !default;
 $info:          $teal !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 
-
-
 $light:         $white !default;
-$tertiary:      $disable !default;
 $dark:          $gray-800 !default;
 
 
@@ -72,6 +70,7 @@ $theme-colors: map-merge(
                 (
                         "primary": $primary,
                         "secondary": $secondary,
+                        "tertiary": $tertiary,
                         "success": $success,
                         "info": $info,
                         "warning": $warning,
