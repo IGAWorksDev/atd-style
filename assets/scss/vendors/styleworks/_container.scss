@@ -1,0 +1,45 @@
+
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+// 컨테이너 너비를 설정하고 미디어 쿼리의 고정 탐색 모음에 대해 재정의합니다.
+
+@if $enable-grid-classes {
+  // breakpoint 최대 너비가 있는 단일 컨테이너 클래스
+  .container,
+    // 모든 breakpoint에서 100% 너비인 컨테이너
+  .container-fluid {
+    @include make-container();
+  }
+
+  // breskpoints까지 폭이 100%인 반응형 컨테이너
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    .container-#{$breakpoint} {
+      @extend .container-fluid;
+    }
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      %responsive-container-#{$breakpoint} {
+        max-width: $container-max-width;
+      }
+
+      // 현재 중단 점보다 작거나 같은 중단 점을 확장합니다.
+      $extend-breakpoint: true;
+
+      @each $name, $width in $grid-breakpoints {
+        @if ($extend-breakpoint) {
+          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            @extend %responsive-container-#{$breakpoint};
+          }
+
+          // 현재 중단 점에 도달하면 확장을 중지합니다.
+          @if ($breakpoint == $name) {
+            $extend-breakpoint: false;
+          }
+        }
+      }
+    }
+  }
+}

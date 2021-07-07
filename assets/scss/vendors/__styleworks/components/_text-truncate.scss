@@ -1,0 +1,11 @@
+
+
+@mixin text-truncate() {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.text-truncate {
+  @include text-truncate();
+}

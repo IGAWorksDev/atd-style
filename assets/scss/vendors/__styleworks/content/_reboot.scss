@@ -1,0 +1,320 @@
+
+
+// Reboot
+//
+// 각 브라우저의 기본 스타일을 초기화(reset)하여, 브라우저 간 일관성을 유지하기 위해 사용합니다.
+// 기본으로 사용하는 초기화 스타일은 'normalize.css'를 사용하고 있습니다.
+//
+// 노멀라이즈...
+// 스타일 리셋 라이브러리로 기본적으로 모든 브라우저에서 표준화된 형태로 스타일이 랜더링되게 해줍니다.
+// normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+
+
+
+// Box Model
+//
+// 참고 URL : https://developer.mozilla.org/ko/docs/Web/CSS/box-sizing
+// 테두리와 여백의 크기도 요소의 크기에 포함하기 위해 'box-sizing: border-box'로 지정함.
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+//
+// 1. 모든 브라우저의 줄 높이 수정
+// 2. iOS에서 방향 변경 후 글꼴 크기 조정 방지
+html {
+  line-height: 1.15; // 1
+  -webkit-text-size-adjust: 100%; // 2
+}
+
+// --------------------------------------------------------------------------------- //
+//
+// Sections
+//
+body {
+  margin: 0; // 모든 브라우저에서 여백 제거
+  font-family: $font-family-base;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+// IE에서 'main'요소를 일관되게 만들기
+main {
+  display: block;
+}
+
+
+
+// Chrome, Firefox 및 Safari의`section` 및`article` 컨텍스트에서`h1` 요소의 글꼴 크기와 여백을 수정
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+// --------------------------------------------------------------------------------- //
+//
+// Grouping content
+//
+
+// 1. Firefox에서 올바른 상자 크기 추가
+// 2. Edge와 IE에서 overflow 표시
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+// 1. Correct the inheritance and scaling of font size in all browsers.
+// 2. Correct the odd `em` font sizing in all browsers.
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+
+// --------------------------------------------------------------------------------- //
+//
+// Text-level semantics
+//
+
+
+a {
+  background-color: transparent; // IE 10의 활성 링크에서 회색 배경 제거
+}
+
+//
+// Abbreviations : 약어
+//
+// 1. 크롬 57 이상에서 하단 테두리 제거
+// 2. Chrome, Edge, IE, Opera 및 Safari에서 올바른 텍스트 장식을 추가
+//
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+
+b,
+strong {
+  font-weight: bolder; // Chrome, Edge 및 Safari에서 올바른 글꼴 무게 추가
+}
+
+
+//
+// Code
+// kdb -- keyboard input element 키보드 입력 요소
+// samp -- sample output element 컴퓨터 프로그램 출력의 예를 나타냄
+//
+// 1. 모든 브라우저에서 글꼴 크기의 상속 및 스케일링 수정
+// 2. 모든 브라우저에서 홀수(odd) `em` 글꼴 크기 조정
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; // 1
+  font-size: 1em; // 2
+}
+
+// 모든 브라우저에서 올바른 글꼴 크기 추가
+small {
+  font-size: 80%;
+}
+
+// `sub` 및`sup` 요소가 모든 브라우저에서 행 높이에 영향을 미치지 않도록 방지
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+// Embedded content
+//
+// IE 10에서 링크 내부 이미지의 테두리 제거
+img {
+  border-style: none;
+}
+
+
+
+
+//
+// Forms
+//
+
+// 1. 모든 브라우저에서 글꼴 스타일 변경
+// 2. Firefox 와 Safari에서 여백 제거
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; // 1
+  font-size: 100%; // 1
+  line-height: 1.15; // 1
+  margin: 0; // 2
+}
+
+//
+// IE에서 오버플로 표시
+// 1. Edge에서 오버플로 표시
+button,
+input { // 1
+  overflow: visible;
+}
+
+//
+// Edge, Firefox 및 IE에서 텍스트 변환 상속 제거
+// 1. Firefox에서 텍스트 변환 상속 제거
+button,
+select { // 1
+  text-transform: none;
+}
+//
+// iOS 및 Safari에서 클릭 가능한 유형의 스타일을 지정할 수 없는 문제 수정
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+//
+// Firefox에서 내부 테두리 및 패딩 제거
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+//
+// 이전 규칙에 의해 설정되지 않은 초점 스타일 복원
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; // Firefox에서 패딩 수정
+}
+
+
+//
+// 1. Edge 및 IE에서 텍스트 줄 바꿈 수정
+// 2. IE의 'fieldset'요소에서 색상 상속을 수정
+// 3. 개발자가 모든 브라우저에서 'fieldset'요소를 제로화 할 때 포착되지 않도록 패딩을 제거
+legend {
+  box-sizing: border-box; // 1
+  color: inherit; // 2
+  display: table; // 1
+  max-width: 100%; // 1
+  padding: 0; // 3
+  white-space: normal; // 1
+}
+
+//
+// Chrome, Firefox 및 Opera에서 올바른 수직 정렬 추가
+progress {
+  vertical-align: baseline;
+}
+
+//
+// IE 10+ 에서 기본 세로 스크롤 막대 제거
+textarea {
+  overflow: auto;
+}
+
+//
+// 1. IE 10에서 올바른 상자 크기 추가
+// 2. IE 10에서 패딩 제거
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; // 1
+  padding: 0; // 2
+}
+
+//
+// Chrome에서 증가 및 감소 버튼의 커서 스타일 수정
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+//
+// 1. Chrome 및 Safari에서 이상한 모양 수정
+// 2. Safari에서 윤곽선 스타일 수정
+[type="search"] {
+  -webkit-appearance: textfield; // 1
+  outline-offset: -2px; // 2
+}
+
+//
+// macOS에서 Chrome 및 Safari에서 내부 패딩을 해결
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+//
+// 1. iOS 및 Safari에서 클릭 가능한 유형의 스타일을 지정할 수없는 문제 해결
+// 2. Safari에서 글꼴 속성을 '상속'으로 변경
+::-webkit-file-upload-button {
+  -webkit-appearance: button; // 1
+  font: inherit; // 2
+}
+
+
+
+//
+// Interactive 대화형 콘텐츠
+//
+
+//
+// Edge, IE 10+ 및 Firefox에서 올바른 디스플레이 추가
+details {
+  display: block;
+}
+
+//
+// 모든 브라우저에서 올바른 디스플레이 추가
+summary {
+  display: list-item;
+}
+
+
+
+//
+// Misc 기타
+//
+
+//
+// IE 10+에서 올바른 디스플레이 추가
+template {
+  display: none;
+}
+
+//
+// IE 10+에서 올바른 디스플레이 추가
+[hidden] {
+  display: none;
+}

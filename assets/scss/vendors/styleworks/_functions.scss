@@ -1,0 +1,188 @@
+
+
+/// Tint & Shade colors
+//
+// 색상을 옅게하며, 색조(hue)는 동일하게 유지.
+@function tint-color($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+// 색상을 어둡게하며, 색조(hue)는 동일하게 유지.
+@function shade-color($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+// 색상 팔레트 생성 공식
+// $colors 맵을 이용하여 변형된 색상을 자동 생성하기 위한 함수 @function
+@function color-palettes($palettes, $variations) {
+  $colors: ();
+  @each $color, $value in $palettes {
+    $maxVar: 40; // max variation : 최대 변경값 (! 변경가능)
+    $mid: $variations / 2; // middle : 가운데
+    $dist: $mid - 1; // distance : 거리 -- 변경된 색상 거리값 ( 100, 200, 300, ... 900)
+    $step: $maxVar / $dist; // 단계 -- 거리에 따른 색상 변경 값
+
+    // lighten and darken
+    @for $i from 1 through $dist {
+      $percentage: $maxVar - ($step * ($i - 1)); // $1가 1일 때 36을 갖음.
+      $tint: $i * 100; // $color를 밝게 만들며, 0~100% 사이 숫자를 갖음.(100, 200, 300, 400 오름차순)
+      $shade: ($variations - $i) * 100; // $color를 어둡게 만들며, 0~100% 사이 숫자를 갖음. (900, 800, 700, 600 내림차순)
+
+      $colors: map-merge($colors, (
+              #{$color}-50: tint-color($value, 88%), // 가장 옅은 $color-50인 색상 추출.
+              #{$color}-#{$mid * 100}: $value, // 베이스 컬러이면서 $color-500인 색상 추출.
+              #{$color}-#{$tint}: tint-color($value, $percentage * 2), // eg. gray-100: #CDD1D4
+              #{$color}-#{$shade}: shade-color($value, $percentage * 2) // eg. gray-900: #17191B
+      ));
+    }
+  }
+  @return $colors;
+}
+
+
+
+
+// Bootstrap functions
+//
+// Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
+// Ascending
+// Used to evaluate Sass maps like our grid breakpoints.
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null or unit($num) == "%" or unit($prev-num) == "%" {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+// Starts at zero
+// Used to ensure the min-width of the lowest breakpoint starts at 0.
+@mixin _assert-starts-at-zero($map, $map-name: "$grid-breakpoints") {
+  @if length($map) > 0 {
+    $values: map-values($map);
+    $first-value: nth($values, 1);
+    @if $first-value != 0 {
+      @warn "First breakpoint in #{$map-name} must start at 0, but starts at #{$first-value}.";
+    }
+  }
+}
+
+// Replace `$search` with `$replace` in `$string`
+// Used on our SVG icon backgrounds for custom forms.
+//
+// @author Hugo Giraudel
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// See https://codepen.io/kevinweber/pen/dXWoRw
+@function escape-svg($string) {
+  @if str-index($string, "data:image/svg+xml") {
+    @each $char, $encoded in $escaped-characters {
+      // Do not escape the url brackets
+      @if str-index($string, "url(") == 1 {
+        $string: url("#{str-replace(str-slice($string, 6, -3), $char, $encoded)}");
+      } @else {
+        $string: str-replace($string, $char, $encoded);
+      }
+    }
+  }
+
+  @return $string;
+}
+
+/*
+// Color contrast
+@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $yiq-contrasted-threshold) {
+    @return $dark;
+  } @else {
+    @return $light;
+  }
+}
+*/
+
+// Retrieve color Sass maps
+@function color($key: "blue") {
+  @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function gray($key: "100") {
+  @return map-get($grays, $key);
+}
+
+
+
+
+// Request a theme color level
+@function theme-color-level($color-name: "primary", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+// 유효한 계산 반환하기 Return valid calc
+@function add($value1, $value2, $return-calc: true) {
+  @if $value1 == null {
+    @return $value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 + $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} + #{$value2}), $value1 + unquote(" + ") + $value2);
+}
+
+@function subtract($value1, $value2, $return-calc: true) {
+  @if $value1 == null and $value2 == null {
+    @return null;
+  }
+
+  @if $value1 == null {
+    @return -$value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 - $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} - #{$value2}), $value1 + unquote(" - ") + $value2);
+}

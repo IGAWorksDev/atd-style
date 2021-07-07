@@ -1,0 +1,139 @@
+
+// SASS theme manager
+// Link : https://www.fabrizioduroni.it/2020/05/20/dark-mode-css-sass-scss
+//
+//
+
+// - theme names 테마 이름
+// - colors contained in each of themes 각 테마에 포함된 색상.
+
+$theme-light:   "theme-light";
+$theme-dark:    "theme-dark";
+$system-light:  "system-light";
+$system-dark:   "system-dark";
+
+// System Colors
+$color-primary:       "color-primary";
+$color-secondary:     "color-secondary";
+$color-tertiary:      "color-tertiary";
+$color-success:       "color-success";
+$color-info:          "color-info";
+$color-warning:       "color-warning";
+$color-danger:        "color-danger";
+
+// Theme Colors
+$color-base:    "color-base";
+$color-bg-base: "color-bg-base";
+$color-bg-alt:  "color-bg-alt";
+$color-border:  "color-border";
+
+$color-link:    "color-link";
+$color-link-bg: "color-link-bg";
+$color-visited: "color-visited";
+$color-hover:   "color-hover";
+$color-active:  "color-active-color";
+$color-active-bg: "color-active-bg";
+$color-focus:   "color-focus";
+$color-disable: "color-disabled";
+$color-mute:   "color-muted";
+
+
+$systems: (
+        $system-light: (
+                $color-primary:   var(--blue-500),
+                $color-secondary: var(--gray-500),
+                $color-tertiary:  var(--gray-400),
+                $color-success:   var(--green-500),
+                $color-info:      var(--teal-500),
+                $color-warning:   var(--yellow-500),
+                $color-danger:    var(--red-500)
+        ),
+        $system-dark: (
+                $color-primary:   var(--blue-300),
+                $color-secondary: var(--gray-400),
+                $color-tertiary:  var(--gray-500),
+                $color-success:   var(--green-500),
+                $color-info:      var(--teal-500),
+                $color-warning:   var(--yellow-500),
+                $color-danger:    var(--red-300)
+        )
+);
+
+// 두 테마 이름 변수를 포함하고, 상기 콘텐츠가 다시 색 이름과의 관계와 색 HEX값 맵
+$themes: (
+        $theme-light: (
+                $color-base: var(--gray-500),
+                $color-bg-base: var(--gray-100),
+                $color-bg-alt: $white,
+                $color-border: var(--gray-200),
+                $color-link: var(--gray-500),
+                $color-link-bg: var(--gray-100),
+                $color-visited: var(--gray-500),
+                $color-hover: var(--blue--500),
+                $color-active: var(--blue-500),
+                $color-active-bg: var(--blue-100),
+                $color-focus: var(--blue-500),
+                $color-disable: var(--gray-400),
+                $color-mute: var(--gray-400)
+        ),
+$theme-dark: (
+                $color-base: var(--gray-200),
+                $color-bg-base: var(--gray-900),
+                $color-bg-alt: var(--gray-100),
+                $color-border: var(--gray-600),
+                $color-link: var(--gray-300),
+                $color-link-bg: var(--gray-50),
+                $color-visited: var(--gray-300),
+                $color-hover: var(--blue--300),
+                $color-active: var(--blue-300),
+                $color-active-bg: var(--blue-80),
+                $color-focus: var(--blue-300),
+                $color-disable: var(--gray-300),
+                $color-mute: var(--gray-300)
+        )
+);
+
+
+// Themes @Mixin
+// Link : https://www.fabrizioduroni.it/2020/05/20/dark-mode-css-sass-scss
+//
+// $property
+// -- 현재 사용자에 대해 선택한 테마를 기반으로 변경하려는 속성
+// $color
+// -- 선택할 색상 이름. 위에 표시된 변수 중 하나 여야 함.(중요!)
+// $additionalPropertiesPositionIsFront
+// -- 색상 값과 연결할 추가 속성을 색상 값 앞 또는 뒤에 배치해야 하는지 이해하는데 사용되는 부울. (선택사항, 기본값 false)
+// $addtionalProperties
+// -- 속성 목록이 있는 문자열이 색상 값과 연결됨. (선택사항, 기본값은 빈 문자열)
+//
+
+// <property> : <value>의 css 규칙을 만듬.
+//
+@mixin themeProperty($theme, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote($additionalProperties + ' ' + map-get($theme, $color)); // property: value; -- value 앞에 띄어쓰기함.
+  } @else {
+    #{$property}: unquote(map-get($theme, $color) + ' ' + $additionalProperties); // property:value ; -- value 뒤에 띄어쓰기함.
+  }
+}
+
+// 테마별 <property> : <value> css 규칙을 만듬.
+//
+@mixin theme($property, $color, $additionalPropertiesPositionIsFront: false, $additionalProperties: '') {
+  $light: map-get($themes, $theme-light), map-get($systems, $system-light);
+  $dark: map-get($themes, $theme-dark),  map-get($systems, $system-dark);
+
+  // themeProperty
+  // 두 번 호출 되는데, 하나는 light 인 기본값이고 다른 하나는 @media(prefers-color-scheme:dark) 쿼리 내부에서 처리됨.
+  // prefers-color-scheme : 사용자의 시스템이 light theme이나 dark theme를 사용하는지 탐지하는 데 사용함.
+  //
+  @include themeProperty($light, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  }
+}
+
+// 컴포넌트에 적용할 경우 예시...
+// .component-name {
+//    @include theme('color', $secondary-text-color);
+// }

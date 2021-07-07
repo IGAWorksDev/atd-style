@@ -1,0 +1,98 @@
+
+/// Grid system
+//
+// 이 믹스인으로 시맨틱 그리드 열을 생성합니다.
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(#{$gutter} * -1); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(#{$gutter} / -2); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(#{$gutter} / -2); // stylelint-disable-line function-disallowed-list
+}
+
+@mixin make-col-ready($gutter: $grid-gutter-width) {
+  // 그리드만 로드된 경우 상자 크기 조정 추가
+  // box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+  // 헝상 `width: 100%;`를 설정하여 더 작은 그리드 계층에서 열이 너무 좁아지는 것을 방지합니다.
+  // 이것은 나중에 이 초기 너비를 재정의하기 위해 너비를 설정하기 때문에 작동합니다.
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%; // Prevent `.col-auto`, `.col` (& responsive variants) from breaking out the grid
+  padding-right: calc(#{$gutter} / 2); // stylelint-disable-line function-disallowed-list
+  padding-left: calc(#{$gutter} / 2); // stylelint-disable-line function-disallowed-list
+  margin-top: #{$gutter};
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 auto;
+  width: percentage($size / $columns);
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Row columns
+//
+// 부모 요소(예 .row)를 지정하여 직계 자식을 NN 열 수의 열로 강제 적용합니다.
+// 줄 바꿈을 지원하지만 masonry 스타일 그리드는 지원하지 않습니다.
+@mixin row-cols($count) {
+  > * {
+    flex: 0 0 auto;
+    width: 100% / $count;
+  }
+}
+
+// Framework grid generation
+//
+// `$ grid-columns` 값이 주어지면 정확한 수의 그리드 클래스를 생성하기 위해 부트 스트랩에서만 사용됩니다.
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      // 너비가 같은 가변 상자 열에 기본 '.col-{bp}' 클래스 제공
+      .col#{$infix} {
+        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      // 반응형 로우-컬럼
+      @if $grid-row-columns > 0 {
+        @for $i from 1 through $grid-row-columns {
+          .row-cols#{$infix}-#{$i} {
+            @include row-cols($i);
+          }
+        }
+      }
+
+      @if $columns > 0 {
+        // 반응형 컬럼
+        @for $i from 1 through $columns {
+          .col#{$infix}-#{$i} {
+            @include make-col($i, $columns);
+          }
+        }
+
+        // 오프셋 컬럼
+        // `$columns - 1` because offsetting by the width of an entire row isn't possible
+        // `$columns - 1`은 전체 행의 너비로 오프셋 할 수 없으므로
+        @for $i from 0 through ($columns - 1) {
+          @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+            .offset#{$infix}-#{$i} {
+              @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+    }
+  }
+}

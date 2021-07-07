@@ -15,7 +15,6 @@
     th, td {
       border-top: $table-border-width solid $table-border-color;
       border-bottom: ($table-border-width * 2) solid $table-border-color;
-      background-color: $table-bg-alt;
     }
   }
 }
@@ -42,7 +41,7 @@ caption {
 
 // Stripe
 //
-.table-striped tbody tr:nth-child(even) {
+.table-striped tbody tr:nth-child(odd) {
   background-color: $table-bg-alt;
 }
 

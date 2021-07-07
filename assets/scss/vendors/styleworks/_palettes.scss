@@ -1,0 +1,158 @@
+
+/* ------------------------------------------------------- */
+//
+// 컬러 팔레트 생성
+// 컬러 팔레트를 자동으로 생성하여 효율적인 관리를 위해 사용함.
+// url : https://codepen.io/jonrohan/pen/NNGaBO
+// added file : 2021-05-28
+//
+/* ------------------------------------------------------- */
+
+// Palette Colors (! 변경가능)
+// $color-500번째 색상.
+//
+$blue:    #0081f6 !default;
+$green:   #65d430 !default;
+$teal:    #0dbab1 !default;
+$yellow:  #ffa000 !default;
+$red:     #e53935 !default;
+$purple:  #6b2ecf !default;
+$magenta: #af2c8d !default;
+$gray:    #6c757d !default;
+
+$palettes: () !default;
+$palettes: map-merge(
+                (
+                        "blue": $blue,
+                        "green": $green,
+                        "teal": $teal,
+                        "yellow": $yellow,
+                        "red": $red,
+                        "gray": $gray
+                ),
+                $palettes
+);
+
+// $palettes 맵을 이용하여 변형된 색상을 자동 생성하기 위한 함수 @function
+//
+@function colorMap($palettes, $variations) {
+  $colors: ();
+  @each $color, $value in $palettes {
+    $maxVar: 40; // max variation : 최대 변경값 (! 변경가능)
+    $mid: $variations / 2; // middle : 가운데
+    $dist: $mid - 1; // distance : 거리 -- 변경된 색상 거리값 ( 100, 200, 300, ... 900)
+    $step: $maxVar / $dist; // 단계 -- 거리에 따른 색상 변경 값
+
+    // lighten and darken
+    @for $i from 1 through $dist {
+      $percentage: ($maxVar - ($step * ($i - 1))) * 2; // $1가 1일 때 36을 갖음.
+      $tint: $i * 100; // $color를 밝게 만들며, 0~100% 사이 숫자를 갖음.(100, 200, 300, 400 오름차순)
+      $shade: ($variations - $i) * 100; // $color를 어둡게 만들며, 0~100% 사이 숫자를 갖음. (900, 800, 700, 600 내림차순)
+
+      $colors: map-merge($colors, (
+              #{$color}-50: tint-color($value, 88%), // 가장 옅은 $color-50인 색상 추출.
+              #{$color}-#{$mid * 100}: $value, // 베이스 컬러이면서 $color-500인 색상 추출.
+              #{$color}-#{$tint}: tint-color($value, $percentage), // eg. gray-100: #CDD1D4
+              #{$color}-#{$shade}: shade-color($value, $percentage) // eg. gray-900: #17191B
+      ));
+    }
+  }
+  @return $colors;
+}
+
+
+
+
+// 사용자 지정 속성(CSS 변수, 종속 변수) @mixin
+// url : https://developer.mozilla.org/ko/docs/Web/CSS/Using_CSS_custom_properties
+//
+
+@mixin colorVar($color, $value) {
+  --#{$color}:#{$value};
+}
+
+// :root에 컬러 팔레트 변수 표시하기
+//
+:root {
+  @each $color, $value in colorMap($palettes, 10) { // 10개의 팔레트 색상을 추출함.
+    @include colorVar($color, $value);
+  }
+}
+
+
+// css 변수 사용 예제...
+//
+// .element {
+//    color: var(--gray-800);
+//    background-color: var(--gray-100);
+// }
+
+
+// Grayscale
+//
+$white: #fff !default;
+$gray-100: var(--gray-100) !default;
+$gray-200: var(--gray-200) !default;
+$gray-300: var(--gray-300) !default;
+$gray-400: var(--gray-400) !default;
+$gray-500: var(--gray-500) !default;
+$gray-600: var(--gray-600) !default;
+$gray-700: var(--gray-700) !default;
+$gray-800: var(--gray-800) !default;
+$gray-900: var(--gray-900) !default;
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+                (
+                        "100": $gray-100,
+                        "200": $gray-200,
+                        "300": $gray-300,
+                        "400": $gray-400,
+                        "500": $gray-500,
+                        "600": $gray-600,
+                        "700": $gray-700,
+                        "800": $gray-800,
+                        "900": $gray-900
+                ),
+                $grays
+);
+
+
+
+
+
+
+// Colors
+//
+$primary:       $blue !default;
+$secondary:     $gray !default;
+$tertiary:      $gray-400 !default;
+$success:       $green !default;
+$info:          $teal !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+                (
+                        "primary": $primary,
+                        "secondary": $secondary,
+                        "success": $success,
+                        "info": $info,
+                        "warning": $warning,
+                        "danger": $danger
+                ),
+                $theme-colors
+);
+
+// :root에 컬러 팔레트 변수 표시하기
+//
+:root {
+  @each $color, $value in colorMap($theme-colors, 10) { // 10개의 팔레트 색상을 추출함.
+    @include colorVar($color, #{$value});
+  }
+}

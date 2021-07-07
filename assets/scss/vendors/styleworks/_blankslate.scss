@@ -1,0 +1,20 @@
+
+
+//
+// Blankslate
+// 내용이 없는 패널에 안내문구를 포함하여 사용
+//
+
+.blankslate {
+  text-align: center;
+  color: $base;
+  background-color: $blankslate-bg;
+  border: $blankslate-border-width solid;
+  border-color: $blankslate-border-color;
+  padding: $blankslate-padding-y $blankslate-padding-x;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}

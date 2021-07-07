@@ -1,0 +1,128 @@
+
+
+// Button Sizes
+//
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+
+  // Manually declare to provide an override to the browser default
+  // - 브라우저 기본값에 대한 재정의를 제공하도록 수동으로 선언
+  @include border-radius($border-radius, 0);
+}
+
+
+// Circle Button sizes
+//
+@mixin button-circle-size($padding-y, $padding-x, $width, $height, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  width: $width;
+  height: $height;
+  @include font-size($font-size);
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+
+
+// Button Styles
+//
+
+// btn-contained-{$theme-colors}
+//
+@mixin button-contained-variant($color,
+  $base-background: var(--#{$color}-500), $base-border: var(--#{$color}-500),
+  $active-background: var(--#{$color}-600), $active-border: var(--#{$color}-600)) {
+
+  color: $white;
+  background-color: $base-background;
+  background-clip: padding-box;
+  border-color: $base-border;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &.is-active {
+    color: $white;
+    background-color: $active-background;
+    border-color: $active-border;
+    text-decoration: none;
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $white;
+    border-color: $btn-disabled-color;
+    background-color: $btn-disabled-color;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+
+// btn-outlined-{$theme-colors}
+//
+@mixin button-outlined-variant($color,
+  $base-color: var(--#{$color}-500), $base-border: var(--#{$color}-500),
+  $active-color: var(--#{$color}-600), $active-background: var(--#{$color}-50), $active-border: var(--#{$color}-600)) {
+
+  color: $base-color;
+  background-color: transparent;
+  border-color: $base-border;
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:hover,
+  &:active,
+  &.is-active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+    text-decoration: none;
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
+    background-color: transparent;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+
+// btn-text-{$theme-colors}
+//
+//
+@mixin button-text-variant($color,
+  $base-color: var(--#{$color}-500),
+  $active-color: var(--#{$color}-600), $active-background: var(--#{$color}-50), $active-border: var(--#{$color}-200)){
+
+  color: $base-color;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &.is-active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  // 비활성 상태
+  &.is-disabled,
+  &[disabled],
+  &:disabled {
+    color: $btn-disabled-color;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+    box-shadow: none;
+  }
+}

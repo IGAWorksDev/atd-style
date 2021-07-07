@@ -1,0 +1,57 @@
+
+
+//
+// Banner Notifications
+//
+
+
+@mixin alert-variant($color,
+  $base-color: var(--#{$color}-600), $base-border-color: var(--#{$color}-100), $base-background-color: var(--#{$color}-50)){
+  color: $base-color;
+  border-color: $base-border-color;
+  background-color: $base-background-color;
+  border-radius: $border-radius;
+}
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  padding: $alert-padding-y $alert-padding-x;
+  border: $alert-border-width solid transparent;
+
+  .alert-icon {
+    flex: 0 0 auto;
+    margin-right: $alert-padding-x;
+    padding-top: $alert-inner-spacer;
+    padding-bottom: $alert-inner-spacer;
+    font-size: $alert-icon-size;
+  }
+
+  .alert-message {
+    flex: 1 1 auto;
+    margin-right: $alert-padding-x;
+    padding-top: $alert-inner-spacer;
+    padding-bottom: $alert-inner-spacer;
+  }
+
+  .alert-close {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+}
+
+// Alerts variation
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant($color);
+    .alert-close {
+      @extend .btn-circle;
+      @extend .btn-circle-sm;
+      @include button-text-variant($color);
+      cursor: pointer;
+    }
+  }
+}
+
+
+

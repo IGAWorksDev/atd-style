@@ -1,0 +1,148 @@
+
+
+//
+// Modals
+//
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $modal-dialog-z-index;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+// 모달 껍데기
+.modal-dialog {
+  position: relative;
+  margin: $modal-dialog-margin;
+  width: auto;
+  pointer-events: none;
+  outline: 0;
+}
+
+// 모달 컨텐츠 컨테이너
+.modal-content,
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: $modal-container-bg;
+  background-clip: padding-box;
+  border: $modal-container-border-width solid $modal-container-border-color;
+  border-radius: $modal-container-border-radius;
+  overflow: hidden;
+
+  .btn-close {
+    float: right;
+    flex: 0 0 auto; // 타이틀 또는 내용의 길이에 상관없이 모양을 유지함.
+    margin-left: auto;
+    @extend .btn-circle;
+    @extend .btn-text-secondary;
+  }
+  .modal-title {
+    //margin-top: $spacer;
+    margin-right: auto;
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: $modal-header-padding;
+  border-radius: $modal-container-border-radius $modal-container-border-radius 0 0;
+}
+
+.modal-body {
+  flex: 1 1 auto;
+  padding: $modal-body-padding;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: $modal-footer-padding;
+  border-top: $modal-footer-border-width solid $modal-footer-border-color;
+  border-radius: 0 0 $modal-container-border-radius $modal-container-border-radius;
+}
+
+
+// 백드롭 -- 특정 요소를 강조하기 위해 사용되는 레이어
+.modal-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: $modal-backdrop-bg;
+  opacity: $modal-backdrop-opacity;
+
+  &.fade {
+    opacity: 0;
+  }
+  &.show {
+    opacity: $modal-backdrop-opacity;
+  }
+}
+
+//
+// Scale
+
+.modal-dialog {
+  max-width: $modal-md;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.modal-sm {
+  max-width: $modal-sm;
+}
+
+.modal-lg {
+  max-width: $modal-lg;
+}
+
+.modal-xl {
+  max-width: $modal-xl;
+}
+
+//
+// Alignemnt
+// 플렉서블 영역에서 중앙에 정렬하도록 함
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2); // 최소 크기 계산
+}
+
+//
+// Scrollable
+// .modal-body의 내용이 길 경우 스크롤 되도록 함
+.modal-dialog-scrollable {
+  max-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
+  .modal-container {
+    max-height: subtract(100vh, $modal-dialog-margin-y-sm-up * 2); // IE10/11
+    overflow: hidden;
+  }
+  .modal-header,
+  .modal-footer {
+    flex-shrink: 0;
+  }
+  .modal-body {
+    overflow-y: auto;
+  }
+}
+
+
+

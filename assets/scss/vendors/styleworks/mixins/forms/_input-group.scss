@@ -1,0 +1,139 @@
+
+
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+
+  > .form-control,
+  > .form-control-plaintext,
+  > .custom-select,
+  > .custom-file {
+    position: relative; // 포커스 상태를 위한 z-index
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+
+    + .form-control,
+    + .custom-select,
+    + .custom-file {
+      margin-left: -$input-border-width;
+    }
+  }
+}
+
+
+// Prepend & Append
+//
+// input-group의 안에 addon을 추가할 경우 사용합니다.
+//
+.input-group-prepend,
+.input-group-append {
+  display: flex;
+
+  // 버튼의 경우, 시각적으로 보기 좋은 테두리 모양을 위해 항상 input 위에 있도록 해주는 스타일
+  .btn {
+    position: relative;
+    z-index: 2;
+
+    &:focus {
+      z-index:3;
+    }
+  }
+
+  // 애드온으로 추가되는 요소들의 테두리가 맞닿아 두껍게 보이는 것을 방지하는 스타일
+  .btn + .btn,
+  .btn + .input-group-text,
+  .input-group-text + .input-group-text,
+  .input-group-text + .btn {
+    margin-left: -$input-border-width;
+  }
+}
+// 요소들의 border가 맞닿아 두껍게 보이는 것을 방지하는 스타일.
+.input-group-prepend {
+  margin-right: -$input-border-width;
+}
+.input-group-append {
+  margin-left: -$input-border-width;
+}
+
+
+// 텍스트 애드온
+// 글자를 사용할 경우 : input-group의 테두리와 같은 속성을 갖음.
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: $input-padding-y $input-padding-x;
+  margin: 0;
+  @include font-size($input-font-size);
+  font-weight: $font-weight-normal;
+  line-height: $input-line-height;
+  color: $input-group-addon-color;
+  text-align: center;
+  white-space : nowrap;
+  background-color: $input-group-addon-bg;
+  border: $input-border-width solid $input-group-addon-border-color;
+  @include border-radius($input-border-radius);
+}
+
+
+// 둥근 모서리 (Rounded corners)
+// input-group에 들어 오는 요소들의 radius를 재설정하여 하나의 그룹으로 보이도록 합니다.
+//
+.input-group {
+  > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+  > .dropdown-toggle:nth-last-child(n + 3) {
+    @include border-right-radius(0);
+  }
+
+  > :not(:first-child):not(.dropdown-menu) {
+    @include border-left-radius(0);
+  }
+
+
+
+  // 추가 -- 21.05.04
+  // 현재 버전에서 필요 -- 모양이 변경될 수 있음.
+  //
+  > .input-group-prepend {
+    .input-group-text {
+      @include border-right-radius(0);
+    }
+    .btn {
+      @include border-radius(0 !important);
+      &:first-child {
+        @include border-left-radius(0 !important);
+      }
+    }
+
+  }
+  > .input-group-append {
+    .input-group-text {
+      @include border-left-radius(0);
+    }
+
+    .btn {
+      @include border-radius(0 !important);
+      &:last-child {
+        @include border-left-radius(0 !important);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
