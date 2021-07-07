@@ -241,7 +241,7 @@
 						<div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
 							<!-- tab -->
 							<ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
-								<li class="tab-item px-5 is-active">
+								<li class="tab-item px-5">
 									<a href="usage-rank.html" class="tab-link pointer" role="tab">
 										사용자 순위
 									</a>
@@ -251,7 +251,7 @@
 										총 설치 순위
 									</a>
 								</li>
-								<li class="tab-item px-5">
+								<li class="tab-item px-5 is-active">
 									<a href="usage-rank__new.html" class="tab-link pointer" role="tab">
 										신규 설치 순위
 									</a>
@@ -266,11 +266,11 @@
 						</div>
 						<!-- /card-header -->
 						<!-- card-body -->
-						<div class="card-body" v-if="rankType === 'user'">
+						<div class="card-body">
 							<!-- toolbar -->
 							<div class="toolbar">
 								<div class="text-muted font-size-sm">
-									앱을 클릭하여 해당 앱의 기본 사용량 정보를 확인 할 수 있습니다.
+									앱을 클릭하시면 해당 앱의 기본 사용량 정보를 확인할 수 있습니다.
 								</div>
 
 								<div class="ml-auto"></div>
@@ -340,7 +340,7 @@
 										</div>
 										<div class="datagrid-cell" role="columnheader" style="min-width: 15rem; max-width: 15rem;">
 											<div class="d-flex align-items-center justify-content-between">
-												전체 사용자 수
+												총 설치기기 수
 											</div>
 										</div>
 									</div>
@@ -383,7 +383,7 @@
 										</div>
 										<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; max-width: 15rem;">
 											<div class="datagrid-cell-inner">
-												<span>27,459,265</span><br>
+												<span>31,156,868</span><br>
 												<small class="text-success">
 													<i class="ico ic-caret-top"></i>
 													<span>1,003,608</span>

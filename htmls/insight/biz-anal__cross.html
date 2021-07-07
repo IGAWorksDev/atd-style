@@ -5,6 +5,11 @@
 	<title>TW__Market Insight</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 <body>
 <!-- gnb -->
@@ -116,7 +121,7 @@
 			<!-- /navbar-header -->
 			<!-- navbar-nav -->
 			<ul class="navbar-nav snb-navbar-nav">
-				<li class="nav-item is-active">
+				<li class="nav-item">
 					<a class="nav-link" href="usage-rank.html">
           	<span class="nav-item-icon">
             	<i class="ico ic-clock-undo"></i>
@@ -140,7 +145,7 @@
 						<span class="nav-item-title">업종 순위 트렌드</span>
 					</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item is-active">
 					<a class="nav-link" href="biz-anal__trend.html">
 						<span class="nav-item-icon">
             	<i class="ico ic-analysis"></i>
@@ -163,7 +168,7 @@
 				<div class="container">
 					<div class="mainheader__inner">
 						<h2 class="font-weight-bold m-0">
-							기본 사용량 순위
+							업종 트렌드 분석
 						</h2>
 						<small class="text-muted ml-auto">
 							<i class="ico ic-android"></i>
@@ -184,10 +189,10 @@
 							<div class="toolbar">
 								<!-- form-group -->
 								<div class="form-group w-auto m-0">
-									<label class="d-none" for="select-category-main">대분류</label>
+									<label class="d-none" for="select-category-main">대분류 선택</label>
 									<select class="custom-select" id="select-category-main">
-										<option selected>모든 카테고리</option>
-										<option value="app_9">앱 &gt; 동영상 플레이어/편집기</option>
+										<option selected>가정/생활</option>
+										<option value="app_9">가족</option>
 									</select>
 								</div>
 								<!-- /form-group -->
@@ -241,24 +246,29 @@
 						<div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
 							<!-- tab -->
 							<ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
+								<li class="tab-item px-5">
+									<a href="biz-anal__trend.html" class="tab-link pointer" role="tab">
+										업종 사용자 추이
+									</a>
+								</li>
+								<li class="tab-item px-5">
+									<a href="biz-anal__time.html" class="tab-link pointer" role="tab">
+										업종 사용시간 추이
+									</a>
+								</li>
+								<li class="tab-item px-5">
+									<a href="biz-anal__user.html" class="tab-link pointer" role="tab">
+										업종 사용자 구성
+									</a>
+								</li>
+								<li class="tab-item px-5">
+									<a href="biz-anal__app.html" class="tab-link pointer" role="tab">
+										업종 상위 앱 비교
+									</a>
+								</li>
 								<li class="tab-item px-5 is-active">
-									<a href="usage-rank.html" class="tab-link pointer" role="tab">
-										사용자 순위
-									</a>
-								</li>
-								<li class="tab-item px-5">
-									<a href="usage-rank__install.html" class="tab-link pointer" role="tab">
-										총 설치 순위
-									</a>
-								</li>
-								<li class="tab-item px-5">
-									<a href="usage-rank__new.html" class="tab-link pointer" role="tab">
-										신규 설치 순위
-									</a>
-								</li>
-								<li class="tab-item px-5">
-									<a href="usage-rank__time.html" class="tab-link pointer" role="tab">
-										총 사용시간 순위
+									<a href="biz-anal__cross.html" class="tab-link pointer" role="tab">
+										업종간 중복 사용 비교
 									</a>
 								</li>
 							</ul>
@@ -266,38 +276,29 @@
 						</div>
 						<!-- /card-header -->
 						<!-- card-body -->
-						<div class="card-body" v-if="rankType === 'user'">
+						<div class="card-body">
 							<!-- toolbar -->
 							<div class="toolbar">
-								<div class="text-muted font-size-sm">
-									앱을 클릭하여 해당 앱의 기본 사용량 정보를 확인 할 수 있습니다.
+								<!-- form-group -->
+								<div class="form-group w-auto m-0">
+									<label class="d-none" for="picker-month">월 선택</label>
+									<input type="month" class="form-control" id="picker-month" value="2021-06">
 								</div>
+								<!-- /form-group -->
 
-								<div class="ml-auto"></div>
+								<div class="mr-auto"></div>
 								<!-- btn-group -->
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outlined-secondary is-active">
 										<input type="radio" name="options" autocomplete="off" checked/>
-										일
+										차트
 									</label>
 									<label class="btn btn-outlined-secondary">
 										<input type="radio" name="options" autocomplete="off"/>
-										주
-									</label>
-									<label class="btn btn-outlined-secondary">
-										<input type="radio" name="options" autocomplete="off"/>
-										월
+										테이블
 									</label>
 								</div>
 								<!-- /btn-group -->
-
-								<div class="ml-1"></div>
-								<!-- form-group -->
-								<div class="form-group w-auto m-0">
-									<label class="d-none" for="picker-date">날짜 선택</label>
-									<input type="date" class="form-control" id="picker-date" value="2021-07-03">
-								</div>
-								<!-- /form-group -->
 
 								<div class="ml-2"></div>
 								<button class="btn btn-outlined-secondary" aria-label="다운로드">
@@ -306,205 +307,73 @@
 								</button>
 							</div>
 							<!-- /toolbar -->
+
+							<!-- chart -->
+							<div class="my-2">
+								<figure class="highcharts-figure">
+									<div id="crossusage-compare"></div>
+								</figure>
+								<script>
+									Highcharts.chart('crossusage-compare', {
+										title: {
+											text: ' '
+										},
+										xAxis: [{
+											categories: ['생산성',
+												'소셜네트워크',
+											'엔터테인먼트',
+											'유틸리티',
+											'사진/동영상',
+											'금융',
+											'여행/교통',
+											'쇼핑',
+											'식음료',
+											'게임',
+											'건강/의료',
+											'라이프스타일',
+											'도서/참고자료',
+											'정보/통신',
+											'비즈니스/산업',
+											'패션/의류',
+											'교육',
+											'자동차',
+											'가족',
+											'복지/행정/단체',
+											'스포츠/레저',
+											'미용',
+											'뉴스',
+											'기타']
+										}],
+										yAxis: [{
+											title: {
+												text: ''
+											},
+											labels: {
+												format: '{value} %'
+											}
+										}],
+										tooltip: {
+											shared: true
+										},
+										series: [{
+											name: '[가정/생활] 업종 사용자의 업종별 중복 사용 패턴',
+											data: [49.99, 71.15, 10.34, 12.92, 14.40, 17.60, 13.56, 14.85, 21.64, 19.41, 9.56, 5.44,
+												49.99, 71.15, 10.34, 12.92, 14.40, 17.60, 13.56, 14.85, 21.64, 19.41, 9.56, 5.44],
+											color: '#0081f6'
+										}, {
+											name: '[안드로이드 OS] 사용자의 업종별 사용 패턴',
+											data: [70, 69, 95, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6,
+												70, 69, 95, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+											color: '#26D3CA'
+										}]
+									});
+								</script>
+							</div>
+							<!-- /chart -->
 						</div>
 						<!-- /card-body -->
-
-						<!-- datagrid-responsive -->
-						<div class="datagrid-responsive border-top">
-							<!-- datagrid -->
-							<div class="datagrid datagrid-hover datagrid-bordered datagrid-striped datagrid-align-items-center"
-									 role="grid">
-								<!-- datagrid-rowgroup -->
-								<div class="datagrid-rowgroup datagrid-header" role="rowgroup">
-									<!-- datagrid-row -->
-									<div class="datagrid-row" role="row">
-										<div class="datagrid-cell" role="columnheader" style="min-width: 8rem; max-width: 8rem;">
-											<div class="d-flex align-items-center justify-content-between">
-												순위
-											</div>
-										</div>
-										<div class="datagrid-cell" role="columnheader" style="">
-											<div class="d-flex align-items-center justify-content-between">
-												앱명
-											</div>
-										</div>
-										<div class="datagrid-cell" role="columnheader" style="min-width: 20rem; max-width: 20rem;">
-											<div class="d-flex align-items-center justify-content-between">
-												마켓 카테고리
-											</div>
-										</div>
-										<div class="datagrid-cell" role="columnheader" style="min-width: 20rem; max-width: 20rem;">
-											<div class="d-flex align-items-center justify-content-between">
-												업종
-											</div>
-										</div>
-										<div class="datagrid-cell" role="columnheader" style="min-width: 15rem; max-width: 15rem;">
-											<div class="d-flex align-items-center justify-content-between">
-												전체 사용자 수
-											</div>
-										</div>
-									</div>
-									<!-- /datagrid-row -->
-								</div>
-								<!-- /datagrid-rowgroup -->
-								<!-- datagrid-rowgroup -->
-								<div class="datagrid-rowgroup datagrid-body" role="rowgroup">
-									<!-- datagrid-row -->
-									<div class="datagrid-row" role="row">
-										<div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 8rem;">
-											<div class="datagrid-cell-inner">
-												350 <br>
-												<small class="text-danger">
-													<i class="ico ic-caret-bottom"></i>
-													-40
-												</small>
-											</div>
-										</div>
-										<div class="datagrid-cell" role="gridcell">
-											<a class="d-flex align-items-center" href="app-detail.html">
-												<div>
-													<img class="appinfo__appicon img-48"
-															 src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s50"
-															 alt=""/>
-												</div>
-												<div class="ml-2 text-body">
-													<div class="text-truncate" style="max-width: 360px;">
-														카카오톡 KakaoTalk
-													</div>
-													<small>Kakao Corporation</small>
-												</div>
-											</a>
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 20rem; max-width: 20rem;">
-											커뮤니케이션
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 20rem; max-width: 20rem;">
-											메신저/전화/영상통화
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; max-width: 15rem;">
-											<div class="datagrid-cell-inner">
-												<span>27,459,265</span><br>
-												<small class="text-success">
-													<i class="ico ic-caret-top"></i>
-													<span>1,003,608</span>
-												</small>
-											</div>
-										</div>
-									</div>
-									<!-- /datagrid-row -->
-									<!-- datagrid-row -->
-									<div class="datagrid-row" role="row">
-										<div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 8rem;">
-											<div class="datagrid-cell-inner">
-												2 <br>
-												<small class="text-success">
-													<i class="ico ic-caret-top"></i>
-													1
-												</small>
-											</div>
-										</div>
-										<div class="datagrid-cell" role="gridcell">
-											<a class="d-flex align-items-center" href="app-detail.html">
-												<div>
-													<img class="appinfo__appicon img-48"
-															 src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s50"
-															 alt=""/>
-												</div>
-												<div class="ml-2 text-body">
-													<div class="text-truncate" style="max-width: 360px;">
-														T전화-스팸차단, AI, NUGU, 상호검색, 콜라영상통화, baro(로밍), 자동녹음
-													</div>
-													<small>SKTelecom</small>
-												</div>
-											</a>
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 20rem; max-width: 20rem;">
-											동영상 플레이어/편집기
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 20rem; max-width: 20rem;">
-											메신저/전화/영상통화
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; max-width: 15rem;">
-											<div class="datagrid-cell-inner">
-												<span>27,459,265</span><br>
-												<small class="text-danger">
-													<i class="ico ic-caret-bottom"></i>
-													<span>-1,003,608</span>
-												</small>
-											</div>
-										</div>
-									</div>
-									<!-- /datagrid-row -->
-									<!-- datagrid-row -->
-									<div class="datagrid-row" role="row">
-										<div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 8rem;">
-											<div class="datagrid-cell-inner">
-												3 <br>
-												<small class="text-disabled">
-													<i class="ico ic-ball"></i>
-													-
-												</small>
-											</div>
-										</div>
-										<div class="datagrid-cell" role="gridcell">
-											<a class="d-flex align-items-center" href="app-detail.html">
-												<div>
-													<img class="appinfo__appicon img-48"
-															 src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s50"
-															 alt=""/>
-												</div>
-												<div class="ml-2 text-body">
-													<div class="text-truncate" style="max-width: 360px;">
-														카카오톡 KakaoTalk
-													</div>
-													<small>Kakao Corporation</small>
-												</div>
-											</a>
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 20rem; max-width: 20rem;">
-											커뮤니케이션
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 20rem; max-width: 20rem;">
-											메신저/전화/영상통화
-										</div>
-										<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; max-width: 15rem;">
-											<div class="datagrid-cell-inner">
-												<span>27,459,265</span><br>
-												<small class="text-success">
-													<i class="ico ic-caret-top"></i>
-													<span>1,003,608</span>
-												</small>
-											</div>
-										</div>
-									</div>
-									<!-- /datagrid-row -->
-								</div>
-								<!-- /datagrid-rowgroup -->
-							</div>
-							<!-- /datagrid -->
-						</div>
-						<!-- /datagrid-responsive -->
-						<!-- nav -->
-						<nav class="py-2 text-center border-top">
-							<a class="btn btn-text-secondary" href="#">
-								더보기 <i class="ico ic-chevron-bottom"></i>
-							</a>
-						</nav>
-						<!-- /nav -->
 					</div>
 					<!-- /card -->
-
-					<!-- blackslate -->
-					<div class="blankslate">
-						<div class="blankslate-message py-5">
-							<i class="ico ic-exclamation-triangle-fill h3"></i>
-							<p class="mt-2">
-								확인 가능한 내역이 없습니다.
-							</p>
-						</div>
-					</div>
-					<!-- blackslate -->
-
 				</div>
 			</div>
 			<!-- /mainbody -->

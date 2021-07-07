@@ -1,0 +1,8 @@
+
+// Toolbar
+//
+.toolbar {
+    padding: ($spacer * 2) 0;
+    @extend .d-flex;
+    @extend .align-items-center;
+}

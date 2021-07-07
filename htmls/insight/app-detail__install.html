@@ -1,25 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-<style>
-	.pointer {
-		cursor: pointer;
-	}
-
-	.appbar__appicon-wrapper {
-		position: relative;
-		margin-right: 1rem;
-	}
-
-	.appbar__appicon {
-		width: 7.2rem;
-		height: 7.2rem;
-	}
-
-	img {
-		vertical-align: middle;
-		border-style: none;
-	}
-</style>
 <head>
 	<meta charset="UTF-8">
 	<title>TW__Market Insight</title>
@@ -368,7 +348,7 @@
 						<div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
 							<!-- tab -->
 							<ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
-								<li class="tab-item px-5 is-active">
+								<li class="tab-item px-5">
 									<a class="tab-link pointer" href="app-detail.html" role="tab">
 										사용자 순위
 									</a>
@@ -378,7 +358,7 @@
 										사용자 구성
 									</a>
 								</li>
-								<li class="tab-item px-5">
+								<li class="tab-item px-5 is-active">
 									<a class="tab-link pointer" href="app-detail__install.html" role="tab">
 										총 설치기기
 									</a>
@@ -401,39 +381,32 @@
 						<div class="card-body">
 							<!-- toolbar -->
 							<div class="toolbar">
-								<!-- btn-group -->
-								<div class="btn-group btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-outlined-secondary is-active">
-										<input type="radio" name="options" autocomplete="off" checked/>
-										일
-									</label>
-									<label class="btn btn-outlined-secondary">
-										<input type="radio" name="options" autocomplete="off"/>
-										주
-									</label>
-									<label class="btn btn-outlined-secondary">
-										<input type="radio" name="options" autocomplete="off"/>
-										월
-									</label>
+								<div class="d-flex align-items-center">
+									<!-- form-group -->
+									<div class="form-group w-auto m-0">
+										<label class="d-none" for="picker-month-start">시작</label>
+										<input type="month" class="form-control" id="picker-month-start" value="2021-01">
+									</div>
+									<!-- /form-group -->
+									<span class="px-1">~</span>
+									<!-- form-group -->
+									<div class="form-group w-auto m-0">
+										<label class="d-none" for="picker-month-end">종료</label>
+										<input type="month" class="form-control" id="picker-month-end" value="2021-06">
+									</div>
+									<!-- /form-group -->
 								</div>
-								<!-- /btn-group -->
-
-								<div class="ml-1"></div>
-								<!-- form-group -->
-								<div class="form-group w-auto m-0">
-									<label class="d-none" for="picker-date">날짜 선택</label>
-									<input type="date" class="form-control" id="picker-date" value="2021-07-03">
-								</div>
-								<!-- /form-group -->
 
 								<div class="ml-auto"></div>
 								<!-- btn-group -->
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn btn-outlined-secondary is-active">
-										<input type="radio" name="options" autocomplete="off" checked/> 절대값
+										<input type="radio" name="options" autocomplete="off" checked/>
+										절대값
 									</label>
 									<label class="btn btn btn-outlined-secondary">
-										<input type="radio" name="options" autocomplete="off"/> 순위
+										<input type="radio" name="options" autocomplete="off"/>
+										순위
 									</label>
 								</div>
 								<!-- /btn-group -->
@@ -463,37 +436,44 @@
 							<!-- chart -->
 							<div class="mt-2">
 								<figure class="highcharts-figure">
-									<div id="trends-users"></div>
+									<div id="install-monthly"></div>
 								</figure>
 								<script>
-									Highcharts.chart('trends-users', {
+									Highcharts.chart('install-monthly', {
 										chart: {
-											type: 'line'
+											type: 'spline'
 										},
 										title: {
 											text: ' '
 										},
-										xAxis: {
-											categories: ['2020-11-14', '2020-11-15', '2020-11-16', '2020-11-17', '2020-11-18', '2020-11-19', '2020-11-20']
-										},
 										yAxis: [{
 											title: {
-												text: '사용자수'
+												text: '총 설치기기'
 											}
 										}, {
 											opposite: true,
 											title: {
-												text: '사용자 기준'
+												text: '총 설치 기준(%)'
+											},
+											categories: ['0', '20', '40', '60', '80', '100'] ,
+											labels: {
+												format: '{value} %'
 											}
 										}],
+										xAxis: {
+											categories: ['2021년 1월', '2021년 2월', '2021년 3년', '2021년 4월', '2021년 5월', '2021년 6월'],
+										},
+										tooltip: {
+											shared: true
+										},
 										series: [{
-											name: '사용자수',
+											name: '총설치기기',
 											color: '#20c997',
-											data: [30, 26, 34, 50, 28, 32, 28]
+											data: [34, 34, 30, 30, 30, 30]
 										}, {
-											name: '사용자 기준',
+											name: '총 설치 기준 업종 점유율(%)',
 											color: '#4169ff',
-											data: [36, 36, 36, 36, 36, 36, 36],
+											data: [90, 90, 93, 92, 92, 92],
 											yAxis: 1
 										}]
 									});

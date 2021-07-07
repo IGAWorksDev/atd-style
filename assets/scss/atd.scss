@@ -55,9 +55,11 @@
 ;
 
 @import
-  'components/table.scss',
-  'components/banner.scss',
-  'components/easy-manager.scss'
+  'components/table',
+  'components/images',
+  'components/banner',
+  'components/easy-manager',
+  'components/toolbar'
 ;
 
 // 메뉴별 구분함
@@ -84,7 +86,3 @@
   'pages/adinsight'
 ;
 
-
-body {
-  background-color: $gray-900;
-}

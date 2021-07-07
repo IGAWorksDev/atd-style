@@ -184,8 +184,8 @@
 							<div class="toolbar">
 								<!-- form-group -->
 								<div class="form-group w-auto m-0">
-									<label class="d-none" for="select-category-main">대분류</label>
-									<select class="custom-select" id="select-category-main">
+									<label class="d-none" for="cetagory-main">대분류</label>
+									<select class="custom-select" id="cetagory-main">
 										<option selected>모든 카테고리</option>
 										<option value="app_9">앱 &gt; 동영상 플레이어/편집기</option>
 									</select>
@@ -241,7 +241,7 @@
 						<div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
 							<!-- tab -->
 							<ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
-								<li class="tab-item px-5 is-active">
+								<li class="tab-item px-5">
 									<a href="usage-rank.html" class="tab-link pointer" role="tab">
 										사용자 순위
 									</a>
@@ -251,12 +251,12 @@
 										총 설치 순위
 									</a>
 								</li>
-								<li class="tab-item px-5">
+								<li class="tab-item px-5 ">
 									<a href="usage-rank__new.html" class="tab-link pointer" role="tab">
 										신규 설치 순위
 									</a>
 								</li>
-								<li class="tab-item px-5">
+								<li class="tab-item px-5 is-active">
 									<a href="usage-rank__time.html" class="tab-link pointer" role="tab">
 										총 사용시간 순위
 									</a>
@@ -266,11 +266,10 @@
 						</div>
 						<!-- /card-header -->
 						<!-- card-body -->
-						<div class="card-body" v-if="rankType === 'user'">
-							<!-- toolbar -->
+						<div class="card-body">
 							<div class="toolbar">
 								<div class="text-muted font-size-sm">
-									앱을 클릭하여 해당 앱의 기본 사용량 정보를 확인 할 수 있습니다.
+									총 사용시간의 단위는 시간(hours)이며, 1인당 평균 사용시간의 단위는 초(second) 입니다.
 								</div>
 
 								<div class="ml-auto"></div>
@@ -340,7 +339,12 @@
 										</div>
 										<div class="datagrid-cell" role="columnheader" style="min-width: 15rem; max-width: 15rem;">
 											<div class="d-flex align-items-center justify-content-between">
-												전체 사용자 수
+												총 사용 시간
+											</div>
+										</div>
+										<div class="datagrid-cell" role="columnheader" style="min-width: 17rem; max-width: 17rem;">
+											<div class="d-flex align-items-center justify-content-between">
+												1인당 평균 사용 시간
 											</div>
 										</div>
 									</div>
@@ -383,12 +387,15 @@
 										</div>
 										<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; max-width: 15rem;">
 											<div class="datagrid-cell-inner">
-												<span>27,459,265</span><br>
+												<span>31,156,868</span><br>
 												<small class="text-success">
 													<i class="ico ic-caret-top"></i>
 													<span>1,003,608</span>
 												</small>
 											</div>
+										</div>
+										<div class="datagrid-cell" role="gridcell" style="min-width: 17rem; max-width: 17rem;">
+											6,274
 										</div>
 									</div>
 									<!-- /datagrid-row -->
@@ -433,6 +440,9 @@
 												</small>
 											</div>
 										</div>
+										<div class="datagrid-cell" role="gridcell" style="min-width: 17rem; max-width: 17rem;">
+											1,949
+										</div>
 									</div>
 									<!-- /datagrid-row -->
 									<!-- datagrid-row -->
@@ -475,6 +485,9 @@
 													<span>1,003,608</span>
 												</small>
 											</div>
+										</div>
+										<div class="datagrid-cell" role="gridcell" style="min-width: 17rem; max-width: 17rem;">
+											1,792
 										</div>
 									</div>
 									<!-- /datagrid-row -->

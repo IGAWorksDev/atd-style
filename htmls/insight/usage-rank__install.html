@@ -241,12 +241,12 @@
 						<div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
 							<!-- tab -->
 							<ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
-								<li class="tab-item px-5 is-active">
+								<li class="tab-item px-5">
 									<a href="usage-rank.html" class="tab-link pointer" role="tab">
 										사용자 순위
 									</a>
 								</li>
-								<li class="tab-item px-5">
+								<li class="tab-item px-5 is-active">
 									<a href="usage-rank__install.html" class="tab-link pointer" role="tab">
 										총 설치 순위
 									</a>
@@ -266,38 +266,17 @@
 						</div>
 						<!-- /card-header -->
 						<!-- card-body -->
-						<div class="card-body" v-if="rankType === 'user'">
-							<!-- toolbar -->
+						<div class="card-body">
 							<div class="toolbar">
 								<div class="text-muted font-size-sm">
-									앱을 클릭하여 해당 앱의 기본 사용량 정보를 확인 할 수 있습니다.
+									2020년 3월 이후 총설치 점유율 계산 방식의 오류가 정정 되었습니다. 이에 따라 해당일 이전 데이터는 삭제 되었습니다. 이용에 참고 바랍니다.
 								</div>
 
 								<div class="ml-auto"></div>
-								<!-- btn-group -->
-								<div class="btn-group btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-outlined-secondary is-active">
-										<input type="radio" name="options" autocomplete="off" checked/>
-										일
-									</label>
-									<label class="btn btn-outlined-secondary">
-										<input type="radio" name="options" autocomplete="off"/>
-										주
-									</label>
-									<label class="btn btn-outlined-secondary">
-										<input type="radio" name="options" autocomplete="off"/>
-										월
-									</label>
-								</div>
-								<!-- /btn-group -->
-
-								<div class="ml-1"></div>
-								<!-- form-group -->
 								<div class="form-group w-auto m-0">
-									<label class="d-none" for="picker-date">날짜 선택</label>
-									<input type="date" class="form-control" id="picker-date" value="2021-07-03">
+									<label class="d-none" for="picker-month">월 선택</label>
+									<input type="month" class="form-control" id="picker-month" value="2021-06">
 								</div>
-								<!-- /form-group -->
 
 								<div class="ml-2"></div>
 								<button class="btn btn-outlined-secondary" aria-label="다운로드">
@@ -340,7 +319,12 @@
 										</div>
 										<div class="datagrid-cell" role="columnheader" style="min-width: 15rem; max-width: 15rem;">
 											<div class="d-flex align-items-center justify-content-between">
-												전체 사용자 수
+												총 설치기기 수
+											</div>
+										</div>
+										<div class="datagrid-cell" role="columnheader" style="min-width: 10rem; max-width: 10rem;">
+											<div class="d-flex align-items-center justify-content-between">
+												사용률
 											</div>
 										</div>
 									</div>
@@ -383,12 +367,15 @@
 										</div>
 										<div class="datagrid-cell" role="gridcell" style="min-width: 15rem; max-width: 15rem;">
 											<div class="datagrid-cell-inner">
-												<span>27,459,265</span><br>
+												<span>31,156,868</span><br>
 												<small class="text-success">
 													<i class="ico ic-caret-top"></i>
 													<span>1,003,608</span>
 												</small>
 											</div>
+										</div>
+										<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; max-width: 10rem;">
+											27.79%
 										</div>
 									</div>
 									<!-- /datagrid-row -->
@@ -433,6 +420,9 @@
 												</small>
 											</div>
 										</div>
+										<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; max-width: 10rem;">
+											27.79%
+										</div>
 									</div>
 									<!-- /datagrid-row -->
 									<!-- datagrid-row -->
@@ -476,6 +466,9 @@
 												</small>
 											</div>
 										</div>
+										<div class="datagrid-cell" role="gridcell" style="min-width: 10rem; max-width: 10rem;">
+											27.79%
+										</div>
 									</div>
 									<!-- /datagrid-row -->
 								</div>
@@ -506,6 +499,7 @@
 					<!-- blackslate -->
 
 				</div>
+				<!-- /container -->
 			</div>
 			<!-- /mainbody -->
 		</main>

@@ -1,25 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-<style>
-	.pointer {
-		cursor: pointer;
-	}
-
-	.appbar__appicon-wrapper {
-		position: relative;
-		margin-right: 1rem;
-	}
-
-	.appbar__appicon {
-		width: 7.2rem;
-		height: 7.2rem;
-	}
-
-	img {
-		vertical-align: middle;
-		border-style: none;
-	}
-</style>
 <head>
 	<meta charset="UTF-8">
 	<title>TW__Market Insight</title>
@@ -368,12 +348,12 @@
 						<div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
 							<!-- tab -->
 							<ul class="tab tab-nav h-fixed-6 m-0" id="card-header-start-tab">
-								<li class="tab-item px-5 is-active">
+								<li class="tab-item px-5">
 									<a class="tab-link pointer" href="app-detail.html" role="tab">
 										사용자 순위
 									</a>
 								</li>
-								<li class="tab-item px-5">
+								<li class="tab-item px-5 is-active">
 									<a class="tab-link pointer" href="app-detail__user.html" role="tab">
 										사용자 구성
 									</a>
@@ -430,18 +410,6 @@
 								<!-- btn-group -->
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn btn-outlined-secondary is-active">
-										<input type="radio" name="options" autocomplete="off" checked/> 절대값
-									</label>
-									<label class="btn btn btn-outlined-secondary">
-										<input type="radio" name="options" autocomplete="off"/> 순위
-									</label>
-								</div>
-								<!-- /btn-group -->
-
-								<div class="ml-1"></div>
-								<!-- btn-group -->
-								<div class="btn-group btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn btn-outlined-secondary is-active">
 										<input type="radio" name="options" autocomplete="off" checked/>
 										차트
 									</label>
@@ -461,43 +429,97 @@
 							<!-- /toolbar -->
 
 							<!-- chart -->
-							<div class="mt-2">
-								<figure class="highcharts-figure">
-									<div id="trends-users"></div>
-								</figure>
-								<script>
-									Highcharts.chart('trends-users', {
-										chart: {
-											type: 'line'
-										},
-										title: {
-											text: ' '
-										},
-										xAxis: {
-											categories: ['2020-11-14', '2020-11-15', '2020-11-16', '2020-11-17', '2020-11-18', '2020-11-19', '2020-11-20']
-										},
-										yAxis: [{
+							<div class="row mt-2">
+								<!-- col -->
+								<div class="col-6">
+									<figure class="highcharts-figure">
+										<div id="trends-users"></div>
+									</figure>
+									<script>
+										Highcharts.chart('trends-users', {
+											chart: {
+												plotBackgroundColor: null,
+												plotBorderWidth: null,
+												plotShadow: false,
+												type: 'pie'
+											},
 											title: {
-												text: '사용자수'
-											}
-										}, {
-											opposite: true,
+												text: ''
+											},
+											accessibility: {
+												point: {
+													valueSuffix: '%'
+												}
+											},
+											plotOptions: {
+												pie: {
+													allowPointSelect: true,
+													cursor: 'pointer',
+													showInLegend: true,
+													innerSize: '70%',
+													dataLabels: {
+														enabled: false
+													}
+												}
+											},
+											series: [{
+												name: '비율',
+												colorByPoint: true,
+												data: [{
+													name: '남자',
+													color: '#0081F6',
+													y: 47.8
+												}, {
+													name: '여자',
+													color: '#26D3CA',
+													y: 52.2
+												}]
+											}]
+										});
+									</script>
+								</div>
+								<!-- /col -->
+								<!-- col -->
+								<div class="col-6">
+									<figure class="highcharts-figure">
+										<div id="gender-age"></div>
+									</figure>
+									<script>
+										Highcharts.chart('gender-age', {
+											chart: {
+												type: 'column'
+											},
 											title: {
-												text: '사용자 기준'
-											}
-										}],
-										series: [{
-											name: '사용자수',
-											color: '#20c997',
-											data: [30, 26, 34, 50, 28, 32, 28]
-										}, {
-											name: '사용자 기준',
-											color: '#4169ff',
-											data: [36, 36, 36, 36, 36, 36, 36],
-											yAxis: 1
-										}]
-									});
-								</script>
+												text: ' '
+											},
+											xAxis: {
+												categories: ['20세 미만', '20~29세', '30~39세', '40~49세', '50~59세', '60세 이상']
+											},
+											yAxis: {
+												allowDecimals: false,
+												min: 0,
+												title: {
+													text: ' '
+												}
+											},
+											plotOptions: {
+												series: {
+													stacking: 'normal'
+												}
+											},
+											series: [{
+												name: '남자',
+												data: [1.3, 7.7, 9.9, 13.6, 11.7, 3.6],
+												color: '#0081F6'
+											},{
+												name: '여자',
+												data: [4.5, 7.3, 12, 15.4, 9.9, 3.1],
+												color: '#26D3CA'
+											}]
+										});
+									</script>
+								</div>
+								<!-- /col -->
 							</div>
 							<!-- /chart -->
 						</div>
