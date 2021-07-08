@@ -1809,6 +1809,8 @@ a:hover { text-decoration: underline; }
 
 .mainheader-sticky.is-fixed { position: fixed; z-index: 10; top: 5.6rem; left: 0; width: 100%; height: 6.4rem; background-color: rgba(255, 255, 255, 0.92); -webkit-transition: all ease-in-out 0.04s; transition: all ease-in-out 0.04s; }
 
+.container { width: 1320px !important; }
+
 .table thead > tr > th { height: 4rem; vertical-align: middle; }
 
 .table tr td + td, .table tr th + th { border-left: 1px solid rgba(232, 233, 234, 0.5); }

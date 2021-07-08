@@ -1,0 +1,10 @@
+
+// Container Fixed width
+//
+// 브라우저 최소 너비 : 1440px
+// 컨테이너 고정 너비 : 1320px
+// 컨테이너 속 컨텐츠 너비 : 1288px -- 컨테이너의 좌우 패딩 (16 * 2)를 제외한 너비
+//
+.container {
+  width: map-get($container-max-widths, xxl) !important;
+}
