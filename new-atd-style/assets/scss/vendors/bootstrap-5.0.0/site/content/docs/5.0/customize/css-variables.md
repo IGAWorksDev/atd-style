@@ -41,10 +41,10 @@ We're also using CSS variables across our grids—primarily for gutters—with m
 CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
 
 ```css
-body {
-  font: 1rem/1.5 var(--bs-font-sans-serif);
-}
-a {
-  color: var(--bs-blue);
-}
+/*body {*/
+/*  font: 1rem/1.5 var(--bs-font-sans-serif);*/
+/*}*/
+/*a {*/
+/*  color: var(--bs-blue);*/
+/*}*/
 ```
