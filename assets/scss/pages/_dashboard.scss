@@ -50,6 +50,7 @@
   border: 0;
   @extend .h-fixed-8;
 }
+
 #dashboard.is-blank {
   > .mainbody:last-child {
     padding-bottom: $spacer * 12;
@@ -182,5 +183,3 @@
     }
   }
 }
-
-// ㅌㅔ스트
