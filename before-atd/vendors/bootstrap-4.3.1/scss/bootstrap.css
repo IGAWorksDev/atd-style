@@ -1,11 +1,11 @@
 /*
 Error: Undefined variable: "$dropdown-padding-x".
-        on line 126 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/_dropdown.scss
-        from line 21 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/bootstrap.scss
+        on line 126 of /Users/zena/Documents/Github-Files/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/_dropdown.scss
+        from line 21 of /Users/zena/Documents/Github-Files/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/bootstrap.scss
 
 Backtrace:
-/Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/_dropdown.scss:126
-/Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/bootstrap.scss:21
+/Users/zena/Documents/Github-Files/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/_dropdown.scss:126
+/Users/zena/Documents/Github-Files/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/bootstrap.scss:21
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$dropdown-padding-x\".\A         on line 126 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/_dropdown.scss\A         from line 21 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/bootstrap.scss"; }
+  content: "Error: Undefined variable: \"$dropdown-padding-x\".\A         on line 126 of /Users/zena/Documents/Github-Files/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/_dropdown.scss\A         from line 21 of /Users/zena/Documents/Github-Files/atd-style/before-atd/vendors/bootstrap-4.3.1/scss/bootstrap.scss"; }

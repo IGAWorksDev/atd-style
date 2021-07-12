@@ -199,9 +199,9 @@ $component-padding-x: $spacer * 2 !default;
 $component-bg: $white !default;
 $component-bg-alt: $gray-50 !default;
 
-$component-bg-dark: $gray-800 !default;
-$component-border-dark: $gray-700 !default;
 
+$component-bg-dark: $gray-800;
+$component-border-dark: $gray-700 !default;
 
 // Active
 $component-active-color: var(--primary-500) !default;

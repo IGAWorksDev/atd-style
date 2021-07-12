@@ -1,9 +1,9 @@
 /*
 Error: Invalid CSS after "// Active": expected ":", was "$component-acti..."
-        on line 207 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/vendors/styleworks/_variables.scss
-        from line 13 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/vendors/styleworks/styleworks.scss
-        from line 6 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/_atd-base.scss
-        from line 54 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/atd.scss
+        on line 207 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/vendors/styleworks/_variables.scss
+        from line 13 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/vendors/styleworks/styleworks.scss
+        from line 6 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/_atd-base.scss
+        from line 54 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/atd.scss
 
 202: 
 203: $component-bg-dark: $gray-800;
@@ -18,10 +18,10 @@ Error: Invalid CSS after "// Active": expected ":", was "$component-acti..."
 212: $component-active-icon-bg: escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size !default;
 
 Backtrace:
-/Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/vendors/styleworks/_variables.scss:207
-/Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/vendors/styleworks/styleworks.scss:13
-/Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/_atd-base.scss:6
-/Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/atd.scss:54
+/Users/zena/Documents/Github-Files/atd-style/assets/scss/vendors/styleworks/_variables.scss:207
+/Users/zena/Documents/Github-Files/atd-style/assets/scss/vendors/styleworks/styleworks.scss:13
+/Users/zena/Documents/Github-Files/atd-style/assets/scss/_atd-base.scss:6
+/Users/zena/Documents/Github-Files/atd-style/assets/scss/atd.scss:54
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
@@ -94,4 +94,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"// Active\": expected \":\", was \"$component-acti...\"\A         on line 207 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/vendors/styleworks/_variables.scss\A         from line 13 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/vendors/styleworks/styleworks.scss\A         from line 6 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/_atd-base.scss\A         from line 54 of /Volumes/GoogleDrive/공유 드라이브/@__UXdesign팀/#__Github/atd-style/assets/scss/atd.scss\A \A 202: \A 203: $component-bg-dark: $gray-800;\A 204: $component-border\A 205: \A 206: // Active\A 207: $component-active-color: var(--primary-500) !default;\A 208: $component-active-bg: var(--primary-50) !default;\A 209: $component-active-icon-color: var(--primary-500) !default;\A 210: $component-active-icon: url(\"data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-active-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>\") !default;\A 211: $component-active-icon-size: $font-size-base !default;\A 212: $component-active-icon-bg: escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size !default;"; }
+  content: "Error: Invalid CSS after \"// Active\": expected \":\", was \"$component-acti...\"\A         on line 207 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/vendors/styleworks/_variables.scss\A         from line 13 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/vendors/styleworks/styleworks.scss\A         from line 6 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/_atd-base.scss\A         from line 54 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/atd.scss\A \A 202: \A 203: $component-bg-dark: $gray-800;\A 204: $component-border\A 205: \A 206: // Active\A 207: $component-active-color: var(--primary-500) !default;\A 208: $component-active-bg: var(--primary-50) !default;\A 209: $component-active-icon-color: var(--primary-500) !default;\A 210: $component-active-icon: url(\"data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-active-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>\") !default;\A 211: $component-active-icon-size: $font-size-base !default;\A 212: $component-active-icon-bg: escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size !default;"; }
