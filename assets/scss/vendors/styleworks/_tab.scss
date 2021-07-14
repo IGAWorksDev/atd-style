@@ -7,11 +7,6 @@
   align-items: stretch;
 }
 
-.tab-item {
-  display: inline-block;
-  padding: $tab-nav-padding-y $tab-nav-padding-x;
-  border: 1px solid transparent;
-}
 
 .tab-nav {
   list-style: none;
@@ -26,35 +21,42 @@
     .tab-link {
       align-self: center;
       color: $body-color;
+      text-decoration: none;
     }
   }
+}
 
-  .tab-item + .tab-item {
-    margin-left: -1px;
+.tab-item {
+  display: inline-block;
+  padding: $tab-nav-padding-y $tab-nav-padding-x;
+  border: 1px solid transparent;
+}
+
+.tab-item + .tab-item {
+  margin-left: -1px;
+}
+.tab-item:first-child .tab-link {
+  border-top-left-radius: $border-radius;
+}
+.tab-item:last-child .tab-link {
+  border-top-right-radius: $border-radius;
+}
+.tab-item.is-active {
+  border-bottom-color: $white;
+  font-weight: $font-weight-bold;
+  background-color: $white;
+  position: relative;
+  &:after {
+    position: absolute;
+    content:"";
+    display: block;
+    height: 3px;
+    background-color: $primary;
+    bottom: 0;
+    left: $tab-nav-padding-x;
+    right: $tab-nav-padding-x;
   }
-  .tab-item:first-child .tab-link {
-    border-top-left-radius: $border-radius;
-  }
-  .tab-item:last-child .tab-link {
-    border-top-right-radius: $border-radius;
-  }
-  .tab-item.is-active {
-    border-bottom-color: $white;
-    font-weight: $font-weight-bold;
-    background-color: $white;
-    position: relative;
-    &:after {
-      position: absolute;
-      content:"";
-      display: block;
-      height: 3px;
-      background-color: $primary;
-      bottom: 0;
-      left: $tab-nav-padding-x;
-      right: $tab-nav-padding-x;
-    }
-    .tab-link {
-      color: $primary;
-    }
+  .tab-link {
+    color: $primary;
   }
 }

@@ -201,7 +201,7 @@ $component-bg-alt: $gray-50 !default;
 
 
 $component-bg-dark: $gray-800;
-$component-border-dark: $gray-700 !default;
+$component-border-dark: $gray-900 !default;
 
 // Active
 $component-active-color: var(--primary-500) !default;
@@ -824,5 +824,7 @@ $blankslate-border-width: $border-width;
 $blankslate-border-color: $border-color;
 $blankslate-bg: $component-bg-alt;
 
+$blankslate-bg-dark: $component-bg-dark;
+$blankslate-border-dark: $component-border-dark;
 
 

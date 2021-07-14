@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: vendors/styleworks/utils/sw-colors.
-       Load path: /Users/zena/Documents/Github-Files/atd-style/assets/scss
-        on line 10 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/gnb.scss
+       Load path: /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss
+        on line 10 of /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/gnb.scss
 
 5: // 새로운 GNB 스타일시트
 6: // 기존 UI 스타일과 rem의 크기가 안 맞을 수 있음.
@@ -16,7 +16,7 @@ Error: File to import not found or unreadable: vendors/styleworks/utils/sw-color
 15:   'vendors/styleworks/vendors/rfs-extension',
 
 Backtrace:
-/Users/zena/Documents/Github-Files/atd-style/assets/scss/gnb.scss:10
+/Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/gnb.scss:10
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:44:in `import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -53,4 +53,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: vendors/styleworks/utils/sw-colors.\A        Load path: /Users/zena/Documents/Github-Files/atd-style/assets/scss\A         on line 10 of /Users/zena/Documents/Github-Files/atd-style/assets/scss/gnb.scss\A \A 5: // 새로운 GNB 스타일시트\A 6: // 기존 UI 스타일과 rem의 크기가 안 맞을 수 있음.\A 7: \A 8: \A 9: @import\A 10:   'vendors/styleworks/utils/sw-colors',\A 11:   'Vendors/bootstrap-extention',\A 12:   'vendors/bootstrap-4.5.1/scss/bootstrap',\A 13: \A 14:   // 스타일 분리에 필요한 파일들..\A 15:   'vendors/styleworks/vendors/rfs-extension',"; }
+  content: "Error: File to import not found or unreadable: vendors/styleworks/utils/sw-colors.\A        Load path: /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss\A         on line 10 of /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/gnb.scss\A \A 5: // 새로운 GNB 스타일시트\A 6: // 기존 UI 스타일과 rem의 크기가 안 맞을 수 있음.\A 7: \A 8: \A 9: @import\A 10:   'vendors/styleworks/utils/sw-colors',\A 11:   'Vendors/bootstrap-extention',\A 12:   'vendors/bootstrap-4.5.1/scss/bootstrap',\A 13: \A 14:   // 스타일 분리에 필요한 파일들..\A 15:   'vendors/styleworks/vendors/rfs-extension',"; }
