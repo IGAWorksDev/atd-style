@@ -6,13 +6,13 @@
 
 
 // Mixins
-@mixin badge-outline-variant($color, $border-color:$color){
+@mixin badge-outlined-variant($color, $border-color:$color){
   color: $color;
   background-color: transparent;
   border-color: $border-color;
 }
 
-@mixin badge-contain-variant($background-color){
+@mixin badge-contained-variant($background-color){
   color: $white;
   background-color: $background-color;
   border-color: transparent;
@@ -39,14 +39,14 @@
 
 // Outline Colors variation
 @each $color, $value in $theme-colors {
-  .badge-outline-#{$color} {
-    @include badge-outline-variant($value);
+  .badge-outlined-#{$color} {
+    @include badge-outlined-variant($value);
   }
 }
 
 // Contain Colors variation
 @each $color, $value in $theme-colors {
-  .badge-contain-#{$color} {
-    @include badge-contain-variant($value);
+  .badge-contained-#{$color} {
+    @include badge-contained-variant($value);
   }
 }

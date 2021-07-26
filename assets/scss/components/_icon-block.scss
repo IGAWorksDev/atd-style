@@ -1,0 +1,12 @@
+
+
+// icon을 포함하는 정사각형 상자 모양을 갖고 있는 컴포넌트
+//
+.icon-block {
+  line-height: 1;
+  padding: $spacer;
+  border: $border-width solid $border-color;
+  border-radius: 4px;
+  background-color: $gray-50;
+  color: $secondary;
+}
