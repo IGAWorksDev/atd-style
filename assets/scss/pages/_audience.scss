@@ -1,0 +1,26 @@
+
+
+// 오디언스
+// 모달 -- 오디언스 온보딩
+#md-aud-on-boarding {
+  .card {
+    height: 50rem;
+    overflow-y: auto;
+
+    .datagrid {
+      max-height: 50rem;
+    }
+  }
+}
+
+#md-aud-usershare {
+  .card {
+    height: 50rem;
+    overflow-y: auto;
+
+    .datagrid {
+      max-height: 50rem;
+      height: 50rem;
+    }
+  }
+}

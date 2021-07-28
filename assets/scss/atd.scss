@@ -67,7 +67,7 @@
 //
 // Dashboard
 @import
-  'components/easy-manager',
+  //'components/easy-manager',
   'pages/dashboard'
 ;
 
@@ -87,3 +87,8 @@
   'pages/adinsight'
 ;
 
+// Audience
+@import
+  //'components/icon-block',
+  'pages/audience'
+;

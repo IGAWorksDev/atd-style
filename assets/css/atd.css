@@ -1868,9 +1868,6 @@ a:hover { text-decoration: underline; }
 
 .icon-block { line-height: 1; padding: 0.8rem; border: 1px solid #e8e9ea; border-radius: 4px; background-color: #f3f4f5; color: #8a9197; }
 
-.item-easy-manageer .item-tool { display: none; }
-.item-easy-manageer:hover .item-tool { display: block; }
-
 /* --------------------------------------------------- */
 #dashboard > .mainheader .container { margin-bottom: 0 !important; }
 #dashboard > .mainheader .mainheader__inner { margin-bottom: 0 !important; width: 100%; }
@@ -1950,3 +1947,9 @@ a:hover { text-decoration: underline; }
 .calendars.row { margin-right: 0 !important; margin-left: 0 !important; }
 
 .yearselect.col { -webkit-box-flex: 1 !important; -ms-flex-positive: 1 !important; flex-grow: 1 !important; -ms-flex-preferred-size: 0 !important; flex-basis: 0 !important; }
+
+#md-aud-on-boarding .card { height: 50rem; overflow-y: auto; }
+#md-aud-on-boarding .card .datagrid { max-height: 50rem; }
+
+#md-aud-usershare .card { height: 50rem; overflow-y: auto; }
+#md-aud-usershare .card .datagrid { max-height: 50rem; height: 50rem; }

@@ -1,761 +1,1271 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<title>TW__Audience</title>
-	<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
-	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
-	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+  <meta charset="UTF-8">
+  <title>TW__Audience</title>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
 </head>
 <body>
 
 <!-- gnb -->
 <nav class="gnb">
-	<a class="gnb-brand" href="#">
-		<img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
-	</a>
-	<div class="gnb-navbar">
-		<ul class="navbar-nav mr-auto font-weight-bold">
-			<li class="nav-item">
-				<a class="nav-link" href="#">Dashboard</a>
-			</li>
-			<li class="nav-item dropdown active">
-				<a class="nav-link dropdown-toggle" href="#" data-release="New" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">Insight</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">서브메뉴 1</a>
-					<a class="dropdown-item" href="#">서브메뉴 2</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Audience</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Kakaomoment</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Report</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Asset</a>
-			</li>
-		</ul>
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="#">Support</a>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="ico ic-cog"></i>
-					<span class="sr-only">Manage</span>
-				</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Ad Accounts</a>
-					<a class="dropdown-item" href="#">Companies</a>
-					<a class="dropdown-item" href="#">Users</a>
-					<a class="dropdown-item" href="#">Billing</a>
-					<a class="dropdown-item" href="#">DMP Usage History</a>
-				</div>
-			</li>
-			<li class="nav-item nav-item-user dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
-					<i class="ico ic-user"></i>
-					<span class="sr-only">account.name@igaworks.com</span>
-				</a>
-				<div class="dropdown-menu" aria-labelledby="dropdown-userNav">
-					<div class="dropdown-item">
-						장우영 <br>
-						<a href="#">
-							liam.jang@igaworks.com
-						</a>
-					</div>
-					<div class="dropdown-divider"></div>
-					<h6 class="dropdown-header">
-						채널 연결현황
-					</h6>
-					<div class="dropdown-item">
-						<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
-						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
-					</div>
-					<div class="dropdown-item">
-						<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
-						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
-					</div>
-					<div class="dropdown-item">
-						<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
-						<a class="ml-1 " href="#">채널 연결하기</a>
-					</div>
-					<div class="dropdown-item">
-						<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
-						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
-					</div>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">
-						로그아웃
-					</a>
-				</div>
-			</li>
-		</ul>
-	</div>
+  <a class="gnb-brand" href="#">
+    <img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
+  </a>
+  <div class="gnb-navbar">
+    <ul class="navbar-nav mr-auto font-weight-bold">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" data-release="New" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">Insight</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">서브메뉴 1</a>
+          <a class="dropdown-item" href="#">서브메뉴 2</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Audience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Kakaomoment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Report</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Asset</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Support</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="ico ic-cog"></i>
+          <span class="sr-only">Manage</span>
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Ad Accounts</a>
+          <a class="dropdown-item" href="#">Companies</a>
+          <a class="dropdown-item" href="#">Users</a>
+          <a class="dropdown-item" href="#">Billing</a>
+          <a class="dropdown-item" href="#">DMP Usage History</a>
+        </div>
+      </li>
+      <li class="nav-item nav-item-user dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          <i class="ico ic-user"></i>
+          <span class="sr-only">account.name@igaworks.com</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+          <div class="dropdown-item">
+            장우영 <br>
+            <a href="#">
+              liam.jang@igaworks.com
+            </a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header">
+            채널 연결현황
+          </h6>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+            <a class="ml-1 " href="#">채널 연결하기</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            로그아웃
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
 <!-- /gnb -->
 
 <!-- twWrapper -->
 <div class="twWrapper-full">
-	<!-- contentWrapper -->
-	<div class="contentWrapper">
-		<!-- mainContent -->
-		<main class="mainContent pb-2">
-			<!-- mainheader -->
-			<header class="mainheader">
-				<!-- container -->
-				<div class="container">
-					<div class="mainheader__inner">
-						<h2 class="font-weight-bold m-0">
-							Audience
-						</h2>
-						<div class="ml-auto"></div>
-						<div class="d-flex align-items-center">
-							<span class="mr-1">광고계정 모드</span>
-							<label class="switch">
-								<input type="checkbox" class="switch-checkbox">
-								<span class="switch-slider"></span>
-							</label>
-						</div>
-					</div>
-				</div>
-				<!-- /container -->
-			</header>
-			<!-- /mainheader -->
+  <!-- contentWrapper -->
+  <div class="contentWrapper">
+    <!-- mainContent -->
+    <main class="mainContent pb-2">
+      <!-- mainheader -->
+      <header class="mainheader">
+        <!-- container -->
+        <div class="container">
+          <div class="mainheader__inner">
+            <h2 class="font-weight-bold m-0">
+              Audience
+            </h2>
+            <div class="ml-auto"></div>
+            <div class="d-flex align-items-center">
+              <span class="mr-1">광고계정 모드</span>
+              <label class="switch">
+                <input type="checkbox" class="switch-checkbox">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- /container -->
+      </header>
+      <!-- /mainheader -->
 
-			<!-- mainbody -->
-			<div class="mainbody">
-				<!-- container -->
-				<div class="container">
-					<!-- d-flex -->
-					<div class="d-flex align-items-center py-2">
-						<a class="btn btn-contained-primary" href="#">
-							<i class="ico ic-plus"></i> 새 오디언스
-						</a>
-						<a class="btn btn-contained-secondary ml-1" href="#">
-							<i class="ico ic-audience"></i> 오디언스 조합
-						</a>
-						<a class="btn btn-outlined-secondary ml-1" href="#">
-							<i class="ico ic-onboarding"></i> 온보딩
-						</a>
-						<a class="btn btn-outlined-secondary ml-1" href="#">
-							<i class="ico ic-share"></i> 공유
-						</a>
-						<div class="form-check ml-2">
-							<input class="form-check-input" type="checkbox" id="check-upcoming-del">
-							<label class="form-check-label" for="check-upcoming-del">삭제 예정 오디언스만 보기</label>
-						</div>
-						<span class="ml-auto"></span>
-						<div class="form-group m-0">
-							<label class="d-none" for="audience-kind-select">오디언스 선택</label>
-							<select class="custom-select" id="audience-kind-select">
-								<option>전체 오디언스</option>
-							</select>
-						</div>
-						<div class="form-group m-0 ml-1">
-							<label class="d-none" for="audience-search">Search</label>
-							<input type="search" class="form-control" id="audience-search" placeholder="오디언스 검색">
-						</div>
-					</div>
-					<!-- /d-flex -->
+      <!-- mainbody -->
+      <div class="mainbody">
+        <!-- container -->
+        <div class="container">
+          <!-- d-flex -->
+          <div class="d-flex align-items-center py-2">
+            <a class="btn btn-contained-primary" href="#">
+              <i class="ico ic-plus"></i> 새 오디언스
+            </a>
+            <a class="btn btn-contained-secondary ml-1" href="#">
+              <i class="ico ic-audience"></i> 오디언스 조합
+            </a>
+            <a class="btn btn-outlined-secondary ml-1" href="#">
+              <i class="ico ic-onboarding"></i> 온보딩
+            </a>
+            <a class="btn btn-outlined-secondary ml-1" href="#">
+              <i class="ico ic-share"></i> 공유
+            </a>
+            <div class="form-check ml-2">
+              <input class="form-check-input" type="checkbox" id="check-upcoming-del">
+              <label class="form-check-label" for="check-upcoming-del">삭제 예정 오디언스만 보기</label>
+            </div>
+            <span class="ml-auto"></span>
+            <div class="form-group m-0">
+              <label class="d-none" for="audience-kind-select">오디언스 선택</label>
+              <select class="custom-select" id="audience-kind-select">
+                <option>전체 오디언스</option>
+              </select>
+            </div>
+            <div class="form-group m-0 ml-1">
+              <label class="d-none" for="search-audience">검색</label>
+              <input type="search" class="form-control" id="search-audience" placeholder="오디언스 검색">
+            </div>
+          </div>
+          <!-- /d-flex -->
 
-					<!-- card -->
-					<div class="card">
-						<!-- datagrid -->
-						<div class="datagrid datagrid-hover datagrid-bordered datagrid-align-items-center" role="grid"
-								 aria-describedby="table-title">
-							<!-- datagrid-rowgroup -->
-							<div class="datagrid-rowgroup datagrid-header" role="rowgroup">
-								<!-- datagrid-row -->
-								<div class="datagrid-row" role="row">
-									<div class="datagrid-cell" role="columnheader" aria-colindex="1"
-											 style="min-width: 5rem; width: 5rem; max-width: 5rem;">
-										<div class="datagrid-cell-inner text-center">
-											<div class="form-check form-check-inline m-0">
-												<input class="form-check-input mr-0" type="checkbox" id="check-row-all">
-												<label class="d-none" for="check-row-all">전체 선택</label>
-											</div>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="columnheader" aria-colindex="2"
-											 style="min-width: 10rem; width: 14rem; max-width: 14rem;">
-										상태
-									</div>
-									<div class="datagrid-cell" role="columnheader" aria-colindex="3"
-											 style="min-width: 36rem; width: 48rem; max-width: 50rem">
-										오디언스
-									</div>
-									<div class="datagrid-cell" role="columnheader" aria-colindex="4"
-											 style="min-width: 14rem; width: 16rem; max-width: 16rem;">
-										규모
-									</div>
-									<div class="datagrid-cell" role="columnheader" aria-colindex="5"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										플랫폼
-									</div>
-									<div class="datagrid-cell" role="columnheader" aria-colindex="6"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										등록일
-									</div>
-									<div class="datagrid-cell" role="columnheader" aria-colindex="7"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										수정일
-									</div>
-									<div class="datagrid-cell" role="columnheader" aria-colindex="8"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										더보기
-									</div>
-								</div>
-								<!-- /datagrid-row -->
-							</div>
-							<!-- datagrid-rowgroup -->
-							<!-- datagrid-rowgroup -->
-							<div class="datagrid-rowgroup datagrid-body" role="rowgroup">
-								<!-- datagrid-row -->
-								<div class="datagrid-row" role="row">
-									<div class="datagrid-cell" role="gridcell" aria-colindex="1"
-											 style="min-width: 5rem; width: 5rem; max-width: 5rem;">
-										<div class="datagrid-cell-inner text-center">
-											<div class="form-check form-check-inline m-0">
-												<input class="form-check-input mr-0" type="checkbox" id="check-row-1">
-												<label class="d-none" for="check-row-1">선택</label>
-											</div>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="2"
-											 style="min-width: 10rem; width: 14rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											<span class="text-success"><i class="ico ic-circle-fill"></i></span>
-											<span class="ml-1">완료</span>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="3"
-											 style="min-width: 36rem; width: 48rem; max-width: 50rem">
-										<!-- datagrid-cell-inner -->
-										<div class="datagrid-cell-inner d-flex align-items-center">
-											<!-- icon-block -->
-											<div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
-												<i class="ico ic-file-upload-fill"></i>
-											</div>
-											<!-- /icon-block -->
-											<div class="ml-2">
-												<a href="#">소득수준_골프관심유저_단계0~40</a>
-												<div class="font-size-sm text-muted">
-													<span>ID 85737939</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-share"></i> 공유 3명</span>
-												</div>
-											</div>
-										</div>
-										<!-- /datagrid-cell-inner -->
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="4"
-											 style="min-width: 14rem; width: 16rem; max-width: 16rem;">
-										<div class="datagrid-cell-inner text-right">
-											187,000
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="5"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<i class="ico ic-android"></i>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="6"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 31 12:00
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="7"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 30
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="8"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<!-- dropdown -->
-											<div class="dropdown">
-												<button class="btn btn-outlined-secondary btn-sm" id="aud-more-control" data-toggle="dropdown"
-																aria-haspopup="true" aria-expanded="false">
-													<i class="ico ic-more-horz"></i>
-													<span class="d-none">더보기</span>
-												</button>
-												<div class="dropdown-menu" aria-labelledby="aud-more-control">
-													<a class="dropdown-item" href="#">오디언스 복사</a>
-													<a class="dropdown-item" href="#">MI DMP 유사타겟 만들기</a>
-													<a class="dropdown-item" href="#">매칭율 확인</a>
-													<a class="dropdown-item" href="#">오딘어스 온보딩</a>
-													<a class="dropdown-item" href="#">오디언스 공유</a>
-													<a class="dropdown-item" href="#">오디언스 제외</a>
-													<a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
-												</div>
-											</div>
-											<!-- dropdown -->
-										</div>
-									</div>
-								</div>
-								<!-- /datagrid-row -->
-								<!-- datagrid-row -->
-								<div class="datagrid-row" role="row">
-									<div class="datagrid-cell" role="gridcell" aria-colindex="1"
-											 style="min-width: 5rem; width: 5rem; max-width: 5rem;">
-										<div class="datagrid-cell-inner text-center">
-											<div class="form-check form-check-inline m-0">
-												<input class="form-check-input mr-0" type="checkbox" id="check-row-2">
-												<label class="d-none" for="check-row-2">선택</label>
-											</div>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="2"
-											 style="min-width: 10rem; width: 14rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											<span class="text-primary"><i class="ico ic-circle-fill"></i></span>
-											<span class="ml-1">진행중</span>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="3"
-											 style="min-width: 36rem; width: 48rem; max-width: 50rem">
-										<!-- datagrid-cell-inner -->
-										<div class="datagrid-cell-inner d-flex align-items-center">
-											<!-- icon-block -->
-											<div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
-												<i class="ico ic-file-upload-fill"></i>
-											</div>
-											<!-- /icon-block -->
-											<div class="ml-2">
-												<a href="#">소득수준_골프관심유저_단계0~40</a>
-												<div class="font-size-sm text-muted">
-													<span>ID 85737939</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-share"></i> 공유 3명</span>
-												</div>
-											</div>
-										</div>
-										<!-- /datagrid-cell-inner -->
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="4"
-											 style="min-width: 14rem; width: 16rem; max-width: 16rem;">
-										<div class="datagrid-cell-inner text-right">
-											187,000
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="5"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<i class="ico ic-android"></i>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="6"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 31 12:00
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="7"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 30
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="8"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<!-- dropdown -->
-											<div class="dropdown">
-												<button class="btn btn-outlined-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true"
-																aria-expanded="false">
-													<i class="ico ic-more-horz"></i>
-													<span class="d-none">더보기</span>
-												</button>
-												<div class="dropdown-menu" aria-labelledby="aud-more-control">
-													<a class="dropdown-item" href="#">오디언스 복사</a>
-													<a class="dropdown-item" href="#">MI DMP 유사타겟 만들기</a>
-													<a class="dropdown-item" href="#">매칭율 확인</a>
-													<a class="dropdown-item" href="#">오딘어스 온보딩</a>
-													<a class="dropdown-item" href="#">오디언스 공유</a>
-													<a class="dropdown-item" href="#">오디언스 제외</a>
-													<a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
-												</div>
-											</div>
-											<!-- dropdown -->
-										</div>
-									</div>
-								</div>
-								<!-- /datagrid-row -->
-								<!-- datagrid-row -->
-								<div class="datagrid-row" role="row">
-									<div class="datagrid-cell" role="gridcell" aria-colindex="1"
-											 style="min-width: 5rem; width: 5rem; max-width: 5rem;">
-										<div class="datagrid-cell-inner text-center">
-											<div class="form-check form-check-inline m-0">
-												<input class="form-check-input  mr-0" type="checkbox" id="check-row-3">
-												<label class="d-none" for="check-row-3">선택</label>
-											</div>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="2"
-											 style="min-width: 10rem; width: 14rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											<span class="text-muted"><i class="ico ic-circle-fill"></i></span>
-											<span class="ml-1">중지</span>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="3"
-											 style="min-width: 36rem; width: 48rem; max-width: 50rem">
-										<!-- datagrid-cell-inner -->
-										<div class="datagrid-cell-inner d-flex align-items-center">
-											<!-- icon-block -->
-											<div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
-												<i class="ico ic-file-upload-fill"></i>
-											</div>
-											<!-- /icon-block -->
-											<div class="ml-2">
-												<a href="#">소득수준_골프관심유저_단계0~40</a>
-												<div class="font-size-sm text-muted">
-													<span>ID 85737939</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-share"></i> 공유 3명</span>
-												</div>
-											</div>
-										</div>
-										<!-- /datagrid-cell-inner -->
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="4"
-											 style="min-width: 14rem; width: 16rem; max-width: 16rem;">
-										<div class="datagrid-cell-inner text-right">
-											187,000
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="5"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<i class="ico ic-android"></i>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="6"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 31 12:00
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="7"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 30
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="8"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<!-- dropdown -->
-											<div class="dropdown">
-												<button class="btn btn-outlined-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true"
-																aria-expanded="false">
-													<i class="ico ic-more-horz"></i>
-													<span class="d-none">더보기</span>
-												</button>
-												<div class="dropdown-menu" aria-labelledby="aud-more-control">
-													<a class="dropdown-item" href="#">오디언스 복사</a>
-													<a class="dropdown-item" href="#">MI DMP 유사타겟 만들기</a>
-													<a class="dropdown-item" href="#">매칭율 확인</a>
-													<a class="dropdown-item" href="#">오딘어스 온보딩</a>
-													<a class="dropdown-item" href="#">오디언스 공유</a>
-													<a class="dropdown-item" href="#">오디언스 제외</a>
-													<a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
-												</div>
-											</div>
-											<!-- dropdown -->
-										</div>
-									</div>
-								</div>
-								<!-- /datagrid-row -->
-								<!-- datagrid-row -->
-								<div class="datagrid-row" role="row">
-									<div class="datagrid-cell" role="gridcell" aria-colindex="1"
-											 style="min-width: 5rem; width: 5rem; max-width: 5rem;">
-										<div class="datagrid-cell-inner text-center">
-											<div class="form-check form-check-inline m-0">
-												<input class="form-check-input mr-0" type="checkbox" id="check-row-4">
-												<label class="d-none" for="check-row-4">선택</label>
-											</div>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="2"
-											 style="min-width: 10rem; width: 14rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											<span class="text-danger"><i class="ico ic-circle-fill"></i></span>
-											<span class="ml-1">삭제예정</span>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="3"
-											 style="min-width: 36rem; width: 48rem; max-width: 50rem">
-										<!-- datagrid-cell-inner -->
-										<div class="datagrid-cell-inner d-flex align-items-center">
-											<!-- icon-block -->
-											<div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
-												<i class="ico ic-file-upload-fill"></i>
-											</div>
-											<!-- /icon-block -->
-											<div class="ml-2">
-												<a href="#">소득수준_골프관심유저_단계0~40</a>
-												<div class="font-size-sm text-muted">
-													<span>ID 85737939</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
-													<span class="text-disabled">|</span>
-													<span><i class="ico ic-share"></i> 공유 3명</span>
-												</div>
-											</div>
-											<div class="ml-auto">
-												<!-- badge -->
-												<span class="badge badge-contained-danger">
+          <!-- card -->
+          <div class="card">
+            <!-- datagrid -->
+            <div class="datagrid datagrid-hover datagrid-bordered datagrid-align-items-center" role="grid"
+                 aria-describedby="table-title">
+              <!-- datagrid-rowgroup -->
+              <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                <!-- datagrid-row -->
+                <div class="datagrid-row" role="row">
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                       style="min-width: 5rem; width: 5rem; max-width: 5rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <div class="form-check form-check-inline m-0">
+                        <input class="form-check-input mr-0" type="checkbox" id="check-row-all">
+                        <label class="d-none" for="check-row-all">전체 선택</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                       style="min-width: 10rem; width: 14rem; max-width: 14rem;">
+                    상태
+                  </div>
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                       style="min-width: 36rem; width: 48rem; max-width: 50rem">
+                    오디언스
+                  </div>
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                       style="min-width: 14rem; width: 16rem; max-width: 16rem;">
+                    규모
+                  </div>
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    플랫폼
+                  </div>
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="6"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    등록일
+                  </div>
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="7"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    수정일
+                  </div>
+                  <div class="datagrid-cell" role="columnheader" aria-colindex="8"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    더보기
+                  </div>
+                </div>
+                <!-- /datagrid-row -->
+              </div>
+              <!-- datagrid-rowgroup -->
+              <!-- datagrid-rowgroup -->
+              <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                <!-- datagrid-row -->
+                <div class="datagrid-row" role="row">
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                       style="min-width: 5rem; width: 5rem; max-width: 5rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <div class="form-check form-check-inline m-0">
+                        <input class="form-check-input mr-0" type="checkbox" id="check-row-1">
+                        <label class="d-none" for="check-row-1">선택</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                       style="min-width: 10rem; width: 14rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      <span class="text-success"><i class="ico ic-circle-fill"></i></span>
+                      <span class="ml-1">완료</span>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                       style="min-width: 36rem; width: 48rem; max-width: 50rem">
+                    <!-- datagrid-cell-inner -->
+                    <div class="datagrid-cell-inner d-flex align-items-center">
+                      <!-- icon-block -->
+                      <div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
+                        <i class="ico ic-file-upload-fill"></i>
+                      </div>
+                      <!-- /icon-block -->
+                      <div class="ml-2">
+                        <a href="#">소득수준_골프관심유저_단계0~40</a>
+                        <div class="font-size-sm text-muted">
+                          <span>ID 85737939</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-share"></i> 공유 3명</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /datagrid-cell-inner -->
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                       style="min-width: 14rem; width: 16rem; max-width: 16rem;">
+                    <div class="datagrid-cell-inner text-right">
+                      187,000
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <i class="ico ic-android"></i>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 31 12:00
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="7"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 30
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="8"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <!-- dropdown -->
+                      <div class="dropdown">
+                        <button class="btn btn-outlined-secondary btn-sm" id="aud-more-control" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                          <i class="ico ic-more-horz"></i>
+                          <span class="d-none">더보기</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="aud-more-control">
+                          <a class="dropdown-item" href="#">오디언스 복사</a>
+                          <a class="dropdown-item" href="#">MI DMP 유사타겟 만들기</a>
+                          <a class="dropdown-item" href="#">매칭율 확인</a>
+                          <a class="dropdown-item" href="#">오딘어스 온보딩</a>
+                          <a class="dropdown-item" href="#">오디언스 공유</a>
+                          <a class="dropdown-item" href="#">오디언스 제외</a>
+                          <a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
+                        </div>
+                      </div>
+                      <!-- dropdown -->
+                    </div>
+                  </div>
+                </div>
+                <!-- /datagrid-row -->
+                <!-- datagrid-row -->
+                <div class="datagrid-row" role="row">
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                       style="min-width: 5rem; width: 5rem; max-width: 5rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <div class="form-check form-check-inline m-0">
+                        <input class="form-check-input mr-0" type="checkbox" id="check-row-2">
+                        <label class="d-none" for="check-row-2">선택</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                       style="min-width: 10rem; width: 14rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      <span class="text-primary"><i class="ico ic-circle-fill"></i></span>
+                      <span class="ml-1">진행중</span>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                       style="min-width: 36rem; width: 48rem; max-width: 50rem">
+                    <!-- datagrid-cell-inner -->
+                    <div class="datagrid-cell-inner d-flex align-items-center">
+                      <!-- icon-block -->
+                      <div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
+                        <i class="ico ic-file-upload-fill"></i>
+                      </div>
+                      <!-- /icon-block -->
+                      <div class="ml-2">
+                        <a href="#">소득수준_골프관심유저_단계0~40</a>
+                        <div class="font-size-sm text-muted">
+                          <span>ID 85737939</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-share"></i> 공유 3명</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /datagrid-cell-inner -->
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                       style="min-width: 14rem; width: 16rem; max-width: 16rem;">
+                    <div class="datagrid-cell-inner text-right">
+                      187,000
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <i class="ico ic-android"></i>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 31 12:00
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="7"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 30
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="8"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <!-- dropdown -->
+                      <div class="dropdown">
+                        <button class="btn btn-outlined-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                          <i class="ico ic-more-horz"></i>
+                          <span class="d-none">더보기</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="aud-more-control">
+                          <a class="dropdown-item" href="#">오디언스 복사</a>
+                          <a class="dropdown-item" href="#">MI DMP 유사타겟 만들기</a>
+                          <a class="dropdown-item" href="#">매칭율 확인</a>
+                          <a class="dropdown-item" href="#">오딘어스 온보딩</a>
+                          <a class="dropdown-item" href="#">오디언스 공유</a>
+                          <a class="dropdown-item" href="#">오디언스 제외</a>
+                          <a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
+                        </div>
+                      </div>
+                      <!-- dropdown -->
+                    </div>
+                  </div>
+                </div>
+                <!-- /datagrid-row -->
+                <!-- datagrid-row -->
+                <div class="datagrid-row" role="row">
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                       style="min-width: 5rem; width: 5rem; max-width: 5rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <div class="form-check form-check-inline m-0">
+                        <input class="form-check-input  mr-0" type="checkbox" id="check-row-3">
+                        <label class="d-none" for="check-row-3">선택</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                       style="min-width: 10rem; width: 14rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      <span class="text-muted"><i class="ico ic-circle-fill"></i></span>
+                      <span class="ml-1">중지</span>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                       style="min-width: 36rem; width: 48rem; max-width: 50rem">
+                    <!-- datagrid-cell-inner -->
+                    <div class="datagrid-cell-inner d-flex align-items-center">
+                      <!-- icon-block -->
+                      <div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
+                        <i class="ico ic-file-upload-fill"></i>
+                      </div>
+                      <!-- /icon-block -->
+                      <div class="ml-2">
+                        <a href="#">소득수준_골프관심유저_단계0~40</a>
+                        <div class="font-size-sm text-muted">
+                          <span>ID 85737939</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-share"></i> 공유 3명</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /datagrid-cell-inner -->
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                       style="min-width: 14rem; width: 16rem; max-width: 16rem;">
+                    <div class="datagrid-cell-inner text-right">
+                      187,000
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <i class="ico ic-android"></i>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 31 12:00
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="7"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 30
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="8"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <!-- dropdown -->
+                      <div class="dropdown">
+                        <button class="btn btn-outlined-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                          <i class="ico ic-more-horz"></i>
+                          <span class="d-none">더보기</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="aud-more-control">
+                          <a class="dropdown-item" href="#">오디언스 복사</a>
+                          <a class="dropdown-item" href="#">MI DMP 유사타겟 만들기</a>
+                          <a class="dropdown-item" href="#">매칭율 확인</a>
+                          <a class="dropdown-item" href="#">오딘어스 온보딩</a>
+                          <a class="dropdown-item" href="#">오디언스 공유</a>
+                          <a class="dropdown-item" href="#">오디언스 제외</a>
+                          <a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
+                        </div>
+                      </div>
+                      <!-- dropdown -->
+                    </div>
+                  </div>
+                </div>
+                <!-- /datagrid-row -->
+                <!-- datagrid-row -->
+                <div class="datagrid-row" role="row">
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                       style="min-width: 5rem; width: 5rem; max-width: 5rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <div class="form-check form-check-inline m-0">
+                        <input class="form-check-input mr-0" type="checkbox" id="check-row-4">
+                        <label class="d-none" for="check-row-4">선택</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                       style="min-width: 10rem; width: 14rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      <span class="text-danger"><i class="ico ic-circle-fill"></i></span>
+                      <span class="ml-1">삭제예정</span>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                       style="min-width: 36rem; width: 48rem; max-width: 50rem">
+                    <!-- datagrid-cell-inner -->
+                    <div class="datagrid-cell-inner d-flex align-items-center">
+                      <!-- icon-block -->
+                      <div class="icon-block" data-toggle="tooltip" data-placement="top" title="파일업로드">
+                        <i class="ico ic-file-upload-fill"></i>
+                      </div>
+                      <!-- /icon-block -->
+                      <div class="ml-2">
+                        <a href="#">소득수준_골프관심유저_단계0~40</a>
+                        <div class="font-size-sm text-muted">
+                          <span>ID 85737939</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-onboarding"></i> 온보딩 1건</span>
+                          <span class="text-disabled">|</span>
+                          <span><i class="ico ic-share"></i> 공유 3명</span>
+                        </div>
+                      </div>
+                      <div class="ml-auto">
+                        <!-- badge -->
+                        <span class="badge badge-contained-danger">
 													D-11
 												</span>
-												<!-- /badge -->
-											</div>
-										</div>
-										<!-- /datagrid-cell-inner -->
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="4"
-											 style="min-width: 14rem; width: 16rem; max-width: 16rem;">
-										<div class="datagrid-cell-inner text-right">
-											187,000
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="5"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<i class="ico ic-android"></i>
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="6"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 31 12:00
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="7"
-											 style="min-width: 12rem; width: 12rem; max-width: 14rem;">
-										<div class="datagrid-cell-inner">
-											2021. 7. 30
-										</div>
-									</div>
-									<div class="datagrid-cell" role="gridcell" aria-colindex="8"
-											 style="min-width: 8rem; width: 8rem; max-width: 8rem;">
-										<div class="datagrid-cell-inner text-center">
-											<!-- dropdown -->
-											<div class="dropdown">
-												<button class="btn btn-outlined-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true"
-																aria-expanded="false">
-													<i class="ico ic-more-horz"></i>
-													<span class="d-none">더보기</span>
-												</button>
-												<div class="dropdown-menu" aria-labelledby="aud-more-control">
-													<a class="dropdown-item" href="#">오디언스 복사</a>
-													<a class="dropdown-item" href="#" data-toggle="modal"
-														 data-target="#create-aud-similar-target">MI DMP 유사타겟 만들기</a>
-													<a class="dropdown-item" href="#">매칭율 확인</a>
-													<a class="dropdown-item" href="#">오딘어스 온보딩</a>
-													<a class="dropdown-item" href="#">오디언스 공유</a>
-													<a class="dropdown-item" href="#">오디언스 제외</a>
-													<a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
-												</div>
-											</div>
-											<!-- dropdown -->
-										</div>
-									</div>
-								</div>
-								<!-- /datagrid-row -->
-							</div>
-							<!-- /datagrid-rowgroup -->
-						</div>
-						<!-- datagrid -->
-					</div>
-					<!-- /card -->
+                        <!-- /badge -->
+                      </div>
+                    </div>
+                    <!-- /datagrid-cell-inner -->
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                       style="min-width: 14rem; width: 16rem; max-width: 16rem;">
+                    <div class="datagrid-cell-inner text-right">
+                      187,000
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <i class="ico ic-android"></i>
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 31 12:00
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="7"
+                       style="min-width: 12rem; width: 12rem; max-width: 14rem;">
+                    <div class="datagrid-cell-inner">
+                      2021. 7. 30
+                    </div>
+                  </div>
+                  <div class="datagrid-cell" role="gridcell" aria-colindex="8"
+                       style="min-width: 8rem; width: 8rem; max-width: 8rem;">
+                    <div class="datagrid-cell-inner text-center">
+                      <!-- dropdown -->
+                      <div class="dropdown">
+                        <button class="btn btn-outlined-secondary btn-sm" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                          <i class="ico ic-more-horz"></i>
+                          <span class="d-none">더보기</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="aud-more-control">
+                          <a class="dropdown-item" href="#">오디언스 복사</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal"
+                             data-target="#md-aud-create-similar-target">MI DMP 유사타겟 만들기</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal"
+                             data-target="#md-aud-checking-matching-rate">매칭율 확인</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#md-aud-on-boarding">오딘어스
+                            온보딩</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#md-aud-usershare">오디언스 공유</a>
+                          <a class="dropdown-item" href="#">오디언스 제외</a>
+                          <a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
+                        </div>
+                      </div>
+                      <!-- dropdown -->
+                    </div>
+                  </div>
+                </div>
+                <!-- /datagrid-row -->
+              </div>
+              <!-- /datagrid-rowgroup -->
+            </div>
+            <!-- datagrid -->
+          </div>
+          <!-- /card -->
 
-					<!-- nav -->
-					<nav class="d-flex align-items-center justify-content-center pt-2">
-						<div class="text-muted">
-							전체: <strong>50</strong> (공유 받은 오디언스: <strong>10</strong>)
-						</div>
-						<!-- pagination -->
-						<ul class="pagination mx-auto">
-							<li class="page-item">
-								<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Previous">
-									<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
-										<polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
-									</svg>
-								</a>
-							</li>
-							<li class="page-item">
-								<span class="page-ellipsis">...</span>
-							</li>
-							<li class="page-item">
-								<a class="page-link btn-circle btn-text-secondary" href="#">3</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link btn-circle btn-outlined-secondary is-active" href="#">4</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link btn-circle btn-text-secondary" href="#">5</a>
-							</li>
-							<li class="page-item">
-								<span class="page-ellipsis">...</span>
-							</li>
-							<li class="page-item">
-								<a class="page-link btn-circle btn-text-secondary" href="#">99</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Next">
-									<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
-										<polygon
-											points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
-									</svg>
-								</a>
-							</li>
-						</ul>
-						<!-- /pagination -->
-					</nav>
-					<!-- /nav -->
-				</div>
-				<!-- /container -->
-			</div>
-			<!-- /mainbody -->
-		</main>
-		<!-- mainContent -->
-	</div>
-	<!-- /contentWrapper -->
+          <!-- nav -->
+          <nav class="d-flex align-items-center justify-content-center pt-2">
+            <div class="text-muted">
+              전체: <strong>50</strong> (공유 받은 오디언스: <strong>10</strong>)
+            </div>
+            <!-- pagination -->
+            <ul class="pagination mx-auto">
+              <li class="page-item">
+                <a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Previous">
+                  <svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+                    <polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-item">
+                <span class="page-ellipsis">...</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link btn-circle btn-text-secondary" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link btn-circle btn-outlined-secondary is-active" href="#">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link btn-circle btn-text-secondary" href="#">5</a>
+              </li>
+              <li class="page-item">
+                <span class="page-ellipsis">...</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link btn-circle btn-text-secondary" href="#">99</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Next">
+                  <svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+                    <polygon
+                      points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <!-- /pagination -->
+          </nav>
+          <!-- /nav -->
+        </div>
+        <!-- /container -->
+      </div>
+      <!-- /mainbody -->
+    </main>
+    <!-- mainContent -->
+  </div>
+  <!-- /contentWrapper -->
 </div>
 <!-- /twWrapper -->
 
 
-<!-- modal#aud-create-similar-target -->
-<div class="modal" id="create-aud-similar-target" tabindex="-1" aria-labelledby="creatAudSimilarTarget"
-		 aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<!-- modal-container -->
-		<div class="modal-container">
-			<div class="modal-header">
-				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
-					<i class="ico ic-close"></i>
-				</button>
-				<h3 class="modal-title">MI DMP 유사타겟 만들기</h3>
-			</div>
-			<!-- modal-body -->
-			<div class="modal-body">
-				<h4><strong>원본 오디언스 정보</strong></h4>
-				<div class="border py-2">
-					<!-- row -->
-					<dl class="row m-0">
-						<dt class="col-3">오디언스 ID</dt>
-						<dd class="col-9">86316131</dd>
-						<dt class="col-3">오디언스 이름</dt>
-						<dd class="col-9">라이프스타일_예비신랑신부_단계0~40</dd>
-					</dl>
-					<!-- /row -->
-				</div>
-				<div class="mt-3"></div>
-				<h4><strong>타겟 설정</strong></h4>
-				<div class="border p-2">
-					<!-- form-group -->
-					<div class="form-group row align-items-center">
-						<label class="col-3 m-0" for="input-aud-title"><strong>타겟 이름 입력</strong></label>
-						<div class="col-9">
-							<input type="text" class="form-control" id="input-aud-title" placeholder="타겟 이름을 입력하세요.">
-						</div>
-					</div>
-					<!-- /form-group -->
-					<div class="border-top my-1 pt-1"></div>
-					<!-- row -->
-					<div class="row">
-						<div class="col-3"><strong>타겟 크기 선택</strong></div>
-						<div class="col-9">
-							slider ranger 스크립트
-							<br>
-							<small class="text-muted">
-								&divonx; 유사 타겟은 유사 소스와 가장 비슷한 사람들로 구성되며 상위일수록 유사도가 높습니다.
-							</small>
-						</div>
-					</div>
-					<!-- /row -->
-				</div>
-				<div class="border p-2 mt-1">
-					<div class="row align-items-center">
-						<div class="col-3"><strong>모수확인</strong></div>
-						<div class="col-9">
-							<span class="mr-2">0</span>
-							<button class="btn btn-outlined-secondary btn-sm">모수확인</button>
-							<span class="text-danger font-size-sm ml-1">모수 확인 후 생성할 수 있습니다.</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /modal-body -->
-			<div class="modal-footer">
-				<button class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
-				<button class="btn btn-contained-primary">유사 타겟 만들기</button>
-			</div>
-		</div>
-		<!-- /modal-container -->
-	</div>
+<!-- modal#md-aud-create-similar-target -->
+<div class="modal" id="md-aud-create-similar-target" tabindex="-1" aria-labelledby="creatAudSimilarTarget"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">MI DMP 유사타겟 만들기</h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body">
+        <h4><strong>원본 오디언스 정보</strong></h4>
+        <div class="border py-2">
+          <!-- row -->
+          <dl class="row m-0">
+            <dt class="col-3">오디언스 ID</dt>
+            <dd class="col-9">86316131</dd>
+            <dt class="col-3">오디언스 이름</dt>
+            <dd class="col-9">라이프스타일_예비신랑신부_단계0~40</dd>
+          </dl>
+          <!-- /row -->
+        </div>
+        <div class="mt-3"></div>
+        <h4><strong>타겟 설정</strong></h4>
+        <div class="border p-2">
+          <!-- form-group -->
+          <div class="form-group row align-items-center">
+            <label class="col-3 m-0" for="input-aud-title"><strong>타겟 이름 입력</strong></label>
+            <div class="col-9">
+              <input type="text" class="form-control" id="input-aud-title" placeholder="타겟 이름을 입력하세요.">
+            </div>
+          </div>
+          <!-- /form-group -->
+          <div class="border-top my-1 pt-1"></div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-3"><strong>타겟 크기 선택</strong></div>
+            <div class="col-9">
+              slider ranger 스크립트
+              <br>
+              <small class="text-muted">
+                &divonx; 유사 타겟은 유사 소스와 가장 비슷한 사람들로 구성되며 상위일수록 유사도가 높습니다.
+              </small>
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <div class="border p-2 mt-1">
+          <div class="row align-items-center">
+            <div class="col-3"><strong>모수확인</strong></div>
+            <div class="col-9">
+              <span class="mr-2">0</span>
+              <button class="btn btn-outlined-secondary btn-sm">모수확인</button>
+              <span class="text-danger font-size-sm ml-1">모수 확인 후 생성할 수 있습니다.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /modal-body -->
+      <div class="modal-footer">
+        <button class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+        <button class="btn btn-contained-primary">유사 타겟 만들기</button>
+      </div>
+    </div>
+    <!-- /modal-container -->
+  </div>
 </div>
-<!-- /modal#aud-create-similar-target -->
+<!-- /modal#md-aud-create-similar-target -->
 
 
-<!-- modal#checking-matching-rate -->
-<div class="modal" id="checking-matching-rate" tabindex="-1" aria-labelledby="checkAudMatchingRate"
-		 aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<!-- modal-container -->
-		<div class="modal-container">
-			<div class="modal-header">
-				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
-					<i class="ico ic-close"></i>
-				</button>
-				<h3 class="modal-title">매칭률 확인</h3>
-			</div>
-			<!-- modal-body -->
-			<div class="modal-body">
-				<h4><strong>원본 오디언스 정보</strong></h4>
-				<div class="border py-2">
-					<!-- row -->
-					<dl class="row m-0">
-						<dt class="col-3">오디언스 ID</dt>
-						<dd class="col-9">86316131</dd>
-						<dt class="col-3">오디언스 이름</dt>
-						<dd class="col-9">라이프스타일_예비신랑신부_단계0~40</dd>
-					</dl>
-					<!-- /row -->
-				</div>
-				<div class="mt-3"></div>
-
-			</div>
-			<!-- /modal-body -->
-			<div class="modal-footer">
-				<button class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
-				<button class="btn btn-contained-primary">유사 타겟 만들기</button>
-			</div>
-		</div>
-		<!-- /modal-container -->
-	</div>
+<!-- modal#md-aud-checking-matching-rate -->
+<div class="modal" id="md-aud-checking-matching-rate" tabindex="-1" aria-labelledby="audCheckAudMatchingRate"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">매칭률 확인</h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body">
+        <!-- wrap -->
+        <div class="wrap">
+          <h4><strong>원본 오디언스 정보</strong></h4>
+          <!-- card -->
+          <div class="card py-2">
+            <!-- row -->
+            <dl class="row m-0">
+              <dt class="col-3">오디언스 ID</dt>
+              <dd class="col-9">86316131</dd>
+              <dt class="col-3">오디언스 이름</dt>
+              <dd class="col-9">라이프스타일_예비신랑신부_단계0~40</dd>
+            </dl>
+            <!-- /row -->
+          </div>
+          <!-- card -->
+        </div>
+        <!-- /wrap -->
+        <!-- wrap -->
+        <div class="wrap mt-3">
+          <h4><strong>매칭조건 선택</strong></h4>
+          <!-- card -->
+          <div class="card p-2">
+            <!-- row -->
+            <div class="row">
+              <div class="col-3"><strong>조회기간</strong></div>
+              <div class="col-9">
+                <!-- form-check -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="check-period-7" name="radio-inline" checked="">
+                  <label class="form-check-label" for="check-period-7">최근 7일</label>
+                </div>
+                <!-- /form-check -->
+                <!-- form-check -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="check-period-14" name="radio-inline" checked="">
+                  <label class="form-check-label" for="check-period-14">최근 14일</label>
+                </div>
+                <!-- /form-check -->
+                <!-- form-check -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="check-period-30" name="radio-inline" checked="">
+                  <label class="form-check-label" for="check-period-30">최근 30일</label>
+                </div>
+                <!-- /form-check -->
+              </div>
+            </div>
+            <!-- /row -->
+            <div class="border-top my-1 pt-1"></div>
+            <!-- row -->
+            <div class="row">
+              <div class="col-3"><strong>OS</strong></div>
+              <div class="col-9">
+                <!-- form-check -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="check-android" name="radio-inline" checked="">
+                  <label class="form-check-label" for="check-android"><i class="ico ic-android"></i> Android</label>
+                </div>
+                <!-- /form-check -->
+                <!-- form-check -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="check-ios" name="radio-inline" checked="">
+                  <label class="form-check-label" for="check-ios"><i class="ico ic-apple"></i> iOS</label>
+                </div>
+                <!-- /form-check -->
+              </div>
+            </div>
+            <!-- /row -->
+            <div class="border-top my-1 pt-1"></div>
+            <!-- row -->
+            <div class="row">
+              <div class="col-3"><strong>국가</strong></div>
+              <div class="col-9">
+                <div class="form-group m-0">
+                  <label class="d-none" for="select-nation">국가 선택</label>
+                  <select class="custom-select" id="select-nation">
+                    <option>대한민국</option>
+                    <option>나라이름</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /card -->
+          <div class="text-center mt-2">
+            <button type="button" class="btn btn-contained-primary">조회하기</button>
+          </div>
+        </div>
+        <!-- /wrap -->
+        <!-- wrap -->
+        <div class="wrap mt-3">
+          <h4><strong>조회결과</strong></h4>
+          <!-- card -->
+          <div class="card p-2">
+            <div class="mb-2">
+              프로그레스바 있음~!!!!
+            </div>
+            <!-- row -->
+            <dl class="row mb-1">
+              <dt class="col-3"><strong>매칭률</strong></dt>
+              <dd class="col-9">75%</dd>
+            </dl>
+            <!-- /row -->
+            <!-- row -->
+            <dl class="row mb-1">
+              <dt class="col-3"><strong>오디언스 카운트</strong></dt>
+              <dd class="col-9">100,102</dd>
+            </dl>
+            <!-- /row -->
+            <!-- row -->
+            <dl class="row mb-0">
+              <dt class="col-3"><strong>매칭 카운트</strong></dt>
+              <dd class="col-9">75,976</dd>
+            </dl>
+            <!-- /row -->
+          </div>
+          <!-- /card -->
+        </div>
+        <!-- /wrap -->
+      </div>
+      <!-- /modal-body -->
+      <div class="modal-footer">
+        <button class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+    </div>
+    <!-- /modal-container -->
+  </div>
 </div>
-<!-- /modal#checking-matching-rate -->
+<!-- /modal#md-checking-matching-rate -->
 
+<!-- modal#md-aud-on-boarding -->
+<div class="modal" id="md-aud-on-boarding" tabindex="-1" aria-labelledby="audOnBoarding"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">오디언스 온보딩</h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body pb-0">
+        <!-- row -->
+        <div class="row">
+          <!-- col -->
+          <div class="col-4 pr-1">
+            <!-- form-group -->
+            <div class="form-group mb-0">
+              <label class="d-none" for="select-channel">채널선택</label>
+              <select class="custom-select" id="select-channel">
+                <option>채널선택</option>
+              </select>
+            </div>
+            <!-- /form-group -->
+          </div>
+          <!-- /col -->
+          <!-- col -->
+          <div class="col-8 pl-0">
+            <!-- form-group -->
+            <div class="form-group mb-0">
+              <label class="d-none" for="search-adaccount">검색</label>
+              <input type="search" class="form-control" id="search-adaccount" placeholder="광고 계정 이름, 광고 계정 ID 검색">
+            </div>
+            <!-- /form-group -->
+          </div>
+          <!-- /col -->
+        </div>
+        <!-- /row -->
+        <!-- row -->
+        <div class="row no-gutters mt-3">
+          <!-- col -->
+          <div class="col-6">
+            <div class="ml-2">
+              <h4><strong>최근 광고 계정</strong></h4>
+            </div>
+            <!-- card -->
+            <div class="card border-left-0 border-bottom-0">
+              <!-- blankslate -->
+              <div class="card-body blankslate border-0 py-6">
+                <div class="blankslate-message">
+                  <div class="d-block h2 text-tertiary mb-3">
+                    <i class="ico ic-exclamation-circle-fill"></i>
+                  </div>
+                  <p class="text-muted mb-0">
+                    확인 가능한 내역이 없습니다.
+                  </p>
+                </div>
+              </div>
+              <!-- /blankslate -->
+            </div>
+            <!-- /card-->
+          </div>
+          <!-- /col -->
+          <!-- col -->
+          <div class="col-6">
+            <div class="ml-2">
+              <h4><strong>모든 광고 계정</strong></h4>
+            </div>
+            <!-- card -->
+            <div class="card border-left-0 border-right-0 border-bottom-0">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid"
+                   aria-describedby="recentAdAccounts">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                      <div class="form-check form-check-inline m-0">
+                        <input class="form-check-input mr-0" type="checkbox" id="check-ad-row-all">
+                        <label class="d-none" for="check-ad-row-all">선택</label>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      채널
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 20rem;">
+                      광고계정
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                      <div class="datagrid-cell-inner">
+                        <div class="form-check form-check-inline m-0">
+                          <input class="form-check-input mr-0" type="checkbox" id="check-ad-row-1">
+                          <label class="d-none" for="check-ad-row-1">선택</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 20rem;">
+                      <div class="datagrid-cell-inner">
+                        <div>넷마블_블레이드&소 레볼루션_UAC</div>
+                        <small>ID 113052252</small>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                      <div class="datagrid-cell-inner">
+                        <div class="form-check form-check-inline m-0">
+                          <input class="form-check-input mr-0" type="checkbox" id="check-ad-row-2">
+                          <label class="d-none" for="check-ad-row-2">선택</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 20rem;">
+                      <div class="datagrid-cell-inner">
+                        <div>넷마블_블레이드&소 레볼루션_UAC</div>
+                        <small>ID 113052252</small>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                      <div class="datagrid-cell-inner">
+                        <div class="form-check form-check-inline m-0">
+                          <input class="form-check-input mr-0" type="checkbox" id="check-ad-row-3">
+                          <label class="d-none" for="check-ad-row-3">선택</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks DSP" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 20rem;">
+                      <div class="datagrid-cell-inner">
+                        <div>넷마블_블레이드&소 레볼루션_UAC</div>
+                        <small>ID 113052252</small>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                      <div class="datagrid-cell-inner">
+                        <div class="form-check form-check-inline m-0">
+                          <input class="form-check-input mr-0" type="checkbox" id="check-ad-row-4">
+                          <label class="d-none" for="check-ad-row-4">선택</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 20rem;">
+                      <div class="datagrid-cell-inner">
+                        <div>넷마블_블레이드&소 레볼루션_UAC</div>
+                        <small>ID 113052252</small>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+            </div>
+            <!-- /card -->
+          </div>
+          <!-- /col -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+        <button type="submit" class="btn btn-contained-primary">오디언스 온보딩</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- modal#md-aud-on-boarding -->
+
+
+<!-- modal#md-aud-usershare -->
+<div class="modal" id="md-aud-usershare" tabindex="-1" aria-labelledby="audUserShare"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">오디언스 공유</h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <div class="p-2">
+          <!-- form-group -->
+          <div class="form-group mb-0">
+            <label class="d-none" for="search-adaccount">검색</label>
+            <input type="search" class="form-control" id="search-adaccount" placeholder="광고 계정 이름, 광고 계정 ID 검색">
+          </div>
+          <!-- /form-group -->
+        </div>
+
+        <!-- card -->
+        <div class="card border-left-0 border-right-0 border-bottom-0">
+          <!-- blankslate -->
+          <div class="card-body blankslate">
+            <div class="blankslate-message">
+              <div class="d-block h2 text-tertiary mb-3">
+                <i class="ico ic-exclamation-circle-fill"></i>
+              </div>
+              <p class="text-muted mb-0">
+                검색된 결과가 없습니다.
+              </p>
+            </div>
+          </div>
+          <!-- /blankslate --> 
+          <!-- datagrid -->
+          <div class="datagrid datagrid-hover" role="grid"
+               aria-describedby="audShareUser">
+            <!-- datagrid-rowgroup -->
+            <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+              <!-- datagrid-row -->
+              <div class="datagrid-row" role="row">
+                <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                     style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                  <div class="form-check form-check-inline m-0">
+                    <input class="form-check-input mr-0" type="checkbox" id="check-share-row-all">
+                    <label class="d-none" for="check-share-row-all">선택</label>
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  회사 이름
+                </div>
+                <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  사용자 이름
+                </div>
+                <div class="datagrid-cell" role="columnheader" aria-colindex="4">
+                  사용자 계정
+                </div>
+              </div>
+              <!-- /datagrid-row -->
+            </div>
+            <!-- /datagrid-rowgroup -->
+            <!-- datagrid-rowgroup -->
+            <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+              <!-- datagrid-row -->
+              <div class="datagrid-row" role="row">
+                <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                     style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                    <div class="form-check form-check-inline m-0">
+                      <input class="form-check-input mr-0" type="checkbox" id="check-share-row-1">
+                      <label class="d-none" for="check-share-row-1">선택</label>
+                    </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  <div class="text-truncate">
+                    (주)에이원퍼포먼스팩토리
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  <div class="text-truncate">
+                  TW 관리자
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                     style="min-width: 24rem;">
+                  <div class="text-truncate">
+                    igaworks.report.test.1@gamil.com
+                  </div>
+                </div>
+              </div>
+              <!-- /datagrid-row -->
+              <!-- datagrid-row -->
+              <div class="datagrid-row" role="row">
+                <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                     style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                  <div class="form-check form-check-inline m-0">
+                    <input class="form-check-input mr-0" type="checkbox" id="check-share-row-2">
+                    <label class="d-none" for="check-share-row-2">선택</label>
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  <div class="text-truncate">
+                    (주)에이원퍼포먼스팩토리 에이원퍼포먼스팩토리
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  <div class="text-truncate">
+                    [테스트]파트너 관리자
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                     style="min-width: 24rem;">
+                  <div class="text-truncate">
+                    igaworks.report.test.1@gamil.com
+                  </div>
+                </div>
+              </div>
+              <!-- /datagrid-row -->
+              <!-- datagrid-row -->
+              <div class="datagrid-row" role="row">
+                <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                     style="min-width: 4.8rem; width: 4.8rem; max-width: 4.8rem;">
+                  <div class="form-check form-check-inline m-0">
+                    <input class="form-check-input mr-0" type="checkbox" id="check-share-row-3">
+                    <label class="d-none" for="check-share-row-3">선택</label>
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  <div class="text-truncate">
+                    (주)에이원퍼포먼스팩토리 에이원퍼포먼스팩토리
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                     style="min-width: 20rem; width: 20rem; max-width: 20rem;">
+                  <div class="text-truncate">
+                    [테스트]파트너 관리자
+                  </div>
+                </div>
+                <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                     style="min-width: 24rem;">
+                  <div class="text-truncate">
+                    igaworks.report.test.1@gamil.com
+                  </div>
+                </div>
+              </div>
+              <!-- /datagrid-row -->
+            </div>
+            <!-- /datagrid-rowgroup -->
+          </div>
+          <!-- /datagrid -->
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+        <button type="submit" class="btn btn-contained-primary">오디언스 온보딩</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-usershare -->
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
