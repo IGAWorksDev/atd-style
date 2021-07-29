@@ -1831,6 +1831,8 @@ a:hover { text-decoration: underline; }
 
 .container { max-width: 1320px !important; }
 
+.badge-plus { border: 1px solid #373a3c; border-radius: 0.4rem; padding: 0.3em 0.625em; font-size: 60%; line-height: 1; vertical-align: middle; }
+
 .table thead > tr > th { height: 4rem; vertical-align: middle; }
 
 .table tr td + td, .table tr th + th { border-left: 1px solid rgba(232, 233, 234, 0.5); }
