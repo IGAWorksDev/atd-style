@@ -3199,4 +3199,6 @@ a.text-dark:hover, a.text-dark:focus { color: #121314 !important; }
 .gnb-navbar .navbar-nav .nav-item.active:after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; display: block; border-bottom: 4px solid #0081f6; }
 .gnb-navbar .navbar-nav .nav-item.active .nav-link { color: #0081f6; }
 
-.badge-plus { border: 1px solid #1c1d1e; border-radius: 0.2rem; padding: 0.25em 0.5em; font-size: 60%; line-height: 1; vertical-align: middle; }
+.badge-plus { border: 2px solid #1c1d1e; border-radius: 0.2rem; padding: 0 0.64em; font-size: 50%; line-height: 1.25; vertical-align: middle; }
+
+.dropdown-item > .badge-plus { border-width: 1px; }

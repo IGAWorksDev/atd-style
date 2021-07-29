@@ -1831,7 +1831,9 @@ a:hover { text-decoration: underline; }
 
 .container { max-width: 1320px !important; }
 
-.badge-plus { border: 1px solid #373a3c; border-radius: 0.4rem; padding: 0.3em 0.625em; font-size: 60%; line-height: 1; vertical-align: middle; }
+.badge-plus { border: 2px solid #373a3c; border-radius: 0.4rem; padding: 0 0.64em; font-size: 50%; line-height: 1.25; vertical-align: middle; }
+
+.dropdown-item > .badge-plus { border-width: 1px; }
 
 .table thead > tr > th { height: 4rem; vertical-align: middle; }
 

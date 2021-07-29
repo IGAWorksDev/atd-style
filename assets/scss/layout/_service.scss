@@ -4,10 +4,13 @@
 // PlUS의 뱃지형 스타일로 GNB와 mainheader에 적용됨.
 //
 .badge-plus {
-  border: 1px solid $body-color;
+  border: 2px solid $body-color;
   border-radius: $border-radius;
-  padding: $badge-padding-y ($badge-padding-x * 1.25);
-  font-size: 60%;
-  line-height: 1;
+  padding: 0 0.64em;
+  font-size: 50%;
+  line-height: 1.25;
   vertical-align: middle;
+}
+.dropdown-item > .badge-plus {
+  border-width: 1px;
 }
