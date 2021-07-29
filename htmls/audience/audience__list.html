@@ -574,8 +574,8 @@
                           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#md-aud-on-boarding">오딘어스
                             온보딩</a>
                           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#md-aud-usershare">오디언스 공유</a>
-                          <a class="dropdown-item" href="#">오디언스 제외</a>
-                          <a class="dropdown-item text-danger" href="#">오디언스 삭제</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#md-aud-except">오디언스 제외</a>
+                          <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#md-aud-cancel">오디언스 삭제</a>
                         </div>
                       </div>
                       <!-- dropdown -->
@@ -1128,7 +1128,7 @@
               </p>
             </div>
           </div>
-          <!-- /blankslate --> 
+          <!-- /blankslate -->
           <!-- datagrid -->
           <div class="datagrid datagrid-hover" role="grid"
                aria-describedby="audShareUser">
@@ -1266,6 +1266,165 @@
   </div>
 </div>
 <!-- /modal#md-aud-usershare -->
+
+
+<!-- modal#md-aud-except -->
+<div class="modal" id="md-aud-except" tabindex="-1" aria-labelledby="audItemExcept"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">오디언스 제외하기</h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body">
+        <!-- wrap -->
+        <div class="wrap">
+          <h4><strong>원본 오디언스 정보</strong></h4>
+          <div class="border py-2">
+            <!-- row -->
+            <dl class="row m-0">
+              <dt class="col-3">오디언스 ID</dt>
+              <dd class="col-9">86316131</dd>
+              <dt class="col-3">오디언스 이름</dt>
+              <dd class="col-9">라이프스타일_예비신랑신부_단계0~40</dd>
+            </dl>
+            <!-- /row -->
+          </div>
+        </div>
+        <!-- /wrap -->
+        <!-- wrap -->
+        <div class="wrap mt-3">
+          <h4><strong>타겟 설정</strong></h4>
+          <div class="border py-2">
+            <div class="form-group row align-items-center m-0">
+              <label class="col-3 mb-0" for="form-target-title"><strong>타겟 이름 입력</strong></label>
+              <div class="col-9">
+                <input type="text" class="form-control" id="form-target-title" placeholder="타겟 이름을 입력하세요.">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /wrap -->
+        <!-- wrap -->
+        <div class="wrap mt-3">
+          <h4>
+            <strong>제외 오디언스 설정</strong>
+            <small class="text-danger ml-1">* 오디언스는 최대 5개까지 선택 가능합니다.</small>
+          </h4>
+          <div class="border p-2">
+            <!-- form-group -->
+            <div class="form-group">
+              <label class="d-none" for="select-except-audience">제외 오디언스 선택</label>
+              <select class="custom-select" id="select-except-audience">
+                <option>제외할 오디언스를 선택하세요.</option>
+              </select>
+            </div>
+            <!-- /form-group -->
+            <!-- list-unstyled -->
+            <ul class="list-unstyled m-0">
+              <li class="p-1 border-bottom">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>[보라-앱 패키지] 테스트</div>
+                  <button class="btn-circle btn-text-secondary btn-circle-xs">
+                    <i class="ico ic-close"></i>
+                    <span class="d-none">삭제</span>
+                  </button>
+                </div>
+              </li>
+              <li class="p-1 border-bottom">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>[보라-앱 패키지] 테스트</div>
+                  <button class="btn-circle btn-text-secondary btn-circle-xs">
+                    <i class="ico ic-close"></i>
+                    <span class="d-none">삭제</span>
+                  </button>
+                </div>
+              </li>
+              <li class="p-1 border-bottom">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>[보라-앱 패키지] 테스트</div>
+                  <button class="btn-circle btn-text-secondary btn-circle-xs">
+                    <i class="ico ic-close"></i>
+                    <span class="d-none">삭제</span>
+                  </button>
+                </div>
+              </li>
+              <li class="p-1 border-bottom">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>[보라-앱 패키지] 테스트</div>
+                  <button class="btn-circle btn-text-secondary btn-circle-xs">
+                    <i class="ico ic-close"></i>
+                    <span class="d-none">삭제</span>
+                  </button>
+                </div>
+              </li>
+              <li class="p-1 border-bottom">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>[보라-앱 패키지] 테스트</div>
+                  <button class="btn-circle btn-text-secondary btn-circle-xs">
+                    <i class="ico ic-close"></i>
+                    <span class="d-none">삭제</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <!-- /list-unstyled -->
+          </div>
+        </div>
+        <!-- /wrap -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-except -->
+
+<!-- modal#md-aud-cancel -->
+<div class="modal" id="md-aud-cancel" tabindex="-1" aria-labelledby="audItemCancel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <!-- modal-body -->
+      <div class="modal-body">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <div class="text-center py-5">
+          <h3 class="modal-title">
+            선택한 사용자와 오디언스 공유가 해제 됩니다.
+          </h3>
+          <p class="m-0 mt-2">
+            선택한 오디언스의 공유가 해제 됩니다.<br>
+            공유 해제 시 이 오디언스는 더 이상 사용 할 수 없습니다.<br>
+            단, 공유 해제 전 광고 계정에 온보딩 한 오디언스는 삭제 되지 않습니다.
+          </p>
+        </div>
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">취소</button>
+        <button type="submit" class="btn btn-contained-danger">해제</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-cancel -->
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
