@@ -1872,6 +1872,10 @@ a:hover { text-decoration: underline; }
 
 .icon-block { line-height: 1; padding: 0.8rem; border: 1px solid #e8e9ea; border-radius: 4px; background-color: #f3f4f5; color: #8a9197; }
 
+.daterangepicker.show-calendar .ranges { margin-right: auto; width: 140px !important; }
+
+.daterangepicker .calendars-container { padding-right: 0 !important; padding-left: 0 !important; }
+
 /* --------------------------------------------------- */
 #dashboard > .mainheader .container { margin-bottom: 0 !important; }
 #dashboard > .mainheader .mainheader__inner { margin-bottom: 0 !important; width: 100%; }
