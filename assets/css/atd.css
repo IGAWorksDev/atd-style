@@ -1872,6 +1872,16 @@ a:hover { text-decoration: underline; }
 
 .icon-block { line-height: 1; padding: 0.8rem; border: 1px solid #e8e9ea; border-radius: 4px; background-color: #f3f4f5; color: #8a9197; }
 
+.audience-ranger-status { display: inline-block; vertical-align: middle; }
+.audience-ranger-status .checkers { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+.audience-ranger-status .checkers > .checker { width: 1.4rem; height: 1.4rem; overflow: hidden; vertical-align: middle; background-color: var(--secondary-200); }
+.audience-ranger-status .checkers > .checker:nth-child(1).is-active { background-color: var(--primary-600); }
+.audience-ranger-status .checkers > .checker:nth-child(2).is-active { background-color: var(--primary-500); }
+.audience-ranger-status .checkers > .checker:nth-child(3).is-active { background-color: var(--primary-400); }
+.audience-ranger-status .checkers > .checker:nth-child(4).is-active { background-color: var(--primary-300); }
+.audience-ranger-status .checkers > .checker:nth-child(5).is-active { background-color: var(--primary-200); }
+.audience-ranger-status .checkers > .checker + .checker { margin-left: 2px; }
+
 .daterangepicker.show-calendar .ranges { margin-right: auto; width: 140px !important; }
 
 .daterangepicker .calendars-container { padding-right: 0 !important; padding-left: 0 !important; }

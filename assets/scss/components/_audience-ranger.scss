@@ -1,0 +1,46 @@
+
+
+// 오디언스 레인지 바
+// 설정된 범위가 활성된 상태를 볼 수 있는 형태의 레인지.
+//
+.audience-ranger-status {
+  display: inline-block;
+  vertical-align: middle;
+  .checkers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    > .checker {
+      width: $font-size-base;
+      height: $font-size-base;
+      overflow: hidden;
+      vertical-align: middle;
+      background-color: var(--secondary-200);
+
+      &:nth-child(1).is-active {
+        background-color: var(--primary-600);
+      }
+
+      &:nth-child(2).is-active {
+        background-color: var(--primary-500);
+      }
+
+      &:nth-child(3).is-active {
+        background-color: var(--primary-400);
+      }
+
+      &:nth-child(4).is-active {
+        background-color: var(--primary-300);
+      }
+
+      &:nth-child(5).is-active {
+        background-color: var(--primary-200);
+      }
+
+      + .checker {
+        margin-left: 2px;
+      }
+    }
+  }
+}
