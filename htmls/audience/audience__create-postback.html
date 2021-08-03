@@ -150,12 +150,12 @@
                     파일 업로드
                   </a>
                 </li>
-                <li class="tab-item  is-active">
+                <li class="tab-item">
                   <a class="tab-link" href="audience__create-offline.html" role="tab">
                     오프라인 업종
                   </a>
                 </li>
-                <li class="tab-item">
+                <li class="tab-item is-active">
                   <a class="tab-link" href="audience__create-postback.html" role="tab">
                     포스트백 추출
                   </a>
@@ -200,6 +200,48 @@
               <div class="row py-2 align-items-center">
                 <!-- col -->
                 <div class="col-2">
+                  <strong>패키지명</strong>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                  <div class="d-flex align-items-center">
+                    <div class="form-group mb-0" style="width: 52rem;">
+                      <label class="d-none" for="input-audience-package">패키지</label>
+                      <input type="text" class="form-control" id="input-audience-package">
+                    </div>
+                  </div>
+                </div>
+                <!-- col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2 align-items-center">
+                <!-- col -->
+                <div class="col-2">
+                  <strong>국가</strong>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                  <div class="form-group mb-0" style="width: 52rem;">
+                    <label class="d-none" for="select-nation">국가 선택</label>
+                    <select class="custom-select" id="select-nation">
+                      <option>대한민국</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2 align-items-center">
+                <!-- col -->
+                <div class="col-2">
                   <strong>플랫폼</strong>
                 </div>
                 <!-- /col -->
@@ -228,169 +270,65 @@
               <!-- row -->
               <div class="row py-2">
                 <!-- col -->
-                <div class="col-2 pt-1">
-                  <strong>업종 목록</strong>
-                  <div>
-                    <small class="text-muted">모수 업데이트 날짜 : 2021-06-12</small>
-                  </div>
+                <div class="col-2">
+                  <strong>포스트백 네트워크</strong>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-10">
-                  <!-- card-group -->
-                  <div class="card-group">
-                    <!-- card -->
-                    <div class="card">
-                      <!-- datagrid-responsive -->
-                      <div class="datagrid-responsive" style="height: 36rem; max-height: 36rem;">
-                        <!-- datagrid -->
-                        <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid"
-                             aria-describedby="table-title">
-                          <!-- datagrid-rowgroup -->
-                          <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
-                            <!-- datagrid-row -->
-                            <div class="datagrid-row" role="row">
-                              <div class="datagrid-cell" role="columnheader" aria-colindex="1"
-                                   style="min-width:5rem;">
-                                <div class="form-check">
-                                  <label class="d-none" for="check-row-all">전체선택</label>
-                                  <input type="checkbox" class="form-check-input" id="check-row-all">
-                                </div>
-                              </div>
-                              <div class="datagrid-cell" role="columnheader" aria-colindex="2"
-                                   style="min-width:36rem;">
-                                업종명
-                              </div>
-                              <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width: 14rem;">
-                                모수
-                              </div>
-                            </div>
-                            <!-- /datagrid-row -->
-                          </div>
-                          <!-- datagrid-rowgroup -->
-                          <!-- datagrid-rowgroup -->
-                          <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
-                            <!-- datagrid-row -->
-                            <div class="datagrid-row" role="row">
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="1"
-                                   style="min-width:5rem;">
-                                <div class="form-check">
-                                  <label class="d-none" for="check-row-1">선택</label>
-                                  <input type="checkbox" class="form-check-input" id="check-row-1">
-                                </div>
-                              </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="2"
-                                   style="min-width:36rem;">
-                                마트
-                              </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
-                                9,651,244
-                              </div>
-                            </div>
-                            <!-- /datagrid-row -->
-                            <!-- datagrid-row -->
-                            <div class="datagrid-row" role="row">
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="1"
-                                   style="min-width:5rem;">
-                                <div class="form-check">
-                                  <label class="d-none" for="check-row-2">선택</label>
-                                  <input type="checkbox" class="form-check-input" id="check-row-2">
-                                </div>
-                              </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="2"
-                                   style="min-width:36rem;">
-                                프렌차이즈 카페
-                              </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
-                                1,465,885
-                              </div>
-                            </div>
-                            <!-- /datagrid-row -->
-                          </div>
-                          <!-- datagrid-rowgroup -->
-                        </div>
-                        <!-- /datagrid -->
-                      </div>
-                      <!-- /datagrid-responsive -->
+                  <!-- d-flex -->
+                  <div class="d-flex">
+                    <div class="form-group mb-0">
+                      <label class="d-none" for="select-network">네트워크 선택</label>
+                      <select class="custom-select" id="select-network">
+                        <option>Adbrix</option>
+                      </select>
                     </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="card">
-                      <!-- datagrid-responsive -->
-                      <div class="datagrid-responsive" style="height: 31.5rem; max-height: 31.5rem;">
-                        <!-- datagrid -->
-                        <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid"
-                             aria-describedby="table-title">
-                          <!-- datagrid-rowgroup -->
-                          <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
-                            <!-- datagrid-row -->
-                            <div class="datagrid-row" role="row">
-                              <div class="datagrid-cell" role="columnheader" aria-colindex="1"
-                                   style="min-width: 32rem;">
-                                업종명
-                              </div>
-                              <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 24rem;">
-                                모수
-                              </div>
-                            </div>
-                            <!-- /datagrid-row -->
-                          </div>
-                          <!-- /datagrid-rowgroup -->
-                          <!-- datagrid-rowgroup -->
-                          <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
-                            <!-- datagrid-row -->
-                            <div class="datagrid-row" role="row">
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="1"
-                                   style="min-width: 32rem;">
-                                마트
-                              </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 24rem;">
-                                <div class="datagrid-cell-inner d-flex">
-                                  <div class="mr-auto">9,657,244</div>
-                                  <button class="btn-circle btn-circle-xs btn-text-secondary">
-                                    <i class="ico ic-close"></i>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- /datagrid-row -->
-                            <!-- datagrid-row -->
-                            <div class="datagrid-row" role="row">
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="1"
-                                   style="min-width: 32rem;">
-                                병원
-                              </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 24rem;">
-                                <div class="datagrid-cell-inner d-flex">
-                                  <div class="mr-auto">1,465,885</div>
-                                  <button class="btn-circle btn-circle-xs btn-text-secondary">
-                                    <i class="ico ic-close"></i>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- /datagrid-row -->
-                          </div>
-                          <!-- datagrid-rowgroup -->
-                        </div>
-                        <!-- /datagrid -->
+                    <!-- d-flex -->
+                    <div class="d-flex align-items-center ml-2">
+                      <span>조건 :</span>
+                      <div class="form-group mb-0 ml-1">
+                        <label class="d-none" for="select-date">조건선택</label>
+                        <select class="custom-select" id="select-date">
+                          <option>날짜</option>
+                        </select>
                       </div>
-                      <!-- /datagrid-responsive -->
-                      <!-- card-footer -->
-                      <div class="card-footer">
-                        <div class="d-flex align-items-center justify-content-between">
-                          <strong>선택한 업종 <span class="text-primary">2</span>개</strong>
-                          <button class="btn btn-sm btn-text-secondary">
-                            <i class="ico ic-delete"></i>
-                            전체삭제
-                          </button>
-                        </div>
+                      <div class="form-group mb-0 ml-1">
+                        <label class="d-none" for="input-date">날짜</label>
+                        <input type="date" class="form-control" id="input-date">
                       </div>
-                      <!-- /card-footer -->
+                      <div class="form-group mb-0 ml-1">
+                        <label class="d-none" for="select-condition">상태 선택</label>
+                        <select class="custom-select" id="select-condition">
+                          <option>이후에</option>
+                        </select>
+                      </div>
+                      <span class="ml-1">접속한 유저</span>
                     </div>
-                    <!-- /card -->
+                    <!-- /d-flex -->
                   </div>
-                  <!-- /card-group -->
+                  <!-- /d-flex -->
+                </div>
+                <!-- col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2 align-items-center">
+                <!-- col -->
+                <div class="col-2">
+                  <strong>이벤트 그룹</strong>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                  <div class="d-flex align-items-center">
+                    <div class="form-group mb-0" style="width: 52rem;">
+                      <label class="d-none" for="input-event-group">그룹</label>
+                      <input type="text" class="form-control" id="input-event-group">
+                    </div>
+                  </div>
                 </div>
                 <!-- col -->
               </div>
@@ -401,122 +339,90 @@
               <div class="row py-2">
                 <!-- col -->
                 <div class="col-2 pt-1">
-                  <strong>지역</strong>
+                  <strong>이벤트 이름</strong>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-10">
                   <div class="d-flex align-items-center">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" id="check-area-admin" name="area-type">
-                      <label class="form-check-label" for="check-area-admin">
-                        행정구역
-                      </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" id="check-area-nation" name="area-type">
-                      <label class="form-check-label" for="check-area-nation">
-                        대한민국
-                      </label>
-                    </div>
-
-                    <div class="form-group ml-auto mb-0">
-                      <label class="d-none" for="search-audience">검색</label>
-                      <input type="search" class="form-control" id="search-area" placeholder="행정구역 검색">
+                    <div class="form-group mb-0" style="width: 52rem;">
+                      <label class="d-none" for="input-event-title">이름</label>
+                      <input type="text" class="form-control" id="input-event-title">
                     </div>
                   </div>
 
-                  <!-- card-group -->
-                  <div class="card-group mt-2">
-                    <!-- card -->
-                    <div class="card">
-                      <!-- list-group -->
-                      <div class="list-group list-group-noedge">
-                        <button type="button" class="list-group-item">
-                          서울특별시
-                        </button>
-                        <button type="button" class="list-group-item">
-                          부산광역시
-                        </button>
-                        <button type="button" class="list-group-item">
-                          대구광역시
-                        </button>
-                        <button type="button" class="list-group-item is-active">
-                          인천광역시
-                        </button>
-                        <button type="button" class="list-group-item">
-                          광주광역시
-                        </button>
-                      </div>
-                      <!-- /list-group -->
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-event-parameter">이벤트 파라미터</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-event-parameter">
                     </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="card">
-                      <!-- list-group -->
-                      <div class="list-group list-group-noedge">
-                        <button type="button" class="list-group-item">
-                          전체
-                        </button>
-                        <button type="button" class="list-group-item">
-                          종로구
-                        </button>
-                        <button type="button" class="list-group-item">
-                          중구
-                        </button>
-                        <button type="button" class="list-group-item is-active">
-                          용산구
-                        </button>
-                        <button type="button" class="list-group-item">
-                          성동구
-                        </button>
-                      </div>
-                      <!-- /list-group -->
-                    </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="card">
-                      <!-- list-group -->
-                      <div class="list-group list-group-noedge" style="height: 31.5rem; max-height: 31.5rem;">
-                        <div class="list-group-item">
-                          <div class="datagrid-cell-inner d-flex">
-                            <span class="mr-auto">
-                              서울특별시 > 용산구
-                            </span>
-                            <button class="btn-circle btn-circle-xs btn-text-secondary">
-                              <i class="ico ic-close"></i>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="list-group-item">
-                          <div class="datagrid-cell-inner d-flex">
-                            <span class="mr-auto">
-                              서울특별시 > 도봉구
-                            </span>
-                            <button class="btn-circle btn-circle-xs btn-text-secondary">
-                              <i class="ico ic-close"></i>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /list-group -->
-                      <!-- card-footer -->
-                      <div class="card-footer">
-                        <div class="d-flex align-items-center justify-content-between">
-                          <strong>선택한 지역 <span class="text-primary">2</span>개</strong>
-                          <button class="btn btn-sm btn-text-secondary">
-                            <i class="ico ic-delete"></i>
-                            전체삭제
-                          </button>
-                        </div>
-                      </div>
-                      <!-- /card-footer -->
-                    </div>
-                    <!-- /card -->
                   </div>
-                  <!-- /card-group -->
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-attribute-1">Attribute1</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-attribute-1">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-attribute-1">Attribute2</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-attribute-2">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-attribute-1">Attribute3</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-attribute-3">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-attribute-1">Attribute4</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-attribute-4">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-attribute-1">Attribute5</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-attribute-5">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-attribute-1">Product Id</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-product-id">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-0 mt-1" style="width: 55.2rem;">
+                    <label class="col-3 pt-1 text-muted" for="input-attribute-1">Pub Name</label>
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="input-pub-name">
+                    </div>
+                  </div>
+
+                </div>
+                <!-- col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2 align-items-center">
+                <!-- col -->
+                <div class="col-2">
+                  <strong>자동 업데이트</strong>
                 </div>
                 <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="check-auto-update">
+                    <label class="form-check-label" for="check-auto-update">
+                      사용함
+                    </label>
+                  </div>
+                </div>
+                <!-- col -->
               </div>
               <!-- /row -->
             </div>
