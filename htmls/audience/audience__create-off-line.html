@@ -140,7 +140,7 @@
                     페르소나
                   </a>
                 </li>
-                <li class="tab-item is-active">
+                <li class="tab-item">
                   <a class="tab-link" href="audience__create-game.html" role="tab">
                     게임 유저 프로파일링
                   </a>
@@ -150,8 +150,8 @@
                     파일 업로드
                   </a>
                 </li>
-                <li class="tab-item">
-                  <a class="tab-link" href="audience__create-off-line.html" role="tab">
+                <li class="tab-item  is-active">
+                  <a class="tab-link" href="audience__create-offline.html" role="tab">
                     오프라인 업종
                   </a>
                 </li>
@@ -175,35 +175,6 @@
             <!-- card-body -->
             <div class="card-body">
               <!-- row -->
-              <div class="row py-2">
-                <!-- col -->
-                <div class="col-2">
-                  <strong>유형선택</strong>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-10">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="check-game-type-1" name="game-type">
-                    <label class="form-check-label" for="check-game-type-1">게임 충성지수</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="check-game-type-2" name="game-type">
-                    <label class="form-check-label" for="check-game-type-2">게임 탐색지수</label>
-                  </div>
-                  <div class="mt-1">
-                    <small class="text-muted">
-                      ※ 게임을 즐겨하는 헤비 유저들을, 게임 충성도(등급) 기준으로 구분하여 제공하는 오디언스입니다. (<i class="ico ic-android"></i> 안드로이드만
-                      지원)<br>
-                      ※ 충성지수 점수에 따라 10분위로 구분 되며 등급이 1에 가까울 수록 충성도가 높습니다.
-                    </small>
-                  </div>
-                </div>
-                <!-- /col -->
-              </div>
-              <!-- /row -->
-              <div class="border-top"></div>
-              <!-- row -->
               <div class="row py-2 align-items-center">
                 <!-- col -->
                 <div class="col-2">
@@ -212,47 +183,56 @@
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-10">
-                  <div class="form-group mb-0">
-                    <label class="d-none" for="input-audience-title">오디언스 이름</label>
-                    <input type="text" class="form-control" id="input-audience-title">
+                  <div class="d-flex align-items-center">
+                    <div class="form-group mb-0" style="width: 52rem;">
+                      <label class="d-none" for="input-audience-title">오디언스 이름</label>
+                      <input type="text" class="form-control" id="input-audience-title">
+                    </div>
+                    <small class="text-muted ml-2">오디언스 이름에 특스문자 (+ & /)는 사용이 불가능합니다.</small>
                   </div>
                 </div>
-                <!-- /col -->
+                <!-- col -->
               </div>
               <!-- /row -->
+
               <div class="border-top"></div>
               <!-- row -->
               <div class="row py-2 align-items-center">
                 <!-- col -->
                 <div class="col-2">
-                  <strong>기준 주차</strong>
+                  <strong>플랫폼</strong>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-10">
-                  <div class="d-flex align-items-center">
-                    <div class="form-group form-inline mb-0">
-                      <label class="d-none" for="select-standard-week">주 선택</label>
-                      <select class="custom-select" id="select-standard-week">
-                        <option>2021년 6월 2주</option>
-                        <option>2021년 6월 3주</option>
-                        <option>2021년 6월 4주</option>
-                      </select>
-                    </div>
-                    <small class="text-muted ml-2">
-                      데이터 기준 기간: 2021-05-16 ~ 2021-06-12
-                    </small>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="check-platform-android" name="platform-type">
+                    <label class="form-check-label" for="check-platform-android">
+                      <i class="ico ic-android"></i>
+                      Android
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="check-platform-apple" name="platform-type">
+                    <label class="form-check-label" for="check-platform-apple">
+                      <i class="ico ic-apple"></i>
+                      iOS
+                    </label>
                   </div>
                 </div>
-                <!-- /col -->
+                <!-- col -->
               </div>
               <!-- /row -->
+
               <div class="border-top"></div>
               <!-- row -->
               <div class="row py-2">
                 <!-- col -->
-                <div class="col-2">
-                  <strong>오디언스 목록</strong>
+                <div class="col-2 pt-1">
+                  <strong>업종 목록</strong>
+                  <div>
+                    <small class="text-muted">모수 업데이트 날짜 : 2021-06-12</small>
+                  </div>
                 </div>
                 <!-- /col -->
                 <!-- col -->
@@ -279,7 +259,7 @@
                               </div>
                               <div class="datagrid-cell" role="columnheader" aria-colindex="2"
                                    style="min-width:36rem;">
-                                카테고리
+                                업종명
                               </div>
                               <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width: 14rem;">
                                 모수
@@ -301,7 +281,7 @@
                               </div>
                               <div class="datagrid-cell" role="gridcell" aria-colindex="2"
                                    style="min-width:36rem;">
-                                롤플레잉게임
+                                마트
                               </div>
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
                                 9,651,244
@@ -319,7 +299,7 @@
                               </div>
                               <div class="datagrid-cell" role="gridcell" aria-colindex="2"
                                    style="min-width:36rem;">
-                                리듬/타일 게임
+                                프렌차이즈 카페
                               </div>
                               <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
                                 1,465,885
@@ -346,22 +326,11 @@
                             <!-- datagrid-row -->
                             <div class="datagrid-row" role="row">
                               <div class="datagrid-cell" role="columnheader" aria-colindex="1"
-                                   style="min-width: 17rem;">
-                                카테고리
+                                   style="min-width: 32rem;">
+                                업종명
                               </div>
-                              <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 30rem;">
-                                범위 지정
-                              </div>
-                            </div>
-                            <!-- /datagrid-row -->
-                            <!-- datagrid-row -->
-                            <div class="datagrid-row" role="row">
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="1"
-                                   style="min-width: 17rem;">
-                                일괄 변경
-                              </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 30rem;">
-                                <div>범위설정 래인저</div>
+                              <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 24rem;">
+                                모수
                               </div>
                             </div>
                             <!-- /datagrid-row -->
@@ -372,12 +341,12 @@
                             <!-- datagrid-row -->
                             <div class="datagrid-row" role="row">
                               <div class="datagrid-cell" role="gridcell" aria-colindex="1"
-                                   style="min-width: 17rem;">
-                                롤플레잉게임
+                                   style="min-width: 32rem;">
+                                마트
                               </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 30rem;">
+                              <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 24rem;">
                                 <div class="datagrid-cell-inner d-flex">
-                                  <div class="mr-auto">범위설정 래인저</div>
+                                  <div class="mr-auto">9,657,244</div>
                                   <button class="btn-circle btn-circle-xs btn-text-secondary">
                                     <i class="ico ic-close"></i>
                                   </button>
@@ -388,12 +357,12 @@
                             <!-- datagrid-row -->
                             <div class="datagrid-row" role="row">
                               <div class="datagrid-cell" role="gridcell" aria-colindex="1"
-                                   style="min-width: 17rem;">
-                                롤플레잉게임
+                                   style="min-width: 32rem;">
+                                병원
                               </div>
-                              <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 30rem;">
+                              <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 24rem;">
                                 <div class="datagrid-cell-inner d-flex">
-                                  <div class="mr-auto">범위설정 래인저</div>
+                                  <div class="mr-auto">1,465,885</div>
                                   <button class="btn-circle btn-circle-xs btn-text-secondary">
                                     <i class="ico ic-close"></i>
                                   </button>
@@ -410,7 +379,131 @@
                       <!-- card-footer -->
                       <div class="card-footer">
                         <div class="d-flex align-items-center justify-content-between">
-                          <strong>선택한 카테고리 <span class="text-primary">2</span>개</strong>
+                          <strong>선택한 업종 <span class="text-primary">2</span>개</strong>
+                          <button class="btn btn-sm btn-text-secondary">
+                            <i class="ico ic-delete"></i>
+                            전체삭제
+                          </button>
+                        </div>
+                      </div>
+                      <!-- /card-footer -->
+                    </div>
+                    <!-- /card -->
+                  </div>
+                  <!-- /card-group -->
+                </div>
+                <!-- col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2">
+                <!-- col -->
+                <div class="col-2 pt-1">
+                  <strong>지역</strong>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                  <div class="d-flex align-items-center">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="check-area-admin" name="area-type">
+                      <label class="form-check-label" for="check-area-admin">
+                        행정구역
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="check-area-nation" name="area-type">
+                      <label class="form-check-label" for="check-area-nation">
+                        대한민국
+                      </label>
+                    </div>
+
+                    <div class="form-group ml-auto mb-0">
+                      <label class="d-none" for="search-audience">검색</label>
+                      <input type="search" class="form-control" id="search-area" placeholder="행정구역 검색">
+                    </div>
+                  </div>
+
+                  <!-- card-group -->
+                  <div class="card-group mt-2">
+                    <!-- card -->
+                    <div class="card">
+                      <!-- list-group -->
+                      <div class="list-group list-group-noedge">
+                        <button type="button" class="list-group-item">
+                          서울특별시
+                        </button>
+                        <button type="button" class="list-group-item">
+                          부산광역시
+                        </button>
+                        <button type="button" class="list-group-item">
+                          대구광역시
+                        </button>
+                        <button type="button" class="list-group-item is-active">
+                          인천광역시
+                        </button>
+                        <button type="button" class="list-group-item">
+                          광주광역시
+                        </button>
+                      </div>
+                      <!-- /list-group -->
+                    </div>
+                    <!-- /card -->
+                    <!-- card -->
+                    <div class="card">
+                      <!-- list-group -->
+                      <div class="list-group list-group-noedge">
+                        <button type="button" class="list-group-item">
+                          전체
+                        </button>
+                        <button type="button" class="list-group-item">
+                          종로구
+                        </button>
+                        <button type="button" class="list-group-item">
+                          중구
+                        </button>
+                        <button type="button" class="list-group-item is-active">
+                          용산구
+                        </button>
+                        <button type="button" class="list-group-item">
+                          성동구
+                        </button>
+                      </div>
+                      <!-- /list-group -->
+                    </div>
+                    <!-- /card -->
+                    <!-- card -->
+                    <div class="card">
+                      <!-- list-group -->
+                      <div class="list-group list-group-noedge" style="height: 31.5rem; max-height: 31.5rem;">
+                        <div class="list-group-item">
+                          <div class="datagrid-cell-inner d-flex">
+                            <span class="mr-auto">
+                              서울특별시 > 용산구
+                            </span>
+                            <button class="btn-circle btn-circle-xs btn-text-secondary">
+                              <i class="ico ic-close"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="list-group-item">
+                          <div class="datagrid-cell-inner d-flex">
+                            <span class="mr-auto">
+                              서울특별시 > 도봉구
+                            </span>
+                            <button class="btn-circle btn-circle-xs btn-text-secondary">
+                              <i class="ico ic-close"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /list-group -->
+                      <!-- card-footer -->
+                      <div class="card-footer">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <strong>선택한 지역 <span class="text-primary">2</span>개</strong>
                           <button class="btn btn-sm btn-text-secondary">
                             <i class="ico ic-delete"></i>
                             전체삭제
@@ -458,10 +551,11 @@
           </div>
           <!-- /card -->
 
+
           <div class="text-right mt-2">
             <button type="button" class="btn btn-outlined-secondary">취소</button>
             <button type="button" class="btn btn-contained-primary">오디언스 만들기</button>
-          </div> 
+          </div>
         </div>
         <!-- /container -->
       </div>
