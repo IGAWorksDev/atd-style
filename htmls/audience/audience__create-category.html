@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TW__Audience</title>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+</head>
+<body>
+
+<!-- gnb -->
+<nav class="gnb">
+  <a class="gnb-brand" href="#">
+    <img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
+  </a>
+  <div class="gnb-navbar">
+    <ul class="navbar-nav mr-auto font-weight-bold">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" data-release="New" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">Insight</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">서브메뉴 1</a>
+          <a class="dropdown-item" href="#">서브메뉴 2</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Audience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Kakaomoment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Report</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Asset</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Support</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="ico ic-cog"></i>
+          <span class="sr-only">Manage</span>
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Ad Accounts</a>
+          <a class="dropdown-item" href="#">Companies</a>
+          <a class="dropdown-item" href="#">Users</a>
+          <a class="dropdown-item" href="#">Billing</a>
+          <a class="dropdown-item" href="#">DMP Usage History</a>
+        </div>
+      </li>
+      <li class="nav-item nav-item-user dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          <i class="ico ic-user"></i>
+          <span class="sr-only">account.name@igaworks.com</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+          <div class="dropdown-item">
+            장우영 <br>
+            <a href="#">
+              liam.jang@igaworks.com
+            </a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header">
+            채널 연결현황
+          </h6>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+            <a class="ml-1 " href="#">채널 연결하기</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            로그아웃
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- /gnb -->
+
+<!-- twWrapper -->
+<div class="twWrapper-full">
+  <!-- contentWrapper -->
+  <div class="contentWrapper">
+    <!-- mainContent -->
+    <main class="mainContent pb-2">
+      <!-- mainheader -->
+      <header class="mainheader">
+        <!-- container -->
+        <div class="container">
+          <div class="mainheader__inner">
+            <h2 class="font-weight-bold m-0">
+              새 오디언스
+            </h2>
+          </div>
+        </div>
+        <!-- /container -->
+      </header>
+      <!-- /mainheader -->
+
+      <!-- mainbody -->
+      <div class="mainbody">
+        <!-- container -->
+        <div class="container">
+          <!-- d-flex -->
+          <div class="bg-white d-flex align-items-center justify-content-between">
+            <nav class="mr-auto">
+              <!-- tab -->
+              <ul class="tab tab-nav h-fixed-7 m-0" id="">
+                <li class="tab-item is-active">
+                  <a class="tab-link" href="audience__create-category.html" role="tab">
+                    TW 카테고리
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-persona.html" role="tab">
+                    페르소나
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-game.html" role="tab">
+                    게임 유저 프로파일링
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-file.html" role="tab">
+                    파일 업로드
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-offline.html" role="tab">
+                    오프라인 업종
+                  </a>
+                  <a class="tab-link" href="audience__create-postback.html" role="tab">
+                    포스트백 추출
+                  </a>
+                </li>
+              </ul>
+              <!-- /tab -->
+            </nav>
+            <div class="form-group mr-2 my-1">
+              <label class="d-none" for="search-audience">검색</label>
+              <input type="search" class="form-control" id="search-audience" placeholder="오디언스 검색">
+            </div>
+          </div>
+          <!-- /d-flex -->
+
+          <div class="mt-2">
+            <div class="list-group-aud-twcategory">
+              <button class="list-group-item">
+                가정/생활 <i class="ico ic-chevron-right ml-auto"></i>
+              </button>
+              <a class="list-group-item" href="#">
+                가족
+              </a>
+              <a class="list-group-item" href="#">
+                건강/의료
+              </a>
+              <a class="list-group-item" href="#">
+                게임
+              </a>
+              <a class="list-group-item" href="#">
+                교육
+              </a>
+              <a class="list-group-item" href="#">
+                금융
+              </a>
+              <a class="list-group-item" href="#">
+                기타
+              </a>
+              <a class="list-group-item" href="#">
+                뉴스
+              </a>
+            </div>
+          </div>
+
+          <!-- card -->
+          <div class="card mt-3">
+            <!-- datagrid-responsive -->
+            <div class="datagrid-responsive" style="height: 50rem;">
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid"
+                   aria-describedby="table-title">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      오디언스 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        플랫폼
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width: 14rem;">
+                      규모
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        생성
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width:80rem; width: 90rem; max-width: 96rem;">
+                      <div class="datagrid-cell-inner">
+                        가구/인테리어
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 10rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <i class="ico ic-android"></i>
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                      <div class="datagrid-cell-inner text-right">
+                        9,135,023
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4" style="width: 8rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <button class="btn btn-contained-primary btn-sm">생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+            </div>
+            <!-- /datagrid-responsive -->
+          </div>
+          <!-- /card -->
+          <div class="text-right mt-2">
+            <button type="button" class="btn btn-outlined-secondary">취소</button>
+          </div>
+        </div>
+        <!-- /container -->
+      </div>
+      <!-- /mainbody -->
+    </main>
+    <!-- mainContent -->
+  </div>
+  <!-- contentWrapper -->
+</div>
+<!-- teWrapper -->
+</body>
+</html>

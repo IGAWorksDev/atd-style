@@ -1971,3 +1971,5 @@ a:hover { text-decoration: underline; }
 
 #md-aud-usershare .card { height: 50rem; overflow-y: auto; }
 #md-aud-usershare .card .datagrid { max-height: 50rem; height: 50rem; }
+
+.list-group-aud-twcategory { display: grid; grid-template-rows: repeat(5, 1fr); }

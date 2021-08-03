@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TW__Audience</title>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+</head>
+<body>
+
+<!-- gnb -->
+<nav class="gnb">
+  <a class="gnb-brand" href="#">
+    <img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
+  </a>
+  <div class="gnb-navbar">
+    <ul class="navbar-nav mr-auto font-weight-bold">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" data-release="New" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">Insight</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">서브메뉴 1</a>
+          <a class="dropdown-item" href="#">서브메뉴 2</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Audience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Kakaomoment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Report</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Asset</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Support</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="ico ic-cog"></i>
+          <span class="sr-only">Manage</span>
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Ad Accounts</a>
+          <a class="dropdown-item" href="#">Companies</a>
+          <a class="dropdown-item" href="#">Users</a>
+          <a class="dropdown-item" href="#">Billing</a>
+          <a class="dropdown-item" href="#">DMP Usage History</a>
+        </div>
+      </li>
+      <li class="nav-item nav-item-user dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          <i class="ico ic-user"></i>
+          <span class="sr-only">account.name@igaworks.com</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+          <div class="dropdown-item">
+            장우영 <br>
+            <a href="#">
+              liam.jang@igaworks.com
+            </a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header">
+            채널 연결현황
+          </h6>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+            <a class="ml-1 " href="#">채널 연결하기</a>
+          </div>
+          <div class="dropdown-item">
+            <img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+            <a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            로그아웃
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- /gnb -->
+
+<!-- twWrapper -->
+<div class="twWrapper-full">
+  <!-- contentWrapper -->
+  <div class="contentWrapper">
+    <!-- mainContent -->
+    <main class="mainContent pb-2">
+      <!-- mainheader -->
+      <header class="mainheader">
+        <!-- container -->
+        <div class="container">
+          <div class="mainheader__inner">
+            <h2 class="font-weight-bold m-0">
+              새 오디언스
+            </h2>
+          </div>
+        </div>
+        <!-- /container -->
+      </header>
+      <!-- /mainheader -->
+
+      <!-- mainbody -->
+      <div class="mainbody">
+        <!-- container -->
+        <div class="container">
+          <!-- d-flex -->
+          <div class="bg-white d-flex align-items-center justify-content-between">
+            <nav class="mr-auto">
+              <!-- tab -->
+              <ul class="tab tab-nav h-fixed-7 m-0" id="">
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-category.html" role="tab">
+                    TW 카테고리
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-persona.html" role="tab">
+                    페르소나
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-game.html" role="tab">
+                    게임 유저 프로파일링
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-file.html" role="tab">
+                    파일 업로드
+                  </a>
+                </li>
+                <li class="tab-item  is-active">
+                  <a class="tab-link" href="audience__create-offline.html" role="tab">
+                    오프라인 업종
+                  </a>
+                </li>
+                <li class="tab-item">
+                  <a class="tab-link" href="audience__create-postback.html" role="tab">
+                    포스트백 추출
+                  </a>
+                </li>
+              </ul>
+              <!-- /tab -->
+            </nav>
+            <div class="form-group mr-2 my-1">
+              <label class="d-none" for="search-audience">검색</label>
+              <input type="search" class="form-control" id="search-audience" placeholder="오디언스 검색">
+            </div>
+          </div>
+          <!-- /d-flex -->
+
+          <!-- card -->
+          <div class="card mt-3">
+            <!-- card-body -->
+            <div class="card-body">
+              <!-- row -->
+              <div class="row py-2 align-items-center">
+                <!-- col -->
+                <div class="col-2">
+                  <strong>오디언스 이름</strong>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                  <div class="d-flex align-items-center">
+                    <div class="form-group mb-0" style="width: 52rem;">
+                      <label class="d-none" for="input-audience-title">오디언스 이름</label>
+                      <input type="text" class="form-control" id="input-audience-title">
+                    </div>
+                    <small class="text-muted ml-2">오디언스 이름에 특스문자 (+ & /)는 사용이 불가능합니다.</small>
+                  </div>
+                </div>
+                <!-- col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2 align-items-center">
+                <!-- col -->
+                <div class="col-2">
+                  <strong>플랫폼</strong>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="check-platform-android" name="platform-type">
+                    <label class="form-check-label" for="check-platform-android">
+                      <i class="ico ic-android"></i>
+                      Android
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="check-platform-apple" name="platform-type">
+                    <label class="form-check-label" for="check-platform-apple">
+                      <i class="ico ic-apple"></i>
+                      iOS
+                    </label>
+                  </div>
+                </div>
+                <!-- col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2">
+                <!-- col -->
+                <div class="col-2">
+                  <strong>업종 목록</strong>
+                  <div>
+                    <small class="text-muted">모수 업데이트 날짜 : 2021-06-12</small>
+                  </div>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+                    <!-- card-group -->
+                                      <div class="card-group">
+                                        <!-- card -->
+                                        <div class="card">
+                                          <!-- datagrid-responsive -->
+                                          <div class="datagrid-responsive" style="height: 36rem; max-height: 36rem;">
+                                            <!-- datagrid -->
+                                            <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid"
+                                                 aria-describedby="table-title">
+                                              <!-- datagrid-rowgroup -->
+                                              <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+                                                <!-- datagrid-row -->
+                                                <div class="datagrid-row" role="row">
+                                                  <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                                                       style="min-width:5rem;">
+                                                    <div class="form-check">
+                                                      <label class="d-none" for="check-row-all">전체선택</label>
+                                                      <input type="checkbox" class="form-check-input" id="check-row-all">
+                                                    </div>
+                                                  </div>
+                                                  <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                                                       style="min-width:36rem;">
+                                                    업종명
+                                                  </div>
+                                                  <div class="datagrid-cell" role="columnheader" aria-colindex="3" style="width: 14rem;">
+                                                    모수
+                                                  </div>
+                                                </div>
+                                                <!-- /datagrid-row -->
+                                              </div>
+                                              <!-- datagrid-rowgroup -->
+                                              <!-- datagrid-rowgroup -->
+                                              <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                                                <!-- datagrid-row -->
+                                                <div class="datagrid-row" role="row">
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                                                       style="min-width:5rem;">
+                                                    <div class="form-check">
+                                                      <label class="d-none" for="check-row-1">선택</label>
+                                                      <input type="checkbox" class="form-check-input" id="check-row-1">
+                                                    </div>
+                                                  </div>
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                                                       style="min-width:36rem;">
+                                                    마트
+                                                  </div>
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                                                    9,651,244
+                                                  </div>
+                                                </div>
+                                                <!-- /datagrid-row -->
+                                                <!-- datagrid-row -->
+                                                <div class="datagrid-row" role="row">
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                                                       style="min-width:5rem;">
+                                                    <div class="form-check">
+                                                      <label class="d-none" for="check-row-2">선택</label>
+                                                      <input type="checkbox" class="form-check-input" id="check-row-2">
+                                                    </div>
+                                                  </div>
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                                                       style="min-width:36rem;">
+                                                    프렌차이즈 카페
+                                                  </div>
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="3" style="width: 14rem;">
+                                                    1,465,885
+                                                  </div>
+                                                </div>
+                                                <!-- /datagrid-row -->
+                                              </div>
+                                              <!-- datagrid-rowgroup -->
+                                            </div>
+                                            <!-- /datagrid -->
+                                          </div>
+                                          <!-- /datagrid-responsive -->
+                                        </div>
+                                        <!-- /card -->
+                                        <!-- card -->
+                                        <div class="card">
+                                          <!-- datagrid-responsive -->
+                                          <div class="datagrid-responsive" style="height: 31.5rem; max-height: 31.5rem;">
+                                            <!-- datagrid -->
+                                            <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid"
+                                                 aria-describedby="table-title">
+                                              <!-- datagrid-rowgroup -->
+                                              <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+                                                <!-- datagrid-row -->
+                                                <div class="datagrid-row" role="row">
+                                                  <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                                                       style="min-width: 32rem;">
+                                                    업종명
+                                                  </div>
+                                                  <div class="datagrid-cell" role="columnheader" aria-colindex="2" style="width: 24rem;">
+                                                    모수
+                                                  </div>
+                                                </div>
+                                                <!-- /datagrid-row -->
+                                              </div>
+                                              <!-- /datagrid-rowgroup -->
+                                              <!-- datagrid-rowgroup -->
+                                              <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                                                <!-- datagrid-row -->
+                                                <div class="datagrid-row" role="row">
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                                                       style="min-width: 32rem;">
+                                                    마트
+                                                  </div>
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 24rem;">
+                                                    <div class="datagrid-cell-inner d-flex">
+                                                      <div class="mr-auto">9,657,244</div>
+                                                      <button class="btn-circle btn-circle-xs btn-text-secondary">
+                                                        <i class="ico ic-close"></i>
+                                                      </button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <!-- /datagrid-row -->
+                                                <!-- datagrid-row -->
+                                                <div class="datagrid-row" role="row">
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                                                       style="min-width: 32rem;">
+                                                    병원
+                                                  </div>
+                                                  <div class="datagrid-cell" role="gridcell" aria-colindex="2" style="width: 24rem;">
+                                                    <div class="datagrid-cell-inner d-flex">
+                                                      <div class="mr-auto">1,465,885</div>
+                                                      <button class="btn-circle btn-circle-xs btn-text-secondary">
+                                                        <i class="ico ic-close"></i>
+                                                      </button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <!-- /datagrid-row -->
+                                              </div>
+                                              <!-- datagrid-rowgroup -->
+                                            </div>
+                                            <!-- /datagrid -->
+                                          </div>
+                                          <!-- /datagrid-responsive -->
+                                          <!-- card-footer -->
+                                          <div class="card-footer">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                              <strong>선택한 업종 <span class="text-primary">2</span>개</strong>
+                                              <button class="btn btn-sm btn-text-secondary">
+                                                <i class="ico ic-delete"></i>
+                                                전체삭제
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <!-- /card-footer -->
+                                        </div>
+                                        <!-- /card -->
+                                      </div>
+                                      <!-- /card-group -->
+                </div>
+                <!-- col -->
+              </div>
+              <!-- /row -->
+
+              <div class="border-top"></div>
+              <!-- row -->
+              <div class="row py-2 align-items-center">
+                <!-- col -->
+                <div class="col-2">
+                  <strong>지역</strong>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-10">
+
+                </div>
+                <!-- /col -->
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /card-body -->
+          </div>
+          <!-- /card -->
+
+          <!-- card -->
+                    <div class="card mt-2">
+                      <!-- card-body -->
+                      <div class="card-body">
+                        <!-- row -->
+                        <div class="row py-2 align-items-center">
+                          <!-- col -->
+                          <div class="col-2">
+                            <strong>모수 확인</strong>
+                          </div>
+                          <!-- /col -->
+                          <!-- col -->
+                          <div class="col-10">
+                            <span class="py-1 mr-2">0</span>
+                            <button class="btn btn-outlined-secondary btn-sm">모수확인</button>
+                            <small class="text-danger ml-2">
+                              모수 확인 후 오디언스를 생성할 수 있습니다.
+                            </small>
+                          </div>
+                          <!-- /col -->
+                        </div>
+                        <!-- /row -->
+                      </div>
+                      <!-- /card-body -->
+                    </div>
+                    <!-- /card -->
+
+
+          <div class="text-right mt-2">
+            <button type="button" class="btn btn-outlined-secondary">취소</button>
+            <button type="button" class="btn btn-contained-primary">오디언스 만들기</button>
+          </div> 
+        </div>
+        <!-- /container -->
+      </div>
+      <!-- /mainbody -->
+    </main>
+    <!-- mainContent -->
+  </div>
+  <!-- contentWrapper -->
+</div>
+<!-- teWrapper -->
+</body>
+</html>
