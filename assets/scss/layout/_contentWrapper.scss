@@ -58,11 +58,3 @@
   @extend .align-items-center;
 }
 
-.mainbody {
-  .card-header-nav-tabs {
-    @extend .d-flex;
-    @extend .align-items-center;
-    height: $card-header-nav-tabs-height;
-  }
-}
-

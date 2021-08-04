@@ -108,7 +108,7 @@
     <!-- mainContent -->
     <main class="mainContent pb-2">
       <!-- mainheader -->
-      <header class="mainheader">
+      <header class="mainheader mainheader-sticky">
         <!-- container -->
         <div class="container">
           <div class="mainheader__inner">
@@ -125,11 +125,12 @@
       <div class="mainbody">
         <!-- container -->
         <div class="container">
-          <!-- d-flex -->
-          <div class="bg-white d-flex align-items-center justify-content-between">
-            <nav class="mr-auto">
+          <!-- card -->
+          <div class="card  border-top-0">
+            <!-- card-header -->
+            <div class="card-header card-header-nav-tabs justify-content-between border-bottom-0 py-0 pr-2 pl-0">
               <!-- tab -->
-              <ul class="tab tab-nav h-fixed-7 m-0" id="">
+              <ul class="tab tab-nav h-fixed-8">
                 <li class="tab-item is-active">
                   <a class="tab-link" href="audience__create-category.html" role="tab">
                     TW 카테고리
@@ -154,55 +155,114 @@
                   <a class="tab-link" href="audience__create-offline.html" role="tab">
                     오프라인 업종
                   </a>
+                </li>
+                <li class="tab-item">
                   <a class="tab-link" href="audience__create-postback.html" role="tab">
                     포스트백 추출
                   </a>
                 </li>
               </ul>
               <!-- /tab -->
-            </nav>
-            <div class="form-group mr-2 my-1">
-              <label class="d-none" for="search-audience">검색</label>
-              <input type="search" class="form-control" id="search-audience" placeholder="오디언스 검색">
+              <div class="form-group my-1">
+                <label class="d-none" for="search-audience">검색</label>
+                <input type="search" class="form-control" id="search-audience" placeholder="오디언스 검색">
+              </div>
             </div>
+            <!-- /card-header -->
           </div>
-          <!-- /d-flex -->
+          <!-- /card -->
 
-          <div class="mt-2">
-            <div class="list-group-aud-twcategory">
-              <button class="list-group-item">
-                가정/생활 <i class="ico ic-chevron-right ml-auto"></i>
-              </button>
-              <a class="list-group-item" href="#">
-                가족
-              </a>
-              <a class="list-group-item" href="#">
-                건강/의료
-              </a>
-              <a class="list-group-item" href="#">
-                게임
-              </a>
-              <a class="list-group-item" href="#">
-                교육
-              </a>
-              <a class="list-group-item" href="#">
-                금융
-              </a>
-              <a class="list-group-item" href="#">
-                기타
-              </a>
-              <a class="list-group-item" href="#">
-                뉴스
-              </a>
-            </div>
+          <!-- card -->
+          <div class="card mt-2">
+              <div class="list-group list-group-noedge list-group-horizontal list-group-horz5">
+                <button class="list-group-item is-active">
+                  가정/생활
+                </button>
+                <button class="list-group-item">
+                  가족
+                </button>
+                <button class="list-group-item">
+                  건강/의료
+                </button>
+                <button class="list-group-item">
+                  게임
+                </button>
+                <button class="list-group-item">
+                  교육
+                </button>
+
+                <button class="list-group-item">
+                  금융
+                </button>
+                <button class="list-group-item">
+                  기타
+                </button>
+                <button class="list-group-item">
+                  뉴스
+                </button>
+                <button class="list-group-item">
+                  도서/참고자료
+                </button>
+                <button class="list-group-item">
+                  라이프스타일
+                </button>
+
+                <button class="list-group-item">
+                  미용
+                </button>
+                <button class="list-group-item">
+                  복지/행정/단체
+                </button>
+                <button class="list-group-item">
+                  비즈니스/산업
+                </button>
+                <button class="list-group-item">
+                  사진/동영상
+                </button>
+                <button class="list-group-item">
+                  생산성
+                </button>
+
+                <button class="list-group-item">
+                  소셜네트워크
+                </button>
+                <button class="list-group-item">
+                  쇼핑
+                </button>
+                <button class="list-group-item">
+                  스포츠/레저
+                </button>
+                <button class="list-group-item">
+                  식음료
+                </button>
+                <button class="list-group-item">
+                  엔터테인먼트
+                </button>
+
+                <button class="list-group-item">
+                  여행/교통
+                </button>
+                <button class="list-group-item">
+                  유틸리티
+                </button>
+                <button class="list-group-item">
+                  자동차
+                </button>
+                <button class="list-group-item">
+                  정보/통신
+                </button>
+                <button class="list-group-item">
+                  패션의류
+                </button>
+              </div>
           </div>
 
           <!-- card -->
-          <div class="card mt-3">
+          <div class="card mt-2">
             <!-- datagrid-responsive -->
             <div class="datagrid-responsive" style="height: 50rem;">
               <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid"
-                   aria-describedby="table-title">
+                   aria-describedby="datagrid-aud-category">
                 <!-- datagrid-rowgroup -->
                 <div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
                   <!-- datagrid-row -->
@@ -525,5 +585,13 @@
   <!-- contentWrapper -->
 </div>
 <!-- teWrapper -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../../assets/js/tw-atd-normal.js"></script>
+
+
 </body>
 </html>

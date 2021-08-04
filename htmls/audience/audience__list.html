@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>TW__Audience</title>
+	<title>TW__Audience 목록</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
@@ -108,7 +108,7 @@
 		<!-- mainContent -->
 		<main class="mainContent pb-2">
 			<!-- mainheader -->
-			<header class="mainheader">
+			<header class="mainheader mainheader-sticky">
 				<!-- container -->
 				<div class="container">
 					<div class="mainheader__inner">
@@ -135,7 +135,7 @@
 				<div class="container">
 					<!-- d-flex -->
 					<div class="d-flex align-items-center py-2">
-						<a class="btn btn-contained-primary" href="#">
+						<a class="btn btn-contained-primary" href="audience__create-category.html">
 							<i class="ico ic-plus"></i> 새 오디언스
 						</a>
 						<a class="btn btn-contained-secondary ml-1" href="#">
@@ -296,7 +296,7 @@
 														오디언스 복사
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
-														 data-target="#md-aud-create-similar-target">
+														 data-target="#md-aud-create-lookalike">
 														MI DMP 유사타겟 만들기
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
@@ -402,7 +402,7 @@
 														오디언스 복사
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
-														 data-target="#md-aud-create-similar-target">
+														 data-target="#md-aud-create-lookalike">
 														MI DMP 유사타겟 만들기
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
@@ -508,7 +508,7 @@
 														오디언스 복사
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
-														 data-target="#md-aud-create-similar-target">
+														 data-target="#md-aud-create-lookalike">
 														MI DMP 유사타겟 만들기
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
@@ -621,7 +621,7 @@
 														오디언스 복사
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
-														 data-target="#md-aud-create-similar-target">
+														 data-target="#md-aud-create-lookalike">
 														MI DMP 유사타겟 만들기
 													</a>
 													<a class="dropdown-item" href="#" data-toggle="modal"
@@ -701,14 +701,35 @@
 					<!-- /nav -->
 
 					<button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-persona">
-						페르소나(보기)
+						페르소나-보기
 					</button>
 					<button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-game">
-						게임(보기)
+						게임-보기
 					</button>
 					<button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-file">
-						파일(보기)
+						파일-보기
 					</button>
+          <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#">
+            오디언스조합
+          </button>
+          <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-ai">
+            AI 예측모수
+          </button>
+          <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-lookalike">
+            MI-DMP 유사타겟
+          </button>
+          <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-bora">
+            보라 앱패키지
+          </button>
+          <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-postback">
+            포스트백 추출
+          </button>
+          <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-offline">
+            오프라인 업종
+          </button>
+          <button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-aud-view-except">
+            제외 적용 오디언스
+          </button>
 
 				</div>
 				<!-- /container -->
@@ -722,8 +743,8 @@
 <!-- /twWrapper -->
 
 
-<!-- modal#md-aud-create-similar-target -->
-<div class="modal" id="md-aud-create-similar-target" tabindex="-1" aria-labelledby="creatAudSimilarTarget"
+<!-- modal#md-aud-create-lookalike -->
+<div class="modal" id="md-aud-create-lookalike" tabindex="-1" aria-labelledby="creatAudLookalike"
 		 aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<!-- modal-container -->
@@ -805,7 +826,7 @@
 		<!-- /modal-container -->
 	</div>
 </div>
-<!-- /modal#md-aud-create-similar-target -->
+<!-- /modal#md-aud-create-lookalike -->
 
 
 <!-- modal#md-aud-checking-matching-rate -->
@@ -1998,8 +2019,7 @@
 								<!-- /datagrid-rowgroup -->
 							</div>
 							<!-- /datagrid -->
-
-							<div class="font-size-sm text-secondary p-2">
+							<div class="font-size-sm text-secondary p-2 border-top">
 								&divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
 								해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
 							</div>
@@ -2105,7 +2125,6 @@
 						<!-- /tab -->
 					</div>
 					<!-- /card-header -->
-
 					<!-- tab-content -->
 					<div class="tab-content" id="aud-file-account-content">
 						<!-- tab-pane -->
@@ -2307,8 +2326,7 @@
 								<!-- /datagrid-rowgroup -->
 							</div>
 							<!-- /datagrid -->
-
-							<div class="font-size-sm text-secondary p-2">
+							<div class="font-size-sm text-secondary p-2 border-top">
 								&divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
 								해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
 							</div>
@@ -2331,6 +2349,1504 @@
 </div>
 <!-- /modal#md-aud-view-file -->
 
+
+<!-- modal#md-aud-view-ai -->
+<div class="modal" id="md-aud-view-ai" tabindex="-1" aria-labelledby="audViewAi"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">
+          [11st]_AB테스트_IGAW_AILAB_2
+        </h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <!-- wrap -->
+        <div class="wrap p-2">
+          <!-- row -->
+          <div class="row">
+            <div class="col-3">
+              <strong>오디언스 종류</strong>
+            </div>
+            <div class="col-9">
+              <i class="ico ic-ai-chip"></i>
+              A.I 예측모수
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>오디언스 규모</strong>
+            </div>
+            <div class="col-9">
+              100,271
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /wrap -->
+        <!-- card -->
+        <div class="card border-0 border-top">
+          <!-- card-header -->
+          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
+            <!-- tab -->
+            <ul class="tab tab-nav h-fixed-6 m-0" role="tablist">
+              <li class="tab-item is-active">
+                <a class="tab-link" href="#aud-adaccount-datagrid-forAi" role="tab" data-toggle="tab" aria-controls="aud-adaccount-datagrid-forAi" aria-selected="true">
+                  광고 계정
+                </a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#aud-shareaccount-datagrid-forAi" role="tab" data-toggle="tab" aria-controls="aud-shareaccount-datagrid-forAi" aria-selected="false">
+                  공유 계정
+                </a>
+              </li>
+            </ul>
+            <!-- /tab -->
+          </div>
+          <!-- /card-header -->
+          <!-- tab-content -->
+          <div class="tab-content" id="aud-ai-account-content">
+            <!-- tab-pane -->
+            <div class="tab-pane fade show active" id="aud-adaccount-datagrid-forAi" role="tabpanel" aria-labelledby="tab-audAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audAdAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      채널
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      광고 계정 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      광고 게정 ID
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      온보딩 날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner">
+                        선테이토즈_스누피 틀린그림찾기
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2583835958
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+            </div>
+            <!-- /tab-pane -->
+            <!-- tab-pane -->
+            <div class="tab-pane" id="aud-shareaccount-datagrid-forAi" role="tabpanel" aria-labelledby="tab-audShareAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audShareAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      회사 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      사용자 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      공유날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        회사이름회사이름회사이름회사이름 회사이름회사이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        사용자 이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+
+              <div class="font-size-sm text-secondary p-2 border-top">
+                &divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
+                해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
+              </div>
+            </div>
+            <!-- /tab-pane -->
+          </div>
+          <!-- tab-content -->
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-view-ai -->
+
+
+<!-- modal#md-aud-view-lookalike -->
+<div class="modal" id="md-aud-view-lookalike" tabindex="-1" aria-labelledby="audViewLookalike"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">
+          MI DMP 유사타겟_2020102984845
+        </h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <!-- wrap -->
+        <div class="wrap p-2">
+          <!-- row -->
+          <div class="row">
+            <div class="col-3">
+              <strong>오디언스 종류</strong>
+            </div>
+            <div class="col-9">
+              <i class="ico ic-mobileindex"></i>
+              MI DMP 유사타겟
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>원본 오디언스</strong>
+            </div>
+            <div class="col-9">
+              오디언스 조합 test
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>오디언스 범위</strong>
+            </div>
+            <div class="col-9">
+              <div class="audience-ranger-status">
+                <div class="checkers">
+                  <div class="checker is-active"></div>
+                  <div class="checker is-active"></div>
+                  <div class="checker is-active"></div>
+                  <div class="checker is-active"></div>
+                  <div class="checker is-active"></div>
+                </div>
+              </div>
+              <span class="ml-1">(1~5)</span>
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /wrap -->
+        <!-- card -->
+        <div class="card border-0 border-top">
+          <!-- card-header -->
+          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
+            <!-- tab -->
+            <ul class="tab tab-nav h-fixed-6 m-0" role="tablist">
+              <li class="tab-item is-active">
+                <a class="tab-link" href="#aud-adaccount-datagrid-forLookalike" role="tab" data-toggle="tab" aria-controls="aud-adaccount-datagrid-forLookalike" aria-selected="true">
+                  광고 계정
+                </a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#aud-shareaccount-datagrid-forLookalike" role="tab" data-toggle="tab" aria-controls="aud-shareaccount-datagrid-forLookalike" aria-selected="false">
+                  공유 계정
+                </a>
+              </li>
+            </ul>
+            <!-- /tab -->
+          </div>
+          <!-- /card-header -->
+          <!-- tab-content -->
+          <div class="tab-content" id="aud-lookalike-account-content">
+            <!-- tab-pane -->
+            <div class="tab-pane fade show active" id="aud-adaccount-datagrid-forLookalike" role="tabpanel" aria-labelledby="tab-audAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audAdAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      채널
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      광고 계정 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      광고 게정 ID
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      온보딩 날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner">
+                        선테이토즈_스누피 틀린그림찾기
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2583835958
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+            </div>
+            <!-- /tab-pane -->
+            <!-- tab-pane -->
+            <div class="tab-pane" id="aud-shareaccount-datagrid-forLookalike" role="tabpanel" aria-labelledby="tab-audShareAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audShareAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      회사 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      사용자 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      공유날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        회사이름회사이름회사이름회사이름 회사이름회사이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        사용자 이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+
+              <div class="font-size-sm text-secondary p-2 border-top">
+                &divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
+                해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
+              </div>
+            </div>
+            <!-- /tab-pane -->
+          </div>
+          <!-- tab-content -->
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-view-lookalike -->
+
+
+<!-- modal#md-aud-view-bora -->
+<div class="modal" id="md-aud-view-bora" tabindex="-1" aria-labelledby="audViewBora"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">
+          보라 오디언스
+        </h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <!-- wrap -->
+        <div class="wrap p-2">
+          <!-- row -->
+          <div class="row">
+            <div class="col-3">
+              <strong>오디언스 종류</strong>
+            </div>
+            <div class="col-9">
+              <i class="ico ic-bora"></i>
+              보라 - 앱 패키지
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>오디언스 규모</strong>
+            </div>
+            <div class="col-9">
+              100,271
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /wrap -->
+
+        <!-- card -->
+        <div class="card border-0 border-top">
+          <!-- card-header -->
+          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
+            <!-- tab -->
+            <ul class="tab tab-nav h-fixed-6 m-0" role="tablist">
+              <li class="tab-item is-active">
+                <a class="tab-link" href="#aud-bora-shareaccount-datagrid" role="tab" data-toggle="tab" aria-controls="aud-bora-shareaccount-datagrid" aria-selected="true">
+                  공유 계정
+                </a>
+              </li>
+            </ul>
+            <!-- /tab -->
+          </div>
+          <!-- /card-header -->
+          <!-- tab-content -->
+          <div class="tab-content" id="aud-bora-account-content">
+            <!-- tab-pane -->
+            <div class="tab-pane" id="aud-bora-shareaccount-datagrid" role="tabpanel" aria-labelledby="tab-audShareAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audShareAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      회사 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      사용자 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      공유날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        회사이름회사이름회사이름회사이름 회사이름회사이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        사용자 이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+
+              <div class="font-size-sm text-secondary p-2 border-top">
+                &divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
+                해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
+              </div>
+            </div>
+            <!-- /tab-pane -->
+          </div>
+          <!-- tab-content -->
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-view-bora -->
+
+
+<!-- modal#md-aud-view-postback -->
+<div class="modal" id="md-aud-view-postback" tabindex="-1" aria-labelledby="audViewPostback"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">
+          포스트백 추출
+        </h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <!-- wrap -->
+        <div class="wrap p-2">
+          <!-- row -->
+          <div class="row">
+            <div class="col-3">
+              <strong>오디언스 종류</strong>
+            </div>
+            <div class="col-9">
+              <i class="ico ic-postback"></i>
+              포스트백 추출
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>패키지명</strong>
+            </div>
+            <div class="col-9">
+              com.postback.pp
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>어트리뷰션 툴</strong>
+            </div>
+            <div class="col-9">
+              appsflyer
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>대상국가</strong>
+            </div>
+            <div class="col-9">
+              대한민국
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>세부 조건</strong>
+            </div>
+            <div class="col-9">
+              20200601 이후에 접속한 유저
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>자동 업데이트</strong>
+            </div>
+            <div class="col-9">
+              Off
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>이벤트 그룹</strong>
+            </div>
+            <div class="col-9">
+              -
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>이벤트 이름</strong>
+            </div>
+            <div class="col-9">
+              install
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /wrap -->
+
+        <!-- card -->
+        <div class="card border-0 border-top">
+          <!-- card-header -->
+          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
+            <!-- tab -->
+            <ul class="tab tab-nav h-fixed-6 m-0" role="tablist">
+              <li class="tab-item is-active">
+                <a class="tab-link" href="#aud-postback-adaccount-datagrid" role="tab" data-toggle="tab" aria-controls="aud-postback-adaccount-datagrid" aria-selected="true">
+                  광고 계정
+                </a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#aud-postback-shareaccount-datagrid" role="tab" data-toggle="tab" aria-controls="aud-postback-shareaccount-datagrid" aria-selected="false">
+                  공유 계정
+                </a>
+              </li>
+            </ul>
+            <!-- /tab -->
+          </div>
+          <!-- /card-header -->
+          <!-- tab-content -->
+          <div class="tab-content" id="aud-postback-account-content">
+            <!-- tab-pane -->
+            <div class="tab-pane fade show active" id="aud-postback-adaccount-datagrid" role="tabpanel" aria-labelledby="tab-audAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audAdAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      채널
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      광고 계정 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      광고 게정 ID
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      온보딩 날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner">
+                        선테이토즈_스누피 틀린그림찾기
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2583835958
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+            </div>
+            <!-- /tab-pane -->
+            <!-- tab-pane -->
+            <div class="tab-pane" id="aud-postback-shareaccount-datagrid" role="tabpanel" aria-labelledby="tab-audShareAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audShareAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      회사 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      사용자 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      공유날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        회사이름회사이름회사이름회사이름 회사이름회사이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        사용자 이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+
+              <div class="font-size-sm text-secondary p-2 border-top">
+                &divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
+                해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
+              </div>
+            </div>
+            <!-- /tab-pane -->
+          </div>
+          <!-- tab-content -->
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-view-postback -->
+
+
+<!-- modal#md-aud-view-offline -->
+<div class="modal" id="md-aud-view-offline" tabindex="-1" aria-labelledby="audViewOffline"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">
+          오프라인 업종_2021
+        </h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <!-- wrap -->
+        <div class="wrap p-2">
+          <!-- row -->
+          <div class="row">
+            <div class="col-3">
+              <strong>오디언스 종류</strong>
+            </div>
+            <div class="col-9">
+              <i class="ico ic-store-fill"></i>
+              오프라인 업종
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>업종 목록</strong>
+            </div>
+            <div class="col-9">
+              마트
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>지역(시/도)</strong>
+            </div>
+            <div class="col-9">
+              서울특별시
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>지역(군/구)</strong>
+            </div>
+            <div class="col-9">
+              종로구, 강서구
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /wrap -->
+
+        <!-- card -->
+        <div class="card border-0 border-top">
+          <!-- card-header -->
+          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
+            <!-- tab -->
+            <ul class="tab tab-nav h-fixed-6 m-0" role="tablist">
+              <li class="tab-item is-active">
+                <a class="tab-link" href="#aud-offline-adaccount-datagrid" role="tab" data-toggle="tab" aria-controls="aud-offline-adaccount-datagrid" aria-selected="true">
+                  광고 계정
+                </a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#aud-offline-shareaccount-datagrid" role="tab" data-toggle="tab" aria-controls="aud-offline-shareaccount-datagrid" aria-selected="false">
+                  공유 계정
+                </a>
+              </li>
+            </ul>
+            <!-- /tab -->
+          </div>
+          <!-- /card-header -->
+          <!-- tab-content -->
+          <div class="tab-content" id="aud-offline-account-content">
+            <!-- tab-pane -->
+            <div class="tab-pane fade show active" id="aud-offline-adaccount-datagrid" role="tabpanel" aria-labelledby="tab-audAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audAdAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      채널
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      광고 계정 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      광고 게정 ID
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      온보딩 날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner">
+                        선테이토즈_스누피 틀린그림찾기
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2583835958
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+            </div>
+            <!-- /tab-pane -->
+            <!-- tab-pane -->
+            <div class="tab-pane" id="aud-offline-shareaccount-datagrid" role="tabpanel" aria-labelledby="tab-audShareAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audShareAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      회사 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      사용자 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      공유날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        회사이름회사이름회사이름회사이름 회사이름회사이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        사용자 이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+
+              <div class="font-size-sm text-secondary p-2 border-top">
+                &divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
+                해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
+              </div>
+            </div>
+            <!-- /tab-pane -->
+          </div>
+          <!-- tab-content -->
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-view-offline -->
+
+
+<!-- modal#md-aud-view-offline -->
+<div class="modal" id="md-aud-view-except" tabindex="-1" aria-labelledby="audViewExcept"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- modal-container -->
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title">
+          제외적용 오디언스
+        </h3>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <!-- wrap -->
+        <div class="wrap p-2">
+          <!-- row -->
+          <div class="row">
+            <div class="col-3">
+              <strong>오디언스 종류</strong>
+            </div>
+            <div class="col-9">
+              <i class="ico ic-user-minus"></i>
+              제외적용 오디언스
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>원본 오디언스</strong>
+            </div>
+            <div class="col-9">
+              오디언스 조합 test
+            </div>
+          </div>
+          <!-- /row -->
+          <!-- row -->
+          <div class="row mt-1">
+            <div class="col-3">
+              <strong>제외 오디언스</strong>
+            </div>
+            <div class="col-9">
+              20200601_test_앱패키지
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /wrap -->
+
+        <!-- card -->
+        <div class="card border-0 border-top">
+          <!-- card-header -->
+          <div class="card-header card-header-nav-tabs justify-content-between py-0 pr-2 pl-0">
+            <!-- tab -->
+            <ul class="tab tab-nav h-fixed-6 m-0" role="tablist">
+              <li class="tab-item is-active">
+                <a class="tab-link" href="#aud-except-adaccount-datagrid" role="tab" data-toggle="tab" aria-controls="aud-except-adaccount-datagrid" aria-selected="true">
+                  광고 계정
+                </a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#aud-except-shareaccount-datagrid" role="tab" data-toggle="tab" aria-controls="aud-except-shareaccount-datagrid" aria-selected="false">
+                  공유 계정
+                </a>
+              </li>
+            </ul>
+            <!-- /tab -->
+          </div>
+          <!-- /card-header -->
+          <!-- tab-content -->
+          <div class="tab-content" id="aud-except-account-content">
+            <!-- tab-pane -->
+            <div class="tab-pane fade show active" id="aud-except-adaccount-datagrid" role="tabpanel" aria-labelledby="tab-audAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audAdAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      채널
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      광고 계정 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      광고 게정 ID
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      온보딩 날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 6rem; width: 6rem; max-width: 6rem;">
+                      <div class="datagrid-cell-inner text-center">
+                        <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner">
+                        선테이토즈_스누피 틀린그림찾기
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2583835958
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="6"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+            </div>
+            <!-- /tab-pane -->
+            <!-- tab-pane -->
+            <div class="tab-pane" id="aud-except-shareaccount-datagrid" role="tabpanel" aria-labelledby="tab-audShareAccountDatagrid">
+              <!-- datagrid -->
+              <div class="datagrid datagrid-hover datagrid-align-items-center" role="grid" aria-describedby="audShareAccountInfo">
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      상태
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="2"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      회사 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      사용자 이름
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      공유날짜
+                    </div>
+                    <div class="datagrid-cell" role="columnheader" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      관리
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- datagrid-rowgroup -->
+                <!-- datagrid-rowgroup -->
+                <div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+                  <!-- datagrid-row -->
+                  <div class="datagrid-row" role="row">
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="1"
+                         style="min-width: 12rem; width: 14rem; max-width: 14rem;">
+                      <div class="datagrid-cell-inner">
+                        <i class="ico ic-circle-fill text-success"></i>
+                        온보딩 완료
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="2"
+                         style="min-width: 22rem; width: 24rem; max-width: 26rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        회사이름회사이름회사이름회사이름 회사이름회사이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="3"
+                         style="min-width: 16rem; width: 20rem; max-width: 24rem">
+                      <div class="datagrid-cell-inner text-truncate">
+                        사용자 이름
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="4"
+                         style="min-width: 10rem; width: 12rem; max-width: 12rem;">
+                      <div class="datagrid-cell-inner">
+                        2020.06.30
+                      </div>
+                    </div>
+                    <div class="datagrid-cell" role="gridcell" aria-colindex="5"
+                         style="min-width: 8rem; width: 10rem; max-width: 10rem;">
+                      <div class="datagrid-cell-inner">
+                        <button class="btn btn-outlined-danger btn-sm">연결 해제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /datagrid-row -->
+                </div>
+                <!-- /datagrid-rowgroup -->
+              </div>
+              <!-- /datagrid -->
+
+              <div class="font-size-sm text-secondary p-2 border-top">
+                &divonx; 원하는 사용자와의 오디언스 공유를 해제 할 수 있습니다. 공유 해제 시 해당 사용자는 더 이상 이 오디언스를 사용 할 수 없습니다.
+                해당 사용자가 온보딩 한 광고 계정에 이 오디언스 업데이트도 중지 됩니다.
+              </div>
+            </div>
+            <!-- /tab-pane -->
+          </div>
+          <!-- tab-content -->
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /modal-body -->
+      <!-- modal-footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+      </div>
+      <!-- /modal-footer -->
+    </div>
+    <!-- /modal-container -->
+  </div>
+</div>
+<!-- /modal#md-aud-view-offline -->
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

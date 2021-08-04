@@ -1,0 +1,9 @@
+
+
+.card-header-nav-tabs {
+  @extend .d-flex;
+  @extend .align-items-center;
+  .tab {
+    margin: -$border-width;
+  }
+}
