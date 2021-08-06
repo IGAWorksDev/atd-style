@@ -213,13 +213,13 @@ $component-active-icon-bg: escape-svg($component-active-icon) no-repeat right $c
 $component-active-padding-x: ($component-padding-x + $component-active-icon-size + ($component-padding-x * 0.5)) !default;
 
 // Hover
-$component-hover-color: $dark !default;
+$component-hover-color: $primary !default;
 $component-hover-bg: var(--primary-50) !default;
 
 // selected
-$component-selected-color: $base !default;
-$component-selected-bg: $component-bg-alt !default;
-$component-selected-icon-color: $base !default;
+$component-selected-color: $primary !default;
+$component-selected-bg: transparent !default;
+$component-selected-icon-color: $primary !default;
 $component-selected-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-selected-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>") !default;
 $component-selected-icon-size: $font-size-base !default;
 $component-selected-icon-bg: escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size !default;
@@ -653,7 +653,7 @@ $list-group-hover-color: $component-hover-color;
 $list-group-hover-bg: $component-hover-bg;
 
 $list-group-active-color: $component-active-color;
-$list-group-active-bg: $component-active-bg $component-active-icon-bg;
+$list-group-active-bg: $component-active-bg;
 $list-group-active-padding-x: $component-active-padding-x;
 
 $list-group-selected-color: $component-selected-color;

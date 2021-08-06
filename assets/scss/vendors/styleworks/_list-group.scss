@@ -33,11 +33,13 @@ button.list-group-item {
 
 .list-group-item.is-active {
   @include is-component-active($list-group-active-color, $list-group-active-bg);
+  font-weight: $font-weight-bold;
 }
 
 
 .list-group-item.is-selected {
   @include is-component-icon-selected($list-group-selected-color, $list-group-selected-padding-x, $list-group-selected-bg);
+  font-weight: $font-weight-bold;
 }
 
 

@@ -1061,8 +1061,8 @@ textarea.form-control { height: auto; }
 
 .dropdown-item { display: block; width: 100%; padding: 0.8rem 1.6rem; clear: both; color: #373a3c; font-size: 1.4rem; line-height: 2.2rem; text-align: inherit; text-decoration: none; white-space: nowrap; background-color: transparent; border: 0; outline: 0; }
 .dropdown-item:active, .dropdown-item.is-active { color: var(--primary-500); padding-right: 3.8rem; background: var(--primary-50) url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='var%28--primary-500%29' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem; text-decoration: none; }
-.dropdown-item:hover, .dropdown-item:focus { color: #373a3c; background-color: var(--primary-50); }
-.dropdown-item.is-selected { color: #373a3c !important; padding-right: 3.8rem; background: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%23373a3c' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem !important; text-decoration: none; cursor: default; }
+.dropdown-item:hover, .dropdown-item:focus { color: #0081f6; background-color: var(--primary-50); }
+.dropdown-item.is-selected { color: #0081f6 !important; padding-right: 3.8rem; background: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%230081f6' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem !important; text-decoration: none; }
 .dropdown-item.is-disabled, .dropdown-item:disabled { color: #b9bdc1 !important; background-color: transparent !important; cursor: default !important; pointer-events: none !important; }
 
 .dropdown-menu.show { display: block; }
@@ -1102,11 +1102,11 @@ textarea.form-control { height: auto; }
 .list-group-item + .list-group-item { border-top-width: 0; }
 
 a.list-group-item, button.list-group-item { text-align: inherit; text-decoration: none; outline: none; cursor: pointer; }
-a.list-group-item:hover, button.list-group-item:hover { color: #373a3c; background-color: var(--primary-50); }
+a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; background-color: var(--primary-50); }
 
-.list-group-item.is-active { color: var(--primary-500); background-color: var(--primary-50) url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='var%28--primary-500%29' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem; }
+.list-group-item.is-active { color: var(--primary-500); background-color: var(--primary-50); font-weight: 700; }
 
-.list-group-item.is-selected { color: #373a3c !important; padding-right: 3.8rem; background: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%23373a3c' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem !important; text-decoration: none; cursor: default; }
+.list-group-item.is-selected { color: #0081f6 !important; padding-right: 3.8rem; background: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%230081f6' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem !important; text-decoration: none; font-weight: 700; }
 
 .list-group-item.is-disabled, .list-group-item[disabled] { color: #b9bdc1 !important; background-color: transparent !important; cursor: default !important; pointer-events: none !important; }
 
@@ -1919,10 +1919,6 @@ a:hover { text-decoration: underline; }
 .list-group-grid--3 { grid-template-columns: repeat(3, 1fr); }
 
 .list-group-grid--5 { grid-template-columns: repeat(5, 1fr); }
-
-.list-group-horz3 { display: grid; grid-template-columns: repeat(3, 1fr); }
-.list-group-horz3 .list-group-item + .list-group-item { border-left: 1px solid #e8e9ea; }
-.list-group-horz3 .list-group-item.is-active { padding-right: 2.4rem; background-position: right 0.8rem center; }
 
 .list-group-borderless .list-group-item { border-color: transparent !important; }
 
