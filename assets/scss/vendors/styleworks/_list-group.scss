@@ -59,3 +59,10 @@ button.list-group-item {
     }
   }
 }
+
+
+.list-group-borderless {
+  .list-group-item {
+    border-color: transparent !important;
+  }
+}
