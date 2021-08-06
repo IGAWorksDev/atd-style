@@ -116,7 +116,7 @@
 
   &:active,
   &.is-active {
-    @include is-component-icon-active($dropdown-active-color, $dropdown-active-padding-x, $dropdown-active-bg);
+    @include is-component-active($dropdown-active-color, $dropdown-active-bg);
   }
 
   &:hover,
