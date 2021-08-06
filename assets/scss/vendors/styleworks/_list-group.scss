@@ -32,7 +32,7 @@ button.list-group-item {
 
 
 .list-group-item.is-active {
-  @include is-component-icon-active($list-group-active-color, $list-group-active-padding-x, $list-group-active-bg);
+  @include is-component-active($list-group-active-color, $list-group-active-bg);
 }
 
 
@@ -45,9 +45,6 @@ button.list-group-item {
 .list-group-item[disabled]{
   @include is-component-disabled();
 }
-
-
-
 
 
 //  border와 border-radius가 제거된 스타일

@@ -1104,14 +1104,14 @@ textarea.form-control { height: auto; }
 a.list-group-item, button.list-group-item { text-align: inherit; text-decoration: none; outline: none; cursor: pointer; }
 a.list-group-item:hover, button.list-group-item:hover { color: #373a3c; background-color: var(--primary-50); }
 
-.list-group-item.is-active { color: var(--primary-500); padding-right: 3.8rem; background: var(--primary-50) url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='var%28--primary-500%29' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem; text-decoration: none; }
+.list-group-item.is-active { color: var(--primary-500); background-color: var(--primary-50) url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='var%28--primary-500%29' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem; }
 
 .list-group-item.is-selected { color: #373a3c !important; padding-right: 3.8rem; background: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='%23373a3c' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/1.4rem !important; text-decoration: none; cursor: default; }
 
 .list-group-item.is-disabled, .list-group-item[disabled] { color: #b9bdc1 !important; background-color: transparent !important; cursor: default !important; pointer-events: none !important; }
 
-.list-group-noedge > .list-group-item { border-width: 0 0 1px; }
-.list-group-noedge > .list-group-item:last-child { border-bottom-width: 0; }
+.list-group-noedge > .list-group-item, .list-group-grid > .list-group-item { border-width: 0 0 1px; }
+.list-group-noedge > .list-group-item:last-child, .list-group-grid > .list-group-item:last-child { border-bottom-width: 0; }
 
 .pagination { list-style: none; padding: 0; margin: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -1149,7 +1149,7 @@ a.list-group-item:hover, button.list-group-item:hover { color: #373a3c; backgrou
 
 .card-body { padding: 0.8rem 1.6rem; }
 
-.card-footer { padding: 0.8rem 1.6rem; background-color: #fff; border-top: 1px solid #e8e9ea; }
+.card-footer { padding: 0.8rem 1.6rem; background-color: #f3f4f5; border-top: 1px solid #e8e9ea; }
 .card-footer:last-child { border-radius: 0 0 0.4rem 0.4rem; }
 
 .card.is-blank .card-header { background-color: #f3f4f5; }
@@ -1910,19 +1910,25 @@ a:hover { text-decoration: underline; }
 
 .daterangepicker .calendars-container { padding-right: 0 !important; padding-left: 0 !important; }
 
-.list-group-horz2 { display: grid; grid-template-columns: repeat(2, 1fr); }
-.list-group-horz2 .list-group-item + .list-group-item { border-left: 1px solid #e8e9ea; margin-left: -1px; }
+.list-group-grid { display: grid; }
+.list-group-grid .list-group-item { border-right-width: 1px; margin-right: -1px; }
+.list-group-grid .list-group-item:last-child { border-bottom-width: 1px; }
+
+.list-group-grid--2 { grid-template-columns: repeat(2, 1fr); }
+
+.list-group-grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+.list-group-grid--5 { grid-template-columns: repeat(5, 1fr); }
 
 .list-group-horz3 { display: grid; grid-template-columns: repeat(3, 1fr); }
 .list-group-horz3 .list-group-item + .list-group-item { border-left: 1px solid #e8e9ea; }
 .list-group-horz3 .list-group-item.is-active { padding-right: 2.4rem; background-position: right 0.8rem center; }
 
-.list-group-horz5 { display: grid; grid-template-columns: repeat(5, 1fr); }
-.list-group-horz5 .list-group-item + .list-group-item { border-left: 1px solid #e8e9ea; }
-
 .list-group-borderless .list-group-item { border-color: transparent !important; }
 
 .card-header-nav-tabs .tab { margin: -1px; }
+
+progress { width: 100%; height: 2.2rem; }
 
 /* --------------------------------------------------- */
 #dashboard > .mainheader .container { margin-bottom: 0 !important; }

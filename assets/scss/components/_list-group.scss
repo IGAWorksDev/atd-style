@@ -1,34 +1,32 @@
 
-// 지역에 사용함.
 
-.list-group-horz2 {
+
+// 지역에 사용함. (새 오디언스 > 오프라인 업종)
+.list-group-grid {
+  @extend .list-group-noedge;
   display: grid;
+
+  .list-group-item {
+    border-right-width: $border-width;
+    margin-right: -$border-width;
+  }
+  .list-group-item:last-child {
+    border-bottom-width: $border-width;
+  }
+}
+
+.list-group-grid--2 {
   grid-template-columns: repeat(2, 1fr);
-  .list-group-item + .list-group-item {
-    border-left: $border-width solid $border-color;
-    margin-left: -$border-width;
-  }
 }
-.list-group-horz3 {
-  display: grid;
+
+.list-group-grid--3 {
   grid-template-columns: repeat(3, 1fr);
-
-  .list-group-item + .list-group-item {
-    border-left: $border-width solid $border-color;
-  }
-  .list-group-item.is-active {
-    padding-right: 2.4rem;
-    background-position: right 0.8rem center;
-  }
 }
 
-.list-group-horz5 {
-  display: grid;
+.list-group-grid--5 {
   grid-template-columns: repeat(5, 1fr);
-  .list-group-item + .list-group-item {
-    border-left: $border-width solid $border-color;
-  }
 }
+
 
 .list-group-borderless {
   .list-group-item {
