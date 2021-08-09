@@ -20,6 +20,8 @@ $(function () {
     // Tooltip
     $('[data-toggle="tooltip"]').tooltip();
 
+    $('[data-toggle="popover"]').popover();
+
     // Dropdown
     $('.dropdown-toggle').dropdown();
 

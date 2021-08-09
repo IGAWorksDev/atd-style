@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TW__Audience 조합</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+</head>
+<body>
+
+<!-- gnb -->
+<nav class="gnb">
+	<a class="gnb-brand" href="#">
+		<img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
+	</a>
+	<div class="gnb-navbar">
+		<ul class="navbar-nav mr-auto font-weight-bold">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Dashboard</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-release="New" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">Insight</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">서브메뉴 1</a>
+					<a class="dropdown-item" href="#">서브메뉴 2</a>
+				</div>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="audience__list.html">Audience</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Kakaomoment</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Report</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Asset</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Support</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="ico ic-cog"></i>
+					<span class="sr-only">Manage</span>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Ad Accounts</a>
+					<a class="dropdown-item" href="#">Companies</a>
+					<a class="dropdown-item" href="#">Users</a>
+					<a class="dropdown-item" href="#">Billing</a>
+					<a class="dropdown-item" href="#">DMP Usage History</a>
+				</div>
+			</li>
+			<li class="nav-item nav-item-user dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">
+					<i class="ico ic-user"></i>
+					<span class="sr-only">account.name@igaworks.com</span>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+					<div class="dropdown-item">
+						장우영 <br>
+						<a href="#">
+							liam.jang@igaworks.com
+						</a>
+					</div>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">
+						채널 연결현황
+					</h6>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+						<button type="button" class="btn-circle btn-circle-xs btn-outlined-secondary ml-2">
+							<i class="ico ic-sync"></i>
+						</button>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+						<button type="button" class="btn-circle btn-circle-xs btn-outlined-secondary ml-2">
+							<i class="ico ic-sync"></i>
+						</button>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+						<a class="ml-1 " href="#">채널 연결하기</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+						<button type="button" class="btn-circle btn-circle-xs btn-outlined-secondary ml-2">
+							<i class="ico ic-sync"></i>
+						</button>
+					</div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">
+						로그아웃
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- /gnb -->
+
+<!-- twWrapper -->
+<div class="twWrapper-full">
+	<!-- contentWrapper -->
+	<div class="contentWrapper">
+		<!-- mainContent -->
+		<main class="mainContent pb-2">
+			<!-- mainheader -->
+			<header class="mainheader mainheader-sticky">
+				<!-- container -->
+				<div class="container">
+					<div class="mainheader__inner">
+						<h2 class="font-weight-bold m-0">
+							오디언스 조합 만들기
+						</h2>
+						<div class="ml-auto"></div>
+						<a class="text-secondary" href="#" data-toggle="modal" data-target="#md-guide-audmix">
+							<i class="ico ic-question-circle"></i>
+							오디언스 조합 가이드
+						</a>
+					</div>
+				</div>
+				<!-- /container -->
+			</header>
+			<!-- /mainheader -->
+
+			<!-- mainbody -->
+			<div class="mainbody">
+				<!-- container -->
+				<div class="container">
+
+					<div class="card p-8 border-top-0" style="height: 50rem">
+						<div>
+							이 .card  대신 조합 모듈이 들어 옵니다.
+
+							<br>
+							<br>
+
+							<button class="btn btn-outlined-secondary" data-toggle="modal" data-target="#md-add-segment">세그먼트 추가</button>
+						</div>
+					</div>
+
+					<!-- card -->
+					<div class="card mt-1">
+						<div class="card-body py-2">
+							<!-- form-group -->
+							<div class="form-group row align-items-center mb-0">
+								<div class="col-2">
+									<label class="mb-0" for="input-audmix-title"><strong>오디언스 조합 이름</strong></label>
+								</div>
+								<div class="col-10">
+									<div style="width: 52rem">
+										<input type="text" class="form-control" id="input-audmix-title" placeholder="오디언스 조합의 이름을 입력하세요.">
+									</div>
+								</div>
+							</div>
+							<!-- /form-group -->
+						</div>
+					</div>
+					<!-- /card -->
+
+					<div class="text-right mt-2">
+						<button type="button" class="btn btn-outlined-secondary">취소</button>
+						<button type="button" class="btn btn-contained-primary" disabled>등록하기</button>
+					</div>
+
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /mainbody -->
+		</main>
+		<!-- mainContent -->
+	</div>
+	<!-- /contentWrapper -->
+</div>
+<!-- /twWrapper -->
+
+
+
+<!-- modal#md-add-segment -->
+<div class="modal slideout" id="md-add-segment" tabindex="-1" aria-labelledby="modal-addSegment-audienceMix"
+		 aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable">
+		<!-- modal-container -->
+		<div class="modal-container">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+					<i class="ico ic-close"></i>
+				</button>
+				<h3 class="modal-title">세그먼트 추가</h3>
+			</div>
+			<!-- modal-body -->
+			<div class="modal-body p-0">
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>이름</strong>
+					</h4>
+					<div class="form-group mb-0">
+						<label class="d-none" for="input-segment-title">
+							<strong>세그먼트 이름</strong>
+						</label>
+						<input type="text" class="form-control" id="input-segment-title" placeholder="세그먼트 이름을 작성해 주세요.">
+					</div>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2 border-top">
+					<h4>
+						<strong>데모</strong>
+					</h4>
+					<div class="list-group">
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-demo-gender">
+								<label class="form-check-label" for="check-segment-demo-gender">성별</label>
+							</div>
+						</div>
+						<div class="list-group-item bg-light py-2">
+							<!-- container-fluid -->
+							<div class="container-fluid">
+								<!-- row -->
+								<div class="row no-gutters">
+									<div class="form-check col-3">
+										<input type="radio" class="form-check-input" id="check-segment-demo-male" name="gender">
+										<label class="form-check-label" for="check-segment-demo-male">남자</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="radio" class="form-check-input" id="check-segment-demo-female" name="gender">
+										<label class="form-check-label" for="check-segment-demo-female">여자</label>
+									</div>
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /container-fluid -->
+						</div>
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-demo-marriage">
+								<label class="form-check-label" for="check-segment-demo-marriage">결혼</label>
+							</div>
+						</div>
+						<div class="list-group-item bg-light py-2">
+							<!-- container-fluid -->
+							<div class="container-fluid">
+								<!-- row -->
+								<div class="row no-gutters">
+									<div class="form-check col-3">
+										<input type="radio" class="form-check-input" id="check-segment-demo-single" name="marriage">
+										<label class="form-check-label" for="check-segment-demo-single">미혼</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="radio" class="form-check-input" id="check-segment-demo-marriaged" name="marriage">
+										<label class="form-check-label" for="check-segment-demo-marriaged">기혼</label>
+									</div>
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /container-fluid -->
+						</div>
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-demo-age">
+								<label class="form-check-label" for="check-segment-demo-age">연령</label>
+							</div>
+						</div>
+						<div class="list-group-item bg-light py-2">
+							<!-- container-fluid -->
+							<div class="container-fluid">
+								<!-- row -->
+								<div class="row no-gutters">
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-12" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-12">12 이하</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-13" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-13">13~18</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-19" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-19">19~24</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-25" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-25">25~29</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-30" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-30">30~34</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-35" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-35">35~39</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-40" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-40">40~44</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-45" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-45">45~49</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-50" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-50">50~54</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-55" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-55">55~59</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-60" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-60">60~64</label>
+									</div>
+									<div class="form-check col-3">
+										<input type="checkbox" class="form-check-input" id="check-segment-demo-age-65" name="age">
+										<label class="form-check-label" for="check-segment-demo-age-65">65 이상</label>
+									</div>
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /container-fluid -->
+						</div>
+					</div>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2 border-top">
+					<h4>
+						<strong>상세 타겟팅</strong>
+					</h4>
+					<div class="list-group">
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-target-category">
+								<label class="form-check-label" for="check-segment-target-category">카테고리</label>
+							</div>
+						</div>
+						<div class="list-group-item bg-light py-2">
+							<!-- form-group -->
+							<div class="form-group mb-0">
+								<label class="d-none" for="">항목 선택</label>
+								<select class="custom-select" id="">
+									<option>항목 선택시 자동으로 추가됩니다.</option>
+								</select>
+							</div>
+							<!-- /form-group -->
+
+							<!-- card -->
+							<div class="card mt-1">
+								<div class="card-body">
+									<button class="btn-close btn-circle-xs" type="button" aria-label="Close">
+										<i class="ico ic-close"></i>
+									</button>
+									<div class="row py-1">
+										<div class="col-4">
+											<strong>카테고리 이름</strong>
+										</div>
+										<div class="col-8">
+											가정/생활 > 가전제품
+										</div>
+									</div>
+									<div class="row py-1">
+										<div class="col-4">
+											<strong>랭킹</strong>
+										</div>
+										<div class="col-8">
+											<div class="form-group mb-0">
+												<label class="d-none" for="ranking-range--1">범위</label>
+												<input type="range" class="form-range" id="ranking-range--1" min="1" max="5">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /card -->
+							<!-- card -->
+							<div class="card mt-1">
+								<div class="card-body">
+									<button class="btn-close btn-circle-xs" type="button" aria-label="Close">
+										<i class="ico ic-close"></i>
+									</button>
+									<div class="row py-1">
+										<div class="col-4">
+											<strong>카테고리 이름</strong>
+										</div>
+										<div class="col-8">
+											가정/생활 > 가전제품
+										</div>
+									</div>
+									<div class="row py-1">
+										<div class="col-4">
+											<strong>랭킹</strong>
+										</div>
+										<div class="col-8">
+											<div class="form-group mb-0">
+												<label class="d-none" for="ranking-range--2">범위</label>
+												<input type="range" class="form-range" id="ranking-range--2" min="1" max="5">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /card -->
+						</div>
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-target-persona">
+								<label class="form-check-label" for="check-segment-target-persona">페르소나</label>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-target-keyword">
+								<label class="form-check-label" for="check-segment-target-keyword">관심 키워드</label>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-target-bora">
+								<label class="form-check-label" for="check-segment-target-bora">보라 기생성 오디언스</label>
+							</div>
+						</div>
+						<div class="list-group-item">
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="check-segment-target-tw">
+								<label class="form-check-label" for="check-segment-target-tw">TW 기생성 오디언스</label>
+							</div>
+						</div>
+					</div>
+
+					<small class="text-muted d-block mt-2">
+						&divonx; 동일한 상세 타겟팅 항목끼리 선택 할 경우 합집합이 되며, 서로 다른 상세 타겟팅 항목을 선택 후 추가 할 경우 교집합이 됩니다.<br>
+						예시) 카테고리 가전 제품 + 공과금 선택 시 합집합이 되고 카테고리 공과금 + 페르소나 직장인 선택 시 교집합이 됩니다.
+					</small>
+				</div>
+				<!-- /wrap -->
+
+			</div>
+			<!-- /modal-body -->
+			<!-- card-footer -->
+			<div class="modal-footer">
+				<button class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+				<button type="submit" class="btn btn-contained-primary" disabled>추가</button>
+			</div>
+			<!-- /card-footer -->
+		</div>
+		<!-- /modal-container -->
+	</div>
+</div>
+<!-- /modal#md-add-segment -->
+
+<!-- modal#md-guide-audmix -->
+<div class="modal slideout" id="md-guide-audmix" tabindex="-1" aria-labelledby="modal-guide-audienceMix"
+		 aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable">
+		<!-- modal-container -->
+		<div class="modal-container">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+					<i class="ico ic-close"></i>
+				</button>
+				<h3 class="modal-title">오디언스 조합 가이드</h3>
+			</div>
+			<!-- modal-body -->
+			<div class="modal-body p-0">
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>1. 세그먼트 배치하기</strong>
+					</h4>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-01@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-01@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-01.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-2 mb-0">
+						- 만들어진 세그먼트를 조합 영역으로 드래그하여 배치합니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2 border-top">
+					<h4>
+						<strong>2. 세그먼트 결합하기</strong>
+					</h4>
+					<p>
+						세그먼트는 <strong class="text-info">높이를 3</strong>만큼 결합을 구성할 수 있습니다.
+					</p>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-02@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-02@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-02.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-1">
+						- 세그먼트를 2개 이상 배치합니다.
+					</p>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-03@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-03@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-03.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-1">
+						- 하나의 세그먼트를 드래그하여 다른 세그먼트 근처로 가져갑니다.<br>
+						- 근처로 드래그 하면 결합 대상은 점선으로 표시됩니다.
+					</p>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-04@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-04@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-04.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-1 mb-0">
+						- 결합 된 세그먼트를 확인합니다.<br>
+						- 결합 된 세그먼트는 기본적으로 교집합 설정을 가지게 됩니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2 border-top">
+					<h4>
+						<strong>3. 집합 설정</strong>
+					</h4>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-05@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-05@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-05.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-1 mb-0">
+						- 결합된 세그먼트의 각 면을 <strong class="text-info">우클릭</strong> 합니다.<br>
+						- <strong class="text-info">우클릭</strong>을 누르면 각 면이 변경되는 것을 볼 수 있습니다.<br>
+						- 교집합(∩), 합집합(∪), 차집합(-)을 사용 가능합니다.<br>
+						- 대칭차집합(△)의 경우 지원하지 않음으로 교집합(∩)으로 자동 변경 됩니다.<br>
+						- 모두 선택하지 않은 경우는 합집합(∪)으로 자동 변경 됩니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2 border-top">
+					<h4>
+						<strong>4. 집합 해제 및 세그먼트 삭제</strong>
+					</h4>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-06@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-06@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-06.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-1">
+						- 결합된 세그먼트를 <strong class="text-info">우 더블 클릭</strong>하면 단일 세그먼트로 해제가 가능합니다.
+					</p>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-07@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-07@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-07.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-1">
+						- 단일 세그먼트를 <strong class="text-info">우 더블 클릭</strong>하면 삭제가 가능합니다.
+					</p>
+					<img srcset="../../assets/images/audience/img-guide-audience-mix-08@3x.png 3x,
+											../../assets/images/audience/img-guide-audience-mix-08@2x.png 2x,"
+							 src="../../assets/images/audience/img-guide-audience-mix-08.png"
+							 alt="" class="border img-fluid w-100">
+				</div>
+				<!-- /wrap -->
+			</div>
+			<!-- /modal-body -->
+			<!-- card-footer -->
+			<div class="modal-footer">
+				<button class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+			</div>
+			<!-- /card-footer -->
+		</div>
+		<!-- /modal-container -->
+	</div>
+</div>
+<!-- /modal#md-guide-audmix -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../../assets/js/tw-atd-normal.js"></script>
+</body>
+</html>

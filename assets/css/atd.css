@@ -99,7 +99,7 @@ h5, .h5 { font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; }
 
 h6, .h6 { font-size: 1.2rem; line-height: 1.8rem; }
 
-small { font-size: 80%; line-height: 1.175; }
+small { font-size: 80%; line-height: 1.5; }
 
 .font-weight-bold, .mainbody .mainbody__title, .mainbody .section .section__title, .project-list .dropdown-item.is-active { font-weight: 700 !important; }
 
@@ -933,8 +933,8 @@ textarea.form-control { height: auto; }
 
 .btn + .btn { margin-left: 4px; }
 
-.btn-circle, .alert-primary .alert-close, .alert-secondary .alert-close, .alert-tertiary .alert-close, .alert-success .alert-close, .alert-info .alert-close, .alert-warning .alert-close, .alert-danger .alert-close, .modal-content .btn-close, .modal-container .btn-close, .toast .btn-close { display: inline-block; color: #373a3c; text-align: center; text-decoration: none; vertical-align: middle; border: 1px solid transparent; background-color: transparent; padding: 0.6rem 0.6rem; width: calc(2.2rem + (0.6rem * 2) + (1px * 2)); height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; border-radius: 3.6rem !important; width: calc(2.2rem + (0.6rem * 2) + (1px * 2)) !important; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)) !important; white-space: nowrap; overflow: hidden; outline: none; }
-@media (min-width: 1200px) { .btn-circle, .alert-primary .alert-close, .alert-secondary .alert-close, .alert-tertiary .alert-close, .alert-success .alert-close, .alert-info .alert-close, .alert-warning .alert-close, .alert-danger .alert-close, .modal-content .btn-close, .modal-container .btn-close, .toast .btn-close { font-size: 1.4rem; } }
+.btn-circle, .alert-primary .alert-close, .alert-secondary .alert-close, .alert-tertiary .alert-close, .alert-success .alert-close, .alert-info .alert-close, .alert-warning .alert-close, .alert-danger .alert-close, .toast .btn-close, .btn-close { display: inline-block; color: #373a3c; text-align: center; text-decoration: none; vertical-align: middle; border: 1px solid transparent; background-color: transparent; padding: 0.6rem 0.6rem; width: calc(2.2rem + (0.6rem * 2) + (1px * 2)); height: calc(2.2rem + (0.6rem * 2) + (1px * 2)); font-size: calc(1.265rem + 0.1125vw); line-height: 2.2rem; border-radius: 3.6rem !important; width: calc(2.2rem + (0.6rem * 2) + (1px * 2)) !important; height: calc(2.2rem + (0.6rem * 2) + (1px * 2)) !important; white-space: nowrap; overflow: hidden; outline: none; }
+@media (min-width: 1200px) { .btn-circle, .alert-primary .alert-close, .alert-secondary .alert-close, .alert-tertiary .alert-close, .alert-success .alert-close, .alert-info .alert-close, .alert-warning .alert-close, .alert-danger .alert-close, .toast .btn-close, .btn-close { font-size: 1.4rem; } }
 
 .btn-circle-xs, .toast .btn-close { padding: 0.2rem 0.2rem; width: calc(1.6rem + (0.2rem * 2) + (1px * 2)) !important; height: calc(1.6rem + (0.2rem * 2) + (1px * 2)) !important; font-size: 1rem; line-height: 1.6rem; border-radius: 3.6rem !important; }
 
@@ -1008,9 +1008,9 @@ textarea.form-control { height: auto; }
 .btn-text-primary:hover, .btn-text-primary:active, .btn-text-primary.is-active { color: var(--primary-600); background-color: var(--primary-50); border-color: var(--primary-200); }
 .btn-text-primary.is-disabled, .btn-text-primary[disabled], .btn-text-primary:disabled { color: #b9bdc1; background-color: transparent; border-color: transparent; cursor: default; -webkit-box-shadow: none; box-shadow: none; }
 
-.btn-text-secondary, .modal-content .btn-close, .modal-container .btn-close, .toast .btn-close { color: var(--secondary-500); background-color: transparent; border-color: transparent; text-decoration: none; }
-.btn-text-secondary:hover, .modal-content .btn-close:hover, .modal-container .btn-close:hover, .toast .btn-close:hover, .btn-text-secondary:active, .modal-content .btn-close:active, .modal-container .btn-close:active, .toast .btn-close:active, .btn-text-secondary.is-active, .modal-content .is-active.btn-close, .modal-container .is-active.btn-close, .toast .is-active.btn-close { color: var(--secondary-600); background-color: var(--secondary-50); border-color: var(--secondary-200); }
-.btn-text-secondary.is-disabled, .modal-content .is-disabled.btn-close, .modal-container .is-disabled.btn-close, .toast .is-disabled.btn-close, .btn-text-secondary[disabled], .modal-content [disabled].btn-close, .modal-container [disabled].btn-close, .toast [disabled].btn-close, .btn-text-secondary:disabled, .modal-content .btn-close:disabled, .modal-container .btn-close:disabled, .toast .btn-close:disabled { color: #b9bdc1; background-color: transparent; border-color: transparent; cursor: default; -webkit-box-shadow: none; box-shadow: none; }
+.btn-text-secondary, .toast .btn-close, .btn-close { color: var(--secondary-500); background-color: transparent; border-color: transparent; text-decoration: none; }
+.btn-text-secondary:hover, .btn-close:hover, .btn-text-secondary:active, .btn-close:active, .btn-text-secondary.is-active, .is-active.btn-close { color: var(--secondary-600); background-color: var(--secondary-50); border-color: var(--secondary-200); }
+.btn-text-secondary.is-disabled, .is-disabled.btn-close, .btn-text-secondary[disabled], [disabled].btn-close, .btn-text-secondary:disabled, .btn-close:disabled { color: #b9bdc1; background-color: transparent; border-color: transparent; cursor: default; -webkit-box-shadow: none; box-shadow: none; }
 
 .btn-text-tertiary { color: var(--tertiary-500); background-color: transparent; border-color: transparent; text-decoration: none; }
 .btn-text-tertiary:hover, .btn-text-tertiary:active, .btn-text-tertiary.is-active { color: var(--tertiary-600); background-color: var(--tertiary-50); border-color: var(--tertiary-200); }
@@ -1154,6 +1154,9 @@ a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; backgrou
 .card-footer { padding: 0.8rem 1.6rem; background-color: #f3f4f5; border-top: 1px solid #e8e9ea; }
 .card-footer:last-child { border-radius: 0 0 0.4rem 0.4rem; }
 
+.card-header, .card-body { position: relative; }
+.card-header .btn-close, .card-body .btn-close { position: absolute; top: 0.8rem; right: 1.6rem; }
+
 .card.is-blank .card-header { background-color: #f3f4f5; }
 .card.is-blank .card-body { background-color: #f3f4f5; }
 
@@ -1261,7 +1264,6 @@ a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; backgrou
 .modal-dialog { position: relative; margin: 1.6rem; width: auto; pointer-events: none; outline: 0; }
 
 .modal-content, .modal-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; pointer-events: auto; background-color: #fff; background-clip: padding-box; border: 1px solid #e8e9ea; border-radius: 0.4rem; overflow: hidden; }
-.modal-content .btn-close, .modal-container .btn-close { float: right; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; margin-left: auto; }
 .modal-content .modal-title, .modal-container .modal-title { margin-right: auto; margin-bottom: 0; font-weight: 700; }
 
 .modal-header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 1.6rem; border-radius: 0.4rem 0.4rem 0 0; }
@@ -1274,7 +1276,7 @@ a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; backgrou
 .modal-backdrop.fade { opacity: 0; }
 .modal-backdrop.show { opacity: 0.5; }
 
-.modal-dialog { max-width: 640px; margin-right: auto; margin-left: auto; }
+.modal-dialog { max-width: 560px; margin-right: auto; margin-left: auto; }
 
 .modal-sm { max-width: 320px; }
 
@@ -1431,6 +1433,12 @@ a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; backgrou
 .text-legend-5 { color: #a1a7ac; }
 
 .cursor-cell { cursor: cell; }
+
+.bg-white { background-color: #fff !important; }
+
+.bg-light { background-color: #f3f4f5 !important; }
+
+.btn-close { float: right; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; margin-left: auto; position: absolute; z-index: 1; }
 
 .visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) { position: absolute; width: 1px; height: 1px; padding: 0; margin: 0; overflow: hidden; white-space: nowrap; clip: rect(0, 0, 0, 0); border: 0; }
 
