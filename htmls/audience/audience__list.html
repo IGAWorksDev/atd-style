@@ -156,10 +156,34 @@
 						<a class="btn btn-outlined-secondary ml-1" href="#" data-toggle="modal" data-target="#md-sharing-aud">
 							<i class="ico ic-share"></i> 공유
 						</a>
-						<div class="form-check ml-2" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="" data-content="삭제 예정인 오디언스가 있습니다. 상태를 확인해 주세요.">
-							<input class="form-check-input" type="checkbox" id="check-upcoming-del">
-							<label class="form-check-label" for="check-upcoming-del">삭제 예정 오디언스만 보기</label>
+
+						<div class="ml-2 position-relative">
+							<!-- form-check -->
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="check-upcoming-del">
+								<label class="form-check-label" for="check-upcoming-del">
+									삭제 예정 오디언스만 보기
+								</label>
+							</div>
+							<!-- /form-check -->
+							<!-- alert -->
+							<div class="alert alert-outline-danger alert-sm position-absolute mb-0" role="alert" style="left: 0; top: 3rem; width: 28rem; z-index: 1;">
+								<button class="alert-close" type="button" data-dismiss="alert" aria-label="Close">
+									<i class="ico ic-close"></i>
+								</button>
+								<div class="alert-body">
+									<div class="alert-icon mb-0">
+										<i class="ico ic-exclamation-triangle-fill"></i>
+									</div>
+									<div class="alert-content text-body">
+										곧 삭제 예정인 오디언스가 있습니다.<br>
+										상태를 확인해주세요.
+									</div>
+								</div>
+							</div>
+							<!-- /alert -->
 						</div>
+
 						<span class="ml-auto"></span>
 						<div class="form-group m-0">
 							<label class="d-none" for="audience-kind-select">오디언스 선택</label>
