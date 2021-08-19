@@ -4,54 +4,103 @@
 // Banner Notifications
 //
 
-
+// alert-variant
 @mixin alert-variant($color,
-  $base-color: var(--#{$color}-600), $base-border-color: var(--#{$color}-100), $base-background-color: var(--#{$color}-50)){
-  color: $base-color;
-  border-color: $base-border-color;
-  background-color: $base-background-color;
+  $alert-color: var(--#{$color}-600), $alert-border-color: var(--#{$color}-100), $alert-background-color: var(--#{$color}-50)){
+  color: $alert-color;
+  border-color: $alert-border-color;
+  background-color: $alert-background-color;
   border-radius: $border-radius;
 }
 
-.alert {
-  display: flex;
-  align-items: flex-start;
-  padding: $alert-padding-y $alert-padding-x;
-  border: $alert-border-width solid transparent;
+// alert-outline-variant
+@mixin alert-outline-variant($color, $alert-color: var(--#{$color}-500), $alert-border-color: var(--#{$color}-500)) {
+  color: $alert-color;
+  background-color: $white;
+  border-color: $alert-border-color;
+  border-radius: $border-radius;
+}
 
-  .alert-icon {
-    flex: 0 0 auto;
-    margin-right: $alert-padding-x;
-    padding-top: $alert-inner-spacer;
-    padding-bottom: $alert-inner-spacer;
-    font-size: $alert-icon-size;
-  }
-
-  .alert-message {
-    flex: 1 1 auto;
-    margin-right: $alert-padding-x;
-    padding-top: $alert-inner-spacer;
-    padding-bottom: $alert-inner-spacer;
-  }
-
-  .alert-close {
-    flex: 0 0 auto;
-    margin-left: auto;
+@mixin alert-size($font-size, $body-spacer) {
+  font-size: $font-size;
+  .alert-body {
+    padding-top: ($body-spacer / 2); // 버튼과 텍스트의 높이를 맞추기 위하여 계산됨.
+    padding-bottom: ($body-spacer / 2); // 버튼과 텍스트의 높이를 맞추기 위하여 계산됨.
   }
 }
+
+
+
+.alert {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: $alert-padding-y $alert-padding-x;
+  border: $alert-border-width solid transparent;
+  line-height: $line-height-base;
+}
+.alert-close {
+  margin-right: -($alert-padding-x / 2);
+  margin-left: auto;
+  @extend .btn-circle;
+  @extend .btn-circle-sm;
+  cursor: pointer;
+}
+.alert-body {
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+}
+.alert-icon {
+  flex: 0 0 auto;
+  margin-right: $alert-padding-x / 2;
+}
+.alert-content {
+  // 알럿의 내용이 표현되는 곳입니다.
+}
+
+
 
 // Alerts variation
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
     @include alert-variant($color);
     .alert-close {
-      @extend .btn-circle;
-      @extend .btn-circle-sm;
       @include button-text-variant($color);
-      cursor: pointer;
     }
   }
 }
 
 
+// Outline Alerts
+//
+@each $color, $value in $theme-colors {
+  .alert-outline-#{$color} {
+    @include alert-outline-variant($color);
+    .alert-close {
+      @include button-text-variant($color);
+    }
+  }
+}
 
+// Alert Sizes
+//
+
+.alert {
+  @include alert-size($alert-font-size, $alert-body-spacer);
+}
+
+.alert-sm {
+  @include alert-size($alert-font-size-sm, $alert-body-spacer-sm);
+  line-height: $line-height-sm;
+  .alert-close {
+    @extend .btn-circle-xs;
+  }
+}
+
+.alert-lg {
+  @include alert-size($alert-font-size-lg, $alert-body-spacer-lg);
+  line-height: $line-height-lg;
+  .alert-close {
+    @extend .btn-circle;
+  }
+}

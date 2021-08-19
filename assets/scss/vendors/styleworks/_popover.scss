@@ -1,0 +1,31 @@
+
+// Popover
+
+.popover {
+  font-size: $font-size-sm;
+  border: $popover-border-width solid $popover-border-color;
+  box-shadow: $popover-box-shadow;
+}
+
+.popover-header {
+  padding: $popover-padding-y $popover-padding-x;
+  font-size: $font-size-base;
+  margin-bottom: 0;
+  background-color: $component-bg;
+  border-bottom: $popover-border-width solid tint-color($popover-border-color, 80%);
+  @include border-top-radius($popover-inner-border-radius)
+}
+
+.popover-body {
+  padding: $popover-padding-y $popover-padding-x;
+  color: $popover-body-color;
+}
+
+
+/*
+<div class="popover" role="tooltip">
+  <div class="arrow"></div>
+  <h3 class="popover-header"></h3>
+  <div class="popover-body"></div>
+</div>
+*/

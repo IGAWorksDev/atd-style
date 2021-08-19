@@ -294,7 +294,7 @@ $badge-border-radius: 3em !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: 0.6rem !default;
+$input-btn-padding-y: 0.8rem !default;
 $input-btn-padding-x: 1.2rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
@@ -314,7 +314,7 @@ $input-btn-padding-x-sm: 0.8rem !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 $input-btn-line-height-sm: $line-height-sm !default;
 
-$input-btn-padding-y-lg: 0.8rem !default;
+$input-btn-padding-y-lg: 1.2rem !default;
 $input-btn-padding-x-lg: 1.6rem !default;
 $input-btn-font-size-lg: $font-size-lg !default;
 $input-btn-line-height-lg: $line-height-lg !default;
@@ -718,8 +718,14 @@ $card-blank-bg: $component-blank-bg;
 $alert-padding-y: $spacer;
 $alert-padding-x: $spacer * 2;
 $alert-border-width: $border-width;
-$alert-icon-size: $line-height-base;
-$alert-inner-spacer: 0.6rem;
+$alert-font-size: $font-size-base;
+$alert-body-spacer: 0.6rem;
+
+$alert-font-size-sm: $font-size-sm;
+$alert-body-spacer-sm: 0.4rem;
+
+$alert-font-size-lg: $font-size-lg;
+$alert-body-spacer-lg: 1.6rem;
 
 
 // Modals
@@ -829,3 +835,13 @@ $blankslate-bg-dark: $component-bg-dark;
 $blankslate-border-dark: $component-border-dark;
 
 
+// Popover
+//
+$popover-padding-y: $spacer;
+$popover-padding-x: $spacer * 2;
+$popover-border-width: $border-width;
+$popover-border-color: $gray-300;
+$popover-body-color: $body-color;
+$popover-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+$popover-border-radius: 4px;
+$popover-inner-border-radius: 3px;
