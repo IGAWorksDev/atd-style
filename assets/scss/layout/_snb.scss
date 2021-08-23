@@ -1,37 +1,41 @@
+
+// ------------------------------- //
 //
-// Layout of Side Navigation Bar
+// Side Navigation Bar
 //
+// <nav class="snb">
+//  <div class="snb-navbar">
+//    <div class="navbar-header snb-nav-bar-header">...</div>
+//    <ul class="navbar-nav snb-navbar-nav">...</ul>
+//  </div>
+// </nav>
 //
 
+
+// ------------------------------- //
+//
+// SNB Wrapper
+//
 .snb {
-  // twWrapper에서 상속받는 grid property
-  grid-row-start: 2;
-  grid-column-start: 1;
-
-  position: fixed;
-  margin-top: $gnb-height;
-  z-index: $snb-z-index;
-
-  width: $snb-width;
-  height: 100%;
-  overflow: hidden;
   background-color: $snb-bgcolor;
+  width: $snb-width;
+  height:  $main-height;
+  overflow: hidden;
   @extend .border-right;
   box-shadow: $snb-box-shadow;
   transition: $snb-transition-base;
 }
 
-
-// snb navigation
+// ------------------------------- //
+//
+// SNB navigation
 //
 .snb-navbar {
   @extend .d-flex;
   @extend .flex-column;
   @extend .flex-wrap;
 }
-.snb-navbar-nav {
-  @extend .flex-column;
-}
+
 
 .snb-navbar-header {
   @extend .h-fixed-8;
@@ -40,6 +44,7 @@
   @extend .align-items-stretch;
   @extend .justify-content-center;
   padding: $spacer ($spacer * 2);
+  margin-bottom: $spacer;
 
   .navbar-title {
     @extend .d-flex;
@@ -51,7 +56,6 @@
     font-weight: $font-weight-bold;
     position: relative;
     .navbar-title-ico {
-      margin-bottom: $spacer;
       transition: $transition-base;
     }
     .navbar-title-text {
@@ -63,7 +67,7 @@
     &:after {
       position: absolute;
       right: -($spacer / 2);
-      bottom: 0;
+      bottom: -$spacer;
       left: -($spacer / 2);
       display: block;
       content: " ";
@@ -73,38 +77,48 @@
   }
 }
 
+// ------------------------------ //
+//
 // SNB Items Style
-.snb-navbar-nav .nav-item {
-  .nav-link {
-    @extend .d-flex;
-    @extend .flex-row;
-    @extend .align-items-center;
-    position: relative;
-    margin: 0 $snb-nav-item-spacer-x;
-    padding: 0;
-    width: $snb-nav-item-width;
-    height: $snb-nav-item-width;
-    border-radius: $snb-nav-item-radius;
-    overflow: hidden;
-    color: $snb-nav-item-color;
-    background-color: transparent;
-    transition: $snb-transition-base;
-  }
-  .nav-item-icon {
-    display: inline-block;
-    font-size: $font-size-lg;
-    line-height: 1;
-    padding: $spacer * 1.5;
-    width: $snb-nav-item-width;
-    height: $snb-nav-item-width;
-    overflow: hidden;
-  }
-  .nav-item-title {
-    position: absolute;
-    left: $snb-nav-item-width;
-    display: none;
-    font-size: $font-size-base;
-    white-space: nowrap;
+//
+
+.snb-navbar-nav {
+  @extend .flex-column;
+
+  .nav-item {
+    .nav-link {
+      @extend .d-flex;
+      @extend .flex-row;
+      @extend .align-items-center;
+      position: relative;
+      margin: 0 $snb-nav-item-spacer-x;
+      padding: 0;
+      width: $snb-nav-item-width;
+      height: $snb-nav-item-width;
+      border-radius: $snb-nav-item-radius;
+      overflow: hidden;
+      color: $snb-nav-item-color;
+      background-color: transparent;
+      transition: $snb-transition-base;
+    }
+
+    .nav-item-icon {
+      display: inline-block;
+      font-size: $font-size-lg;
+      line-height: 1;
+      padding: $spacer * 1.5;
+      width: $snb-nav-item-width;
+      height: $snb-nav-item-width;
+      overflow: hidden;
+    }
+
+    .nav-item-title {
+      position: absolute;
+      left: $snb-nav-item-width;
+      display: none;
+      font-size: $font-size-base;
+      white-space: nowrap;
+    }
   }
 }
 
@@ -141,10 +155,15 @@
   }
 }
 
+
+// ------------------------------ //
+//
 // SNB Hover
+//
 // 1. 마우스오버하면 너비가 넓어짐
 // 2. 아이콘을 감싸던 배경이 아이템의 전체의 배경으로 변경됨.
 // 3. 마우스오버하면 너비가 넓어지며 아이템의 텍스트가 보여짐.
+//
 .snb:hover {
   width: $snb-width-hover; // 1
   box-shadow: $snb-box-shadow;

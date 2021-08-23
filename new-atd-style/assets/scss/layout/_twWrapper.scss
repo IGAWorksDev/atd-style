@@ -12,8 +12,8 @@
   grid-template-rows: $gnb-height 1fr;
   grid-template-columns: $snb-width 1fr;
 
-  min-width: $layout-min-width;
-  min-height: $layout-height; //display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
+  min-width: $frame-min-width;
+  min-height: $frame-height; //display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
   overflow: hidden;
 
   >.contentWrapper {
@@ -32,8 +32,8 @@
   display: grid;
   grid-template-rows: $gnb-height 1fr;
 
-  min-width: $layout-min-width;
-  min-height: $layout-height; //display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
+  min-width: $frame-min-width;
+  min-height: $frame-height; //display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
   overflow: hidden;
 
   > .contentWrapper {

@@ -2,15 +2,10 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<title>TW-Dashboard APP</title>
+		<title>TW APP Layout</title>
 		<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
 		<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
 		<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
-
-		<script src="https://code.highcharts.com/highcharts.js"></script>
-		<script src="https://code.highcharts.com/modules/exporting.js"></script>
-		<script src="https://code.highcharts.com/modules/export-data.js"></script>
-		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	</head>
 	<body>
 	<!-- gnb -->
@@ -23,44 +18,8 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#" data-release="New">Dashboard</a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-						 aria-expanded="false">Insight</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">서브메뉴 1</a>
-						<a class="dropdown-item" href="#">서브메뉴 2</a>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Audience</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Kakaomoment</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Report</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Asset</a>
-				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Support</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="ico ic-cog"></i>
-						<span class="sr-only">Manage</span>
-					</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">Ad Accounts</a>
-						<a class="dropdown-item" href="#">Companies</a>
-						<a class="dropdown-item" href="#">Users</a>
-						<a class="dropdown-item" href="#">Billing</a>
-						<a class="dropdown-item" href="#">DMP Usage History</a>
-					</div>
-				</li>
 				<li class="nav-item nav-item-user dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
 						 aria-expanded="false">
@@ -69,9 +28,9 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdown-userNav">
 						<div class="dropdown-item">
-							장우영 <br>
+							TW <br>
 							<a href="#">
-								liam.jang@igaworks.com
+								tw@igaworks.com
 							</a>
 						</div>
 						<div class="dropdown-divider"></div>
@@ -106,19 +65,104 @@
 	<!-- /gnb -->
 
 	<!-- twWrapper -->
-	<div class="twWrapper-full">
+	<div class="twWrapper">
+		<!-- snb -->
+		<nav class="snb">
+			<div class="snb-navbar">
+				<!-- snb-navbar-header -->
+				<div class="navbar-header snb-navbar-header">
+					<h4 class="navbar-title">
+						<span class="navbar-title-ico">
+							<i class="ico ic-chevron-right"></i>
+						</span>
+						<span class="navbar-title-text">SNB Title</span>
+					</h4>
+				</div>
+				<!-- /snb-navbar-header -->
+				<!-- snb-navbar-nav -->
+				<ul class="navbar-nav snb-navbar-nav">
+					<li class="nav-item is-active">
+						<a class="nav-link" href="#">
+							<span class="nav-item-icon">
+								<i class="ico ic-clock-undo"></i>
+							</span>
+							<span class="nav-item-title">기본 사용량 순위</span>
+						</a>
+					</li>
+				</ul>
+				<!-- /snb-navbar-nav -->
+			</div>
+		</nav>
+		<!-- snb -->
+
 		<!-- contentWrapper -->
-		<div class="contentWrapper">
+		<div class="contentWrapper in-side">
+			<!-- sideContent -->
+			<div class="sideContent sideCampaign">
+				<header class="sideheader p-2 border-bottom">
+					<h5 class="font-weight-bold m-0">
+						.Sideheader
+					</h5>
+				</header>
+				<div class="sidebody">
+					<div class="p-2">
+						.sidebody
+					</div>
+				</div>
+			</div>
+			<!-- /sideContent -->
+
 			<!-- mainContent -->
-			<main id="dashboard" class="mainContent is-blank">
+			<main class="mainContent">
 				<!-- mainheader -->
 				<header class="mainheader mainheader-sticky">
+					<div class="container">
+						<div class="mainheader__inner">
+							<h2 class="font-weight-bold mb-0">
+								.Mainheader
+							</h2>
+						</div>
+					</div>
 				</header>
 				<!-- /mainheader -->
+
 				<!-- mainbody -->
-				<div class="mainbody pb-6">
+				<div class="mainbody">
 					<!-- container -->
 					<div class="container">
+						<div class="card mt-2">
+							<dv class="card-body" style="height: 300px;">
+								.mainbody content
+							</dv>
+						</div>
+					</div>
+					<!-- /container -->
+				</div>
+				<!-- /mainbody -->
+
+				<!-- mainbody -->
+				<div class="mainbody">
+					<!-- container -->
+					<div class="container">
+						<div class="card mt-2">
+							<dv class="card-body" style="height: 300px;">
+								.mainbody content
+							</dv>
+						</div>
+					</div>
+					<!-- /container -->
+				</div>
+				<!-- /mainbody -->
+
+				<!-- mainbody -->
+				<div class="mainbody">
+					<!-- container -->
+					<div class="container">
+						<div class="card mt-2">
+							<dv class="card-body" style="height: 300px;">
+								.mainbody content
+							</dv>
+						</div>
 					</div>
 					<!-- /container -->
 				</div>
@@ -129,5 +173,14 @@
 		<!-- /contentWrapper -->
 	</div>
 	<!-- /twWrapper -->
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/tw-atd-normal.js"></script>
+
+	<script src="https://dev-app.tradingworks.com/js/bootstrap-4.3.1/util.js"></script>
+
 	</body>
 </html>

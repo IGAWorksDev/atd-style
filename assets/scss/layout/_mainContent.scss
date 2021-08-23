@@ -1,0 +1,147 @@
+
+// ------------------------------- //
+//
+// Main Panel Content
+//
+// <main class="mainContent">
+//  <header class="headerbar">...</header>
+//  <div class="mainbody">...</div>
+// </main>
+
+
+// ------------------------------- //
+//
+// Mainheader
+// <main>의 헤더이며, 페이지에 1개만 있음.
+//
+.mainheader { // 페이지의 헤더
+  height: $main-header-height;
+  @extend .d-flex;
+  @extend .align-items-stretch;
+  .container {
+    @extend .d-flex;
+    @extend .align-items-stretch;
+    margin-bottom: 0 !important;
+  }
+
+  .mainheader__inner {
+    @extend .d-flex;
+    @extend .align-items-center;
+    margin-bottom: 0 !important;
+    width: 100%;
+    height: $main-header-height;
+    @extend .d-flex;
+    @extend .border-bottom;
+  }
+  transition: $main-header-transition;
+}
+
+// 스크롤링 할 때 고정시킬 경우
+// scrollWindow 스크립트와 함께 사용됨 (../js/tw-atd-normal.js)
+//
+.mainheader-sticky.is-fixed {
+  position: fixed;
+  z-index: $main-header-z-index;
+  top: $gnb-height;
+  left: 0;
+  min-width: $frame-min-width;
+  width: 100vw;
+  height: $main-header-height;
+  background-color: rgba($component-bg, 0.92);
+  @extend .border-bottom;
+
+  .mainheader__inner {
+    @extend .border-bottom-0;
+  }
+  transition: $main-header-transition;
+}
+
+// .sidecontent가 있는 프레임에서의 최소 너비
+//
+.twWrapper-full {
+  .contentWrapper.in-side {
+    .mainheader-sticky.is-fixed {
+      min-width: calc(#{$frame-min-width} -  #{$side-width});
+      max-width: calc(100vw - #{$side-width});
+      left: $side-width;
+    }
+  }
+}
+// .snb가 있는 프레임에서의 최소 너비
+//
+.twWrapper {
+  .contentWrapper{
+    .mainheader-sticky.is-fixed {
+      min-width: calc(#{$frame-min-width} - #{$snb-width});
+      max-width: calc(100vw - #{$snb-width});
+      left: $snb-width;
+    }
+  }
+}
+// .snb와 .sidecontent가 있는 프레임에서의 최소 너비
+//
+.twWrapper {
+  .contentWrapper.in-side {
+    .mainheader-sticky.is-fixed {
+      min-width: calc(#{$frame-min-width} - (#{$snb-width} + #{$side-width}));
+      max-width: calc(100vw - (#{$snb-width} + #{$side-width}));
+      left: $snb-width + $side-width;
+    }
+  }
+}
+
+
+// ------------------------------- //
+//
+// Mainbody
+// 여러개 일 수 있으며, 컨텐츠를 포함하는 섹션을 갖고 있음.
+//
+.mainbody {
+  .mainbody__header {}
+  .mainbody__title {
+    @extend .font-weight-bold;
+    @extend .mb-0;
+  }
+
+  section + section,
+  .section + .section {
+    @extend .pt-2;
+  }
+  .section {
+    .section__header {
+      @extend .h-fixed-7;
+      @extend .d-flex;
+      @extend .align-items-center;
+      @extend .justify-content-between;
+    }
+    .section__title {
+      @extend .font-weight-bold;
+      @extend .mb-0;
+    }
+  }
+  @extend .pb-6;
+}
+
+
+// .sidecontent가 있는 프레임에서의 최소 너비
+//
+.twWrapper-full {
+  .contentWrapper.in-side {
+    .mainContent {
+      min-width: calc(#{$frame-min-width} - #{$side-width});
+    }
+  }
+}
+
+
+// .snb와 .sidecontent가 있는 프레임에서의 최소 너비
+//
+.twWrapper {
+  .contentWrapper.in-side {
+    .mainContent {
+      min-width: calc(#{$frame-min-width} - (#{$snb-width} + #{$side-width}));
+    }
+  }
+}
+
+

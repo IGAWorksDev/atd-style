@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: pages/common.scss.
-       Load path: /Users/dannaeyang/Documents/#__Github/atd-style/new-atd-style/assets/scss
-        on line 78 of /Users/dannaeyang/Documents/#__Github/atd-style/new-atd-style/assets/scss/atd.scss
+       Load path: /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss
+        on line 78 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss
 
 73:   'components/table.scss',
 74:   'components/banner.scss',
@@ -16,7 +16,7 @@ Error: File to import not found or unreadable: pages/common.scss.
 83: 
 
 Backtrace:
-/Users/dannaeyang/Documents/#__Github/atd-style/new-atd-style/assets/scss/atd.scss:78
+/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss:78
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:44:in `import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -53,4 +53,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: pages/common.scss.\A        Load path: /Users/dannaeyang/Documents/#__Github/atd-style/new-atd-style/assets/scss\A         on line 78 of /Users/dannaeyang/Documents/#__Github/atd-style/new-atd-style/assets/scss/atd.scss\A \A 73:   'components/table.scss',\A 74:   'components/banner.scss',\A 75:   'components/easy-manager.scss'\A 76: ;\A 77: @import\A 78:   'pages/common.scss',\A 79:   'pages/insight.scss',\A 80:   'pages/kakaomoment.scss',\A 81:   'pages/dashboard.scss'\A 82: ;\A 83: "; }
+  content: "Error: File to import not found or unreadable: pages/common.scss.\A        Load path: /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss\A         on line 78 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss\A \A 73:   'components/table.scss',\A 74:   'components/banner.scss',\A 75:   'components/easy-manager.scss'\A 76: ;\A 77: @import\A 78:   'pages/common.scss',\A 79:   'pages/insight.scss',\A 80:   'pages/kakaomoment.scss',\A 81:   'pages/dashboard.scss'\A 82: ;\A 83: "; }
