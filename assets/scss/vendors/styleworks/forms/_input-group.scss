@@ -11,7 +11,8 @@
   > .form-control,
   > .form-control-plaintext,
   > .custom-select,
-  > .custom-file {
+  > .custom-file,
+  > .btn {
     position: relative; // 포커스 상태를 위한 z-index
     flex: 1 1 auto;
     width: 1%;
@@ -19,7 +20,8 @@
 
     + .form-control,
     + .custom-select,
-    + .custom-file {
+    + .custom-file,
+    + .btn {
       margin-left: -$input-border-width;
     }
   }

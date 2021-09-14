@@ -1,27 +1,50 @@
 /*
-Error: File to import not found or unreadable: pages/common.scss.
-       Load path: /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss
-        on line 78 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss
+Error: Undefined variable: "$gnb-bg".
+        on line 20 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss
+        from line 66 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss
 
-73:   'components/table.scss',
-74:   'components/banner.scss',
-75:   'components/easy-manager.scss'
-76: ;
-77: @import
-78:   'pages/common.scss',
-79:   'pages/insight.scss',
-80:   'pages/kakaomoment.scss',
-81:   'pages/dashboard.scss'
-82: ;
-83: 
+15: //
+16: // utils/
+17: // - 프로젝트에 사용되는 모든 sass도구와 헬퍼를 모읍니다.
+18: // - 모든 전역 변수, 함수, 믹스인, 플레이스홀더
+19: // - 컴파일되었을 때 한 줄의 css도 산출하지 않아야 합니다. 이 폴더는 그저 Sass헬퍼일 뿐입니다.
+20: // - #sass변수, #sass함수, #sass믹스인, #클래스, #플레이스홀더, #헬퍼, ... 등등
+21: //
+22: // base/
+23: // - 프로젝트의 보일러플레이트 코드라고 부를 만한 것을 담습니다.
+24: // - 리펫파일, 타이포그래피 규칙, HTML요소에 대한 표준 스타일을 정의하는 스타일 시트
+25: // - #reset, #normalize, #타이포그래피 규칙, ... 등등
 
 Backtrace:
-/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss:78
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:44:in `import'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss:20
+/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss:66
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -53,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: pages/common.scss.\A        Load path: /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss\A         on line 78 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss\A \A 73:   'components/table.scss',\A 74:   'components/banner.scss',\A 75:   'components/easy-manager.scss'\A 76: ;\A 77: @import\A 78:   'pages/common.scss',\A 79:   'pages/insight.scss',\A 80:   'pages/kakaomoment.scss',\A 81:   'pages/dashboard.scss'\A 82: ;\A 83: "; }
+  content: "Error: Undefined variable: \"$gnb-bg\".\A         on line 20 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss\A         from line 66 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss\A \A 15: //\A 16: // utils/\A 17: // - 프로젝트에 사용되는 모든 sass도구와 헬퍼를 모읍니다.\A 18: // - 모든 전역 변수, 함수, 믹스인, 플레이스홀더\A 19: // - 컴파일되었을 때 한 줄의 css도 산출하지 않아야 합니다. 이 폴더는 그저 Sass헬퍼일 뿐입니다.\A 20: // - #sass변수, #sass함수, #sass믹스인, #클래스, #플레이스홀더, #헬퍼, ... 등등\A 21: //\A 22: // base/\A 23: // - 프로젝트의 보일러플레이트 코드라고 부를 만한 것을 담습니다.\A 24: // - 리펫파일, 타이포그래피 규칙, HTML요소에 대한 표준 스타일을 정의하는 스타일 시트\A 25: // - #reset, #normalize, #타이포그래피 규칙, ... 등등"; }

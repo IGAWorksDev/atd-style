@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TW__Ad Insight -- 개선</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+<!-- gnb -->
+<nav class="gnb">
+	<a class="gnb-brand" href="#">
+		<img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
+	</a>
+	<div class="gnb-navbar">
+		<ul class="navbar-nav mr-auto font-weight-bold">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Dashboard</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-release="New" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">Insight</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">서브메뉴 1</a>
+					<a class="dropdown-item" href="#">서브메뉴 2</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Audience</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Kakaomoment</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Report</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Asset</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Support</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="ico ic-cog"></i>
+					<span class="sr-only">Manage</span>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Ad Accounts</a>
+					<a class="dropdown-item" href="#">Companies</a>
+					<a class="dropdown-item" href="#">Users</a>
+					<a class="dropdown-item" href="#">Billing</a>
+					<a class="dropdown-item" href="#">DMP Usage History</a>
+				</div>
+			</li>
+			<li class="nav-item nav-item-user dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">
+					<i class="ico ic-user"></i>
+					<span class="sr-only">account.name@igaworks.com</span>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+					<div class="dropdown-item">
+						장우영 <br>
+						<a href="#">
+							liam.jang@igaworks.com
+						</a>
+					</div>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">
+						채널 연결현황
+					</h6>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+						<a class="ml-1 " href="#">채널 연결하기</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+					</div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">
+						로그아웃
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- /gnb -->
+
+<!-- twWrapper -->
+<div class="twWrapper-full">
+	<!-- contentWrapper -->
+	<div class="contentWrapper">
+		<!-- mainContent -->
+		<main id="adinsight" class="mainContent">
+			<!-- mainheader -->
+			<header class="mainheader mainheader-sticky">
+				<div class="container">
+					<div class="mainheader__inner border-bottom-0">
+						<h2 class="font-weight-bold m-0">
+							Ad Insight
+						</h2>
+					</div>
+				</div>
+			</header>
+			<!-- /mainheader -->
+
+			<!-- mainbody -->
+			<div class="mainbody">
+				<!-- container -->
+				<div class="container">
+
+					<!-- section-->
+					<section class="section">
+						<!-- filterbar -->
+						<div class="filterbar" id="filterbar-adinsight">
+							<!-- row -->
+							<div class="row">
+								<!-- col -->
+								<div class="col-10 pr-0">
+									<!-- input-group -->
+									<div class="input-group">
+										<select class="custom-select">
+											<optgroup label="카테고리"></optgroup>
+											<option>가정/생활</option>
+											<option>가족</option>
+											<option>건강/의료</option>
+											<option>게임</option>
+											<option>교육</option>
+											<option>금융</option>
+											<option>뉴스</option>
+											<option>도서/참고자료</option>
+											<option>라이프스타일</option>
+											<option>미용</option>
+											<option>복지/행정/단체</option>
+											<option>비즈니스/산업</option>
+											<option>사진/동영상</option>
+											<option>생산성</option>
+											<option>소셜네트워크</option>
+											<option>쇼핑</option>
+											<option>스포츠/레저</option>
+											<option>식음료</option>
+											<option>엔터테인먼트</option>
+											<option>여행/교통</option>
+											<option>유틸리티</option>
+											<option>자동차</option>
+											<option>정보/통신</option>
+											<option>패션/의류</option>
+											<option>기타</option>
+										</select>
+										<select class="custom-select">
+											<optgroup label="서브 카테고리"></optgroup>
+											<option>가구/인테리어</option>
+											<option>가전제품</option>
+											<option>건강/의료</option>
+											<option>렌탈</option>
+											<option>기타서비스</option>
+										</select>
+
+										<input type="date" class="form-control" value="2021.08.01~202108.15" style="width: 16rem;">
+
+										<!-- dropdown -->
+										<div class="dropdown">
+											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Kakaomoment +2
+											</button>
+											<div class="dropdown-menu">
+												<h6 class="dropdown-header">
+													채널 선택
+												</h6>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-channel-google">
+														<label class="form-check-label" for="filter-channel-google">Google ads</label>
+													</div>
+												</div>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-channel-facebook">
+														<label class="form-check-label" for="filter-channel-facebook">Facebook</label>
+													</div>
+												</div>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-channel-kakakomoment">
+														<label class="form-check-label" for="filter-channel-kakakomoment">kakaomoment</label>
+													</div>
+												</div>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-channel-tradingworks">
+														<label class="form-check-label" for="filter-channel-tradingworks">TW DSP</label>
+													</div>
+												</div>
+												<div class="dropdown-divider"></div>
+												<button class="dropdown-item">분석 제외</button>
+											</div>
+										</div>
+										<!-- /dropdown -->
+										<!-- dropdown -->
+										<div class="dropdown">
+											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												관심유도 +2
+											</button>
+											<div class="dropdown-menu">
+												<h6 class="dropdown-header">
+													캠페인 목적
+												</h6>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-purpose-branding">
+														<label class="form-check-label" for="filter-purpose-branding">브랜딩</label>
+													</div>
+												</div>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-purpose-attention">
+														<label class="form-check-label" for="filter-purpose-attention">관심유도</label>
+													</div>
+												</div>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-purpose-conversion">
+														<label class="form-check-label" for="filter-purpose-conversion">전환</label>
+													</div>
+												</div>
+												<div class="dropdown-divider"></div>
+												<button class="dropdown-item">분석 제외</button>
+											</div>
+										</div>
+										<!-- /dropdown -->
+										<!-- dropdown -->
+										<div class="dropdown">
+											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												0원~100,000,000원
+											</button>
+											<div class="dropdown-menu">
+												<div class="py-1 px-2" style="width: 20rem;">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">최소</span>
+														</div>
+														<input type="text" class="form-control" placeholder="0">
+													</div>
+													<div class="input-group mt-1">
+														<div class="input-group-prepend">
+															<span class="input-group-text">최대</span>
+														</div>
+														<input type="text" class="form-control" placeholder="100,000,000">
+													</div>
+												</div>
+												<div class="dropdown-divider"></div>
+												<button class="dropdown-item">분석 제외</button>
+											</div>
+										</div>
+										<!-- /dropdown -->
+
+										<!-- dropdown -->
+										<div class="dropdown">
+											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												AOS +2
+											</button>
+											<div class="dropdown-menu">
+												<h6 class="dropdown-header">
+													OS 선택
+												</h6>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-os-aos">
+														<label class="form-check-label" for="filter-os-aos">AOS</label>
+													</div>
+												</div>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-os-ios">
+														<label class="form-check-label" for="filter-os-aos">iOS</label>
+													</div>
+												</div>
+												<div class="dropdown-item">
+													<div class="form-check">
+														<input type="checkbox" class="form-check-input" id="filter-os-etc">
+														<label class="form-check-label" for="filter-os-etc">기타</label>
+													</div>
+												</div>
+												<div class="dropdown-divider"></div>
+												<button class="dropdown-item">분석 제외</button>
+											</div>
+										</div>
+										<!-- /dropdown -->
+									</div>
+									<!-- /input-group -->
+								</div>
+								<!-- /col -->
+								<!-- col -->
+								<div class="col-2 d-flex align-items-center">
+									<button class="btn btn-contained-primary btn-block">분석</button>
+									<button class="btn btn-outlined-primary btn-block m-0 ml-2" data-toggle="modal"
+													data-target="#md-compare-insight">
+										비교 +2
+									</button>
+								</div>
+								<!-- /col -->
+							</div>
+							<!-- /row -->
+						</div>
+						<!-- /filterbar -->
+
+						<div class="mt-2">
+							<a class="text-body" href="#">카테고리 별 서비스 목록</a>
+						</div>
+					</section>
+					<!-- /section -->
+
+					<!-- section -->
+					<section class="section">
+						<!--  header -->
+						<header class="d-flex align-items-center  h-fixed-7">
+							<h4 class="font-weight-bold mb-0">
+								분석 결과
+							</h4>
+							<div class="dropdown ml-2">
+								<button type="button" class="btn btn-outlined-secondary btn-sm dropdown-toggle" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false">
+									테이블 보기
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="#">차트 보기</a>
+									<a class="dropdown-item" href="#">테이블 보기</a>
+								</div>
+							</div>
+						</header>
+						<!--  /header -->
+
+						<!-- card -->
+						<div class="card">
+							<!-- datagrid-responsive -->
+							<div class="datagrid-responsive" id="data-grid">
+								<!-- datagrid -->
+								<div class="datagrid datagrid-hover" role="grid">
+									<!-- datagrid-rowgroup -->
+									<div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+										<!-- datagrid-row -->
+										<div class="datagrid-row" role="row">
+											<div class="datagrid-row datagrid-row-absolute">
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">기간</div>
+
+												<div class="datagrid-cell" role="columnheader" style="min-width: 14rem;">카테고리</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 14rem;">상세 카테고리</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">캠페인 목적</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 8rem;">채널</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 8rem;">OS</div>
+											</div>
+											<div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
+												<div class="datagrid-cell" role="columnheader" style="min-width: 14rem;">소진비용</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">노출 수</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">클릭 수</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">CPM</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">CPC</div>
+
+
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">CTR</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 14rem;">영상 조회수</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">VTR</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">CPV</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">앱 설치 수</div>
+
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">CPI</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">전환 수</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">CPA</div>
+											</div>
+										</div>
+										<!-- /datagrid-row -->
+									</div>
+									<!-- datagrid-rowgroup -->
+									<!-- datagrid-rowgroup -->
+									<div class="datagrid-group datagrid-body" role="rowgroup">
+										<!-- datagrid-row -->
+										<div class="datagrid-row" role="row" data-pair="">
+											<div class="datagrid-row datagrid-row-absolute">
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">
+													2021.08.21
+												</div>
+
+												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">복지/행정/단체</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">가구/인테리어</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">브랜딩</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">
+													<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+												</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">AOS</div>
+											</div>
+											<div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
+												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">10,000,000</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">2,400,000</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">4,500</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">3,333</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,778</div>
+
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">0.19%</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">415,000</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">17.29%</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">19</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">6,000</div>
+
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,667</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">150</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">53,333</div>
+											</div>
+										</div>
+										<!-- /datagrid-row -->
+									</div>
+									<!-- /datagrid-rowgroup -->
+								</div>
+								<!-- /datagrid -->
+							</div>
+							<!-- /datagrid-responsive -->
+						</div>
+						<!-- /card -->
+					</section>
+					<!-- /section -->
+
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /mainbody -->
+		</main>
+		<!-- /mainContent -->
+	</div>
+	<!-- /contentWrapper -->
+</div>
+<!-- /twWrapper -->
+
+
+<!-- md-compare-insight -->
+<div class="modal fade" id="md-compare-insight" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<!-- modal-header -->
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+					<i class="ico ic-close"></i>
+				</button>
+				<h3 class="modal-title font-weight-bold">
+					비교 설정
+				</h3>
+			</div>
+			<!-- /modal-header -->
+			<!-- modal-body -->
+			<div class="modal-body">
+
+				<!-- d-flex -->
+				<div class="d-flex">
+					<select class="custom-select" style="width: 18rem;" disabled>
+						<option>업종 별 분석</option>
+						<option>프로젝트 비교 분석</option>
+					</select>
+
+					<!-- input-group -->
+					<div class="input-group ml-1" style="width: 47rem;">
+						<select class="custom-select" disabled>
+							<option>가정/생활</option>
+							<option>가족</option>
+							<option>건강</option>
+							<option>의료</option>
+							<option>교육</option>
+							<option>금융</option>
+							<option>패션</option>
+							<option>의류</option>
+							<option>기타</option>
+						</select>
+						<select class="custom-select" disabled>
+							<option>가구/인테리어</option>
+							<option>가전제품</option>
+							<option>건강/의료</option>
+							<option>렌탈</option>
+							<option>기타서비스</option>
+						</select>
+					</div>
+					<!-- /input-group -->
+					<div class="ml-1" style="width: 10rem;">
+						<button class="btn btn-outlined-secondary">
+							<i class="ico ic-plus"></i>
+							<span class="d-none">추가하기</span>
+						</button>
+					</div>
+				</div>
+				<!-- /d-flex -->
+
+				<!-- d-flex -->
+				<div class="d-flex mt-2">
+					<select class="custom-select" style="width: 18rem;">
+						<option>업종 별 분석</option>
+						<option>프로젝트 비교 분석</option>
+					</select>
+
+					<!-- input-group -->
+					<div class="input-group ml-1" style="width: 47rem;">
+						<select class="custom-select">
+							<option>가정/생활</option>
+							<option>가족</option>
+							<option>건강</option>
+							<option>의료</option>
+							<option>교육</option>
+							<option>금융</option>
+							<option>패션</option>
+							<option>의류</option>
+							<option>기타</option>
+						</select>
+						<select class="custom-select">
+							<option>가구/인테리어</option>
+							<option>가전제품</option>
+							<option>건강/의료</option>
+							<option>렌탈</option>
+							<option>기타서비스</option>
+						</select>
+					</div>
+					<!-- /input-group -->
+					<div class="ml-1" style="width: 10rem;">
+						<button class="btn btn-outlined-secondary">
+							<i class="ico ic-minus"></i>
+							<span class="d-none">삭제하기</span>
+						</button>
+						<button class="btn btn-outlined-secondary ml-2">
+							<i class="ico ic-plus"></i>
+							<span class="d-none">추가하기</span>
+						</button>
+					</div>
+				</div>
+				<!-- /d-flex -->
+
+			</div>
+			<!-- /modal-body -->
+			<!-- modal-footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outlined-secondary" data-dismiss="modal">확인</button>
+				<button type="button" class="btn btn-contained-primary">비교분석</button>
+			</div>
+			<!-- /modal-footer -->
+		</div>
+	</div>
+</div>
+<!-- md-compare-insight -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../../assets/js/tw-atd-normal.js"></script>
+
+<script src="https://dev-app.tradingworks.com/js/bootstrap-4.3.1/util.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#data-grid').scroll(function () {
+			$(this).find('.datagrid-row-absolute').css('left', $(this).scrollLeft());
+		});
+	});
+</script>
+
+
+</body>
+</html>
