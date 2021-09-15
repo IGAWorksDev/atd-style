@@ -1,0 +1,30 @@
+
+
+
+
+// Mixin : 범례용 텍스트 컬러
+@mixin datagrid-row-legend-variant($color, $background:$color){
+  background-color: $background;
+}
+
+
+// '.text-legend-숫자'로 클래스 추가됨.
+@each $color, $value in $datagrid-row-legends {
+  .datagrid-row[data-row-legend="#{$color}"] {
+    > .datagrid-cell:first-child,
+    > .datagrid-row-absolute:first-child {
+      &:before {
+        content: " ";
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: $border-width;
+        bottom: $border-width;
+        z-index: 2;
+        @include datagrid-row-legend-variant($value);
+      }
+    }
+  }
+}
+

@@ -1467,16 +1467,6 @@ a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; backgrou
 
 .text-tertiary { color: #b9bdc1 !important; }
 
-.text-legend-1 { color: #0081f6; }
-
-.text-legend-2 { color: #0dbab1; }
-
-.text-legend-3 { color: #e53935; }
-
-.text-legend-4 { color: #ffa000; }
-
-.text-legend-5 { color: #a1a7ac; }
-
 .cursor-cell { cursor: cell; }
 
 .bg-white { background-color: #fff !important; }
@@ -1994,6 +1984,26 @@ a:hover { text-decoration: underline; }
 .card-header-nav-tabs .tab { margin: -1px; }
 
 progress { width: 100%; height: 2.2rem; }
+
+.text-legend-1 { color: #0081f6; }
+
+.text-legend-2 { color: #0dbab1; }
+
+.text-legend-3 { color: #e53935; }
+
+.text-legend-4 { color: #ffa000; }
+
+.text-legend-5 { color: #a1a7ac; }
+
+.datagrid-row[data-row-legend="legend-1"] > .datagrid-cell:first-child:before, .datagrid-row[data-row-legend="legend-1"] > .datagrid-row-absolute:first-child:before { content: " "; width: 3px; height: 100%; position: absolute; left: 0; top: 1px; bottom: 1px; z-index: 2; background-color: #0081f6; }
+
+.datagrid-row[data-row-legend="legend-2"] > .datagrid-cell:first-child:before, .datagrid-row[data-row-legend="legend-2"] > .datagrid-row-absolute:first-child:before { content: " "; width: 3px; height: 100%; position: absolute; left: 0; top: 1px; bottom: 1px; z-index: 2; background-color: #0dbab1; }
+
+.datagrid-row[data-row-legend="legend-3"] > .datagrid-cell:first-child:before, .datagrid-row[data-row-legend="legend-3"] > .datagrid-row-absolute:first-child:before { content: " "; width: 3px; height: 100%; position: absolute; left: 0; top: 1px; bottom: 1px; z-index: 2; background-color: #e53935; }
+
+.datagrid-row[data-row-legend="legend-4"] > .datagrid-cell:first-child:before, .datagrid-row[data-row-legend="legend-4"] > .datagrid-row-absolute:first-child:before { content: " "; width: 3px; height: 100%; position: absolute; left: 0; top: 1px; bottom: 1px; z-index: 2; background-color: #ffa000; }
+
+.datagrid-row[data-row-legend="legend-5"] > .datagrid-cell:first-child:before, .datagrid-row[data-row-legend="legend-5"] > .datagrid-row-absolute:first-child:before { content: " "; width: 3px; height: 100%; position: absolute; left: 0; top: 1px; bottom: 1px; z-index: 2; background-color: #a1a7ac; }
 
 /* --------------------------------------------------- */
 #dashboard > .mainheader .container { margin-bottom: 0 !important; }

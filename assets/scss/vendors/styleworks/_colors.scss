@@ -162,23 +162,3 @@ $theme-colors: map-merge(
                 $theme-colors
 );
 
-// Chart Colors
-//
-$legend-1: $blue !default;
-$legend-2: $teal !default;
-$legend-3: $red !default;
-$legend-4: $yellow !default;
-$legend-5: $tertiary !default;
-
-$theme-charts: ()!default;
-$theme-charts: map-merge(
-                (
-                        "legend-1": $legend-1,
-                        "legend-2": $legend-2,
-                        "legend-3": $legend-3,
-                        "legend-4": $legend-4,
-                        "legend-5": $legend-5
-                ),
-                $theme-charts
-);
-
