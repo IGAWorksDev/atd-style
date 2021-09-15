@@ -2083,8 +2083,6 @@ progress { width: 100%; height: 2.2rem; }
 .section-adinsight-filter .filter-option .filter-option__item { height: 3.6rem; }
 .section-adinsight-filter .filter-option .filter-option__item .filter-option__item-label { width: 10rem; }
 .section-adinsight-filter .filter-option .filter-option__item .filter-option__item-setting .custom-select, .section-adinsight-filter .filter-option .filter-option__item .filter-option__item-setting .form-control { width: 184px; }
-.section-adinsight-filter .filter-option .filter-option__item .filter-option__item-setting .btn-check-group .btn-check:first-child + .btn { border-top-left-radius: 0.4rem !important; border-bottom-left-radius: 0.4rem !important; }
-.section-adinsight-filter .filter-option .filter-option__item .filter-option__item-setting .btn-check-group .btn-outlined-secondary { border-color: #d0d3d5 !important; }
 
 .calendars.row { margin-right: 0 !important; margin-left: 0 !important; }
 

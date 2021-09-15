@@ -5,11 +5,6 @@
 	<title>TW__Ad Insight -- 개선</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
-
-	<script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="https://code.highcharts.com/modules/exporting.js"></script>
-	<script src="https://code.highcharts.com/modules/export-data.js"></script>
-	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 <body>
 <!-- gnb -->
@@ -173,21 +168,12 @@
 											<option>기타서비스</option>
 										</select>
 
-                    <!-- dropdown -->
-                    <div class="dropdown">
-                      <button type="button" class="btn btn-outlined-secondary dropdown-toggle"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        일간
-                      </button>
-                      <div class="dropdown-menu">
-                        <button class="dropdown-item">일간</button>
-                        <button class="dropdown-item">월간</button>
-                        <button class="dropdown-item">연간</button>
-                        <div class="dropdown-divider"></div>
-                        <button class="dropdown-item">분석 제외</button>
-                      </div>
-                    </div>
-                    <!-- /dropdown -->
+
+                    <select class="custom-select" style="max-width: 8rem;">
+                      <option>일간</option>
+                      <option>월간</option>
+                      <option>연간</option>
+                    </select>
 
 										<input type="text" class="form-control" value="2021. 08. 01 ~ 2021. 08. 15" style="width: 14rem;">
 
@@ -342,9 +328,12 @@
 						</div>
 						<!-- /toolbar -->
 
-						<div class="mt-2">
-							<a class="text-body" href="#">카테고리 별 서비스 목록</a>
-						</div>
+            <div class="mt-1">
+              <button class="btn btn-text-secondary btn-sm font-weight-bold" data-toggle="modal" data-target="#md-search-serviceInCategory">
+                카테고리 별 서비스 목록
+                <i class="ico ic-chevron-right"></i>
+              </button>
+            </div>
 					</section>
 					<!-- /section -->
 
@@ -354,17 +343,27 @@
 						<header class="d-flex align-items-center  h-fixed-7">
 							<h4 class="font-weight-bold mb-0">
 								분석 결과
+                <small class="text-muted ml-1">비교 카테고리 : 쇼핑 > 오픈마켓 | 비교 프로젝트 : 쇼핑 > 오픈마켓 (11 번가)</small>
 							</h4>
-							<div class="dropdown ml-2">
-								<button type="button" class="btn btn-outlined-secondary btn-sm dropdown-toggle" data-toggle="dropdown"
-												aria-haspopup="true" aria-expanded="false">
-									테이블 보기
-								</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="#">차트 보기</a>
-									<a class="dropdown-item" href="#">테이블 보기</a>
-								</div>
-							</div>
+
+              <div class="ml-auto"></div>
+
+              <div class="btn-group btn-check-group btn-group-sm">
+                <input type="radio" class="btn-check" name="check-view" id="check-view-chart" autocomplete="off" checked="">
+                <label class="btn btn-outlined-secondary px-2 mb-0" for="check-view-chart">
+                  차트
+                </label>
+                <input type="radio" class="btn-check" name="check-view" id="check-view-table" autocomplete="off">
+                <label class="btn btn-outlined-secondary px-2 mb-0" for="check-view-table">
+                  테이블
+                </label>
+              </div>
+
+              <div class="ml-2"></div>
+              <button class="btn btn-outlined-secondary btn-sm" aria-label="다운로드">
+                <i class="ico ic-file-excel"></i>
+                다운로드
+              </button>
 						</header>
 						<!--  /header -->
 
@@ -582,6 +581,53 @@
 								<!-- /datagrid -->
 							</div>
 							<!-- /datagrid-responsive -->
+              <div class=" px-2 pt-1">
+                <small class="text-muted">
+                  * 모든 항목은 평균 수치입니다
+                </small>
+              </div>
+              <!-- nav -->
+              <nav class="d-flex align-items-center justify-content-center pb-2">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Previous">
+                      <svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+                        <polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <span class="page-ellipsis">...</span>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link btn-circle btn-text-secondary" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link btn-circle btn-outlined-secondary is-active" href="#">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link btn-circle btn-text-secondary" href="#">5</a>
+                  </li>
+                  <li class="page-item">
+                    <span class="page-ellipsis">...</span>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link btn-circle btn-text-secondary" href="#">99</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Next">
+                      <svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+                        <polygon points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <select class="custom-select" style="width: 7rem;">
+                  <option>10</option>
+                  <option>20</option>
+                </select>
+              </nav>
+              <!-- /nav -->
 						</div>
 						<!-- /card -->
 					</section>
@@ -708,6 +754,92 @@
 	</div>
 </div>
 <!-- md-compare-insight -->
+
+
+<!-- md-search-serviceInCategory -->
+<div class="modal fade" id="md-search-serviceInCategory" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- modal-header -->
+      <div class="modal-header">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+          <i class="ico ic-close"></i>
+        </button>
+        <h3 class="modal-title font-weight-bold">
+          카테고리 별 서비스 검색
+        </h3>
+      </div>
+      <!-- /modal-header -->
+      <!-- modal-body -->
+      <div class="modal-body p-0">
+        <!-- input-group -->
+        <div class="form-inline p-2">
+            <select class="custom-select">
+              <option>광고주</option>
+              <option>서비스명</option>
+            </select>
+            <input type="search" class="form-control ml-1" style="width: 20rem;">
+        </div>
+        <!-- /input-group -->
+
+        <!-- datagrid -->
+        <div class="datagrid datagrid-bordered datagrid-hover border-top" role="grid">
+          <!-- datagrid-rowgroup -->
+          <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+            <!-- datagrid-row -->
+            <div class="datagrid-row" role="row">
+              <div class="datagrid-cell" role="columnheader" style="min-width: 8rem; max-width: 12rem;">카테고리</div>
+              <div class="datagrid-cell" role="columnheader" style="min-width: 12rem; max-width: 16rem;">상세 카테고리</div>
+              <div class="datagrid-cell" role="columnheader" style="min-width: 16rem; max-width: 20rem;">광고주</div>
+              <div class="datagrid-cell" role="columnheader" style="min-width: 16rem;">서비스명</div>
+            </div>
+            <!-- /datagrid-row -->
+          </div>
+          <!-- /datagrid-rowgroup -->
+          <!-- datagrid-rowgroup -->
+          <div class="datagrid-group datagrid-body" role="rowgroup">
+            <!-- datagrid-row -->
+            <div class="datagrid-row" role="row">
+              <div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
+                복지/행정/단체
+              </div>
+              <div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
+                자동차브랜드/서비스
+              </div>
+              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
+                넷마블
+              </div>
+              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
+                <div class="text-truncate">세븐나이츠</div>
+              </div>
+            </div>
+            <!-- /datagrid-row -->
+            <!-- datagrid-row -->
+            <div class="datagrid-row" role="row">
+              <div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
+                복지/행정/단체
+              </div>
+              <div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
+                자동차브랜드/서비스
+              </div>
+              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
+                넷마블
+              </div>
+              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
+                <div class="text-truncate">마블퓨쳐</div>
+              </div>
+            </div>
+            <!-- /datagrid-row -->
+          </div>
+          <!-- /datagrid-rowgroup -->
+        </div>
+        <!-- /datagrid -->
+      </div>
+      <!-- /modal-body -->
+    </div>
+  </div>
+</div>
+<!-- md-search-serviceInCategory -->
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
