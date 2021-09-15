@@ -148,7 +148,7 @@
 											<option>도서/참고자료</option>
 											<option>라이프스타일</option>
 											<option>미용</option>
-											<option>복지/행정/단체</option>
+											<option selected>복지/행정/단체</option>
 											<option>비즈니스/산업</option>
 											<option>사진/동영상</option>
 											<option>생산성</option>
@@ -165,6 +165,7 @@
 											<option>기타</option>
 										</select>
 										<select class="custom-select">
+                      <option>자동차브랜드/서비스</option>
 											<option>가구/인테리어</option>
 											<option>가전제품</option>
 											<option>건강/의료</option>
@@ -172,7 +173,23 @@
 											<option>기타서비스</option>
 										</select>
 
-										<input type="date" class="form-control" value="2021.08.01~202108.15" style="width: 16rem;">
+                    <!-- dropdown -->
+                    <div class="dropdown">
+                      <button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        일간
+                      </button>
+                      <div class="dropdown-menu">
+                        <button class="dropdown-item">일간</button>
+                        <button class="dropdown-item">월간</button>
+                        <button class="dropdown-item">연간</button>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item">분석 제외</button>
+                      </div>
+                    </div>
+                    <!-- /dropdown -->
+
+										<input type="text" class="form-control" value="2021. 08. 01 ~ 2021. 08. 15" style="width: 14rem;">
 
 										<!-- dropdown -->
 										<div class="dropdown">
@@ -246,6 +263,7 @@
 											</div>
 										</div>
 										<!-- /dropdown -->
+
 										<!-- dropdown -->
 										<div class="dropdown">
 											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
