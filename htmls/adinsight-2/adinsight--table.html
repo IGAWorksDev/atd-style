@@ -175,12 +175,11 @@
                       <option>연간</option>
                     </select>
 
-										<input type="text" class="form-control" value="2021. 08. 01 ~ 2021. 08. 15" style="width: 14rem;">
+										<input type="date" class="form-control" value="2021. 08. 01 ~ 2021. 08. 15" style="width: 14rem;">
 
 										<!-- dropdown -->
 										<div class="dropdown">
-											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
-															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<button type="button" class="btn btn-outlined-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												Kakaomoment +2
 											</button>
 											<div class="dropdown-menu">
@@ -348,15 +347,13 @@
 
               <div class="ml-auto"></div>
 
-              <div class="btn-group btn-check-group btn-group-sm">
-                <input type="radio" class="btn-check" name="check-view" id="check-view-chart" autocomplete="off" checked="">
-                <label class="btn btn-outlined-secondary px-2 mb-0" for="check-view-chart">
+              <div class="btn-group btn-group-sm">
+                <button class="btn btn-outlined-secondary">
                   차트
-                </label>
-                <input type="radio" class="btn-check" name="check-view" id="check-view-table" autocomplete="off">
-                <label class="btn btn-outlined-secondary px-2 mb-0" for="check-view-table">
+                </button>
+                <button class="btn btn-contained-secondary">
                   테이블
-                </label>
+                </button>
               </div>
 
               <div class="ml-2"></div>
@@ -581,55 +578,56 @@
 								<!-- /datagrid -->
 							</div>
 							<!-- /datagrid-responsive -->
-              <div class=" px-2 pt-1">
-                <small class="text-muted">
-                  * 모든 항목은 평균 수치입니다
-                </small>
-              </div>
-              <!-- nav -->
-              <nav class="d-flex align-items-center justify-content-center pb-2">
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Previous">
-                      <svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
-                        <polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="page-item">
-                    <span class="page-ellipsis">...</span>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link btn-circle btn-text-secondary" href="#">3</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link btn-circle btn-outlined-secondary is-active" href="#">4</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link btn-circle btn-text-secondary" href="#">5</a>
-                  </li>
-                  <li class="page-item">
-                    <span class="page-ellipsis">...</span>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link btn-circle btn-text-secondary" href="#">99</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Next">
-                      <svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
-                        <polygon points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-                <select class="custom-select" style="width: 7rem;">
-                  <option>10</option>
-                  <option>20</option>
-                </select>
-              </nav>
-              <!-- /nav -->
 						</div>
 						<!-- /card -->
+						<div class=" px-2 pt-1">
+							<small class="text-muted">
+								* 모든 항목은 평균 수치입니다
+							</small>
+						</div>
+						<!-- nav -->
+						<nav class="d-flex align-items-center justify-content-center pb-2">
+							<ul class="pagination">
+								<li class="page-item">
+									<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Previous">
+										<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+											<polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
+										</svg>
+									</a>
+								</li>
+								<li class="page-item">
+									<span class="page-ellipsis">...</span>
+								</li>
+								<li class="page-item">
+									<a class="page-link btn-circle btn-text-secondary" href="#">3</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link btn-circle btn-outlined-secondary is-active" href="#">4</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link btn-circle btn-text-secondary" href="#">5</a>
+								</li>
+								<li class="page-item">
+									<span class="page-ellipsis">...</span>
+								</li>
+								<li class="page-item">
+									<a class="page-link btn-circle btn-text-secondary" href="#">99</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Next">
+										<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+											<polygon
+												points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
+										</svg>
+									</a>
+								</li>
+							</ul>
+							<select class="custom-select" style="width: 7rem;">
+								<option>10</option>
+								<option>20</option>
+							</select>
+						</nav>
+						<!-- /nav -->
 					</section>
 					<!-- /section -->
 
