@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>TW__Ad Insight -- 개선</title>
+	<title>TW__Ad Insight--Table</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
 </head>
@@ -126,232 +126,257 @@
 					<section class="section">
 						<!-- toolbar -->
 						<div class="toolbar pb-0" id="toolbar-adinsight">
-							<!-- row -->
-							<div class="row">
-								<!-- col -->
-								<div class="col-10 pr-0">
-									<!-- input-group -->
-									<div class="input-group">
-										<select class="custom-select">
-											<option>가정/생활</option>
-											<option>가족</option>
-											<option>건강/의료</option>
-											<option>게임</option>
-											<option>교육</option>
-											<option>금융</option>
-											<option>뉴스</option>
-											<option>도서/참고자료</option>
-											<option>라이프스타일</option>
-											<option>미용</option>
-											<option selected>복지/행정/단체</option>
-											<option>비즈니스/산업</option>
-											<option>사진/동영상</option>
-											<option>생산성</option>
-											<option>소셜네트워크</option>
-											<option>쇼핑</option>
-											<option>스포츠/레저</option>
-											<option>식음료</option>
-											<option>엔터테인먼트</option>
-											<option>여행/교통</option>
-											<option>유틸리티</option>
-											<option>자동차</option>
-											<option>정보/통신</option>
-											<option>패션/의류</option>
-											<option>기타</option>
-										</select>
-										<select class="custom-select">
-                      <option>자동차브랜드/서비스</option>
-											<option>가구/인테리어</option>
-											<option>가전제품</option>
-											<option>건강/의료</option>
-											<option>렌탈</option>
-											<option>기타서비스</option>
-										</select>
+
+							<!-- input-group -->
+							<div class="input-group">
+								<select class="custom-select">
+									<option>가정/생활</option>
+									<option>가족</option>
+									<option>건강/의료</option>
+									<option>게임</option>
+									<option>교육</option>
+									<option>금융</option>
+									<option>뉴스</option>
+									<option>도서/참고자료</option>
+									<option>라이프스타일</option>
+									<option>미용</option>
+									<option selected>복지/행정/단체</option>
+									<option>비즈니스/산업</option>
+									<option>사진/동영상</option>
+									<option>생산성</option>
+									<option>소셜네트워크</option>
+									<option>쇼핑</option>
+									<option>스포츠/레저</option>
+									<option>식음료</option>
+									<option>엔터테인먼트</option>
+									<option>여행/교통</option>
+									<option>유틸리티</option>
+									<option>자동차</option>
+									<option>정보/통신</option>
+									<option>패션/의류</option>
+									<option>기타</option>
+								</select>
+								<select class="custom-select">
+									<option>자동차브랜드/서비스</option>
+									<option>가구/인테리어</option>
+									<option>가전제품</option>
+									<option>건강/의료</option>
+									<option>렌탈</option>
+									<option>기타서비스</option>
+								</select>
 
 
-                    <select class="custom-select" style="max-width: 8rem;">
-                      <option>일간</option>
-                      <option>월간</option>
-                      <option>연간</option>
-                    </select>
+								<select class="custom-select" style="max-width: 8rem;">
+									<option>일간</option>
+									<option>월간</option>
+									<option>연간</option>
+								</select>
 
-										<input type="date" class="form-control" value="2021. 08. 01 ~ 2021. 08. 15" style="width: 14rem;">
+								<input type="date" class="form-control" value="2021. 08. 01 ~ 2021. 08. 15" style="width: 14rem;">
 
-										<!-- dropdown -->
-										<div class="dropdown">
-											<button type="button" class="btn btn-outlined-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												Kakaomoment +2
-											</button>
-											<div class="dropdown-menu">
-												<h6 class="dropdown-header">
-													채널 선택
-												</h6>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-channel-google">
-														<label class="form-check-label" for="filter-channel-google">Google ads</label>
-													</div>
-												</div>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-channel-facebook">
-														<label class="form-check-label" for="filter-channel-facebook">Facebook</label>
-													</div>
-												</div>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-channel-kakakomoment">
-														<label class="form-check-label" for="filter-channel-kakakomoment">kakaomoment</label>
-													</div>
-												</div>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-channel-tradingworks">
-														<label class="form-check-label" for="filter-channel-tradingworks">TW DSP</label>
-													</div>
-												</div>
-												<div class="dropdown-divider"></div>
-												<button class="dropdown-item">분석 제외</button>
-											</div>
-										</div>
-										<!-- /dropdown -->
-										<!-- dropdown -->
-										<div class="dropdown">
-											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
-															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												관심유도 +2
-											</button>
-											<div class="dropdown-menu">
-												<h6 class="dropdown-header">
-													캠페인 목적
-												</h6>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-purpose-branding">
-														<label class="form-check-label" for="filter-purpose-branding">브랜딩</label>
-													</div>
-												</div>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-purpose-attention">
-														<label class="form-check-label" for="filter-purpose-attention">관심유도</label>
-													</div>
-												</div>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-purpose-conversion">
-														<label class="form-check-label" for="filter-purpose-conversion">전환</label>
-													</div>
-												</div>
-												<div class="dropdown-divider"></div>
-												<button class="dropdown-item">분석 제외</button>
-											</div>
-										</div>
-										<!-- /dropdown -->
-
-										<!-- dropdown -->
-										<div class="dropdown">
-											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
-															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												0원~100,000,000원
-											</button>
-											<div class="dropdown-menu">
-												<div class="py-1 px-2" style="width: 20rem;">
-													<div class="input-group">
-														<div class="input-group-prepend">
-															<span class="input-group-text">최소</span>
-														</div>
-														<input type="text" class="form-control" placeholder="0">
-													</div>
-													<div class="input-group mt-1">
-														<div class="input-group-prepend">
-															<span class="input-group-text">최대</span>
-														</div>
-														<input type="text" class="form-control" placeholder="100,000,000">
-													</div>
-												</div>
-												<div class="dropdown-divider"></div>
-												<button class="dropdown-item">분석 제외</button>
-											</div>
-										</div>
-										<!-- /dropdown -->
-
-										<!-- dropdown -->
-										<div class="dropdown">
-											<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
-															data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												AOS +2
-											</button>
-											<div class="dropdown-menu">
-												<h6 class="dropdown-header">
-													OS 선택
-												</h6>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-os-aos">
-														<label class="form-check-label" for="filter-os-aos">AOS</label>
-													</div>
-												</div>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-os-ios">
-														<label class="form-check-label" for="filter-os-aos">iOS</label>
-													</div>
-												</div>
-												<div class="dropdown-item">
-													<div class="form-check">
-														<input type="checkbox" class="form-check-input" id="filter-os-etc">
-														<label class="form-check-label" for="filter-os-etc">기타</label>
-													</div>
-												</div>
-												<div class="dropdown-divider"></div>
-												<button class="dropdown-item">분석 제외</button>
-											</div>
-										</div>
-										<!-- /dropdown -->
-									</div>
-									<!-- /input-group -->
-								</div>
-								<!-- /col -->
-								<!-- col -->
-								<div class="col-2 pl-1 d-flex align-items-center">
-									<button class="btn btn-contained-primary btn-block">분석</button>
-									<button class="btn btn-outlined-primary btn-block m-0 ml-1" data-toggle="modal"
-													data-target="#md-compare-insight">
-										비교 +2
+								<!-- dropdown -->
+								<div class="dropdown">
+									<button type="button" class="btn btn-outlined-secondary dropdown-toggle" data-toggle="dropdown"
+													aria-haspopup="true" aria-expanded="false">
+										<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment" class="svg-icon-lg">
+										Kakaomoment +2
 									</button>
+									<div class="dropdown-menu">
+										<h6 class="dropdown-header">
+											채널 선택
+										</h6>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-channel-google">
+												<label class="form-check-label" for="filter-channel-google">
+													<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+													Google ads
+												</label>
+											</div>
+										</div>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-channel-facebook">
+												<label class="form-check-label" for="filter-channel-facebook">
+													<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg">
+													Facebook
+												</label>
+											</div>
+										</div>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-channel-kakakomoment">
+												<label class="form-check-label" for="filter-channel-kakakomoment">
+													<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment"
+															 class="svg-icon-lg">
+													kakaomoment
+												</label>
+											</div>
+										</div>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-channel-tradingworks">
+												<label class="form-check-label" for="filter-channel-tradingworks">
+													<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks"
+															 class="svg-icon-lg">
+													TW DSP
+												</label>
+											</div>
+										</div>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-item">분석 제외</button>
+									</div>
 								</div>
-								<!-- /col -->
+								<!-- /dropdown -->
+								<!-- dropdown -->
+								<div class="dropdown">
+									<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										관심유도 +2
+									</button>
+									<div class="dropdown-menu">
+										<h6 class="dropdown-header">
+											캠페인 목적
+										</h6>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-purpose-branding">
+												<label class="form-check-label" for="filter-purpose-branding">브랜딩</label>
+											</div>
+										</div>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-purpose-attention">
+												<label class="form-check-label" for="filter-purpose-attention">관심유도</label>
+											</div>
+										</div>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-purpose-conversion">
+												<label class="form-check-label" for="filter-purpose-conversion">전환</label>
+											</div>
+										</div>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-item">분석 제외</button>
+									</div>
+								</div>
+								<!-- /dropdown -->
+
+								<!-- dropdown -->
+								<div class="dropdown">
+									<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										0원~100,000,000원
+									</button>
+									<div class="dropdown-menu">
+										<div class="py-1 px-2" style="width: 20rem;">
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text">최소</span>
+												</div>
+												<input type="text" class="form-control" placeholder="0">
+											</div>
+											<div class="input-group mt-1">
+												<div class="input-group-prepend">
+													<span class="input-group-text">최대</span>
+												</div>
+												<input type="text" class="form-control" placeholder="100,000,000">
+											</div>
+										</div>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-item">분석 제외</button>
+									</div>
+								</div>
+								<!-- /dropdown -->
+
+								<!-- dropdown -->
+								<div class="dropdown">
+									<button type="button" class="btn btn-outlined-secondary dropdown-toggle"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="ico ic-apple"></i> +2
+									</button>
+									<div class="dropdown-menu">
+										<h6 class="dropdown-header">
+											OS 선택
+										</h6>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-os-aos">
+												<label class="form-check-label" for="filter-os-aos">
+													<i class="ico ic-android"></i>
+													AOS
+												</label>
+											</div>
+										</div>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-os-ios">
+												<label class="form-check-label" for="filter-os-ios">
+													<i class="ico ic-apple"></i>
+													iOS
+												</label>
+											</div>
+										</div>
+										<div class="dropdown-item">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="filter-os-web">
+												<label class="form-check-label" for="filter-os-web">
+													<i class="ico ic-web"></i>
+													Web
+												</label>
+											</div>
+										</div>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-item">분석 제외</button>
+									</div>
+								</div>
+								<!-- /dropdown -->
 							</div>
-							<!-- /row -->
+							<!-- /input-group -->
 						</div>
 						<!-- /toolbar -->
+						<!-- footer -->
+						<footer class="mt-2">
+							<div class="position-absolute">
+								<button class="btn btn-text-secondary btn-sm font-weight-bold" data-toggle="modal"
+												data-target="#md-search-serviceInCategory">
+									카테고리 별 서비스 목록
+									<i class="ico ic-chevron-right"></i>
+								</button>
+							</div>
 
-            <div class="mt-1">
-              <button class="btn btn-text-secondary btn-sm font-weight-bold" data-toggle="modal" data-target="#md-search-serviceInCategory">
-                카테고리 별 서비스 목록
-                <i class="ico ic-chevron-right"></i>
-              </button>
-            </div>
+							<div class="text-center">
+								<button class="btn btn-contained-primary" style="width: 10rem;">분석</button>
+								<button class="btn btn-outlined-primary m-0 ml-1" data-toggle="modal"
+												data-target="#md-compare-insight" style="width: 10rem;">
+									비교 +2
+								</button>
+							</div>
+						</footer>
+						<!-- /footer -->
 					</section>
 					<!-- /section -->
 
 					<!-- section -->
-					<section class="section">
+					<section class="section border-top mt-3">
 						<!--  header -->
 						<header class="d-flex align-items-center  h-fixed-7">
 							<h4 class="font-weight-bold mb-0">
 								분석 결과
-                <small class="text-muted ml-1">비교 카테고리 : 쇼핑 > 오픈마켓 | 비교 프로젝트 : 쇼핑 > 오픈마켓 (11 번가)</small>
+                <small class="text-muted ml-1">
+									<i class="ico ic-circle-fill text-legend-1"></i> 쇼핑 > 오픈마켓  &nbsp;
+									<i class="ico ic-circle-fill text-legend-2"></i> 쇼핑 > 오픈마켓 (11 번가)
+								</small>
 							</h4>
 
               <div class="ml-auto"></div>
-
               <div class="btn-group btn-group-sm">
                 <button class="btn btn-outlined-secondary">
+									<i class="ico ic-chart"></i>
                   차트
                 </button>
                 <button class="btn btn-contained-secondary">
+									<i class="ico ic-table"></i>
                   테이블
                 </button>
               </div>
@@ -580,54 +605,58 @@
 							<!-- /datagrid-responsive -->
 						</div>
 						<!-- /card -->
-						<div class=" px-2 pt-1">
-							<small class="text-muted">
-								* 모든 항목은 평균 수치입니다
-							</small>
-						</div>
-						<!-- nav -->
-						<nav class="d-flex align-items-center justify-content-center pb-2">
-							<ul class="pagination">
-								<li class="page-item">
-									<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Previous">
-										<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
-											<polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
-										</svg>
-									</a>
-								</li>
-								<li class="page-item">
-									<span class="page-ellipsis">...</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link btn-circle btn-text-secondary" href="#">3</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link btn-circle btn-outlined-secondary is-active" href="#">4</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link btn-circle btn-text-secondary" href="#">5</a>
-								</li>
-								<li class="page-item">
-									<span class="page-ellipsis">...</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link btn-circle btn-text-secondary" href="#">99</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Next">
-										<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
-											<polygon
-												points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
-										</svg>
-									</a>
-								</li>
-							</ul>
-							<select class="custom-select" style="width: 7rem;">
-								<option>10</option>
-								<option>20</option>
-							</select>
-						</nav>
-						<!-- /nav -->
+						<!-- footer -->
+						<footer class="mt-2">
+							<div class="position-absolute">
+								<small class="text-muted">
+									* 모든 항목은 평균 수치입니다
+								</small>
+							</div>
+							<!-- nav -->
+							<nav class="d-flex align-items-center justify-content-center pb-2">
+								<ul class="pagination">
+									<li class="page-item">
+										<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Previous">
+											<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+												<polygon points="15 4 7 12 15.0001831 20.0001831 17 18 11 12 17 6"></polygon>
+											</svg>
+										</a>
+									</li>
+									<li class="page-item">
+										<span class="page-ellipsis">...</span>
+									</li>
+									<li class="page-item">
+										<a class="page-link btn-circle btn-text-secondary" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link btn-circle btn-outlined-secondary is-active" href="#">4</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link btn-circle btn-text-secondary" href="#">5</a>
+									</li>
+									<li class="page-item">
+										<span class="page-ellipsis">...</span>
+									</li>
+									<li class="page-item">
+										<a class="page-link btn-circle btn-text-secondary" href="#">99</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link btn-circle btn-text-secondary" href="#" aria-label="Next">
+											<svg class="svg-icon page-item-icon" viewBox="0 0 24 24">
+												<polygon
+													points="9.00013735 4 17.0002289 12.0003663 9.00013735 20.0001831 7 18.0000458 13.0000458 12 7 5.99995422"></polygon>
+											</svg>
+										</a>
+									</li>
+								</ul>
+								<select class="custom-select" style="width: 7rem;">
+									<option>10</option>
+									<option>20</option>
+								</select>
+							</nav>
+							<!-- /nav -->
+						</footer>
+						<!-- /footer -->
 					</section>
 					<!-- /section -->
 
