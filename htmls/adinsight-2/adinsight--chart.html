@@ -349,7 +349,7 @@
 						<!-- footer -->
 						<footer class="mt-2">
 							<div class="position-absolute">
-								<button class="btn btn-text-secondary btn-sm font-weight-bold" data-toggle="modal"
+								<button class="btn btn-text-secondary btn-sm" data-toggle="modal"
 												data-target="#md-search-serviceInCategory">
 									카테고리 별 서비스 목록
 									<i class="ico ic-chevron-right"></i>
@@ -377,10 +377,10 @@
 					<!-- section -->
 					<section class="section border-top mt-3">
 						<!--  header -->
-						<header class="d-flex align-items-center  h-fixed-7">
-							<h4 class="font-weight-bold mb-0">
+						<header class="d-flex align-items-center h-fixed-7">
+							<h3 class="font-weight-bold mb-0">
 								분석 결과
-							</h4>
+							</h3>
 
 							<div class="ml-auto"></div>
 							<div class="btn-group btn-group-sm">
@@ -430,9 +430,14 @@
 							<!-- /card-header -->
 							<!-- card-body -->
 							<div class="card-body py-2">
-								<h5 class="font-weight-bold mb-2">
-									지표 별 추이 분석
-								</h5>
+								<!-- header -->
+								<header class="d-flex align-items-center h-fixed-7 border-bottom mb-3">
+									<h4 class="font-weight-bold mb-0">
+										지표 별 추이 분석
+									</h4>
+								</header>
+								<!-- /header -->
+
 								<!-- row -->
 								<div class="row">
 									<!-- col -->
@@ -549,21 +554,25 @@
 									<!-- /col -->
 								</div>
 								<!-- /row -->
-								<footer class="text-center mt-2">
+								<footer class="text-center my-2">
 									<small>
-										<i class="ico ic-circle-fill text-legend-1"></i> 가구 생활 > 가구 인테리어  &nbsp;
+										<i class="ico ic-circle-fill text-legend-1"></i> 가구 생활 > 가구 인테리어 &nbsp;
 										<i class="ico ic-circle-fill text-legend-2"></i> 게임 > 롤플레잉 &nbsp;
-										<i class="ico ic-circle-fill text-legend-3"></i> 프로젝트 오늘의집
+										<i class="ico ic-circle-fill text-legend-3"></i> 가정생활 > 가구/인테리어(오늘의집)
 									</small>
 								</footer>
 							</div>
 							<!-- card-body -->
 
 							<!-- card-body -->
-							<div class="card-body py-2 border-top">
-								<h5 class="font-weight-bold mb-2">
+							<div class="card-body py-2">
+								<!-- header -->
+								<header class="d-flex align-items-center h-fixed-7 border-bottom mb-3">
+									<h4 class="font-weight-bold mb-0">
 									채널별 추이 분석
-								</h5>
+									</h4>
+								</header>
+								<!-- header -->
 
 								<!-- row -->
 								<div class="row">
@@ -701,7 +710,7 @@
 									<!-- /col -->
 								</div>
 								<!-- /row -->
-								<footer class="text-center mt-2">
+								<footer class="text-center my-2">
 									<small>
 										<i class="ico ic-circle-fill text-legend-1"></i> 가구 생활 > 가구 인테리어  &nbsp;
 										<i class="ico ic-circle-fill text-legend-2"></i> 게임 > 롤플레잉 &nbsp;
@@ -729,7 +738,7 @@
 
 <!-- md-compare-insight -->
 <div class="modal fade" id="md-compare-insight" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
+	<div class="modal-dialog">
 		<div class="modal-content">
 			<!-- modal-header -->
 			<div class="modal-header">
@@ -742,86 +751,122 @@
 			</div>
 			<!-- /modal-header -->
 			<!-- modal-body -->
-			<div class="modal-body">
-				<!-- d-flex -->
-				<div class="d-flex">
-					<select class="custom-select" style="width: 18rem;" disabled>
-						<option>업종 별 분석</option>
-						<option>프로젝트 비교 분석</option>
-					</select>
+			<div class="modal-body pt-0">
+				<!-- wrap -->
+				<div class="wrap">
+					<header class="d-flex align-items-center h-fixed-7">
+						<h4 class="font-weight-bold mb-0">기준 데이터</h4>
+					</header>
+					<!-- d-flex -->
+					<div class="d-flex">
+						<select class="custom-select" style="width: 18rem;" disabled>
+							<option>업종 별 분석</option>
+							<option>프로젝트 비교 분석</option>
+						</select>
 
-					<!-- input-group -->
-					<div class="input-group ml-1" style="width: 47rem;">
-						<select class="custom-select" disabled>
-							<option>가정/생활</option>
-							<option>가족</option>
-							<option>건강</option>
-							<option>의료</option>
-							<option>교육</option>
-							<option>금융</option>
-							<option>패션</option>
-							<option>의류</option>
-							<option>기타</option>
-						</select>
-						<select class="custom-select" disabled>
-							<option>가구/인테리어</option>
-							<option>가전제품</option>
-							<option>건강/의료</option>
-							<option>렌탈</option>
-							<option>기타서비스</option>
-						</select>
+						<!-- input-group -->
+						<div class="input-group ml-1" style="width: 47rem;">
+							<select class="custom-select" disabled>
+								<option>가정/생활</option>
+								<option>가족</option>
+								<option>건강</option>
+								<option>의료</option>
+								<option>교육</option>
+								<option>금융</option>
+								<option>패션</option>
+								<option>의류</option>
+								<option>기타</option>
+							</select>
+							<select class="custom-select" disabled>
+								<option>가구/인테리어</option>
+								<option>가전제품</option>
+								<option>건강/의료</option>
+								<option>렌탈</option>
+								<option>기타서비스</option>
+							</select>
+						</div>
+						<!-- /input-group -->
 					</div>
-					<!-- /input-group -->
-					<div class="ml-1" style="width: 10rem;">
-						<button class="btn btn-outlined-secondary">
+					<!-- /d-flex -->
+				</div>
+				<!-- /wrap -->
+				<!-- wrap -->
+				<div class="wrap border-top mt-2">
+					<header class="d-flex align-items-center h-fixed-7">
+						<h4 class="font-weight-bold mb-0">비교 데이터</h4>
+						<small class="text-muted ml-1">비교 설정은 최대 2개까지 가능합니다.</small>
+					</header>
+					<!-- item -->
+					<div class="item mb-2">
+						<div class="d-flex align-items-center justify-content-between h-fixed-5">
+							<h5 class="mb-0">비교 1</h5>
+							<button class="btn btn-text-danger btn-sm">
+								<i class="ico ic-delete"></i> 삭제
+							</button>
+						</div>
+						<!-- d-flex -->
+						<div class="d-flex">
+							<select class="custom-select" style="width: 18rem;">
+								<option selected>업종 별 분석</option>
+								<option>프로젝트 비교 분석</option>
+							</select>
+							<div class="w-100 ml-1">
+								<div class="input-group">
+									<select class="custom-select">
+										<option>가정/생활</option>
+										<option>가족</option>
+										<option>건강</option>
+										<option>의료</option>
+										<option>교육</option>
+										<option>금융</option>
+										<option>패션</option>
+										<option>의류</option>
+										<option>기타</option>
+									</select>
+									<select class="custom-select">
+										<option>가구/인테리어</option>
+										<option>가전제품</option>
+										<option>건강/의료</option>
+										<option>렌탈</option>
+										<option>기타서비스</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- /d-flex -->
+					</div>
+					<!-- /item -->
+					<!-- item -->
+					<div class="item">
+						<div class="d-flex align-items-center justify-content-between h-fixed-5">
+							<h5 class="mb-0">비교 2</h5>
+							<button class="btn btn-text-danger btn-sm">
+								<i class="ico ic-delete"></i> 삭제
+							</button>
+						</div>
+						<!-- d-flex -->
+						<div class="d-flex">
+							<select class="custom-select" style="width: 18rem;">
+								<option>업종 별 분석</option>
+								<option selected>프로젝트 비교 분석</option>
+							</select>
+							<div class="w-100 ml-1">
+								<select class="custom-select">
+									<option>카카오페이 APP</option>
+								</select>
+							</div>
+						</div>
+						<!-- /d-flex -->
+					</div>
+					<!-- /item -->
+					<div class="mt-2">
+						<button class="btn btn-outlined-secondary btn-block">
 							<i class="ico ic-plus"></i>
-							<span class="d-none">추가하기</span>
+							추가
 						</button>
 					</div>
 				</div>
-				<!-- /d-flex -->
-
-				<!-- d-flex -->
-				<div class="d-flex mt-2">
-					<select class="custom-select" style="width: 18rem;">
-						<option>업종 별 분석</option>
-						<option>프로젝트 비교 분석</option>
-					</select>
-
-					<!-- input-group -->
-					<div class="input-group ml-1" style="width: 47rem;">
-						<select class="custom-select">
-							<option>가정/생활</option>
-							<option>가족</option>
-							<option>건강</option>
-							<option>의료</option>
-							<option>교육</option>
-							<option>금융</option>
-							<option>패션</option>
-							<option>의류</option>
-							<option>기타</option>
-						</select>
-						<select class="custom-select">
-							<option>가구/인테리어</option>
-							<option>가전제품</option>
-							<option>건강/의료</option>
-							<option>렌탈</option>
-							<option>기타서비스</option>
-						</select>
-					</div>
-					<!-- /input-group -->
-					<div class="ml-1" style="width: 10rem;">
-						<button class="btn btn-outlined-secondary">
-							<i class="ico ic-minus"></i>
-							<span class="d-none">삭제하기</span>
-						</button>
-						<button class="btn btn-outlined-secondary ml-2">
-							<i class="ico ic-plus"></i>
-							<span class="d-none">추가하기</span>
-						</button>
-					</div>
-				</div>
-				<!-- /d-flex -->
+				<!-- /wrap -->
 			</div>
 			<!-- /modal-body -->
 			<!-- modal-footer -->
@@ -837,86 +882,91 @@
 
 <!-- md-search-serviceInCategory -->
 <div class="modal fade" id="md-search-serviceInCategory" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <!-- modal-header -->
-      <div class="modal-header">
-        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
-          <i class="ico ic-close"></i>
-        </button>
-        <h3 class="modal-title font-weight-bold">
-          카테고리 별 서비스 검색
-        </h3>
-      </div>
-      <!-- /modal-header -->
-      <!-- modal-body -->
-      <div class="modal-body p-0">
-        <!-- form-inline -->
-        <div class="form-inline p-2">
-          <select class="custom-select">
-            <option>광고주</option>
-            <option>서비스명</option>
-          </select>
-          <input type="search" class="form-control ml-1" style="width: 20rem;">
-        </div>
-        <!-- /form-inline -->
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<!-- modal-header -->
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+					<i class="ico ic-close"></i>
+				</button>
+				<h3 class="modal-title font-weight-bold">
+					카테고리 별 서비스 목록
+				</h3>
+			</div>
+			<!-- /modal-header -->
+			<!-- modal-body -->
+			<div class="modal-body p-0">
+				<!-- toolbar -->
+				<div class="toolbar d-flex align-items-center p-2">
+					<select class="custom-select" style="width: 18rem">
+						<option>광고주</option>
+						<option>서비스명</option>
+					</select>
+					<input type="search" class="form-control ml-1">
+				</div>
+				<!-- /toolbar -->
 
-        <!-- datagrid -->
-        <div class="datagrid datagrid-bordered datagrid-hover border-top" role="grid">
-          <!-- datagrid-rowgroup -->
-          <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
-            <!-- datagrid-row -->
-            <div class="datagrid-row" role="row">
-              <div class="datagrid-cell" role="columnheader" style="min-width: 8rem; max-width: 12rem;">카테고리</div>
-              <div class="datagrid-cell" role="columnheader" style="min-width: 12rem; max-width: 16rem;">상세 카테고리</div>
-              <div class="datagrid-cell" role="columnheader" style="min-width: 16rem; max-width: 20rem;">광고주</div>
-              <div class="datagrid-cell" role="columnheader" style="min-width: 16rem;">서비스명</div>
-            </div>
-            <!-- /datagrid-row -->
-          </div>
-          <!-- /datagrid-rowgroup -->
-          <!-- datagrid-rowgroup -->
-          <div class="datagrid-group datagrid-body" role="rowgroup">
-            <!-- datagrid-row -->
-            <div class="datagrid-row" role="row">
-              <div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
-                복지/행정/단체
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
-                자동차브랜드/서비스
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
-                넷마블
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
-                <div class="text-truncate">세븐나이츠</div>
-              </div>
-            </div>
-            <!-- /datagrid-row -->
-            <!-- datagrid-row -->
-            <div class="datagrid-row" role="row">
-              <div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
-                복지/행정/단체
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
-                자동차브랜드/서비스
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
-                넷마블
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
-                <div class="text-truncate">마블퓨쳐</div>
-              </div>
-            </div>
-            <!-- /datagrid-row -->
-          </div>
-          <!-- /datagrid-rowgroup -->
-        </div>
-        <!-- /datagrid -->
-      </div>
-      <!-- /modal-body -->
-    </div>
-  </div>
+				<!-- datagrid-responsive -->
+				<div class="datagrid-responsive border-top" style="max-height: 50rem;">
+					<!-- datagrid -->
+					<div class="datagrid datagrid-hover" role="grid">
+						<!-- datagrid-rowgroup -->
+						<div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+							<!-- datagrid-row -->
+							<div class="datagrid-row" role="row">
+								<div class="datagrid-cell" role="columnheader" style="min-width: 8rem; max-width: 12rem;">카테고리</div>
+								<div class="datagrid-cell" role="columnheader" style="min-width: 12rem; max-width: 16rem;">상세 카테고리</div>
+								<div class="datagrid-cell" role="columnheader" style="min-width: 16rem; max-width: 20rem;">광고주</div>
+								<div class="datagrid-cell" role="columnheader" style="min-width: 16rem;">서비스명</div>
+							</div>
+							<!-- /datagrid-row -->
+						</div>
+						<!-- /datagrid-rowgroup -->
+						<!-- datagrid-rowgroup -->
+						<div class="datagrid-group datagrid-body" role="rowgroup">
+							<!-- datagrid-row -->
+							<div class="datagrid-row" role="row">
+								<div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
+									복지/행정/단체
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
+									자동차브랜드/서비스
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
+									넷마블
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
+									<div class="text-truncate">세븐나이츠</div>
+								</div>
+							</div>
+							<!-- /datagrid-row -->
+							<!-- datagrid-row -->
+							<div class="datagrid-row" role="row">
+								<div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
+									복지/행정/단체
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
+									자동차브랜드/서비스
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
+									넷마블
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
+									<div class="text-truncate">마블퓨쳐</div>
+								</div>
+							</div>
+							<!-- /datagrid-row -->
+						</div>
+						<!-- /datagrid-rowgroup -->
+					</div>
+					<!-- /datagrid -->
+				</div>
+				<!-- /datagrid-responsive -->
+
+			</div>
+			<!-- /modal-body -->
+		</div>
+	</div>
 </div>
 <!-- md-search-serviceInCategory -->
 

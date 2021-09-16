@@ -340,7 +340,7 @@
 						<!-- footer -->
 						<footer class="mt-2">
 							<div class="position-absolute">
-								<button class="btn btn-text-secondary btn-sm font-weight-bold" data-toggle="modal"
+								<button class="btn btn-text-secondary btn-sm" data-toggle="modal"
 												data-target="#md-search-serviceInCategory">
 									카테고리 별 서비스 목록
 									<i class="ico ic-chevron-right"></i>
@@ -349,9 +349,15 @@
 
 							<div class="text-center">
 								<button class="btn btn-contained-primary" style="width: 10rem;">분석</button>
-								<button class="btn btn-outlined-primary m-0 ml-1" data-toggle="modal"
+								<button class="btn btn-outlined-secondary" data-toggle="modal"
 												data-target="#md-compare-insight" style="width: 10rem;">
-									비교 +2
+									<i class="ico ic-plus"></i>
+									비교
+								</button>
+								<button class="btn btn-outlined-primary" data-toggle="modal"
+												data-target="#md-compare-insight" style="width: 10rem;">
+									<i class="ico ic-plus"></i>
+									비교 (2)
 								</button>
 							</div>
 						</footer>
@@ -362,14 +368,15 @@
 					<!-- section -->
 					<section class="section border-top mt-3">
 						<!--  header -->
-						<header class="d-flex align-items-center  h-fixed-7">
-							<h4 class="font-weight-bold mb-0">
+						<header class="d-flex align-items-center h-fixed-7">
+							<h3 class="font-weight-bold mb-0">
 								분석 결과
-                <small class="text-muted ml-1">
-									<i class="ico ic-circle-fill text-legend-1"></i> 쇼핑 > 오픈마켓  &nbsp;
-									<i class="ico ic-circle-fill text-legend-2"></i> 쇼핑 > 오픈마켓 (11 번가)
-								</small>
-							</h4>
+							</h3>
+							<span class="text-muted font-size-sm ml-1">
+								<i class="ico ic-circle-fill text-legend-1"></i> 가구 생활 > 가구 인테리어 &nbsp;
+								<i class="ico ic-circle-fill text-legend-2"></i> 게임 > 롤플레잉 &nbsp;
+								<i class="ico ic-circle-fill text-legend-3"></i> 가정생활 > 가구/인테리어(오늘의집)
+							</span>
 
               <div class="ml-auto"></div>
               <div class="btn-group btn-group-sm">
@@ -405,10 +412,10 @@
 												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">기간</div>
 
 												<div class="datagrid-cell" role="columnheader" style="min-width: 14rem;">카테고리</div>
-												<div class="datagrid-cell" role="columnheader" style="min-width: 14rem;">상세 카테고리</div>
+												<div class="datagrid-cell" role="columnheader" style="min-width: 16rem;">상세 카테고리</div>
 												<div class="datagrid-cell" role="columnheader" style="min-width: 12rem;">캠페인 목적</div>
-												<div class="datagrid-cell" role="columnheader" style="min-width: 8rem;">채널</div>
-												<div class="datagrid-cell" role="columnheader" style="min-width: 8rem;">OS</div>
+												<div class="datagrid-cell text-center" role="columnheader" style="min-width: 7rem;">채널</div>
+												<div class="datagrid-cell text-center" role="columnheader" style="min-width: 7rem;">OS</div>
 											</div>
 											<div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
 												<div class="datagrid-cell" role="columnheader" style="min-width: 14rem;">소진비용</div>
@@ -441,29 +448,31 @@
 													2021.08.21
 												</div>
 												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">복지/행정/단체</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">가구/인테리어</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">브랜딩</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">
+												<div class="datagrid-cell" role="gridcell" style="min-width: 16rem;">가구/인테리어</div>
+												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">관심유도</div>
+												<div class="datagrid-cell text-center" role="gridcell" style="min-width: 7rem;">
 													<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
 												</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">AOS</div>
+												<div class="datagrid-cell text-center" role="gridcell" style="min-width: 7rem;">
+													<i class="ico ic-android"></i>
+												</div>
 											</div>
 											<div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
-												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">10,000,000</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">2,400,000</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">4,500</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">3,333</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,778</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 14rem;">10,000,000</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">2,400,000</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">4,500</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">3,333</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">1,778</div>
 
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">0.19%</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">415,000</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">17.29%</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">19</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">6,000</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">0.19%</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 14rem;">415,000</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">17.29%</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">19</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">6,000</div>
 
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,667</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">150</div>
-												<div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">53,333</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">1,667</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">150</div>
+												<div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">53,333</div>
 											</div>
 										</div>
 										<!-- /datagrid-row -->
@@ -474,29 +483,31 @@
                           2021.08.21
                         </div>
                         <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">복지/행정/단체</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">가구/인테리어</div>
+                        <div class="datagrid-cell" role="gridcell" style="min-width: 16rem;">가구/인테리어</div>
                         <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">브랜딩</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">
+                        <div class="datagrid-cell text-center" role="gridcell" style="min-width: 7rem;">
                           <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
                         </div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">AOS</div>
+												<div class="datagrid-cell text-center" role="gridcell" style="min-width: 7rem;">
+													<i class="ico ic-apple"></i>
+												</div>
                       </div>
                       <div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">10,000,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">2,400,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">4,500</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">3,333</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,778</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 14rem;">10,000,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">2,400,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">4,500</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">3,333</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">1,778</div>
 
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">0.19%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">415,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">17.29%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">19</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">6,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">0.19%</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 14rem;">415,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">17.29%</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">19</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">6,000</div>
 
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,667</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">150</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">53,333</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">1,667</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">150</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">53,333</div>
                       </div>
                     </div>
                     <!-- /datagrid-row -->
@@ -507,95 +518,31 @@
                           2021.08.21
                         </div>
                         <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">복지/행정/단체</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">가구/인테리어</div>
+                        <div class="datagrid-cell" role="gridcell" style="min-width: 16rem;">자동차브랜드/서비스</div>
                         <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">브랜딩</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">
+                        <div class="datagrid-cell text-center" role="gridcell" style="min-width: 7rem;">
                           <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
                         </div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">AOS</div>
+                        <div class="datagrid-cell text-center" role="gridcell" style="min-width: 7rem;">
+													<i class="ico ic-web"></i>
+												</div>
                       </div>
                       <div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">10,000,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">2,400,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">4,500</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">3,333</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,778</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 14rem;">10,000,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">2,400,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">4,500</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">3,333</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">1,778</div>
 
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">0.19%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">415,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">17.29%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">19</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">6,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">0.19%</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 14rem;">415,000</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">17.29%</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">19</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">6,000</div>
 
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,667</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">150</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">53,333</div>
-                      </div>
-                    </div>
-                    <!-- /datagrid-row -->
-                    <!-- datagrid-row -->
-                    <div class="datagrid-row" role="row" data-row-legend="legend-4">
-                      <div class="datagrid-row datagrid-row-absolute">
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">
-                          2021.08.21
-                        </div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">복지/행정/단체</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">가구/인테리어</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">브랜딩</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">
-                          <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
-                        </div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">AOS</div>
-                      </div>
-                      <div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">10,000,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">2,400,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">4,500</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">3,333</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,778</div>
-
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">0.19%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">415,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">17.29%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">19</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">6,000</div>
-
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,667</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">150</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">53,333</div>
-                      </div>
-                    </div>
-                    <!-- /datagrid-row -->
-                    <!-- datagrid-row -->
-                    <div class="datagrid-row" role="row" data-row-legend="legend-5">
-                      <div class="datagrid-row datagrid-row-absolute">
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">
-                          2021.08.21
-                        </div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">복지/행정/단체</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">가구/인테리어</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">브랜딩</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">
-                          <img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
-                        </div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 8rem;">AOS</div>
-                      </div>
-                      <div class="datagrid-row datagrid-row-static" style="margin-left: 68rem;">
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">10,000,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">2,400,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">4,500</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">3,333</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,778</div>
-
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">0.19%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 14rem;">415,000</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">17.29%</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">19</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">6,000</div>
-
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">1,667</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">150</div>
-                        <div class="datagrid-cell" role="gridcell" style="min-width: 12rem;">53,333</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">1,667</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">150</div>
+                        <div class="datagrid-cell text-right" role="gridcell" style="min-width: 12rem;">53,333</div>
                       </div>
                     </div>
                     <!-- /datagrid-row -->
@@ -676,7 +623,7 @@
 
 <!-- md-compare-insight -->
 <div class="modal fade" id="md-compare-insight" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
+	<div class="modal-dialog">
 		<div class="modal-content">
 			<!-- modal-header -->
 			<div class="modal-header">
@@ -689,88 +636,122 @@
 			</div>
 			<!-- /modal-header -->
 			<!-- modal-body -->
-			<div class="modal-body">
-
-				<!-- d-flex -->
-				<div class="d-flex">
-					<select class="custom-select" style="width: 18rem;" disabled>
-						<option>업종 별 분석</option>
-						<option>프로젝트 비교 분석</option>
-					</select>
-
-					<!-- input-group -->
-					<div class="input-group ml-1" style="width: 47rem;">
-						<select class="custom-select" disabled>
-							<option>가정/생활</option>
-							<option>가족</option>
-							<option>건강</option>
-							<option>의료</option>
-							<option>교육</option>
-							<option>금융</option>
-							<option>패션</option>
-							<option>의류</option>
-							<option>기타</option>
+			<div class="modal-body pt-0">
+				<!-- wrap -->
+				<div class="wrap">
+					<header class="d-flex align-items-center h-fixed-7">
+						<h4 class="font-weight-bold mb-0">기준 데이터</h4>
+					</header>
+					<!-- d-flex -->
+					<div class="d-flex">
+						<select class="custom-select" style="width: 18rem;" disabled>
+							<option>업종 별 분석</option>
+							<option>프로젝트 비교 분석</option>
 						</select>
-						<select class="custom-select" disabled>
-							<option>가구/인테리어</option>
-							<option>가전제품</option>
-							<option>건강/의료</option>
-							<option>렌탈</option>
-							<option>기타서비스</option>
-						</select>
+
+						<!-- input-group -->
+						<div class="input-group ml-1" style="width: 47rem;">
+							<select class="custom-select" disabled>
+								<option>가정/생활</option>
+								<option>가족</option>
+								<option>건강</option>
+								<option>의료</option>
+								<option>교육</option>
+								<option>금융</option>
+								<option>패션</option>
+								<option>의류</option>
+								<option>기타</option>
+							</select>
+							<select class="custom-select" disabled>
+								<option>가구/인테리어</option>
+								<option>가전제품</option>
+								<option>건강/의료</option>
+								<option>렌탈</option>
+								<option>기타서비스</option>
+							</select>
+						</div>
+						<!-- /input-group -->
 					</div>
-					<!-- /input-group -->
-					<div class="ml-1" style="width: 10rem;">
-						<button class="btn btn-outlined-secondary">
+					<!-- /d-flex -->
+				</div>
+				<!-- /wrap -->
+				<!-- wrap -->
+				<div class="wrap border-top mt-2">
+					<header class="d-flex align-items-center h-fixed-7">
+						<h4 class="font-weight-bold mb-0">비교 데이터</h4>
+						<small class="text-muted ml-1">비교 설정은 최대 2개까지 가능합니다.</small>
+					</header>
+					<!-- item -->
+					<div class="item mb-2">
+						<div class="d-flex align-items-center justify-content-between h-fixed-5">
+							<h5 class="mb-0">비교 1</h5>
+							<button class="btn btn-text-danger btn-sm">
+								<i class="ico ic-delete"></i> 삭제
+							</button>
+						</div>
+						<!-- d-flex -->
+						<div class="d-flex">
+							<select class="custom-select" style="width: 18rem;">
+								<option selected>업종 별 분석</option>
+								<option>프로젝트 비교 분석</option>
+							</select>
+							<div class="w-100 ml-1">
+								<div class="input-group">
+									<select class="custom-select">
+										<option>가정/생활</option>
+										<option>가족</option>
+										<option>건강</option>
+										<option>의료</option>
+										<option>교육</option>
+										<option>금융</option>
+										<option>패션</option>
+										<option>의류</option>
+										<option>기타</option>
+									</select>
+									<select class="custom-select">
+										<option>가구/인테리어</option>
+										<option>가전제품</option>
+										<option>건강/의료</option>
+										<option>렌탈</option>
+										<option>기타서비스</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- /d-flex -->
+					</div>
+					<!-- /item -->
+					<!-- item -->
+					<div class="item">
+						<div class="d-flex align-items-center justify-content-between h-fixed-5">
+							<h5 class="mb-0">비교 2</h5>
+							<button class="btn btn-text-danger btn-sm">
+								<i class="ico ic-delete"></i> 삭제
+							</button>
+						</div>
+						<!-- d-flex -->
+						<div class="d-flex">
+							<select class="custom-select" style="width: 18rem;">
+								<option>업종 별 분석</option>
+								<option selected>프로젝트 비교 분석</option>
+							</select>
+							<div class="w-100 ml-1">
+								<select class="custom-select">
+									<option>카카오페이 APP</option>
+								</select>
+							</div>
+						</div>
+						<!-- /d-flex -->
+					</div>
+					<!-- /item -->
+					<div class="mt-2">
+						<button class="btn btn-outlined-secondary btn-block">
 							<i class="ico ic-plus"></i>
-							<span class="d-none">추가하기</span>
+							추가
 						</button>
 					</div>
 				</div>
-				<!-- /d-flex -->
-
-				<!-- d-flex -->
-				<div class="d-flex mt-2">
-					<select class="custom-select" style="width: 18rem;">
-						<option>업종 별 분석</option>
-						<option>프로젝트 비교 분석</option>
-					</select>
-
-					<!-- input-group -->
-					<div class="input-group ml-1" style="width: 47rem;">
-						<select class="custom-select">
-							<option>가정/생활</option>
-							<option>가족</option>
-							<option>건강</option>
-							<option>의료</option>
-							<option>교육</option>
-							<option>금융</option>
-							<option>패션</option>
-							<option>의류</option>
-							<option>기타</option>
-						</select>
-						<select class="custom-select">
-							<option>가구/인테리어</option>
-							<option>가전제품</option>
-							<option>건강/의료</option>
-							<option>렌탈</option>
-							<option>기타서비스</option>
-						</select>
-					</div>
-					<!-- /input-group -->
-					<div class="ml-1" style="width: 10rem;">
-						<button class="btn btn-outlined-secondary">
-							<i class="ico ic-minus"></i>
-							<span class="d-none">삭제하기</span>
-						</button>
-						<button class="btn btn-outlined-secondary ml-2">
-							<i class="ico ic-plus"></i>
-							<span class="d-none">추가하기</span>
-						</button>
-					</div>
-				</div>
-				<!-- /d-flex -->
-
+				<!-- /wrap -->
 			</div>
 			<!-- /modal-body -->
 			<!-- modal-footer -->
@@ -795,74 +776,79 @@
           <i class="ico ic-close"></i>
         </button>
         <h3 class="modal-title font-weight-bold">
-          카테고리 별 서비스 검색
+          카테고리 별 서비스 목록
         </h3>
       </div>
       <!-- /modal-header -->
       <!-- modal-body -->
       <div class="modal-body p-0">
         <!-- form-inline -->
-        <div class="form-inline p-2">
-            <select class="custom-select">
+        <div class="d-flex align-items-center p-2">
+            <select class="custom-select" style="width: 18rem">
               <option>광고주</option>
               <option>서비스명</option>
             </select>
-            <input type="search" class="form-control ml-1" style="width: 20rem;">
+            <input type="search" class="form-control ml-1">
         </div>
         <!-- /form-inline -->
 
-        <!-- datagrid -->
-        <div class="datagrid datagrid-bordered datagrid-hover border-top" role="grid">
-          <!-- datagrid-rowgroup -->
-          <div class="datagrid-rowgroup datagrid-header" role="rowgroup">
-            <!-- datagrid-row -->
-            <div class="datagrid-row" role="row">
-              <div class="datagrid-cell" role="columnheader" style="min-width: 8rem; max-width: 12rem;">카테고리</div>
-              <div class="datagrid-cell" role="columnheader" style="min-width: 12rem; max-width: 16rem;">상세 카테고리</div>
-              <div class="datagrid-cell" role="columnheader" style="min-width: 16rem; max-width: 20rem;">광고주</div>
-              <div class="datagrid-cell" role="columnheader" style="min-width: 16rem;">서비스명</div>
-            </div>
-            <!-- /datagrid-row -->
-          </div>
-          <!-- /datagrid-rowgroup -->
-          <!-- datagrid-rowgroup -->
-          <div class="datagrid-group datagrid-body" role="rowgroup">
-            <!-- datagrid-row -->
-            <div class="datagrid-row" role="row">
-              <div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
-                복지/행정/단체
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
-                자동차브랜드/서비스
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
-                넷마블
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
-                <div class="text-truncate">세븐나이츠</div>
-              </div>
-            </div>
-            <!-- /datagrid-row -->
-            <!-- datagrid-row -->
-            <div class="datagrid-row" role="row">
-              <div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
-                복지/행정/단체
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
-                자동차브랜드/서비스
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
-                넷마블
-              </div>
-              <div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
-                <div class="text-truncate">마블퓨쳐</div>
-              </div>
-            </div>
-            <!-- /datagrid-row -->
-          </div>
-          <!-- /datagrid-rowgroup -->
-        </div>
-        <!-- /datagrid -->
+				<!-- datagrid-responsive -->
+				<div class="datagrid-responsive border-top" style="max-height: 50rem;">
+					<!-- datagrid -->
+					<div class="datagrid datagrid-hover" role="grid">
+						<!-- datagrid-rowgroup -->
+						<div class="datagrid-rowgroup datagrid-header datagrid-rowgroup-sticky" role="rowgroup">
+							<!-- datagrid-row -->
+							<div class="datagrid-row" role="row">
+								<div class="datagrid-cell" role="columnheader" style="min-width: 8rem; max-width: 12rem;">카테고리</div>
+								<div class="datagrid-cell" role="columnheader" style="min-width: 12rem; max-width: 16rem;">상세 카테고리</div>
+								<div class="datagrid-cell" role="columnheader" style="min-width: 16rem; max-width: 20rem;">광고주</div>
+								<div class="datagrid-cell" role="columnheader" style="min-width: 16rem;">서비스명</div>
+							</div>
+							<!-- /datagrid-row -->
+						</div>
+						<!-- /datagrid-rowgroup -->
+						<!-- datagrid-rowgroup -->
+						<div class="datagrid-group datagrid-body" role="rowgroup">
+							<!-- datagrid-row -->
+							<div class="datagrid-row" role="row">
+								<div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
+									복지/행정/단체
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
+									자동차브랜드/서비스
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
+									넷마블
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
+									<div class="text-truncate">세븐나이츠</div>
+								</div>
+							</div>
+							<!-- /datagrid-row -->
+							<!-- datagrid-row -->
+							<div class="datagrid-row" role="row">
+								<div class="datagrid-cell" role="gridcell" style="min-width: 8rem; max-width: 12rem;">
+									복지/행정/단체
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 12rem; max-width: 16rem;">
+									자동차브랜드/서비스
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 20rem;">
+									넷마블
+								</div>
+								<div class="datagrid-cell" role="gridcell" style="min-width: 16rem; max-width: 31.8rem">
+									<div class="text-truncate">마블퓨쳐</div>
+								</div>
+							</div>
+							<!-- /datagrid-row -->
+						</div>
+						<!-- /datagrid-rowgroup -->
+					</div>
+					<!-- /datagrid -->
+				</div>
+				<!-- /datagrid-responsive -->
+
       </div>
       <!-- /modal-body -->
     </div>
