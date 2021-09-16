@@ -132,7 +132,7 @@
 						<div class="toolbar pb-0" id="toolbar-adinsight">
 							<!-- input-group -->
 							<div class="input-group">
-								<select class="custom-select">
+								<select class="custom-select" style="max-width: 15rem;">
 									<option>가정/생활</option>
 									<option>가족</option>
 									<option>건강/의료</option>
@@ -175,14 +175,14 @@
 									<option>연간</option>
 								</select>
 
-								<input type="text" class="form-control" value="2021-08-01 ~ 2021-08-15" style="padding-right: 30px; width: 14rem;">
+								<input type="text" class="form-control" value="2021-08-01 ~ 2021-08-15" style="padding-right: 30px; min-width: 22rem; max-width: 22rem;">
 
 								<!-- dropdown -->
 								<div class="dropdown">
 									<button type="button" class="btn btn-dropdown" data-toggle="dropdown"
-													aria-haspopup="true" aria-expanded="false" style="width: 18rem;">
+													aria-haspopup="true" aria-expanded="false" style="width: 15rem;">
 										<span class="d-flex align-items-center">
-											<span class="text-truncate d-inline-block" style="max-width:10rem;">
+											<span class="text-truncate d-inline-block" style="max-width:9rem;">
 												<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment" class="svg-icon-lg">
 												Kakaomoment</span>
 											&nbsp;(+2)
@@ -239,7 +239,7 @@
 								<!-- dropdown -->
 								<div class="dropdown">
 									<button type="button" class="btn btn-dropdown"
-													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:18rem;">
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 14rem;">
 										관심유도  &nbsp;(+2)
 									</button>
 									<div class="dropdown-menu">
@@ -303,7 +303,7 @@
 								<!-- dropdown -->
 								<div class="dropdown">
 									<button type="button" class="btn btn-dropdown"
-													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:14rem;">
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 12.5rem;">
 										<i class="ico ic-web"></i> Web &nbsp;(+2)
 									</button>
 									<div class="dropdown-menu">
@@ -358,9 +358,15 @@
 
 							<div class="text-center">
 								<button class="btn btn-contained-primary" style="width: 10rem;">분석</button>
-								<button class="btn btn-outlined-primary m-0 ml-1" data-toggle="modal"
+								<button class="btn btn-outlined-secondary" data-toggle="modal"
 												data-target="#md-compare-insight" style="width: 10rem;">
-									비교 +2
+									<i class="ico ic-plus"></i>
+									비교
+								</button>
+								<button class="btn btn-outlined-primary" data-toggle="modal"
+												data-target="#md-compare-insight" style="width: 10rem;">
+									<i class="ico ic-plus"></i>
+									비교 (2)
 								</button>
 							</div>
 						</footer>

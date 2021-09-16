@@ -8,27 +8,27 @@
 }
 
 
-#toolbar-adinsight {
-  .input-group {
-    background-color: $white;
-    @include border-radius();
+.input-group {
+  input + .dropdown,
+  select + .dropdown,
+  .dropdown + .dropdown {
+    margin-left: -$border-width;
+  }
+  .dropdown:focus {
+    z-index: 3;
+  }
 
-    input + .dropdown,
-    select + .dropdown,
-    .dropdown + .dropdown {
-      margin-left: -$border-width;
+  .dropdown:not(:first-child) {
+    > .btn {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
     }
-    .dropdown:not(:first-child){
-      > .btn {
-        border-top-left-radius: 0 !important;
-        border-bottom-left-radius: 0 !important;
-      }
-    }
-    .dropdown:not(:last-child){
-      > .btn {
-        border-top-right-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
-      }
+  }
+
+  .dropdown:not(:last-child) {
+    > .btn {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
     }
   }
 }
