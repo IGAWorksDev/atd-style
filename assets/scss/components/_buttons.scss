@@ -1,5 +1,21 @@
 
 
+$btn-dropdown-padding-y: $input-padding-y;
+$btn-dropdown-padding-x: $input-padding-x;
+$btn-dropdown-indicator-color: $gray-800 !default;
+$btn-dropdown-indicator-padding: 1.6rem;
+$btn-dropdown-color: $input-color;
+$btn-dropdown-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$btn-dropdown-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
+$btn-dropdown-bg: $input-bg;
+$btn-dropdown-bg-size: 8px 10px !default; // In pixels because image dimensions
+$btn-dropdown-background: escape-svg($btn-dropdown-indicator) no-repeat right $btn-dropdown-padding-x center / $btn-dropdown-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+
+
 .btn-dropdown {
-  
+  text-align: left;
+  padding: $btn-dropdown-padding-y ($btn-dropdown-padding-x + $btn-dropdown-indicator-padding) $btn-dropdown-padding-y $btn-dropdown-padding-x;
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  color: $btn-dropdown-color;
+  background: $btn-dropdown-bg $btn-dropdown-background;
 }

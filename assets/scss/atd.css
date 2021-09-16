@@ -2010,6 +2010,8 @@ progress { width: 100%; height: 2.2rem; }
 
 .datagrid-row[data-row-legend="legend-5"] > .datagrid-cell:first-child:before, .datagrid-row[data-row-legend="legend-5"] > .datagrid-row-absolute:first-child:before { content: " "; width: 3px; position: absolute; left: 0; top: 1px; bottom: 1px; z-index: 2; background-color: #a1a7ac; }
 
+.btn-dropdown { text-align: left; border-width: 1px; border-color: #b9bdc1; color: #373a3c; }
+
 /* --------------------------------------------------- */
 #dashboard > .mainheader .container { margin-bottom: 0 !important; }
 #dashboard > .mainheader .mainheader__inner { margin-bottom: 0 !important; width: 100%; }
