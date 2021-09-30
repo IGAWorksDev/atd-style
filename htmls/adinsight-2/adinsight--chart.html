@@ -130,222 +130,241 @@
 					<section class="section">
 						<!-- toolbar -->
 						<div class="toolbar pb-0" id="toolbar-adinsight">
-							<!-- input-group -->
-							<div class="input-group">
-								<select class="custom-select" style="max-width: 15rem;">
-									<option>가정/생활</option>
-									<option>가족</option>
-									<option>건강/의료</option>
-									<option>게임</option>
-									<option>교육</option>
-									<option>금융</option>
-									<option>뉴스</option>
-									<option>도서/참고자료</option>
-									<option>라이프스타일</option>
-									<option>미용</option>
-									<option selected>복지/행정/단체</option>
-									<option>비즈니스/산업</option>
-									<option>사진/동영상</option>
-									<option>생산성</option>
-									<option>소셜네트워크</option>
-									<option>쇼핑</option>
-									<option>스포츠/레저</option>
-									<option>식음료</option>
-									<option>엔터테인먼트</option>
-									<option>여행/교통</option>
-									<option>유틸리티</option>
-									<option>자동차</option>
-									<option>정보/통신</option>
-									<option>패션/의류</option>
-									<option>기타</option>
-								</select>
-								<select class="custom-select">
-									<option>자동차브랜드/서비스</option>
-									<option>가구/인테리어</option>
-									<option>가전제품</option>
-									<option>건강/의료</option>
-									<option>렌탈</option>
-									<option>기타서비스</option>
-								</select>
-
-
-								<select class="custom-select" style="max-width: 7rem;">
-									<option>일간</option>
-									<option>월간</option>
-									<option>연간</option>
-								</select>
-
-								<input type="text" class="form-control" value="2021-08-01 ~ 2021-08-15" style="padding-right: 30px; min-width: 22rem; max-width: 22rem;">
-
-								<!-- dropdown -->
-								<div class="dropdown">
-									<button type="button" class="btn btn-dropdown" data-toggle="dropdown"
-													aria-haspopup="true" aria-expanded="false" style="width: 15rem;">
-										<span class="d-flex align-items-center">
-											<span class="text-truncate d-inline-block" style="max-width:9rem;">
-												<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment" class="svg-icon-lg">
-												Kakaomoment</span>
-											&nbsp;(+2)
-										</span>
-									</button>
-									<div class="dropdown-menu">
-										<h6 class="dropdown-header">
-											채널 선택
-										</h6>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-channel-google">
-												<label class="form-check-label" for="filter-channel-google">
-													<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
-													Google ads
-												</label>
-											</div>
-										</div>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-channel-facebook">
-												<label class="form-check-label" for="filter-channel-facebook">
-													<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg">
-													Facebook
-												</label>
-											</div>
-										</div>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-channel-kakakomoment">
-												<label class="form-check-label" for="filter-channel-kakakomoment">
-													<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment"
-															 class="svg-icon-lg">
-													kakaomoment
-												</label>
-											</div>
-										</div>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-channel-tradingworks">
-												<label class="form-check-label" for="filter-channel-tradingworks">
-													<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks"
-															 class="svg-icon-lg">
-													TW DSP
-												</label>
-											</div>
-										</div>
-										<div class="dropdown-divider"></div>
-										<button class="dropdown-item">분석 제외</button>
+							<!-- #adinsightFilterbar -->
+							<div id="adinsightFilterbar">
+								<!-- form-group -->
+								<div class="form-group">
+									<div class="form-label">카테고리</div>
+									<select class="custom-select" style="min-width: 14rem; max-width: 14rem;">
+										<option>가정/생활</option>
+										<option>가족</option>
+										<option>건강/의료</option>
+										<option>게임</option>
+										<option>교육</option>
+										<option>금융</option>
+										<option>뉴스</option>
+										<option>도서/참고자료</option>
+										<option>라이프스타일</option>
+										<option>미용</option>
+										<option selected>복지/행정/단체</option>
+										<option>비즈니스/산업</option>
+										<option>사진/동영상</option>
+										<option>생산성</option>
+										<option>소셜네트워크</option>
+										<option>쇼핑</option>
+										<option>스포츠/레저</option>
+										<option>식음료</option>
+										<option>엔터테인먼트</option>
+										<option>여행/교통</option>
+										<option>유틸리티</option>
+										<option>자동차</option>
+										<option>정보/통신</option>
+										<option>패션/의류</option>
+										<option>기타</option>
+									</select>
+								</div>
+								<!-- /form-group -->
+								<!-- form-group -->
+								<div class="form-group">
+									<div class="form-label">상세 카테고리</div>
+									<select class="custom-select" style="min-width: 20rem; max-width: 20rem;">
+										<option>자동차브랜드/서비스</option>
+										<option>가구/인테리어</option>
+										<option>가전제품</option>
+										<option>건강/의료</option>
+										<option>렌탈</option>
+										<option>기타서비스</option>
+									</select>
+								</div>
+								<!-- /form-group -->
+								<!-- form-group -->
+								<div class="form-group">
+									<div class="form-label">기간 단위 및 기간 범위</div>
+									<div class="input-group">
+										<select class="custom-select">
+											<option>일간</option>
+											<option>월간</option>
+											<option>연간</option>
+										</select>
+										<input type="text" class="form-control" value="2021-08-01 ~ 2021-08-15" style="padding-right: 30px; min-width: 22rem; max-width: 22rem;">
 									</div>
 								</div>
-								<!-- /dropdown -->
-
-								<!-- dropdown -->
-								<div class="dropdown">
-									<button type="button" class="btn btn-dropdown"
-													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 14rem;">
-										관심유도  &nbsp;(+2)
-									</button>
-									<div class="dropdown-menu">
-										<h6 class="dropdown-header">
-											캠페인 목적
-										</h6>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-purpose-branding">
-												<label class="form-check-label" for="filter-purpose-branding">브랜딩</label>
-											</div>
-										</div>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-purpose-attention">
-												<label class="form-check-label" for="filter-purpose-attention">관심유도</label>
-											</div>
-										</div>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-purpose-conversion">
-												<label class="form-check-label" for="filter-purpose-conversion">전환</label>
-											</div>
-										</div>
-										<div class="dropdown-divider"></div>
-										<button class="dropdown-item">분석 제외</button>
-									</div>
-								</div>
-								<!-- /dropdown -->
-
-								<!-- dropdown -->
-								<div class="dropdown">
-									<button type="button" class="btn btn-dropdown"
-													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:25rem;">
-										100,000,000원 ~ 100,000,000원
-									</button>
-									<div class="dropdown-menu">
-										<h6 class="dropdown-header">
-											소진금액
-										</h6>
-										<div class="py-1 px-2" style="width: 20rem;">
-											<div class="input-group">
-												<div class="input-group-prepend">
-													<span class="input-group-text">최소</span>
+								<!-- /form-group -->
+								<!-- form-group -->
+								<div class="form-group">
+									<div class="form-label">채널</div>
+									<!-- dropdown -->
+									<div class="dropdown">
+										<button type="button" class="btn btn-dropdown" data-toggle="dropdown"
+														aria-haspopup="true" aria-expanded="false" style="width: 15rem;">
+											<span class="d-flex align-items-center">
+												<span class="text-truncate d-inline-block" style="max-width:9rem;">
+													<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment" class="svg-icon-lg">
+													Kakaomoment</span>
+												&nbsp;(+2)
+											</span>
+										</button>
+										<div class="dropdown-menu">
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-channel-google">
+													<label class="form-check-label" for="filter-channel-google">
+														<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" class="svg-icon-lg">
+														Google ads
+													</label>
 												</div>
-												<input type="text" class="form-control" placeholder="0">
 											</div>
-											<div class="input-group mt-1">
-												<div class="input-group-prepend">
-													<span class="input-group-text">최대</span>
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-channel-facebook">
+													<label class="form-check-label" for="filter-channel-facebook">
+														<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" class="svg-icon-lg">
+														Facebook
+													</label>
 												</div>
-												<input type="text" class="form-control" placeholder="100,000,000">
 											</div>
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-channel-kakakomoment">
+													<label class="form-check-label" for="filter-channel-kakakomoment">
+														<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment"
+																 class="svg-icon-lg">
+														kakaomoment
+													</label>
+												</div>
+											</div>
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-channel-tradingworks">
+													<label class="form-check-label" for="filter-channel-tradingworks">
+														<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks"
+																 class="svg-icon-lg">
+														TW DSP
+													</label>
+												</div>
+											</div>
+											<div class="dropdown-divider"></div>
+											<button class="dropdown-item">분석 제외</button>
 										</div>
-										<div class="dropdown-divider"></div>
-										<button class="dropdown-item">분석 제외</button>
 									</div>
+									<!-- /dropdown -->
 								</div>
-								<!-- /dropdown -->
-
-								<!-- dropdown -->
-								<div class="dropdown">
-									<button type="button" class="btn btn-dropdown"
-													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 12.5rem;">
-										<i class="ico ic-web"></i> Web &nbsp;(+2)
-									</button>
-									<div class="dropdown-menu">
-										<h6 class="dropdown-header">
-											OS 선택
-										</h6>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-os-aos">
-												<label class="form-check-label" for="filter-os-aos">
-													<i class="ico ic-android"></i>
-													AOS
-												</label>
+								<!-- /form-group -->
+								<!-- form-group -->
+								<div class="form-group">
+									<div class="form-label">캠페인 목적</div>
+									<!-- dropdown -->
+									<div class="dropdown">
+										<button type="button" class="btn btn-dropdown"
+														data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 14rem;">
+											관심유도 &nbsp;(+2)
+										</button>
+										<div class="dropdown-menu">
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-purpose-branding">
+													<label class="form-check-label" for="filter-purpose-branding">브랜딩</label>
+												</div>
 											</div>
-										</div>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-os-ios">
-												<label class="form-check-label" for="filter-os-ios">
-													<i class="ico ic-apple"></i>
-													iOS
-												</label>
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-purpose-attention">
+													<label class="form-check-label" for="filter-purpose-attention">관심유도</label>
+												</div>
 											</div>
-										</div>
-										<div class="dropdown-item">
-											<div class="form-check">
-												<input type="checkbox" class="form-check-input" id="filter-os-web">
-												<label class="form-check-label" for="filter-os-web">
-													<i class="ico ic-web"></i>
-													Web
-												</label>
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-purpose-conversion">
+													<label class="form-check-label" for="filter-purpose-conversion">전환</label>
+												</div>
 											</div>
+											<div class="dropdown-divider"></div>
+											<button class="dropdown-item">분석 제외</button>
 										</div>
-										<div class="dropdown-divider"></div>
-										<button class="dropdown-item">분석 제외</button>
 									</div>
+									<!-- /dropdown -->
 								</div>
-								<!-- /dropdown -->
+								<!-- /form-group -->
+								<!-- form-group -->
+								<div class="form-group">
+									<div class="form-label">소진금액 범위</div>
+									<!-- dropdown -->
+									<div class="dropdown">
+										<button type="button" class="btn btn-dropdown"
+														data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:25rem;">
+											100,000,000원 ~ 100,000,000원
+										</button>
+										<div class="dropdown-menu">
+											<div class="py-1 px-2" style="width: 20rem;">
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text">최소</span>
+													</div>
+													<input type="text" class="form-control" placeholder="0">
+												</div>
+												<div class="input-group mt-1">
+													<div class="input-group-prepend">
+														<span class="input-group-text">최대</span>
+													</div>
+													<input type="text" class="form-control" placeholder="100,000,000">
+												</div>
+											</div>
+											<div class="dropdown-divider"></div>
+											<button class="dropdown-item">분석 제외</button>
+										</div>
+									</div>
+									<!-- /dropdown -->
+								</div>
+								<!-- /form-group -->
+								<!-- form-group -->
+								<div class="form-group">
+									<div class="form-label">OS 정보</div>
+									<!-- dropdown -->
+									<div class="dropdown">
+										<button type="button" class="btn btn-dropdown"
+														data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 12.5rem;">
+											<i class="ico ic-web"></i> Web &nbsp;(+2)
+										</button>
+										<div class="dropdown-menu">
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-os-aos">
+													<label class="form-check-label" for="filter-os-aos">
+														<i class="ico ic-android"></i>
+														AOS
+													</label>
+												</div>
+											</div>
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-os-ios">
+													<label class="form-check-label" for="filter-os-ios">
+														<i class="ico ic-apple"></i>
+														iOS
+													</label>
+												</div>
+											</div>
+											<div class="dropdown-item">
+												<div class="form-check">
+													<input type="checkbox" class="form-check-input" id="filter-os-web">
+													<label class="form-check-label" for="filter-os-web">
+														<i class="ico ic-web"></i>
+														Web
+													</label>
+												</div>
+											</div>
+											<div class="dropdown-divider"></div>
+											<button class="dropdown-item">분석 제외</button>
+										</div>
+									</div>
+									<!-- /dropdown -->
+								</div>
+								<!-- /form-group -->
 							</div>
-							<!-- /input-group -->
+							<!-- /#adinsightFilterbar -->
 						</div>
 						<!-- /toolbar -->
+
 						<!-- footer -->
 						<footer class="mt-2">
 							<div class="position-absolute">
