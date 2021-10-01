@@ -2012,6 +2012,16 @@ progress { width: 100%; height: 2.2rem; }
 
 .btn-dropdown { text-align: left; padding: 0.8rem 2.8rem 0.8rem 1.2rem; border-width: 1px; border-color: #b9bdc1; color: #373a3c; background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23373a3c' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.2rem center/8px 10px; }
 
+.form-group-bar { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; width: 100%; }
+.form-group-bar .form-group { margin: 0; }
+.form-group-bar .form-group .form-label { margin-bottom: 0.8rem; padding-left: 1.2rem; font-size: 1.2rem; line-height: 1.5; color: #8a9197; }
+.form-group-bar .form-group + .form-group .form-label { border-left: 1px solid #e8e9ea; }
+.form-group-bar .form-group:not(:first-child) > input, .form-group-bar .form-group:not(:first-child) > select, .form-group-bar .form-group:not(:first-child) > .btn, .form-group-bar .form-group:not(:first-child) > .dropdown > .btn, .form-group-bar .form-group:not(:first-child) > .input-group > select, .form-group-bar .form-group:not(:first-child) > .input-group > input, .form-group-bar .form-group:not(:first-child) .mx-datepicker > .mx-input-wrapper > input { border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
+.form-group-bar .form-group:not(:last-child) { margin-right: -1px; }
+.form-group-bar .form-group:not(:last-child) > input, .form-group-bar .form-group:not(:last-child) > select, .form-group-bar .form-group:not(:last-child) > .btn, .form-group-bar .form-group:not(:last-child) > .dropdown > .btn, .form-group-bar .form-group:not(:last-child) > .input-group > select, .form-group-bar .form-group:not(:last-child) > .input-group > input, .form-group-bar .form-group:not(:last-child) .mx-datepicker > .mx-input-wrapper > input { border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+.form-group-bar .input-group .custom-select + .mx-datepicker { margin-left: -1px; }
+.form-group-bar .mx-datepicker > .mx-input-wrapper > input { border-color: #b9bdc1; }
+
 /* --------------------------------------------------- */
 #dashboard > .mainheader .container { margin-bottom: 0 !important; }
 #dashboard > .mainheader .mainheader__inner { margin-bottom: 0 !important; width: 100%; }
@@ -2089,15 +2099,6 @@ progress { width: 100%; height: 2.2rem; }
 .calendars.row { margin-right: 0 !important; margin-left: 0 !important; }
 
 .yearselect.col { -webkit-box-flex: 1 !important; -ms-flex-positive: 1 !important; flex-grow: 1 !important; -ms-flex-preferred-size: 0 !important; flex-basis: 0 !important; }
-
-#adinsightFilterbar { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; width: 100%; }
-#adinsightFilterbar .form-group { margin: 0; }
-#adinsightFilterbar .form-group .form-label { margin-bottom: 0.8rem; padding-left: 1.2rem; font-size: 1.2rem; line-height: 1.5; color: #8a9197; }
-#adinsightFilterbar .form-group + .form-group .form-label { border-left: 1px solid #e8e9ea; }
-#adinsightFilterbar .form-group:not(:first-child) > input, #adinsightFilterbar .form-group:not(:first-child) > select, #adinsightFilterbar .form-group:not(:first-child) > .btn, #adinsightFilterbar .form-group:not(:first-child) > .dropdown > .btn, #adinsightFilterbar .form-group:not(:first-child) > .input-group > select, #adinsightFilterbar .form-group:not(:first-child) > .input-group > input, #adinsightFilterbar .form-group:not(:first-child) .mx-datepicker > .mx-input-wrapper > input { border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
-#adinsightFilterbar .form-group:not(:last-child) { margin-right: -1px; }
-#adinsightFilterbar .form-group:not(:last-child) > input, #adinsightFilterbar .form-group:not(:last-child) > select, #adinsightFilterbar .form-group:not(:last-child) > .btn, #adinsightFilterbar .form-group:not(:last-child) > .dropdown > .btn, #adinsightFilterbar .form-group:not(:last-child) > .input-group > select, #adinsightFilterbar .form-group:not(:last-child) > .input-group > input, #adinsightFilterbar .form-group:not(:last-child) .mx-datepicker > .mx-input-wrapper > input { border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
-#adinsightFilterbar .mx-datepicker > .mx-input-wrapper > input { border-color: #b9bdc1; }
 
 #md-onboarding-aud .card { height: 50rem; overflow-y: auto; }
 #md-onboarding-aud .card .datagrid { max-height: 50rem; }

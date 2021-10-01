@@ -1,0 +1,68 @@
+
+
+// form group bar
+// form-graup를 이용하여 bar 형태를 만들경우 사용함.
+// input-group과 모양은 비슷하나, 폼위에 레벨 텍스트가 노출됨.
+//
+
+
+.form-group-bar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  .form-group {
+    margin: 0;
+    .form-label {
+      margin-bottom: $input-padding-y;
+      padding-left: $input-padding-x;
+      font-size: $font-size-sm;
+      line-height: 1.5;
+      color: $mute;
+    }
+  }
+  .form-group + .form-group {
+    .form-label {
+      border-left: $border-width solid $border-color;
+    }
+  }
+  .form-group:not(:first-child) {
+    > input,
+    > select,
+    > .btn,
+    > .dropdown > .btn,
+    > .input-group > select,
+    > .input-group > input,
+      // 기간 범위 피커 클래스 포함
+    .mx-datepicker > .mx-input-wrapper > input {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+  }
+  .form-group:not(:last-child) {
+    margin-right: -$input-border-width;
+    > input,
+    > select,
+    > .btn,
+    > .dropdown > .btn,
+    > .input-group > select,
+    > .input-group > input,
+      // 기간 범위 피커 클래스 포함
+    .mx-datepicker > .mx-input-wrapper > input {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+  }
+
+  // 외부 데이트피커와 그룹일 경우 보더 겹치기
+  .input-group {
+    .custom-select + .mx-datepicker {
+      margin-left: -$input-border-width;
+    }
+  }
+  // 외부 데이트피커 스타일 오버라이드
+  .mx-datepicker > .mx-input-wrapper > input {
+    border-color: $input-border-color;
+  }
+}
