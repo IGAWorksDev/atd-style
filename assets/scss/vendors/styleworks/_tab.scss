@@ -5,16 +5,16 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  width: 100%;
 }
 
 
 .tab-nav {
   list-style: none;
   padding: 0;
-  border-bottom: 1px solid $border-color;
+  border-bottom: $border-width solid $border-color;
+
   .tab-item {
-    border-color: $border-color;
-    margin-bottom: -1px;
     color: $body-color;
     display: flex;
     align-items: stretch;
@@ -29,34 +29,60 @@
 .tab-item {
   display: inline-block;
   padding: $tab-nav-padding-y $tab-nav-padding-x;
-  border: 1px solid transparent;
 }
 
-.tab-item + .tab-item {
-  margin-left: -1px;
-}
-.tab-item:first-child .tab-link {
-  border-top-left-radius: $border-radius;
-}
-.tab-item:last-child .tab-link {
-  border-top-right-radius: $border-radius;
-}
 .tab-item.is-active {
-  border-bottom-color: $white;
   font-weight: $font-weight-bold;
-  background-color: $white;
   position: relative;
   &:after {
     position: absolute;
     content:"";
     display: block;
-    height: 3px;
+    height: 2px;
     background-color: $primary;
-    bottom: 0;
-    left: $tab-nav-padding-x;
-    right: $tab-nav-padding-x;
+    bottom: -$border-width;
+    left: $tab-nav-padding-x / 2;
+    right: $tab-nav-padding-x / 2;
   }
   .tab-link {
     color: $primary;
+  }
+}
+
+//
+// bootstrap js를 사용중으로 스타일 추가함.
+//
+.nav-tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  border-bottom: $border-width solid $border-color;
+  .nav-item {
+    display: flex;
+    align-items: stretch;
+    .nav-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: $tab-nav-padding-y $tab-nav-padding-x;
+      border-color: transparent;
+      color: $body-color;
+      &.active {
+        position: relative;
+        border-color: transparent;
+        background-color: transparent;
+        &:after {
+          content: " ";
+          display: block;
+          position: absolute;
+          bottom: -$border-width;
+          right: $tab-nav-padding-x / 2;
+          left: $tab-nav-padding-x / 2;
+          border-bottom: 2px solid $primary;
+          color: $primary;
+        }
+      }
+    }
   }
 }
