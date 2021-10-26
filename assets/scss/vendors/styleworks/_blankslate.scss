@@ -7,11 +7,12 @@
 
 .blankslate {
   text-align: center;
-  color: $base;
+  color: $secondary;
   background-color: $blankslate-bg;
   border: $blankslate-border-width solid;
   border-color: $blankslate-border-color;
   padding: $blankslate-padding-y $blankslate-padding-x;
+
 
   display: flex;
   flex-wrap: nowrap;

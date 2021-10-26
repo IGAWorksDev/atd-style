@@ -8,8 +8,6 @@
 }
 
 .dropdown-toggle {
-  white-space: nowrap;
-
   // 캐럿 자동 생성
   @include caret();
 }
