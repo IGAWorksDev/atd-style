@@ -31,7 +31,7 @@
     width: 100%;
     height: $main-header-height;
     @extend .d-flex;
-    @extend .border-bottom;
+    border-bottom: $border-width solid $border-color;
   }
   transition: $main-header-transition;
 }
