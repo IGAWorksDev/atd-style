@@ -52,6 +52,7 @@
   @include button-circle-size($btn-circle-padding-y, $btn-circle-padding-x, $btn-circle-width, $btn-circle-height, $btn-circle-font-size, $btn-circle-line-height, $btn-circle-border-radius);
   width: $btn-circle-width !important;
   height: $btn-circle-height  !important;
+  max-height: $btn-circle-height  !important;
   white-space: nowrap;
   overflow: hidden;
   outline: none;

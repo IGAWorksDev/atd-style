@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TW__Report Automation LITE</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+
+<!-- gnb -->
+<nav class="gnb">
+	<a class="gnb-brand" href="#">
+		<img src="../../assets/images/brand-wordmark.svg" alt="Tradingworks">
+	</a>
+	<div class="gnb-navbar">
+		<ul class="navbar-nav mr-auto font-weight-bold">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Dashboard</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-release="New" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">Insight</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">서브메뉴 1</a>
+					<a class="dropdown-item" href="#">서브메뉴 2</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Audience</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Kakaomoment</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Report</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Asset</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Support</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="ico ic-cog"></i>
+					<span class="sr-only">Manage</span>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Ad Accounts</a>
+					<a class="dropdown-item" href="#">Companies</a>
+					<a class="dropdown-item" href="#">Users</a>
+					<a class="dropdown-item" href="#">Billing</a>
+					<a class="dropdown-item" href="#">DMP Usage History</a>
+				</div>
+			</li>
+			<li class="nav-item nav-item-user dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown-userNav" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">
+					<i class="ico ic-user"></i>
+					<span class="sr-only">account.name@igaworks.com</span>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown-userNav">
+					<div class="dropdown-item">
+						장우영 <br>
+						<a href="#">
+							liam.jang@igaworks.com
+						</a>
+					</div>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">
+						채널 연결현황
+					</h6>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-googleads.svg" alt="Google Ads" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+						<button type="button" class="btn-circle btn-circle-xs btn-outlined-secondary ml-2">
+							<i class="ico ic-sync"></i>
+						</button>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-facebook.svg" alt="Facebook" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+						<button type="button" class="btn-circle btn-circle-xs btn-outlined-secondary ml-2">
+							<i class="ico ic-sync"></i>
+						</button>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-kakaomoment.svg" alt="Kakaomoment" style="width: 1.4rem;"/>
+						<a class="ml-1 " href="#">채널 연결하기</a>
+					</div>
+					<div class="dropdown-item">
+						<img src="../../assets/images/channel-ico-tradingworks.svg" alt="Tradingworks" style="width: 1.4rem;"/>
+						<a class="ml-1 text-secondary" href="#">higher@gmail.com</a>
+						<button type="button" class="btn-circle btn-circle-xs btn-outlined-secondary ml-2">
+							<i class="ico ic-sync"></i>
+						</button>
+					</div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">
+						로그아웃
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- /gnb -->
+
+<!-- twWrapper -->
+<div class="twWrapper-full">
+	<!-- contentWrapper -->
+	<div class="contentWrapper">
+		<!-- mainContent -->
+		<main class="mainContent pb-2">
+			<!-- mainheader -->
+			<header class="mainheader mainheader-sticky">
+				<!-- container -->
+				<div class="container">
+					<div class="mainheader__inner border-bottom-0">
+						<h2 class="font-weight-bold m-0">
+							리포트 생성
+						</h2>
+					</div>
+				</div>
+				<!-- /container -->
+			</header>
+			<!-- /mainheader -->
+
+			<!-- mainbody -->
+			<div class="mainbody">
+				<!-- container -->
+				<div class="container">
+
+					<!-- form -->
+					<form>
+						<!-- card -->
+						<div class="card">
+							<div class="card-body">
+								<!-- form-group -->
+								<div class="form-group border-bottom mb-0 py-2">
+									<div class="row">
+										<div class="col-2">
+											<label class="font-weight-bold mt-1">리포트명</label>
+										</div>
+										<div class="col-6">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<!-- form-group -->
+
+								<!-- form-group -->
+								<div class="form-group border-bottom mb-0 py-2">
+									<div class="row">
+										<div class="col-2">
+											<label class="font-weight-bold mt-1">연결된 매체 정보</label>
+										</div>
+										<div class="col-6">
+											<!-- card -->
+											<div class="card">
+												<!-- datagrid -->
+												<div class="datagrid datagrid-bordered" id="datagrid-media-connect">
+													<!-- datagrid-header -->
+													<div class="datagrid-rowgroup datagrid-header" role="rowgroup">
+														<div class="datagrid-row" role="row">
+															<div class="datagrid-cell" role="columnheader">
+																매체명
+															</div>
+															<div class="datagrid-cell" role="columnheader"  style="max-width: 18rem;">
+																최근 리포트 수집 일자
+															</div>
+														</div>
+													</div>
+													<!-- /datagrid-header -->
+													<!-- blankslate -->
+													<div class="blankslate py-4">
+														<div class="blankslate-message">
+															<div class="d-block h3 text-tertiary mb-2">
+																<i class="ico ic-exclamation-circle-fill"></i>
+															</div>
+															<p class="text-muted mb-0">확인 가능한 내역이 없습니다.</p>
+														</div>
+													</div>
+													<!-- /blankslate -->
+													<!-- datagrid-body -->
+													<div class="datagrid-rowgroup datagrid-body" role="rowgroup">
+														<!-- datagrid-row -->
+														<div class="datagrid-row" role="row">
+															<div class="datagrid-cell" role="gridcell">
+																<!-- d-flex -->
+																<div class="d-flex align-items-center">
+																	<div class="mr-auto">
+																		<img src="../../assets/images/channel-ico-googleads.svg" class="svg-icon-md" alt="Google Ads">
+																		Google Ads DA
+																	</div>
+																	<div class="ml-auto">
+																		<small class="mr-1">(2건)</small>
+																		<button class="btn-circle btn-circle-sm btn-text-secondary" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+																			<i class="ico ic-caret-bottom"></i>
+																		</button>
+																	</div>
+																</div>
+																<!-- /d-flex -->
+																<!-- collapse -->
+																<div class="collapse" id="collapse-1" data-parent="#datagrid-media-connect">
+																	<!-- collapse__row -->
+																	<div class="pt-1" role="row" style="padding-left: 18px;">
+																		<div class="d-flex align-items-center">
+																			<div class="mr-auto">
+																				Ad Account Id: test
+																			</div>
+																			<div class="ml-auto">
+																				<a class="btn-circle btn-circle-sm btn-text-secondary" href="#">
+																					<i class="ico ic-close"></i>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- collapse__row -->
+																	<!-- collapse__row -->
+																	<div class="pt-1" role="row" style="padding-left: 18px;">
+																		<div class="d-flex align-items-center">
+																			<div class="mr-auto">
+																				Ad Account Id: test
+																			</div>
+																			<div class="ml-auto">
+																				<a class="btn-circle btn-circle-sm btn-text-secondary" href="#">
+																					<i class="ico ic-close"></i>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- collapse__row -->
+																</div>
+																<!-- /collapse -->
+															</div>
+															<div class="datagrid-cell" role="gridcell" style="max-width: 18rem;">
+																20201-11-17
+															</div>
+														</div>
+														<!-- /datagrid-row -->
+														<!-- datagrid-row -->
+														<div class="datagrid-row" role="row">
+															<div class="datagrid-cell" role="gridcell">
+																<!-- d-flex -->
+																<div class="d-flex align-items-center">
+																	<div class="mr-auto">
+																		<img src="../../assets/images/channel-ico-googleads.svg" class="svg-icon-md" alt="Google Ads">
+																		Google Ads DA
+																	</div>
+																	<div class="ml-auto">
+																		<small class="mr-1">(2건)</small>
+																		<button class="btn-circle btn-circle-sm btn-text-secondary" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+																			<i class="ico ic-caret-bottom"></i>
+																		</button>
+																	</div>
+																</div>
+																<!-- /d-flex -->
+																<!-- collapse -->
+																<div class="collapse" id="collapse-2" data-parent="#datagrid-media-connect">
+																	<!-- collapse__row -->
+																	<div class="pt-1" role="row" style="padding-left: 18px;">
+																		<div class="d-flex align-items-center">
+																			<div class="mr-auto">
+																				Ad Account Id: test
+																			</div>
+																			<div class="ml-auto">
+																				<a class="btn-circle btn-circle-sm btn-text-secondary" href="#">
+																					<i class="ico ic-close"></i>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- collapse__row -->
+																	<!-- collapse__row -->
+																	<div class="pt-1" role="row" style="padding-left: 18px;">
+																		<div class="d-flex align-items-center">
+																			<div class="mr-auto">
+																				Ad Account Id: test
+																			</div>
+																			<div class="ml-1">
+																				<a class="btn-circle btn-circle-sm btn-text-secondary" href="#">
+																					<i class="ico ic-close"></i>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- collapse__row -->
+																</div>
+																<!-- /collapse -->
+															</div>
+															<div class="datagrid-cell" role="gridcell" style="max-width: 18rem;">
+																20201-11-17
+															</div>
+														</div>
+														<!-- /datagrid-row -->
+													</div>
+													<!-- /datagrid-body -->
+												</div>
+												<!-- /datagrid -->
+											</div>
+											<!-- /card -->
+										</div>
+										<!-- /col -->
+										<!-- col -->
+										<div class="col-4 pl-0">
+											<a class="btn btn-text-primary" href="#" data-toggle="modal" data-target="#modal-add-media-account">
+												<i class="ico ic-plus"></i> 추가하기
+											</a>
+										</div>
+										<!-- col -->
+									</div>
+								</div>
+								<!-- form-group -->
+
+								<!-- form-group -->
+								<div class="form-group mb-0 py-2">
+									<div class="row">
+										<div class="col-2">
+											<label class="font-weight-bold mt-1">연결된 사용자 정보</label>
+										</div>
+										<div class="col-6">
+											<!-- blankslate -->
+											<div class="blankslate py-4">
+												<div class="blankslate-message">
+													<div class="d-block h3 text-tertiary mb-2">
+														<i class="ico ic-exclamation-circle-fill"></i>
+													</div>
+													<p class="text-muted mb-0">확인 가능한 내역이 없습니다.</p>
+												</div>
+											</div>
+											<!-- /blankslate -->
+
+											<!-- list-group -->
+											<div class="list-group">
+												<div class="list-group-item">
+													<!-- d-flex -->
+													<div class="d-flex align-items-center">
+														<div class="mr-auto">
+															jane.kim@igaworks.com
+														</div>
+														<div class="ml-auto">
+															<select class="custom-select custom-select-sm">
+																<option>관리권한</option>
+																<option>조회권한</option>
+															</select>
+														</div>
+														<button class="btn-circle btn-circle-xs btn-text-secondary ml-1">
+															<i class="ico ic-close"></i>
+														</button>
+													</div>
+													<!-- /d-flex -->
+												</div>
+												<div class="list-group-item">
+													<!-- d-flex -->
+													<div class="d-flex align-items-center">
+														<div class="mr-auto">
+															jane.kim@igaworks.com
+														</div>
+														<div class="ml-auto">
+															<select class="custom-select custom-select-sm">
+																<option>관리권한</option>
+																<option>조회권한</option>
+															</select>
+														</div>
+														<button class="btn-circle btn-circle-xs btn-text-secondary ml-1">
+															<i class="ico ic-close"></i>
+														</button>
+													</div>
+													<!-- /d-flex -->
+												</div>
+											</div>
+											<!-- /list-group -->
+										</div>
+										<div class="col-4 pl-0">
+											<a class="btn btn-text-primary" href="#" data-toggle="modal" data-target="#modal-add-account-user">
+												<i class="ico ic-plus"></i> 추가하기
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- form-group -->
+							</div>
+						</div>
+						<!-- /card -->
+						<div class="d-flex mt-2">
+							<button class="btn btn-text-danger"><i class="ico ic-delete"></i> 삭제</button>
+							<span class="ml-auto"></span>
+							<button class="btn btn-outlined-secondary">닫기</button>
+							<button class="btn btn-contained-primary">리포트 저장</button>
+						</div>
+					</form>
+					<!-- /form -->
+
+				</div>
+				<!-- /container -->
+			</div>
+		</main>
+		<!-- /mainContent -->
+	</div>
+	<!-- /contentWrapper -->
+</div>
+<!-- /twWrapper -->
+
+<!-- #modal-add-media-account -->
+<div class="modal fade" id="modal-add-media-account" tabindex="-1" aria-labelledby="modal-add-media-account" aria-hidden="true">
+	<div class="modal-dialog" role="dialog" aria-hidden="true" tabindex="-1">
+		<!-- modal-container -->
+		<div class="modal-container">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+					<i class="ico ic-close"></i>
+				</button>
+				<h3 class="modal-title">연동 정보 입력</h3>
+			</div>
+			<div class="modal-body">
+				<div class="form-group row">
+					<div class="col-3 pt-1">
+						매체 선택
+					</div>
+					<div class="col-9">
+						<select class="custom-select">
+							<option>Google Ads DA</option>
+							<option>Google Ads SA</option>
+							<option>카카오 모먼트</option>
+							<option>카카오 키워드</option>
+							<option>Facebook</option>
+							<option>네이버 검색</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-3 pt-1">
+						Ad Account Id
+					</div>
+					<div class="col-9">
+						<input type="text" class="form-control">
+						<small class="text-muted mt-1">
+							Ad Account Id는 '-'를 제외하고 입력해주세요.
+						</small>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outlined-secondary">취소</button>
+				<button class="btn btn-contained-primary">저장</button>
+			</div>
+		</div>
+		<!-- /modal-container -->
+	</div>
+</div>
+<!-- /#modal-add-media-account -->
+
+<!-- #modal-add-media-account -->
+<div class="modal fade" id="modal-add-account-user" tabindex="-1" aria-labelledby="modal-add-account-user" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="dialog" aria-hidden="true" tabindex="-1">
+		<!-- modal-container -->
+		<div class="modal-container">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+					<i class="ico ic-close"></i>
+				</button>
+				<h3 class="modal-title">사용자 계정 추가</h3>
+			</div>
+			<div class="modal-body">
+				<!-- card-group -->
+				<div class="card-group">
+					<!-- card -->
+					<div class="card">
+						<div class="card-header">
+							<h5 class="font-weight-bold mb-0">사용자 선택</h5>
+						</div>
+ 						<div class="card-body">
+							<input type="search" class="form-control" placeholder="사용자 ID 검색">
+						</div>
+						<!-- list-group -->
+						<div class="list-group list-group-noedge" style="max-height: 260px; overflow:scroll;">
+							<div class="list-group-item">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="check-user-1">
+									<label class="form-check-label" for="check-user-1">
+										tw@igaworks.com
+									</label>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="check-user-2">
+									<label class="form-check-label" for="check-user-2">
+										tw@igaworks.com
+									</label>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="check-user-3">
+									<label class="form-check-label" for="check-user-3">
+										tw@igaworks.com
+									</label>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="check-user-4">
+									<label class="form-check-label" for="check-user-4">
+										tw@igaworks.com
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- list-group -->
+					</div>
+					<!-- /card -->
+					<!-- card -->
+					<div class="card">
+						<div class="card-header">
+							<h5 class="font-weight-bold mb-0">권한 설정</h5>
+						</div>
+						<div class="card-body">
+							<div class="form-check">
+								<input type="radio" class="form-check-input" id="user-edit">
+								<label class="form-check-label" for="user-edit">관리 권한</label>
+							</div>
+							<div style="padding-left: 22px">
+								<small class="text-muted">자동화리포트를 수정, 관리 할 수 있는 권한입니다.</small>
+							</div>
+
+							<div class="form-check mt-2">
+								<input type="radio" class="form-check-input" id="user-read">
+								<label class="form-check-label" for="user-read">조회 권한</label>
+							</div>
+							<div style="padding-left: 22px">
+								<small class="text-muted">자동화리포트를 조회 할 수 있는 권한입니다.</small>
+							</div>
+
+						</div>
+					</div>
+					<!-- /card -->
+				</div>
+				<!-- /card-group -->
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outlined-secondary">취소</button>
+				<button class="btn btn-contained-primary">저장</button>
+			</div>
+		</div>
+		<!-- /modal-container -->
+	</div>
+</div>
+<!-- /#modal-add-media-account -->
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../../assets/js/tw-atd-normal.js"></script>
+
+<script src="https://dev-app.tradingworks.com/js/bootstrap-4.3.1/util.js"></script>
+
+</body>
+</html>
