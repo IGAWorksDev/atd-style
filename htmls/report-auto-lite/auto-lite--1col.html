@@ -241,8 +241,10 @@
 									<!-- position-absolute -->
 									<div class="position-absolute d-flex align-items-stretch" style="z-index:1; top: 0; right: 0; bottom: 0; left: 0; background-color:rgba(255,255,255, 0.92);">
 										<div class="align-self-center justify-content-center w-100 text-center">
-											채널 연결 후 리포트를 확인하세요.
-											<button class="btn btn-contained-primary btn-sm">연결하기</button>
+											<p>디파이너리(애드브릭스) 연결 후 제공될 예정입니다.</p>
+											<a class="text-secondary" href="#" data-toggle="modal" data-target="#md-guide">
+												<i class="ico ic-question-circle"></i> 연결 가이드
+											</a>
 										</div>
 									</div>
 									<!-- /position-absolute -->
@@ -434,8 +436,13 @@
 										<!-- position-absolute -->
 										<div class="position-absolute d-flex align-items-stretch" style="z-index:1; top: 0; right: 0; bottom: 0; left: 0; background-color:rgba(255,255,255, 0.92);">
 											<div class="align-self-center justify-content-center w-100 text-center">
-												채널 연결 후 리포트를 확인하세요.
-												<button class="btn btn-contained-primary btn-sm">연결하기</button>
+												<p>디파이너리(애드브릭스) 연결 후 리포트를 확인하세요.</p>
+												<div>
+													<button class="btn btn-contained-primary btn-sm">연결하기</button>
+													<a class="text-secondary ml-1" href="#" data-toggle="modal" data-target="#md-guide">
+														<i class="ico ic-question-circle"></i> <span class="d-none">연결 가이드</span>
+													</a>
+												</div>
 											</div>
 										</div>
 										<!-- /position-absolute -->
@@ -522,6 +529,136 @@
 	<!-- /contentWrapper -->
 </div>
 <!-- /twWrapper -->
+
+
+<!-- modal#md-guide -->
+<div class="modal slideout" id="md-guide" tabindex="-1" aria-labelledby="modal-guide-dfToken"
+		 aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable">
+		<!-- modal-container -->
+		<div class="modal-container">
+			<div class="modal-header">
+				<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
+					<i class="ico ic-close"></i>
+				</button>
+				<h3 class="modal-title">디파이너리(애드브릭스) 토큰 정보 연결 가이드</h3>
+			</div>
+			<!-- modal-body -->
+			<div class="modal-body p-0">
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>1. 디파이너리(애드브릭스)로그인 </strong>
+					</h4>
+					<img srcset="../../assets/images/report/img-guide-dfinery-token-01@3x.png 3x,
+											../../assets/images/report/img-guide-dfinery-token-01@2x.png 2x,"
+							 src="../../assets/images/report/img-guide-dfinery-token-01.png"
+							 alt="" class="border img-fluid w-100">
+					<p class="mt-2 mb-0">
+						- 디파이너리(애드브릭스) <a href="https://console.dfinery.io/login">consol.dfinary.io/login</a>로 접속 후 로그인을 합니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>2. 로그인 후 메뉴 선택</strong>
+					</h4>
+					<img srcset="../../assets/images/report/img-guide-dfinery-token-02@3x.png 3x,
+											../../assets/images/report/img-guide-dfinery-token-02@2x.png 2x,"
+							 src="../../assets/images/report/img-guide-dfinery-token-02.png"
+							 alt="" class="border img-fluid w-100">
+
+					<p class="mt-1 mb-0">
+						&#x2780; 좌측 메뉴의 Account > <strong>Users를 선택</strong>합니다.
+					</p>
+
+					<p class="mt-1 mb-0">
+						&#x2781; 우측 상단의 <strong>invite users 버튼을 선택</strong>합니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>3. 이용자 유형 선택</strong>
+					</h4>
+					<img srcset="../../assets/images/report/img-guide-dfinery-token-03@3x.png 3x,
+											../../assets/images/report/img-guide-dfinery-token-03@2x.png 2x,"
+							 src="../../assets/images/report/img-guide-dfinery-token-03.png"
+							 alt="" class="border img-fluid w-100">
+
+					<p class="mt-1 mb-0">
+						- <strong>머신 추가하기 버튼을 선택</strong>합니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>4. 머신 추가하기</strong>
+					</h4>
+					<img srcset="../../assets/images/report/img-guide-dfinery-token-04@3x.png 3x,
+											../../assets/images/report/img-guide-dfinery-token-04@2x.png 2x,"
+							 src="../../assets/images/report/img-guide-dfinery-token-04.png"
+							 alt="" class="border img-fluid w-100">
+
+					<p class="mt-1 mb-0">
+						&#x2780; 추가할 머신의 <strong>이름을 입력</strong>합니다.
+					</p>
+
+					<p class="mt-1 mb-0">
+						&#x2781; 머신 입력 입력 후 <strong>저장 버튼을 선택</strong>합니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>5. 머신 생성 완료 후 목록</strong>
+					</h4>
+					<img srcset="../../assets/images/report/img-guide-dfinery-token-05@3x.png 3x,
+											../../assets/images/report/img-guide-dfinery-token-05@2x.png 2x,"
+							 src="../../assets/images/report/img-guide-dfinery-token-05.png"
+							 alt="" class="border img-fluid w-100">
+
+					<p class="mt-1 mb-0">
+						- 머신 생성 완료 된 목록에서 <strong>토큰 보기 버튼을 선택</strong>합니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+
+				<!-- wrap -->
+				<div class="wrap p-2">
+					<h4>
+						<strong>6. 리포트 자동화</strong>
+					</h4>
+					<img srcset="../../assets/images/report/img-guide-dfinery-token-06@3x.png 3x,
+											../../assets/images/report/img-guide-dfinery-token-06@2x.png 2x,"
+							 src="../../assets/images/report/img-guide-dfinery-token-06.png"
+							 alt="" class="border img-fluid w-100">
+
+					<p class="mt-1 mb-0">
+						- 토큰 정보의 우측 <strong>아이콘 버튼을 선택하여 복사</strong>하면 리포트 자동화에 연결 할 준비가 완료됩니다.
+					</p>
+				</div>
+				<!-- /wrap -->
+			</div>
+			<!-- /modal-body -->
+			<!-- card-footer -->
+			<div class="modal-footer">
+				<button class="btn btn-outlined-secondary" data-dismiss="modal">닫기</button>
+			</div>
+			<!-- /card-footer -->
+		</div>
+		<!-- /modal-container -->
+	</div>
+</div>
+<!-- /modal#md-guide -->
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
