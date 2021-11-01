@@ -448,7 +448,7 @@
 											}, {
 												name: 'ROAS',
 												data: [30, 26, 34, 50, 28, 32, 28],
-												type: 'spline'
+												type: 'line'
 											}]
 										});
 									</script>
@@ -553,11 +553,10 @@
 										Highcharts.setOptions({
 											colors: ['#8a9197', '#ffa000']
 										});
-										Highcharts.chart('kakao-ctr', {
+										Highcharts.chart({
 											chart: {
 												renderTo: 'kakao-ctr',
-												height: 160,
-												type: 'line'
+												height: 160
 											},
 											title: {
 												text: ' '
@@ -626,7 +625,7 @@
 											}, {
 												name: 'ROAS',
 												data: [30, 26, 34, 50, 28, 32, 28],
-												type: 'spline'
+												type: 'line'
 											}]
 										});
 									</script>
@@ -668,8 +667,9 @@
 										Highcharts.setOptions({
 											colors: ['#0081f6', '#99cdfb']
 										});
-										Highcharts.chart('googleads-ads', {
+										Highcharts.chart({
 											chart: {
+												renderTo: 'googleads-ads',
 												height: 160,
 												plotBackgroundColor: null,
 												plotBorderWidth: null,
@@ -730,10 +730,10 @@
 										Highcharts.setOptions({
 											colors: ['#8a9197', '#0081f6']
 										});
-										Highcharts.chart('googleads-ctr', {
+										Highcharts.chart({
 											chart: {
-												height: 160,
-												type: 'line'
+												renderTo: 'googleads-ctr',
+												height: 160
 											},
 											title: {
 												text: ' '
@@ -753,12 +753,14 @@
 											}],
 											series: [{
 												name: '노출수',
-												data: [36, 36, 36, 36, 36, 36, 36],
-												yAxis: 1
+												data: [30, 48, 56, 36, 30, 32, 36],
+												yAxis: 1,
+												type: 'column'
 											},
 												{
 													name: '클릭률',
-													data: [30, 26, 34, 50, 28, 32, 28]
+													data: [30, 26, 34, 50, 28, 32, 28],
+													type: 'line'
 												}]
 										});
 									</script>
@@ -771,8 +773,9 @@
 										Highcharts.setOptions({
 											colors: ['#8a9197', '#0081f6']
 										});
-										Highcharts.chart('googleads-ros', {
+										Highcharts.chart({
 											chart: {
+												renderTo: 'googleads-ros',
 												height: 160
 											},
 											title: {
@@ -799,7 +802,7 @@
 											}, {
 												name: 'ROAS',
 												data: [30, 26, 34, 50, 28, 32, 28],
-												type: 'spline'
+												type: 'line'
 											}]
 										});
 									</script>
@@ -841,8 +844,9 @@
 										Highcharts.setOptions({
 											colors: ['#4448dc', '#b4b6f1']
 										});
-										Highcharts.chart('facebook-ads', {
+										Highcharts.chart({
 											chart: {
+												renderTo: 'facebook-ads',
 												height: 160,
 												plotBackgroundColor: null,
 												plotBorderWidth: null,
@@ -903,10 +907,10 @@
 										Highcharts.setOptions({
 											colors: ['#8a9197', '#4448dc']
 										});
-										Highcharts.chart('facebook-ctr', {
+										Highcharts.chart({
 											chart: {
-												height: 160,
-												type: 'line'
+												renderTo: 'facebook-ctr',
+												height: 160
 											},
 											title: {
 												text: ' '
@@ -926,12 +930,14 @@
 											}],
 											series: [{
 												name: '노출수',
-												data: [36, 36, 36, 36, 36, 36, 36],
-												yAxis: 1
+												data: [30, 48, 56, 36, 30, 32, 36],
+												yAxis: 1,
+												type: 'column'
 											},
 												{
 													name: '클릭률',
-													data: [30, 26, 34, 50, 28, 32, 28]
+													data: [30, 26, 34, 50, 28, 32, 28],
+													type: 'line'
 												}]
 										});
 									</script>
@@ -944,8 +950,9 @@
 										Highcharts.setOptions({
 											colors: ['#8a9197', '#4448dc']
 										});
-										Highcharts.chart('facebook-ros', {
+										Highcharts.chart({
 											chart: {
+												renderTo: 'facebook-ros',
 												height: 160
 											},
 											title: {
@@ -972,7 +979,7 @@
 											}, {
 												name: 'ROAS',
 												data: [30, 26, 34, 50, 28, 32, 28],
-												type: 'spline'
+												type: 'line'
 											}]
 										});
 									</script>
