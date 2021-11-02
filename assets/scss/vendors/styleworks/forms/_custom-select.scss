@@ -7,7 +7,7 @@
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: $custom-select-height;
+  //height: $custom-select-height;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   font-family: $custom-select-font-family;
   @include font-size($custom-select-font-size);
@@ -64,5 +64,12 @@
     color: transparent;
     text-shadow: 0 0 0 $custom-select-color;
   }
+}
+
+.custom-select-sm {
+  padding: $custom-select-padding-sm-y ($custom-select-padding-sm-x + $custom-select-indicator-padding-sm) $custom-select-padding-sm-y $custom-select-padding-sm-x;
+  @include font-size($custom-select-font-size-sm);
+  line-height: $custom-select-line-height-sm;
+  background: $custom-select-bg $custom-select-background-sm;
 }
 

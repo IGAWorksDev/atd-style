@@ -6,11 +6,9 @@
 .form-control {
   display: block;
   width: 100%;
-  height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  //height: $input-height;
+  @include form-control-size($input-padding-y, $input-padding-x, $input-font-size, $input-line-height, $input-border-radius);
   font-family: $input-font-family;
-  @include font-size($input-font-size);
-  line-height: $input-line-height;
   font-weight: $font-weight-normal;
   color: $input-color;
   background-color: $input-bg;
@@ -78,6 +76,14 @@ textarea.form-control {
 
 
 
+// Sizing
+//
+.form-control-sm {
+  @include form-control-size($input-padding-sm-y, $input-padding-sm-x, $input-font-size-sm, $input-line-height-sm, $input-border-radius-sm)
+}
+.form-control-lg {
+  @include form-control-size($input-padding-lg-y, $input-padding-lg-x, $input-font-size-lg, $input-line-height-lg, $input-border-radius-lg)
+}
 
 
 
