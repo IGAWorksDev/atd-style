@@ -180,9 +180,9 @@
 
 
 @mixin form-control-size ($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
-  padding: $padding-y $padding-x !important;
+  padding: $padding-y $padding-x;
   @include font-size($font-size);
-  line-height: $line-height;
+  line-height: $line-height !important;
 
   // Manually declare to provide an override to the browser default
   // - 브라우저 기본값에 대한 재정의를 제공하도록 수동으로 선언

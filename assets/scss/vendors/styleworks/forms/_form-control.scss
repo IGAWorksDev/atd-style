@@ -6,7 +6,7 @@
 .form-control {
   display: block;
   width: 100%;
-  //height: $input-height;
+  height: $input-height;
   @include form-control-size($input-padding-y, $input-padding-x, $input-font-size, $input-line-height, $input-border-radius);
   font-family: $input-font-family;
   font-weight: $font-weight-normal;
@@ -14,10 +14,8 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
-
+  
   // Note : CSS에서`<select>`의 제한된 스타일 지정으로 인해 일부 브라우저에서는 <select>에 영향을 미치지 않습니다.
-  @include border-radius($input-border-radius, 0);
-
   @include box-shadow($input-box-shadow);
   @include transition($input-transition);
 
@@ -42,10 +40,12 @@
 // Sizing
 //
 .form-control-sm {
-  @include form-control-size($input-padding-sm-y, $input-padding-sm-x, $input-font-size-sm, $input-line-height-sm, $input-border-radius-sm)
+  @include form-control-size($input-padding-sm-y, $input-padding-sm-x, $input-font-size-sm, $input-line-height-sm, $input-border-radius-sm);
+  height: $input-height-sm;
 }
 .form-control-lg {
-  @include form-control-size($input-padding-lg-y, $input-padding-lg-x, $input-font-size-lg, $input-line-height-lg, $input-border-radius-lg)
+  @include form-control-size($input-padding-lg-y, $input-padding-lg-x, $input-font-size-lg, $input-line-height-lg, $input-border-radius-lg);
+  height: $input-height-lg;
 }
 
 

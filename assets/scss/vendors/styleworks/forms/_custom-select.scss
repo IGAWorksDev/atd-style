@@ -7,7 +7,7 @@
 .custom-select {
   display: inline-block;
   width: 100%;
-  //height: $custom-select-height;
+  height: $custom-select-height;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   font-family: $custom-select-font-family;
   @include font-size($custom-select-font-size);
@@ -71,6 +71,7 @@
   @include font-size($custom-select-font-size-sm);
   line-height: $custom-select-line-height-sm;
   background: $custom-select-bg $custom-select-background-sm;
+  height: $custom-select-height-sm;
 }
 
 .custom-select-lg {
@@ -78,4 +79,5 @@
   @include font-size($custom-select-font-size-lg);
   line-height: $custom-select-line-height-lg;
   background: $custom-select-bg $custom-select-background-lg;
+  height: $custom-select-height-lg;
 }

@@ -436,13 +436,6 @@ $input-height-inner: calc((#{$input-line-height} * 1) + (#{$input-padding-y} * 2
 $input-height-inner-half: calc((#{$input-line-height} * 0.5) + #{$input-padding-y}) !default;
 $input-height-inner-quarter: calc((#{$input-line-height} * 0.25) + (#{$input-padding-y} / 2)) !default; // 결과값이 홀수 또는 소수점이 있을 수 있음 (주의!)
 
-// searching
-$input-search-icon-color: $gray-400;
-$input-search-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$input-search-icon-color}' d='M10 0c5.523 0 10 4.477 10 10 0 1.994-.583 3.85-1.59 5.4L23 20c.652 1.333.652 2.333 0 3s-1.652.667-3 0l-4.6-4.59C13.85 19.417 11.994 20 10 20 4.477 20 0 15.523 0 10S4.477 0 10 0zm0 2a8 8 0 1 0 0 16 8 8 0 1 0 0-16z'/></svg>");
-$input-search-icon-size: $font-size-base;
-$input-search-background: escape-svg($input-search-icon) no-repeat left $input-padding-x center / $input-search-icon-size;
-$input-search-padding-x: ($input-padding-x + $input-search-icon-size + ($input-padding-x * 0.5));
-
 
 // form control sizing
 $input-padding-sm-y: $input-btn-padding-y-sm;
@@ -450,13 +443,22 @@ $input-padding-sm-x: $input-btn-padding-x-sm;
 $input-font-size-sm: $input-btn-font-size-sm;
 $input-line-height-sm: $input-btn-line-height-sm;
 $input-border-radius-sm: $border-radius-sm;
+$input-height-sm: calc(#{$input-line-height-sm} + (#{$input-padding-sm-y} * 2) + (#{$input-border-width} * 2)) !default;
 
 $input-padding-lg-y: $input-btn-padding-y-lg;
 $input-padding-lg-x: $input-btn-padding-x-lg;
 $input-font-size-lg: $input-btn-font-size-lg;
 $input-line-height-lg: $input-btn-line-height-lg;
 $input-border-radius-lg: $border-radius-lg;
+$input-height-lg: calc(#{$input-line-height-lg} + (#{$input-padding-lg-y} * 2) + (#{$input-border-width} * 2)) !default;
 
+
+// searching
+$input-search-icon-color: $gray-400;
+$input-search-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$input-search-icon-color}' d='M10 0c5.523 0 10 4.477 10 10 0 1.994-.583 3.85-1.59 5.4L23 20c.652 1.333.652 2.333 0 3s-1.652.667-3 0l-4.6-4.59C13.85 19.417 11.994 20 10 20 4.477 20 0 15.523 0 10S4.477 0 10 0zm0 2a8 8 0 1 0 0 16 8 8 0 1 0 0-16z'/></svg>");
+$input-search-icon-size: $font-size-base;
+$input-search-background: escape-svg($input-search-icon) no-repeat left $input-padding-x center / $input-search-icon-size;
+$input-search-padding-x: ($input-padding-x + $input-search-icon-size + ($input-padding-x * 0.5));
 
 
 
@@ -564,7 +566,6 @@ $custom-select-indicator-color: $gray-800 !default;
 $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
 $custom-select-background: escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // 여러 배경 요소를 가질 수 있도록 사용됨(e.g. 화살표 및 피드백 아이콘)
 
-
 $custom-select-padding-sm-y: $input-padding-sm-y;
 $custom-select-padding-sm-x: $input-padding-sm-x;
 $custom-select-line-height-sm: $input-line-height-sm;
@@ -572,6 +573,7 @@ $custom-select-indicator-padding-sm: 1.4rem;
 $custom-select-bg-size-sm: 6px 8px;
 $custom-select-background-sm: escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-sm-x center / $custom-select-bg-size-sm;
 $custom-select-font-size-sm: $input-font-size-sm;
+$custom-select-height-sm: $input-height-sm;
 
 $custom-select-padding-lg-y: $input-padding-lg-y;
 $custom-select-padding-lg-x: $input-padding-lg-x;
@@ -580,6 +582,7 @@ $custom-select-indicator-padding-lg: 1.8rem;
 $custom-select-bg-size-lg: 10px 12px;
 $custom-select-background-lg: escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-lg-x center / $custom-select-bg-size-lg;
 $custom-select-font-size-lg: $input-font-size-lg;
+$custom-select-height-lg: $input-height-lg;
 
 
 
