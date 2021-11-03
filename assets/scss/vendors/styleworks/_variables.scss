@@ -573,6 +573,15 @@ $custom-select-bg-size-sm: 6px 8px;
 $custom-select-background-sm: escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-sm-x center / $custom-select-bg-size-sm;
 $custom-select-font-size-sm: $input-font-size-sm;
 
+$custom-select-padding-lg-y: $input-padding-lg-y;
+$custom-select-padding-lg-x: $input-padding-lg-x;
+$custom-select-line-height-lg: $input-line-height-lg;
+$custom-select-indicator-padding-lg: 1.8rem;
+$custom-select-bg-size-lg: 10px 12px;
+$custom-select-background-lg: escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-lg-x center / $custom-select-bg-size-lg;
+$custom-select-font-size-lg: $input-font-size-lg;
+
+
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-position: center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;

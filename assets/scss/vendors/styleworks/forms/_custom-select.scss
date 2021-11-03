@@ -73,3 +73,9 @@
   background: $custom-select-bg $custom-select-background-sm;
 }
 
+.custom-select-lg {
+  padding: $custom-select-padding-lg-y ($custom-select-padding-lg-x + $custom-select-indicator-padding-lg) $custom-select-padding-lg-y $custom-select-padding-lg-x;
+  @include font-size($custom-select-font-size-lg);
+  line-height: $custom-select-line-height-lg;
+  background: $custom-select-bg $custom-select-background-lg;
+}

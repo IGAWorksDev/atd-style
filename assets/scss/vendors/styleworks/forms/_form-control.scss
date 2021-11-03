@@ -39,11 +39,21 @@
   }
 }
 
+// Sizing
+//
+.form-control-sm {
+  @include form-control-size($input-padding-sm-y, $input-padding-sm-x, $input-font-size-sm, $input-line-height-sm, $input-border-radius-sm)
+}
+.form-control-lg {
+  @include form-control-size($input-padding-lg-y, $input-padding-lg-x, $input-font-size-lg, $input-line-height-lg, $input-border-radius-lg)
+}
+
+
 
 .form-control[type="search"] {
   background: $input-search-background;
   background-color: $input-bg;
-  padding-left: $input-search-padding-x;
+  padding-left: $input-search-padding-x!important;
 }
 
 
@@ -73,17 +83,6 @@ textarea.form-control {
   height: auto;
 }
 
-
-
-
-// Sizing
-//
-.form-control-sm {
-  @include form-control-size($input-padding-sm-y, $input-padding-sm-x, $input-font-size-sm, $input-line-height-sm, $input-border-radius-sm)
-}
-.form-control-lg {
-  @include form-control-size($input-padding-lg-y, $input-padding-lg-x, $input-font-size-lg, $input-line-height-lg, $input-border-radius-lg)
-}
 
 
 
