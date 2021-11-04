@@ -181,7 +181,8 @@ $enable-deprecation-messages: true !default;
 
 
 $border-width: 1px !default;
-$border-color: $gray-100 !default;
+$border-color: $gray-200 !default;
+$border-color-light: $gray-100 !default;
 $border-color-darken: $gray-200 !default;
 
 $border-radius-sm: 0.4rem !default;
@@ -863,7 +864,7 @@ $blankslate-padding-y: $spacer * 2;
 $blankslate-padding-x: $spacer * 2;
 $blankslate-border-width: $border-width;
 $blankslate-border-color: $border-color;
-$blankslate-bg: $component-bg-alt;
+$blankslate-bg: transperent;
 
 $blankslate-bg-dark: $component-bg-dark;
 $blankslate-border-dark: $component-border-dark;

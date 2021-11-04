@@ -4,10 +4,14 @@
 // TW Layout Wrapper
 //
 
+body {
+  background-color: $frame-bg;
+}
+
 [class*="twWrapper"] {
   margin-top: $gnb-height;
   min-width: $frame-min-width;
-  min-height: $frame-height; // display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
+  //min-height: $frame-height; // display:grid를 사용하지 않는 레이아웃 지원을 위하여 min-height 사용.(ref. Dashboard)
   background-color: $frame-bg;
   position: relative;
 }
