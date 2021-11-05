@@ -5,7 +5,7 @@
 //
 
 body {
-  background-color: $frame-bg;
+  background-color: $frame-bg !important;
 }
 
 [class*="twWrapper"] {
