@@ -10,6 +10,7 @@
   // Manually declare to provide an override to the browser default
   // - 브라우저 기본값에 대한 재정의를 제공하도록 수동으로 선언
   @include border-radius($border-radius, 0);
+  flex: 0 0 auto;
 }
 
 
@@ -22,6 +23,7 @@
   @include font-size($font-size);
   line-height: $line-height;
   border-radius: $border-radius;
+  flex: 0 0 auto;
 }
 
 

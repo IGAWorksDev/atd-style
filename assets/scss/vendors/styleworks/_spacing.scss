@@ -50,3 +50,24 @@
   margin-left: auto;
 }
 
+// margin half
+// 기본 spacer의 반값으로 간격을 적용할 경우
+.m-h {
+  margin: ($spacer / 2);
+}
+.mt-h,
+.my-h {
+  margin-top: ($spacer / 2);
+}
+.mr-h,
+.mx-h {
+  margin-right: ($spacer / 2);
+}
+.mb-h,
+.my-h {
+  margin-bottom: ($spacer / 2);
+}
+.ml-h,
+.mx-h{
+  margin-left: ($spacer / 2);
+}

@@ -37,9 +37,9 @@ $font-family-base: $font-family-sans-serif !default;
 
 
 // Font Sizes
-$font-size-xs: 1rem; //10px
+$font-size-xs: 1rem;
 $font-size-sm: 1.2rem;
-$font-size-base: 1.4rem;
+$font-size-base: 1.4rem; // 14px
 $font-size-lg: 1.6rem;
 $font-size-xl: 2rem;
 
@@ -70,7 +70,7 @@ $h6-line-height: 1.8rem;
 $headings-margin-top: 0;
 $headings-margin-bottom: 1rem;
 
-$small-font-size: 80%;
+$small-font-size: 85%;
 
 // Spacing
 //
@@ -284,11 +284,11 @@ $caret-spacing: 0.8em !default;
 
 
 // Badges
-$badge-font-size: 80% !default;
+$badge-font-size: 76% !default;
 $badge-padding-y: 0.3em !default;
 $badge-padding-x: 0.5em !default;
 $badge-border-width: 1px !default;
-$badge-border-radius: 3em !default;
+$badge-border-radius: 0.2em !default;
 
 
 // Buttons + Forms
@@ -830,7 +830,7 @@ $datagrid-muted-bg: $component-bg-alt !default;
 
 $datagrid-border-width: $border-width !default;
 
-$datagrid-border-color: $border-color !default;
+$datagrid-border-color: $border-color-light !default;
 $datagird-border-color-darken: $border-color-darken !default;
 
 $datagrid-padding-y: $spacer !default;
