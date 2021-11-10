@@ -1497,7 +1497,7 @@ a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; backgrou
 
 .bg-light { background-color: #f3f4f5 !important; }
 
-.btn-close { float: right; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; margin-left: auto; position: absolute; z-index: 1; }
+.btn-close { float: right; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; margin-left: auto; z-index: 1; }
 
 .popover { font-size: 1.2rem; border: 1px solid #b9bdc1; -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16); }
 
