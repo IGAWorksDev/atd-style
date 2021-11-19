@@ -1,4 +1,11 @@
 
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.bg-position-center {
+  background-position: center;
+}
+
 
 .bg-white {
   background-color: $component-bg !important;
@@ -6,4 +13,16 @@
 
 .bg-light {
   background-color: $component-bg-alt !important;
+}
+
+.bg-cover {
+  background-size: cover;
+  @extend .bg-no-repeat;
+  @extend .bg-position-center;
+}
+
+.bg-contain {
+  background-size: contain;
+  @extend .bg-no-repeat;
+  @extend .bg-position-center;
 }

@@ -41,12 +41,12 @@ $font-size-xs: 1rem;
 $font-size-sm: 1.2rem;
 $font-size-base: 1.4rem; // 14px
 $font-size-lg: 1.6rem;
-$font-size-xl: 2rem;
+$font-size-xl: 1.8rem;
 
 $line-height-xs: 1.6rem; // 0.625
 $line-height-sm: 1.8rem; // 1.5
 $line-height-base: 2.2rem; // 1.57
-$line-height-lg: 2.4rem; // 1.5
+$line-height-lg: 2.6rem; // 1.5
 
 // Font weight
 $font-weight-normal: 400;
@@ -185,9 +185,9 @@ $border-color: $gray-200 !default;
 $border-color-light: $gray-100 !default;
 $border-color-darken: $gray-200 !default;
 
-$border-radius-sm: 0.4rem !default;
+$border-radius-sm: 0.3rem !default;
 $border-radius: 0.4rem !default;
-$border-radius-lg: 0.4rem !default;
+$border-radius-lg: 0.6rem !default;
 
 $text-muted: $mute !default;
 

@@ -26,3 +26,14 @@
 .border-white {
   border-color: $white !important;
 }
+
+
+.border-radius-sm {
+  border-radius: $border-radius-sm;
+}
+.border-radius {
+  border-radius: $border-radius;
+}
+.border-radius-lg {
+  border-radius: $border-radius-lg;
+}
