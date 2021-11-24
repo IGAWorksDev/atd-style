@@ -1166,7 +1166,7 @@ a.list-group-item:hover, button.list-group-item:hover { color: #0081f6; backgrou
 .nav-tabs { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -ms-flex-wrap: wrap; flex-wrap: wrap; border-bottom: 1px solid #d0d3d5; }
 .nav-tabs .nav-item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
 .nav-tabs .nav-item .nav-link { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0.6rem 1.6rem; border-color: transparent; color: #373a3c; }
-.nav-tabs .nav-item .nav-link.active { position: relative; border-color: transparent; background-color: transparent; }
+.nav-tabs .nav-item .nav-link.active { position: relative; border-color: transparent; background-color: transparent; color: #0081f6; font-weight: bold; }
 .nav-tabs .nav-item .nav-link.active:after { content: " "; display: block; position: absolute; bottom: -1px; right: 0.8rem; left: 0.8rem; border-bottom: 2px solid #0081f6; color: #0081f6; }
 
 .card { border: 1px solid #d0d3d5; border-radius: 0; background-color: #fff; background-clip: border-box; word-wrap: break-word; }

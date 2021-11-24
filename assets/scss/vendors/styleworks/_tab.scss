@@ -72,6 +72,8 @@
         position: relative;
         border-color: transparent;
         background-color: transparent;
+        color: $primary;
+        font-weight: bold;
         &:after {
           content: " ";
           display: block;
