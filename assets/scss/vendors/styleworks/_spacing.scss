@@ -71,3 +71,26 @@
 .mx-h{
   margin-left: ($spacer / 2);
 }
+
+
+// padding half
+// 기본 spacer의 반값으로 간격을 적용할 경우
+.p-h {
+  padding: ($spacer / 2);
+}
+.pt-h,
+.py-h {
+  padding-top: ($spacer / 2);
+}
+.pr-h,
+.px-h {
+  padding-right: ($spacer / 2);
+}
+.pb-h,
+.py-h {
+  padding-bottom: ($spacer / 2);
+}
+.pl-h,
+.px-h {
+  padding-left: ($spacer / 2);
+}

@@ -1,0 +1,96 @@
+
+
+.colorchip {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.4rem;
+  height: 1.4rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+ 
+.colorchip + .colorchip {
+  margin-left: 0.5rem;
+}
+
+.colorchip-blue {
+  background-color: #0573f9;
+}
+
+.colorchip-red {
+  background-color: #f90505;
+}
+
+.colorchip-navy {
+  background-color: #014190;
+}
+
+.colorchip-orange {
+  background-color: #f98a05;
+}
+
+.colorchip-fuchsia {
+  background-color: #f22aff;
+}
+
+.colorchip-yellow {
+  background-color: #f9e705;
+}
+
+.colorchip-purple {
+  background-color: #7e1185;
+}
+
+.colorchip-lime {
+  background-color: #86f60d;
+}
+
+.colorchip-maroon {
+  background-color: #ac1111;
+}
+
+.colorchip-olive {
+  background-color: #5c9a19;
+}
+
+.colorchip-silver {
+  background-color: #cacaca;
+}
+
+.colorchip-green {
+  background-color: #009906;
+}
+
+.colorchip-gray {
+  background-color: #909090;
+}
+
+.colorchip-teal {
+  background-color: #009995;
+}
+
+.colorchip-black {
+  background-color: #000;
+}
+
+.colorchip-aqua {
+  background-color: #37c2ff;
+}
+
+.colorchip-white {
+  background-color: #fff;
+  border: 1px solid var(--gray-300);
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,7 +22,6 @@
 }
 
 
-
 .badge {
   display: inline-block;
   padding: $badge-padding-y $badge-padding-x;
@@ -38,6 +37,11 @@
   font-weight: normal;
 }
 
+.badge + .badge {
+  margin: 0.2rem;
+}
+
+
 // Outline Colors variation
 @each $color, $value in $theme-colors {
   .badge-outlined-#{$color} {
@@ -45,9 +49,30 @@
   }
 }
 
+
 // Contain Colors variation
 @each $color, $value in $theme-colors {
   .badge-contained-#{$color} {
     @include badge-contained-variant($value);
   }
+}
+
+.badge-rounded {
+  border-radius: 5rem;
+  padding: $badge-padding-y ($badge-padding-x * 1.5);
+}
+
+// Sizes
+.badge-md {
+  font-size: $font-size-sm;
+}
+
+// Tag
+.badge-tag {
+  padding-right: $badge-padding-y;
+  .btn,
+  .btn-circle {
+    vertical-align: middle;
+  }
+
 }
