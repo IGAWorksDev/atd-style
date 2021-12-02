@@ -6,6 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="../../assets/css/adicons-v1.0/style.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gnb.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/atd.css">
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 <body>
 
@@ -296,7 +301,7 @@
 								</header>
 								<!-- /header -->
 
-								<div class="d-flex align-items-center pt-3">
+								<div class="d-flex align-items-center pt-3 mb-2">
 									<div class="mr-auto">
 										<select class="custom-select">
 											<option>
@@ -314,12 +319,68 @@
 									</div>
 								</div>
 
-								<div class="py-10">
-									차트
-								</div>
+                <!-- chart -->
+                <div class="chart">
+                  <figure class="highcharts-figure">
+                    <div id="material-average"></div>
+                  </figure>
+                  <script>
+                      Highcharts.chart('material-average', {
+                          colors: ['#0081f6', '#0dbab1', '#4448dc'],
+                          chart: {
+                              type: 'column'
+                          },
+                          title: {
+                              text: ''
+                          },
+                          xAxis: {
+                              categories: [
+                                  'Jan',
+                                  'Feb',
+                                  'Mar',
+                                  'Apr',
+                                  'May',
+                                  'Jun',
+                                  'Jul',
+                                  'Aug',
+                                  'Sep',
+                                  'Oct',
+                                  'Nov',
+                                  'Dec'
+                              ],
+                              crosshair: true
+                          },
+                          yAxis: {
+                              min: 0,
+                              title: {
+                                  text: 'Rainfall (mm)'
+                              }
+                          },
+                          plotOptions: {
+                              column: {
+                                  pointPadding: 0.2,
+                                  borderWidth: 0
+                              }
+                          },
+                          series: [{
+                              name: '영상',
+                              data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
 
-								
-								<header class="d-flex align-items-center h-fixed-7 border-bottom">
+                          }, {
+                              name: '이미지',
+                              data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+
+                          }, {
+                              name: '혼합형',
+                              data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+
+                          }]
+                      });
+                  </script>
+                </div>
+                <!-- /chart -->
+
+                <header class="d-flex align-items-center h-fixed-7 border-bottom">
 									<h4 class="mb-0 font-weight-bold">
 										소재 사양 지표
 									</h4>
@@ -332,9 +393,50 @@
 										<h5 class="font-size-lg mb-2">
 											사이즈 - 이미지
 										</h5>
-										<div class="py-10">
-											차트
-										</div>
+
+                    <!-- chart -->
+                    <div class="chart">
+                      <figure class="highcharts-figure">
+                        <div id="material-video"></div>
+                      </figure>
+                      <script>
+                          Highcharts.chart('material-video', {
+                              colors: ['#0dbab1'],
+                              chart: {
+                                  type: 'column'
+                              },
+                              title: {
+                                  text: ''
+                              },
+                              xAxis: {
+                                  categories: [
+                                      '정사이즈',
+                                      '가로형',
+                                      '세로형'
+                                  ],
+                                  crosshair: true
+                              },
+                              yAxis: {
+                                  min: 0,
+                                  title: {
+                                      text: 'Rainfall (mm)'
+                                  }
+                              },
+                              plotOptions: {
+                                  column: {
+                                      pointPadding: 0.2,
+                                      borderWidth: 0
+                                  }
+                              },
+                              series: [{
+                                  name: '이미지',
+                                  data: [49.9, 71.5, 106.4]
+
+                              }]
+                          });
+                      </script>
+                    </div>
+                    <!-- /chart -->
 									</div>
 									<!-- /col -->
 
@@ -343,9 +445,60 @@
 										<h5 class="font-size-lg mb-2">
 											초(길이) - 영상
 										</h5>
-										<div class="py-10">
-											차트
-										</div>
+                    <!-- chart -->
+                    <div class="chart position-relative">
+                        <!-- position-absolute -->
+                        <div class="position-absolute d-flex align-items-stretch" style="z-index:1; top: 0; right: 0; bottom: 0; left: 0; background-color:rgba(255,255,255, 0.92);">
+                          <div class="align-self-center justify-content-center w-100 text-center">
+                            <i class="ico ic-exclamation-circle-fill h3 text-muted"></i>
+                            <p class="text-muted mb-0 mt-2">
+                              해당 업종으로 등록된 광고 소재가 없습니다.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- /position-absolute -->
+
+                      <figure class="highcharts-figure">
+                        <div id="material-size"></div>
+                      </figure>
+                      <script>
+                          Highcharts.chart('material-size', {
+                              colors: ['#0081f6'],
+                              chart: {
+                                  type: 'column'
+                              },
+                              title: {
+                                  text: ''
+                              },
+                              xAxis: {
+                                  categories: [
+                                      '정사이즈',
+                                      '가로형',
+                                      '세로형'
+                                  ],
+                                  crosshair: true
+                              },
+                              yAxis: {
+                                  min: 0,
+                                  title: {
+                                      text: 'Rainfall (mm)'
+                                  }
+                              },
+                              plotOptions: {
+                                  column: {
+                                      pointPadding: 0.2,
+                                      borderWidth: 0
+                                  }
+                              },
+                              series: [{
+                                  name: '영상',
+                                  data: [49.9, 71.5, 106.4]
+
+                              }]
+                          });
+                      </script>
+                    </div>
+                    <!-- /chart -->
 									</div>
 									<!-- /col -->
 								</div>
@@ -360,9 +513,67 @@
 												소재 대표 색상
 											</h4>
 										</header>
-										<div class="py-10">
-											차트
-										</div>
+
+                    <!-- chart -->
+                    <div class="chart">
+                      <figure class="highcharts-figure">
+                        <div id="material-color"></div>
+                      </figure>
+                      <script>
+                          Highcharts.chart('material-color', {
+                              chart: {
+                                  plotBackgroundColor: null,
+                                  plotBorderWidth: null,
+                                  plotShadow: false,
+                                  type: 'pie'
+                              },
+                              title: {
+                                  text: ''
+                              },
+                              accessibility: {
+                                  point: {
+                                      valueSuffix: '%'
+                                  }
+                              },
+                              plotOptions: {
+                                  pie: {
+                                      allowPointSelect: true,
+                                      cursor: 'pointer',
+                                      dataLabels: {
+                                          enabled: false
+                                      },
+                                      showInLegend: true
+                                  }
+                              },
+                              series: [{
+                                  name: 'Brands',
+                                  colorByPoint: true,
+                                  data: [{
+                                      color: '#e53935',
+                                      name: 'Red',
+                                      y: 11.84
+                                  }, {
+                                      name: 'Blue',
+                                      color: '#4448dc',
+                                      y: 10.85
+                                  }, {
+                                      name: 'Orange',
+                                      color: '#ffa000',
+                                      y: 4.67
+                                  }, {
+                                      name: 'gray',
+                                      color: '#6e7479',
+                                      y: 4.18
+                                  }, {
+                                      name: 'Silver',
+                                      color: '#b9bdc1',
+                                      y: 7.05
+                                  }]
+                              }]
+                          });
+                      </script>
+                    </div>
+                    <!-- /chart -->
 									</div>
 									<!-- /col -->
 
@@ -373,9 +584,13 @@
 												소재 대표 메시지
 											</h4>
 										</header>
-										<div class="py-10">
-											차트
-										</div>
+                    <!-- chart -->
+                    <div class="chart">
+                      <div class="py-10">
+                        차트
+                      </div>
+                    </div>
+                    <!-- /chart -->
 									</div>
 									<!-- /col -->
 								</div>
