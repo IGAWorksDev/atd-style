@@ -1,7 +1,7 @@
 /*
 Error: Undefined variable: "$gnb-bg".
-        on line 15 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/assets/scss/layout/_gnb.scss
-        from line 25 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/assets/scss/gnb.scss
+        on line 15 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/layout/_gnb.scss
+        from line 25 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/gnb.scss
 
 10:   'vendors/styleworks/functions',
 11:   'vendors/styleworks/colors',
@@ -16,8 +16,8 @@ Error: Undefined variable: "$gnb-bg".
 20: @import
 
 Backtrace:
-/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/assets/scss/layout/_gnb.scss:15
-/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/assets/scss/gnb.scss:25
+/Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/layout/_gnb.scss:15
+/Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/gnb.scss:25
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -76,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$gnb-bg\".\A         on line 15 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/assets/scss/layout/_gnb.scss\A         from line 25 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/assets/scss/gnb.scss\A \A 10:   'vendors/styleworks/functions',\A 11:   'vendors/styleworks/colors',\A 12:   'Vendors/bootstrap-extention',\A 13:   'vendors/bootstrap-4.5.1/scss/bootstrap',\A 14: \A 15:   // 스타일 분리에 필요한 파일들..\A 16:   'vendors/styleworks/vendors/rfs-extension',\A 17:   'vendors/styleworks/vendors/rfs'\A 18: ;\A 19: \A 20: @import"; }
+  content: "Error: Undefined variable: \"$gnb-bg\".\A         on line 15 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/layout/_gnb.scss\A         from line 25 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/gnb.scss\A \A 10:   'vendors/styleworks/functions',\A 11:   'vendors/styleworks/colors',\A 12:   'Vendors/bootstrap-extention',\A 13:   'vendors/bootstrap-4.5.1/scss/bootstrap',\A 14: \A 15:   // 스타일 분리에 필요한 파일들..\A 16:   'vendors/styleworks/vendors/rfs-extension',\A 17:   'vendors/styleworks/vendors/rfs'\A 18: ;\A 19: \A 20: @import"; }
