@@ -7,7 +7,6 @@
 }
 
 .more-popover-body {
-  visibility: hidden;
   z-index: 1;
   position: absolute;
   padding: $spacer * 2;
@@ -15,8 +14,4 @@
   border: $border-width solid $border-color;
   box-shadow: 0 2px 8px 0 rgba($black, 0.24);
   width: 240px;
-}
-
-.more-popover:hover .more-popover-body {
-  visibility: visible;
 }

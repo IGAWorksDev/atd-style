@@ -1,7 +1,7 @@
 /*
 Error: Undefined variable: "$gnb-bg".
-        on line 20 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss
-        from line 66 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss
+        on line 20 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss
+        from line 66 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss
 
 15: //
 16: // utils/
@@ -16,8 +16,8 @@ Error: Undefined variable: "$gnb-bg".
 25: // - #reset, #normalize, #타이포그래피 규칙, ... 등등
 
 Backtrace:
-/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss:20
-/Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss:66
+/Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss:20
+/Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss:66
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -76,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$gnb-bg\".\A         on line 20 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss\A         from line 66 of /Volumes/GoogleDrive/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss\A \A 15: //\A 16: // utils/\A 17: // - 프로젝트에 사용되는 모든 sass도구와 헬퍼를 모읍니다.\A 18: // - 모든 전역 변수, 함수, 믹스인, 플레이스홀더\A 19: // - 컴파일되었을 때 한 줄의 css도 산출하지 않아야 합니다. 이 폴더는 그저 Sass헬퍼일 뿐입니다.\A 20: // - #sass변수, #sass함수, #sass믹스인, #클래스, #플레이스홀더, #헬퍼, ... 등등\A 21: //\A 22: // base/\A 23: // - 프로젝트의 보일러플레이트 코드라고 부를 만한 것을 담습니다.\A 24: // - 리펫파일, 타이포그래피 규칙, HTML요소에 대한 표준 스타일을 정의하는 스타일 시트\A 25: // - #reset, #normalize, #타이포그래피 규칙, ... 등등"; }
+  content: "Error: Undefined variable: \"$gnb-bg\".\A         on line 20 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/layout/_gnb.scss\A         from line 66 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/new-atd-style/assets/scss/atd.scss\A \A 15: //\A 16: // utils/\A 17: // - 프로젝트에 사용되는 모든 sass도구와 헬퍼를 모읍니다.\A 18: // - 모든 전역 변수, 함수, 믹스인, 플레이스홀더\A 19: // - 컴파일되었을 때 한 줄의 css도 산출하지 않아야 합니다. 이 폴더는 그저 Sass헬퍼일 뿐입니다.\A 20: // - #sass변수, #sass함수, #sass믹스인, #클래스, #플레이스홀더, #헬퍼, ... 등등\A 21: //\A 22: // base/\A 23: // - 프로젝트의 보일러플레이트 코드라고 부를 만한 것을 담습니다.\A 24: // - 리펫파일, 타이포그래피 규칙, HTML요소에 대한 표준 스타일을 정의하는 스타일 시트\A 25: // - #reset, #normalize, #타이포그래피 규칙, ... 등등"; }
