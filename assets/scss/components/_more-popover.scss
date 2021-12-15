@@ -9,9 +9,15 @@
 .more-popover-body {
   z-index: 1;
   position: absolute;
-  padding: $spacer * 2;
+  padding: ($spacer * 2);
   background-color: $white;
   border: $border-width solid $border-color;
   box-shadow: 0 2px 8px 0 rgba($black, 0.24);
-  width: 240px;
+  width: 280px;
+
+  .btn-close {
+    @extend .btn-circle-sm;
+    top: 0.4rem;
+    right: 0.4rem;
+  }
 }

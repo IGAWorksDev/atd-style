@@ -974,7 +974,7 @@ textarea.form-control { height: auto; }
 
 .btn-circle-xs, .alert-sm .alert-close, .toast .btn-close { padding: 0.2rem 0.2rem; width: calc(1.6rem + (0.2rem * 2) + (1px * 2)) !important; height: calc(1.6rem + (0.2rem * 2) + (1px * 2)) !important; font-size: 1rem; line-height: 1.6rem; border-radius: 3.6rem !important; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
 
-.btn-circle-sm, .alert-close { padding: 0.4rem 0.4rem; width: calc(1.8rem + (0.4rem * 2) + (1px * 2)) !important; height: calc(1.8rem + (0.4rem * 2) + (1px * 2)) !important; font-size: 1.2rem; line-height: 1.8rem; border-radius: 3.6rem !important; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
+.btn-circle-sm, .alert-close, .more-popover-body .btn-close { padding: 0.4rem 0.4rem; width: calc(1.8rem + (0.4rem * 2) + (1px * 2)) !important; height: calc(1.8rem + (0.4rem * 2) + (1px * 2)) !important; font-size: 1.2rem; line-height: 1.8rem; border-radius: 3.6rem !important; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
 
 .btn-circle-lg { padding: 1.2rem 1.2rem; width: calc(2.6rem + (1.2rem * 2) + (1px * 2)) !important; height: calc(2.6rem + (1.2rem * 2) + (1px * 2)) !important; font-size: calc(1.285rem + 0.2625vw); line-height: 2.6rem; border-radius: 3.6rem !important; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
 @media (min-width: 1200px) { .btn-circle-lg { font-size: 1.6rem; } }
@@ -2145,7 +2145,8 @@ progress { width: 100%; height: 2.2rem; }
 
 .more-popover { position: relative; }
 
-.more-popover-body { z-index: 1; position: absolute; padding: 1.6rem; background-color: #fff; border: 1px solid #d0d3d5; -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24); box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24); width: 240px; }
+.more-popover-body { z-index: 1; position: absolute; padding: 1.6rem; background-color: #fff; border: 1px solid #d0d3d5; -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24); box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24); width: 280px; }
+.more-popover-body .btn-close { top: 0.4rem; right: 0.4rem; }
 
 /* --------------------------------------------------- */
 #dashboard > .mainheader .container { margin-bottom: 0 !important; }
