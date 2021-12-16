@@ -1,11 +1,10 @@
 
 
-
-
 // Mixin : 범례용 텍스트 컬러
 @mixin datagrid-row-legend-variant($color, $background:$color){
   background-color: $background;
 }
+
 // 'datagrid-row-legend="legend-1'로 범례 추가
 //
 @each $color, $value in $datagrid-row-legends {
@@ -26,3 +25,27 @@
   }
 }
 
+
+// Row hover
+// 열에 마우스 호버하면 특정 요소가 보이는 효과를 줄 경우 사용함.
+.datagrid-row-hover {
+  .datagrid-cell__absolute-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: $transition-base;
+    padding-left: ($spacer * 10);
+    background: linear-gradient( to right, rgba($datagrid-hover-bg, 0), rgba($datagrid-hover-bg, 0.9) 50%, rgba($datagrid-hover-bg, 0.9) 100%);
+
+    display: flex;
+    align-items: center;
+  }
+  &:hover {
+    .datagrid-cell__absolute-content {
+      opacity: 1;
+      transition: $transition-base;
+    }
+  }
+}

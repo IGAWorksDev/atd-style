@@ -216,7 +216,7 @@ $component-active-padding-x: ($component-padding-x + $component-active-icon-size
 
 // Hover
 $component-hover-color: $primary !default;
-$component-hover-bg: var(--primary-50) !default;
+$component-hover-bg: $blue-50 !default;
 
 // selected
 $component-selected-color: $primary !default;

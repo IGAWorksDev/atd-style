@@ -27,7 +27,7 @@
       $shade: ($variations - $i) * 100; // $color를 어둡게 만들며, 0~100% 사이 숫자를 갖음. (900, 800, 700, 600 내림차순)
 
       $colors: map-merge($colors, (
-              #{$color}-50: tint-color($value, 88%), // 가장 옅은 $color-50인 색상 추출.
+              #{$color}-50: tint-color($value, 90%), // 가장 옅은 $color-50인 색상 추출.
               #{$color}-#{$mid * 100}: $value, // 베이스 컬러이면서 $color-500인 색상 추출.
               #{$color}-#{$tint}: tint-color($value, $percentage * 2), // eg. gray-100: #CDD1D4
               #{$color}-#{$shade}: shade-color($value, $percentage * 2) // eg. gray-900: #17191B

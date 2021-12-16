@@ -598,7 +598,7 @@
 									<div class="datagrid-cell" role="gridcell" style="width: 38rem;">
 										<div class="datagrid-cell-inner">
 											<!-- d-flex -->
-											<div class="d-flex align-items-center">
+											<div class="d-flex align-items-center position-relative">
 												<div class="mr-auto">
 													DMPtest
 													<div class="mt-h">
@@ -607,9 +607,11 @@
 														</small>
 													</div>
 												</div>
-												<button class="btn btn-sm btn-outlined-secondary datagrid-row-hover__element" data-toggle="modal" data-target="#md-connect-client-service">
-													상품 서비스 연결
-												</button>
+												<div class="datagrid-cell__absolute-content">
+													<button class="btn btn-sm btn-outlined-secondary bg-white" data-toggle="modal" data-target="#md-connect-client-service">
+														상품 서비스 연결
+													</button>
+												</div>
 											</div>
 											<!-- /d-flex -->
 										</div>
@@ -632,38 +634,60 @@
 								<!-- /datagrid-row -->
 
 								<!-- datagrid-row -->
-								<div class="datagrid-row" role="row">
+								<div class="datagrid-row datagrid-row-hover" role="row">
 									<div class="datagrid-cell" role="gridcell" style="width: 9rem; max-width: 9rem;">
 										<div class="datagrid-cell-inner text-center">
-											<img class="svg-icon-lg" src="../../assets/images/channel-ico-kakaomoment.svg" alt="kakaomoment">
+											<img class="svg-icon-lg" src="../../assets/images/channel-ico-facebook.svg" alt="Facebook">
 										</div>
 									</div>
 									<div class="datagrid-cell" role="gridcell" style="width: 14rem; max-width: 14rem;">
 										<div class="datagrid-cell-inner">
-											<span><i class="ico ic-ball text-primary"></i> 요청중</span>
+											<span class="text-danger"><i class="ico ic-exclamation-triangle-fill"></i> 연결안됨</span>
 										</div>
 									</div>
 									<div class="datagrid-cell" role="gridcell" style="width: 38rem;">
 										<div class="datagrid-cell-inner">
-											<a href="#" data-toggle="modal" data-target="#md-adaccount-info">에듀윌</a>
-											<div class="mt-h">
-												<small class="text-muted">ID 1578379934</small>
+											<!-- d-flex -->
+											<div class="d-flex align-items-center position-relative">
+												<div class="mr-auto">
+													DMPtest
+													<div class="mt-h">
+														<small class="text-muted">
+															ID 15783799341578379934
+														</small>
+														<span class="ml-1 pl-1 border-left">
+															<small class="badge badge-outlined-secondary">타 TMP사</small>
+															<span class="text-muted" data-toggle="modal" data-target="#md-adaccount-info">
+																<small>
+																	<i class="ico ic-ball text-primary"></i>
+																	연결해제 요청 1건
+																	</small>
+															</span>
+														</span>
+													</div>
+												</div>
+												<div class="datagrid-cell__absolute-content">
+													<button class="btn btn-sm btn-outlined-secondary bg-white" data-toggle="modal" data-target="#md-connect-client-service">
+														상품 서비스 연결
+													</button>
+												</div>
 											</div>
+											<!-- /d-flex -->
 										</div>
 									</div>
 									<div class="datagrid-cell" role="gridcell" style="width: 20rem; max-width: 20rem;">
-										네오위즈
+										<i class="ico ic-exclamation-triangle-fill text-danger"></i>
 									</div>
 									<div class="datagrid-cell" role="gridcell" style="width: 20rem; max-width: 20rem;">
-										브라운더스
+										<i class="ico ic-exclamation-triangle-fill text-danger"></i>
 									</div>
 									<div class="datagrid-cell" role="gridcell" style="width: 8rem; max-width: 8rem;">
 										<div class="datagrid-cell-inner text-center">
-											<i class="ico ic-apple"></i>
+											<i class="ico ic-exclamation-triangle-fill text-danger"></i>
 										</div>
 									</div>
 									<div class="datagrid-cell" role="gridcell" style="width: 20rem; max-width: 20rem;">
-										게임 > 기타게임상품/서비스
+										<i class="ico ic-exclamation-triangle-fill text-danger"></i>
 									</div>
 								</div>
 								<!-- /datagrid-row -->

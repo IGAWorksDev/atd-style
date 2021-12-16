@@ -307,18 +307,3 @@
     }
   }
 }
-
-// Row hover
-// 열에 마우스 호버하면 특정 요소가 보이는 효과를 줄 경우 사용함.
-.datagrid-row-hover {
-  .datagrid-row-hover__element {
-    opacity: 0;
-    transition: $transition-base;
-  }
-  &:hover {
-    .datagrid-row-hover__element {
-      opacity: 1;
-      transition: $transition-base;
-    }
-  }
-}
