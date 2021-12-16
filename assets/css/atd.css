@@ -1966,7 +1966,7 @@ body { background-color: #f3f4f5 !important; }
 .snb-navbar-nav .nav-item.is-active .nav-link { color: #0081f6; font-weight: bold; background-color: rgba(0, 129, 246, 0.15); }
 .snb-navbar-nav .nav-item.is-active:after { position: absolute; content: ""; display: block; width: 4px; height: 100%; background-color: #0081f6; top: 0; right: 0; bottom: 0; }
 
-.snb:hover { width: 24rem; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.snb:hover { width: 26rem; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .snb:hover .snb-navbar-header .navbar-title .navbar-title-ico { display: none; }
 .snb:hover .snb-navbar-header .navbar-title .navbar-title-text { display: block; margin-left: 0.4rem; -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
 .snb:hover .snb-navbar-header .navbar-title:after { display: none; -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
