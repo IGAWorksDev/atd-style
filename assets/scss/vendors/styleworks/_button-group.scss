@@ -1,0 +1,62 @@
+
+
+btn-group {
+  display: inline-flex;
+  vertical-align: middle;
+
+  > btn + btn {
+    margin: 0;
+  }
+
+  > btn {
+    flex: 1 1 auto;
+    position: relative;
+    box-shadow: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      z-index: 1;
+    }
+  }
+
+  // 이중 테두리 방지
+  > btn:not(:first-child),
+  > btn-group:not(:first-child) {
+    margin-left: -$btn-border-width;
+  }
+
+  // 둥근 모서리 재설정
+  > btn:not(:first-child) {
+    //@include border-left-radius(0);
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  > btn:not(:last-child) {
+    //@include border-right-radius(0);
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}
+
+// 그룹의 버튼 크기 재설정
+btn-group-sm > btn {
+  @extend btn-sm;
+}
+btn-group-lg > btn {
+  @extend btn-lg;
+}
+
+
+// Split 버튼 (Dropdown)
+.dropdown-toggle-split {
+  &::after,
+  .dropup &::after,
+  .dropright &::after {
+    margin-left: 0;
+  }
+
+  .dropleft &::before {
+    margin-right: 0;
+  }
+}

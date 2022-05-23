@@ -1,16 +1,60 @@
 
 
+// Text Colors
+//
+
+@each $color, $value in $theme-colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}
 .text-body {
   color: $body-color !important;
 }
-.text-disabled {
-  color: $disable;
-}
 .text-muted {
-  color: $text-muted;
+  color: $text-muted !important;
 }
-.text-tertiary {
-  color: $disable !important;
+.text-disabled {
+  color: $component-disabled-color !important;
 }
 
 
+// Text Alignments
+//
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-justify {
+  text-align: justify;
+}
+.text-align-justify-all {
+  text-align: justify-all;
+}
+.text-align-start {
+  text-align: start;
+}
+.text-align-end {
+  text-align: end;
+}
+.text-align-match-parent{
+  text-align: match-parent;
+}
+
+
+// Inline text element
+//
+small {
+  font-size: $small-font-size;
+  line-height: 1.5;
+}
+
+
+a {
+  color: $primary;
+}

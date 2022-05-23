@@ -70,7 +70,7 @@ $table-thead-row-height-base: calc(#{$line-height-base} + (#{$spacer} * 2) + (#{
 $legend-1: $blue !default;
 $legend-2: $teal !default;
 $legend-3: $red !default;
-$legend-4: $yellow !default;
+$legend-4: $orange !default;
 $legend-5: $tertiary !default;
 
 $theme-charts: ()!default;
@@ -84,7 +84,7 @@ $theme-charts: map-merge(
         ),
         $theme-charts
 );
-
+ㄷ3333
 // datagrid legend
 $datagrid-row-legends: ()!default;
 $datagrid-row-legends: map-merge(

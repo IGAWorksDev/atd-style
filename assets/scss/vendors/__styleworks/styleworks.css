@@ -1,11 +1,11 @@
 /*
 Error: Undefined variable: "$datagird-border-color".
-        on line 129 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/vendors/__styleworks/components/_datagrid.scss
-        from line 67 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/vendors/__styleworks/styleworks.scss
+        on line 129 of /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/vendors/__styleworks/components/_datagrid.scss
+        from line 67 of /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/vendors/__styleworks/styleworks.scss
 
 Backtrace:
-/Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/vendors/__styleworks/components/_datagrid.scss:129
-/Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/vendors/__styleworks/styleworks.scss:67
+/Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/vendors/__styleworks/components/_datagrid.scss:129
+/Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/vendors/__styleworks/styleworks.scss:67
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -75,4 +75,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$datagird-border-color\".\A         on line 129 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/vendors/__styleworks/components/_datagrid.scss\A         from line 67 of /Volumes/GoogleDrive-106489045363652973934/내 드라이브/#__Github/atd-style/assets/scss/vendors/__styleworks/styleworks.scss"; }
+  content: "Error: Undefined variable: \"$datagird-border-color\".\A         on line 129 of /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/vendors/__styleworks/components/_datagrid.scss\A         from line 67 of /Users/dannaeyang/Documents/#__Github/atd-style/assets/scss/vendors/__styleworks/styleworks.scss"; }

@@ -1,0 +1,272 @@
+
+// ------------------------------
+// Colors
+//
+// _funcion의  tint-color, shade-color 변수를 이용하여 생성.
+// ------------------------------
+
+// ------------------------------
+// Color Palette
+//
+
+$sky:     #0081f6 !default;
+$blue:    #4448dc !default;
+$green:   #65d430 !default;
+$teal:    #0dbab1 !default;
+$orange:  #ffa000 !default;
+$red:     #e53935 !default;
+$purple:  #6b2ecf !default;
+$magenta: #af2c8d !default;
+$gray:    #8a9197 !default; //6c757d
+
+$colors: () !default;
+$colors: map-merge(
+        (
+            "sky": $sky,
+            "blue": $blue,
+            "green": $green,
+            "teal": $teal,
+            "orange": $orange,
+            "red": $red,
+            "purple": $purple,
+            "magenta": $magenta,
+            "gray": $gray
+        ),
+        $colors
+);
+
+
+
+// ------------------------------
+// Color Variation
+// $color-500이 기준 색상.
+//
+
+$sky-50: tint-color($sky, 90%) !default;
+$sky-100: tint-color($sky, 80%) !default;
+$sky-200: tint-color($sky, 60%) !default;
+$sky-300: tint-color($sky, 40%) !default;
+$sky-400: tint-color($sky, 20%) !default;
+$sky-500: $sky !default;
+$sky-600: shade-color($sky, 20%) !default;
+$sky-700: shade-color($sky, 40%) !default;
+$sky-800: shade-color($sky, 60%) !default;
+$sky-900: shade-color($sky, 80%) !default;
+
+$green-50: tint-color($green, 90%) !default;
+$green-100: tint-color($green, 80%) !default;
+$green-200: tint-color($green, 60%) !default;
+$green-300: tint-color($green, 40%) !default;
+$green-400: tint-color($green, 20%) !default;
+$green-500: $green !default;
+$green-600: shade-color($green, 20%) !default;
+$green-700: shade-color($green, 40%) !default;
+$green-800: shade-color($green, 60%) !default;
+$green-900: shade-color($green, 80%) !default;
+
+$teal-50: tint-color($teal, 90%) !default;
+$teal-100: tint-color($teal, 80%) !default;
+$teal-200: tint-color($teal, 60%) !default;
+$teal-300: tint-color($teal, 40%) !default;
+$teal-400: tint-color($teal, 20%) !default;
+$teal-500: $teal !default;
+$teal-600: shade-color($teal, 20%) !default;
+$teal-700: shade-color($teal, 40%) !default;
+$teal-800: shade-color($teal, 60%) !default;
+$teal-900: shade-color($teal, 80%) !default;
+
+$orange-50: tint-color($orange, 90%) !default;
+$orange-100: tint-color($orange, 80%) !default;
+$orange-200: tint-color($orange, 60%) !default;
+$orange-300: tint-color($orange, 40%) !default;
+$orange-400: tint-color($orange, 20%) !default;
+$orange-500: $orange !default;
+$orange-600: shade-color($orange, 20%) !default;
+$orange-700: shade-color($orange, 40%) !default;
+$orange-800: shade-color($orange, 60%) !default;
+$orange-900: shade-color($orange, 80%) !default;
+
+$red-50: tint-color($red, 90%) !default;
+$red-100: tint-color($red, 80%) !default;
+$red-200: tint-color($red, 60%) !default;
+$red-300: tint-color($red, 40%) !default;
+$red-400: tint-color($red, 20%) !default;
+$red-500: $red !default;
+$red-600: shade-color($red, 20%) !default;
+$red-700: shade-color($red, 40%) !default;
+$red-800: shade-color($red, 60%) !default;
+$red-900: shade-color($red, 80%) !default;
+
+$blue-50: tint-color($blue, 90%) !default;
+$blue-100: tint-color($blue, 80%) !default;
+$blue-200: tint-color($blue, 60%) !default;
+$blue-300: tint-color($blue, 40%) !default;
+$blue-400: tint-color($blue, 20%) !default;
+$blue-500: $blue !default;
+$blue-600: shade-color($blue, 20%) !default;
+$blue-700: shade-color($blue, 40%) !default;
+$blue-800: shade-color($blue, 60%) !default;
+$blue-900: shade-color($blue, 80%) !default;
+
+$purple-50: tint-color($purple, 90%) !default;
+$purple-100: tint-color($purple, 80%) !default;
+$purple-200: tint-color($purple, 60%) !default;
+$purple-300: tint-color($purple, 40%) !default;
+$purple-400: tint-color($purple, 20%) !default;
+$purple-500: $purple !default;
+$purple-600: shade-color($purple, 20%) !default;
+$purple-700: shade-color($purple, 40%) !default;
+$purple-800: shade-color($purple, 60%) !default;
+$purple-900: shade-color($purple, 80%) !default;
+
+$magenta-50: tint-color($magenta, 90%) !default;
+$magenta-100: tint-color($magenta, 80%) !default;
+$magenta-200: tint-color($magenta, 60%) !default;
+$magenta-300: tint-color($magenta, 40%) !default;
+$magenta-400: tint-color($magenta, 20%) !default;
+$magenta-500: $magenta !default;
+$magenta-600: shade-color($magenta, 20%) !default;
+$magenta-700: shade-color($magenta, 40%) !default;
+$magenta-800: shade-color($magenta, 60%) !default;
+$magenta-900: shade-color($magenta, 80%) !default;
+
+
+// ------------------------------
+// Grayscale
+//
+$gray-50: tint-color($gray, 90%) !default;
+$gray-100: tint-color($gray, 80%) !default;
+$gray-200: tint-color($gray, 60%) !default;
+$gray-300: tint-color($gray, 40%) !default;
+$gray-400: tint-color($gray, 20%) !default;
+$gray-500: $gray !default;
+$gray-600: shade-color($gray, 20%) !default;
+$gray-700: shade-color($gray, 40%) !default;
+$gray-800: shade-color($gray, 60%) !default;
+$gray-900: shade-color($gray, 80%) !default;
+
+$grays: () !default;
+$grays: map-merge(
+                (
+                        "100": $gray-100,
+                        "200": $gray-200,
+                        "300": $gray-300,
+                        "400": $gray-400,
+                        "500": $gray-500,
+                        "600": $gray-600,
+                        "700": $gray-700,
+                        "800": $gray-800,
+                        "900": $gray-900
+                ),
+                $grays
+);
+
+
+$white: #fff !default;
+$black: #000 !default;
+
+
+// ------------------------------
+// Theme Color
+//
+
+$primary:       $sky !default;
+$success:       $green !default;
+$info:          $teal !default;
+$warning:       $orange !default;
+$danger:        $red !default;
+$secondary:     $gray !default;
+$tertiary:      $gray-400 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+        (
+            "primary": $primary,
+            "success": $success,
+            "info": $info,
+            "warning": $warning,
+            "danger": $danger,
+            "secondary": $secondary,
+            "tertiary": $tertiary
+        ),
+        $theme-colors
+);
+
+$primary-50: tint-color($primary, 90%) !default;
+$primary-100: tint-color($primary, 80%) !default;
+$primary-200: tint-color($primary, 60%) !default;
+$primary-300: tint-color($primary, 40%) !default;
+$primary-400: tint-color($primary, 20%) !default;
+$primary-500: $primary !default;
+$primary-600: shade-color($primary, 20%) !default;
+$primary-700: shade-color($primary, 40%) !default;
+$primary-800: shade-color($primary, 60%) !default;
+$primary-900: shade-color($primary, 80%) !default;
+
+$secondary-50: tint-color($secondary, 90%) !default;
+$secondary-100: tint-color($secondary, 80%) !default;
+$secondary-200: tint-color($secondary, 60%) !default;
+$secondary-300: tint-color($secondary, 40%) !default;
+$secondary-400: tint-color($secondary, 20%) !default;
+$secondary-500: $secondary !default;
+$secondary-600: shade-color($secondary, 20%) !default;
+$secondary-700: shade-color($secondary, 40%) !default;
+$secondary-800: shade-color($secondary, 60%) !default;
+$secondary-900: shade-color($secondary, 80%) !default;
+
+$tertiary-50: tint-color($tertiary, 90%) !default;
+$tertiary-100: tint-color($tertiary, 80%) !default;
+$tertiary-200: tint-color($tertiary, 60%) !default;
+$tertiary-300: tint-color($tertiary, 40%) !default;
+$tertiary-400: tint-color($tertiary, 20%) !default;
+$tertiary-500: $tertiary !default;
+$tertiary-600: shade-color($tertiary, 20%) !default;
+$tertiary-700: shade-color($tertiary, 40%) !default;
+$tertiary-800: shade-color($tertiary, 60%) !default;
+$tertiary-900: shade-color($tertiary, 80%) !default;
+
+$success-50: tint-color($success, 90%) !default;
+$success-100: tint-color($success, 80%) !default;
+$success-200: tint-color($success, 60%) !default;
+$success-300: tint-color($success, 40%) !default;
+$success-400: tint-color($success, 20%) !default;
+$success-500: $success !default;
+$success-600: shade-color($success, 20%) !default;
+$success-700: shade-color($success, 40%) !default;
+$success-800: shade-color($success, 60%) !default;
+$success-900: shade-color($success, 80%) !default;
+
+$info-50: tint-color($info, 90%) !default;
+$info-100: tint-color($info, 80%) !default;
+$info-200: tint-color($info, 60%) !default;
+$info-300: tint-color($info, 40%) !default;
+$info-400: tint-color($info, 20%) !default;
+$info-500: $info !default;
+$info-600: shade-color($info, 20%) !default;
+$info-700: shade-color($info, 40%) !default;
+$info-800: shade-color($info, 60%) !default;
+$info-900: shade-color($info, 80%) !default;
+
+$warning-50: tint-color($warning, 90%) !default;
+$warning-100: tint-color($warning, 80%) !default;
+$warning-200: tint-color($warning, 60%) !default;
+$warning-300: tint-color($warning, 40%) !default;
+$warning-400: tint-color($warning, 20%) !default;
+$warning-500: $warning !default;
+$warning-600: shade-color($warning, 20%) !default;
+$warning-700: shade-color($warning, 40%) !default;
+$warning-800: shade-color($warning, 60%) !default;
+$warning-900: shade-color($warning, 80%) !default;
+
+$danger50: tint-color($danger, 90%) !default;
+$danger-100: tint-color($danger, 80%) !default;
+$danger-200: tint-color($danger, 60%) !default;
+$danger-300: tint-color($danger, 40%) !default;
+$danger-400: tint-color($danger, 20%) !default;
+$danger-500: $danger !default;
+$danger-600: shade-color($danger, 20%) !default;
+$danger-700: shade-color($danger, 40%) !default;
+$danger-800: shade-color($danger, 60%) !default;
+$danger-900: shade-color($danger, 80%) !default;
+
+

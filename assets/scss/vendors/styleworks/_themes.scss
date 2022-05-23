@@ -45,7 +45,7 @@ $systems: (
                 $color-tertiary:  var(--gray-400),
                 $color-success:   var(--green-500),
                 $color-info:      var(--teal-500),
-                $color-warning:   var(--yellow-500),
+                $color-warning:   var(--orange-500),
                 $color-danger:    var(--red-500)
         ),
         $system-dark: (
@@ -54,7 +54,7 @@ $systems: (
                 $color-tertiary:  var(--gray-500),
                 $color-success:   var(--green-500),
                 $color-info:      var(--teal-500),
-                $color-warning:   var(--yellow-500),
+                $color-warning:   var(--orange-500),
                 $color-danger:    var(--red-300)
         )
 );

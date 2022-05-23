@@ -3,7 +3,7 @@
 //
 // 가장 기본적인 모양 - 사각형 모양을 갖음
 // 길이에 상관없이 사용 가능
-// class="btn btn-sm"
+// class=".btn .btn-sm"
 //
 .btn {
   display: inline-block;
@@ -25,21 +25,19 @@
 }
 
 .btn-sm {
-  @include button-size($btn-padding-sm-y, $btn-padding-sm-x, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
 
 .btn-lg {
-  @include button-size($btn-padding-lg-y, $btn-padding-lg-x, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
 
 
-.btn + .btn {
-  margin-left: 4px;
-}
+
 
 // 동그란 모양을 갖는 스타일
 // 최대 2자까지 노출될 수 있음 (주의)
-// class="btn-circle btn-circle-sm"
+// class=".btn-circle .btn-circle-sm"
 //
 .btn-circle {
   display:inline-block;
@@ -50,29 +48,22 @@
   border: $btn-border-width solid transparent;
   background-color: transparent;
   @include button-circle-size($btn-circle-padding-y, $btn-circle-padding-x, $btn-circle-width, $btn-circle-height, $btn-circle-font-size, $btn-circle-line-height, $btn-circle-border-radius);
-  width: $btn-circle-width !important;
-  height: $btn-circle-height  !important;
-  max-height: $btn-circle-height  !important;
   white-space: nowrap;
   overflow: hidden;
   outline: none;
+  flex: 0 0 auto; // 컨테이너의 크기에 영향을 받지 않기 위해 필요한 프로퍼티.
 }
 .btn-circle-xs {
-  @include button-circle-size($btn-circle-padding-xs-y, $btn-circle-padding-xs-x, $btn-circle-width-xs, $btn-circle-height-xs, $btn-circle-font-size-xs, $btn-circle-line-height-xs, $btn-circle-border-radius);
+  @include button-circle-size($btn-circle-padding-y-xs, $btn-circle-padding-x-xs, $btn-circle-width-xs, $btn-circle-height-xs, $btn-circle-font-size-xs, $btn-circle-line-height-xs, $btn-circle-border-radius);
 }
 .btn-circle-sm {
-  @include button-circle-size($btn-circle-padding-sm-y, $btn-circle-padding-sm-x, $btn-circle-width-sm, $btn-circle-height-sm, $btn-circle-font-size-sm, $btn-circle-line-height-sm, $btn-circle-border-radius);
+  @include button-circle-size($btn-circle-padding-y-sm, $btn-circle-padding-x-sm, $btn-circle-width-sm, $btn-circle-height-sm, $btn-circle-font-size-sm, $btn-circle-line-height-sm, $btn-circle-border-radius);
 }
 .btn-circle-lg {
-  @include button-circle-size($btn-circle-padding-lg-y, $btn-circle-padding-lg-x, $btn-circle-width-lg, $btn-circle-height-lg, $btn-circle-font-size-lg, $btn-circle-line-height-lg, $btn-circle-border-radius);
+  @include button-circle-size($btn-circle-padding-y-lg, $btn-circle-padding-x-lg, $btn-circle-width-lg, $btn-circle-height-lg, $btn-circle-font-size-lg, $btn-circle-line-height-lg, $btn-border-radius-lg);
 }
 
-/*
-.btn + .btn,
-.btn-circle + .btn-circle {
-  margin-left: ($spacer / 2);
-}
-*/
+
 
 // Button Styles
 //

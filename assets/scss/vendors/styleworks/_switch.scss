@@ -76,7 +76,7 @@
 .switch-checkbox:checked:disabled {
   + .switch-slider:before {
     cursor: default !important;
-    background-color: $disable !important;
+    background-color: $component-disabled-color !important;
     box-shadow: none !important;
   }
   + .switch-slider:after {

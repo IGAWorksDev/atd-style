@@ -8,8 +8,8 @@
 
 // Utils
 @import
-'functions',
-'colors',
+'functions/functions',
+'theme/colors',
 'variables'
 ;
 
@@ -33,7 +33,6 @@
 'display',
 'flex',
 'svg-icon',
-'spacing',
 'borders',
 'sizes',
 'mixins/status',
@@ -62,7 +61,8 @@
 'background',
 'close',
 'popover',
-'thumbnail'
+'thumbnail',
+'spacing'
 ;
 
 // Helpers

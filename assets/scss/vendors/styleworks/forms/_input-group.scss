@@ -15,14 +15,19 @@
   > .btn {
     position: relative; // 포커스 상태를 위한 z-index
     flex: 1 1 auto;
-    width: 1%;
     min-width: 0;
+    width: 1%;
 
     + .form-control,
     + .custom-select,
     + .custom-file,
     + .btn {
       margin-left: -$input-border-width;
+    }
+
+    &:focus {
+      position: relative;
+      z-index: 3;
     }
   }
 }
@@ -39,7 +44,7 @@
   // 버튼의 경우, 시각적으로 보기 좋은 테두리 모양을 위해 항상 input 위에 있도록 해주는 스타일
   .btn {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 
     &:focus {
       z-index:3;
@@ -88,13 +93,15 @@
 .input-group {
   > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
   > .dropdown-toggle:nth-last-child(n + 3) {
-    @include border-right-radius(0);
+    @include border-left-radius(0);
   }
 
   > :not(:first-child):not(.dropdown-menu) {
     @include border-left-radius(0);
   }
-
+  > :not(:last-child):not(.dropdown-menu) {
+    @include border-right-radius(0);
+  }
 
 
   // 추가 -- 21.05.04
@@ -107,7 +114,7 @@
     .btn {
       @include border-radius(0 !important);
       &:first-child {
-        @include border-left-radius(0 !important);
+        @include border-right-radius(0 !important);
       }
     }
 
@@ -117,7 +124,7 @@
       @include border-left-radius(0);
     }
 
-    .btn {
+    btn {
       @include border-radius(0 !important);
       &:last-child {
         @include border-left-radius(0 !important);

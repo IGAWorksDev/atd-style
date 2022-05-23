@@ -1,7 +1,7 @@
 
 .card {
   border: $card-border-width solid $card-border-color;
-  border-radius: $card-border-radius;
+  //border-radius: $card-border-radius;
   background-color: $card-bg;
   background-clip: border-box;
   word-wrap: break-word;
@@ -11,7 +11,7 @@
   padding: $card-padding-y $card-padding-x;
   background-color: $card-header-bg;
   border-bottom: $card-border-width solid $card-border-color;
-  border-radius: $border-radius $border-radius 0 0;
+  //border-radius: $border-radius $border-radius 0 0;
   margin: 0;
 
 //  &:first-child {
@@ -26,11 +26,11 @@
 .card-footer {
   padding: $card-padding-y $card-padding-x;
   background-color: $card-footer-bg;
-  border-top: $card-border-width solid $card-border-color;
+  //border-top: $card-border-width solid $card-border-color;
 
-  &:last-child {
-    border-radius: 0 0 $border-radius $border-radius;
-  }
+  //&:last-child {
+  //  border-radius: 0 0 $border-radius $border-radius;
+  //}
 }
 
 // Close 버튼을 포함할 경우
