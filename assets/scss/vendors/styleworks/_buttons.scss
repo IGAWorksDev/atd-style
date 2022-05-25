@@ -32,7 +32,7 @@
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
 
-
+// 버튼과 버튼 사이의 기본 간격
 .btn + .btn {
   margin-left: 0.4rem;
 }
