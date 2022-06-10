@@ -1,6 +1,4 @@
 
-
-
 .input-group {
   position: relative;
   display: flex;
@@ -47,7 +45,7 @@
     z-index: 1;
 
     &:focus {
-      z-index:3;
+      z-index: 3;
     }
   }
 
@@ -59,10 +57,12 @@
     margin-left: -$input-border-width;
   }
 }
+
 // 요소들의 border가 맞닿아 두껍게 보이는 것을 방지하는 스타일.
 .input-group-prepend {
   margin-right: -$input-border-width;
 }
+
 .input-group-append {
   margin-left: -$input-border-width;
 }
@@ -80,7 +80,7 @@
   line-height: $input-line-height;
   color: $input-group-addon-color;
   text-align: center;
-  white-space : nowrap;
+  white-space: nowrap;
   background-color: $input-group-addon-bg;
   border: $input-border-width solid $input-group-addon-border-color;
   @include border-radius($input-border-radius);
@@ -93,12 +93,13 @@
 .input-group {
   > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
   > .dropdown-toggle:nth-last-child(n + 3) {
-    @include border-left-radius(0);
+    @include border-right-radius(0);
   }
 
   > :not(:first-child):not(.dropdown-menu) {
     @include border-left-radius(0);
   }
+
   > :not(:last-child):not(.dropdown-menu) {
     @include border-right-radius(0);
   }
@@ -111,21 +112,28 @@
     .input-group-text {
       @include border-right-radius(0);
     }
+
     .btn {
-      @include border-radius(0 !important);
+      // 첫번째 요소가 아닌 경우
+      &:not(:first-child) {
+        @include border-radius(0 !important);
+      }
       &:first-child {
         @include border-right-radius(0 !important);
       }
     }
-
   }
+
   > .input-group-append {
     .input-group-text {
       @include border-left-radius(0);
     }
 
-    btn {
-      @include border-radius(0 !important);
+    .btn {
+      // 마지막 요소가 아닌 경우
+      &:not(:last-child) {
+        @include border-radius(0 !important);
+      }
       &:last-child {
         @include border-left-radius(0 !important);
       }

@@ -707,15 +707,15 @@ textarea.form-control { height: auto; }
 .input-group-text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0.8rem 1.2rem; margin: 0; font-size: calc(1.265rem + 0.1125vw); font-weight: 400; line-height: 2.2rem; color: #373a3c; text-align: center; white-space: nowrap; background-color: #e8e9ea; border: 1px solid #b9bdc1; border-radius: 0.4rem; }
 @media (min-width: 1200px) { .input-group-text { font-size: 1.4rem; } }
 
-.input-group > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group > .dropdown-toggle:nth-last-child(n + 3) { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.input-group > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group > .dropdown-toggle:nth-last-child(n + 3) { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 .input-group > :not(:first-child):not(.dropdown-menu) { border-top-left-radius: 0; border-bottom-left-radius: 0; }
 .input-group > :not(:last-child):not(.dropdown-menu) { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 .input-group > .input-group-prepend .input-group-text { border-top-right-radius: 0; border-bottom-right-radius: 0; }
-.input-group > .input-group-prepend .btn { border-radius: 0 !important; }
+.input-group > .input-group-prepend .btn:not(:first-child) { border-radius: 0 !important; }
 .input-group > .input-group-prepend .btn:first-child { border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
 .input-group > .input-group-append .input-group-text { border-top-left-radius: 0; border-bottom-left-radius: 0; }
-.input-group > .input-group-append btn { border-radius: 0 !important; }
-.input-group > .input-group-append btn:last-child { border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
+.input-group > .input-group-append .btn:not(:last-child) { border-radius: 0 !important; }
+.input-group > .input-group-append .btn:last-child { border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
 
 .btn { display: inline-block; font-weight: 400; color: #373a3c; text-align: center; text-decoration: none; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; background-color: transparent; padding: 0.8rem 1.2rem; font-size: 1.4rem; line-height: 2.2rem; border-radius: 0.4rem !important; cursor: pointer; }
 .btn:focus { outline: 0; }
