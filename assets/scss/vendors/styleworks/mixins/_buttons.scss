@@ -47,7 +47,9 @@
 
   &:hover,
   &:active,
-  &.is-active {
+  &.is-active,
+  .btn-check:checked + &,
+  .btn-check:active + & {
     color: $white;
     background-color: $active-background;
     border-color: $active-border;
@@ -79,11 +81,11 @@
   background-color: transparent;
   border-color: $base-border;
 
-  .btn-check:checked + &,
-  .btn-check:active + &,
   &:hover,
   &:active,
-  &.is-active {
+  &.is-active,
+  .btn-check:checked + &,
+  .btn-check:active + & {
     color: $active-color;
     background-color: $active-background;
     border-color: $active-border;

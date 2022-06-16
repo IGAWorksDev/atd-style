@@ -1,9 +1,17 @@
 
+// Toggle Button Style
+//
+// checkbox와 radio를 버튼 모양 처럼 만들어 토글 버튼으로 사용할 수 있는 스타일입니다.
+// '.btn-group'를 사용하여 여러 토글 버튼을 그룹으로 만들 수 있습니다.
+// '_btn-group.scss'를 참고하세요.
 
+
+// checkbox와 radio의 모양을 변형하고, <label>에 .btn 클래스를 적용하여 버튼이 토글되도록 합니다.
+//
 .btn-check {
   position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
+  clip: rect(0, 0, 0, 0); // 요소의 보이는 부분을 정의
+  pointer-events: none; // 요소가 포인터 이벤트의 대상이 되지 않도록 설정
 
   &[disabled],
   &:disabled {
@@ -15,7 +23,16 @@
   }
 }
 
+// <label>에 .btn 클래스 사용했을 경우 마진값 없애기
+.btn-check + .btn {
+  margin-bottom: 0;
+}
 
+
+
+// .btn 안에 .btn-check 가 있는 경우
+// (체크 후 삭제 예정)
+//
 .btn {
   .btn-check:focus + & {
     outline: 0;

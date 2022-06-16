@@ -1,4 +1,7 @@
 
+// Button Group Style
+//
+// 여러 버튼을 그룹으로 만들 수 있는 스타일
 
 .btn-group {
   position: relative;
@@ -26,27 +29,30 @@
 
 .btn-group {
   // 이중 테두리 방지
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
+  > .btn:not(:first-child) {
     margin-left: -$btn-border-width;
   }
 
   // 둥근 모서리 재설정
-  > .btn:not(:first-child) {
-    //@include border-left-radius(0);
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
+  > .btn:not(:last-child),
+  > .btn:not(:last-child):not(.dropdown-toggle) {
+    @include border-right-radius(0 !important);
   }
-  > .btn:not(:last-child) {
-    //@include border-right-radius(0);
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+  > .btn:not(:first-child),
+  > .btn:not(:first-child):not(.dropdown-toggle) {
+    @include border-left-radius(0 !important);
+  }
+
+  // btn-check 사용시 첫 버튼 모서리 재설정
+  > .btn-check:first-child + .btn {
+    @include border-left-radius($border-radius !important);
   }
 }
 
 
 
 // 그룹의 버튼 크기 재설정
+//
 .btn-group-sm > .btn {
   @extend .btn-sm;
 }
@@ -56,6 +62,7 @@
 
 
 // Split 버튼 (Dropdown)
+//
 .dropdown-toggle-split {
   &::after,
   .dropup &::after,

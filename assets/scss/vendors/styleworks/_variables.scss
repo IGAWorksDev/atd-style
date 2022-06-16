@@ -7,8 +7,6 @@
 $root-size: 62.5% !default;
 
 
-
-
 // Typography
 //
 
@@ -182,26 +180,27 @@ $transition-base: all 0.15s ease-in-out !default;
 
 // Components Status
 //
-
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
+$component-light: $gray-100 !default;
+$component-dark: $gray-800 !default;
 
 $component-based-color: $gray-800 !default;
 $component-muted-color: $gray-500 !default;
+
+$component-bg: $white !default;
+$component-bg-alt: $gray-50 !default;
+$component-bg-dark: $gray-800 !default;
+
+$component-border-dark: $gray-900 !default;
 
 $component-disabled-color: $gray-300 !default;
 $component-disabled-bg-color: $gray-50 !default;
 $component-disabled-border-color: $gray-300 !default;
 
 $component-padding-y: $spacer !default;
-$component-padding-x: $spacer * 2 !default;
-$component-bg: $white !default;
-$component-bg-alt: $gray-50 !default;
+$component-padding-x: $spacer !default;
 
-$component-bg-dark: $gray-800;
-$component-border-dark: $gray-900 !default;
 
-// Active
+// components active
 $component-active-color: $primary-500 !default;
 $component-active-bg: $primary-50  !default;
 $component-active-icon-color: $primary-500 !default;
@@ -210,14 +209,14 @@ $component-active-icon-size: $font-size-base !default;
 $component-active-icon-bg: escape-svg($component-active-icon) no-repeat right $component-padding-x center / $component-active-icon-size !default;
 $component-active-padding-x: ($component-padding-x + $component-active-icon-size + ($component-padding-x * 0.5)) !default;
 
-// Hover
-$component-hover-color: $primary !default;
+// components hover
+$component-hover-color: $primary-500 !default;
 $component-hover-bg: $primary-50 !default;
 
-// selected
-$component-selected-color: $primary !default;
+// components selected
+$component-selected-color: $primary-500 !default;
 $component-selected-bg: transparent !default;
-$component-selected-icon-color: $primary !default;
+$component-selected-icon-color: $primary-500 !default;
 $component-selected-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$component-selected-icon-color}' d='M5 9.99510098 10 15 19 5 21 7 10 19 3 11.9966688z'/></svg>") !default;
 $component-selected-icon-size: $font-size-base !default;
 $component-selected-icon-bg: escape-svg($component-selected-icon) no-repeat right $component-padding-x center / $component-selected-icon-size !default;
@@ -233,7 +232,6 @@ $body-font-size: $font-size-base;
 $body-line-height: $line-height-base;
 $body-color: $component-based-color;
 $body-bg: $white;
-
 
 $text-muted: $component-muted-color !default;
 $text-disabled: $component-disabled-color !default;
@@ -286,7 +284,7 @@ $caret-spacing: 0.8em !default;
 $badge-font-size: 76% !default;
 $badge-padding-y: 0.3em !default;
 $badge-padding-x: 0.5em !default;
-$badge-border-width: 1px !default;
+$badge-border-width: $border-width !default;
 $badge-border-radius: 0.2em !default;
 
 
@@ -325,38 +323,37 @@ $input-btn-disabled-color: $component-disabled-color;
 $input-btn-disabled-bg-color: $component-disabled-bg-color;
 $input-btn-disabled-border-color: $component-disabled-border-color;
 
+
 // Buttons
 //
-// For each of Bootstrap's buttons, define text, background, and border color.
-
 $btn-padding-y: $input-btn-padding-y !default;
 $btn-padding-x: $input-btn-padding-x !default;
 $btn-font-family: $input-btn-font-family !default;
 $btn-font-size: $input-btn-font-size !default;
 $btn-line-height: $input-btn-line-height !default;
 $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
-
+$btn-border-width: $input-btn-border-width !default;
+// button extra small
 $btn-padding-y-xs: $input-btn-padding-y-xs !default;
 $btn-padding-x-xs: $input-btn-padding-x-xs !default;
 $btn-font-size-xs: $input-btn-font-size-xs !default;
 $btn-line-height-xs: $input-btn-line-height-xs !default;
-
+// button small
 $btn-padding-y-sm: $input-btn-padding-y-sm !default;
 $btn-padding-x-sm: $input-btn-padding-x-sm !default;
 $btn-font-size-sm: $input-btn-font-size-sm !default;
 $btn-line-height-sm: $input-btn-line-height-sm !default;
-
+// button large
 $btn-padding-y-lg: $input-btn-padding-y-lg !default;
 $btn-padding-x-lg: $input-btn-padding-x-lg !default;
 $btn-font-size-lg: $input-btn-font-size-lg !default;
 $btn-line-height-lg: $input-btn-line-height-lg !default;
 
-$btn-border-width: $input-btn-border-width !default;
-
 $btn-font-weight: $font-weight-normal !default;
 $btn-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width: $input-btn-focus-width !default; // 버튼의 포커스 상태일때 shadow의 spread-radius
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$btn-focus-opacity: 0.4;
 
 $btn-disabled-opacity: .65 !default;
 $btn-disabled-color: $input-btn-disabled-color;
@@ -365,14 +362,13 @@ $btn-active-box-shadow: inset 0 3px 5px rgba($black, .125) !default;
 $btn-link-disabled-color: $input-btn-disabled-color !default;
 $btn-block-spacing-y: .5rem !default;
 
-$btn-focus-opacity: 0.4;
-
-// Allows for customizing button radius independently from global border radius
 $btn-border-radius: $border-radius !important !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 $btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
+// Circle Buttons
+//
 $btn-circle-padding-y: $btn-padding-y;
 $btn-circle-padding-x: $btn-padding-y;
 $btn-circle-font-size: $btn-font-size;
@@ -381,6 +377,7 @@ $btn-circle-height: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-y} 
 $btn-circle-width: calc(#{$btn-circle-line-height} + (#{$btn-circle-padding-x} * 2) + (#{$btn-border-width} * 2)); // line-height가 고정된 값을 갖고 있고, 높이에 맞추기 위해 너비값에 사용함.
 $btn-circle-border-radius: 3.6rem !important;
 
+// Circle Buttons Size
 $btn-circle-padding-y-xs: $btn-padding-y-xs;
 $btn-circle-padding-x-xs: $btn-padding-y-xs;
 $btn-circle-font-size-xs: $btn-font-size-xs;
@@ -410,16 +407,12 @@ $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
 $input-font-weight: $font-weight-normal !default;
 $input-line-height: $input-btn-line-height !default;
-
 $input-bg: $white !default;
-
 $input-color: $component-based-color !default;
 $input-border-color: $gray-300 !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: inset 0 1px 1px rgba($black, 0.75) !default;
-
 $input-border-radius: $border-radius !default;
-
 $input-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 $input-placeholder-color: $gray-400 !default;
@@ -429,7 +422,6 @@ $input-group-addon-color: $body-color !default;
 $input-group-addon-border-color: $input-border-color !default;
 
 $input-height: calc(#{$input-line-height} + (#{$input-padding-y} * 2) + (#{$input-border-width} * 2)) !default;
-
 
 $input-disabled-color: $input-btn-disabled-color !default;
 $input-disabled-bg-color: $input-btn-disabled-bg-color !default;
@@ -445,8 +437,7 @@ $input-height-inner: calc((#{$input-line-height} * 1) + (#{$input-padding-y} * 2
 $input-height-inner-half: calc((#{$input-line-height} * 0.5) + #{$input-padding-y}) !default;
 $input-height-inner-quarter: calc((#{$input-line-height} * 0.25) + (#{$input-padding-y} / 2)) !default; // 결과값이 홀수 또는 소수점이 있을 수 있음 (주의!)
 
-
-// form control sizing
+// Form Control Size
 $input-padding-sm-y: $input-btn-padding-y-sm;
 $input-padding-sm-x: $input-btn-padding-x-sm;
 $input-font-size-sm: $input-btn-font-size-sm;
@@ -462,13 +453,12 @@ $input-border-radius-lg: $border-radius-lg;
 $input-height-lg: calc(#{$input-line-height-lg} + (#{$input-padding-lg-y} * 2) + (#{$input-border-width} * 2)) !default;
 
 
-// searching
+// Searching
 $input-search-icon-color: $gray-400;
 $input-search-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='#{$input-search-icon-color}' d='M10 0c5.523 0 10 4.477 10 10 0 1.994-.583 3.85-1.59 5.4L23 20c.652 1.333.652 2.333 0 3s-1.652.667-3 0l-4.6-4.59C13.85 19.417 11.994 20 10 20 4.477 20 0 15.523 0 10S4.477 0 10 0zm0 2a8 8 0 1 0 0 16 8 8 0 1 0 0-16z'/></svg>");
 $input-search-icon-size: $font-size-base;
 $input-search-background: escape-svg($input-search-icon) no-repeat left $input-padding-x center / $input-search-icon-size;
 $input-search-padding-x: ($input-padding-x + $input-search-icon-size + ($input-padding-x * 0.5));
-
 
 
 // form-check
@@ -485,8 +475,6 @@ $form-check-input-checkbox-bg-img: url("data:image/svg+xml, <svg xmlns='http://w
 $form-check-input-radio-bg-img: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><circle fill='#{$form-check-input-checked-color}' cx='8' cy='8' r='4'/></svg>");
 
 $form-check-input-indeterminate-bg-img: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><rect fill='#{$form-check-input-checked-color}' x='3' y='6' width='10' height='4'/></svg>");
-
-
 
 $form-check-inline-margin-x: $font-size-base;
 $form-check-inline-input-margin-x: $form-check-input-margin-x !default;

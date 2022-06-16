@@ -9,7 +9,7 @@
 .thumb-box {
   @extend .thumb;
   border: $border-width solid $border-color;
-  background-color: $light;
+  background-color: $component-light;
 }
 
 
