@@ -1,0 +1,10 @@
+//
+// Vertical Rule
+// 서로 다른 기능의 요소(또는 컨텐츠) 사이를 나누는 세로 구분선
+//
+
+.vr {
+  display: inline-block;
+  border-left: $border-width solid $border-color;
+  min-height: 1rem;
+}

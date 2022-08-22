@@ -52,7 +52,7 @@
 
 // Framework grid generation
 //
-// `$ grid-columns` 값이 주어지면 정확한 수의 그리드 클래스를 생성하기 위해 부트 스트랩에서만 사용됩니다.
+// `$grid-columns` 값이 주어지면 정확한 수의 그리드 클래스를 생성하기 위해 부트 스트랩에서만 사용됩니다.
 
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
   @each $breakpoint in map-keys($breakpoints) {

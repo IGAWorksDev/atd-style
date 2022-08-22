@@ -14,6 +14,7 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
+  appearance: none;
   
   // Note : CSS에서`<select>`의 제한된 스타일 지정으로 인해 일부 브라우저에서는 <select>에 영향을 미치지 않습니다.
   @include box-shadow($input-box-shadow);
@@ -34,10 +35,14 @@
     background-color: $input-disabled-bg-color;
     border-color: $input-disabled-border-color;
   }
+
+  // 요소를 편집할 수 있는 여부를 나타냄.
   &[readonly]{
-    background-color: $input-disabled-bg-color;
+    //background-color: $input-disabled-bg-color;
     // 읽을 수없는 비활성화 된 콘텐츠에 대한 iOS 수정 ; see https://github.com/twbs/bootstrap/issues/11655.
-    //opacity: 1;
+    opacity: 1;
+    background-color: transparent;
+    border-color: transparent;
   }
 }
 
